@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { useTranslation, TFunction } from "react-i18next";
+import { useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
 import { Clock, Search, Calendar, Lightbulb, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -48,6 +49,14 @@ function MilestoneCard({ milestone, t }: { milestone: TimelineMilestone; t: TFun
   const eventTypeConfig = getEventTypeConfig(t);
   const config = eventTypeConfig[milestone.eventType] || eventTypeConfig.tip;
   
+  const titleKey = `timeline.items.${milestone.id}.title`;
+  const descKey = `timeline.items.${milestone.id}.description`;
+  const actionKey = `timeline.items.${milestone.id}.action`;
+  
+  const milestoneTitle = t(titleKey) !== titleKey ? t(titleKey) : milestone.title;
+  const milestoneDesc = t(descKey) !== descKey ? t(descKey) : (milestone.description || "");
+  const milestoneAction = t(actionKey) !== actionKey ? t(actionKey) : (milestone.actionAdvice || "");
+  
   const getImportanceLabel = (importance: string) => {
     const labels: Record<string, string> = {
       critical: t("timeline.critical"),
@@ -79,7 +88,7 @@ function MilestoneCard({ milestone, t }: { milestone: TimelineMilestone; t: TFun
                   </Badge>
                 )}
               </div>
-              <CardTitle className="text-base">{milestone.title}</CardTitle>
+              <CardTitle className="text-base">{milestoneTitle}</CardTitle>
             </div>
             <div className="flex items-center gap-1 text-sm text-muted-foreground">
               <Calendar className="h-3.5 w-3.5" />
@@ -92,16 +101,16 @@ function MilestoneCard({ milestone, t }: { milestone: TimelineMilestone; t: TFun
           </div>
         </CardHeader>
         <CardContent className="space-y-3">
-          {milestone.description && (
-            <p className="text-sm text-muted-foreground">{milestone.description}</p>
+          {milestoneDesc && (
+            <p className="text-sm text-muted-foreground">{milestoneDesc}</p>
           )}
           
-          {milestone.actionAdvice && (
+          {milestoneAction && (
             <div className="flex items-start gap-2 rounded-md bg-primary/5 p-3 border border-primary/10">
               <Lightbulb className="h-4 w-4 text-primary shrink-0 mt-0.5" />
               <div className="text-sm">
                 <span className="font-medium">{t("timeline.action")}: </span>
-                {milestone.actionAdvice}
+                {milestoneAction}
               </div>
             </div>
           )}
@@ -138,6 +147,8 @@ export default function Timeline() {
   }, {} as Record<number, TimelineMilestone[]>);
 
   const sortedYears = groupedByYear ? Object.keys(groupedByYear).map(Number).sort((a, b) => a - b) : [];
+
+  const eventTypeConfig = getEventTypeConfig(t);
 
   return (
     <div className="p-6 space-y-6 max-w-4xl mx-auto">

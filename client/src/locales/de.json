@@ -163,7 +163,26 @@
     "requires": "Benötigt",
     "essential": "Essentiell",
     "recommended": "Empfohlen",
-    "optional": "Optional"
+    "optional": "Optional",
+    "items": {
+      "basic-2d-graphics": { "name": "Basis 2D-Grafik v1", "description": "Start-Grafiktechnologie", "tip": "Von Anfang an verfügbar" },
+      "basic-sound": { "name": "Basis Sound v1", "description": "Start-Soundtechnologie", "tip": "Von Anfang an verfügbar" },
+      "2d-graphics-v2": { "name": "2D-Grafik v2", "description": "Verbesserte 2D-Grafik", "tip": "Früh erforschen für bessere Spielwertungen" },
+      "sound-v2": { "name": "Sound v2", "description": "Verbessertes Sounddesign", "tip": "Nach Grafikverbesserungen erforschen" },
+      "2d-graphics-v3": { "name": "2D-Grafik v3", "description": "Fortgeschrittene 2D-Grafik", "tip": "Essentiell vor dem Umzug ins erste Büro" },
+      "save-game": { "name": "Spielstand speichern", "description": "Spieler können Fortschritt speichern", "tip": "Sehr wichtig für RPGs und Adventure-Spiele" },
+      "dialogue-system": { "name": "Dialogsystem", "description": "NPC-Dialogoptionen", "tip": "Großartig für Adventure und RPG-Genres" },
+      "3d-graphics-v1": { "name": "3D-Grafik v1", "description": "Eintritt in die 3D-Ära", "tip": "Essentiell für moderne Plattformen. Sobald verfügbar erforschen" },
+      "3d-graphics-v2": { "name": "3D-Grafik v2", "description": "Verbesserte 3D-Darstellung", "tip": "Grafiktechnologie aktuell halten" },
+      "surround-sound": { "name": "Surround Sound", "description": "Immersives Audioerlebnis", "tip": "Steigert Qualität für alle Genres" },
+      "multiplayer": { "name": "Mehrspieler", "description": "Online-Mehrspielermodus", "tip": "Großartig für Action- und Strategiespiele" },
+      "online-play": { "name": "Online-Spiel", "description": "Internet-Mehrspieler", "tip": "Erforschen wenn Online-Plattformen erscheinen" },
+      "3d-graphics-v4": { "name": "3D-Grafik v4", "description": "High-End 3D-Grafik", "tip": "Benötigt für AAA-Spiele" },
+      "hd-audio": { "name": "HD-Audio", "description": "High-Definition Audio", "tip": "Standard für moderne Spiele" },
+      "advanced-ai": { "name": "Fortgeschrittene KI", "description": "Intelligenteres Gegnerverhalten", "tip": "Wichtig für Strategie und Simulation" },
+      "open-world": { "name": "Offene Welt", "description": "Nicht-lineare Erkundung", "tip": "Großartig für Adventure und RPG-Spiele" },
+      "vr-support": { "name": "VR-Unterstützung", "description": "Virtual-Reality-Gaming", "tip": "Zukunftstechnologie-Investition" }
+    }
   },
   "staff": {
     "title": "Mitarbeiter-Guide",
@@ -194,7 +213,24 @@
     },
     "years": "Jahre",
     "fromYear": "Ab Jahr",
-    "untilYear": "Bis Jahr"
+    "untilYear": "Bis Jahr",
+    "items": {
+      "garage-solo": { "title": "Alleine in der Garage arbeiten", "description": "Du kannst in der Garagenphase keine Mitarbeiter einstellen. Konzentriere dich darauf, deine Fähigkeiten aufzubauen und Geld für dein erstes Büro zu sparen." },
+      "garage-skills": { "title": "Fähigkeiten ausbalancieren", "description": "Trainiere dich selbst in Design und Technologie. Eine 700/700 Aufteilung ist optimal für qualitativ hochwertige Spiele." },
+      "garage-save": { "title": "Für das erste Büro sparen", "description": "Du brauchst 1 Million Dollar um das erste Büro freizuschalten. Spare aggressiv in den Jahren 4-5." },
+      "first-hire": { "title": "Deinen ersten Mitarbeiter einstellen", "description": "Stelle jemanden mit ergänzenden Fähigkeiten ein. Wenn du stark in Design bist, stelle jemanden mit starker Technologie ein und umgekehrt." },
+      "first-training": { "title": "Sofort trainieren", "description": "Neue Mitarbeiter haben niedrige Werte. Nutze Training um ihre Fähigkeiten schnell zu verbessern. Priorisiere zuerst ihre schwächsten Bereiche." },
+      "first-specialist": { "title": "Spezialisten vs Generalisten", "description": "Frühes Spiel: stelle Generalisten ein, die mehrere Aufgaben erledigen können. Später: Spezialisten für spezifische Rollen in größeren Teams." },
+      "first-team-size": { "title": "Teamgröße-Tipps", "description": "Kleine Spiele: 1-2 Personen. Mittlere Spiele: 2-3 Personen. Passe die Teamgröße an die Spielgröße an für beste Effizienz." },
+      "second-expand": { "title": "Auf 6 Mitarbeiter erweitern", "description": "Das zweite Büro erlaubt bis zu 6 Mitarbeiter. Stelle schrittweise ein, wie es dein Cashflow erlaubt." },
+      "second-roles": { "title": "Rollen zuweisen", "description": "Weise 2-3 Mitarbeiter für Design-Aufgaben (Art, Story, Sound) und 2-3 für Technologie (Engine, KI, Level Design) zu." },
+      "second-large-games": { "title": "Große Spielteams", "description": "Große Spiele brauchen 4+ Personen. AAA-Spiele brauchen 6 Personen. Stelle sicher, dass du genug trainierte Mitarbeiter hast." },
+      "second-specialists": { "title": "Spezialisten einstellen", "description": "Erwäge Grafik-Spezialisten, Sound-Ingenieure und Autoren für bessere Spielqualität in spezifischen Bereichen." },
+      "rd-lab-unlock": { "title": "F&E Labor Vorteile", "description": "Das F&E Labor ermöglicht dir, neue Engines und Hardware zu erforschen. Du brauchst mindestens 4 Mitarbeiter um es effektiv zu nutzen." },
+      "rd-dedicated": { "title": "Dedizierte F&E Mitarbeiter", "description": "Weise 1-2 Mitarbeiter permanent dem F&E zu. Sie sollten hohe Forschungsgeschwindigkeit und Technologie-Fähigkeiten haben." },
+      "hw-lab-unlock": { "title": "Hardware Labor Team", "description": "Das Erstellen deiner eigenen Konsole erfordert ein dediziertes Team. Weise deine besten Technologie-Spezialisten zu." },
+      "hw-console-team": { "title": "Konsolen-Entwicklung", "description": "Das Bauen einer Konsole braucht 2-3 dedizierte Mitarbeiter für 6+ Monate. Plane deine Teamkapazität entsprechend." }
+    }
   },
   "timeline": {
     "title": "Timeline",
@@ -224,6 +260,29 @@
       "tip": "Tipp",
       "officeAvailable": "Büro verfügbar",
       "featureUnlock": "Feature freigeschaltet"
+    },
+    "items": {
+      "start-game": { "title": "Spielstart", "description": "Du beginnst in deiner Garage mit 70.000$. Mache kleine Spiele um Erfahrung aufzubauen.", "action": "Mache Action- oder Adventure-Spiele - sie sind verzeihender für Anfänger" },
+      "pc-available": { "title": "PC-Plattform verfügbar", "description": "Der PC ist deine Startplattform. Keine Lizenzgebühr erforderlich.", "action": "Nutze den PC für alle deine frühen Spiele" },
+      "govodore-64": { "title": "Govodore 64 veröffentlicht", "description": "Erste erschwingliche Konsole. Gut für Casual- und Action-Spiele.", "action": "Erwäge die Lizenz zu erwerben wenn du Casual-Spiele machst" },
+      "first-hit": { "title": "Ersten Hit anstreben", "description": "Versuche bis Jahr 2 ein Spiel zu machen, das 7+ bewertet wird, um Fans aufzubauen.", "action": "Konzentriere dich auf gute Thema-Genre-Kombinationen und richtige Slider-Einstellungen" },
+      "office-goal": { "title": "Für Büro sparen", "description": "Du solltest jetzt fast 1 Million für dein erstes Büro haben.", "action": "Falls nicht, konzentriere dich auf mittelgroße Spiele mit guten Kombinationen" },
+      "tes-release": { "title": "TES veröffentlicht", "description": "Große Konsole mit großem Publikum. Großartig für Action-Spiele.", "action": "Starke Plattform - hol dir die Lizenz" },
+      "first-office-available": { "title": "Erstes Büro verfügbar", "description": "Mit 1 Million Cash kannst du in dein erstes Büro ziehen und Personal einstellen.", "action": "Ziehe um sobald du das Geld hast" },
+      "super-tes": { "title": "Super TES veröffentlicht", "description": "Die 16-Bit-Ära beginnt. Großartige Grafikfähigkeiten.", "action": "Upgrade von TES - das ist die angesagte Plattform" },
+      "playsystem": { "title": "PlaySystem veröffentlicht", "description": "Revolutionäre 3D-Konsole. Die Zukunft des Gamings.", "action": "ESSENTIELL: Hol dir diese Lizenz und erforsche 3D-Grafik" },
+      "3d-era": { "title": "3D-Grafik-Ära", "description": "3D-Grafik wird essentiell für hochbewertete Spiele.", "action": "Erforsche 3D Graphics v1 sofort wenn verfügbar" },
+      "dreamvast": { "title": "DreamVast veröffentlicht", "description": "Fortgeschrittene Konsole mit Online-Fähigkeiten.", "action": "Gute Plattform für experimentelle Spiele" },
+      "playsystem-2": { "title": "PlaySystem 2 veröffentlicht", "description": "Meistverkaufte Konsole aller Zeiten. Riesiges Publikum.", "action": "Muss-Plattform - riesige Installationsbasis" },
+      "second-office-time": { "title": "Zweites Büro erwägen", "description": "Inzwischen solltest du bereit sein, in ein größeres Büro zu expandieren.", "action": "Brauche 5 Millionen Cash für zweites Büro" },
+      "mbox": { "title": "mBox veröffentlicht", "description": "Neuer Wettbewerber auf dem Konsolenmarkt.", "action": "Gut für westliche Märkte" },
+      "playsystem-3": { "title": "PlaySystem 3 veröffentlicht", "description": "HD-Gaming kommt an. Hohe Entwicklungskosten.", "action": "Fokus auf Qualität statt Quantität" },
+      "mbox-360": { "title": "mBox 360 veröffentlicht", "description": "Starke Online-Features und Achievement-System.", "action": "Großartig für Multiplayer-Spiele" },
+      "own-console": { "title": "Eigene Konsole erstellen", "description": "Das Hardware-Labor ermöglicht dir, deine eigene Spielkonsole zu designen.", "action": "Nur versuchen wenn finanziell stabil" },
+      "genre-combo-tip": { "title": "Thema-Genre-Kombinationen meistern", "description": "Die richtige Thema-Genre-Kombination ist entscheidend für den Erfolg.", "action": "Nutze diesen Guide um optimale Kombinationen zu finden" },
+      "sequel-strategy": { "title": "Sequel-Strategie", "description": "Fortsetzungen erfolgreicher Spiele performen besser. Baue Franchises auf.", "action": "Warte auf eine 9+ Bewertung bevor du Sequels machst" },
+      "engine-importance": { "title": "Custom Engine Vorteile", "description": "Das Bauen eigener Spiel-Engines verbessert die Spielqualität signifikant.", "action": "Investiere in F&E Labor für Engine-Entwicklung" },
+      "aaa-games": { "title": "AAA-Spiel-Entwicklung", "description": "Großes Team + Custom Engine + Richtiges Marketing = AAA-Erfolg.", "action": "AAA-Spiele nur mit erfahrenem Team versuchen" }
     }
   },
   "checklist": {

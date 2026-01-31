@@ -42,17 +42,30 @@ function getPriorityBadge(priority: number | null, t: (key: string) => string) {
 }
 
 function ResearchCard({ item, t }: { item: ResearchItem; t: (key: string) => string }) {
+  const itemNameKey = `research.items.${item.id}.name`;
+  const itemDescKey = `research.items.${item.id}.description`;
+  const itemTipKey = `research.items.${item.id}.tip`;
+  
+  const itemName = t(itemNameKey) !== itemNameKey ? t(itemNameKey) : item.name;
+  const itemDescription = t(itemDescKey) !== itemDescKey ? t(itemDescKey) : (item.description || "");
+  const itemTip = t(itemTipKey) !== itemTipKey ? t(itemTipKey) : (item.tip || "");
+  
+  const translatedPrereqs = item.prerequisiteIds?.map(id => {
+    const prereqKey = `research.items.${id}.name`;
+    return t(prereqKey) !== prereqKey ? t(prereqKey) : id;
+  });
+
   return (
     <Card data-testid={`research-card-${item.id}`}>
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between gap-2">
-          <CardTitle className="text-base">{item.name}</CardTitle>
+          <CardTitle className="text-base">{itemName}</CardTitle>
           {getPriorityBadge(item.priority, t)}
         </div>
       </CardHeader>
       <CardContent className="space-y-4">
-        {item.description && (
-          <p className="text-sm text-muted-foreground">{item.description}</p>
+        {itemDescription && (
+          <p className="text-sm text-muted-foreground">{itemDescription}</p>
         )}
         
         <div className="grid grid-cols-2 gap-3 text-sm">
@@ -75,20 +88,20 @@ function ResearchCard({ item, t }: { item: ResearchItem; t: (key: string) => str
           )}
         </div>
 
-        {item.prerequisiteIds && item.prerequisiteIds.length > 0 && (
+        {translatedPrereqs && translatedPrereqs.length > 0 && (
           <div className="flex items-start gap-2 rounded-md bg-muted/50 p-2">
             <Link2 className="h-4 w-4 text-muted-foreground shrink-0 mt-0.5" />
             <div className="text-sm">
               <span className="text-muted-foreground">{t("research.requires")}: </span>
-              <span>{item.prerequisiteIds.join(", ")}</span>
+              <span>{translatedPrereqs.join(", ")}</span>
             </div>
           </div>
         )}
 
-        {item.tip && (
+        {itemTip && (
           <div className="flex items-start gap-2 rounded-md bg-primary/5 p-3 border border-primary/10">
             <Lightbulb className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-            <p className="text-sm">{item.tip}</p>
+            <p className="text-sm">{itemTip}</p>
           </div>
         )}
       </CardContent>

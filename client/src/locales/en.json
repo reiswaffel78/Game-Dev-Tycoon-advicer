@@ -163,7 +163,26 @@
     "requires": "Requires",
     "essential": "Essential",
     "recommended": "Recommended",
-    "optional": "Optional"
+    "optional": "Optional",
+    "items": {
+      "basic-2d-graphics": { "name": "Basic 2D Graphics v1", "description": "Starting graphics technology", "tip": "Available from the start" },
+      "basic-sound": { "name": "Basic Sound v1", "description": "Starting sound technology", "tip": "Available from the start" },
+      "2d-graphics-v2": { "name": "2D Graphics v2", "description": "Improved 2D graphics", "tip": "Research early for better game scores" },
+      "sound-v2": { "name": "Sound v2", "description": "Improved sound design", "tip": "Research after graphics improvements" },
+      "2d-graphics-v3": { "name": "2D Graphics v3", "description": "Advanced 2D graphics", "tip": "Essential before moving to first office" },
+      "save-game": { "name": "Save Game", "description": "Allow players to save progress", "tip": "Highly important for RPGs and Adventure games" },
+      "dialogue-system": { "name": "Dialogue System", "description": "NPC dialogue options", "tip": "Great for Adventure and RPG genres" },
+      "3d-graphics-v1": { "name": "3D Graphics v1", "description": "Enter the 3D era", "tip": "Essential for modern platforms. Research ASAP when available" },
+      "3d-graphics-v2": { "name": "3D Graphics v2", "description": "Improved 3D rendering", "tip": "Keep graphics tech up to date" },
+      "surround-sound": { "name": "Surround Sound", "description": "Immersive audio experience", "tip": "Boosts quality for all genres" },
+      "multiplayer": { "name": "Multiplayer", "description": "Online multiplayer support", "tip": "Great for Action and Strategy games" },
+      "online-play": { "name": "Online Play", "description": "Internet multiplayer", "tip": "Research when online platforms emerge" },
+      "3d-graphics-v4": { "name": "3D Graphics v4", "description": "High-end 3D graphics", "tip": "Needed for AAA games" },
+      "hd-audio": { "name": "HD Audio", "description": "High definition audio", "tip": "Standard for modern games" },
+      "advanced-ai": { "name": "Advanced AI", "description": "Smarter enemy behavior", "tip": "Important for Strategy and Simulation" },
+      "open-world": { "name": "Open World", "description": "Non-linear exploration", "tip": "Great for Adventure and RPG games" },
+      "vr-support": { "name": "VR Support", "description": "Virtual reality gaming", "tip": "Future technology investment" }
+    }
   },
   "staff": {
     "title": "Staff Guide",
@@ -194,7 +213,24 @@
     },
     "years": "Years",
     "fromYear": "From Year",
-    "untilYear": "Until Year"
+    "untilYear": "Until Year",
+    "items": {
+      "garage-solo": { "title": "Work Solo in the Garage", "description": "You cannot hire staff in the garage phase. Focus on building your skills and saving money for your first office." },
+      "garage-skills": { "title": "Balance Your Skills", "description": "Train yourself in both Design and Technology. A 700/700 split is optimal for making quality games." },
+      "garage-save": { "title": "Save for First Office", "description": "You need 1 million dollars to unlock the first office. Save aggressively in years 4-5." },
+      "first-hire": { "title": "Hire Your First Employee", "description": "Hire someone with complementary skills. If you're strong in Design, hire someone strong in Technology and vice versa." },
+      "first-training": { "title": "Train Immediately", "description": "New hires have low stats. Use training to boost their skills quickly. Prioritize their weakest areas first." },
+      "first-specialist": { "title": "Specialists vs Generalists", "description": "Early game: hire generalists who can do multiple tasks. Later: specialists for specific roles in larger teams." },
+      "first-team-size": { "title": "Team Size Tips", "description": "Small games: 1-2 people. Medium games: 2-3 people. Match team size to game size for best efficiency." },
+      "second-expand": { "title": "Expand to 6 Employees", "description": "The second office allows up to 6 employees. Gradually hire as your cash flow allows." },
+      "second-roles": { "title": "Assign Roles", "description": "Designate 2-3 employees for Design tasks (Art, Story, Sound) and 2-3 for Technology (Engine, AI, Level Design)." },
+      "second-large-games": { "title": "Large Game Teams", "description": "Large games need 4+ people. AAA games need 6 people. Ensure you have enough trained staff." },
+      "second-specialists": { "title": "Hire Specialists", "description": "Consider Graphics Specialists, Sound Engineers, and Writers for better game quality in specific areas." },
+      "rd-lab-unlock": { "title": "R&D Lab Benefits", "description": "The R&D lab allows you to research new engines and hardware. You need at least 4 employees to use it effectively." },
+      "rd-dedicated": { "title": "Dedicated R&D Staff", "description": "Assign 1-2 employees permanently to R&D. They should have high Research speed and Technology skills." },
+      "hw-lab-unlock": { "title": "Hardware Lab Team", "description": "Creating your own console requires a dedicated team. Assign your best Technology specialists." },
+      "hw-console-team": { "title": "Console Development", "description": "Building a console needs 2-3 dedicated staff for 6+ months. Plan your team capacity accordingly." }
+    }
   },
   "timeline": {
     "title": "Timeline",
@@ -224,6 +260,29 @@
       "tip": "Tip",
       "officeAvailable": "Office Available",
       "featureUnlock": "Feature Unlock"
+    },
+    "items": {
+      "start-game": { "title": "Game Start", "description": "You begin in your garage with $70K. Make small games to build experience.", "action": "Make Action or Adventure games - they're forgiving for beginners" },
+      "pc-available": { "title": "PC Platform Available", "description": "The PC is your starting platform. No license fee required.", "action": "Use PC for all your early games" },
+      "govodore-64": { "title": "Govodore 64 Released", "description": "First affordable console. Good for Casual and Action games.", "action": "Consider getting the license if making casual games" },
+      "first-hit": { "title": "Aim for First Hit", "description": "By year 2, try to make a game that scores 7+ to build fans.", "action": "Focus on good topic-genre combos and proper slider settings" },
+      "office-goal": { "title": "Save for Office", "description": "You should have close to 1 million by now for your first office.", "action": "If not, focus on medium-sized games with good combos" },
+      "tes-release": { "title": "TES Released", "description": "Major console with large audience. Great for Action games.", "action": "Strong platform - get the license" },
+      "first-office-available": { "title": "First Office Available", "description": "With 1 million cash, you can move to your first office and hire staff.", "action": "Move as soon as you have the money" },
+      "super-tes": { "title": "Super TES Released", "description": "16-bit era begins. Great graphics capabilities.", "action": "Upgrade from TES - this is the hot platform" },
+      "playsystem": { "title": "PlaySystem Released", "description": "Revolutionary 3D console. The future of gaming.", "action": "ESSENTIAL: Get this license and research 3D graphics" },
+      "3d-era": { "title": "3D Graphics Era", "description": "3D graphics become essential for high-scoring games.", "action": "Research 3D Graphics v1 immediately when available" },
+      "dreamvast": { "title": "DreamVast Released", "description": "Advanced console with online capabilities.", "action": "Good platform for experimental games" },
+      "playsystem-2": { "title": "PlaySystem 2 Released", "description": "Best-selling console ever. Massive audience.", "action": "Must-have platform - huge install base" },
+      "second-office-time": { "title": "Consider Second Office", "description": "By now you should be ready to expand to a larger office.", "action": "Need 5 million cash for second office" },
+      "mbox": { "title": "mBox Released", "description": "New competitor in the console market.", "action": "Good for Western markets" },
+      "playsystem-3": { "title": "PlaySystem 3 Released", "description": "HD gaming arrives. High development costs.", "action": "Focus on quality over quantity" },
+      "mbox-360": { "title": "mBox 360 Released", "description": "Strong online features and achievement system.", "action": "Great for multiplayer games" },
+      "own-console": { "title": "Create Your Own Console", "description": "Hardware lab allows you to design your own gaming console.", "action": "Only attempt if financially stable" },
+      "genre-combo-tip": { "title": "Master Topic-Genre Combos", "description": "The right topic-genre combination is crucial for success.", "action": "Use this guide to find optimal combinations" },
+      "sequel-strategy": { "title": "Sequel Strategy", "description": "Sequels to successful games perform better. Build franchises.", "action": "Wait for a 9+ score before making sequels" },
+      "engine-importance": { "title": "Custom Engine Benefits", "description": "Building custom game engines improves game quality significantly.", "action": "Invest in R&D lab for engine development" },
+      "aaa-games": { "title": "AAA Game Development", "description": "Large team + Custom Engine + Proper marketing = AAA success.", "action": "Only attempt AAA games with experienced team" }
     }
   },
   "checklist": {

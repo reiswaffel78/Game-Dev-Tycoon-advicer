@@ -66,19 +66,24 @@ const getCategoryLabel = (category: string, t: (key: string) => string) => {
 function TipCard({ tip, t }: { tip: StaffTip; t: (key: string) => string }) {
   const CategoryIcon = categoryIcons[tip.category] || ClipboardList;
   
+  const titleKey = `staff.items.${tip.id}.title`;
+  const descKey = `staff.items.${tip.id}.description`;
+  const tipTitle = t(titleKey) !== titleKey ? t(titleKey) : tip.title;
+  const tipDescription = t(descKey) !== descKey ? t(descKey) : tip.description;
+  
   return (
     <Card data-testid={`staff-tip-${tip.id}`}>
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between gap-2 flex-wrap">
           <div className="flex items-center gap-2">
             <CategoryIcon className="h-5 w-5 text-primary" />
-            <CardTitle className="text-base">{tip.title}</CardTitle>
+            <CardTitle className="text-base">{tipTitle}</CardTitle>
           </div>
           {getPriorityBadge(tip.priority, t)}
         </div>
       </CardHeader>
       <CardContent className="space-y-3">
-        <p className="text-sm text-muted-foreground">{tip.description}</p>
+        <p className="text-sm text-muted-foreground">{tipDescription}</p>
         
         <div className="flex items-center gap-4 flex-wrap text-sm">
           <Badge variant="outline" className="capitalize">

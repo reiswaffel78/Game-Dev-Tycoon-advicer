@@ -257,6 +257,72 @@
       "platforms": "Platforms",
       "strategy": "Strategy",
       "advanced": "Advanced"
+    },
+    "items": {
+      "basics1": {
+        "question": "What is the best topic-genre combination?",
+        "answer": "There is no universally best combination - each topic-genre combination has a fit value from -3 to +3. Use our Recommender to find the best combinations. Generally: Action fits well with Military, Sci-Fi and Fantasy. RPG works great with Fantasy and Medieval. Simulation harmonizes with Transport, City and Business."
+      },
+      "basics2": {
+        "question": "How does the scoring system work in game development?",
+        "answer": "Your game gets points based on: 1) Topic-Genre Fit (how well the topic matches the genre), 2) Slider settings (each genre has optimal values), 3) Platform-Genre Fit, 4) Audience-Platform Fit, 5) Technology Level, and 6) Team Skills. The sliders are particularly important - use our presets!"
+      },
+      "basics3": {
+        "question": "When should I move to the next office?",
+        "answer": "Move when you: 1) Have enough money (at least $1M for the first office), 2) Consistently produce good games (8+ reviews), 3) Have built a stable fanbase (at least 100k fans). Moving too early is risky - the higher costs can ruin you!"
+      },
+      "sliders1": {
+        "question": "What do the sliders mean in game development?",
+        "answer": "The sliders distribute your development time across different areas: Engine, Gameplay, Story/Quests, Dialogues, Level Design, AI, World Design, Graphics and Sound. Each genre has optimal settings. An action game needs more Engine and Graphics, while an RPG needs more Story and Dialogues."
+      },
+      "sliders2": {
+        "question": "Which sliders are most important?",
+        "answer": "It depends on the genre! Generally: Action games need high Engine and Gameplay. RPGs need high Story and Dialogues. Strategy games need high AI and Gameplay. Simulations need high World Design and Gameplay. Use our genre-specific presets for optimal results."
+      },
+      "staff1": {
+        "question": "When should I hire staff?",
+        "answer": "Hire staff when: 1) You're in your first office, 2) You have at least $500k, 3) You have stable income. Start with 1-2 employees and train them well. Quality is more important than quantity - one well-trained employee is better than three untrained ones."
+      },
+      "staff2": {
+        "question": "Which skills should I prioritize for staff?",
+        "answer": "Focus on skills that match your game strategy. For action games: Technology and Design. For RPGs: Story and Design. Generally you need at least one tech specialist and one design specialist. Train regularly - even if it's expensive."
+      },
+      "research1": {
+        "question": "What should I research first?",
+        "answer": "Priority 1: Audiences (Young, Everyone, Mature) - massively expands your options. Priority 2: 2D Graphics V2 and better Sound. Priority 3: New genre features like Dialogues. Never research something you can't afford - always keep reserves!"
+      },
+      "research2": {
+        "question": "When is 3D Graphics worth it?",
+        "answer": "3D Graphics is worth it from around Year 15-16 (when 3D-capable consoles appear). Before that, 2D Graphics V3/V4 is completely sufficient. Wait with the upgrade until you: 1) Have a stable team, 2) Have collected enough research points, 3) The right platforms are available."
+      },
+      "platforms1": {
+        "question": "On which platforms should I develop?",
+        "answer": "Develop on platforms that: 1) Match your genre, 2) Are active (not about to retire), 3) Match your target audience. PC is almost always a safe choice. Consoles have higher license costs but also more fans. Mobile is worth it later in the game."
+      },
+      "platforms2": {
+        "question": "When should I develop multi-platform?",
+        "answer": "Multi-platform is worth it when: 1) You have a larger team (4+ people), 2) The game is big enough (medium or large), 3) The platforms fit the same genre category. Never develop multi-platform in the garage - the effort is too high!"
+      },
+      "strategy1": {
+        "question": "How do I get better reviews?",
+        "answer": "Get better reviews through: 1) Perfect topic-genre combination, 2) Optimal slider settings (use our presets!), 3) Good technology matching the game size, 4) Not the same combination twice in a row, 5) Enough time between sequels."
+      },
+      "strategy2": {
+        "question": "How do I avoid bankruptcy?",
+        "answer": "Avoid bankruptcy by: 1) Always keeping at least $50k reserve, 2) Not expanding too quickly, 3) Making small games when money is tight, 4) Taking contract work in emergencies, 5) Never investing in expensive research if you can't afford it."
+      },
+      "strategy3": {
+        "question": "When should I make sequels?",
+        "answer": "Make sequels of successful games (9+ reviews), but wait at least 1-2 years between parts. Sequels sell better with established fans. Use the time in between for other projects or contract work."
+      },
+      "advanced1": {
+        "question": "How does the R&D Lab work?",
+        "answer": "You unlock the R&D Lab with the third office. There you can: 1) Develop your own engines, 2) Research new technologies, 3) Develop specialized hardware (with Hardware Lab). Your own engine is the key to top games!"
+      },
+      "advanced2": {
+        "question": "How do I develop the best game engine?",
+        "answer": "Develop the best engine by: 1) High tech skills in the team, 2) Including all available features, 3) Investing enough time and money, 4) Regular updates. A good engine can be used for multiple games and saves time in the long run."
+      }
     }
   },
   "manual": {

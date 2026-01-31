@@ -1,0 +1,324 @@
+import { useState, useMemo } from "react";
+import { useQuery, useMutation } from "@tanstack/react-query";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Progress } from "@/components/ui/progress";
+import {
+  ClipboardList,
+  Plus,
+  Trash2,
+  Calendar,
+  CheckCircle2,
+  Circle,
+  Sparkles,
+  RotateCcw,
+} from "lucide-react";
+import { apiRequest, queryClient } from "@/lib/queryClient";
+import type { TimelineMilestone, UserChecklistItem } from "@shared/schema";
+
+function getSessionId(): string {
+  let sessionId = localStorage.getItem("gdtAdvisorSessionId");
+  if (!sessionId) {
+    sessionId = crypto.randomUUID();
+    localStorage.setItem("gdtAdvisorSessionId", sessionId);
+  }
+  return sessionId;
+}
+
+interface ChecklistItemWithMilestone extends UserChecklistItem {
+  milestone?: TimelineMilestone;
+}
+
+function importanceColor(importance: string) {
+  switch (importance) {
+    case "critical": return "text-red-600 dark:text-red-400";
+    case "high": return "text-amber-600 dark:text-amber-400";
+    case "medium": return "text-blue-600 dark:text-blue-400";
+    default: return "text-muted-foreground";
+  }
+}
+
+function importanceBadge(importance: string) {
+  switch (importance) {
+    case "critical": return <Badge variant="destructive" className="text-xs">Critical</Badge>;
+    case "high": return <Badge className="bg-amber-600 text-xs">High</Badge>;
+    case "medium": return <Badge variant="secondary" className="text-xs">Medium</Badge>;
+    default: return <Badge variant="outline" className="text-xs">Low</Badge>;
+  }
+}
+
+export default function ChecklistPage() {
+  const [sessionId] = useState(getSessionId);
+  const [newItemText, setNewItemText] = useState("");
+  const [showCompleted, setShowCompleted] = useState(true);
+
+  const { data: rawChecklistItems, isLoading: isLoadingChecklist } = useQuery<UserChecklistItem[]>({
+    queryKey: ["/api/checklist", sessionId],
+  });
+
+  const { data: milestones, isLoading: isLoadingMilestones } = useQuery<TimelineMilestone[]>({
+    queryKey: ["/api/timeline"],
+  });
+
+  const milestoneMap = useMemo(() => {
+    if (!milestones) return new Map<string, TimelineMilestone>();
+    return new Map(milestones.map(m => [m.id, m]));
+  }, [milestones]);
+
+  const checklistItems = useMemo<ChecklistItemWithMilestone[] | undefined>(() => {
+    if (!rawChecklistItems) return undefined;
+    return rawChecklistItems.map(item => ({
+      ...item,
+      milestone: item.milestoneId ? milestoneMap.get(item.milestoneId) : undefined,
+    }));
+  }, [rawChecklistItems, milestoneMap]);
+
+  const createItemMutation = useMutation({
+    mutationFn: async (data: { sessionId: string; milestoneId?: string; customText?: string }) => {
+      return apiRequest("POST", "/api/checklist", data);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/checklist", sessionId] });
+    },
+  });
+
+  const updateItemMutation = useMutation({
+    mutationFn: async ({ id, isCompleted }: { id: string; isCompleted: boolean }) => {
+      return apiRequest("PATCH", `/api/checklist/${id}`, { isCompleted });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/checklist", sessionId] });
+    },
+  });
+
+  const deleteItemMutation = useMutation({
+    mutationFn: async (id: string) => {
+      return apiRequest("DELETE", `/api/checklist/${id}`);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/checklist", sessionId] });
+    },
+  });
+
+  const addCustomItem = () => {
+    if (!newItemText.trim()) return;
+    createItemMutation.mutate({ sessionId, customText: newItemText.trim() });
+    setNewItemText("");
+  };
+
+  const addMilestoneToChecklist = (milestoneId: string) => {
+    createItemMutation.mutate({ sessionId, milestoneId });
+  };
+
+  const toggleItem = (id: string, currentStatus: boolean) => {
+    updateItemMutation.mutate({ id, isCompleted: !currentStatus });
+  };
+
+  const resetProgress = () => {
+    if (checklistItems) {
+      checklistItems.forEach(item => {
+        if (item.isCompleted) {
+          updateItemMutation.mutate({ id: item.id, isCompleted: false });
+        }
+      });
+    }
+  };
+
+  const completedCount = checklistItems?.filter(item => item.isCompleted).length ?? 0;
+  const totalCount = checklistItems?.length ?? 0;
+  const progressPercent = totalCount > 0 ? (completedCount / totalCount) * 100 : 0;
+
+  const existingMilestoneIds = new Set(checklistItems?.map(item => item.milestoneId).filter(Boolean));
+
+  const criticalMilestones = milestones?.filter(
+    m => (m.importance === "critical" || m.importance === "high") && !existingMilestoneIds.has(m.id)
+  ).slice(0, 10);
+
+  const sortedItems = checklistItems
+    ?.slice()
+    .sort((a, b) => {
+      if (a.isCompleted !== b.isCompleted) return a.isCompleted ? 1 : -1;
+      const yearA = a.milestone?.year ?? 0;
+      const yearB = b.milestone?.year ?? 0;
+      return yearA - yearB;
+    });
+
+  const visibleItems = showCompleted ? sortedItems : sortedItems?.filter(item => !item.isCompleted);
+
+  return (
+    <div className="container mx-auto p-6 max-w-4xl">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
+          <ClipboardList className="h-8 w-8 text-primary" />
+          Game Progress Checklist
+        </h1>
+        <p className="text-muted-foreground">
+          Track your progress through Game Dev Tycoon. Add milestones from the timeline or create custom goals.
+        </p>
+      </div>
+
+      <Card className="mb-6">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-lg flex items-center gap-2">
+            <Sparkles className="h-5 w-5 text-amber-500" />
+            Progress Overview
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex items-center gap-4 mb-2">
+            <Progress value={progressPercent} className="flex-1" />
+            <span className="text-sm font-medium min-w-[80px] text-right">
+              {completedCount} / {totalCount}
+            </span>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            {progressPercent === 100 && totalCount > 0
+              ? "All tasks completed! Great job!"
+              : progressPercent > 50
+              ? "You're making great progress!"
+              : "Keep going, you've got this!"}
+          </p>
+        </CardContent>
+      </Card>
+
+      <div className="flex flex-wrap items-center gap-2 mb-6">
+        <div className="flex-1 flex items-center gap-2">
+          <Input
+            placeholder="Add a custom task..."
+            value={newItemText}
+            onChange={(e) => setNewItemText(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && addCustomItem()}
+            className="max-w-xs"
+            data-testid="input-custom-task"
+          />
+          <Button
+            onClick={addCustomItem}
+            disabled={!newItemText.trim() || createItemMutation.isPending}
+            size="icon"
+            data-testid="button-add-task"
+          >
+            <Plus className="h-4 w-4" />
+          </Button>
+        </div>
+        <div className="flex items-center gap-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setShowCompleted(!showCompleted)}
+            data-testid="button-toggle-completed"
+          >
+            {showCompleted ? <CheckCircle2 className="h-4 w-4 mr-1" /> : <Circle className="h-4 w-4 mr-1" />}
+            {showCompleted ? "Hide Completed" : "Show Completed"}
+          </Button>
+          {completedCount > 0 && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={resetProgress}
+              disabled={updateItemMutation.isPending}
+              data-testid="button-reset-progress"
+            >
+              <RotateCcw className="h-4 w-4 mr-1" />
+              Reset
+            </Button>
+          )}
+        </div>
+      </div>
+
+      {isLoadingChecklist || isLoadingMilestones ? (
+        <div className="space-y-3">
+          {[1, 2, 3].map((i) => (
+            <Skeleton key={i} className="h-16 w-full" />
+          ))}
+        </div>
+      ) : visibleItems && visibleItems.length > 0 ? (
+        <Card>
+          <CardContent className="divide-y p-0">
+            {visibleItems.map((item) => (
+              <div
+                key={item.id}
+                className={`flex items-center gap-4 p-4 ${item.isCompleted ? "opacity-60" : ""}`}
+                data-testid={`checklist-item-${item.id}`}
+              >
+                <Checkbox
+                  checked={item.isCompleted ?? false}
+                  onCheckedChange={() => toggleItem(item.id, item.isCompleted ?? false)}
+                  data-testid={`checkbox-${item.id}`}
+                />
+                <div className="flex-1 min-w-0">
+                  <p className={`font-medium ${item.isCompleted ? "line-through text-muted-foreground" : ""}`}>
+                    {item.customText || item.milestone?.title}
+                  </p>
+                  {item.milestone && (
+                    <div className="flex items-center gap-2 mt-1 text-sm text-muted-foreground">
+                      <Calendar className="h-3 w-3" />
+                      Year {item.milestone.year}
+                      {item.milestone.month && ` M${item.milestone.month}`}
+                      {importanceBadge(item.milestone.importance || "medium")}
+                    </div>
+                  )}
+                </div>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => deleteItemMutation.mutate(item.id)}
+                  disabled={deleteItemMutation.isPending}
+                  data-testid={`button-delete-${item.id}`}
+                >
+                  <Trash2 className="h-4 w-4 text-muted-foreground" />
+                </Button>
+              </div>
+            ))}
+          </CardContent>
+        </Card>
+      ) : (
+        <Card>
+          <CardContent className="py-12 text-center">
+            <ClipboardList className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
+            <h3 className="text-lg font-medium mb-2">No Items Yet</h3>
+            <p className="text-muted-foreground">
+              Add custom tasks or select milestones from below to get started.
+            </p>
+          </CardContent>
+        </Card>
+      )}
+
+      {criticalMilestones && criticalMilestones.length > 0 && (
+        <div className="mt-8">
+          <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+            <Calendar className="h-5 w-5 text-primary" />
+            Suggested Milestones
+          </h2>
+          <p className="text-muted-foreground mb-4 text-sm">
+            Important events from the timeline that you might want to track:
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {criticalMilestones.map((milestone) => (
+              <Card
+                key={milestone.id}
+                className="hover-elevate cursor-pointer"
+                onClick={() => addMilestoneToChecklist(milestone.id)}
+                data-testid={`milestone-suggestion-${milestone.id}`}
+              >
+                <CardContent className="p-4 flex items-center gap-3">
+                  <Plus className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <p className="font-medium text-sm">{milestone.title}</p>
+                    <div className="flex items-center gap-2 mt-1 text-xs text-muted-foreground">
+                      <span>Year {milestone.year}</span>
+                      {importanceBadge(milestone.importance || "medium")}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

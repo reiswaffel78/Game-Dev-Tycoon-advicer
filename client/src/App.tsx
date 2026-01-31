@@ -18,6 +18,7 @@ import Sources from "@/pages/sources";
 import Research from "@/pages/research";
 import Staff from "@/pages/staff";
 import Timeline from "@/pages/timeline";
+import Checklist from "@/pages/checklist";
 
 function Router() {
   return (
@@ -31,6 +32,7 @@ function Router() {
       <Route path="/research" component={Research} />
       <Route path="/staff" component={Staff} />
       <Route path="/timeline" component={Timeline} />
+      <Route path="/checklist" component={Checklist} />
       <Route path="/sources" component={Sources} />
       <Route component={NotFound} />
     </Switch>

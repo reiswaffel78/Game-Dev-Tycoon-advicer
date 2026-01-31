@@ -11,6 +11,7 @@ import {
   FlaskConical,
   Users,
   Clock,
+  ClipboardList,
 } from "lucide-react";
 import {
   Sidebar,
@@ -73,6 +74,11 @@ const toolsItems = [
     title: "Timeline",
     url: "/timeline",
     icon: Clock,
+  },
+  {
+    title: "Checklist",
+    url: "/checklist",
+    icon: ClipboardList,
   },
 ];
 

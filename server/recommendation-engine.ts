@@ -309,20 +309,36 @@ export async function getSliderPresets(genreId: string): Promise<SliderPreset[]>
   }
 
   return devWeights.map((weight) => {
-    const sliders = [
-      { name: "Engine", value: weight.engine, importance: getImportance(weight.engine) },
-      { name: "Gameplay", value: weight.gameplay, importance: getImportance(weight.gameplay) },
-      { name: "Story/Quests", value: weight.storyQuests, importance: getImportance(weight.storyQuests) },
-      { name: "Dialogues", value: weight.dialogues, importance: getImportance(weight.dialogues) },
-      { name: "Level Design", value: weight.levelDesign, importance: getImportance(weight.levelDesign) },
-      { name: "AI", value: weight.ai, importance: getImportance(weight.ai) },
-      { name: "World Design", value: weight.worldDesign, importance: getImportance(weight.worldDesign) },
-      { name: "Graphics", value: weight.graphics, importance: getImportance(weight.graphics) },
-      { name: "Sound", value: weight.sound, importance: getImportance(weight.sound) },
-    ].map((s) => ({
+    // Each stage has only 3 specific sliders - this matches the actual game
+    // Stage 1: Engine, Gameplay, Story/Quest
+    // Stage 2: Dialogues, Level Design, AI
+    // Stage 3: World Design, Graphics, Sound
+    let stageSliders: { name: string; value: number }[];
+    
+    if (weight.stage === 1) {
+      stageSliders = [
+        { name: "Engine", value: weight.engine },
+        { name: "Gameplay", value: weight.gameplay },
+        { name: "Story/Quests", value: weight.storyQuests },
+      ];
+    } else if (weight.stage === 2) {
+      stageSliders = [
+        { name: "Dialogues", value: weight.dialogues },
+        { name: "Level Design", value: weight.levelDesign },
+        { name: "AI", value: weight.ai },
+      ];
+    } else {
+      stageSliders = [
+        { name: "World Design", value: weight.worldDesign },
+        { name: "Graphics", value: weight.graphics },
+        { name: "Sound", value: weight.sound },
+      ];
+    }
+
+    const sliders = stageSliders.map((s) => ({
       name: s.name,
-      value: applyGuardrails(Math.round(s.value * 100), s.importance),
-      importance: s.importance,
+      value: Math.round(s.value * 100),
+      importance: getImportance(s.value),
     }));
 
     return {

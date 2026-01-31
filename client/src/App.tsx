@@ -3,27 +3,62 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeToggle } from "@/components/theme-toggle";
 import NotFound from "@/pages/not-found";
+import Dashboard from "@/pages/dashboard";
+import TopicRecommender from "@/pages/topic-recommender";
+import GenreRecommender from "@/pages/genre-recommender";
+import PlatformRecommender from "@/pages/platform-recommender";
+import SliderPresets from "@/pages/slider-presets";
+import Planner from "@/pages/planner";
+import Sources from "@/pages/sources";
 
 function Router() {
   return (
     <Switch>
-      {/* Add pages below */}
-      {/* <Route path="/" component={Home}/> */}
-      {/* Fallback to 404 */}
+      <Route path="/" component={Dashboard} />
+      <Route path="/recommend/topic" component={TopicRecommender} />
+      <Route path="/recommend/genre" component={GenreRecommender} />
+      <Route path="/recommend/platform" component={PlatformRecommender} />
+      <Route path="/sliders" component={SliderPresets} />
+      <Route path="/planner" component={Planner} />
+      <Route path="/sources" component={Sources} />
       <Route component={NotFound} />
     </Switch>
   );
 }
 
 function App() {
+  const sidebarStyle = {
+    "--sidebar-width": "16rem",
+    "--sidebar-width-icon": "3rem",
+  } as React.CSSProperties;
+
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Router />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <ThemeProvider defaultTheme="dark" storageKey="gdt-advisor-theme">
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <SidebarProvider style={sidebarStyle}>
+            <div className="flex h-screen w-full">
+              <AppSidebar />
+              <div className="flex flex-col flex-1 overflow-hidden">
+                <header className="flex items-center justify-between gap-2 px-4 py-2 border-b bg-background/80 backdrop-blur-sm sticky top-0 z-10">
+                  <SidebarTrigger data-testid="button-sidebar-toggle" />
+                  <ThemeToggle />
+                </header>
+                <main className="flex-1 overflow-auto">
+                  <Router />
+                </main>
+              </div>
+            </div>
+          </SidebarProvider>
+          <Toaster />
+        </TooltipProvider>
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 }
 

@@ -1,0 +1,200 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "reset": "Reset",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "year": "Year",
+    "month": "Month",
+    "cost": "Cost",
+    "score": "Score",
+    "rank": "Rank",
+    "total": "Total",
+    "details": "Details",
+    "viewMore": "View More",
+    "showLess": "Show Less"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "topicRecommender": "Topic Recommender",
+    "genreRecommender": "Genre Recommender",
+    "platformRecommender": "Platform Recommender",
+    "sliderPresets": "Slider Presets",
+    "planner": "Game Planner",
+    "research": "Research Guide",
+    "staff": "Staff Guide",
+    "timeline": "Timeline",
+    "checklist": "Checklist",
+    "faq": "FAQ",
+    "handbuch": "Manual",
+    "appGuide": "App Guide",
+    "sources": "Data Sources",
+    "tools": "Tools",
+    "guides": "Guides",
+    "data": "Data"
+  },
+  "dashboard": {
+    "title": "Game Dev Tycoon Advisor",
+    "subtitle": "Find the optimal setup for your next game development project",
+    "topCombos": "Top Combinations",
+    "topCombosDesc": "Best topic-genre combinations based on community data",
+    "quickStats": "Quick Stats",
+    "topics": "Topics",
+    "genres": "Genres",
+    "platforms": "Platforms",
+    "lastUpdate": "Last Update",
+    "getStarted": "Get Started",
+    "getStartedDesc": "Choose a recommender to find your perfect game setup"
+  },
+  "recommender": {
+    "selectTopic": "Select a Topic",
+    "selectGenre": "Select a Genre",
+    "selectPlatform": "Select a Platform",
+    "selectAudience": "Select an Audience",
+    "topicGenreFit": "Topic + Genre Fit",
+    "platformGenreFit": "Platform + Genre Fit",
+    "platformAudienceFit": "Platform + Audience Fit",
+    "costPenalty": "Cost Penalty",
+    "totalScore": "Total Score",
+    "viewCitations": "View Citations",
+    "hideCitations": "Hide Citations",
+    "noResults": "No results found",
+    "adjustFilters": "Try adjusting your filters",
+    "bestMatches": "Best Matches",
+    "filterByYear": "Filter by Year",
+    "unlockYear": "Unlock Year",
+    "researchCost": "Research Cost"
+  },
+  "sliders": {
+    "title": "Slider Presets",
+    "subtitle": "Optimal slider settings for each genre across all three development phases",
+    "selectGenre": "Select a genre to see recommended slider settings",
+    "phase1": "Phase 1",
+    "phase2": "Phase 2",
+    "phase3": "Phase 3",
+    "engine": "Engine",
+    "gameplay": "Gameplay",
+    "storyQuests": "Story/Quests",
+    "dialogues": "Dialogues",
+    "levelDesign": "Level Design",
+    "ai": "AI",
+    "worldDesign": "World Design",
+    "graphics": "Graphics",
+    "sound": "Sound"
+  },
+  "planner": {
+    "title": "Game Planner",
+    "subtitle": "Plan your next game development project",
+    "gameName": "Game Name",
+    "topic": "Topic",
+    "genre": "Genre",
+    "platform": "Platform",
+    "audience": "Audience",
+    "gameSize": "Game Size",
+    "small": "Small",
+    "medium": "Medium",
+    "large": "Large",
+    "aaa": "AAA",
+    "notes": "Notes",
+    "createPlan": "Create Plan",
+    "savedPlans": "Saved Plans",
+    "noPlansSaved": "No plans saved yet"
+  },
+  "research": {
+    "title": "Research Guide",
+    "subtitle": "All technologies with unlock year, costs, and prerequisites",
+    "category": "Category",
+    "prerequisites": "Prerequisites",
+    "researchPoints": "Research Points",
+    "strategyTip": "Strategy Tip"
+  },
+  "staff": {
+    "title": "Staff Management Guide",
+    "subtitle": "Tips for hiring and managing your team at each game phase",
+    "garage": "Garage",
+    "firstOffice": "First Office",
+    "secondOffice": "Second Office",
+    "rdLab": "R&D Lab",
+    "hardwareLab": "Hardware Lab"
+  },
+  "timeline": {
+    "title": "Timeline",
+    "subtitle": "Year-by-year walkthrough with important milestones and platform releases",
+    "platformRelease": "Platform Release",
+    "tip": "Tip",
+    "milestone": "Milestone",
+    "critical": "Critical",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low"
+  },
+  "checklist": {
+    "title": "Progress Checklist",
+    "subtitle": "Track your progress through the game with milestones and custom tasks",
+    "completed": "completed",
+    "addTask": "Add Task",
+    "customTasks": "Custom Tasks",
+    "noCustomTasks": "No custom tasks yet",
+    "milestones": "Milestones"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to the most common questions about Game Dev Tycoon",
+    "categories": {
+      "basics": "Basics",
+      "sliders": "Sliders",
+      "staff": "Staff",
+      "research": "Research",
+      "platforms": "Platforms",
+      "strategy": "Strategy",
+      "advanced": "Advanced"
+    }
+  },
+  "manual": {
+    "title": "Game Dev Tycoon Manual",
+    "subtitle": "The complete manual for Game Dev Tycoon. Learn all game mechanics, strategies, and tips.",
+    "tabs": {
+      "basics": "Basics",
+      "development": "Development",
+      "scoring": "Scoring",
+      "team": "Team",
+      "research": "Research",
+      "advanced": "Advanced"
+    }
+  },
+  "appGuide": {
+    "title": "How to Use This App",
+    "subtitle": "A quick introduction to all features of the Game Dev Tycoon Advisor",
+    "workflows": "Quick Start Workflows",
+    "workflowsDesc": "The most common tasks explained step by step",
+    "features": "All Features Overview",
+    "featuresDesc": "Click on a menu item in the sidebar to access each feature",
+    "proTips": "Pro Tips",
+    "workflow": {
+      "planGame": "Plan a New Game",
+      "findSliders": "Find Optimal Sliders",
+      "trackProgress": "Track Progress"
+    }
+  },
+  "sources": {
+    "title": "Data Sources",
+    "subtitle": "Information about the data sources used in this application",
+    "trustLevel": "Trust Level",
+    "lastUpdated": "Last Updated"
+  },
+  "language": {
+    "en": "English",
+    "de": "Deutsch",
+    "switch": "Switch Language"
+  }
+}

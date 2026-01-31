@@ -1,0 +1,200 @@
+{
+  "common": {
+    "loading": "Lädt...",
+    "error": "Fehler",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "add": "Hinzufügen",
+    "search": "Suchen",
+    "filter": "Filter",
+    "reset": "Zurücksetzen",
+    "close": "Schließen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Vorherige",
+    "year": "Jahr",
+    "month": "Monat",
+    "cost": "Kosten",
+    "score": "Punktzahl",
+    "rank": "Rang",
+    "total": "Gesamt",
+    "details": "Details",
+    "viewMore": "Mehr anzeigen",
+    "showLess": "Weniger anzeigen"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "topicRecommender": "Topic-Empfehlungen",
+    "genreRecommender": "Genre-Empfehlungen",
+    "platformRecommender": "Plattform-Empfehlungen",
+    "sliderPresets": "Slider-Voreinstellungen",
+    "planner": "Spiel-Planer",
+    "research": "Forschungs-Guide",
+    "staff": "Mitarbeiter-Guide",
+    "timeline": "Timeline",
+    "checklist": "Checkliste",
+    "faq": "FAQ",
+    "handbuch": "Handbuch",
+    "appGuide": "App-Anleitung",
+    "sources": "Datenquellen",
+    "tools": "Werkzeuge",
+    "guides": "Anleitungen",
+    "data": "Daten"
+  },
+  "dashboard": {
+    "title": "Game Dev Tycoon Advisor",
+    "subtitle": "Finde das optimale Setup für dein nächstes Spielentwicklungsprojekt",
+    "topCombos": "Top-Kombinationen",
+    "topCombosDesc": "Beste Topic-Genre-Kombinationen basierend auf Community-Daten",
+    "quickStats": "Schnellstatistik",
+    "topics": "Topics",
+    "genres": "Genres",
+    "platforms": "Plattformen",
+    "lastUpdate": "Letztes Update",
+    "getStarted": "Loslegen",
+    "getStartedDesc": "Wähle einen Empfehler, um dein perfektes Spiel-Setup zu finden"
+  },
+  "recommender": {
+    "selectTopic": "Topic auswählen",
+    "selectGenre": "Genre auswählen",
+    "selectPlatform": "Plattform auswählen",
+    "selectAudience": "Zielgruppe auswählen",
+    "topicGenreFit": "Topic + Genre Fit",
+    "platformGenreFit": "Plattform + Genre Fit",
+    "platformAudienceFit": "Plattform + Zielgruppe Fit",
+    "costPenalty": "Kostenstrafe",
+    "totalScore": "Gesamtpunktzahl",
+    "viewCitations": "Quellen anzeigen",
+    "hideCitations": "Quellen verbergen",
+    "noResults": "Keine Ergebnisse gefunden",
+    "adjustFilters": "Versuche die Filter anzupassen",
+    "bestMatches": "Beste Treffer",
+    "filterByYear": "Nach Jahr filtern",
+    "unlockYear": "Freischaltjahr",
+    "researchCost": "Forschungskosten"
+  },
+  "sliders": {
+    "title": "Slider-Voreinstellungen",
+    "subtitle": "Optimale Slider-Einstellungen für jedes Genre in allen drei Entwicklungsphasen",
+    "selectGenre": "Wähle ein Genre um die empfohlenen Slider-Einstellungen zu sehen",
+    "phase1": "Phase 1",
+    "phase2": "Phase 2",
+    "phase3": "Phase 3",
+    "engine": "Engine",
+    "gameplay": "Gameplay",
+    "storyQuests": "Story/Quests",
+    "dialogues": "Dialoge",
+    "levelDesign": "Level-Design",
+    "ai": "KI",
+    "worldDesign": "Welt-Design",
+    "graphics": "Grafik",
+    "sound": "Sound"
+  },
+  "planner": {
+    "title": "Spiel-Planer",
+    "subtitle": "Plane dein nächstes Spielentwicklungsprojekt",
+    "gameName": "Spielname",
+    "topic": "Topic",
+    "genre": "Genre",
+    "platform": "Plattform",
+    "audience": "Zielgruppe",
+    "gameSize": "Spielgröße",
+    "small": "Klein",
+    "medium": "Mittel",
+    "large": "Groß",
+    "aaa": "AAA",
+    "notes": "Notizen",
+    "createPlan": "Plan erstellen",
+    "savedPlans": "Gespeicherte Pläne",
+    "noPlansSaved": "Noch keine Pläne gespeichert"
+  },
+  "research": {
+    "title": "Forschungs-Guide",
+    "subtitle": "Alle Technologien mit Freischaltjahr, Kosten und Voraussetzungen",
+    "category": "Kategorie",
+    "prerequisites": "Voraussetzungen",
+    "researchPoints": "Forschungspunkte",
+    "strategyTip": "Strategie-Tipp"
+  },
+  "staff": {
+    "title": "Mitarbeiter-Guide",
+    "subtitle": "Tipps zur Einstellung und Verwaltung deines Teams in jeder Spielphase",
+    "garage": "Garage",
+    "firstOffice": "Erstes Büro",
+    "secondOffice": "Zweites Büro",
+    "rdLab": "F&E Labor",
+    "hardwareLab": "Hardware Labor"
+  },
+  "timeline": {
+    "title": "Timeline",
+    "subtitle": "Jahr-für-Jahr Walkthrough mit wichtigen Meilensteinen und Plattform-Releases",
+    "platformRelease": "Plattform-Release",
+    "tip": "Tipp",
+    "milestone": "Meilenstein",
+    "critical": "Kritisch",
+    "high": "Hoch",
+    "medium": "Mittel",
+    "low": "Niedrig"
+  },
+  "checklist": {
+    "title": "Fortschritts-Checkliste",
+    "subtitle": "Verfolge deinen Spielfortschritt mit Meilensteinen und eigenen Aufgaben",
+    "completed": "abgeschlossen",
+    "addTask": "Aufgabe hinzufügen",
+    "customTasks": "Eigene Aufgaben",
+    "noCustomTasks": "Noch keine eigenen Aufgaben",
+    "milestones": "Meilensteine"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Antworten auf die wichtigsten Fragen zu Game Dev Tycoon",
+    "categories": {
+      "basics": "Grundlagen",
+      "sliders": "Slider",
+      "staff": "Mitarbeiter",
+      "research": "Forschung",
+      "platforms": "Plattformen",
+      "strategy": "Strategie",
+      "advanced": "Fortgeschritten"
+    }
+  },
+  "manual": {
+    "title": "Game Dev Tycoon Handbuch",
+    "subtitle": "Das vollständige Handbuch zu Game Dev Tycoon. Lerne alle Spielmechaniken, Strategien und Tipps.",
+    "tabs": {
+      "basics": "Grundlagen",
+      "development": "Entwicklung",
+      "scoring": "Bewertung",
+      "team": "Team",
+      "research": "Forschung",
+      "advanced": "Fortgeschritten"
+    }
+  },
+  "appGuide": {
+    "title": "So nutzt du diese App",
+    "subtitle": "Eine kurze Einführung in alle Funktionen des Game Dev Tycoon Advisors",
+    "workflows": "Schnellstart-Workflows",
+    "workflowsDesc": "Die häufigsten Aufgaben Schritt für Schritt erklärt",
+    "features": "Alle Funktionen im Überblick",
+    "featuresDesc": "Klicke auf einen Menüpunkt in der Seitenleiste um zur jeweiligen Funktion zu gelangen",
+    "proTips": "Profi-Tipps",
+    "workflow": {
+      "planGame": "Neues Spiel planen",
+      "findSliders": "Optimale Slider finden",
+      "trackProgress": "Spielfortschritt tracken"
+    }
+  },
+  "sources": {
+    "title": "Datenquellen",
+    "subtitle": "Informationen zu den verwendeten Datenquellen dieser Anwendung",
+    "trustLevel": "Vertrauensstufe",
+    "lastUpdated": "Zuletzt aktualisiert"
+  },
+  "language": {
+    "en": "English",
+    "de": "Deutsch",
+    "switch": "Sprache wechseln"
+  }
+}

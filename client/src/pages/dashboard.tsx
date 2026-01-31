@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 import {
   Tag,
   Layers,
@@ -15,6 +16,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
+import { SEO } from "@/components/seo";
 import type { Topic, Genre, Platform } from "@shared/schema";
 
 interface StatsData {
@@ -93,6 +95,8 @@ function QuickActionCard({
 }
 
 export default function Dashboard() {
+  const { t } = useTranslation();
+
   const { data: stats, isLoading: statsLoading } = useQuery<StatsData>({
     queryKey: ["/api/stats"],
   });
@@ -104,162 +108,164 @@ export default function Dashboard() {
   });
 
   return (
-    <div className="p-6 space-y-8 max-w-7xl mx-auto">
-      <div className="space-y-2">
-        <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent">
-            <Gamepad2 className="h-7 w-7 text-white" />
-          </div>
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight">
-              Game Dev Tycoon Advisor
-            </h1>
-            <p className="text-muted-foreground">
-              Get optimal setups with explainable recommendations and citations
-            </p>
+    <>
+      <SEO
+        title={t("dashboard.title")}
+        description={t("dashboard.subtitle")}
+      />
+      <div className="p-6 space-y-8 max-w-7xl mx-auto">
+        <div className="space-y-2">
+          <div className="flex items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent">
+              <Gamepad2 className="h-7 w-7 text-white" />
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold tracking-tight">
+                {t("dashboard.title")}
+              </h1>
+              <p className="text-muted-foreground">
+                {t("dashboard.subtitle")}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {statsLoading ? (
-          <>
-            {[...Array(4)].map((_, i) => (
-              <Card key={i}>
-                <CardHeader className="pb-2">
-                  <Skeleton className="h-4 w-20" />
-                </CardHeader>
-                <CardContent>
-                  <Skeleton className="h-8 w-16" />
-                </CardContent>
-              </Card>
-            ))}
-          </>
-        ) : (
-          <>
-            <StatsCard
-              title="Topics"
-              value={stats?.topics ?? 0}
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {statsLoading ? (
+            <>
+              {[...Array(4)].map((_, i) => (
+                <Card key={i}>
+                  <CardHeader className="pb-2">
+                    <Skeleton className="h-4 w-20" />
+                  </CardHeader>
+                  <CardContent>
+                    <Skeleton className="h-8 w-16" />
+                  </CardContent>
+                </Card>
+              ))}
+            </>
+          ) : (
+            <>
+              <StatsCard
+                title={t("dashboard.topics")}
+                value={stats?.topics ?? 0}
+                icon={Tag}
+              />
+              <StatsCard
+                title={t("dashboard.genres")}
+                value={stats?.genres ?? 0}
+                icon={Layers}
+              />
+              <StatsCard
+                title={t("dashboard.platforms")}
+                value={stats?.platforms ?? 0}
+                icon={Monitor}
+              />
+              <StatsCard
+                title={t("dashboard.lastUpdate")}
+                value={stats?.lastUpdate ?? "N/A"}
+                icon={TrendingUp}
+              />
+            </>
+          )}
+        </div>
+
+        <div className="space-y-4">
+          <h2 className="text-xl font-semibold flex items-center gap-2">
+            <Sparkles className="h-5 w-5 text-primary" />
+            {t("dashboard.getStarted")}
+          </h2>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <QuickActionCard
+              title={t("nav.topicRecommender")}
+              description={t("dashboard.getStartedDesc")}
               icon={Tag}
-              description="Available game topics"
+              href="/recommend/topic"
+              gradient="bg-gradient-to-br from-violet-500 to-purple-600"
             />
-            <StatsCard
-              title="Genres"
-              value={stats?.genres ?? 0}
+            <QuickActionCard
+              title={t("nav.genreRecommender")}
+              description={t("dashboard.getStartedDesc")}
               icon={Layers}
-              description="Game genre types"
+              href="/recommend/genre"
+              gradient="bg-gradient-to-br from-teal-500 to-emerald-600"
             />
-            <StatsCard
-              title="Platforms"
-              value={stats?.platforms ?? 0}
+            <QuickActionCard
+              title={t("nav.platformRecommender")}
+              description={t("dashboard.getStartedDesc")}
               icon={Monitor}
-              description="Gaming platforms"
+              href="/recommend/platform"
+              gradient="bg-gradient-to-br from-orange-500 to-amber-600"
             />
-            <StatsCard
-              title="Last Update"
-              value={stats?.lastUpdate ?? "N/A"}
-              icon={TrendingUp}
-              description="Data freshness"
+            <QuickActionCard
+              title={t("nav.sliderPresets")}
+              description={t("sliders.subtitle")}
+              icon={SlidersHorizontal}
+              href="/sliders"
+              gradient="bg-gradient-to-br from-pink-500 to-rose-600"
             />
-          </>
-        )}
-      </div>
+            <QuickActionCard
+              title={t("nav.planner")}
+              description={t("planner.subtitle")}
+              icon={CalendarClock}
+              href="/planner"
+              gradient="bg-gradient-to-br from-blue-500 to-indigo-600"
+            />
+          </div>
+        </div>
 
-      <div className="space-y-4">
-        <h2 className="text-xl font-semibold flex items-center gap-2">
-          <Sparkles className="h-5 w-5 text-primary" />
-          Quick Actions
-        </h2>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <QuickActionCard
-            title="Find by Topic"
-            description="Select a topic and get the best genre & platform combinations"
-            icon={Tag}
-            href="/recommend/topic"
-            gradient="bg-gradient-to-br from-violet-500 to-purple-600"
-          />
-          <QuickActionCard
-            title="Find by Genre"
-            description="Pick a genre and discover ideal topics and platforms"
-            icon={Layers}
-            href="/recommend/genre"
-            gradient="bg-gradient-to-br from-teal-500 to-emerald-600"
-          />
-          <QuickActionCard
-            title="Find by Platform"
-            description="Choose a platform and find optimal topic/genre pairs"
-            icon={Monitor}
-            href="/recommend/platform"
-            gradient="bg-gradient-to-br from-orange-500 to-amber-600"
-          />
-          <QuickActionCard
-            title="Slider Presets"
-            description="Get optimal slider values for each development stage"
-            icon={SlidersHorizontal}
-            href="/sliders"
-            gradient="bg-gradient-to-br from-pink-500 to-rose-600"
-          />
-          <QuickActionCard
-            title="Game Planner"
-            description="Plan your next releases based on your current save"
-            icon={CalendarClock}
-            href="/planner"
-            gradient="bg-gradient-to-br from-blue-500 to-indigo-600"
-          />
+        <div className="space-y-4">
+          <h2 className="text-xl font-semibold">{t("dashboard.topCombos")}</h2>
+          <Card>
+            <CardContent className="p-0">
+              {combosLoading ? (
+                <div className="p-6 space-y-3">
+                  {[...Array(5)].map((_, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <Skeleton className="h-8 w-8 rounded-full" />
+                      <Skeleton className="h-4 w-48" />
+                      <Skeleton className="h-5 w-12 ml-auto" />
+                    </div>
+                  ))}
+                </div>
+              ) : topCombos && topCombos.length > 0 ? (
+                <div className="divide-y divide-border">
+                  {topCombos.map((combo, index) => (
+                    <div
+                      key={`${combo.topic.id}-${combo.genre.id}`}
+                      className="flex items-center gap-4 p-4 hover-elevate"
+                      data-testid={`combo-row-${index}`}
+                    >
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary font-semibold text-sm">
+                        {index + 1}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className="font-medium">{combo.topic.name}</span>
+                          <span className="text-muted-foreground">+</span>
+                          <span className="font-medium">{combo.genre.name}</span>
+                        </div>
+                      </div>
+                      <Badge
+                        variant="secondary"
+                        className="bg-primary/10 text-primary"
+                      >
+                        {combo.score > 0 ? "+" : ""}
+                        {combo.score}
+                      </Badge>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="p-8 text-center text-muted-foreground">
+                  <Gamepad2 className="h-12 w-12 mx-auto mb-3 opacity-30" />
+                  <p>{t("recommender.noResults")}</p>
+                </div>
+              )}
+            </CardContent>
+          </Card>
         </div>
       </div>
-
-      <div className="space-y-4">
-        <h2 className="text-xl font-semibold">Top Combinations</h2>
-        <Card>
-          <CardContent className="p-0">
-            {combosLoading ? (
-              <div className="p-6 space-y-3">
-                {[...Array(5)].map((_, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <Skeleton className="h-8 w-8 rounded-full" />
-                    <Skeleton className="h-4 w-48" />
-                    <Skeleton className="h-5 w-12 ml-auto" />
-                  </div>
-                ))}
-              </div>
-            ) : topCombos && topCombos.length > 0 ? (
-              <div className="divide-y divide-border">
-                {topCombos.map((combo, index) => (
-                  <div
-                    key={`${combo.topic.id}-${combo.genre.id}`}
-                    className="flex items-center gap-4 p-4 hover-elevate"
-                    data-testid={`combo-row-${index}`}
-                  >
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary font-semibold text-sm">
-                      {index + 1}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2">
-                        <span className="font-medium">{combo.topic.name}</span>
-                        <span className="text-muted-foreground">+</span>
-                        <span className="font-medium">{combo.genre.name}</span>
-                      </div>
-                    </div>
-                    <Badge
-                      variant="secondary"
-                      className="bg-primary/10 text-primary"
-                    >
-                      {combo.score > 0 ? "+" : ""}
-                      {combo.score}
-                    </Badge>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="p-8 text-center text-muted-foreground">
-                <Gamepad2 className="h-12 w-12 mx-auto mb-3 opacity-30" />
-                <p>No combinations found. Data will appear after seeding.</p>
-              </div>
-            )}
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+    </>
   );
 }

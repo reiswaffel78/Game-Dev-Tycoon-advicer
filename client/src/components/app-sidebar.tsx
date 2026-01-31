@@ -1,4 +1,5 @@
 import { Link, useLocation } from "wouter";
+import { useTranslation } from "react-i18next";
 import {
   Gamepad2,
   LayoutDashboard,
@@ -29,87 +30,88 @@ import {
   SidebarFooter,
 } from "@/components/ui/sidebar";
 
-const navItems = [
-  {
-    title: "Dashboard",
-    url: "/",
-    icon: LayoutDashboard,
-  },
-  {
-    title: "By Topic",
-    url: "/recommend/topic",
-    icon: Tag,
-  },
-  {
-    title: "By Genre",
-    url: "/recommend/genre",
-    icon: Layers,
-  },
-  {
-    title: "By Platform",
-    url: "/recommend/platform",
-    icon: Monitor,
-  },
-];
-
-const toolsItems = [
-  {
-    title: "Slider Presets",
-    url: "/sliders",
-    icon: SlidersHorizontal,
-  },
-  {
-    title: "Game Planner",
-    url: "/planner",
-    icon: CalendarClock,
-  },
-  {
-    title: "Research Guide",
-    url: "/research",
-    icon: FlaskConical,
-  },
-  {
-    title: "Staff Guide",
-    url: "/staff",
-    icon: Users,
-  },
-  {
-    title: "Timeline",
-    url: "/timeline",
-    icon: Clock,
-  },
-  {
-    title: "Checklist",
-    url: "/checklist",
-    icon: ClipboardList,
-  },
-  {
-    title: "FAQ",
-    url: "/faq",
-    icon: HelpCircle,
-  },
-  {
-    title: "Handbuch",
-    url: "/handbuch",
-    icon: BookOpen,
-  },
-  {
-    title: "App-Anleitung",
-    url: "/app-guide",
-    icon: Compass,
-  },
-];
-
-const dataItems = [
-  {
-    title: "Data Sources",
-    url: "/sources",
-    icon: Database,
-  },
-];
-
 export function AppSidebar() {
   const [location] = useLocation();
+  const { t } = useTranslation();
+
+  const navItems = [
+    {
+      title: t("nav.dashboard"),
+      url: "/",
+      icon: LayoutDashboard,
+    },
+    {
+      title: t("nav.topicRecommender"),
+      url: "/recommend/topic",
+      icon: Tag,
+    },
+    {
+      title: t("nav.genreRecommender"),
+      url: "/recommend/genre",
+      icon: Layers,
+    },
+    {
+      title: t("nav.platformRecommender"),
+      url: "/recommend/platform",
+      icon: Monitor,
+    },
+  ];
+
+  const toolsItems = [
+    {
+      title: t("nav.sliderPresets"),
+      url: "/sliders",
+      icon: SlidersHorizontal,
+    },
+    {
+      title: t("nav.planner"),
+      url: "/planner",
+      icon: CalendarClock,
+    },
+    {
+      title: t("nav.research"),
+      url: "/research",
+      icon: FlaskConical,
+    },
+    {
+      title: t("nav.staff"),
+      url: "/staff",
+      icon: Users,
+    },
+    {
+      title: t("nav.timeline"),
+      url: "/timeline",
+      icon: Clock,
+    },
+    {
+      title: t("nav.checklist"),
+      url: "/checklist",
+      icon: ClipboardList,
+    },
+    {
+      title: t("nav.faq"),
+      url: "/faq",
+      icon: HelpCircle,
+    },
+    {
+      title: t("nav.handbuch"),
+      url: "/handbuch",
+      icon: BookOpen,
+    },
+    {
+      title: t("nav.appGuide"),
+      url: "/app-guide",
+      icon: Compass,
+    },
+  ];
+
+  const dataItems = [
+    {
+      title: t("nav.sources"),
+      url: "/sources",
+      icon: Database,
+    },
+  ];
 
   return (
     <Sidebar>
@@ -123,7 +125,7 @@ export function AppSidebar() {
               GDT Advisor
             </span>
             <span className="text-xs text-sidebar-foreground/60">
-              Optimal Setup Guide
+              {t("dashboard.subtitle")}
             </span>
           </div>
         </Link>
@@ -131,16 +133,16 @@ export function AppSidebar() {
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel className="text-sidebar-foreground/50 text-xs uppercase tracking-wider">
-            Recommendations
+            {t("nav.tools")}
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton
                     asChild
                     isActive={location === item.url}
-                    data-testid={`nav-${item.title.toLowerCase().replace(/\s+/g, "-")}`}
+                    data-testid={`nav-${item.url.replace(/\//g, "-").slice(1) || "home"}`}
                   >
                     <Link href={item.url}>
                       <item.icon className="h-4 w-4" />
@@ -154,16 +156,16 @@ export function AppSidebar() {
         </SidebarGroup>
         <SidebarGroup>
           <SidebarGroupLabel className="text-sidebar-foreground/50 text-xs uppercase tracking-wider">
-            Tools
+            {t("nav.guides")}
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {toolsItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton
                     asChild
                     isActive={location === item.url}
-                    data-testid={`nav-${item.title.toLowerCase().replace(/\s+/g, "-")}`}
+                    data-testid={`nav-${item.url.replace(/\//g, "-").slice(1)}`}
                   >
                     <Link href={item.url}>
                       <item.icon className="h-4 w-4" />
@@ -177,16 +179,16 @@ export function AppSidebar() {
         </SidebarGroup>
         <SidebarGroup>
           <SidebarGroupLabel className="text-sidebar-foreground/50 text-xs uppercase tracking-wider">
-            Data
+            {t("nav.data")}
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {dataItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton
                     asChild
                     isActive={location === item.url}
-                    data-testid={`nav-${item.title.toLowerCase().replace(/\s+/g, "-")}`}
+                    data-testid={`nav-${item.url.replace(/\//g, "-").slice(1)}`}
                   >
                     <Link href={item.url}>
                       <item.icon className="h-4 w-4" />
@@ -202,7 +204,7 @@ export function AppSidebar() {
       <SidebarFooter className="p-4">
         <div className="rounded-md bg-sidebar-accent/50 p-3">
           <p className="text-xs text-sidebar-foreground/70">
-            Data sourced from community wikis and forums with citations.
+            {t("sources.subtitle")}
           </p>
         </div>
       </SidebarFooter>

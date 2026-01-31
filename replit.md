@@ -76,6 +76,7 @@ The application models Game Dev Tycoon gameplay data:
 - **Interactive Checklist**: Track progress through the game with custom tasks and milestone tracking
 - **FAQ Page**: 16 frequently asked questions organized by categories (Grundlagen, Slider, Mitarbeiter, Forschung, Plattformen, Strategie, Fortgeschritten)
 - **Handbuch Page**: Complete game manual with 6 tabbed sections covering all game mechanics
+- **App Guide Page**: Tutorial on how to use the advisor app with workflows and feature explanations
 
 ### SEO Implementation
 - **Per-page SEO**: SEO component (`client/src/components/seo.tsx`) dynamically updates page titles and meta descriptions

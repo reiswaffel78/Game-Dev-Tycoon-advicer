@@ -14,6 +14,7 @@ import {
   ClipboardList,
   HelpCircle,
   BookOpen,
+  Compass,
 } from "lucide-react";
 import {
   Sidebar,
@@ -91,6 +92,11 @@ const toolsItems = [
     title: "Handbuch",
     url: "/handbuch",
     icon: BookOpen,
+  },
+  {
+    title: "App-Anleitung",
+    url: "/app-guide",
+    icon: Compass,
   },
 ];
 

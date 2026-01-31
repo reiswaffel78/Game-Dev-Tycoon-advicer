@@ -21,6 +21,7 @@ import Timeline from "@/pages/timeline";
 import Checklist from "@/pages/checklist";
 import FAQ from "@/pages/faq";
 import Handbuch from "@/pages/handbuch";
+import AppGuide from "@/pages/app-guide";
 
 function Router() {
   return (
@@ -37,6 +38,7 @@ function Router() {
       <Route path="/checklist" component={Checklist} />
       <Route path="/faq" component={FAQ} />
       <Route path="/handbuch" component={Handbuch} />
+      <Route path="/app-guide" component={AppGuide} />
       <Route path="/sources" component={Sources} />
       <Route component={NotFound} />
     </Switch>

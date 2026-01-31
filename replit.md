@@ -94,6 +94,13 @@ The application models Game Dev Tycoon gameplay data:
 - **Language Switcher**: Header component for switching between English and German
 - **Default Language**: English (fallback), with browser language auto-detection
 - **Storage**: Language preference saved to localStorage
+- **Data Translation Helper**: `client/src/lib/translate-data.ts` provides helper functions (translateGenre, translateTopic, translatePlatform, translateAudience) for translating database entity names
+- **Fully Translated Pages**:
+  - All UI structural elements (navigation, headers, labels)
+  - FAQ page: 16 items with questions and answers in both languages
+  - Manual (Handbuch) page: All 6 sections with complete content translations
+  - Recommender pages: Entity names translated via data translation helpers
+  - Research, Staff, Timeline, Checklist pages: All content translated
 
 ## External Dependencies
 

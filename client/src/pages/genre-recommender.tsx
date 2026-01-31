@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
+import { translateTopic, translatePlatform, translateAudience, translateGenre } from "@/lib/translate-data";
 import {
   Layers,
   Search,
@@ -72,6 +73,7 @@ function RecommendationCard({
   result: RecommendationResult;
   rank: number;
 }) {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const medalColors: Record<number, string> = {
@@ -79,6 +81,10 @@ function RecommendationCard({
     2: "from-primary/80 to-primary/60",
     3: "from-primary/60 to-primary/40",
   };
+
+  const topicName = translateTopic(t, result.topic.id, result.topic.name);
+  const platformName = translatePlatform(t, result.platform.id, result.platform.name);
+  const audienceName = translateAudience(t, result.audience.id, result.audience.name);
 
   return (
     <Card className="overflow-hidden">
@@ -91,12 +97,12 @@ function RecommendationCard({
           </div>
           <div className="flex-1 min-w-0 space-y-1">
             <div className="flex items-center gap-2 flex-wrap">
-              <CardTitle className="text-lg">{result.topic.name}</CardTitle>
+              <CardTitle className="text-lg">{topicName}</CardTitle>
               <Badge variant="outline" className="text-xs">
-                {result.platform.name}
+                {platformName}
               </Badge>
               <Badge variant="secondary" className="text-xs">
-                {result.audience.name}
+                {audienceName}
               </Badge>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -256,7 +262,7 @@ export default function GenreRecommender() {
                       }`}
                       data-testid={`genre-${genre.id}`}
                     >
-                      <span className="font-medium">{genre.name}</span>
+                      <span className="font-medium">{translateGenre(t, genre.id, genre.name)}</span>
                     </button>
                   ))}
                 </div>

@@ -3,6 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslation } from "react-i18next";
+import { translateGenre, translateTopic, translatePlatform, translateAudience } from "@/lib/translate-data";
 import { z } from "zod";
 import {
   CalendarClock,
@@ -80,6 +81,11 @@ function ReleaseCard({
 }) {
   const sizeLabels = getSizeLabels(t);
   
+  const topicName = translateTopic(t as any, release.topic.id, release.topic.name);
+  const genreName = translateGenre(t as any, release.genre.id, release.genre.name);
+  const platformName = translatePlatform(t as any, release.platform.id, release.platform.name);
+  const audienceName = translateAudience(t as any, release.audience.id, release.audience.name);
+  
   return (
     <Card>
       <CardContent className="p-4">
@@ -89,13 +95,13 @@ function ReleaseCard({
           </div>
           <div className="flex-1 min-w-0 space-y-2">
             <div className="flex items-center gap-2 flex-wrap">
-              <span className="font-semibold">{release.topic.name}</span>
+              <span className="font-semibold">{topicName}</span>
               <span className="text-muted-foreground">+</span>
-              <span className="font-semibold">{release.genre.name}</span>
+              <span className="font-semibold">{genreName}</span>
             </div>
             <div className="flex items-center gap-2 flex-wrap">
-              <Badge variant="outline">{release.platform.name}</Badge>
-              <Badge variant="secondary">{release.audience.name}</Badge>
+              <Badge variant="outline">{platformName}</Badge>
+              <Badge variant="secondary">{audienceName}</Badge>
               <Badge
                 className={`${sizeColors[release.size]} text-white border-0`}
               >

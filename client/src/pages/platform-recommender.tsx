@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
+import { translateGenre, translateTopic, translateAudience, translatePlatform } from "@/lib/translate-data";
 import {
   Monitor,
   Search,
@@ -74,6 +75,7 @@ function RecommendationCard({
   result: RecommendationResult;
   rank: number;
 }) {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const medalColors: Record<number, string> = {
@@ -81,6 +83,10 @@ function RecommendationCard({
     2: "from-primary/80 to-primary/60",
     3: "from-primary/60 to-primary/40",
   };
+
+  const topicName = translateTopic(t, result.topic.id, result.topic.name);
+  const genreName = translateGenre(t, result.genre.id, result.genre.name);
+  const audienceName = translateAudience(t, result.audience.id, result.audience.name);
 
   return (
     <Card className="overflow-hidden">
@@ -93,11 +99,11 @@ function RecommendationCard({
           </div>
           <div className="flex-1 min-w-0 space-y-1">
             <div className="flex items-center gap-2 flex-wrap">
-              <CardTitle className="text-lg">{result.topic.name}</CardTitle>
+              <CardTitle className="text-lg">{topicName}</CardTitle>
               <span className="text-muted-foreground">+</span>
-              <CardTitle className="text-lg">{result.genre.name}</CardTitle>
+              <CardTitle className="text-lg">{genreName}</CardTitle>
               <Badge variant="secondary" className="text-xs">
-                {result.audience.name}
+                {audienceName}
               </Badge>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -197,6 +203,7 @@ function PlatformCard({
   isSelected: boolean;
   onClick: () => void;
 }) {
+  const { t } = useTranslation();
   return (
     <button
       onClick={onClick}
@@ -205,7 +212,7 @@ function PlatformCard({
       }`}
       data-testid={`platform-${platform.id}`}
     >
-      <div className="font-medium">{platform.name}</div>
+      <div className="font-medium">{translatePlatform(t, platform.id, platform.name)}</div>
       {platform.company && (
         <div
           className={`text-xs mt-0.5 ${isSelected ? "text-primary-foreground/80" : "text-muted-foreground"}`}

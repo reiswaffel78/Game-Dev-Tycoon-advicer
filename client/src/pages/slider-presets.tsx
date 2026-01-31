@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
+import { translateGenre } from "@/lib/translate-data";
 import { SlidersHorizontal, Search, Info, Zap, Cpu, Sparkles } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -198,7 +199,7 @@ export default function SliderPresets() {
                       }`}
                       data-testid={`slider-genre-${genre.id}`}
                     >
-                      <span className="font-medium">{genre.name}</span>
+                      <span className="font-medium">{translateGenre(t, genre.id, genre.name)}</span>
                     </button>
                   ))}
                 </div>

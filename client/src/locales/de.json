@@ -1,4 +1,58 @@
 {
+  "data": {
+    "genres": {
+      "action": { "name": "Action", "description": "Schnelles Gameplay mit Kampf und Reflexen" },
+      "adventure": { "name": "Adventure", "description": "Story-basierte Erkundungsspiele" },
+      "rpg": { "name": "RPG", "description": "Rollenspiele mit Charakterentwicklung" },
+      "simulation": { "name": "Simulation", "description": "Realistische Simulationsspiele" },
+      "strategy": { "name": "Strategie", "description": "Taktisches und strategisches Gameplay" },
+      "casual": { "name": "Casual", "description": "Leicht zu spielende Gelegenheitsspiele" }
+    },
+    "topics": {
+      "aliens": { "name": "Aliens", "description": "Außerirdische Themen" },
+      "fantasy": { "name": "Fantasy", "description": "Magische Welten und Kreaturen" },
+      "scifi": { "name": "Sci-Fi", "description": "Science-Fiction-Themen" },
+      "medieval": { "name": "Mittelalter", "description": "Mittelalterliches Setting" },
+      "military": { "name": "Militär", "description": "Militär- und Kriegsthemen" },
+      "pirates": { "name": "Piraten", "description": "Piratenabenteuer und Seeschlachten" },
+      "vampires": { "name": "Vampire", "description": "Vampir- und dunkle Themen" },
+      "zombies": { "name": "Zombies", "description": "Zombie-Apokalypse-Themen" },
+      "sports": { "name": "Sport", "description": "Athletische Wettbewerbsthemen" },
+      "racing": { "name": "Rennen", "description": "Fahrzeugrennthemen" },
+      "city": { "name": "Stadt", "description": "Städtebau und -management" },
+      "business": { "name": "Business", "description": "Geschäftssimulationsthemen" },
+      "hospital": { "name": "Krankenhaus", "description": "Medizin- und Krankenhausthemen" },
+      "prison": { "name": "Gefängnis", "description": "Gefängnismanagement-Themen" },
+      "space": { "name": "Weltraum", "description": "Weltraumerforschungsthemen" },
+      "hunting": { "name": "Jagd", "description": "Jagd- und Wildtierthemen" },
+      "martial-arts": { "name": "Kampfsport", "description": "Kampfsport-Themen" },
+      "mystery": { "name": "Krimi", "description": "Detektiv- und Mysterythemen" },
+      "comedy": { "name": "Komödie", "description": "Humorvolle und komödiantische Themen" },
+      "dance": { "name": "Tanz", "description": "Tanz- und Rhythmusthemen" }
+    },
+    "platforms": {
+      "pc": { "name": "PC", "description": "Personal Computer Plattform" },
+      "govodore-64": { "name": "Govodore 64", "description": "Früher Heimcomputer" },
+      "tes": { "name": "TES", "description": "8-Bit-Konsole" },
+      "master-v": { "name": "Master V", "description": "16-Bit-Konsole" },
+      "super-tes": { "name": "Super TES", "description": "Fortgeschrittene 16-Bit-Konsole" },
+      "genovation": { "name": "Genovation", "description": "CD-basierte Konsole" },
+      "playstation": { "name": "Playsystem", "description": "32-Bit CD-Konsole" },
+      "nuu-64": { "name": "nuu 64", "description": "64-Bit Kartuschen-Konsole" },
+      "dreamvast": { "name": "DreamVast", "description": "Internet-fähige Konsole" },
+      "playsystem-2": { "name": "Playsystem 2", "description": "Fortgeschrittene DVD-Konsole" },
+      "game-sphere": { "name": "Game Sphere", "description": "Disc-basierte Konsole" },
+      "mbox": { "name": "mBox", "description": "Erste mBox Konsole" },
+      "playsystem-3": { "name": "Playsystem 3", "description": "HD-Gaming-Konsole" },
+      "mbox-next": { "name": "mBox Next", "description": "Next-Gen mBox" },
+      "whoops": { "name": "whoops", "description": "Bewegungssteuerungskonsole" }
+    },
+    "audiences": {
+      "young": { "name": "Jung", "description": "Spiele für junge Spieler geeignet" },
+      "everyone": { "name": "Alle", "description": "Spiele für alle Altersgruppen" },
+      "mature": { "name": "Erwachsen", "description": "Spiele für erwachsene Spieler" }
+    }
+  },
   "common": {
     "loading": "Lädt...",
     "error": "Fehler",
@@ -316,6 +370,72 @@
       "platforms": "Plattformen",
       "strategy": "Strategie",
       "advanced": "Fortgeschritten"
+    },
+    "items": {
+      "basics1": {
+        "question": "Was ist die beste Thema-Genre Kombination?",
+        "answer": "Es gibt keine universell beste Kombination - jede Thema-Genre Kombination hat einen Fit-Wert von -3 bis +3. Nutze unseren Recommender um die besten Kombinationen zu finden. Generell: Action passt gut zu Militär, Sci-Fi und Fantasy. RPG harmoniert mit Fantasy und Mittelalter. Simulation passt zu Transport, Stadt und Business."
+      },
+      "basics2": {
+        "question": "Wie funktioniert das Bewertungssystem bei der Spielentwicklung?",
+        "answer": "Dein Spiel bekommt Punkte basierend auf: 1) Thema-Genre Fit (wie gut das Thema zum Genre passt), 2) Slider-Einstellungen (jedes Genre hat optimale Werte), 3) Plattform-Genre Fit, 4) Zielgruppe-Plattform Fit, 5) Technologie-Level, und 6) Team-Fähigkeiten. Die Slider sind besonders wichtig - nutze unsere Voreinstellungen!"
+      },
+      "basics3": {
+        "question": "Wann sollte ich ins nächste Büro umziehen?",
+        "answer": "Ziehe um wenn du: 1) Genug Geld hast (mindestens 1M$ für das erste Büro), 2) Konstant gute Spiele produzierst (8+ Bewertungen), 3) Eine stabile Fanbasis aufgebaut hast (mindestens 100k Fans). Zu früh umziehen ist riskant - die höheren Kosten können dich ruinieren!"
+      },
+      "sliders1": {
+        "question": "Was bedeuten die Slider bei der Spielentwicklung?",
+        "answer": "Die Slider verteilen deine Entwicklungszeit auf verschiedene Bereiche: Engine, Gameplay, Story/Quests, Dialoge, Level Design, KI, World Design, Grafik und Sound. Jedes Genre hat optimale Einstellungen. Ein Action-Spiel braucht mehr Engine und Grafik, während ein RPG mehr Story und Dialoge benötigt."
+      },
+      "sliders2": {
+        "question": "Welche Slider sind am wichtigsten?",
+        "answer": "Das hängt vom Genre ab! Generell: Action-Spiele brauchen hohe Engine und Gameplay. RPGs brauchen hohe Story und Dialoge. Strategiespiele brauchen hohe KI und Gameplay. Simulationen brauchen hohes World Design und Gameplay. Nutze unsere Genre-spezifischen Voreinstellungen für optimale Ergebnisse."
+      },
+      "staff1": {
+        "question": "Wann sollte ich Mitarbeiter einstellen?",
+        "answer": "Stelle Mitarbeiter ein wenn: 1) Du im ersten Büro bist, 2) Du mindestens 500k$ hast, 3) Du ein stabiles Einkommen hast. Beginne mit 1-2 Mitarbeitern und trainiere sie gut. Qualität ist wichtiger als Quantität - ein gut trainierter Mitarbeiter ist besser als drei untrainierte."
+      },
+      "staff2": {
+        "question": "Welche Skills sollte ich bei Mitarbeitern priorisieren?",
+        "answer": "Fokussiere auf Skills die zu deiner Spielstrategie passen. Für Action-Spiele: Technologie und Design. Für RPGs: Story und Design. Generell brauchst du mindestens einen Tech-Spezialisten und einen Design-Spezialisten. Trainiere regelmäßig - auch wenn es teuer ist."
+      },
+      "research1": {
+        "question": "Was sollte ich zuerst erforschen?",
+        "answer": "Priorität 1: Zielgruppen (Jung, Alle, Erwachsen) - erweitert deine Optionen massiv. Priorität 2: 2D Grafik V2 und besseren Sound. Priorität 3: Neue Genre-Features wie Dialoge. Erforsche niemals etwas das du dir nicht leisten kannst - halte immer Reserven!"
+      },
+      "research2": {
+        "question": "Wann lohnt sich 3D-Grafik?",
+        "answer": "3D-Grafik lohnt sich ab etwa Jahr 15-16 (wenn 3D-fähige Konsolen erscheinen). Vorher ist 2D-Grafik V3/V4 völlig ausreichend. Warte mit dem Upgrade bis du: 1) Ein stabiles Team hast, 2) Genug Forschungspunkte gesammelt hast, 3) Die richtigen Plattformen verfügbar sind."
+      },
+      "platforms1": {
+        "question": "Auf welchen Plattformen sollte ich entwickeln?",
+        "answer": "Entwickle auf Plattformen die: 1) Zu deinem Genre passen, 2) Aktiv sind (nicht kurz vor Ablösung), 3) Zu deiner Zielgruppe passen. PC ist fast immer eine sichere Wahl. Konsolen haben höhere Lizenzkosten aber auch mehr Fans. Mobile lohnt sich erst später im Spiel."
+      },
+      "platforms2": {
+        "question": "Wann sollte ich Multi-Plattform entwickeln?",
+        "answer": "Multi-Plattform lohnt sich wenn: 1) Du ein größeres Team hast (4+ Leute), 2) Das Spiel groß genug ist (mittel oder groß), 3) Die Plattformen zur selben Genre-Kategorie passen. Entwickle niemals Multi-Plattform in der Garage - der Aufwand ist zu hoch!"
+      },
+      "strategy1": {
+        "question": "Wie bekomme ich bessere Bewertungen?",
+        "answer": "Bessere Bewertungen durch: 1) Perfekte Thema-Genre Kombination, 2) Optimale Slider-Einstellungen (nutze unsere Voreinstellungen!), 3) Gute Technologie passend zur Spielgröße, 4) Nicht dieselbe Kombination zweimal hintereinander, 5) Genug Zeit zwischen Fortsetzungen."
+      },
+      "strategy2": {
+        "question": "Wie vermeide ich den Bankrott?",
+        "answer": "Vermeide Bankrott durch: 1) Immer mindestens 50k$ Reserve behalten, 2) Nicht zu schnell expandieren, 3) Kleine Spiele machen wenn das Geld knapp ist, 4) Auftragsarbeiten im Notfall annehmen, 5) Niemals teure Forschung wenn du es dir nicht leisten kannst."
+      },
+      "strategy3": {
+        "question": "Wann sollte ich Fortsetzungen machen?",
+        "answer": "Mache Fortsetzungen von erfolgreichen Spielen (9+ Bewertungen), aber warte mindestens 1-2 Jahre zwischen den Teilen. Fortsetzungen verkaufen sich besser mit etablierten Fans. Nutze die Zeit dazwischen für andere Projekte oder Auftragsarbeiten."
+      },
+      "advanced1": {
+        "question": "Wie funktioniert das F&E Labor?",
+        "answer": "Das F&E Labor schaltest du mit dem dritten Büro frei. Dort kannst du: 1) Eigene Engines entwickeln, 2) Neue Technologien erforschen, 3) Spezialisierte Hardware entwickeln (mit Hardware Labor). Die eigene Engine ist der Schlüssel zu Top-Spielen!"
+      },
+      "advanced2": {
+        "question": "Wie entwickle ich die beste Spiel-Engine?",
+        "answer": "Entwickle die beste Engine durch: 1) Hohe Tech-Skills im Team, 2) Alle verfügbaren Features einbauen, 3) Genug Zeit und Geld investieren, 4) Regelmäßige Updates. Eine gute Engine kann für mehrere Spiele genutzt werden und spart langfristig Zeit."
+      }
     }
   },
   "manual": {
@@ -328,6 +448,118 @@
       "team": "Team",
       "research": "Forschung",
       "advanced": "Fortgeschritten"
+    },
+    "basics": {
+      "welcome": "Willkommen bei Game Dev Tycoon",
+      "intro": "In Game Dev Tycoon startest du als unabhängiger Spieleentwickler in den 1980er Jahren und baust dein eigenes Spieleimperium auf. Du entwickelst Spiele, stellst Mitarbeiter ein, erforschst neue Technologien und versuchst, der erfolgreichste Spieleentwickler der Welt zu werden.",
+      "phases": "Die Spielphasen",
+      "phase1Title": "1. Garage (Jahr 1-4)",
+      "phase1Desc": "Du arbeitest allein und machst kleine Spiele. Fokus auf Lernen und erste Erfolge. Spare Geld für den Umzug ins erste Büro.",
+      "phase2Title": "2. Erstes Büro (Jahr 4-10)",
+      "phase2Desc": "Stelle erste Mitarbeiter ein. Entwickle mittlere Spiele. Beginne mit Forschung und baue deine Fanbasis aus.",
+      "phase3Title": "3. Zweites Büro (Jahr 10-20)",
+      "phase3Desc": "Größeres Team, größere Spiele. Zugang zum F&E Labor. Entwickle eigene Engines und AAA-Titel.",
+      "phase4Title": "4. Endgame (Jahr 20+)",
+      "phase4Desc": "Hardware Lab, eigene Konsolen, MMOs. Dominiere den Markt mit deinem Spieleimperium.",
+      "goals": "Deine Ziele",
+      "goal1": "Entwickle erfolgreiche Spiele mit guten Reviews (8+)",
+      "goal2": "Baue eine treue Fanbasis auf",
+      "goal3": "Erweitere dein Unternehmen und Team",
+      "goal4": "Erforsche neue Technologien",
+      "goal5": "Vermeide den Bankrott!"
+    },
+    "development": {
+      "title": "Spieleentwicklung verstehen",
+      "phases": "Die drei Entwicklungsphasen",
+      "phasesIntro": "Jedes Spiel durchläuft drei Phasen mit jeweils eigenen Slidern:",
+      "phase1Badge": "Phase 1",
+      "phase1Title": "Engine & Gameplay",
+      "phase1Desc": "Hier legst du das technische Fundament. Die Slider sind:",
+      "phase2Badge": "Phase 2",
+      "phase2Title": "Dialoge & Design",
+      "phase2Desc": "Inhaltliche Ausarbeitung des Spiels:",
+      "phase3Badge": "Phase 3",
+      "phase3Title": "Präsentation",
+      "phase3Desc": "Visuelle und auditive Qualität:",
+      "sliderEngine": "Engine",
+      "sliderGameplay": "Gameplay",
+      "sliderStory": "Story/Quests",
+      "sliderDialogues": "Dialoge",
+      "sliderLevelDesign": "Level Design",
+      "sliderAI": "KI",
+      "sliderWorldDesign": "Weltdesign",
+      "sliderGraphics": "Grafik",
+      "sliderSound": "Sound",
+      "combos": "Topic-Genre Kombinationen",
+      "combosDesc1": "Nicht jedes Thema passt zu jedem Genre. Ein Kriegsspiel als Casual Game? Ein Kinderthema als Horror-Spiel? Das funktioniert nicht gut.",
+      "combosDesc2": "Die Passgenauigkeit wird mit Werten von -3 (sehr schlecht) bis +3 (perfekt) bewertet. Nutze unseren Recommender, um die besten Kombinationen zu finden!",
+      "warning": "Wichtig: Wiederholungen vermeiden!",
+      "warningDesc": "Wenn du dieselbe Topic-Genre Kombination zweimal hintereinander nutzt, bekommst du schlechtere Reviews. Variiere deine Spiele!"
+    },
+    "scoring": {
+      "title": "Das Bewertungssystem",
+      "intro": "Die Qualität deines Spiels (und damit die Reviews) wird durch mehrere Faktoren bestimmt:",
+      "topicGenre": "Topic-Genre Fit",
+      "topicGenreWeight": "40% Gewichtung",
+      "topicGenreDesc": "Wie gut passt dein Thema zum Genre? Fantasy + RPG = perfekt. Horror + Kinderthema = katastrophal.",
+      "sliders": "Slider-Einstellungen",
+      "slidersWeight": "25% Gewichtung",
+      "slidersDesc": "Jedes Genre hat optimale Slider-Werte. Nutze unsere Presets! Falsche Slider können selbst perfekte Kombinationen ruinieren.",
+      "platform": "Plattform-Fit",
+      "platformWeight": "20% Gewichtung",
+      "platformDesc": "Passt die Plattform zum Genre und Publikum? Action-Spiele auf Familienkonsolen? Nicht ideal.",
+      "tech": "Technologie-Level",
+      "techWeight": "15% Gewichtung",
+      "techDesc": "Ist deine Technik aktuell? Alte Grafik auf modernen Konsolen schadet den Reviews.",
+      "tipsTitle": "Tipps für bessere Reviews",
+      "tip1": "Nutze optimale Topic-Genre Kombinationen (check unseren Recommender)",
+      "tip2": "Setze Slider richtig für jede Phase (nutze unsere Presets)",
+      "tip3": "Passe die Plattform zum Genre an",
+      "tip4": "Halte deine Technologie aktuell",
+      "tip5": "Variiere deine Spiele - keine Wiederholungen!"
+    },
+    "team": {
+      "title": "Team-Management",
+      "intro": "Ein gutes Team ist der Schlüssel zum Erfolg. So managst du deine Mitarbeiter am besten:",
+      "hiring": "Einstellen",
+      "hiringTip1": "Qualität vor Quantität - ein gut trainierter Mitarbeiter ist besser als drei Anfänger",
+      "hiringTip2": "Stelle Mitarbeiter mit ergänzenden Fähigkeiten ein",
+      "hiringTip3": "Passe die Teamgröße an die Spielgröße an",
+      "training": "Training",
+      "trainingTip1": "Trainiere neue Mitarbeiter sofort - ihre Basis-Stats sind niedrig",
+      "trainingTip2": "Fokussiere zuerst auf schwache Bereiche",
+      "trainingTip3": "Training ist teuer aber lohnt sich",
+      "roles": "Rollen",
+      "rolesTip1": "Weise klare Rollen zu: Design (Art, Story, Sound) und Tech (Engine, KI, Level Design)",
+      "rolesTip2": "Spezialisten sind besser als Generalisten für spezifische Aufgaben",
+      "rolesTip3": "Balanciere dein Team - du brauchst sowohl Design- als auch Tech-Skills"
+    },
+    "research": {
+      "title": "Forschung & Entwicklung",
+      "intro": "Forschung ist essentiell um wettbewerbsfähig zu bleiben:",
+      "priority": "Forschungs-Prioritäten",
+      "priority1": "Zielgruppen (Jung, Alle, Erwachsen) - erweitert Optionen massiv",
+      "priority2": "Grafik-Upgrades - halte Technik aktuell",
+      "priority3": "Genre-Features (Dialoge, Multiplayer, etc.)",
+      "timing": "Timing",
+      "timingTip1": "Erforsche 3D-Grafik wenn 3D-Konsolen erscheinen",
+      "timingTip2": "Erforsche nichts was du dir nicht leisten kannst",
+      "timingTip3": "Spare Forschungspunkte für wichtige Freischaltungen",
+      "rdLab": "F&E Labor",
+      "rdLabTip1": "Freigeschaltet mit dem dritten Büro",
+      "rdLabTip2": "Erforderlich für eigene Engines",
+      "rdLabTip3": "Weise 1-2 dedizierte F&E-Mitarbeiter zu"
+    },
+    "advanced": {
+      "title": "Fortgeschrittene Strategien",
+      "engines": "Eigene Engines",
+      "enginesDesc": "Eigene Engines verbessern die Spielqualität dramatisch. Investiere in hohe Tech-Skills und füge alle verfügbaren Features hinzu.",
+      "sequels": "Fortsetzungen",
+      "sequelsDesc": "Mache Fortsetzungen von erfolgreichen Spielen (9+ Reviews), aber warte 1-2 Jahre zwischen den Teilen. Fortsetzungen verkaufen sich besser mit etablierten Fans.",
+      "aaa": "AAA-Spiele",
+      "aaaDesc": "AAA-Spiele erfordern: Großes Team (6+), eigene Engine, richtiges Marketing. Nur mit erfahrenem Team versuchen.",
+      "hardware": "Hardware Labor",
+      "hardwareDesc": "Mit dem Hardware Labor kannst du deine eigene Konsole designen. Braucht ein dediziertes Team und signifikante Investition."
     }
   },
   "appGuide": {

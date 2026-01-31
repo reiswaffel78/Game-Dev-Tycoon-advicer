@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SEO } from "@/components/seo";
 import { Badge } from "@/components/ui/badge";
@@ -16,20 +17,21 @@ import {
 } from "lucide-react";
 
 export default function HandbuchPage() {
+  const { t } = useTranslation();
+  
   return (
     <div className="container mx-auto p-6 max-w-5xl">
       <SEO 
-        title="Handbuch - Vollstaendige Spielanleitung" 
-        description="Das komplette Game Dev Tycoon Handbuch: Spielmechaniken, Bewertungssystem, Team-Management, Forschung und fortgeschrittene Strategien."
+        title={t("manual.title")} 
+        description={t("manual.subtitle")}
       />
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <BookOpen className="h-8 w-8 text-primary" />
-          Game Dev Tycoon Handbuch
+          {t("manual.title")}
         </h1>
         <p className="text-muted-foreground">
-          Das vollstaendige Handbuch zu Game Dev Tycoon. Lerne alle Spielmechaniken,
-          Strategien und Tipps fuer den perfekten Spieledurchlauf.
+          {t("manual.subtitle")}
         </p>
       </div>
 
@@ -37,27 +39,27 @@ export default function HandbuchPage() {
         <TabsList className="flex-wrap h-auto gap-1">
           <TabsTrigger value="basics" className="flex items-center gap-1" data-testid="tab-basics">
             <Gamepad2 className="h-4 w-4" />
-            Grundlagen
+            {t("manual.tabs.basics")}
           </TabsTrigger>
           <TabsTrigger value="development" className="flex items-center gap-1" data-testid="tab-development">
             <Zap className="h-4 w-4" />
-            Entwicklung
+            {t("manual.tabs.development")}
           </TabsTrigger>
           <TabsTrigger value="scoring" className="flex items-center gap-1" data-testid="tab-scoring">
             <Star className="h-4 w-4" />
-            Bewertung
+            {t("manual.tabs.scoring")}
           </TabsTrigger>
           <TabsTrigger value="team" className="flex items-center gap-1" data-testid="tab-team">
             <Users className="h-4 w-4" />
-            Team
+            {t("manual.tabs.team")}
           </TabsTrigger>
           <TabsTrigger value="research" className="flex items-center gap-1" data-testid="tab-research">
             <Lightbulb className="h-4 w-4" />
-            Forschung
+            {t("manual.tabs.research")}
           </TabsTrigger>
           <TabsTrigger value="advanced" className="flex items-center gap-1" data-testid="tab-advanced">
             <Target className="h-4 w-4" />
-            Fortgeschritten
+            {t("manual.tabs.advanced")}
           </TabsTrigger>
         </TabsList>
 

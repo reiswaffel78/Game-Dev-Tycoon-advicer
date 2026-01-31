@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SEO } from "@/components/seo";
 import {
@@ -98,6 +99,16 @@ const faqItems: FAQItem[] = [
   },
 ];
 
+const categoryTranslationKeys: Record<string, string> = {
+  "Grundlagen": "basics",
+  "Slider": "sliders",
+  "Mitarbeiter": "staff",
+  "Forschung": "research",
+  "Plattformen": "platforms",
+  "Strategie": "strategy",
+  "Fortgeschritten": "advanced",
+};
+
 const categoryIcons: Record<string, typeof HelpCircle> = {
   "Grundlagen": Gamepad2,
   "Slider": TrendingUp,
@@ -119,32 +130,33 @@ const categoryColors: Record<string, string> = {
 };
 
 export default function FAQPage() {
+  const { t, i18n } = useTranslation();
   const categories = Array.from(new Set(faqItems.map((item) => item.category)));
 
   return (
     <div className="container mx-auto p-6 max-w-4xl">
       <SEO 
-        title="FAQ - Haeufig gestellte Fragen" 
-        description="Antworten auf die wichtigsten Fragen zu Game Dev Tycoon: Beste Kombinationen, Slider-Tipps, Mitarbeiter-Strategien und mehr."
+        title={t("faq.title")} 
+        description={t("faq.subtitle")}
       />
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <HelpCircle className="h-8 w-8 text-primary" />
-          Haeufig gestellte Fragen (FAQ)
+          {t("faq.title")}
         </h1>
         <p className="text-muted-foreground">
-          Antworten auf die wichtigsten Fragen zu Game Dev Tycoon. 
-          Finde schnell Loesungen fuer deine Spielprobleme.
+          {t("faq.subtitle")}
         </p>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
         {categories.map((category) => {
           const Icon = categoryIcons[category] || HelpCircle;
+          const translationKey = categoryTranslationKeys[category] || "basics";
           return (
             <Badge key={category} variant="secondary" className="flex items-center gap-1">
               <Icon className="h-3 w-3" />
-              {category}
+              {t(`faq.categories.${translationKey}`)}
             </Badge>
           );
         })}
@@ -162,8 +174,8 @@ export default function FAQPage() {
                   <div className={`p-1.5 rounded ${categoryColors[category]}`}>
                     <Icon className="h-4 w-4 text-white" />
                   </div>
-                  {category}
-                  <Badge variant="outline" className="ml-auto">{items.length} Fragen</Badge>
+                  {t(`faq.categories.${categoryTranslationKeys[category] || "basics"}`)}
+                  <Badge variant="outline" className="ml-auto">{items.length} {t("faq.questions")}</Badge>
                 </CardTitle>
               </CardHeader>
               <CardContent>

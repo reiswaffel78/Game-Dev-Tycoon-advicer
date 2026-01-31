@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Users, Search, Calendar, Briefcase } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { Users, Search, Calendar, Briefcase, GraduationCap, Zap, Target, ClipboardList } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -14,54 +15,66 @@ import {
 } from "@/components/ui/accordion";
 import type { StaffTip } from "@shared/schema";
 
-const phaseConfig: Record<string, { label: string; description: string }> = {
-  garage: { label: "Garage", description: "Starting phase (Years 1-4)" },
-  first_office: { label: "First Office", description: "Small team (Years 5-10)" },
-  second_office: { label: "Second Office", description: "Growing team (Years 11-20)" },
-  rd_lab: { label: "R&D Lab", description: "Advanced development" },
-  hardware_lab: { label: "Hardware Lab", description: "Console development" },
+const phaseKeys: Record<string, { label: string; desc: string }> = {
+  garage: { label: "staff.garage", desc: "staff.garageDesc" },
+  first_office: { label: "staff.firstOffice", desc: "staff.firstOfficeDesc" },
+  second_office: { label: "staff.secondOffice", desc: "staff.secondOfficeDesc" },
+  rd_lab: { label: "staff.rdLab", desc: "staff.rdLabDesc" },
+  hardware_lab: { label: "staff.hardwareLab", desc: "staff.hardwareLabDesc" },
 };
 
-const categoryIcons: Record<string, string> = {
-  hiring: "👥",
-  training: "📚",
-  skills: "⚡",
-  specialists: "🎯",
+const categoryIcons: Record<string, typeof Users> = {
+  hiring: Users,
+  training: GraduationCap,
+  skills: Zap,
+  specialists: Target,
 };
 
-function getPriorityBadge(priority: number | null) {
+function getPriorityBadge(priority: number | null, t: (key: string) => string) {
   switch (priority) {
     case 1:
       return (
         <Badge className="bg-rose-500/20 text-rose-600 dark:text-rose-400 border-rose-500/50">
-          Critical
+          {t("staff.critical")}
         </Badge>
       );
     case 2:
       return (
         <Badge className="bg-amber-500/20 text-amber-600 dark:text-amber-400 border-amber-500/50">
-          Important
+          {t("staff.important")}
         </Badge>
       );
     default:
       return (
         <Badge variant="secondary">
-          Nice to Have
+          {t("staff.niceToHave")}
         </Badge>
       );
   }
 }
 
-function TipCard({ tip }: { tip: StaffTip }) {
+const getCategoryLabel = (category: string, t: (key: string) => string) => {
+  const labels: Record<string, string> = {
+    hiring: t("staff.categories.hiring"),
+    training: t("staff.categories.training"),
+    skills: t("staff.categories.skills"),
+    specialists: t("staff.categories.specialists"),
+  };
+  return labels[category] || category;
+};
+
+function TipCard({ tip, t }: { tip: StaffTip; t: (key: string) => string }) {
+  const CategoryIcon = categoryIcons[tip.category] || ClipboardList;
+  
   return (
     <Card data-testid={`staff-tip-${tip.id}`}>
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between gap-2 flex-wrap">
           <div className="flex items-center gap-2">
-            <span className="text-lg">{categoryIcons[tip.category] || "📋"}</span>
+            <CategoryIcon className="h-5 w-5 text-primary" />
             <CardTitle className="text-base">{tip.title}</CardTitle>
           </div>
-          {getPriorityBadge(tip.priority)}
+          {getPriorityBadge(tip.priority, t)}
         </div>
       </CardHeader>
       <CardContent className="space-y-3">
@@ -70,7 +83,7 @@ function TipCard({ tip }: { tip: StaffTip }) {
         <div className="flex items-center gap-4 flex-wrap text-sm">
           <Badge variant="outline" className="capitalize">
             <Briefcase className="h-3 w-3 mr-1" />
-            {tip.category}
+            {getCategoryLabel(tip.category, t)}
           </Badge>
           
           {(tip.minYear || tip.maxYear) && (
@@ -78,10 +91,10 @@ function TipCard({ tip }: { tip: StaffTip }) {
               <Calendar className="h-3.5 w-3.5" />
               <span>
                 {tip.minYear && tip.maxYear
-                  ? `Years ${tip.minYear}-${tip.maxYear}`
+                  ? `${t("staff.years")} ${tip.minYear}-${tip.maxYear}`
                   : tip.minYear
-                    ? `From Year ${tip.minYear}`
-                    : `Until Year ${tip.maxYear}`}
+                    ? `${t("staff.fromYear")} ${tip.minYear}`
+                    : `${t("staff.untilYear")} ${tip.maxYear}`}
               </span>
             </div>
           )}
@@ -92,6 +105,7 @@ function TipCard({ tip }: { tip: StaffTip }) {
 }
 
 export default function Staff() {
+  const { t } = useTranslation();
   const [search, setSearch] = useState("");
   const [activePhase, setActivePhase] = useState("all");
 
@@ -99,7 +113,7 @@ export default function Staff() {
     queryKey: ["/api/staff-tips"],
   });
 
-  const phases = Object.keys(phaseConfig);
+  const phases = Object.keys(phaseKeys);
 
   const filteredTips = staffTips?.filter((tip) => {
     const matchesSearch =
@@ -121,10 +135,10 @@ export default function Staff() {
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Users className="h-6 w-6 text-primary" />
-          Staff Guide
+          {t("staff.title")}
         </h1>
         <p className="text-muted-foreground">
-          Learn optimal hiring, training, and team management strategies for each game phase
+          {t("staff.subtitle")}
         </p>
       </div>
 
@@ -132,7 +146,7 @@ export default function Staff() {
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
-            placeholder="Search staff tips..."
+            placeholder={t("staff.searchStaffTips")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="pl-9"
@@ -143,10 +157,10 @@ export default function Staff() {
 
       <Tabs value={activePhase} onValueChange={setActivePhase}>
         <TabsList className="flex-wrap">
-          <TabsTrigger value="all" data-testid="tab-all-phases">All Phases</TabsTrigger>
+          <TabsTrigger value="all" data-testid="tab-all-phases">{t("staff.allPhases")}</TabsTrigger>
           {phases.map((phase) => (
             <TabsTrigger key={phase} value={phase} data-testid={`tab-${phase}`}>
-              {phaseConfig[phase]?.label || phase}
+              {t(phaseKeys[phase]?.label) || phase}
             </TabsTrigger>
           ))}
         </TabsList>
@@ -170,11 +184,11 @@ export default function Staff() {
                     <AccordionTrigger className="hover:no-underline py-4" data-testid={`accordion-${phase}`}>
                       <div className="flex items-center gap-3">
                         <span className="font-semibold">
-                          {phaseConfig[phase]?.label || phase}
+                          {t(phaseKeys[phase]?.label) || phase}
                         </span>
-                        <Badge variant="outline">{tips.length} tips</Badge>
+                        <Badge variant="outline">{tips.length} {t("staff.tips")}</Badge>
                         <span className="text-sm text-muted-foreground hidden sm:inline">
-                          {phaseConfig[phase]?.description}
+                          {t(phaseKeys[phase]?.desc)}
                         </span>
                       </div>
                     </AccordionTrigger>
@@ -183,7 +197,7 @@ export default function Staff() {
                         {tips
                           .sort((a, b) => (a.priority || 3) - (b.priority || 3))
                           .map((tip) => (
-                            <TipCard key={tip.id} tip={tip} />
+                            <TipCard key={tip.id} tip={tip} t={t} />
                           ))}
                       </div>
                     </AccordionContent>
@@ -195,7 +209,7 @@ export default function Staff() {
                 {filteredTips
                   .sort((a, b) => (a.priority || 3) - (b.priority || 3))
                   .map((tip) => (
-                    <TipCard key={tip.id} tip={tip} />
+                    <TipCard key={tip.id} tip={tip} t={t} />
                   ))}
               </div>
             )
@@ -203,9 +217,9 @@ export default function Staff() {
             <Card>
               <CardContent className="py-12 text-center">
                 <Users className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
-                <h3 className="text-lg font-medium mb-2">No Tips Found</h3>
+                <h3 className="text-lg font-medium mb-2">{t("staff.noTipsFound")}</h3>
                 <p className="text-muted-foreground">
-                  {search ? "Try a different search term." : "No staff tips available."}
+                  {search ? t("research.tryDifferentSearch") : t("staff.noTipsAvailable")}
                 </p>
               </CardContent>
             </Card>

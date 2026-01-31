@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslation } from "react-i18next";
 import { z } from "zod";
 import {
   CalendarClock,
@@ -54,12 +55,12 @@ const saveStateSchema = z.object({
 
 type SaveStateForm = z.infer<typeof saveStateSchema>;
 
-const sizeLabels = {
-  small: "Small",
-  medium: "Medium",
-  large: "Large",
-  aaa: "AAA",
-};
+const getSizeLabels = (t: (key: string) => string) => ({
+  small: t("planner.sizes.small"),
+  medium: t("planner.sizes.medium"),
+  large: t("planner.sizes.large"),
+  aaa: t("planner.sizes.aaa"),
+});
 
 const sizeColors = {
   small: "bg-slate-500",
@@ -71,10 +72,14 @@ const sizeColors = {
 function ReleaseCard({
   release,
   index,
+  t,
 }: {
   release: PlannerRecommendation["releases"][0];
   index: number;
+  t: (key: string) => string;
 }) {
+  const sizeLabels = getSizeLabels(t);
+  
   return (
     <Card>
       <CardContent className="p-4">
@@ -108,14 +113,25 @@ function ReleaseCard({
 function ResearchCard({
   item,
   index,
+  t,
 }: {
   item: PlannerRecommendation["researchItems"][0];
   index: number;
+  t: (key: string) => string;
 }) {
   const typeColors = {
     topic: "bg-violet-500",
     genre: "bg-teal-500",
     feature: "bg-orange-500",
+  };
+
+  const getTypeLabel = (type: string) => {
+    const labels: Record<string, string> = {
+      topic: t("planner.types.topic"),
+      genre: t("planner.types.genre"),
+      feature: t("planner.types.feature"),
+    };
+    return labels[type] || type;
   };
 
   return (
@@ -131,13 +147,13 @@ function ResearchCard({
               <Badge
                 className={`${typeColors[item.type]} text-white border-0 text-xs`}
               >
-                {item.type}
+                {getTypeLabel(item.type)}
               </Badge>
             </div>
             <div className="flex items-center gap-4 text-sm">
               <span className="flex items-center gap-1 text-muted-foreground">
                 <FlaskConical className="h-3.5 w-3.5" />
-                {item.cost.toLocaleString()} RP
+                {item.cost.toLocaleString()} {t("common.rp")}
               </span>
             </div>
             <p className="text-sm text-muted-foreground">{item.rationale}</p>
@@ -149,6 +165,7 @@ function ResearchCard({
 }
 
 export default function Planner() {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const [recommendations, setRecommendations] = useState<PlannerRecommendation | null>(null);
 
@@ -174,8 +191,8 @@ export default function Planner() {
     },
     onError: (error) => {
       toast({
-        title: "Error",
-        description: "Failed to generate plan. Please try again.",
+        title: t("planner.error"),
+        description: t("planner.errorGeneratingPlan"),
         variant: "destructive",
       });
     },
@@ -190,11 +207,10 @@ export default function Planner() {
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <CalendarClock className="h-6 w-6 text-primary" />
-          Game Planner
+          {t("planner.title")}
         </h1>
         <p className="text-muted-foreground">
-          Enter your current save state to get personalized recommendations for
-          your next releases and research priorities
+          {t("planner.subtitle")}
         </p>
       </div>
 
@@ -203,7 +219,7 @@ export default function Planner() {
           <CardHeader>
             <CardTitle className="text-base flex items-center gap-2">
               <Save className="h-4 w-4" />
-              Save State
+              {t("planner.saveState")}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -218,7 +234,7 @@ export default function Planner() {
                     name="year"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs">Year</FormLabel>
+                        <FormLabel className="text-xs">{t("planner.year")}</FormLabel>
                         <FormControl>
                           <Input
                             type="number"
@@ -237,7 +253,7 @@ export default function Planner() {
                     name="month"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs">Month</FormLabel>
+                        <FormLabel className="text-xs">{t("common.month")}</FormLabel>
                         <FormControl>
                           <Select
                             value={String(field.value)}
@@ -263,7 +279,7 @@ export default function Planner() {
                     name="week"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs">Week</FormLabel>
+                        <FormLabel className="text-xs">{t("planner.week")}</FormLabel>
                         <FormControl>
                           <Select
                             value={String(field.value)}
@@ -293,7 +309,7 @@ export default function Planner() {
                     <FormItem>
                       <FormLabel className="flex items-center gap-1.5">
                         <DollarSign className="h-3.5 w-3.5" />
-                        Cash
+                        {t("planner.cash")}
                       </FormLabel>
                       <FormControl>
                         <Input
@@ -316,7 +332,7 @@ export default function Planner() {
                     <FormItem>
                       <FormLabel className="flex items-center gap-1.5">
                         <Users className="h-3.5 w-3.5" />
-                        Fans
+                        {t("planner.fans")}
                       </FormLabel>
                       <FormControl>
                         <Input
@@ -338,9 +354,9 @@ export default function Planner() {
                   render={({ field }) => (
                     <FormItem className="flex items-center justify-between rounded-md border p-3">
                       <div className="space-y-0.5">
-                        <FormLabel className="text-sm">Unlocked Only</FormLabel>
+                        <FormLabel className="text-sm">{t("planner.unlockedOnly")}</FormLabel>
                         <FormDescription className="text-xs">
-                          Only recommend items you've already researched
+                          {t("planner.unlockedOnlyDesc")}
                         </FormDescription>
                       </div>
                       <FormControl>
@@ -363,12 +379,12 @@ export default function Planner() {
                   {planMutation.isPending ? (
                     <>
                       <Clock className="h-4 w-4 mr-2 animate-spin" />
-                      Generating...
+                      {t("planner.generating")}
                     </>
                   ) : (
                     <>
                       <Sparkles className="h-4 w-4 mr-2" />
-                      Generate Plan
+                      {t("planner.generatePlan")}
                     </>
                   )}
                 </Button>
@@ -383,12 +399,10 @@ export default function Planner() {
               <CardContent className="py-16 text-center">
                 <CalendarClock className="h-16 w-16 mx-auto text-muted-foreground/30 mb-4" />
                 <h3 className="text-lg font-medium mb-2">
-                  Configure Your Save State
+                  {t("planner.configureSaveState")}
                 </h3>
                 <p className="text-muted-foreground max-w-md mx-auto">
-                  Enter your current game progress to receive personalized
-                  recommendations for the next 10 releases and 5 research
-                  priorities
+                  {t("planner.configureSaveStateDesc")}
                 </p>
               </CardContent>
             </Card>
@@ -410,14 +424,14 @@ export default function Planner() {
               <div className="space-y-4">
                 <h2 className="text-lg font-semibold flex items-center gap-2">
                   <Gamepad2 className="h-5 w-5 text-primary" />
-                  Recommended Releases
+                  {t("planner.recommendedReleases")}
                   <Badge variant="secondary">
                     {recommendations.releases.length}
                   </Badge>
                 </h2>
                 <div className="grid gap-3">
                   {recommendations.releases.map((release, i) => (
-                    <ReleaseCard key={i} release={release} index={i} />
+                    <ReleaseCard key={i} release={release} index={i} t={t} />
                   ))}
                 </div>
               </div>
@@ -425,14 +439,14 @@ export default function Planner() {
               <div className="space-y-4">
                 <h2 className="text-lg font-semibold flex items-center gap-2">
                   <FlaskConical className="h-5 w-5 text-accent" />
-                  Research Priorities
+                  {t("planner.researchPriorities")}
                   <Badge variant="secondary">
                     {recommendations.researchItems.length}
                   </Badge>
                 </h2>
                 <div className="grid gap-3 md:grid-cols-2">
                   {recommendations.researchItems.map((item, i) => (
-                    <ResearchCard key={i} item={item} index={i} />
+                    <ResearchCard key={i} item={item} index={i} t={t} />
                   ))}
                 </div>
               </div>
@@ -442,10 +456,10 @@ export default function Planner() {
               <CardContent className="py-12 text-center">
                 <CalendarClock className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
                 <h3 className="text-lg font-medium mb-2">
-                  No Recommendations Available
+                  {t("planner.noRecommendations")}
                 </h3>
                 <p className="text-muted-foreground">
-                  Unable to generate recommendations. Please try again.
+                  {t("planner.noRecommendationsDesc")}
                 </p>
               </CardContent>
             </Card>

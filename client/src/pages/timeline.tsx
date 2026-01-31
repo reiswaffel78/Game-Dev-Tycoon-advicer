@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useTranslation, TFunction } from "react-i18next";
 import { Clock, Search, Calendar, Lightbulb, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,33 +9,33 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import type { TimelineMilestone } from "@shared/schema";
 
-const eventTypeConfig: Record<string, { label: string; color: string; bgColor: string }> = {
+const getEventTypeConfig = (t: TFunction): Record<string, { label: string; color: string; bgColor: string }> => ({
   platform_release: { 
-    label: "Platform Release", 
+    label: t("timeline.eventTypes.platformRelease"), 
     color: "text-blue-600 dark:text-blue-400",
     bgColor: "bg-blue-500"
   },
   platform_retire: { 
-    label: "Platform Retire", 
+    label: t("timeline.eventTypes.platformRetire"), 
     color: "text-slate-600 dark:text-slate-400",
     bgColor: "bg-slate-500"
   },
   tip: { 
-    label: "Tip", 
+    label: t("timeline.eventTypes.tip"), 
     color: "text-purple-600 dark:text-purple-400",
     bgColor: "bg-purple-500"
   },
   office_available: { 
-    label: "Office Available", 
+    label: t("timeline.eventTypes.officeAvailable"), 
     color: "text-emerald-600 dark:text-emerald-400",
     bgColor: "bg-emerald-500"
   },
   feature_unlock: { 
-    label: "Feature Unlock", 
+    label: t("timeline.eventTypes.featureUnlock"), 
     color: "text-orange-600 dark:text-orange-400",
     bgColor: "bg-orange-500"
   },
-};
+});
 
 const importanceColors: Record<string, string> = {
   critical: "bg-rose-500/20 text-rose-600 dark:text-rose-400 border-rose-500/50",
@@ -43,8 +44,19 @@ const importanceColors: Record<string, string> = {
   low: "bg-muted text-muted-foreground",
 };
 
-function MilestoneCard({ milestone }: { milestone: TimelineMilestone }) {
+function MilestoneCard({ milestone, t }: { milestone: TimelineMilestone; t: TFunction }) {
+  const eventTypeConfig = getEventTypeConfig(t);
   const config = eventTypeConfig[milestone.eventType] || eventTypeConfig.tip;
+  
+  const getImportanceLabel = (importance: string) => {
+    const labels: Record<string, string> = {
+      critical: t("timeline.critical"),
+      high: t("timeline.high"),
+      medium: t("timeline.medium"),
+      low: t("timeline.low"),
+    };
+    return labels[importance] || importance;
+  };
   
   return (
     <div className="flex gap-4" data-testid={`milestone-${milestone.id}`}>
@@ -63,7 +75,7 @@ function MilestoneCard({ milestone }: { milestone: TimelineMilestone }) {
                 </Badge>
                 {milestone.importance && (
                   <Badge className={importanceColors[milestone.importance] || importanceColors.medium}>
-                    {milestone.importance}
+                    {getImportanceLabel(milestone.importance)}
                   </Badge>
                 )}
               </div>
@@ -72,9 +84,9 @@ function MilestoneCard({ milestone }: { milestone: TimelineMilestone }) {
             <div className="flex items-center gap-1 text-sm text-muted-foreground">
               <Calendar className="h-3.5 w-3.5" />
               <span>
-                Y{milestone.year}
-                {milestone.month ? ` M${milestone.month}` : ""}
-                {milestone.week ? ` W${milestone.week}` : ""}
+                {t("common.yearPrefix")}{milestone.year}
+                {milestone.month ? ` ${t("common.monthPrefix")}${milestone.month}` : ""}
+                {milestone.week ? ` ${t("common.weekPrefix")}${milestone.week}` : ""}
               </span>
             </div>
           </div>
@@ -88,7 +100,7 @@ function MilestoneCard({ milestone }: { milestone: TimelineMilestone }) {
             <div className="flex items-start gap-2 rounded-md bg-primary/5 p-3 border border-primary/10">
               <Lightbulb className="h-4 w-4 text-primary shrink-0 mt-0.5" />
               <div className="text-sm">
-                <span className="font-medium">Action: </span>
+                <span className="font-medium">{t("timeline.action")}: </span>
                 {milestone.actionAdvice}
               </div>
             </div>
@@ -100,6 +112,7 @@ function MilestoneCard({ milestone }: { milestone: TimelineMilestone }) {
 }
 
 export default function Timeline() {
+  const { t } = useTranslation();
   const [search, setSearch] = useState("");
   const [eventFilter, setEventFilter] = useState("all");
   const [importanceFilter, setImportanceFilter] = useState("all");
@@ -131,10 +144,10 @@ export default function Timeline() {
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Clock className="h-6 w-6 text-primary" />
-          Timeline
+          {t("timeline.title")}
         </h1>
         <p className="text-muted-foreground">
-          Key milestones and events throughout your Game Dev Tycoon journey
+          {t("timeline.subtitle")}
         </p>
       </div>
 
@@ -142,7 +155,7 @@ export default function Timeline() {
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
-            placeholder="Search timeline..."
+            placeholder={t("timeline.searchTimeline")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="pl-9"
@@ -152,10 +165,10 @@ export default function Timeline() {
         
         <Select value={eventFilter} onValueChange={setEventFilter}>
           <SelectTrigger className="w-full sm:w-[180px]" data-testid="select-event-filter">
-            <SelectValue placeholder="Event Type" />
+            <SelectValue placeholder={t("timeline.eventType")} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All Events</SelectItem>
+            <SelectItem value="all">{t("timeline.allEvents")}</SelectItem>
             {Object.entries(eventTypeConfig).map(([key, config]) => (
               <SelectItem key={key} value={key}>{config.label}</SelectItem>
             ))}
@@ -164,14 +177,14 @@ export default function Timeline() {
 
         <Select value={importanceFilter} onValueChange={setImportanceFilter}>
           <SelectTrigger className="w-full sm:w-[160px]" data-testid="select-importance-filter">
-            <SelectValue placeholder="Importance" />
+            <SelectValue placeholder={t("timeline.importance")} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All Levels</SelectItem>
-            <SelectItem value="critical">Critical</SelectItem>
-            <SelectItem value="high">High</SelectItem>
-            <SelectItem value="medium">Medium</SelectItem>
-            <SelectItem value="low">Low</SelectItem>
+            <SelectItem value="all">{t("timeline.allLevels")}</SelectItem>
+            <SelectItem value="critical">{t("timeline.critical")}</SelectItem>
+            <SelectItem value="high">{t("timeline.high")}</SelectItem>
+            <SelectItem value="medium">{t("timeline.medium")}</SelectItem>
+            <SelectItem value="low">{t("timeline.low")}</SelectItem>
           </SelectContent>
         </Select>
       </div>
@@ -196,10 +209,10 @@ export default function Timeline() {
               <div className="sticky top-0 z-10 bg-background/95 backdrop-blur py-2">
                 <div className="flex items-center gap-3">
                   <div className="flex items-center justify-center w-16 h-8 rounded-md bg-primary text-primary-foreground font-bold text-sm">
-                    Y{year}
+                    {t("common.yearPrefix")}{year}
                   </div>
                   <div className="flex-1 h-px bg-border" />
-                  <Badge variant="outline">{groupedByYear?.[year].length} events</Badge>
+                  <Badge variant="outline">{groupedByYear?.[year].length} {t("timeline.events")}</Badge>
                 </div>
               </div>
               
@@ -213,7 +226,7 @@ export default function Timeline() {
                     return monthA !== monthB ? monthA - monthB : weekA - weekB;
                   })
                   .map((milestone) => (
-                    <MilestoneCard key={milestone.id} milestone={milestone} />
+                    <MilestoneCard key={milestone.id} milestone={milestone} t={t} />
                   ))}
               </div>
             </div>
@@ -223,11 +236,11 @@ export default function Timeline() {
         <Card>
           <CardContent className="py-12 text-center">
             <Clock className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
-            <h3 className="text-lg font-medium mb-2">No Milestones Found</h3>
+            <h3 className="text-lg font-medium mb-2">{t("timeline.noMilestonesFound")}</h3>
             <p className="text-muted-foreground">
               {search || eventFilter !== "all" || importanceFilter !== "all"
-                ? "Try adjusting your filters."
-                : "No timeline events available."}
+                ? t("recommender.adjustFilters")
+                : t("timeline.noTimelineEvents")}
             </p>
           </CardContent>
         </Card>

@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -42,16 +43,17 @@ function importanceColor(importance: string) {
   }
 }
 
-function importanceBadge(importance: string) {
+function importanceBadge(importance: string, t: (key: string) => string) {
   switch (importance) {
-    case "critical": return <Badge variant="destructive" className="text-xs">Critical</Badge>;
-    case "high": return <Badge className="bg-amber-600 text-xs">High</Badge>;
-    case "medium": return <Badge variant="secondary" className="text-xs">Medium</Badge>;
-    default: return <Badge variant="outline" className="text-xs">Low</Badge>;
+    case "critical": return <Badge variant="destructive" className="text-xs">{t("timeline.critical")}</Badge>;
+    case "high": return <Badge className="bg-amber-600 text-xs">{t("timeline.high")}</Badge>;
+    case "medium": return <Badge variant="secondary" className="text-xs">{t("timeline.medium")}</Badge>;
+    default: return <Badge variant="outline" className="text-xs">{t("timeline.low")}</Badge>;
   }
 }
 
 export default function ChecklistPage() {
+  const { t } = useTranslation();
   const [sessionId] = useState(getSessionId);
   const [newItemText, setNewItemText] = useState("");
   const [showCompleted, setShowCompleted] = useState(true);
@@ -154,10 +156,10 @@ export default function ChecklistPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <ClipboardList className="h-8 w-8 text-primary" />
-          Game Progress Checklist
+          {t("checklist.title")}
         </h1>
         <p className="text-muted-foreground">
-          Track your progress through Game Dev Tycoon. Add milestones from the timeline or create custom goals.
+          {t("checklist.subtitle")}
         </p>
       </div>
 
@@ -165,7 +167,7 @@ export default function ChecklistPage() {
         <CardHeader className="pb-2">
           <CardTitle className="text-lg flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-amber-500" />
-            Progress Overview
+            {t("checklist.progressOverview")}
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -177,10 +179,10 @@ export default function ChecklistPage() {
           </div>
           <p className="text-sm text-muted-foreground">
             {progressPercent === 100 && totalCount > 0
-              ? "All tasks completed! Great job!"
+              ? t("checklist.allCompleted")
               : progressPercent > 50
-              ? "You're making great progress!"
-              : "Keep going, you've got this!"}
+              ? t("checklist.makingProgress")
+              : t("checklist.keepGoing")}
           </p>
         </CardContent>
       </Card>
@@ -188,7 +190,7 @@ export default function ChecklistPage() {
       <div className="flex flex-wrap items-center gap-2 mb-6">
         <div className="flex-1 flex items-center gap-2">
           <Input
-            placeholder="Add a custom task..."
+            placeholder={t("checklist.addTask")}
             value={newItemText}
             onChange={(e) => setNewItemText(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && addCustomItem()}
@@ -212,7 +214,7 @@ export default function ChecklistPage() {
             data-testid="button-toggle-completed"
           >
             {showCompleted ? <CheckCircle2 className="h-4 w-4 mr-1" /> : <Circle className="h-4 w-4 mr-1" />}
-            {showCompleted ? "Hide Completed" : "Show Completed"}
+            {showCompleted ? t("checklist.hideCompleted") : t("checklist.showCompleted")}
           </Button>
           {completedCount > 0 && (
             <Button
@@ -223,7 +225,7 @@ export default function ChecklistPage() {
               data-testid="button-reset-progress"
             >
               <RotateCcw className="h-4 w-4 mr-1" />
-              Reset
+              {t("common.reset")}
             </Button>
           )}
         </div>
@@ -256,9 +258,9 @@ export default function ChecklistPage() {
                   {item.milestone && (
                     <div className="flex items-center gap-2 mt-1 text-sm text-muted-foreground">
                       <Calendar className="h-3 w-3" />
-                      Year {item.milestone.year}
-                      {item.milestone.month && ` M${item.milestone.month}`}
-                      {importanceBadge(item.milestone.importance || "medium")}
+                      {t("common.year")} {item.milestone.year}
+                      {item.milestone.month && ` ${t("common.monthPrefix")}${item.milestone.month}`}
+                      {importanceBadge(item.milestone.importance || "medium", t)}
                     </div>
                   )}
                 </div>
@@ -279,9 +281,9 @@ export default function ChecklistPage() {
         <Card>
           <CardContent className="py-12 text-center">
             <ClipboardList className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
-            <h3 className="text-lg font-medium mb-2">No Items Yet</h3>
+            <h3 className="text-lg font-medium mb-2">{t("checklist.noItemsYet")}</h3>
             <p className="text-muted-foreground">
-              Add custom tasks or select milestones from below to get started.
+              {t("checklist.addItemsHint")}
             </p>
           </CardContent>
         </Card>
@@ -291,10 +293,10 @@ export default function ChecklistPage() {
         <div className="mt-8">
           <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
             <Calendar className="h-5 w-5 text-primary" />
-            Suggested Milestones
+            {t("checklist.suggestedMilestones")}
           </h2>
           <p className="text-muted-foreground mb-4 text-sm">
-            Important events from the timeline that you might want to track:
+            {t("checklist.suggestedMilestonesHint")}
           </p>
           <div className="grid gap-3 sm:grid-cols-2">
             {criticalMilestones.map((milestone) => (
@@ -309,8 +311,8 @@ export default function ChecklistPage() {
                   <div className="flex-1 min-w-0">
                     <p className="font-medium text-sm">{milestone.title}</p>
                     <div className="flex items-center gap-2 mt-1 text-xs text-muted-foreground">
-                      <span>Year {milestone.year}</span>
-                      {importanceBadge(milestone.importance || "medium")}
+                      <span>{t("common.year")} {milestone.year}</span>
+                      {importanceBadge(milestone.importance || "medium", t)}
                     </div>
                   </div>
                 </CardContent>

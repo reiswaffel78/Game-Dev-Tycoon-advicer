@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 import { FlaskConical, Search, Lightbulb, Calendar, Coins, Target, Link2, Palette, Volume2, Gamepad2, Bot, Cpu } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,44 +10,44 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { ResearchItem } from "@shared/schema";
 
-const categoryConfig: Record<string, { label: string; Icon: typeof Palette }> = {
-  graphics: { label: "Graphics", Icon: Palette },
-  sound: { label: "Sound", Icon: Volume2 },
-  game_features: { label: "Game Features", Icon: Gamepad2 },
-  ai: { label: "AI", Icon: Bot },
-  hardware: { label: "Hardware", Icon: Cpu },
+const categoryKeys: Record<string, { label: string; Icon: typeof Palette }> = {
+  graphics: { label: "research.graphics", Icon: Palette },
+  sound: { label: "research.sound", Icon: Volume2 },
+  game_features: { label: "research.gameFeatures", Icon: Gamepad2 },
+  ai: { label: "research.ai", Icon: Bot },
+  hardware: { label: "research.hardware", Icon: Cpu },
 };
 
-function getPriorityBadge(priority: number | null) {
+function getPriorityBadge(priority: number | null, t: (key: string) => string) {
   switch (priority) {
     case 1:
       return (
         <Badge className="bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-emerald-500/50">
-          Essential
+          {t("research.essential")}
         </Badge>
       );
     case 2:
       return (
         <Badge className="bg-amber-500/20 text-amber-600 dark:text-amber-400 border-amber-500/50">
-          Recommended
+          {t("research.recommended")}
         </Badge>
       );
     default:
       return (
         <Badge variant="secondary">
-          Optional
+          {t("research.optional")}
         </Badge>
       );
   }
 }
 
-function ResearchCard({ item }: { item: ResearchItem }) {
+function ResearchCard({ item, t }: { item: ResearchItem; t: (key: string) => string }) {
   return (
     <Card data-testid={`research-card-${item.id}`}>
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between gap-2">
           <CardTitle className="text-base">{item.name}</CardTitle>
-          {getPriorityBadge(item.priority)}
+          {getPriorityBadge(item.priority, t)}
         </div>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -58,18 +59,18 @@ function ResearchCard({ item }: { item: ResearchItem }) {
           <div className="flex items-center gap-2">
             <Calendar className="h-4 w-4 text-muted-foreground" />
             <span>
-              Y{item.unlockYear}
-              {item.unlockMonth ? ` M${item.unlockMonth}` : ""}
+              {t("common.yearPrefix")}{item.unlockYear}
+              {item.unlockMonth ? ` ${t("common.monthPrefix")}${item.unlockMonth}` : ""}
             </span>
           </div>
           <div className="flex items-center gap-2">
             <Coins className="h-4 w-4 text-muted-foreground" />
-            <span>${item.researchCost.toLocaleString()}</span>
+            <span>{t("common.currency")}{item.researchCost.toLocaleString()}</span>
           </div>
           {item.researchPoints && (
             <div className="flex items-center gap-2">
               <Target className="h-4 w-4 text-muted-foreground" />
-              <span>{item.researchPoints} RP</span>
+              <span>{item.researchPoints} {t("common.rp")}</span>
             </div>
           )}
         </div>
@@ -78,7 +79,7 @@ function ResearchCard({ item }: { item: ResearchItem }) {
           <div className="flex items-start gap-2 rounded-md bg-muted/50 p-2">
             <Link2 className="h-4 w-4 text-muted-foreground shrink-0 mt-0.5" />
             <div className="text-sm">
-              <span className="text-muted-foreground">Requires: </span>
+              <span className="text-muted-foreground">{t("research.requires")}: </span>
               <span>{item.prerequisiteIds.join(", ")}</span>
             </div>
           </div>
@@ -96,6 +97,7 @@ function ResearchCard({ item }: { item: ResearchItem }) {
 }
 
 export default function Research() {
+  const { t } = useTranslation();
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
 
@@ -103,7 +105,7 @@ export default function Research() {
     queryKey: ["/api/research"],
   });
 
-  const categories = Object.keys(categoryConfig);
+  const categories = Object.keys(categoryKeys);
 
   const filteredItems = researchItems?.filter((item) => {
     const matchesSearch = item.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -124,10 +126,10 @@ export default function Research() {
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <FlaskConical className="h-6 w-6 text-primary" />
-          Research Guide
+          {t("research.title")}
         </h1>
         <p className="text-muted-foreground">
-          Discover available research technologies and their optimal unlock timings
+          {t("research.subtitle")}
         </p>
       </div>
 
@@ -135,7 +137,7 @@ export default function Research() {
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
-            placeholder="Search research..."
+            placeholder={t("research.searchResearch")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="pl-9"
@@ -146,14 +148,14 @@ export default function Research() {
 
       <Tabs value={activeCategory} onValueChange={setActiveCategory}>
         <TabsList className="flex-wrap">
-          <TabsTrigger value="all" data-testid="tab-all">All</TabsTrigger>
+          <TabsTrigger value="all" data-testid="tab-all">{t("research.all")}</TabsTrigger>
           {categories.map((cat) => {
-            const config = categoryConfig[cat];
+            const config = categoryKeys[cat];
             const IconComponent = config?.Icon;
             return (
               <TabsTrigger key={cat} value={cat} data-testid={`tab-${cat}`} className="flex items-center gap-1">
                 {IconComponent && <IconComponent className="h-4 w-4" />}
-                {config?.label || cat}
+                {t(config?.label) || cat}
               </TabsTrigger>
             );
           })}
@@ -174,20 +176,20 @@ export default function Research() {
             activeCategory === "all" && groupedItems ? (
               <div className="space-y-8">
                 {Object.entries(groupedItems).map(([category, items]) => {
-                  const config = categoryConfig[category];
+                  const config = categoryKeys[category];
                   const IconComponent = config?.Icon;
                   return (
                   <div key={category} className="space-y-4">
                     <h2 className="text-lg font-semibold flex items-center gap-2">
                       {IconComponent && <IconComponent className="h-5 w-5" />}
-                      {config?.label || category}
+                      {t(config?.label) || category}
                       <Badge variant="outline">{items.length}</Badge>
                     </h2>
                     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                       {items
                         .sort((a, b) => a.unlockYear - b.unlockYear)
                         .map((item) => (
-                          <ResearchCard key={item.id} item={item} />
+                          <ResearchCard key={item.id} item={item} t={t} />
                         ))}
                     </div>
                   </div>
@@ -199,7 +201,7 @@ export default function Research() {
                 {filteredItems
                   .sort((a, b) => a.unlockYear - b.unlockYear)
                   .map((item) => (
-                    <ResearchCard key={item.id} item={item} />
+                    <ResearchCard key={item.id} item={item} t={t} />
                   ))}
               </div>
             )
@@ -207,9 +209,9 @@ export default function Research() {
             <Card>
               <CardContent className="py-12 text-center">
                 <FlaskConical className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
-                <h3 className="text-lg font-medium mb-2">No Research Found</h3>
+                <h3 className="text-lg font-medium mb-2">{t("research.noResearchFound")}</h3>
                 <p className="text-muted-foreground">
-                  {search ? "Try a different search term." : "No research items available."}
+                  {search ? t("research.tryDifferentSearch") : t("research.noResearchAvailable")}
                 </p>
               </CardContent>
             </Card>

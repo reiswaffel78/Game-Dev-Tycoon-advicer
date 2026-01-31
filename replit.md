@@ -49,10 +49,18 @@ The application models Game Dev Tycoon gameplay data:
 ├── client/src/          # React frontend application
 │   ├── components/      # UI components (shadcn/ui)
 │   ├── pages/          # Route page components
+│   │   ├── dashboard.tsx      # Main dashboard with quick stats
+│   │   ├── research.tsx       # Research/technology guide
+│   │   ├── staff.tsx          # Staff management guide
+│   │   ├── timeline.tsx       # Year-by-year walkthrough
+│   │   ├── checklist.tsx      # Interactive progress tracker
+│   │   ├── planner.tsx        # Game planner with state management
+│   │   ├── slider-presets.tsx # Genre slider presets
+│   │   └── topic-/genre-/platform-recommender.tsx
 │   ├── hooks/          # Custom React hooks
 │   └── lib/            # Utility functions and query client
 ├── server/             # Express backend
-│   ├── routes.ts       # API route definitions
+│   ├── routes.ts       # API route definitions with Zod validation
 │   ├── storage.ts      # Database access layer
 │   ├── recommendation-engine.ts  # Core recommendation logic
 │   └── seed.ts         # Database seeding
@@ -60,6 +68,12 @@ The application models Game Dev Tycoon gameplay data:
 │   └── schema.ts       # Drizzle database schema
 └── migrations/         # Drizzle database migrations
 ```
+
+### Recent Additions (Companion Guide Features)
+- **Research Guide**: Technologies with unlock year, costs, research points, prerequisites, and strategy tips
+- **Staff Management Guide**: Phase-based tips for garage, first office, second office, R&D lab, hardware lab
+- **Timeline Walkthrough**: Year-by-year milestones, platform releases, office unlocks, and action advice
+- **Interactive Checklist**: Track progress through the game with custom tasks and milestone tracking
 
 ## External Dependencies
 

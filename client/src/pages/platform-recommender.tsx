@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 import {
   Monitor,
   Search,
@@ -235,6 +236,7 @@ function PlatformCard({
 }
 
 export default function PlatformRecommender() {
+  const { t } = useTranslation();
   const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(
     null
   );
@@ -262,18 +264,17 @@ export default function PlatformRecommender() {
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Monitor className="h-6 w-6 text-primary" />
-          Recommend by Platform
+          {t("nav.platformRecommender")}
         </h1>
         <p className="text-muted-foreground">
-          Select a platform to find the best topic, genre, and audience
-          combinations
+          {t("dashboard.getStartedDesc")}
         </p>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[320px,1fr]">
         <Card className="h-fit">
           <CardHeader className="pb-3">
-            <CardTitle className="text-base">Select Platform</CardTitle>
+            <CardTitle className="text-base">{t("recommender.selectPlatform")}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
             <div className="relative">
@@ -314,10 +315,9 @@ export default function PlatformRecommender() {
             <Card>
               <CardContent className="py-16 text-center">
                 <Trophy className="h-16 w-16 mx-auto text-muted-foreground/30 mb-4" />
-                <h3 className="text-lg font-medium mb-2">Select a Platform</h3>
+                <h3 className="text-lg font-medium mb-2">{t("recommender.selectPlatform")}</h3>
                 <p className="text-muted-foreground max-w-md mx-auto">
-                  Choose a platform from the list to see the top 3 recommended
-                  topic and genre combinations with detailed score breakdowns
+                  {t("dashboard.getStartedDesc")}
                 </p>
               </CardContent>
             </Card>
@@ -353,9 +353,9 @@ export default function PlatformRecommender() {
             <Card>
               <CardContent className="py-12 text-center">
                 <Monitor className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
-                <h3 className="text-lg font-medium mb-2">No Recommendations</h3>
+                <h3 className="text-lg font-medium mb-2">{t("recommender.noResults")}</h3>
                 <p className="text-muted-foreground">
-                  No compatible combinations found for this platform.
+                  {t("recommender.adjustFilters")}
                 </p>
               </CardContent>
             </Card>

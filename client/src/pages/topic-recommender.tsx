@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 import {
   Tag,
   Search,
@@ -189,6 +190,7 @@ function RecommendationCard({
 }
 
 export default function TopicRecommender() {
+  const { t } = useTranslation();
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [search, setSearch] = useState("");
 
@@ -212,18 +214,17 @@ export default function TopicRecommender() {
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Tag className="h-6 w-6 text-primary" />
-          Recommend by Topic
+          {t("nav.topicRecommender")}
         </h1>
         <p className="text-muted-foreground">
-          Select a topic to find the best genre, platform, and audience
-          combinations
+          {t("dashboard.getStartedDesc")}
         </p>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[320px,1fr]">
         <Card className="h-fit">
           <CardHeader className="pb-3">
-            <CardTitle className="text-base">Select Topic</CardTitle>
+            <CardTitle className="text-base">{t("recommender.selectTopic")}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
             <div className="relative">
@@ -282,10 +283,9 @@ export default function TopicRecommender() {
             <Card>
               <CardContent className="py-16 text-center">
                 <Trophy className="h-16 w-16 mx-auto text-muted-foreground/30 mb-4" />
-                <h3 className="text-lg font-medium mb-2">Select a Topic</h3>
+                <h3 className="text-lg font-medium mb-2">{t("recommender.selectTopic")}</h3>
                 <p className="text-muted-foreground max-w-md mx-auto">
-                  Choose a topic from the list to see the top 3 recommended
-                  genre and platform combinations with detailed score breakdowns
+                  {t("dashboard.getStartedDesc")}
                 </p>
               </CardContent>
             </Card>
@@ -321,9 +321,9 @@ export default function TopicRecommender() {
             <Card>
               <CardContent className="py-12 text-center">
                 <Tag className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
-                <h3 className="text-lg font-medium mb-2">No Recommendations</h3>
+                <h3 className="text-lg font-medium mb-2">{t("recommender.noResults")}</h3>
                 <p className="text-muted-foreground">
-                  No compatible combinations found for this topic.
+                  {t("recommender.adjustFilters")}
                 </p>
               </CardContent>
             </Card>

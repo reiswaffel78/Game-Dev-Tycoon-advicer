@@ -74,6 +74,16 @@ The application models Game Dev Tycoon gameplay data:
 - **Staff Management Guide**: Phase-based tips for garage, first office, second office, R&D lab, hardware lab
 - **Timeline Walkthrough**: Year-by-year milestones, platform releases, office unlocks, and action advice
 - **Interactive Checklist**: Track progress through the game with custom tasks and milestone tracking
+- **FAQ Page**: 16 frequently asked questions organized by categories (Grundlagen, Slider, Mitarbeiter, Forschung, Plattformen, Strategie, Fortgeschritten)
+- **Handbuch Page**: Complete game manual with 6 tabbed sections covering all game mechanics
+
+### SEO Implementation
+- **Per-page SEO**: SEO component (`client/src/components/seo.tsx`) dynamically updates page titles and meta descriptions
+- **Open Graph/Twitter Cards**: Social media preview tags for better sharing
+- **JSON-LD Structured Data**: Schema.org markup for search engines
+- **Sitemap**: `client/public/sitemap.xml` with all page URLs
+- **Robots.txt**: `client/public/robots.txt` allowing all crawlers
+- **German Language**: All content in German for German market discoverability
 
 ## External Dependencies
 

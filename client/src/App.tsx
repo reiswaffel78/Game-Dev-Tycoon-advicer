@@ -15,6 +15,9 @@ import PlatformRecommender from "@/pages/platform-recommender";
 import SliderPresets from "@/pages/slider-presets";
 import Planner from "@/pages/planner";
 import Sources from "@/pages/sources";
+import Research from "@/pages/research";
+import Staff from "@/pages/staff";
+import Timeline from "@/pages/timeline";
 
 function Router() {
   return (
@@ -25,6 +28,9 @@ function Router() {
       <Route path="/recommend/platform" component={PlatformRecommender} />
       <Route path="/sliders" component={SliderPresets} />
       <Route path="/planner" component={Planner} />
+      <Route path="/research" component={Research} />
+      <Route path="/staff" component={Staff} />
+      <Route path="/timeline" component={Timeline} />
       <Route path="/sources" component={Sources} />
       <Route component={NotFound} />
     </Switch>

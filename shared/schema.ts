@@ -114,6 +114,62 @@ export const snapshots = pgTable("snapshots", {
   notes: text("notes"),
 });
 
+// ==================== Research Technologies ====================
+
+export const researchItems = pgTable("research_items", {
+  id: varchar("id", { length: 64 }).primaryKey(),
+  name: text("name").notNull(),
+  category: text("category").notNull(), // 'game_features', 'graphics', 'sound', 'ai', 'hardware', 'other'
+  unlockYear: integer("unlock_year").notNull(),
+  unlockMonth: integer("unlock_month"),
+  researchCost: integer("research_cost").notNull(),
+  researchPoints: integer("research_points"), // RP needed
+  prerequisiteIds: text("prerequisite_ids").array(), // IDs of required prior research
+  description: text("description"),
+  priority: integer("priority").default(3), // 1=essential, 2=recommended, 3=optional
+  tip: text("tip"), // Strategy tip for this research
+});
+
+// ==================== Staff Management Guide ====================
+
+export const staffTips = pgTable("staff_tips", {
+  id: varchar("id", { length: 64 }).primaryKey(),
+  gamePhase: text("game_phase").notNull(), // 'garage', 'first_office', 'second_office', 'rd_lab', 'hardware_lab'
+  category: text("category").notNull(), // 'hiring', 'training', 'skills', 'specialists'
+  title: text("title").notNull(),
+  description: text("description").notNull(),
+  priority: integer("priority").default(2), // 1=critical, 2=important, 3=nice-to-have
+  minYear: integer("min_year"),
+  maxYear: integer("max_year"),
+});
+
+// ==================== Timeline Milestones ====================
+
+export const timelineMilestones = pgTable("timeline_milestones", {
+  id: varchar("id", { length: 64 }).primaryKey(),
+  year: integer("year").notNull(),
+  month: integer("month"),
+  week: integer("week"),
+  eventType: text("event_type").notNull(), // 'platform_release', 'platform_retire', 'office_available', 'feature_unlock', 'tip'
+  title: text("title").notNull(),
+  description: text("description"),
+  relatedEntityId: varchar("related_entity_id", { length: 64 }), // platform/topic/genre ID
+  importance: text("importance").default("medium"), // 'critical', 'high', 'medium', 'low'
+  actionAdvice: text("action_advice"), // What player should do
+});
+
+// ==================== User Checklist Progress ====================
+
+export const userChecklistItems = pgTable("user_checklist_items", {
+  id: varchar("id", { length: 64 }).primaryKey().default(sql`gen_random_uuid()`),
+  sessionId: varchar("session_id", { length: 64 }).notNull(), // Browser session ID
+  milestoneId: varchar("milestone_id", { length: 64 }).references(() => timelineMilestones.id),
+  customText: text("custom_text"), // For user-added items
+  isCompleted: boolean("is_completed").default(false),
+  completedAt: timestamp("completed_at"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
 // ==================== User Save State for Planner ====================
 
 export const userSaveStates = pgTable("user_save_states", {
@@ -145,6 +201,10 @@ export const insertGenreDevWeightSchema = createInsertSchema(genreDevWeights).om
 export const insertSourceSchema = createInsertSchema(sources).omit({ });
 export const insertSnapshotSchema = createInsertSchema(snapshots).omit({ });
 export const insertUserSaveStateSchema = createInsertSchema(userSaveStates).omit({ id: true, createdAt: true });
+export const insertResearchItemSchema = createInsertSchema(researchItems).omit({ });
+export const insertStaffTipSchema = createInsertSchema(staffTips).omit({ });
+export const insertTimelineMilestoneSchema = createInsertSchema(timelineMilestones).omit({ });
+export const insertUserChecklistItemSchema = createInsertSchema(userChecklistItems).omit({ id: true, createdAt: true });
 
 // ==================== Types ====================
 
@@ -180,6 +240,18 @@ export type InsertSnapshot = z.infer<typeof insertSnapshotSchema>;
 
 export type UserSaveState = typeof userSaveStates.$inferSelect;
 export type InsertUserSaveState = z.infer<typeof insertUserSaveStateSchema>;
+
+export type ResearchItem = typeof researchItems.$inferSelect;
+export type InsertResearchItem = z.infer<typeof insertResearchItemSchema>;
+
+export type StaffTip = typeof staffTips.$inferSelect;
+export type InsertStaffTip = z.infer<typeof insertStaffTipSchema>;
+
+export type TimelineMilestone = typeof timelineMilestones.$inferSelect;
+export type InsertTimelineMilestone = z.infer<typeof insertTimelineMilestoneSchema>;
+
+export type UserChecklistItem = typeof userChecklistItems.$inferSelect;
+export type InsertUserChecklistItem = z.infer<typeof insertUserChecklistItemSchema>;
 
 // ==================== API Response Types ====================
 

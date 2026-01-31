@@ -10,6 +10,9 @@ import {
   genreDevWeights,
   sources,
   snapshots,
+  researchItems,
+  staffTips,
+  timelineMilestones,
 } from "@shared/schema";
 import { sql } from "drizzle-orm";
 
@@ -23,9 +26,16 @@ export async function seedDatabase() {
     if (existingSliders.length === 0) {
       console.log("Seeding slider data...");
       await seedSliderData();
-    } else {
-      console.log("Database already seeded, skipping...");
     }
+    
+    // Check if guide data needs seeding
+    const existingResearch = await db.select().from(researchItems).limit(1);
+    if (existingResearch.length === 0) {
+      console.log("Seeding guide data...");
+      await seedGuideData();
+    }
+    
+    console.log("Database check complete.");
     return;
   }
 
@@ -326,4 +336,115 @@ async function seedSliderData() {
   ];
   await db.insert(genreDevWeights).values(genreDevWeightsData);
   console.log("Slider data seeded successfully!");
+}
+
+// Seed research items, staff tips, and timeline
+async function seedGuideData() {
+  // Research Items - Based on Game Dev Tycoon wiki
+  const researchData = [
+    // Game Features - available from start
+    { id: "basic-2d-graphics", name: "Basic 2D Graphics v1", category: "graphics", unlockYear: 1, researchCost: 0, researchPoints: 0, priority: 1, description: "Starting graphics technology", tip: "Available from the start" },
+    { id: "basic-sound", name: "Basic Sound v1", category: "sound", unlockYear: 1, researchCost: 0, researchPoints: 0, priority: 1, description: "Starting sound technology", tip: "Available from the start" },
+    
+    // Early Game Research (Years 1-5)
+    { id: "2d-graphics-v2", name: "2D Graphics v2", category: "graphics", unlockYear: 1, researchCost: 5000, researchPoints: 20, priority: 1, prerequisiteIds: ["basic-2d-graphics"], description: "Improved 2D graphics", tip: "Research early for better game scores" },
+    { id: "sound-v2", name: "Sound v2", category: "sound", unlockYear: 1, researchCost: 5000, researchPoints: 20, priority: 2, prerequisiteIds: ["basic-sound"], description: "Improved sound design", tip: "Research after graphics improvements" },
+    { id: "2d-graphics-v3", name: "2D Graphics v3", category: "graphics", unlockYear: 2, researchCost: 10000, researchPoints: 40, priority: 1, prerequisiteIds: ["2d-graphics-v2"], description: "Advanced 2D graphics", tip: "Essential before moving to first office" },
+    { id: "save-game", name: "Save Game", category: "game_features", unlockYear: 2, researchCost: 8000, researchPoints: 30, priority: 1, description: "Allow players to save progress", tip: "Highly important for RPGs and Adventure games" },
+    { id: "dialogue-system", name: "Dialogue System", category: "game_features", unlockYear: 2, researchCost: 10000, researchPoints: 35, priority: 2, description: "NPC dialogue options", tip: "Great for Adventure and RPG genres" },
+    
+    // Mid Game Research (Years 6-15)
+    { id: "3d-graphics-v1", name: "3D Graphics v1", category: "graphics", unlockYear: 6, researchCost: 50000, researchPoints: 80, priority: 1, prerequisiteIds: ["2d-graphics-v3"], description: "Enter the 3D era", tip: "Essential for modern platforms. Research ASAP when available" },
+    { id: "3d-graphics-v2", name: "3D Graphics v2", category: "graphics", unlockYear: 8, researchCost: 100000, researchPoints: 120, priority: 1, prerequisiteIds: ["3d-graphics-v1"], description: "Improved 3D rendering", tip: "Keep graphics tech up to date" },
+    { id: "surround-sound", name: "Surround Sound", category: "sound", unlockYear: 7, researchCost: 40000, researchPoints: 60, priority: 2, description: "Immersive audio experience", tip: "Boosts quality for all genres" },
+    { id: "multiplayer", name: "Multiplayer", category: "game_features", unlockYear: 8, researchCost: 80000, researchPoints: 100, priority: 2, description: "Online multiplayer support", tip: "Great for Action and Strategy games" },
+    { id: "online-play", name: "Online Play", category: "game_features", unlockYear: 10, researchCost: 120000, researchPoints: 150, priority: 2, prerequisiteIds: ["multiplayer"], description: "Internet multiplayer", tip: "Research when online platforms emerge" },
+    
+    // Late Game Research (Years 16+)
+    { id: "3d-graphics-v4", name: "3D Graphics v4", category: "graphics", unlockYear: 12, researchCost: 200000, researchPoints: 200, priority: 1, prerequisiteIds: ["3d-graphics-v2"], description: "High-end 3D graphics", tip: "Needed for AAA games" },
+    { id: "hd-audio", name: "HD Audio", category: "sound", unlockYear: 14, researchCost: 150000, researchPoints: 180, priority: 2, description: "High definition audio", tip: "Standard for modern games" },
+    { id: "advanced-ai", name: "Advanced AI", category: "ai", unlockYear: 10, researchCost: 100000, researchPoints: 140, priority: 2, description: "Smarter enemy behavior", tip: "Important for Strategy and Simulation" },
+    { id: "open-world", name: "Open World", category: "game_features", unlockYear: 12, researchCost: 180000, researchPoints: 220, priority: 3, description: "Non-linear exploration", tip: "Great for Adventure and RPG games" },
+    { id: "vr-support", name: "VR Support", category: "hardware", unlockYear: 25, researchCost: 300000, researchPoints: 300, priority: 3, description: "Virtual reality gaming", tip: "Future technology investment" },
+  ];
+  await db.insert(researchItems).values(researchData);
+
+  // Staff Tips by Game Phase
+  const staffData = [
+    // Garage Phase (Years 1-5)
+    { id: "garage-solo", gamePhase: "garage", category: "hiring", title: "Work Solo in the Garage", description: "You cannot hire staff in the garage phase. Focus on building your skills and saving money for your first office.", priority: 1, minYear: 1, maxYear: 5 },
+    { id: "garage-skills", gamePhase: "garage", category: "skills", title: "Balance Your Skills", description: "Train yourself in both Design and Technology. A 700/700 split is optimal for making quality games.", priority: 1, minYear: 1, maxYear: 5 },
+    { id: "garage-save", gamePhase: "garage", category: "hiring", title: "Save for First Office", description: "You need 1 million dollars to unlock the first office. Save aggressively in years 4-5.", priority: 2, minYear: 1, maxYear: 5 },
+    
+    // First Office Phase (Years 6-10)
+    { id: "first-hire", gamePhase: "first_office", category: "hiring", title: "Hire Your First Employee", description: "Hire someone with complementary skills. If you're strong in Design, hire someone strong in Technology and vice versa.", priority: 1, minYear: 6, maxYear: 10 },
+    { id: "first-training", gamePhase: "first_office", category: "training", title: "Train Immediately", description: "New hires have low stats. Use training to boost their skills quickly. Prioritize their weakest areas first.", priority: 1, minYear: 6, maxYear: 10 },
+    { id: "first-specialist", gamePhase: "first_office", category: "specialists", title: "Specialists vs Generalists", description: "Early game: hire generalists who can do multiple tasks. Later: specialists for specific roles in larger teams.", priority: 2, minYear: 6, maxYear: 10 },
+    { id: "first-team-size", gamePhase: "first_office", category: "hiring", title: "Team Size Tips", description: "Small games: 1-2 people. Medium games: 2-3 people. Match team size to game size for best efficiency.", priority: 2, minYear: 6, maxYear: 10 },
+    
+    // Second Office Phase (Years 11-20)
+    { id: "second-expand", gamePhase: "second_office", category: "hiring", title: "Expand to 6 Employees", description: "The second office allows up to 6 employees. Gradually hire as your cash flow allows.", priority: 1, minYear: 11, maxYear: 20 },
+    { id: "second-roles", gamePhase: "second_office", category: "skills", title: "Assign Roles", description: "Designate 2-3 employees for Design tasks (Art, Story, Sound) and 2-3 for Technology (Engine, AI, Level Design).", priority: 1, minYear: 11, maxYear: 20 },
+    { id: "second-large-games", gamePhase: "second_office", category: "hiring", title: "Large Game Teams", description: "Large games need 4+ people. AAA games need 6 people. Ensure you have enough trained staff.", priority: 2, minYear: 11, maxYear: 20 },
+    { id: "second-specialists", gamePhase: "second_office", category: "specialists", title: "Hire Specialists", description: "Consider Graphics Specialists, Sound Engineers, and Writers for better game quality in specific areas.", priority: 2, minYear: 11, maxYear: 20 },
+    
+    // R&D Lab Phase
+    { id: "rd-lab-unlock", gamePhase: "rd_lab", category: "hiring", title: "R&D Lab Benefits", description: "The R&D lab allows you to research new engines and hardware. You need at least 4 employees to use it effectively.", priority: 1, minYear: 15 },
+    { id: "rd-dedicated", gamePhase: "rd_lab", category: "specialists", title: "Dedicated R&D Staff", description: "Assign 1-2 employees permanently to R&D. They should have high Research speed and Technology skills.", priority: 1, minYear: 15 },
+    
+    // Hardware Lab Phase
+    { id: "hw-lab-unlock", gamePhase: "hardware_lab", category: "hiring", title: "Hardware Lab Team", description: "Creating your own console requires a dedicated team. Assign your best Technology specialists.", priority: 1, minYear: 25 },
+    { id: "hw-console-team", gamePhase: "hardware_lab", category: "specialists", title: "Console Development", description: "Building a console needs 2-3 dedicated staff for 6+ months. Plan your team capacity accordingly.", priority: 2, minYear: 25 },
+  ];
+  await db.insert(staffTips).values(staffData);
+
+  // Timeline Milestones - Key events and platforms
+  const timelineData = [
+    // Year 1 - Start
+    { id: "start-game", year: 1, month: 1, eventType: "tip", title: "Game Start", description: "You begin in your garage with $70K. Make small games to build experience.", importance: "critical", actionAdvice: "Make Action or Adventure games - they're forgiving for beginners" },
+    { id: "pc-available", year: 1, month: 1, eventType: "platform_release", title: "PC Platform Available", description: "The PC is your starting platform. No license fee required.", importance: "high", relatedEntityId: "pc", actionAdvice: "Use PC for all your early games" },
+    
+    // Year 2-4 - Early consoles
+    { id: "govodore-64", year: 2, month: 1, eventType: "platform_release", title: "Govodore 64 Released", description: "First affordable console. Good for Casual and Action games.", importance: "medium", relatedEntityId: "govodore-64", actionAdvice: "Consider getting the license if making casual games" },
+    { id: "first-hit", year: 2, eventType: "tip", title: "Aim for First Hit", description: "By year 2, try to make a game that scores 7+ to build fans.", importance: "high", actionAdvice: "Focus on good topic-genre combos and proper slider settings" },
+    
+    // Year 5-6 - Transition
+    { id: "office-goal", year: 5, eventType: "tip", title: "Save for Office", description: "You should have close to 1 million by now for your first office.", importance: "critical", actionAdvice: "If not, focus on medium-sized games with good combos" },
+    { id: "tes-release", year: 6, month: 3, eventType: "platform_release", title: "TES Released", description: "Major console with large audience. Great for Action games.", importance: "high", relatedEntityId: "tes", actionAdvice: "Strong platform - get the license" },
+    { id: "first-office-available", year: 6, eventType: "office_available", title: "First Office Available", description: "With 1 million cash, you can move to your first office and hire staff.", importance: "critical", actionAdvice: "Move as soon as you have the money" },
+    
+    // Year 8-12 - Growth
+    { id: "super-tes", year: 8, month: 11, eventType: "platform_release", title: "Super TES Released", description: "16-bit era begins. Great graphics capabilities.", importance: "high", relatedEntityId: "super-tes", actionAdvice: "Upgrade from TES - this is the hot platform" },
+    { id: "playsystem", year: 11, month: 12, eventType: "platform_release", title: "PlaySystem Released", description: "Revolutionary 3D console. The future of gaming.", importance: "critical", relatedEntityId: "playsystem", actionAdvice: "ESSENTIAL: Get this license and research 3D graphics" },
+    { id: "3d-era", year: 11, eventType: "feature_unlock", title: "3D Graphics Era", description: "3D graphics become essential for high-scoring games.", importance: "critical", actionAdvice: "Research 3D Graphics v1 immediately when available" },
+    
+    // Year 13-18 - Peak
+    { id: "dreamvast", year: 13, month: 11, eventType: "platform_release", title: "DreamVast Released", description: "Advanced console with online capabilities.", importance: "high", relatedEntityId: "dreamvast", actionAdvice: "Good platform for experimental games" },
+    { id: "playsystem-2", year: 15, month: 10, eventType: "platform_release", title: "PlaySystem 2 Released", description: "Best-selling console ever. Massive audience.", importance: "critical", relatedEntityId: "playsystem-2", actionAdvice: "Must-have platform - huge install base" },
+    { id: "second-office-time", year: 15, eventType: "tip", title: "Consider Second Office", description: "By now you should be ready to expand to a larger office.", importance: "high", actionAdvice: "Need 5 million cash for second office" },
+    { id: "mbox", year: 16, month: 11, eventType: "platform_release", title: "mBox Released", description: "New competitor in the console market.", importance: "high", relatedEntityId: "mbox", actionAdvice: "Good for Western markets" },
+    
+    // Year 20+ - Modern era
+    { id: "playsystem-3", year: 21, month: 11, eventType: "platform_release", title: "PlaySystem 3 Released", description: "HD gaming arrives. High development costs.", importance: "high", relatedEntityId: "playsystem-3", actionAdvice: "Focus on quality over quantity" },
+    { id: "mbox-360", year: 20, month: 11, eventType: "platform_release", title: "mBox 360 Released", description: "Strong online features and achievement system.", importance: "high", relatedEntityId: "mbox-360", actionAdvice: "Great for multiplayer games" },
+    { id: "own-console", year: 25, eventType: "feature_unlock", title: "Create Your Own Console", description: "Hardware lab allows you to design your own gaming console.", importance: "medium", actionAdvice: "Only attempt if financially stable" },
+    
+    // Tips throughout
+    { id: "genre-combo-tip", year: 3, eventType: "tip", title: "Master Topic-Genre Combos", description: "The right topic-genre combination is crucial for success.", importance: "high", actionAdvice: "Use this guide to find optimal combinations" },
+    { id: "sequel-strategy", year: 7, eventType: "tip", title: "Sequel Strategy", description: "Sequels to successful games perform better. Build franchises.", importance: "medium", actionAdvice: "Wait for a 9+ score before making sequels" },
+    { id: "engine-importance", year: 10, eventType: "tip", title: "Custom Engine Benefits", description: "Building custom game engines improves game quality significantly.", importance: "high", actionAdvice: "Invest in R&D lab for engine development" },
+    { id: "aaa-games", year: 18, eventType: "tip", title: "AAA Game Development", description: "Large team + Custom Engine + Proper marketing = AAA success.", importance: "high", actionAdvice: "Only attempt AAA games with experienced team" },
+  ];
+  await db.insert(timelineMilestones).values(timelineData);
+
+  console.log("Guide data (research, staff, timeline) seeded successfully!");
+}
+
+// Export function to seed guide data
+export async function seedGuideDataIfNeeded() {
+  const existingResearch = await db.select().from(researchItems).limit(1);
+  if (existingResearch.length === 0) {
+    console.log("Seeding guide data...");
+    await seedGuideData();
+  }
 }

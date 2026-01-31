@@ -1,0 +1,237 @@
+import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { Clock, Search, Calendar, Lightbulb, ArrowRight } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import type { TimelineMilestone } from "@shared/schema";
+
+const eventTypeConfig: Record<string, { label: string; color: string; bgColor: string }> = {
+  platform_release: { 
+    label: "Platform Release", 
+    color: "text-blue-600 dark:text-blue-400",
+    bgColor: "bg-blue-500"
+  },
+  platform_retire: { 
+    label: "Platform Retire", 
+    color: "text-slate-600 dark:text-slate-400",
+    bgColor: "bg-slate-500"
+  },
+  tip: { 
+    label: "Tip", 
+    color: "text-purple-600 dark:text-purple-400",
+    bgColor: "bg-purple-500"
+  },
+  office_available: { 
+    label: "Office Available", 
+    color: "text-emerald-600 dark:text-emerald-400",
+    bgColor: "bg-emerald-500"
+  },
+  feature_unlock: { 
+    label: "Feature Unlock", 
+    color: "text-orange-600 dark:text-orange-400",
+    bgColor: "bg-orange-500"
+  },
+};
+
+const importanceColors: Record<string, string> = {
+  critical: "bg-rose-500/20 text-rose-600 dark:text-rose-400 border-rose-500/50",
+  high: "bg-amber-500/20 text-amber-600 dark:text-amber-400 border-amber-500/50",
+  medium: "bg-blue-500/20 text-blue-600 dark:text-blue-400 border-blue-500/50",
+  low: "bg-muted text-muted-foreground",
+};
+
+function MilestoneCard({ milestone }: { milestone: TimelineMilestone }) {
+  const config = eventTypeConfig[milestone.eventType] || eventTypeConfig.tip;
+  
+  return (
+    <div className="flex gap-4" data-testid={`milestone-${milestone.id}`}>
+      <div className="flex flex-col items-center">
+        <div className={`w-3 h-3 rounded-full ${config.bgColor}`} />
+        <div className="w-0.5 flex-1 bg-border" />
+      </div>
+      
+      <Card className="flex-1 mb-4">
+        <CardHeader className="pb-2">
+          <div className="flex items-start justify-between gap-2 flex-wrap">
+            <div className="space-y-1">
+              <div className="flex items-center gap-2 flex-wrap">
+                <Badge variant="outline" className={config.color}>
+                  {config.label}
+                </Badge>
+                {milestone.importance && (
+                  <Badge className={importanceColors[milestone.importance] || importanceColors.medium}>
+                    {milestone.importance}
+                  </Badge>
+                )}
+              </div>
+              <CardTitle className="text-base">{milestone.title}</CardTitle>
+            </div>
+            <div className="flex items-center gap-1 text-sm text-muted-foreground">
+              <Calendar className="h-3.5 w-3.5" />
+              <span>
+                Y{milestone.year}
+                {milestone.month ? ` M${milestone.month}` : ""}
+                {milestone.week ? ` W${milestone.week}` : ""}
+              </span>
+            </div>
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-3">
+          {milestone.description && (
+            <p className="text-sm text-muted-foreground">{milestone.description}</p>
+          )}
+          
+          {milestone.actionAdvice && (
+            <div className="flex items-start gap-2 rounded-md bg-primary/5 p-3 border border-primary/10">
+              <Lightbulb className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+              <div className="text-sm">
+                <span className="font-medium">Action: </span>
+                {milestone.actionAdvice}
+              </div>
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
+
+export default function Timeline() {
+  const [search, setSearch] = useState("");
+  const [eventFilter, setEventFilter] = useState("all");
+  const [importanceFilter, setImportanceFilter] = useState("all");
+
+  const { data: milestones, isLoading } = useQuery<TimelineMilestone[]>({
+    queryKey: ["/api/timeline"],
+  });
+
+  const filteredMilestones = milestones?.filter((m) => {
+    const matchesSearch =
+      m.title.toLowerCase().includes(search.toLowerCase()) ||
+      m.description?.toLowerCase().includes(search.toLowerCase());
+    const matchesEvent = eventFilter === "all" || m.eventType === eventFilter;
+    const matchesImportance = importanceFilter === "all" || m.importance === importanceFilter;
+    return matchesSearch && matchesEvent && matchesImportance;
+  });
+
+  const groupedByYear = filteredMilestones?.reduce((acc, m) => {
+    const year = m.year;
+    if (!acc[year]) acc[year] = [];
+    acc[year].push(m);
+    return acc;
+  }, {} as Record<number, TimelineMilestone[]>);
+
+  const sortedYears = groupedByYear ? Object.keys(groupedByYear).map(Number).sort((a, b) => a - b) : [];
+
+  return (
+    <div className="p-6 space-y-6 max-w-4xl mx-auto">
+      <div className="space-y-2">
+        <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
+          <Clock className="h-6 w-6 text-primary" />
+          Timeline
+        </h1>
+        <p className="text-muted-foreground">
+          Key milestones and events throughout your Game Dev Tycoon journey
+        </p>
+      </div>
+
+      <div className="flex flex-col sm:flex-row gap-4">
+        <div className="relative flex-1">
+          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+          <Input
+            placeholder="Search timeline..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="pl-9"
+            data-testid="input-timeline-search"
+          />
+        </div>
+        
+        <Select value={eventFilter} onValueChange={setEventFilter}>
+          <SelectTrigger className="w-full sm:w-[180px]" data-testid="select-event-filter">
+            <SelectValue placeholder="Event Type" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Events</SelectItem>
+            {Object.entries(eventTypeConfig).map(([key, config]) => (
+              <SelectItem key={key} value={key}>{config.label}</SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
+        <Select value={importanceFilter} onValueChange={setImportanceFilter}>
+          <SelectTrigger className="w-full sm:w-[160px]" data-testid="select-importance-filter">
+            <SelectValue placeholder="Importance" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Levels</SelectItem>
+            <SelectItem value="critical">Critical</SelectItem>
+            <SelectItem value="high">High</SelectItem>
+            <SelectItem value="medium">Medium</SelectItem>
+            <SelectItem value="low">Low</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      {isLoading ? (
+        <div className="space-y-4">
+          {[...Array(5)].map((_, i) => (
+            <div key={i} className="flex gap-4">
+              <Skeleton className="w-3 h-3 rounded-full shrink-0" />
+              <Card className="flex-1">
+                <CardContent className="p-6">
+                  <Skeleton className="h-20 w-full" />
+                </CardContent>
+              </Card>
+            </div>
+          ))}
+        </div>
+      ) : filteredMilestones && filteredMilestones.length > 0 ? (
+        <div className="space-y-8">
+          {sortedYears.map((year) => (
+            <div key={year} className="space-y-2">
+              <div className="sticky top-0 z-10 bg-background/95 backdrop-blur py-2">
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center justify-center w-16 h-8 rounded-md bg-primary text-primary-foreground font-bold text-sm">
+                    Y{year}
+                  </div>
+                  <div className="flex-1 h-px bg-border" />
+                  <Badge variant="outline">{groupedByYear?.[year].length} events</Badge>
+                </div>
+              </div>
+              
+              <div className="pl-2">
+                {groupedByYear?.[year]
+                  .sort((a, b) => {
+                    const monthA = a.month || 1;
+                    const monthB = b.month || 1;
+                    const weekA = a.week || 1;
+                    const weekB = b.week || 1;
+                    return monthA !== monthB ? monthA - monthB : weekA - weekB;
+                  })
+                  .map((milestone) => (
+                    <MilestoneCard key={milestone.id} milestone={milestone} />
+                  ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <Card>
+          <CardContent className="py-12 text-center">
+            <Clock className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
+            <h3 className="text-lg font-medium mb-2">No Milestones Found</h3>
+            <p className="text-muted-foreground">
+              {search || eventFilter !== "all" || importanceFilter !== "all"
+                ? "Try adjusting your filters."
+                : "No timeline events available."}
+            </p>
+          </CardContent>
+        </Card>
+      )}
+    </div>
+  );
+}

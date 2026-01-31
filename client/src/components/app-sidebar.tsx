@@ -8,6 +8,9 @@ import {
   SlidersHorizontal,
   CalendarClock,
   Database,
+  FlaskConical,
+  Users,
+  Clock,
 } from "lucide-react";
 import {
   Sidebar,
@@ -55,6 +58,21 @@ const toolsItems = [
     title: "Game Planner",
     url: "/planner",
     icon: CalendarClock,
+  },
+  {
+    title: "Research Guide",
+    url: "/research",
+    icon: FlaskConical,
+  },
+  {
+    title: "Staff Guide",
+    url: "/staff",
+    icon: Users,
+  },
+  {
+    title: "Timeline",
+    url: "/timeline",
+    icon: Clock,
   },
 ];
 

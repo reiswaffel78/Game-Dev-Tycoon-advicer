@@ -20,6 +20,16 @@ const plannerSchema = z.object({
   unlockedOnly: z.boolean(),
 });
 
+const createChecklistItemSchema = z.object({
+  sessionId: z.string().min(1),
+  milestoneId: z.string().optional(),
+  customText: z.string().optional(),
+});
+
+const updateChecklistItemSchema = z.object({
+  isCompleted: z.boolean(),
+});
+
 export async function registerRoutes(
   httpServer: Server,
   app: Express
@@ -205,6 +215,112 @@ export async function registerRoutes(
     } catch (error) {
       console.error("Error generating planner recommendations:", error);
       res.status(500).json({ error: "Failed to generate planner recommendations" });
+    }
+  });
+
+  // ==================== Research Guide Routes ====================
+  app.get("/api/research", async (req, res) => {
+    try {
+      const items = await storage.getAllResearchItems();
+      res.json(items);
+    } catch (error) {
+      console.error("Error fetching research items:", error);
+      res.status(500).json({ error: "Failed to fetch research items" });
+    }
+  });
+
+  app.get("/api/research/category/:category", async (req, res) => {
+    try {
+      const items = await storage.getResearchItemsByCategory(req.params.category);
+      res.json(items);
+    } catch (error) {
+      console.error("Error fetching research items:", error);
+      res.status(500).json({ error: "Failed to fetch research items" });
+    }
+  });
+
+  // ==================== Staff Guide Routes ====================
+  app.get("/api/staff-tips", async (req, res) => {
+    try {
+      const tips = await storage.getAllStaffTips();
+      res.json(tips);
+    } catch (error) {
+      console.error("Error fetching staff tips:", error);
+      res.status(500).json({ error: "Failed to fetch staff tips" });
+    }
+  });
+
+  app.get("/api/staff-tips/phase/:phase", async (req, res) => {
+    try {
+      const tips = await storage.getStaffTipsByPhase(req.params.phase);
+      res.json(tips);
+    } catch (error) {
+      console.error("Error fetching staff tips:", error);
+      res.status(500).json({ error: "Failed to fetch staff tips" });
+    }
+  });
+
+  // ==================== Timeline Routes ====================
+  app.get("/api/timeline", async (req, res) => {
+    try {
+      const milestones = await storage.getAllTimelineMilestones();
+      res.json(milestones);
+    } catch (error) {
+      console.error("Error fetching timeline:", error);
+      res.status(500).json({ error: "Failed to fetch timeline" });
+    }
+  });
+
+  app.get("/api/timeline/year/:year", async (req, res) => {
+    try {
+      const year = parseInt(req.params.year, 10);
+      const milestones = await storage.getTimelineMilestonesByYear(year);
+      res.json(milestones);
+    } catch (error) {
+      console.error("Error fetching timeline:", error);
+      res.status(500).json({ error: "Failed to fetch timeline" });
+    }
+  });
+
+  // ==================== Checklist Routes ====================
+  app.get("/api/checklist/:sessionId", async (req, res) => {
+    try {
+      const items = await storage.getUserChecklistItems(req.params.sessionId);
+      res.json(items);
+    } catch (error) {
+      console.error("Error fetching checklist:", error);
+      res.status(500).json({ error: "Failed to fetch checklist" });
+    }
+  });
+
+  app.post("/api/checklist", async (req, res) => {
+    try {
+      const parsed = createChecklistItemSchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({ error: "Invalid request body", details: parsed.error });
+      }
+      const item = await storage.createUserChecklistItem(parsed.data);
+      res.json(item);
+    } catch (error) {
+      console.error("Error creating checklist item:", error);
+      res.status(500).json({ error: "Failed to create checklist item" });
+    }
+  });
+
+  app.patch("/api/checklist/:id", async (req, res) => {
+    try {
+      const parsed = updateChecklistItemSchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({ error: "Invalid request body", details: parsed.error });
+      }
+      const item = await storage.updateUserChecklistItem(req.params.id, parsed.data.isCompleted);
+      if (!item) {
+        return res.status(404).json({ error: "Checklist item not found" });
+      }
+      res.json(item);
+    } catch (error) {
+      console.error("Error updating checklist item:", error);
+      res.status(500).json({ error: "Failed to update checklist item" });
     }
   });
 

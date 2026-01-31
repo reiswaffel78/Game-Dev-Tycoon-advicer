@@ -1,4 +1,4 @@
-import { eq, and, desc } from "drizzle-orm";
+import { eq, and, desc, asc } from "drizzle-orm";
 import { db } from "./db";
 import {
   topics,
@@ -12,6 +12,10 @@ import {
   sources,
   snapshots,
   userSaveStates,
+  researchItems,
+  staffTips,
+  timelineMilestones,
+  userChecklistItems,
   type Topic,
   type Genre,
   type Platform,
@@ -23,6 +27,10 @@ import {
   type Source,
   type Snapshot,
   type UserSaveState,
+  type ResearchItem,
+  type StaffTip,
+  type TimelineMilestone,
+  type UserChecklistItem,
   type InsertTopic,
   type InsertGenre,
   type InsertPlatform,
@@ -34,6 +42,10 @@ import {
   type InsertSource,
   type InsertSnapshot,
   type InsertUserSaveState,
+  type InsertResearchItem,
+  type InsertStaffTip,
+  type InsertTimelineMilestone,
+  type InsertUserChecklistItem,
 } from "@shared/schema";
 
 export interface IStorage {
@@ -93,6 +105,23 @@ export interface IStorage {
   getUserSaveStates(): Promise<UserSaveState[]>;
   getUserSaveStateById(id: string): Promise<UserSaveState | undefined>;
   createUserSaveState(state: InsertUserSaveState): Promise<UserSaveState>;
+  
+  // Research Items
+  getAllResearchItems(): Promise<ResearchItem[]>;
+  getResearchItemsByCategory(category: string): Promise<ResearchItem[]>;
+  
+  // Staff Tips
+  getAllStaffTips(): Promise<StaffTip[]>;
+  getStaffTipsByPhase(gamePhase: string): Promise<StaffTip[]>;
+  
+  // Timeline Milestones
+  getAllTimelineMilestones(): Promise<TimelineMilestone[]>;
+  getTimelineMilestonesByYear(year: number): Promise<TimelineMilestone[]>;
+  
+  // User Checklist
+  getUserChecklistItems(sessionId: string): Promise<UserChecklistItem[]>;
+  createUserChecklistItem(item: InsertUserChecklistItem): Promise<UserChecklistItem>;
+  updateUserChecklistItem(id: string, isCompleted: boolean): Promise<UserChecklistItem | undefined>;
   
   // Stats
   getStats(): Promise<{ topics: number; genres: number; platforms: number; lastUpdate: string }>;
@@ -265,6 +294,59 @@ export class DatabaseStorage implements IStorage {
 
   async createUserSaveState(state: InsertUserSaveState): Promise<UserSaveState> {
     const result = await db.insert(userSaveStates).values(state).returning();
+    return result[0];
+  }
+
+  // Research Items
+  async getAllResearchItems(): Promise<ResearchItem[]> {
+    return db.select().from(researchItems).orderBy(asc(researchItems.unlockYear), asc(researchItems.priority));
+  }
+
+  async getResearchItemsByCategory(category: string): Promise<ResearchItem[]> {
+    return db.select().from(researchItems)
+      .where(eq(researchItems.category, category))
+      .orderBy(asc(researchItems.unlockYear), asc(researchItems.priority));
+  }
+
+  // Staff Tips
+  async getAllStaffTips(): Promise<StaffTip[]> {
+    return db.select().from(staffTips).orderBy(asc(staffTips.priority));
+  }
+
+  async getStaffTipsByPhase(gamePhase: string): Promise<StaffTip[]> {
+    return db.select().from(staffTips)
+      .where(eq(staffTips.gamePhase, gamePhase))
+      .orderBy(asc(staffTips.priority));
+  }
+
+  // Timeline Milestones
+  async getAllTimelineMilestones(): Promise<TimelineMilestone[]> {
+    return db.select().from(timelineMilestones).orderBy(asc(timelineMilestones.year), asc(timelineMilestones.month));
+  }
+
+  async getTimelineMilestonesByYear(year: number): Promise<TimelineMilestone[]> {
+    return db.select().from(timelineMilestones)
+      .where(eq(timelineMilestones.year, year))
+      .orderBy(asc(timelineMilestones.month));
+  }
+
+  // User Checklist
+  async getUserChecklistItems(sessionId: string): Promise<UserChecklistItem[]> {
+    return db.select().from(userChecklistItems)
+      .where(eq(userChecklistItems.sessionId, sessionId))
+      .orderBy(asc(userChecklistItems.createdAt));
+  }
+
+  async createUserChecklistItem(item: InsertUserChecklistItem): Promise<UserChecklistItem> {
+    const result = await db.insert(userChecklistItems).values(item).returning();
+    return result[0];
+  }
+
+  async updateUserChecklistItem(id: string, isCompleted: boolean): Promise<UserChecklistItem | undefined> {
+    const result = await db.update(userChecklistItems)
+      .set({ isCompleted, completedAt: isCompleted ? new Date() : null })
+      .where(eq(userChecklistItems.id, id))
+      .returning();
     return result[0];
   }
 

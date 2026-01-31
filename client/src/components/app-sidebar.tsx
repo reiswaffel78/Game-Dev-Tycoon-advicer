@@ -12,6 +12,8 @@ import {
   Users,
   Clock,
   ClipboardList,
+  HelpCircle,
+  BookOpen,
 } from "lucide-react";
 import {
   Sidebar,
@@ -79,6 +81,16 @@ const toolsItems = [
     title: "Checklist",
     url: "/checklist",
     icon: ClipboardList,
+  },
+  {
+    title: "FAQ",
+    url: "/faq",
+    icon: HelpCircle,
+  },
+  {
+    title: "Handbuch",
+    url: "/handbuch",
+    icon: BookOpen,
   },
 ];
 

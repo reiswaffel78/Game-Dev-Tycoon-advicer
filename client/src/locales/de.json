@@ -174,16 +174,51 @@
   },
   "appGuide": {
     "title": "So nutzt du diese App",
-    "subtitle": "Eine kurze Einführung in alle Funktionen des Game Dev Tycoon Advisors",
+    "subtitle": "Eine kurze Einführung in alle Funktionen des Game Dev Tycoon Advisors. Finde schnell was du brauchst und optimiere dein Spielerlebnis.",
     "workflows": "Schnellstart-Workflows",
     "workflowsDesc": "Die häufigsten Aufgaben Schritt für Schritt erklärt",
     "features": "Alle Funktionen im Überblick",
     "featuresDesc": "Klicke auf einen Menüpunkt in der Seitenleiste um zur jeweiligen Funktion zu gelangen",
     "proTips": "Profi-Tipps",
+    "proTip1": "Nutze die App parallel zum Spielen - halte sie auf einem zweiten Monitor oder Gerät offen.",
+    "proTip2": "Die Slider-Voreinstellungen sind der wichtigste Teil - falsche Slider ruinieren selbst die beste Kombination.",
+    "proTip3": "Speichere die Checkliste regelmäßig - sie hilft dir den Überblick zu behalten.",
+    "proTip4": "Bei Fragen: Schau zuerst ins FAQ, dann ins Handbuch für detaillierte Erklärungen.",
     "workflow": {
       "planGame": "Neues Spiel planen",
+      "planGameSteps": ["Gehe zu 'Genre-Empfehlungen' und wähle dein Wunsch-Topic", "Notiere dir das beste Genre für dein Topic", "Wechsle zu 'Plattform-Empfehlungen' und wähle Genre + Zielgruppe", "Öffne 'Slider-Voreinstellungen' und kopiere die Werte für dein Genre", "Nutze den 'Spiel-Planer' um alles zusammenzufassen"],
       "findSliders": "Optimale Slider finden",
-      "trackProgress": "Spielfortschritt tracken"
+      "findSlidersSteps": ["Gehe zu 'Slider-Voreinstellungen'", "Wähle dein Genre aus der Liste", "Lese die Werte für alle drei Phasen ab", "Stelle die Slider im Spiel entsprechend ein"],
+      "trackProgress": "Spielfortschritt tracken",
+      "trackProgressSteps": ["Öffne die 'Checkliste' Seite", "Gehe die Meilensteine durch", "Hake ab was du bereits erreicht hast", "Füge eigene Ziele hinzu falls gewünscht"]
+    },
+    "featureDesc": {
+      "dashboard": "Deine Startseite mit schnellem Überblick über die besten Topic-Genre-Kombinationen und wichtige Statistiken.",
+      "topicRecommender": "Wähle ein Genre und erhalte die besten passenden Topics dafür.",
+      "genreRecommender": "Wähle ein Topic und finde das perfekte Genre dazu.",
+      "platformRecommender": "Finde die beste Plattform für dein Genre und deine Zielgruppe.",
+      "sliderPresets": "Die optimalen Slider-Einstellungen für jedes Genre in allen drei Entwicklungsphasen.",
+      "planner": "Plane dein nächstes Spiel mit allen Details und speichere es für später.",
+      "research": "Alle Technologien mit Freischaltjahr, Kosten und Voraussetzungen.",
+      "staff": "Tipps zur Mitarbeiter-Einstellung und Team-Management für jede Spielphase.",
+      "timeline": "Jahr-für-Jahr Walkthrough mit wichtigen Meilensteinen und Plattform-Releases.",
+      "checklist": "Interaktive Fortschritts-Verfolgung für deinen Spieldurchlauf.",
+      "faq": "Antworten auf die häufigsten Fragen zu Game Dev Tycoon.",
+      "manual": "Das vollständige Nachschlagewerk zu allen Spielmechaniken."
+    },
+    "featureTips": {
+      "dashboard": ["Zeigt die Top 5 besten Kombinationen auf einen Blick", "Schneller Zugriff auf alle wichtigen Funktionen", "Aktuelle Datenbank-Statistiken werden angezeigt"],
+      "topicRecommender": ["Wähle zuerst ein Genre aus der Liste", "Die Topics werden nach Kompatibilität sortiert", "Grüne Bewertungen zeigen optimale Kombinationen"],
+      "genreRecommender": ["Ideal wenn du ein bestimmtes Thema im Kopf hast", "Zeigt auch Freischaltjahr und Kosten an", "Beachte die Fit-Bewertung für beste Ergebnisse"],
+      "platformRecommender": ["Wähle Genre UND Zielgruppe für beste Ergebnisse", "Beachte Lizenzkosten und Marktanteile", "Zeitraum-Filter hilft bei historischen Plattformen"],
+      "sliderPresets": ["Wähle dein Genre aus der Liste", "Kopiere die Werte für jede Phase", "Hohe Werte = mehr Fokus auf diesen Bereich"],
+      "planner": ["Kombiniere alle Empfehlungen in einem Plan", "Speichere mehrere Spielideen", "Exportiere deine Pläne als Referenz"],
+      "research": ["Sortiert nach Kategorie und Jahr", "Zeigt Abhängigkeiten zwischen Technologien", "Hilft bei der Planung deiner Forschung"],
+      "staff": ["Verschiedene Tipps für jede Büro-Phase", "Optimale Teamgrößen werden erklärt", "Skill-Prioritäten für verschiedene Rollen"],
+      "timeline": ["Folge dem Guide chronologisch", "Wichtige Plattform-Releases sind markiert", "Strategische Tipps für jeden Zeitabschnitt"],
+      "checklist": ["Hake erledigte Meilensteine ab", "Füge eigene Aufgaben hinzu", "Fortschritt wird lokal gespeichert"],
+      "faq": ["Nach Kategorien organisiert", "Schnelle Antworten auf gängige Probleme", "Klicke auf eine Frage um die Antwort zu sehen"],
+      "manual": ["6 Kategorien mit allen Details", "Von Grundlagen bis Fortgeschritten", "Ideal zum Nachschlagen während des Spiels"]
     }
   },
   "sources": {

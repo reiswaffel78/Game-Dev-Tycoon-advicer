@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useTranslation } from "react-i18next";
 import { SlidersHorizontal, Search, Info, Zap, Cpu, Sparkles } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -130,6 +131,7 @@ function PresetCard({ preset }: { preset: SliderPreset }) {
 }
 
 export default function SliderPresets() {
+  const { t } = useTranslation();
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
   const [search, setSearch] = useState("");
 
@@ -153,18 +155,17 @@ export default function SliderPresets() {
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <SlidersHorizontal className="h-6 w-6 text-primary" />
-          Slider Presets
+          {t("sliders.title")}
         </h1>
         <p className="text-muted-foreground">
-          Get optimal slider values for each development stage based on your
-          selected genre
+          {t("sliders.subtitle")}
         </p>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[320px,1fr]">
         <Card className="h-fit">
           <CardHeader className="pb-3">
-            <CardTitle className="text-base">Select Genre</CardTitle>
+            <CardTitle className="text-base">{t("recommender.selectGenre")}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
             <div className="relative">
@@ -211,11 +212,9 @@ export default function SliderPresets() {
             <Card>
               <CardContent className="py-16 text-center">
                 <SlidersHorizontal className="h-16 w-16 mx-auto text-muted-foreground/30 mb-4" />
-                <h3 className="text-lg font-medium mb-2">Select a Genre</h3>
+                <h3 className="text-lg font-medium mb-2">{t("recommender.selectGenre")}</h3>
                 <p className="text-muted-foreground max-w-md mx-auto">
-                  Choose a genre to see the optimal slider values for each
-                  development stage. High-importance sliders should be set to at
-                  least 40%, while low-importance ones should be below 20%.
+                  {t("sliders.selectGenre")}
                 </p>
               </CardContent>
             </Card>
@@ -267,9 +266,9 @@ export default function SliderPresets() {
             <Card>
               <CardContent className="py-12 text-center">
                 <SlidersHorizontal className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
-                <h3 className="text-lg font-medium mb-2">No Presets Found</h3>
+                <h3 className="text-lg font-medium mb-2">{t("recommender.noResults")}</h3>
                 <p className="text-muted-foreground">
-                  No slider presets available for this genre.
+                  {t("recommender.adjustFilters")}
                 </p>
               </CardContent>
             </Card>

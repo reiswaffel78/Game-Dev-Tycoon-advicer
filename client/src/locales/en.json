@@ -174,16 +174,51 @@
   },
   "appGuide": {
     "title": "How to Use This App",
-    "subtitle": "A quick introduction to all features of the Game Dev Tycoon Advisor",
+    "subtitle": "A quick introduction to all features of the Game Dev Tycoon Advisor. Find what you need quickly and optimize your gameplay.",
     "workflows": "Quick Start Workflows",
     "workflowsDesc": "The most common tasks explained step by step",
     "features": "All Features Overview",
     "featuresDesc": "Click on a menu item in the sidebar to access each feature",
     "proTips": "Pro Tips",
+    "proTip1": "Use the app alongside the game - keep it open on a second monitor or device.",
+    "proTip2": "Slider presets are the most important part - wrong sliders ruin even the best combinations.",
+    "proTip3": "Save your checklist regularly - it helps you keep track of progress.",
+    "proTip4": "For questions: Check the FAQ first, then the manual for detailed explanations.",
     "workflow": {
       "planGame": "Plan a New Game",
+      "planGameSteps": ["Go to 'Genre Recommender' and select your desired topic", "Note the best genre for your topic", "Switch to 'Platform Recommender' and select genre + audience", "Open 'Slider Presets' and copy the values for your genre", "Use the 'Game Planner' to combine everything"],
       "findSliders": "Find Optimal Sliders",
-      "trackProgress": "Track Progress"
+      "findSlidersSteps": ["Go to 'Slider Presets'", "Select your genre from the list", "Read the values for all three phases", "Set the sliders in-game accordingly"],
+      "trackProgress": "Track Progress",
+      "trackProgressSteps": ["Open the 'Checklist' page", "Go through the milestones", "Check off what you've already achieved", "Add your own goals if desired"]
+    },
+    "featureDesc": {
+      "dashboard": "Your home page with a quick overview of the best topic-genre combinations and important statistics.",
+      "topicRecommender": "Select a genre and get the best matching topics for it.",
+      "genreRecommender": "Select a topic and find the perfect genre for it.",
+      "platformRecommender": "Find the best platform for your genre and target audience.",
+      "sliderPresets": "The optimal slider settings for each genre across all three development phases.",
+      "planner": "Plan your next game with all details and save it for later.",
+      "research": "All technologies with unlock year, costs, and prerequisites.",
+      "staff": "Tips for hiring and managing your team at each game phase.",
+      "timeline": "Year-by-year walkthrough with important milestones and platform releases.",
+      "checklist": "Interactive progress tracking for your playthrough.",
+      "faq": "Answers to the most common questions about Game Dev Tycoon.",
+      "manual": "The complete reference for all game mechanics."
+    },
+    "featureTips": {
+      "dashboard": ["Shows the top 5 best combinations at a glance", "Quick access to all important features", "Current database statistics are displayed"],
+      "topicRecommender": ["First select a genre from the list", "Topics are sorted by compatibility", "Green ratings show optimal combinations"],
+      "genreRecommender": ["Ideal when you have a specific theme in mind", "Shows unlock year and costs", "Pay attention to the fit rating for best results"],
+      "platformRecommender": ["Select genre AND audience for best results", "Consider license costs and market share", "Time filter helps with historical platforms"],
+      "sliderPresets": ["Select your genre from the list", "Copy the values for each phase", "High values = more focus on that area"],
+      "planner": ["Combine all recommendations in one plan", "Save multiple game ideas", "Export your plans as reference"],
+      "research": ["Sorted by category and year", "Shows dependencies between technologies", "Helps plan your research"],
+      "staff": ["Different tips for each office phase", "Optimal team sizes explained", "Skill priorities for different roles"],
+      "timeline": ["Follow the guide chronologically", "Important platform releases are marked", "Strategic tips for each time period"],
+      "checklist": ["Check off completed milestones", "Add your own tasks", "Progress is saved locally"],
+      "faq": ["Organized by categories", "Quick answers to common problems", "Click a question to see the answer"],
+      "manual": ["6 categories with all details", "From basics to advanced", "Ideal for reference during gameplay"]
     }
   },
   "sources": {

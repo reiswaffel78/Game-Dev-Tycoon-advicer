@@ -15,8 +15,9 @@ Preferred communication style: Simple, everyday language.
 - **Routing**: Wouter for client-side routing (lightweight alternative to React Router)
 - **State Management**: TanStack React Query for server state management and caching
 - **UI Components**: shadcn/ui component library built on Radix UI primitives
-- **Styling**: Tailwind CSS with CSS variables for theming (light/dark mode support)
+- **Styling**: Tailwind CSS with CSS variables for theming (CRT-retro green/amber color scheme)
 - **Form Handling**: React Hook Form with Zod validation via @hookform/resolvers
+- **Internationalization**: react-i18next with English (primary) and German language support
 
 ### Backend Architecture
 - **Framework**: Express.js 5.x running on Node.js
@@ -84,7 +85,15 @@ The application models Game Dev Tycoon gameplay data:
 - **JSON-LD Structured Data**: Schema.org markup for search engines
 - **Sitemap**: `client/public/sitemap.xml` with all page URLs
 - **Robots.txt**: `client/public/robots.txt` allowing all crawlers
-- **German Language**: All content in German for German market discoverability
+- **Bilingual Support**: English (primary) and German, using react-i18next
+
+### Internationalization (i18n)
+- **Library**: react-i18next with i18next-browser-languagedetector
+- **Configuration**: `client/src/lib/i18n.ts` - initialized on app load
+- **Translation Files**: `client/src/locales/en.json` and `client/src/locales/de.json`
+- **Language Switcher**: Header component for switching between English and German
+- **Default Language**: English (fallback), with browser language auto-detection
+- **Storage**: Language preference saved to localStorage
 
 ## External Dependencies
 

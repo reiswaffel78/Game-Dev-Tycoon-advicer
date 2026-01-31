@@ -381,22 +381,33 @@ function generateExplanation(stage: number, sliders: SliderPreset["sliders"]): s
 }
 
 function createDefaultPreset(stage: number): SliderPreset {
-  const baseSliders = [
-    { name: "Engine", value: 30, importance: "medium" as const },
-    { name: "Gameplay", value: 50, importance: "high" as const },
-    { name: "Story/Quests", value: 25, importance: "medium" as const },
-    { name: "Dialogues", value: 15, importance: "low" as const },
-    { name: "Level Design", value: 35, importance: "medium" as const },
-    { name: "AI", value: 20, importance: "low" as const },
-    { name: "World Design", value: 30, importance: "medium" as const },
-    { name: "Graphics", value: 45, importance: "high" as const },
-    { name: "Sound", value: 25, importance: "medium" as const },
-  ];
+  // Each stage has only 3 specific sliders - matching the actual game
+  let stageSliders: { name: string; value: number; importance: "high" | "medium" | "low" }[];
+  
+  if (stage === 1) {
+    stageSliders = [
+      { name: "Engine", value: 50, importance: "medium" },
+      { name: "Gameplay", value: 80, importance: "high" },
+      { name: "Story/Quests", value: 50, importance: "medium" },
+    ];
+  } else if (stage === 2) {
+    stageSliders = [
+      { name: "Dialogues", value: 50, importance: "medium" },
+      { name: "Level Design", value: 80, importance: "high" },
+      { name: "AI", value: 50, importance: "medium" },
+    ];
+  } else {
+    stageSliders = [
+      { name: "World Design", value: 50, importance: "medium" },
+      { name: "Graphics", value: 80, importance: "high" },
+      { name: "Sound", value: 50, importance: "medium" },
+    ];
+  }
 
   return {
     stage,
-    sliders: baseSliders,
-    explanation: `Stage ${stage} default preset. Adjust based on your specific genre.`,
+    sliders: stageSliders,
+    explanation: `Stage ${stage} default preset. Select a genre for optimized settings.`,
   };
 }
 

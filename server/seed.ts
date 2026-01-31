@@ -14,10 +14,18 @@ import {
 import { sql } from "drizzle-orm";
 
 export async function seedDatabase() {
-  // Check if data already exists
+  // Check if core data already exists
   const existingTopics = await db.select().from(topics).limit(1);
+  
   if (existingTopics.length > 0) {
-    console.log("Database already seeded, skipping...");
+    // Check if slider data needs updating (separate from core data)
+    const existingSliders = await db.select().from(genreDevWeights).limit(1);
+    if (existingSliders.length === 0) {
+      console.log("Seeding slider data...");
+      await seedSliderData();
+    } else {
+      console.log("Database already seeded, skipping...");
+    }
     return;
   }
 
@@ -281,4 +289,41 @@ export async function seedDatabase() {
   await db.insert(genreDevWeights).values(genreDevWeightsData);
 
   console.log("Database seeding completed successfully!");
+}
+
+// Separate function to seed just slider data (can be called independently)
+async function seedSliderData() {
+  const genreDevWeightsData = [
+    // ACTION: Engine 100%, Gameplay 80%, Story 0% | Dialogues 0%, LevelDesign 80%, AI 100% | WorldDesign 0%, Graphics 100%, Sound 80%
+    { id: "action-s1", genreId: "action", stage: 1, engine: 1.0, gameplay: 0.8, storyQuests: 0, dialogues: 0, levelDesign: 0, ai: 0, worldDesign: 0, graphics: 0, sound: 0, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    { id: "action-s2", genreId: "action", stage: 2, engine: 0, gameplay: 0, storyQuests: 0, dialogues: 0, levelDesign: 0.8, ai: 1.0, worldDesign: 0, graphics: 0, sound: 0, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    { id: "action-s3", genreId: "action", stage: 3, engine: 0, gameplay: 0, storyQuests: 0, dialogues: 0, levelDesign: 0, ai: 0, worldDesign: 0, graphics: 1.0, sound: 0.8, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    
+    // ADVENTURE: Engine 0%, Gameplay 0%, Story 100% | Dialogues 100%, LevelDesign 0%, AI 0% | WorldDesign 100%, Graphics 80%, Sound 0%
+    { id: "adventure-s1", genreId: "adventure", stage: 1, engine: 0, gameplay: 0, storyQuests: 1.0, dialogues: 0, levelDesign: 0, ai: 0, worldDesign: 0, graphics: 0, sound: 0, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    { id: "adventure-s2", genreId: "adventure", stage: 2, engine: 0, gameplay: 0, storyQuests: 0, dialogues: 1.0, levelDesign: 0, ai: 0, worldDesign: 0, graphics: 0, sound: 0, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    { id: "adventure-s3", genreId: "adventure", stage: 3, engine: 0, gameplay: 0, storyQuests: 0, dialogues: 0, levelDesign: 0, ai: 0, worldDesign: 1.0, graphics: 0.8, sound: 0, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    
+    // RPG: Engine 0%, Gameplay 80%, Story 100% | Dialogues 100%, LevelDesign 80%, AI 0% | WorldDesign 100%, Graphics 80%, Sound 0%
+    { id: "rpg-s1", genreId: "rpg", stage: 1, engine: 0, gameplay: 0.8, storyQuests: 1.0, dialogues: 0, levelDesign: 0, ai: 0, worldDesign: 0, graphics: 0, sound: 0, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    { id: "rpg-s2", genreId: "rpg", stage: 2, engine: 0, gameplay: 0, storyQuests: 0, dialogues: 1.0, levelDesign: 0.8, ai: 0, worldDesign: 0, graphics: 0, sound: 0, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    { id: "rpg-s3", genreId: "rpg", stage: 3, engine: 0, gameplay: 0, storyQuests: 0, dialogues: 0, levelDesign: 0, ai: 0, worldDesign: 1.0, graphics: 0.8, sound: 0, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    
+    // SIMULATION: Engine 80%, Gameplay 100%, Story 0% | Dialogues 0%, LevelDesign 80%, AI 100% | WorldDesign 0%, Graphics 100%, Sound 80%
+    { id: "simulation-s1", genreId: "simulation", stage: 1, engine: 0.8, gameplay: 1.0, storyQuests: 0, dialogues: 0, levelDesign: 0, ai: 0, worldDesign: 0, graphics: 0, sound: 0, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    { id: "simulation-s2", genreId: "simulation", stage: 2, engine: 0, gameplay: 0, storyQuests: 0, dialogues: 0, levelDesign: 0.8, ai: 1.0, worldDesign: 0, graphics: 0, sound: 0, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    { id: "simulation-s3", genreId: "simulation", stage: 3, engine: 0, gameplay: 0, storyQuests: 0, dialogues: 0, levelDesign: 0, ai: 0, worldDesign: 0, graphics: 1.0, sound: 0.8, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    
+    // STRATEGY: Engine 80%, Gameplay 100%, Story 0% | Dialogues 0%, LevelDesign 100%, AI 80% | WorldDesign 100%, Graphics 0%, Sound 80%
+    { id: "strategy-s1", genreId: "strategy", stage: 1, engine: 0.8, gameplay: 1.0, storyQuests: 0, dialogues: 0, levelDesign: 0, ai: 0, worldDesign: 0, graphics: 0, sound: 0, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    { id: "strategy-s2", genreId: "strategy", stage: 2, engine: 0, gameplay: 0, storyQuests: 0, dialogues: 0, levelDesign: 1.0, ai: 0.8, worldDesign: 0, graphics: 0, sound: 0, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    { id: "strategy-s3", genreId: "strategy", stage: 3, engine: 0, gameplay: 0, storyQuests: 0, dialogues: 0, levelDesign: 0, ai: 0, worldDesign: 1.0, graphics: 0, sound: 0.8, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    
+    // CASUAL: Engine 0%, Gameplay 100%, Story 0% | Dialogues 0%, LevelDesign 100%, AI 0% | WorldDesign 0%, Graphics 100%, Sound 80%
+    { id: "casual-s1", genreId: "casual", stage: 1, engine: 0, gameplay: 1.0, storyQuests: 0, dialogues: 0, levelDesign: 0, ai: 0, worldDesign: 0, graphics: 0, sound: 0, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    { id: "casual-s2", genreId: "casual", stage: 2, engine: 0, gameplay: 0, storyQuests: 0, dialogues: 0, levelDesign: 1.0, ai: 0, worldDesign: 0, graphics: 0, sound: 0, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+    { id: "casual-s3", genreId: "casual", stage: 3, engine: 0, gameplay: 0, storyQuests: 0, dialogues: 0, levelDesign: 0, ai: 0, worldDesign: 0, graphics: 1.0, sound: 0.8, confidence: 0.98, sourceIds: ["fandom-wiki", "greenheart-forum"] },
+  ];
+  await db.insert(genreDevWeights).values(genreDevWeightsData);
+  console.log("Slider data seeded successfully!");
 }

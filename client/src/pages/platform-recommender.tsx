@@ -76,9 +76,9 @@ function RecommendationCard({
   const [isOpen, setIsOpen] = useState(false);
 
   const medalColors: Record<number, string> = {
-    1: "from-amber-400 to-yellow-500",
-    2: "from-slate-300 to-slate-400",
-    3: "from-amber-600 to-orange-700",
+    1: "from-primary to-primary/80",
+    2: "from-primary/80 to-primary/60",
+    3: "from-primary/60 to-primary/40",
   };
 
   return (
@@ -104,7 +104,7 @@ function RecommendationCard({
             </p>
           </div>
           <div className="text-right">
-            <div className="text-2xl font-bold text-primary">
+            <div className="text-2xl font-bold text-accent">
               {result.scores.total > 0 ? "+" : ""}
               {result.scores.total.toFixed(1)}
             </div>
@@ -129,13 +129,13 @@ function RecommendationCard({
           <div className="space-y-1.5">
             <div className="flex items-center justify-between text-sm">
               <span className="text-muted-foreground">Cost Penalty</span>
-              <span className="font-mono font-medium">
-                {result.scores.costPenalty.toFixed(1)}
+              <span className={`font-mono font-medium ${result.scores.costPenalty < 0 ? "text-destructive" : "text-accent"}`}>
+                {result.scores.costPenalty < 0 ? "" : "+"}{result.scores.costPenalty.toFixed(1)}
               </span>
             </div>
             <Progress
               value={Math.max(0, (1 - Math.abs(result.scores.costPenalty)) * 100)}
-              className="h-2"
+              className={`h-2 ${result.scores.costPenalty < 0 ? "[&>div]:bg-destructive" : "[&>div]:bg-accent"}`}
             />
           </div>
         </div>

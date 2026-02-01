@@ -24,6 +24,7 @@ import Checklist from "@/pages/checklist";
 import FAQ from "@/pages/faq";
 import Handbuch from "@/pages/handbuch";
 import AppGuide from "@/pages/app-guide";
+import Privacy from "@/pages/privacy";
 
 function Router() {
   return (

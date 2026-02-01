@@ -621,5 +621,37 @@
     "en": "English",
     "de": "Deutsch",
     "switch": "Switch Language"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "How we handle your data on this website",
+    "lastUpdated": "Last Updated",
+    "analytics": {
+      "title": "Google Analytics",
+      "description": "We use Google Analytics to understand how visitors interact with our website. This helps us improve the user experience and content.",
+      "dataCollected": "Data collected by Google Analytics:",
+      "item1": "Pages visited and time spent on each page",
+      "item2": "Approximate geographic location (country/city level)",
+      "item3": "Device type, browser, and operating system",
+      "item4": "Referral source (how you found our website)",
+      "item5": "Anonymous usage patterns and behavior",
+      "moreInfo": "For more information about how Google processes this data, please visit:"
+    },
+    "cookies": {
+      "title": "Cookies",
+      "description": "This website uses cookies to enhance your experience and for analytics purposes.",
+      "types": "Types of cookies we use:",
+      "type1": "Analytics cookies (Google Analytics) - to understand site usage",
+      "type2": "Preference cookies - to remember your language and theme settings",
+      "optOut": "You can disable cookies in your browser settings. Note that this may affect some website functionality."
+    },
+    "noPersonalData": {
+      "title": "Personal Data",
+      "description": "This website does not collect personal information such as names, email addresses, or account details. We do not require registration or login. All game planning data you create is stored locally in your browser and is not transmitted to our servers."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "If you have any questions about this privacy policy or our data practices, please contact us through the website."
+    }
   }
 }

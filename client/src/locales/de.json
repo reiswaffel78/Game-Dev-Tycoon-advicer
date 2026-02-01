@@ -621,5 +621,37 @@
     "en": "English",
     "de": "Deutsch",
     "switch": "Sprache wechseln"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "subtitle": "Wie wir mit Ihren Daten auf dieser Website umgehen",
+    "lastUpdated": "Zuletzt aktualisiert",
+    "analytics": {
+      "title": "Google Analytics",
+      "description": "Wir verwenden Google Analytics, um zu verstehen, wie Besucher mit unserer Website interagieren. Dies hilft uns, die Benutzererfahrung und Inhalte zu verbessern.",
+      "dataCollected": "Von Google Analytics erfasste Daten:",
+      "item1": "Besuchte Seiten und Verweildauer auf jeder Seite",
+      "item2": "Ungefährer geografischer Standort (Land/Stadt-Ebene)",
+      "item3": "Gerätetyp, Browser und Betriebssystem",
+      "item4": "Verweisquelle (wie Sie unsere Website gefunden haben)",
+      "item5": "Anonyme Nutzungsmuster und Verhalten",
+      "moreInfo": "Weitere Informationen darüber, wie Google diese Daten verarbeitet, finden Sie unter:"
+    },
+    "cookies": {
+      "title": "Cookies",
+      "description": "Diese Website verwendet Cookies, um Ihre Erfahrung zu verbessern und für Analysezwecke.",
+      "types": "Arten von Cookies, die wir verwenden:",
+      "type1": "Analytics-Cookies (Google Analytics) - um die Nutzung der Website zu verstehen",
+      "type2": "Präferenz-Cookies - um Ihre Sprach- und Theme-Einstellungen zu speichern",
+      "optOut": "Sie können Cookies in Ihren Browser-Einstellungen deaktivieren. Beachten Sie, dass dies einige Website-Funktionen beeinträchtigen kann."
+    },
+    "noPersonalData": {
+      "title": "Personenbezogene Daten",
+      "description": "Diese Website sammelt keine personenbezogenen Daten wie Namen, E-Mail-Adressen oder Kontodaten. Wir erfordern keine Registrierung oder Anmeldung. Alle von Ihnen erstellten Spielplanungsdaten werden lokal in Ihrem Browser gespeichert und nicht an unsere Server übertragen."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Bei Fragen zu dieser Datenschutzerklärung oder unseren Datenpraktiken kontaktieren Sie uns bitte über die Website."
+    }
   }
 }

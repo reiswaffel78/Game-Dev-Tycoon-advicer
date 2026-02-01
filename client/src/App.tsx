@@ -43,6 +43,7 @@ function Router() {
       <Route path="/handbuch" component={Handbuch} />
       <Route path="/app-guide" component={AppGuide} />
       <Route path="/sources" component={Sources} />
+      <Route path="/privacy" component={Privacy} />
       <Route component={NotFound} />
     </Switch>
   );

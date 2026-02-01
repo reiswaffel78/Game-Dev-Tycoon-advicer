@@ -16,6 +16,7 @@ import {
   HelpCircle,
   BookOpen,
   Compass,
+  Shield,
 } from "lucide-react";
 import {
   Sidebar,
@@ -110,6 +111,11 @@ export function AppSidebar() {
       title: t("nav.sources"),
       url: "/sources",
       icon: Database,
+    },
+    {
+      title: t("nav.privacy"),
+      url: "/privacy",
+      icon: Shield,
     },
   ];
 

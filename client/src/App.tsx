@@ -25,6 +25,7 @@ import FAQ from "@/pages/faq";
 import Handbuch from "@/pages/handbuch";
 import AppGuide from "@/pages/app-guide";
 import Privacy from "@/pages/privacy";
+import { Footer } from "@/components/footer";
 
 function Router() {
   return (
@@ -70,8 +71,11 @@ function App() {
                     <ThemeToggle />
                   </div>
                 </header>
-                <main className="flex-1 overflow-auto">
-                  <Router />
+                <main className="flex-1 overflow-auto flex flex-col">
+                  <div className="flex-1">
+                    <Router />
+                  </div>
+                  <Footer />
                 </main>
               </div>
             </div>

@@ -623,6 +623,13 @@
     "de": "Deutsch",
     "switch": "Sprache wechseln"
   },
+  "footer": {
+    "donate": "Unterstützen",
+    "contact": "Kontakt",
+    "privacy": "Datenschutz",
+    "rights": "Alle Rechte vorbehalten.",
+    "disclaimer": "Nicht verbunden mit Greenheart Games."
+  },
   "privacy": {
     "title": "Datenschutzerklärung",
     "subtitle": "Wie wir mit Ihren Daten auf dieser Website umgehen",

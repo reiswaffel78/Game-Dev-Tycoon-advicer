@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gdt-advisor.replit.app/sitemap.xml
+Sitemap: https://game-dev-tycoon-advicer.com/sitemap.xml

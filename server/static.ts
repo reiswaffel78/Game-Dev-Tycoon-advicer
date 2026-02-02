@@ -1,16 +1,19 @@
 import express, { type Express } from "express";
 import fs from "fs";
 import path from "path";
+import { pathToFileURL } from "url";
 
 export function serveStatic(app: Express) {
   const distPath = path.resolve(__dirname, "public");
+  
   if (!fs.existsSync(distPath)) {
     throw new Error(
       `Could not find the build directory: ${distPath}, make sure to build the client first`,
     );
   }
 
-  app.use(express.static(distPath));
+  // Serve static files but disable index to let SSR handle HTML pages
+  app.use(express.static(distPath, { index: false }));
 
   // SSR for content routes
   app.use("/{*path}", async (req, res) => {
@@ -22,7 +25,9 @@ export function serveStatic(app: Express) {
       
       if (fs.existsSync(ssrManifestPath)) {
         // SSR mode - render the app server-side
-        const { render } = await import(ssrManifestPath);
+        // Use file:// URL for proper ESM import from CJS context
+        const ssrModuleUrl = pathToFileURL(ssrManifestPath).href;
+        const { render } = await import(ssrModuleUrl);
         const template = fs.readFileSync(path.resolve(distPath, "index.html"), "utf-8");
         
         const { html: appHtml, helmet } = render(url);
@@ -64,10 +69,12 @@ export function serveStatic(app: Express) {
         res.status(200).set({ "Content-Type": "text/html" }).send(finalHtml);
       } else {
         // Fallback to SPA mode if SSR bundle not found
+        console.warn("[SSR] SSR bundle not found at:", ssrManifestPath, "- serving SPA fallback");
         res.sendFile(path.resolve(distPath, "index.html"));
       }
     } catch (error) {
-      console.error("SSR Error:", error);
+      console.error("[SSR] Rendering error for URL:", url);
+      console.error("[SSR] Error details:", error);
       // Fallback to SPA mode on error
       res.sendFile(path.resolve(distPath, "index.html"));
     }

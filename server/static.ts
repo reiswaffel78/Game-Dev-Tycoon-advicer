@@ -3,11 +3,12 @@ import fs from "fs";
 import path from "path";
 import { pathToFileURL } from "url";
 
-// Cache the SSR module to avoid re-importing on every request
-let ssrModule: { render: (url: string) => { html: string; helmet: any } } | null = null;
+type SSRModule = { render: (url: string) => { html: string; helmet: any } };
+
+let ssrModule: SSRModule | null = null;
 let ssrModuleError: Error | null = null;
 
-export function serveStatic(app: Express) {
+export async function serveStatic(app: Express) {
   const distPath = path.resolve(__dirname, "public");
   const ssrBundlePath = path.resolve(__dirname, "entry-server.js");
   
@@ -23,20 +24,19 @@ export function serveStatic(app: Express) {
     );
   }
 
-  // Pre-load SSR module at startup
+  // Load SSR module synchronously before accepting requests
   if (fs.existsSync(ssrBundlePath)) {
     const ssrModuleUrl = pathToFileURL(ssrBundlePath).href;
     console.log("[SSR] Loading SSR module from:", ssrModuleUrl);
     
-    import(ssrModuleUrl)
-      .then((mod) => {
-        ssrModule = mod;
-        console.log("[SSR] SSR module loaded successfully");
-      })
-      .catch((err) => {
-        ssrModuleError = err;
-        console.error("[SSR] Failed to load SSR module:", err);
-      });
+    try {
+      ssrModule = await import(ssrModuleUrl);
+      console.log("[SSR] SSR module loaded successfully");
+      console.log("[SSR] SSR module has render function:", typeof ssrModule?.render === "function");
+    } catch (err) {
+      ssrModuleError = err as Error;
+      console.error("[SSR] Failed to load SSR module:", err);
+    }
   } else {
     console.warn("[SSR] SSR bundle not found, will serve SPA only");
   }
@@ -55,20 +55,23 @@ export function serveStatic(app: Express) {
     
     try {
       if (ssrModuleError) {
-        console.error("[SSR] Using SPA fallback due to module load error");
+        console.error("[SSR] Using SPA fallback due to module load error:", ssrModuleError.message);
         return res.sendFile(path.resolve(distPath, "index.html"));
       }
       
-      if (!ssrModule) {
-        // Module still loading or not available
-        console.log("[SSR] Module not ready, serving SPA");
+      if (!ssrModule || typeof ssrModule.render !== "function") {
+        console.log("[SSR] Module not available or no render function, serving SPA");
         return res.sendFile(path.resolve(distPath, "index.html"));
       }
       
       const template = fs.readFileSync(path.resolve(distPath, "index.html"), "utf-8");
       
+      console.log("[SSR] Rendering route:", url);
+      
       // Render the app
       const { html: appHtml, helmet } = ssrModule.render(url);
+      
+      console.log("[SSR] Render complete. HTML length:", appHtml?.length || 0);
       
       // Build head tags from helmet
       const helmetHead = [
@@ -104,11 +107,11 @@ export function serveStatic(app: Express) {
         `<div id="root">${appHtml}</div>`
       );
       
-      console.log("[SSR] Rendered:", url, "- HTML length:", appHtml.length);
+      console.log("[SSR] Sending response for:", url, "- Total HTML length:", finalHtml.length);
       res.status(200).set({ "Content-Type": "text/html" }).send(finalHtml);
     } catch (error) {
       console.error("[SSR] Rendering error for URL:", url);
-      console.error("[SSR] Error:", error);
+      console.error("[SSR] Error details:", error);
       // Fallback to SPA mode on error
       res.sendFile(path.resolve(distPath, "index.html"));
     }

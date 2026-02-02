@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SEO } from "@/components/seo";
@@ -22,7 +22,7 @@ import {
 import { apiRequest, queryClient } from "@/lib/queryClient";
 import type { TimelineMilestone, UserChecklistItem } from "@shared/schema";
 
-function getSessionId(): string {
+function getOrCreateSessionId(): string {
   let sessionId = localStorage.getItem("gdtAdvisorSessionId");
   if (!sessionId) {
     sessionId = crypto.randomUUID();
@@ -55,12 +55,19 @@ function importanceBadge(importance: string, t: (key: string) => string) {
 
 export default function ChecklistPage() {
   const { t } = useTranslation();
-  const [sessionId] = useState(getSessionId);
+  // Initialize empty for SSR, set real ID after hydration
+  const [sessionId, setSessionId] = useState("");
   const [newItemText, setNewItemText] = useState("");
   const [showCompleted, setShowCompleted] = useState(true);
+  
+  // Load sessionId after hydration to avoid SSR mismatch
+  useEffect(() => {
+    setSessionId(getOrCreateSessionId());
+  }, []);
 
   const { data: rawChecklistItems, isLoading: isLoadingChecklist } = useQuery<UserChecklistItem[]>({
     queryKey: ["/api/checklist", sessionId],
+    enabled: !!sessionId, // Wait until sessionId is set after hydration
   });
 
   const { data: milestones, isLoading: isLoadingMilestones } = useQuery<TimelineMilestone[]>({

@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
+import { SEO } from "@/components/seo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -153,6 +154,11 @@ export default function ChecklistPage() {
 
   return (
     <div className="container mx-auto p-6 max-w-4xl">
+      <SEO 
+        title={t("checklist.title")} 
+        description={t("checklist.subtitle")}
+        path="/checklist"
+      />
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <ClipboardList className="h-8 w-8 text-primary" />

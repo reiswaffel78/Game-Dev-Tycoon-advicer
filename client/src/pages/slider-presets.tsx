@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
+import { SEO } from "@/components/seo";
 import { translateGenre } from "@/lib/translate-data";
 import { SlidersHorizontal, Search, Info, Zap, Cpu, Sparkles } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -153,6 +154,11 @@ export default function SliderPresets() {
 
   return (
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
+      <SEO 
+        title={t("sliders.title")} 
+        description={t("sliders.subtitle")}
+        path="/sliders"
+      />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <SlidersHorizontal className="h-6 w-6 text-primary" />

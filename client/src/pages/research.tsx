@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
+import { SEO } from "@/components/seo";
 import { FlaskConical, Search, Lightbulb, Calendar, Coins, Target, Link2, Palette, Volume2, Gamepad2, Bot, Cpu } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -136,6 +137,11 @@ export default function Research() {
 
   return (
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
+      <SEO 
+        title={t("research.title")} 
+        description={t("research.subtitle")}
+        path="/research"
+      />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <FlaskConical className="h-6 w-6 text-primary" />

@@ -81,10 +81,11 @@ The application models Game Dev Tycoon gameplay data:
 
 ### Server-Side Rendering (SSR)
 - **Production SSR**: Full HTML rendering in production for improved SEO and crawler indexability
-- **Entry Points**: `client/src/entry-client.tsx` (hydration) and `client/src/entry-server.tsx` (SSR render)
+- **Entry Points**: `client/src/main.tsx` (hydration) and `client/src/entry-server.tsx` (SSR render)
 - **Wouter SSR**: Static location hook for correct route rendering on server
-- **Helmet Integration**: react-helmet-async for SSR-compatible meta tags
+- **Helmet Integration**: react-helmet-async for SSR-compatible meta tags (including htmlAttributes, bodyAttributes)
 - **SSR Build**: `script/build.ts` generates SSR bundle (`dist/entry-server.js`)
+- **SSR-Enabled Routes**: All major pages have SEO component (see docs/ssr-seo.md)
 - **Documentation**: See `docs/ssr-seo.md` for detailed implementation guide
 
 ### SEO Implementation

@@ -10,7 +10,7 @@ The application uses **Vite + React SSR** with **wouter** for routing and **reac
 
 ### Entry Points
 
-- `client/src/entry-client.tsx` - Client entry for hydration
+- `client/src/main.tsx` - Client entry for hydration (uses hydrateRoot when SSR content exists)
 - `client/src/entry-server.tsx` - Server entry for SSR rendering
 
 ### Key Files
@@ -83,6 +83,13 @@ The following routes are SSR-enabled with proper meta tags:
 - `/planner`
 - `/timeline`
 - `/privacy`
+- `/recommend/topic` (Topic Recommender)
+- `/recommend/genre` (Genre Recommender)
+- `/recommend/platform` (Platform Recommender)
+- `/sliders` (Slider Presets)
+- `/checklist` (Game Progress Checklist)
+- `/staff` (Staff Guide)
+- `/research` (Research Guide)
 
 ## Build Commands
 
@@ -128,7 +135,7 @@ For `/faq`, you should see:
 
 ## Hydration
 
-The client entry (`entry-client.tsx`) uses `hydrateRoot` when SSR content is present:
+The main entry (`main.tsx`) uses `hydrateRoot` when SSR content is present:
 
 ```tsx
 if (container.hasChildNodes()) {

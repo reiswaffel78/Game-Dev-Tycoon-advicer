@@ -1,0 +1,133 @@
+Gut. Mit **Express 5.x** + **wouter** ist SSR absolut machbar – aber du musst dem Agenten *explizit* sagen, wie wouter im SSR-Modus geroutet wird, sonst baut er dir unbewusst React-Router-SSR oder halbgares Rendering.
+
+Hier ist ein **repo-spezifischer Prompt**, der zu Express 5 + wouter passt und die typischen Fehltritte verhindert.
+
+---
+
+## Prompt für den Coding-Agent (Express 5 + wouter, sauber & zukunftsfest)
+
+Du bist Coding-Agent im Repo `/workspace/Game-Dev-Tycoon-advicer`.
+
+### Ziel
+
+Die Website muss für Suchmaschinen und KI-Crawler **voll indexierbar** werden. Aktuell ist es eine SPA, Crawler sehen nur `<div id="root">`. Implementiere **SSR mit Vite + React** (ohne Framework-Wechsel), sodass der initiale HTML-Response bereits **sichtbaren Content + route-spezifische Meta-Tags** enthält.
+
+Server ist **Express.js 5.x**. Client-Routing ist **wouter** (nicht react-router).
+
+---
+
+## Muss-Anforderungen (nicht verhandelbar)
+
+### 1) SSR Setup mit Vite + React
+
+* Implementiere SSR in Dev und Prod.
+* SSR muss für Content-Routen aktiv sein (mindestens):
+
+  * `/`, `/faq`, `/handbuch`, `/app-guide`, `/planner`, `/timeline`
+* Der initiale Response muss **vollständiges HTML** enthalten (nicht nur `<div id="root"></div>`), inkl. sichtbarem Text der jeweiligen Seite.
+
+### 2) Wouter SSR Routing korrekt (kritisch)
+
+* SSR muss mit wouter laufen:
+
+  * Beim Server-Rendern muss die aktuelle URL als Location verwendet werden (z. B. via `staticLocation` / `Router` von wouter).
+  * Kein `react-router` einbauen. Kein Router-Wechsel.
+* Der Client nutzt weiterhin das normale wouter Browser-Location-Verhalten.
+
+> Wichtig: SSR muss die gleiche Route rendern wie der Client, ohne Abweichungen (kein „immer Home im SSR“).
+
+### 3) Hydration sauber
+
+* Richte `client/src/entry-client.tsx` ein, das per `hydrateRoot` hydratisiert.
+* Kein Double-Render und keine React-Hydration-Warnungen in der Konsole.
+
+### 4) Route-spezifische Meta-Tags – im initialen HTML (SEO-wirksam)
+
+* Implementiere SSR-kompatible Head-Generierung mit `react-helmet-async`.
+* Wichtig: Meta-Tags müssen **im initialen HTML-Response** enthalten sein (nicht erst nach Client-Hydration).
+* Setze mindestens für diese Seiten:
+
+  * `/`, `/faq`, `/handbuch`, `/app-guide`, `/planner`, `/timeline`
+* Pro Seite mindestens:
+
+  * `<title>`
+  * `<meta name="description">`
+  * `<link rel="canonical">`
+  * `<meta property="og:title">`
+  * `<meta property="og:description">`
+* Implementiere eine zentrale `SEO`-Komponente oder ein Meta-Map-Setup, damit das pflegbar bleibt.
+
+### 5) Build- & Server-Integration (Express 5)
+
+* Lege getrennte Entry-Points an:
+
+  * `client/src/entry-server.tsx` (neu): exportiert `render(url, ctx)` und liefert HTML + Helmet Head
+  * `client/src/entry-client.tsx` (neu): Hydration
+* Server-Seite:
+
+  * Dev: Vite SSR middleware (Vite `ssrLoadModule`, `transformIndexHtml`)
+  * Prod: SSR-Bundle laden (Server-Entry) und `client/dist` Assets statisch ausliefern
+* Bestehende API-Routen dürfen nicht beeinflusst werden (SSR nur für Content GET-Routen).
+
+---
+
+## Akzeptanzkriterien (prüfbar, verbindlich)
+
+Du musst am Ende nachweisen (kurze Anleitung oder Script), dass:
+
+1. **HTML enthält Content**
+
+* `curl -s http://localhost:<PORT>/ | head -n 40` enthält sichtbaren Seiten-Text (nicht nur Root-Div)
+
+2. **Route-spezifische Meta-Tags sind SSR-seitig vorhanden**
+
+* `curl -s http://localhost:<PORT>/faq | grep -i "<title>"` zeigt FAQ-Titel
+* `curl -s http://localhost:<PORT>/faq | grep -i "description"` findet die Description
+* `curl -s http://localhost:<PORT>/faq | grep -i "canonical"` findet canonical
+* `curl -s http://localhost:<PORT>/faq | grep -i "og:title"` findet OG
+
+3. **Hydration ohne Fehler**
+
+* Im Browser: keine React-Hydration-Warnings/Errors in der Console beim Laden der SSR-Routen
+
+---
+
+## Safety Rails / Nicht-Ziele
+
+* Kein Router-Wechsel (wouter bleibt).
+* Keine Breaking Changes: bestehende Pfade und API-Endpunkte funktionieren unverändert.
+* Keine Performance-Regression durch SSR für alles: SSR nur für Content-Routen; Assets bleiben statisch.
+* Kein SSR für Auth/API-Endpunkte oder POST-Routen.
+
+---
+
+## Deliverables
+
+* Codeänderungen inkl. notwendiger Anpassungen an:
+
+  * `vite.config.ts` (SSR build config)
+  * Express Server Setup (Dev+Prod SSR)
+  * neue Entry-Files (client)
+  * SEO-Komponente/Mapping
+* Kurze Doku (README oder `docs/ssr-seo.md`):
+
+  * Dev vs Prod Start
+  * Wie SSR gerendert wird (wouter static location)
+  * Wie Meta-Tags gepflegt werden
+  * Die `curl`-Checks
+
+---
+
+## Typische Fehler, die du vermeiden musst (explizit)
+
+* Helmet nur im Client setzen (SEO bringt dann fast nichts).
+* SSR rendert immer dieselbe Route (z. B. Home), weil Location nicht an wouter übergeben wird.
+* React-Router installieren oder wouter ersetzen.
+
+---
+
+### Warum das jetzt „so ok“ ist
+
+Weil du dem Agenten damit **das Richtige erzwingst**: wouter-SSR korrekt, Head im initialen HTML, und überprüfbare Tests. Das ist das, was „sauber & zukunftsfest“ in der Praxis bedeutet.
+
+Wenn du willst, kann ich dir zusätzlich eine kurze **Soll-Architektur** skizzieren (Dateibaum + Request-Flow), damit du beim Review sofort siehst, ob der Agent Mist gebaut hat.

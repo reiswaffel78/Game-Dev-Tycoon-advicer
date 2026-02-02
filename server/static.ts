@@ -32,10 +32,25 @@ export function serveStatic(app: Express) {
           helmet?.title?.toString() || "",
           helmet?.meta?.toString() || "",
           helmet?.link?.toString() || "",
+          helmet?.script?.toString() || "",
         ].filter(Boolean).join("\n");
         
+        let finalHtml = template;
+        
+        // Inject HTML attributes (e.g., lang)
+        const htmlAttrs = helmet?.htmlAttributes?.toString() || "";
+        if (htmlAttrs) {
+          finalHtml = finalHtml.replace("<html", `<html ${htmlAttrs}`);
+        }
+        
+        // Inject body attributes
+        const bodyAttrs = helmet?.bodyAttributes?.toString() || "";
+        if (bodyAttrs) {
+          finalHtml = finalHtml.replace("<body", `<body ${bodyAttrs}`);
+        }
+        
         // Inject helmet head tags before </head>
-        let finalHtml = template.replace(
+        finalHtml = finalHtml.replace(
           "</head>",
           `${helmetHead}\n</head>`
         );

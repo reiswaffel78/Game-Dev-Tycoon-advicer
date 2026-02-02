@@ -112,6 +112,7 @@ export default function Dashboard() {
       <SEO
         title={t("dashboard.title")}
         description={t("dashboard.subtitle")}
+        path="/"
       />
       <div className="p-6 space-y-8 max-w-7xl mx-auto">
         <div className="space-y-2">

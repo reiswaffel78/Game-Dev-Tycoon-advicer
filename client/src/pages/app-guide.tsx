@@ -65,6 +65,7 @@ export default function AppGuidePage() {
       <SEO 
         title={t("appGuide.title")} 
         description={t("appGuide.subtitle")}
+        path="/app-guide"
       />
       
       <div className="mb-8">

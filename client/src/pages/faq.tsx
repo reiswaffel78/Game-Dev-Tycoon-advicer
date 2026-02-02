@@ -70,6 +70,7 @@ export default function FAQPage() {
       <SEO 
         title={t("faq.title")} 
         description={t("faq.subtitle")}
+        path="/faq"
       />
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">

@@ -11,6 +11,7 @@ export default function PrivacyPage() {
       <SEO 
         title={t("privacy.title")} 
         description={t("privacy.subtitle")}
+        path="/privacy"
       />
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">

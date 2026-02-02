@@ -38,6 +38,22 @@ async function buildAll() {
   console.log("building client...");
   await viteBuild();
 
+  console.log("building SSR entry...");
+  await viteBuild({
+    build: {
+      ssr: "client/src/entry-server.tsx",
+      outDir: "dist",
+      rollupOptions: {
+        output: {
+          entryFileNames: "entry-server.js",
+        },
+      },
+    },
+    ssr: {
+      noExternal: ["wouter", "react-helmet-async"],
+    },
+  });
+
   console.log("building server...");
   const pkg = JSON.parse(await readFile("package.json", "utf-8"));
   const allDeps = [

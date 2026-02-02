@@ -24,6 +24,7 @@ export default function HandbuchPage() {
       <SEO 
         title={t("manual.title")} 
         description={t("manual.subtitle")}
+        path="/handbuch"
       />
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">

@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { SEO } from "@/components/seo";
 import type { TimelineMilestone } from "@shared/schema";
 
 const getEventTypeConfig = (t: TFunction): Record<string, { label: string; color: string; bgColor: string }> => ({
@@ -152,6 +153,11 @@ export default function Timeline() {
 
   return (
     <div className="p-6 space-y-6 max-w-4xl mx-auto">
+      <SEO 
+        title={t("timeline.title")} 
+        description={t("timeline.subtitle")}
+        path="/timeline"
+      />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Clock className="h-6 w-6 text-primary" />

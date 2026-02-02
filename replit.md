@@ -79,13 +79,22 @@ The application models Game Dev Tycoon gameplay data:
 - **Handbuch Page**: Complete game manual with 6 tabbed sections covering all game mechanics
 - **App Guide Page**: Tutorial on how to use the advisor app with workflows and feature explanations
 
+### Server-Side Rendering (SSR)
+- **Production SSR**: Full HTML rendering in production for improved SEO and crawler indexability
+- **Entry Points**: `client/src/entry-client.tsx` (hydration) and `client/src/entry-server.tsx` (SSR render)
+- **Wouter SSR**: Static location hook for correct route rendering on server
+- **Helmet Integration**: react-helmet-async for SSR-compatible meta tags
+- **SSR Build**: `script/build.ts` generates SSR bundle (`dist/entry-server.js`)
+- **Documentation**: See `docs/ssr-seo.md` for detailed implementation guide
+
 ### SEO Implementation
-- **Per-page SEO**: SEO component (`client/src/components/seo.tsx`) dynamically updates page titles and meta descriptions
+- **Per-page SEO**: SEO component (`client/src/components/seo.tsx`) using react-helmet-async for SSR-compatible meta tags
 - **Open Graph/Twitter Cards**: Social media preview tags for better sharing
 - **JSON-LD Structured Data**: Schema.org markup for search engines
 - **Sitemap**: `client/public/sitemap.xml` with all page URLs
 - **Robots.txt**: `client/public/robots.txt` allowing all crawlers
 - **Bilingual Support**: English (primary) and German, using react-i18next
+- **Canonical URLs**: Per-page canonical links with path prop
 
 ### Internationalization (i18n)
 - **Library**: react-i18next with i18next-browser-languagedetector

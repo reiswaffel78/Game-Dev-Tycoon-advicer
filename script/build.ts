@@ -41,8 +41,9 @@ async function buildAll() {
   console.log("building SSR entry...");
   await viteBuild({
     build: {
-      ssr: "client/src/entry-server.tsx",
-      outDir: "dist",
+      ssr: "src/entry-server.tsx",
+      outDir: "../dist",
+      emptyOutDir: false,
       rollupOptions: {
         output: {
           entryFileNames: "entry-server.js",

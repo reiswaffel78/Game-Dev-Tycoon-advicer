@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -46,16 +46,75 @@ import { apiRequest } from "@/lib/queryClient";
 import { SEO } from "@/components/seo";
 import type { Platform, PlannerRecommendation } from "@shared/schema";
 
+const toNumber = (val: unknown, fallback: number) => {
+  if (val === '' || val === undefined || val === null) return fallback;
+  const n = Number(val);
+  return isNaN(n) ? fallback : n;
+};
+
 const saveStateSchema = z.object({
-  year: z.number().min(1).max(50),
+  year: z.preprocess((v) => toNumber(v, 1), z.number().min(1).max(50)),
   month: z.number().min(1).max(12),
   week: z.number().min(1).max(4),
-  cash: z.number().min(0),
-  fans: z.number().min(0),
+  cash: z.preprocess((v) => toNumber(v, 0), z.number().min(0)),
+  fans: z.preprocess((v) => toNumber(v, 0), z.number().min(0)),
   unlockedOnly: z.boolean(),
 });
 
 type SaveStateForm = z.infer<typeof saveStateSchema>;
+
+function NumericInput({ value, onChange, onBlur: parentBlur, fallback, min, ...props }: {
+  value: number;
+  onChange: (v: number | string) => void;
+  onBlur?: () => void;
+  fallback: number;
+  min?: number;
+} & Omit<React.ComponentProps<typeof Input>, 'value' | 'onChange' | 'onBlur' | 'type'>) {
+  const [localValue, setLocalValue] = useState<string>(String(value));
+  const [isFocused, setIsFocused] = useState(false);
+
+  const displayValue = isFocused ? localValue : String(value);
+
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const raw = e.target.value;
+    setLocalValue(raw);
+    if (raw === '') {
+      onChange(raw);
+    } else {
+      const n = parseInt(raw);
+      if (!isNaN(n)) onChange(n);
+    }
+  }, [onChange]);
+
+  const handleFocus = useCallback(() => {
+    setLocalValue(String(value));
+    setIsFocused(true);
+  }, [value]);
+
+  const handleBlur = useCallback(() => {
+    setIsFocused(false);
+    const n = parseInt(localValue);
+    if (isNaN(n) || localValue === '') {
+      onChange(fallback);
+      setLocalValue(String(fallback));
+    } else if (min !== undefined && n < min) {
+      onChange(min);
+      setLocalValue(String(min));
+    }
+    parentBlur?.();
+  }, [localValue, onChange, fallback, min, parentBlur]);
+
+  return (
+    <Input
+      type="number"
+      value={displayValue}
+      onChange={handleChange}
+      onFocus={handleFocus}
+      onBlur={handleBlur}
+      {...props}
+    />
+  );
+}
 
 const getSizeLabels = (t: (key: string) => string) => ({
   small: t("planner.sizes.small"),
@@ -248,12 +307,12 @@ export default function Planner() {
                       <FormItem>
                         <FormLabel className="text-xs">{t("planner.year")}</FormLabel>
                         <FormControl>
-                          <Input
-                            type="number"
-                            {...field}
-                            onChange={(e) =>
-                              field.onChange(parseInt(e.target.value) || 1)
-                            }
+                          <NumericInput
+                            value={field.value}
+                            onChange={field.onChange}
+                            onBlur={field.onBlur}
+                            fallback={1}
+                            min={1}
                             data-testid="input-year"
                           />
                         </FormControl>
@@ -324,12 +383,12 @@ export default function Planner() {
                         {t("planner.cash")}
                       </FormLabel>
                       <FormControl>
-                        <Input
-                          type="number"
-                          {...field}
-                          onChange={(e) =>
-                            field.onChange(parseInt(e.target.value) || 0)
-                          }
+                        <NumericInput
+                          value={field.value}
+                          onChange={field.onChange}
+                          onBlur={field.onBlur}
+                          fallback={0}
+                          min={0}
                           data-testid="input-cash"
                         />
                       </FormControl>
@@ -347,12 +406,12 @@ export default function Planner() {
                         {t("planner.fans")}
                       </FormLabel>
                       <FormControl>
-                        <Input
-                          type="number"
-                          {...field}
-                          onChange={(e) =>
-                            field.onChange(parseInt(e.target.value) || 0)
-                          }
+                        <NumericInput
+                          value={field.value}
+                          onChange={field.onChange}
+                          onBlur={field.onBlur}
+                          fallback={0}
+                          min={0}
                           data-testid="input-fans"
                         />
                       </FormControl>

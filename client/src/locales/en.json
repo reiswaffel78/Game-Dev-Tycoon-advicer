@@ -241,6 +241,12 @@
       "topic": "Topic",
       "genre": "Genre",
       "feature": "Feature"
+    },
+    "rationale": {
+      "release": "Strong {{genre}}/{{topic}} combination with good platform fit (Score: {{score}}).",
+      "unlockTopic": "Unlock {{name}} to expand your game portfolio.",
+      "unlockGenre": "Unlock {{name}} genre for new game opportunities.",
+      "feature": "Improves graphics quality for future AAA titles."
     }
   },
   "research": {

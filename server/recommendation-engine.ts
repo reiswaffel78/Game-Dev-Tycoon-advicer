@@ -502,6 +502,7 @@ export async function generatePlannerRecommendations(
     platform: combo.platform,
     audience: combo.audience,
     size: getSize(i),
+    score: combo.score,
     rationale: `Strong ${combo.genre.name}/${combo.topic.name} combination with good platform fit (Score: ${combo.score > 0 ? "+" : ""}${combo.score}).`,
   }));
 
@@ -518,6 +519,7 @@ export async function generatePlannerRecommendations(
     researchItems.push({
       order: i + 1,
       name: topic.name,
+      entityId: topic.id,
       type: "topic",
       cost: topic.researchCost ?? 1000,
       rationale: `Unlock ${topic.name} to expand your game portfolio.`,
@@ -534,6 +536,7 @@ export async function generatePlannerRecommendations(
     researchItems.push({
       order: researchItems.length + 1,
       name: genre.name,
+      entityId: genre.id,
       type: "genre",
       cost: genre.researchCost ?? 1500,
       rationale: `Unlock ${genre.name} genre for new game opportunities.`,

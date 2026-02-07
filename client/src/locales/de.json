@@ -241,6 +241,12 @@
       "topic": "Thema",
       "genre": "Genre",
       "feature": "Feature"
+    },
+    "rationale": {
+      "release": "Starke {{genre}}/{{topic}}-Kombination mit guter Plattform-Passung (Punktzahl: {{score}}).",
+      "unlockTopic": "Schalte {{name}} frei, um dein Spielportfolio zu erweitern.",
+      "unlockGenre": "Schalte das Genre {{name}} für neue Spielmöglichkeiten frei.",
+      "feature": "Verbessert die Grafikqualität für zukünftige AAA-Titel."
     }
   },
   "research": {

@@ -294,11 +294,13 @@ export interface PlannerRecommendation {
     platform: Platform;
     audience: Audience;
     size: 'small' | 'medium' | 'large' | 'aaa';
+    score?: number;
     rationale: string;
   }[];
   researchItems: {
     order: number;
     name: string;
+    entityId?: string;
     type: 'topic' | 'genre' | 'feature';
     cost: number;
     rationale: string;

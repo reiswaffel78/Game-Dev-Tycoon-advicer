@@ -137,7 +137,7 @@ function ReleaseCard({
 }: {
   release: PlannerRecommendation["releases"][0];
   index: number;
-  t: (key: string) => string;
+  t: (key: string, opts?: Record<string, unknown>) => string;
 }) {
   const sizeLabels = getSizeLabels(t);
   
@@ -168,7 +168,13 @@ function ReleaseCard({
                 {sizeLabels[release.size]}
               </Badge>
             </div>
-            <p className="text-sm text-muted-foreground">{release.rationale}</p>
+            <p className="text-sm text-muted-foreground">
+              {t("planner.rationale.release", {
+                genre: genreName,
+                topic: topicName,
+                score: `${(release.score ?? 0) > 0 ? "+" : ""}${release.score ?? 0}`,
+              })}
+            </p>
           </div>
         </div>
       </CardContent>
@@ -183,7 +189,7 @@ function ResearchCard({
 }: {
   item: PlannerRecommendation["researchItems"][0];
   index: number;
-  t: (key: string) => string;
+  t: (key: string, opts?: Record<string, unknown>) => string;
 }) {
   const typeColors = {
     topic: "bg-violet-500",
@@ -200,6 +206,12 @@ function ResearchCard({
     return labels[type] || type;
   };
 
+  const translatedName = item.type === "topic" && item.entityId
+    ? translateTopic(t as any, item.entityId, item.name)
+    : item.type === "genre" && item.entityId
+    ? translateGenre(t as any, item.entityId, item.name)
+    : item.name;
+
   return (
     <Card>
       <CardContent className="p-4">
@@ -209,7 +221,7 @@ function ResearchCard({
           </div>
           <div className="flex-1 min-w-0 space-y-2">
             <div className="flex items-center gap-2">
-              <span className="font-semibold">{item.name}</span>
+              <span className="font-semibold">{translatedName}</span>
               <Badge
                 className={`${typeColors[item.type]} text-white border-0 text-xs`}
               >
@@ -222,7 +234,13 @@ function ResearchCard({
                 {item.cost.toLocaleString()} {t("common.rp")}
               </span>
             </div>
-            <p className="text-sm text-muted-foreground">{item.rationale}</p>
+            <p className="text-sm text-muted-foreground">
+              {item.type === "topic"
+                ? t("planner.rationale.unlockTopic", { name: translatedName })
+                : item.type === "genre"
+                ? t("planner.rationale.unlockGenre", { name: translatedName })
+                : t("planner.rationale.feature")}
+            </p>
           </div>
         </div>
       </CardContent>

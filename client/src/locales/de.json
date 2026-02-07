@@ -163,7 +163,39 @@
     "ai": "KI",
     "worldDesign": "Welt-Design",
     "graphics": "Grafik",
-    "sound": "Sound"
+    "sound": "Sound",
+    "explanations": {
+      "action": {
+        "stage1": "In der frühen Entwicklungsphase auf Engine und Gameplay konzentrieren. Story/Quests minimal halten.",
+        "stage2": "In der mittleren Entwicklungsphase auf Level-Design und KI konzentrieren. Dialoge minimal halten.",
+        "stage3": "In der letzten Entwicklungsphase auf Grafik und Sound konzentrieren. Welt-Design minimal halten."
+      },
+      "adventure": {
+        "stage1": "In der frühen Entwicklungsphase auf Story/Quests konzentrieren. Engine und Gameplay minimal halten.",
+        "stage2": "In der mittleren Entwicklungsphase auf Dialoge konzentrieren. Level-Design und KI minimal halten.",
+        "stage3": "In der letzten Entwicklungsphase auf Welt-Design und Grafik konzentrieren. Sound minimal halten."
+      },
+      "casual": {
+        "stage1": "In der frühen Entwicklungsphase auf Gameplay konzentrieren. Engine und Story/Quests minimal halten.",
+        "stage2": "In der mittleren Entwicklungsphase auf Level-Design konzentrieren. Dialoge und KI minimal halten.",
+        "stage3": "In der letzten Entwicklungsphase auf Grafik und Sound konzentrieren. Welt-Design minimal halten."
+      },
+      "rpg": {
+        "stage1": "In der frühen Entwicklungsphase auf Gameplay und Story/Quests konzentrieren. Engine minimal halten.",
+        "stage2": "In der mittleren Entwicklungsphase auf Dialoge und Level-Design konzentrieren. KI minimal halten.",
+        "stage3": "In der letzten Entwicklungsphase auf Welt-Design und Grafik konzentrieren. Sound minimal halten."
+      },
+      "simulation": {
+        "stage1": "In der frühen Entwicklungsphase auf Engine und Gameplay konzentrieren. Story/Quests minimal halten.",
+        "stage2": "In der mittleren Entwicklungsphase auf Level-Design und KI konzentrieren. Dialoge minimal halten.",
+        "stage3": "In der letzten Entwicklungsphase auf Grafik und Sound konzentrieren. Welt-Design minimal halten."
+      },
+      "strategy": {
+        "stage1": "In der frühen Entwicklungsphase auf Engine und Gameplay konzentrieren. Story/Quests minimal halten.",
+        "stage2": "In der mittleren Entwicklungsphase auf Level-Design und KI konzentrieren. Dialoge minimal halten.",
+        "stage3": "In der letzten Entwicklungsphase auf Welt-Design und Sound konzentrieren. Grafik minimal halten."
+      }
+    }
   },
   "planner": {
     "title": "Spiel-Planer",

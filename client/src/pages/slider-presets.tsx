@@ -104,7 +104,7 @@ function SliderBar({
   );
 }
 
-function PresetCard({ preset, t }: { preset: SliderPreset; t: (key: string, opts?: Record<string, unknown>) => string }) {
+function PresetCard({ preset, genreId, t }: { preset: SliderPreset; genreId: string; t: (key: string, opts?: Record<string, unknown>) => string }) {
   const StageIcon = stageIcons[preset.stage as keyof typeof stageIcons] || Zap;
 
   return (
@@ -138,7 +138,7 @@ function PresetCard({ preset, t }: { preset: SliderPreset; t: (key: string, opts
           <div className="flex items-start gap-2">
             <Info className="h-4 w-4 text-muted-foreground shrink-0 mt-0.5" />
             <p className="text-sm text-muted-foreground">
-              {preset.explanation}
+              {t(`sliders.explanations.${genreId}.stage${preset.stage}`, { defaultValue: preset.explanation })}
             </p>
           </div>
         </div>
@@ -267,7 +267,7 @@ export default function SliderPresets() {
                 <TabsContent value="all" className="mt-4">
                   <div className="grid gap-4 md:grid-cols-3">
                     {presets.map((preset) => (
-                      <PresetCard key={preset.stage} preset={preset} t={t} />
+                      <PresetCard key={preset.stage} preset={preset} genreId={selectedGenre.id} t={t} />
                     ))}
                   </div>
                 </TabsContent>
@@ -277,6 +277,7 @@ export default function SliderPresets() {
                       <div className="max-w-md">
                         <PresetCard
                           preset={presets.find((p) => p.stage === stage)!}
+                          genreId={selectedGenre.id}
                           t={t}
                         />
                       </div>

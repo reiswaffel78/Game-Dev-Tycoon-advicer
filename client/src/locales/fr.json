@@ -163,7 +163,39 @@
     "ai": "IA",
     "worldDesign": "Design du monde",
     "graphics": "Graphismes",
-    "sound": "Son"
+    "sound": "Son",
+    "explanations": {
+      "action": {
+        "stage1": "En début de développement, concentrez-vous sur le Moteur et le Gameplay. Gardez Histoire/Quêtes au minimum.",
+        "stage2": "En milieu de développement, concentrez-vous sur le Level Design et l'IA. Gardez les Dialogues au minimum.",
+        "stage3": "En fin de développement, concentrez-vous sur les Graphismes et le Son. Gardez le Design du monde au minimum."
+      },
+      "adventure": {
+        "stage1": "En début de développement, concentrez-vous sur Histoire/Quêtes. Gardez le Moteur et le Gameplay au minimum.",
+        "stage2": "En milieu de développement, concentrez-vous sur les Dialogues. Gardez le Level Design et l'IA au minimum.",
+        "stage3": "En fin de développement, concentrez-vous sur le Design du monde et les Graphismes. Gardez le Son au minimum."
+      },
+      "casual": {
+        "stage1": "En début de développement, concentrez-vous sur le Gameplay. Gardez le Moteur et Histoire/Quêtes au minimum.",
+        "stage2": "En milieu de développement, concentrez-vous sur le Level Design. Gardez les Dialogues et l'IA au minimum.",
+        "stage3": "En fin de développement, concentrez-vous sur les Graphismes et le Son. Gardez le Design du monde au minimum."
+      },
+      "rpg": {
+        "stage1": "En début de développement, concentrez-vous sur le Gameplay et Histoire/Quêtes. Gardez le Moteur au minimum.",
+        "stage2": "En milieu de développement, concentrez-vous sur les Dialogues et le Level Design. Gardez l'IA au minimum.",
+        "stage3": "En fin de développement, concentrez-vous sur le Design du monde et les Graphismes. Gardez le Son au minimum."
+      },
+      "simulation": {
+        "stage1": "En début de développement, concentrez-vous sur le Moteur et le Gameplay. Gardez Histoire/Quêtes au minimum.",
+        "stage2": "En milieu de développement, concentrez-vous sur le Level Design et l'IA. Gardez les Dialogues au minimum.",
+        "stage3": "En fin de développement, concentrez-vous sur les Graphismes et le Son. Gardez le Design du monde au minimum."
+      },
+      "strategy": {
+        "stage1": "En début de développement, concentrez-vous sur le Moteur et le Gameplay. Gardez Histoire/Quêtes au minimum.",
+        "stage2": "En milieu de développement, concentrez-vous sur le Level Design et l'IA. Gardez les Dialogues au minimum.",
+        "stage3": "En fin de développement, concentrez-vous sur le Design du monde et le Son. Gardez les Graphismes au minimum."
+      }
+    }
   },
   "planner": {
     "title": "Planificateur de jeu",

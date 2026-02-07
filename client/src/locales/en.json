@@ -163,7 +163,39 @@
     "ai": "AI",
     "worldDesign": "World Design",
     "graphics": "Graphics",
-    "sound": "Sound"
+    "sound": "Sound",
+    "explanations": {
+      "action": {
+        "stage1": "In the early development stage, focus on Engine and Gameplay. Keep Story/Quests minimal.",
+        "stage2": "In the middle development stage, focus on Level Design and AI. Keep Dialogues minimal.",
+        "stage3": "In the final development stage, focus on Graphics and Sound. Keep World Design minimal."
+      },
+      "adventure": {
+        "stage1": "In the early development stage, focus on Story/Quests. Keep Engine and Gameplay minimal.",
+        "stage2": "In the middle development stage, focus on Dialogues. Keep Level Design and AI minimal.",
+        "stage3": "In the final development stage, focus on World Design and Graphics. Keep Sound minimal."
+      },
+      "casual": {
+        "stage1": "In the early development stage, focus on Gameplay. Keep Engine and Story/Quests minimal.",
+        "stage2": "In the middle development stage, focus on Level Design. Keep Dialogues and AI minimal.",
+        "stage3": "In the final development stage, focus on Graphics and Sound. Keep World Design minimal."
+      },
+      "rpg": {
+        "stage1": "In the early development stage, focus on Gameplay and Story/Quests. Keep Engine minimal.",
+        "stage2": "In the middle development stage, focus on Dialogues and Level Design. Keep AI minimal.",
+        "stage3": "In the final development stage, focus on World Design and Graphics. Keep Sound minimal."
+      },
+      "simulation": {
+        "stage1": "In the early development stage, focus on Engine and Gameplay. Keep Story/Quests minimal.",
+        "stage2": "In the middle development stage, focus on Level Design and AI. Keep Dialogues minimal.",
+        "stage3": "In the final development stage, focus on Graphics and Sound. Keep World Design minimal."
+      },
+      "strategy": {
+        "stage1": "In the early development stage, focus on Engine and Gameplay. Keep Story/Quests minimal.",
+        "stage2": "In the middle development stage, focus on Level Design and AI. Keep Dialogues minimal.",
+        "stage3": "In the final development stage, focus on World Design and Sound. Keep Graphics minimal."
+      }
+    }
   },
   "planner": {
     "title": "Game Planner",

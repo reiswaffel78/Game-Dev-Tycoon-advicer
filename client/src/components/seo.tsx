@@ -1,5 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import {
+  SUPPORTED_LOCALES,
+  buildLocalizedPath,
+  type Locale,
+  DEFAULT_LOCALE,
+  isLocale,
+} from "@/lib/locale";
 
 interface SEOProps {
   title: string;
@@ -9,11 +16,20 @@ interface SEOProps {
 
 const BASE_URL = "https://game-dev-tycoon-advicer.com";
 
+const OG_LOCALES: Record<string, string> = {
+  en: "en_US",
+  de: "de_DE",
+  fr: "fr_FR",
+};
+
 export function SEO({ title, description, path = "/" }: SEOProps) {
   const { i18n } = useTranslation();
   const fullTitle = `${title} | Game Dev Tycoon Advisor`;
-  const canonicalUrl = `${BASE_URL}${path}`;
-  const currentLang = i18n.language || "en";
+  const currentLang: Locale = isLocale(i18n.language)
+    ? i18n.language
+    : DEFAULT_LOCALE;
+  const canonicalPath = buildLocalizedPath(path, currentLang);
+  const canonicalUrl = `${BASE_URL}${canonicalPath}`;
 
   return (
     <Helmet>
@@ -21,26 +37,38 @@ export function SEO({ title, description, path = "/" }: SEOProps) {
       <title>{fullTitle}</title>
       {description && <meta name="description" content={description} />}
       <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph */}
+
+      {SUPPORTED_LOCALES.map((locale) => (
+        <link
+          key={locale}
+          rel="alternate"
+          hrefLang={locale}
+          href={`${BASE_URL}${buildLocalizedPath(path, locale)}`}
+        />
+      ))}
+      <link
+        rel="alternate"
+        hrefLang="x-default"
+        href={`${BASE_URL}${path}`}
+      />
+
       <meta property="og:title" content={fullTitle} />
       {description && <meta property="og:description" content={description} />}
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Game Dev Tycoon Advisor" />
       <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
-      <meta property="og:locale" content={currentLang === "de" ? "de_DE" : "en_US"} />
-      
-      {/* Twitter */}
+      <meta
+        property="og:locale"
+        content={OG_LOCALES[currentLang] || "en_US"}
+      />
+
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
-      {description && <meta name="twitter:description" content={description} />}
+      {description && (
+        <meta name="twitter:description" content={description} />
+      )}
       <meta name="twitter:image" content={`${BASE_URL}/og-image.png`} />
-      
-      {/* Hreflang */}
-      <link rel="alternate" hrefLang="en" href={canonicalUrl} />
-      <link rel="alternate" hrefLang="de" href={canonicalUrl} />
-      <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
     </Helmet>
   );
 }

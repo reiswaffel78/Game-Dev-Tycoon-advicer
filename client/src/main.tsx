@@ -1,22 +1,27 @@
 import { createRoot, hydrateRoot } from "react-dom/client";
+import { Router } from "wouter";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./App";
+import { useLocaleLocation } from "@/lib/locale";
 import "./index.css";
 
 const container = document.getElementById("root")!;
 
-// Check if SSR content exists (for hydration) or use createRoot (for dev)
 if (container.hasChildNodes()) {
   hydrateRoot(
     container,
     <HelmetProvider>
-      <App />
+      <Router hook={useLocaleLocation}>
+        <App />
+      </Router>
     </HelmetProvider>
   );
 } else {
   createRoot(container).render(
     <HelmetProvider>
-      <App />
+      <Router hook={useLocaleLocation}>
+        <App />
+      </Router>
     </HelmetProvider>
   );
 }

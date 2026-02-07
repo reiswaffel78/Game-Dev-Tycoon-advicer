@@ -27,7 +27,7 @@ import AppGuide from "@/pages/app-guide";
 import Privacy from "@/pages/privacy";
 import { Footer } from "@/components/footer";
 
-function Router() {
+function AppRoutes() {
   return (
     <Switch>
       <Route path="/" component={Dashboard} />
@@ -73,7 +73,7 @@ function App() {
                 </header>
                 <main className="flex-1 overflow-auto flex flex-col">
                   <div className="flex-1">
-                    <Router />
+                    <AppRoutes />
                   </div>
                   <Footer />
                 </main>

@@ -83,6 +83,36 @@ app.use((req, res, next) => {
     return res.status(status).json({ message });
   });
 
+  const NON_DEFAULT_LOCALES = ["de", "fr"];
+  app.use((req: Request, res: Response, next: NextFunction) => {
+    const path = req.path;
+    if (path.startsWith("/api") || /\.\w+$/.test(path)) return next();
+
+    const normalized =
+      path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
+    const segments = normalized.split("/").filter(Boolean);
+    const last = segments[segments.length - 1];
+
+    if (last === "en") {
+      const base = "/" + segments.slice(0, -1).join("/");
+      return res.redirect(301, base || "/");
+    }
+
+    if (NON_DEFAULT_LOCALES.includes(last) && !path.endsWith("/")) {
+      return res.redirect(301, path + "/");
+    }
+
+    if (
+      path !== "/" &&
+      path.endsWith("/") &&
+      !NON_DEFAULT_LOCALES.includes(last)
+    ) {
+      return res.redirect(301, path.slice(0, -1));
+    }
+
+    next();
+  });
+
   // importantly only setup vite in development and after
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes

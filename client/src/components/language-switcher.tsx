@@ -7,21 +7,45 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Languages } from "lucide-react";
+import {
+  extractLocaleFromPath,
+  buildLocalizedPath,
+  type Locale,
+} from "@/lib/locale";
 
 export function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
-  const languages = [
+  const languages: { code: Locale; name: string; flag: string }[] = [
     { code: "en", name: "English", flag: "EN" },
     { code: "de", name: "Deutsch", flag: "DE" },
+    { code: "fr", name: "Français", flag: "FR" },
   ];
 
-  const currentLang = languages.find((l) => l.code === i18n.language) || languages[0];
+  const switchLocale = (newLocale: Locale) => {
+    if (typeof window === "undefined") return;
+
+    const { basePath } = extractLocaleFromPath(window.location.pathname);
+    const newPath = buildLocalizedPath(basePath, newLocale);
+
+    try {
+      localStorage.setItem("i18nextLng", newLocale);
+      document.cookie = `locale=${newLocale};path=/;max-age=31536000;SameSite=Lax`;
+    } catch {}
+
+    i18n.changeLanguage(newLocale);
+    window.history.pushState(null, "", newPath);
+    window.dispatchEvent(new PopStateEvent("popstate"));
+  };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" data-testid="button-language-switcher">
+        <Button
+          variant="ghost"
+          size="icon"
+          data-testid="button-language-switcher"
+        >
           <Languages className="h-5 w-5" />
           <span className="sr-only">Switch language</span>
         </Button>
@@ -30,7 +54,7 @@ export function LanguageSwitcher() {
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
-            onClick={() => i18n.changeLanguage(lang.code)}
+            onClick={() => switchLocale(lang.code)}
             className={i18n.language === lang.code ? "bg-accent/20" : ""}
             data-testid={`menu-item-lang-${lang.code}`}
           >

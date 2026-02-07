@@ -3,32 +3,29 @@ import { initReactI18next } from "react-i18next";
 
 import en from "../locales/en.json";
 import de from "../locales/de.json";
+import fr from "../locales/fr.json";
 
-// Initialize i18n with English as default for SSR consistency
-// Language detection happens after hydration via changeLanguage()
 i18n.use(initReactI18next).init({
   resources: {
     en: { translation: en },
     de: { translation: de },
+    fr: { translation: fr },
   },
-  lng: "en", // Always start with English for SSR consistency
+  lng: "en",
   fallbackLng: "en",
   interpolation: {
     escapeValue: false,
   },
 });
 
-// Detect and apply user's preferred language after hydration (client-side only)
 if (typeof window !== "undefined") {
-  const stored = localStorage.getItem("i18nextLng");
-  const browserLang = navigator.language?.split("-")[0];
-  const detectedLang = stored || (browserLang === "de" ? "de" : "en");
-  
-  if (detectedLang !== "en") {
-    // Use setTimeout to defer language change until after hydration
-    setTimeout(() => {
-      i18n.changeLanguage(detectedLang);
-    }, 0);
+  const path = window.location.pathname;
+  const normalized =
+    path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path;
+  const lastSegment = normalized.split("/").filter(Boolean).pop();
+  const nonDefaultLocales = ["de", "fr"];
+  if (lastSegment && nonDefaultLocales.includes(lastSegment)) {
+    i18n.changeLanguage(lastSegment);
   }
 }
 

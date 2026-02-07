@@ -2,11 +2,8 @@ import { renderToString } from "react-dom/server";
 import { Router } from "wouter";
 import { HelmetProvider, HelmetServerState } from "react-helmet-async";
 import App from "./App";
-
-// Static location hook for wouter SSR
-const staticLocationHook = (url: string): [string, (to: string) => void] => {
-  return [url, () => {}];
-};
+import { extractLocaleFromPath } from "@/lib/locale";
+import i18n from "@/lib/i18n";
 
 interface RenderResult {
   html: string;
@@ -14,11 +11,19 @@ interface RenderResult {
 }
 
 export function render(url: string): RenderResult {
+  const { locale, basePath } = extractLocaleFromPath(url);
+
+  i18n.changeLanguage(locale);
+
+  const staticHook = (): [string, (to: string) => void] => {
+    return [basePath, () => {}];
+  };
+
   const helmetContext: { helmet?: HelmetServerState } = {};
 
   const html = renderToString(
     <HelmetProvider context={helmetContext}>
-      <Router hook={() => staticLocationHook(url)}>
+      <Router hook={staticHook}>
         <App />
       </Router>
     </HelmetProvider>

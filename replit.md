@@ -17,7 +17,8 @@ Preferred communication style: Simple, everyday language.
 - **UI Components**: shadcn/ui component library built on Radix UI primitives
 - **Styling**: Tailwind CSS with CSS variables for theming (CRT-retro green/amber color scheme)
 - **Form Handling**: React Hook Form with Zod validation via @hookform/resolvers
-- **Internationalization**: react-i18next with English (primary) and German language support
+- **Internationalization**: react-i18next with English (primary), German, and French language support
+- **i18n Routing**: Language-aware URLs with custom wouter hook. English at base paths (/sliders), non-default locales with suffix and trailing slash (/sliders/de/, /sliders/fr/). Express middleware handles 301 redirects for canonical URL enforcement.
 
 ### Backend Architecture
 - **Framework**: Express.js 5.x running on Node.js

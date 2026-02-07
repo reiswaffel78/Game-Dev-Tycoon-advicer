@@ -141,7 +141,12 @@
     "sliderPresetsFor": "Slider-Voreinstellungen für \"{{name}}\"",
     "resultsCount": "{{count}} Ergebnisse",
     "allStages": "Alle Phasen",
-    "stage": "Phase {{number}}"
+    "stage": "Phase {{number}}",
+    "searchTopics": "Topics suchen...",
+    "searchGenres": "Genres suchen...",
+    "searchPlatforms": "Plattformen suchen...",
+    "confidenceTooltip": "Konfidenzniveau basierend auf Quellenübereinstimmung",
+    "score": "Punktzahl"
   },
   "sliders": {
     "title": "Slider-Voreinstellungen",

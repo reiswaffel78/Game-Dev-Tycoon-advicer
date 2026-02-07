@@ -141,7 +141,12 @@
     "sliderPresetsFor": "Préréglages des curseurs pour \"{{name}}\"",
     "resultsCount": "{{count}} résultats",
     "allStages": "Toutes les phases",
-    "stage": "Phase {{number}}"
+    "stage": "Phase {{number}}",
+    "searchTopics": "Rechercher des thèmes...",
+    "searchGenres": "Rechercher des genres...",
+    "searchPlatforms": "Rechercher des plateformes...",
+    "confidenceTooltip": "Niveau de confiance basé sur l'accord des sources",
+    "score": "Score"
   },
   "sliders": {
     "title": "Préréglages des curseurs",

@@ -141,7 +141,12 @@
     "sliderPresetsFor": "Slider Presets for \"{{name}}\"",
     "resultsCount": "{{count}} results",
     "allStages": "All Stages",
-    "stage": "Stage {{number}}"
+    "stage": "Stage {{number}}",
+    "searchTopics": "Search topics...",
+    "searchGenres": "Search genres...",
+    "searchPlatforms": "Search platforms...",
+    "confidenceTooltip": "Confidence level based on source agreement",
+    "score": "Score"
   },
   "sliders": {
     "title": "Slider Presets",

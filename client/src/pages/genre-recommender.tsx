@@ -108,7 +108,7 @@ function RecommendationCard({
             </div>
             <p className="text-sm text-muted-foreground">
               {result.platform.company && `${result.platform.company} • `}
-              Score: <span className="font-semibold text-foreground">{result.scores.total.toFixed(2)}</span>
+              {t("recommender.score")}: <span className="font-semibold text-foreground">{result.scores.total.toFixed(2)}</span>
             </p>
           </div>
           <div className="text-right">
@@ -116,7 +116,7 @@ function RecommendationCard({
               {result.scores.total > 0 ? "+" : ""}
               {result.scores.total.toFixed(1)}
             </div>
-            <p className="text-xs text-muted-foreground">Total Score</p>
+            <p className="text-xs text-muted-foreground">{t("recommender.totalScore")}</p>
           </div>
         </div>
       </CardHeader>
@@ -124,19 +124,19 @@ function RecommendationCard({
         <div className="grid gap-3 sm:grid-cols-2">
           <FitIndicator
             value={result.scores.topicGenreFit}
-            label="Topic + Genre Fit"
+            label={t("recommender.topicGenreFit")}
           />
           <FitIndicator
             value={result.scores.platformGenreFit}
-            label="Platform + Genre Fit"
+            label={t("recommender.platformGenreFit")}
           />
           <FitIndicator
             value={result.scores.platformAudienceFit}
-            label="Platform + Audience Fit"
+            label={t("recommender.platformAudienceFit")}
           />
           <div className="space-y-1.5">
             <div className="flex items-center justify-between text-sm">
-              <span className="text-muted-foreground">Cost Penalty</span>
+              <span className="text-muted-foreground">{t("recommender.costPenalty")}</span>
               <span className={`font-mono font-medium ${result.scores.costPenalty < 0 ? "text-destructive" : "text-accent"}`}>
                 {result.scores.costPenalty < 0 ? "" : "+"}{result.scores.costPenalty.toFixed(1)}
               </span>
@@ -157,7 +157,7 @@ function RecommendationCard({
             >
               <span className="flex items-center gap-2">
                 <ExternalLink className="h-4 w-4" />
-                View Citations ({result.citations.length})
+                {t("recommender.viewCitations")} ({result.citations.length})
               </span>
               <ChevronDown
                 className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
@@ -181,7 +181,7 @@ function RecommendationCard({
                         </Badge>
                       </TooltipTrigger>
                       <TooltipContent>
-                        Confidence level based on source agreement
+                        {t("recommender.confidenceTooltip")}
                       </TooltipContent>
                     </Tooltip>
                   </div>
@@ -241,7 +241,7 @@ export default function GenreRecommender() {
             <div className="relative">
               <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <Input
-                placeholder="Search genres..."
+                placeholder={t("recommender.searchGenres")}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 className="pl-9"

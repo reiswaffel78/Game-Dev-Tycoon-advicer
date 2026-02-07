@@ -1,7 +1,27 @@
 import { useSyncExternalStore, useCallback, useEffect } from "react";
 import i18n from "./i18n";
 
-export const SUPPORTED_LOCALES = ["en", "de", "fr"] as const;
+export const SUPPORTED_LOCALES = [
+  "en",
+  "de",
+  "fr",
+  "it",
+  "es",
+  "ko",
+  "ja",
+  "zh",
+  "hi",
+  "tr",
+  "pt",
+  "ru",
+  "cs",
+  "nl",
+  "ar",
+  "el",
+  "hu",
+  "pl",
+  "sv",
+] as const;
 export const DEFAULT_LOCALE = "en";
 export type Locale = (typeof SUPPORTED_LOCALES)[number];
 
@@ -25,10 +45,7 @@ export function extractLocaleFromPath(path: string): {
   return { locale: DEFAULT_LOCALE, basePath: noTrailing || "/" };
 }
 
-export function buildLocalizedPath(
-  basePath: string,
-  locale: Locale,
-): string {
+export function buildLocalizedPath(basePath: string, locale: Locale): string {
   if (locale === DEFAULT_LOCALE) return basePath;
   return `${basePath === "/" ? "" : basePath}/${locale}/`;
 }

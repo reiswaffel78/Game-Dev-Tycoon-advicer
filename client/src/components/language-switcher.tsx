@@ -20,6 +20,22 @@ export function LanguageSwitcher() {
     { code: "en", name: "English", flag: "EN" },
     { code: "de", name: "Deutsch", flag: "DE" },
     { code: "fr", name: "Français", flag: "FR" },
+    { code: "it", name: "Italiano", flag: "IT" },
+    { code: "es", name: "Español", flag: "ES" },
+    { code: "ko", name: "한국어", flag: "KO" },
+    { code: "ja", name: "日本語", flag: "JA" },
+    { code: "zh", name: "中文", flag: "ZH" },
+    { code: "hi", name: "हिन्दी", flag: "HI" },
+    { code: "tr", name: "Türkçe", flag: "TR" },
+    { code: "pt", name: "Português", flag: "PT" },
+    { code: "ru", name: "Русский", flag: "RU" },
+    { code: "cs", name: "Čeština", flag: "CS" },
+    { code: "nl", name: "Nederlands", flag: "NL" },
+    { code: "ar", name: "العربية", flag: "AR" },
+    { code: "el", name: "Ελληνικά", flag: "EL" },
+    { code: "hu", name: "Magyar", flag: "HU" },
+    { code: "pl", name: "Polski", flag: "PL" },
+    { code: "sv", name: "Svenska", flag: "SV" },
   ];
 
   const switchLocale = (newLocale: Locale) => {

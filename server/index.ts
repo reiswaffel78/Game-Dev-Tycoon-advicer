@@ -83,7 +83,7 @@ app.use((req, res, next) => {
     return res.status(status).json({ message });
   });
 
-  const NON_DEFAULT_LOCALES = ["de", "fr"];
+  const NON_DEFAULT_LOCALES = ["de", "fr", "it", "es", "ko", "ja", "zh", "hi", "tr", "pt", "ru", "cs", "nl", "ar", "el", "hu", "pl", "sv"];
   app.use((req: Request, res: Response, next: NextFunction) => {
     const path = req.path;
     if (path.startsWith("/api") || /\.\w+$/.test(path)) return next();

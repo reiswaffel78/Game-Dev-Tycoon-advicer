@@ -137,8 +137,8 @@
     "filterByYear": "Filtrovat podle roku",
     "unlockYear": "Rok odemčení",
     "researchCost": "Cena výzkumu",
-    "topRecommendationsFor": "Nejlepší doporučení pro „{{name}}"",
-    "sliderPresetsFor": "Předvolby sliderů pro „{{name}}"",
+    "topRecommendationsFor": "Nejlepší doporučení pro '{{name}}'",
+    "sliderPresetsFor": "Předvolby sliderů pro '{{name}}'",
     "resultsCount": "{{count}} výsledků",
     "allStages": "Všechny fáze",
     "stage": "Fáze {{number}}",
@@ -628,11 +628,11 @@
     "proTip4": "Máš otázky? Nejdřív FAQ, pak příručka pro podrobnosti.",
     "workflow": {
       "planGame": "Naplánuj novou hru",
-      "planGameSteps": ["Jdi na „Doporučení žánrů" a vyber téma", "Zapiš si nejlepší žánr pro tvé téma", "Přepni na „Doporučení platforem" a vyber žánr + publikum", "Otevři „Předvolby sliderů" a zkopíruj hodnoty", "Použij „Plánovač her" ke složení všeho dohromady"],
+      "planGameSteps": ["Jdi na 'Doporučení žánrů' a vyber téma", "Zapiš si nejlepší žánr pro tvé téma", "Přepni na 'Doporučení platforem' a vyber žánr + publikum", "Otevři 'Předvolby sliderů' a zkopíruj hodnoty", "Použij 'Plánovač her' ke složení všeho dohromady"],
       "findSliders": "Najdi ideální slidery",
-      "findSlidersSteps": ["Jdi na „Předvolby sliderů"", "Vyber svůj žánr ze seznamu", "Přečti hodnoty pro všechny tři fáze", "Nastav slidery ve hře podle toho"],
+      "findSlidersSteps": ["Jdi na 'Předvolby sliderů'", "Vyber svůj žánr ze seznamu", "Přečti hodnoty pro všechny tři fáze", "Nastav slidery ve hře podle toho"],
       "trackProgress": "Sleduj postup",
-      "trackProgressSteps": ["Otevři stránku „Checklist"", "Projdi milníky", "Zaškrtni splněné", "Přidej vlastní cíle"]
+      "trackProgressSteps": ["Otevři stránku 'Checklist'", "Projdi milníky", "Zaškrtni splněné", "Přidej vlastní cíle"]
     },
     "featureDesc": {
       "dashboard": "Domovská stránka s rychlým přehledem nejlepších komb téma-žánr a důležitých statistik.",

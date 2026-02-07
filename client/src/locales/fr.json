@@ -88,9 +88,9 @@
   },
   "nav": {
     "dashboard": "Tableau de bord",
-    "topicRecommender": "Recommandations de thèmes",
-    "genreRecommender": "Recommandations de genres",
-    "platformRecommender": "Recommandations de plateformes",
+    "topicRecommender": "Conseils thèmes",
+    "genreRecommender": "Conseils genres",
+    "platformRecommender": "Conseils plateformes",
     "sliderPresets": "Préréglages des curseurs",
     "planner": "Planificateur de jeu",
     "research": "Guide de recherche",

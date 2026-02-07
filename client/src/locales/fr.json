@@ -81,7 +81,10 @@
     "monthPrefix": "M",
     "weekPrefix": "S",
     "rp": "PR",
-    "currency": "$"
+    "currency": "$",
+    "high": "Élevé",
+    "medium": "Moyen",
+    "low": "Faible"
   },
   "nav": {
     "dashboard": "Tableau de bord",
@@ -133,7 +136,12 @@
     "bestMatches": "Meilleures correspondances",
     "filterByYear": "Filtrer par année",
     "unlockYear": "Année de déblocage",
-    "researchCost": "Coût de recherche"
+    "researchCost": "Coût de recherche",
+    "topRecommendationsFor": "Meilleures recommandations pour \"{{name}}\"",
+    "sliderPresetsFor": "Préréglages des curseurs pour \"{{name}}\"",
+    "resultsCount": "{{count}} résultats",
+    "allStages": "Toutes les phases",
+    "stage": "Phase {{number}}"
   },
   "sliders": {
     "title": "Préréglages des curseurs",

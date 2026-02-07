@@ -266,7 +266,7 @@ export default function ChecklistPage() {
                 />
                 <div className="flex-1 min-w-0">
                   <p className={`font-medium ${item.isCompleted ? "line-through text-muted-foreground" : ""}`}>
-                    {item.customText || item.milestone?.title}
+                    {item.customText || (item.milestone ? (() => { const k = `timeline.items.${item.milestone.id}.title`; return t(k) !== k ? t(k) : item.milestone.title; })() : null)}
                   </p>
                   {item.milestone && (
                     <div className="flex items-center gap-2 mt-1 text-sm text-muted-foreground">
@@ -322,7 +322,7 @@ export default function ChecklistPage() {
                 <CardContent className="p-4 flex items-center gap-3">
                   <Plus className="h-5 w-5 text-muted-foreground flex-shrink-0" />
                   <div className="flex-1 min-w-0">
-                    <p className="font-medium text-sm">{milestone.title}</p>
+                    <p className="font-medium text-sm">{(() => { const k = `timeline.items.${milestone.id}.title`; return t(k) !== k ? t(k) : milestone.title; })()}</p>
                     <div className="flex items-center gap-2 mt-1 text-xs text-muted-foreground">
                       <span>{t("common.year")} {milestone.year}</span>
                       {importanceBadge(milestone.importance || "medium", t)}

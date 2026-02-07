@@ -35,14 +35,28 @@ const stageIcons = {
   3: Sparkles,
 };
 
+const sliderNameKeys: Record<string, string> = {
+  "Engine": "sliders.engine",
+  "Gameplay": "sliders.gameplay",
+  "Story/Quests": "sliders.storyQuests",
+  "Dialogues": "sliders.dialogues",
+  "Level Design": "sliders.levelDesign",
+  "AI": "sliders.ai",
+  "World Design": "sliders.worldDesign",
+  "Graphics": "sliders.graphics",
+  "Sound": "sliders.sound",
+};
+
 function SliderBar({
   name,
   value,
   importance,
+  t,
 }: {
   name: string;
   value: number;
   importance: "high" | "medium" | "low";
+  t: (key: string) => string;
 }) {
   const colorClass =
     importance === "high"
@@ -61,7 +75,7 @@ function SliderBar({
   return (
     <div className="space-y-1.5">
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium">{name}</span>
+        <span className="text-sm font-medium">{sliderNameKeys[name] ? t(sliderNameKeys[name]) : name}</span>
         <div className="flex items-center gap-2">
           <Badge
             variant="outline"
@@ -73,7 +87,7 @@ function SliderBar({
                   : ""
             }`}
           >
-            {importance}
+            {t(`common.${importance}`)}
           </Badge>
           <span className="font-mono text-sm font-semibold w-8 text-right">
             {value}
@@ -90,7 +104,7 @@ function SliderBar({
   );
 }
 
-function PresetCard({ preset }: { preset: SliderPreset }) {
+function PresetCard({ preset, t }: { preset: SliderPreset; t: (key: string, opts?: Record<string, unknown>) => string }) {
   const StageIcon = stageIcons[preset.stage as keyof typeof stageIcons] || Zap;
 
   return (
@@ -101,9 +115,9 @@ function PresetCard({ preset }: { preset: SliderPreset }) {
             <StageIcon className="h-5 w-5 text-primary" />
           </div>
           <div>
-            <CardTitle className="text-base">Stage {preset.stage}</CardTitle>
+            <CardTitle className="text-base">{t("recommender.stage", { number: preset.stage })}</CardTitle>
             <p className="text-xs text-muted-foreground">
-              Development Phase {preset.stage}
+              {t("sliders.phase" + preset.stage)}
             </p>
           </div>
         </div>
@@ -116,6 +130,7 @@ function PresetCard({ preset }: { preset: SliderPreset }) {
               name={slider.name}
               value={slider.value}
               importance={slider.importance}
+              t={t}
             />
           ))}
         </div>
@@ -239,20 +254,20 @@ export default function SliderPresets() {
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <h2 className="text-lg font-semibold">
-                  Slider Presets for "{selectedGenre.name}"
+                  {t("recommender.sliderPresetsFor", { name: translateGenre(t, selectedGenre.id, selectedGenre.name) })}
                 </h2>
               </div>
               <Tabs defaultValue="all" className="w-full">
                 <TabsList>
-                  <TabsTrigger value="all">All Stages</TabsTrigger>
-                  <TabsTrigger value="1">Stage 1</TabsTrigger>
-                  <TabsTrigger value="2">Stage 2</TabsTrigger>
-                  <TabsTrigger value="3">Stage 3</TabsTrigger>
+                  <TabsTrigger value="all">{t("recommender.allStages")}</TabsTrigger>
+                  <TabsTrigger value="1">{t("recommender.stage", { number: 1 })}</TabsTrigger>
+                  <TabsTrigger value="2">{t("recommender.stage", { number: 2 })}</TabsTrigger>
+                  <TabsTrigger value="3">{t("recommender.stage", { number: 3 })}</TabsTrigger>
                 </TabsList>
                 <TabsContent value="all" className="mt-4">
                   <div className="grid gap-4 md:grid-cols-3">
                     {presets.map((preset) => (
-                      <PresetCard key={preset.stage} preset={preset} />
+                      <PresetCard key={preset.stage} preset={preset} t={t} />
                     ))}
                   </div>
                 </TabsContent>
@@ -262,6 +277,7 @@ export default function SliderPresets() {
                       <div className="max-w-md">
                         <PresetCard
                           preset={presets.find((p) => p.stage === stage)!}
+                          t={t}
                         />
                       </div>
                     )}

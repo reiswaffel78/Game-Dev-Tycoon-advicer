@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { SEO } from "@/components/seo";
+import { translateTopic, translateGenre } from "@/lib/translate-data";
 import type { Topic, Genre, Platform } from "@shared/schema";
 
 interface StatsData {
@@ -242,9 +243,9 @@ export default function Dashboard() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2">
-                          <span className="font-medium">{combo.topic.name}</span>
+                          <span className="font-medium">{translateTopic(t, combo.topic.id, combo.topic.name)}</span>
                           <span className="text-muted-foreground">+</span>
-                          <span className="font-medium">{combo.genre.name}</span>
+                          <span className="font-medium">{translateGenre(t, combo.genre.id, combo.genre.name)}</span>
                         </div>
                       </div>
                       <Badge

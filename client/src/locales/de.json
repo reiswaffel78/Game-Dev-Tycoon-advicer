@@ -81,7 +81,10 @@
     "monthPrefix": "M",
     "weekPrefix": "W",
     "rp": "FP",
-    "currency": "$"
+    "currency": "$",
+    "high": "Hoch",
+    "medium": "Mittel",
+    "low": "Niedrig"
   },
   "nav": {
     "dashboard": "Dashboard",
@@ -133,7 +136,12 @@
     "bestMatches": "Beste Treffer",
     "filterByYear": "Nach Jahr filtern",
     "unlockYear": "Freischaltjahr",
-    "researchCost": "Forschungskosten"
+    "researchCost": "Forschungskosten",
+    "topRecommendationsFor": "Top-Empfehlungen für \"{{name}}\"",
+    "sliderPresetsFor": "Slider-Voreinstellungen für \"{{name}}\"",
+    "resultsCount": "{{count}} Ergebnisse",
+    "allStages": "Alle Phasen",
+    "stage": "Phase {{number}}"
   },
   "sliders": {
     "title": "Slider-Voreinstellungen",

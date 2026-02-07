@@ -308,9 +308,9 @@ export default function GenreRecommender() {
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <h2 className="text-lg font-semibold">
-                  Top Recommendations for "{selectedGenre.name}"
+                  {t("recommender.topRecommendationsFor", { name: translateGenre(t, selectedGenre.id, selectedGenre.name) })}
                 </h2>
-                <Badge>{recommendations.length} results</Badge>
+                <Badge>{t("recommender.resultsCount", { count: recommendations.length })}</Badge>
               </div>
               {recommendations.map((rec, i) => (
                 <RecommendationCard key={i} result={rec} rank={i + 1} />

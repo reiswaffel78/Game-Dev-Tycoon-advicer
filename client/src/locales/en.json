@@ -81,7 +81,10 @@
     "monthPrefix": "M",
     "weekPrefix": "W",
     "rp": "RP",
-    "currency": "$"
+    "currency": "$",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low"
   },
   "nav": {
     "dashboard": "Dashboard",
@@ -133,7 +136,12 @@
     "bestMatches": "Best Matches",
     "filterByYear": "Filter by Year",
     "unlockYear": "Unlock Year",
-    "researchCost": "Research Cost"
+    "researchCost": "Research Cost",
+    "topRecommendationsFor": "Top Recommendations for \"{{name}}\"",
+    "sliderPresetsFor": "Slider Presets for \"{{name}}\"",
+    "resultsCount": "{{count}} results",
+    "allStages": "All Stages",
+    "stage": "Stage {{number}}"
   },
   "sliders": {
     "title": "Slider Presets",

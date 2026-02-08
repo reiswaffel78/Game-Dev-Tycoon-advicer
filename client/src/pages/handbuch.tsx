@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { SEO } from "@/components/seo";
+import { SeoHead } from "@/seo/SeoHead";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -21,11 +21,7 @@ export default function HandbuchPage() {
   
   return (
     <div className="container mx-auto p-6 max-w-5xl">
-      <SEO 
-        title={t("manual.title")} 
-        description={t("manual.subtitle")}
-        path="/handbuch"
-      />
+      <SeoHead pageKey="handbuch" />
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <BookOpen className="h-8 w-8 text-primary" />

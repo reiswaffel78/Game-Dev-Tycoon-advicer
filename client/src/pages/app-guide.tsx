@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { SEO } from "@/components/seo";
+import { SeoHead } from "@/seo/SeoHead";
 import { Badge } from "@/components/ui/badge";
 import {
   Compass,
@@ -62,11 +62,7 @@ export default function AppGuidePage() {
 
   return (
     <div className="container mx-auto p-6 max-w-5xl">
-      <SEO 
-        title={t("appGuide.title")} 
-        description={t("appGuide.subtitle")}
-        path="/app-guide"
-      />
+      <SeoHead pageKey="appGuide" />
       
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">

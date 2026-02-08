@@ -1,26 +1,10 @@
 import { useSyncExternalStore, useCallback, useEffect } from "react";
-import i18n from "./i18n";
+import { useTranslation } from "react-i18next";
 
 export const SUPPORTED_LOCALES = [
   "en",
   "de",
   "fr",
-  "it",
-  "es",
-  "ko",
-  "ja",
-  "zh",
-  "hi",
-  "tr",
-  "pt",
-  "ru",
-  "cs",
-  "nl",
-  "ar",
-  "el",
-  "hu",
-  "pl",
-  "sv",
 ] as const;
 export const DEFAULT_LOCALE = "en";
 export type Locale = (typeof SUPPORTED_LOCALES)[number];
@@ -38,7 +22,7 @@ export function extractLocaleFromPath(path: string): {
     clean.length > 1 && clean.endsWith("/") ? clean.slice(0, -1) : clean;
   const segs = noTrailing.split("/").filter(Boolean);
   const last = segs[segs.length - 1];
-  if (last && isLocale(last) && last !== DEFAULT_LOCALE) {
+  if (last && isLocale(last)) {
     const base = segs.slice(0, -1).join("/");
     return { locale: last, basePath: base ? "/" + base : "/" };
   }
@@ -64,13 +48,14 @@ export function useLocaleLocation(): [
     () => window.location.pathname,
     () => "/",
   );
+  const { i18n } = useTranslation();
   const { locale, basePath } = extractLocaleFromPath(pathname);
 
   useEffect(() => {
     if (i18n.language !== locale) {
       i18n.changeLanguage(locale);
     }
-  }, [locale]);
+  }, [i18n, locale]);
 
   const navigate = useCallback(
     (to: string, options?: { replace?: boolean }) => {

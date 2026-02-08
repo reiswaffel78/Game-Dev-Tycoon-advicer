@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
-import { SEO } from "@/components/seo";
+import { SeoHead } from "@/seo/SeoHead";
 import { translateGenre, translateTopic, translateAudience, translatePlatform } from "@/lib/translate-data";
 import {
   Monitor,
@@ -269,11 +269,7 @@ export default function PlatformRecommender() {
 
   return (
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
-      <SEO 
-        title={t("nav.platformRecommender")} 
-        description={t("dashboard.getStartedDesc")}
-        path="/recommend/platform"
-      />
+      <SeoHead pageKey="platformRecommender" />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Monitor className="h-6 w-6 text-primary" />

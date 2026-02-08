@@ -43,7 +43,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { SEO } from "@/components/seo";
+import { SeoHead } from "@/seo/SeoHead";
 import type { Platform, PlannerRecommendation } from "@shared/schema";
 
 const toNumber = (val: unknown, fallback: number) => {
@@ -288,11 +288,7 @@ export default function Planner() {
 
   return (
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
-      <SEO 
-        title={t("planner.title")} 
-        description={t("planner.subtitle")}
-        path="/planner"
-      />
+      <SeoHead pageKey="planner" />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <CalendarClock className="h-6 w-6 text-primary" />

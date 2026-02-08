@@ -8,7 +8,6 @@ import { AppSidebar } from "@/components/app-sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageSwitcher } from "@/components/language-switcher";
-import "@/lib/i18n";
 import NotFound from "@/pages/not-found";
 import Dashboard from "@/pages/dashboard";
 import TopicRecommender from "@/pages/topic-recommender";

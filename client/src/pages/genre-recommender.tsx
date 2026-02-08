@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
-import { SEO } from "@/components/seo";
+import { SeoHead } from "@/seo/SeoHead";
 import { translateTopic, translatePlatform, translateAudience, translateGenre } from "@/lib/translate-data";
 import {
   Layers,
@@ -217,11 +217,7 @@ export default function GenreRecommender() {
 
   return (
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
-      <SEO 
-        title={t("nav.genreRecommender")} 
-        description={t("dashboard.getStartedDesc")}
-        path="/recommend/genre"
-      />
+      <SeoHead pageKey="genreRecommender" />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Layers className="h-6 w-6 text-primary" />

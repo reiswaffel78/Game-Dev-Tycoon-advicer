@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { SEO } from "@/components/seo";
+import { SeoHead } from "@/seo/SeoHead";
 import {
   Accordion,
   AccordionContent,
@@ -67,11 +67,7 @@ export default function FAQPage() {
 
   return (
     <div className="container mx-auto p-6 max-w-4xl">
-      <SEO 
-        title={t("faq.title")} 
-        description={t("faq.subtitle")}
-        path="/faq"
-      />
+      <SeoHead pageKey="faq" />
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <HelpCircle className="h-8 w-8 text-primary" />

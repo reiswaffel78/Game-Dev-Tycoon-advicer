@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { SEO } from "@/components/seo";
+import { SeoHead } from "@/seo/SeoHead";
 import { Shield, BarChart3, Cookie, Mail } from "lucide-react";
 
 export default function PrivacyPage() {
@@ -8,11 +8,7 @@ export default function PrivacyPage() {
 
   return (
     <div className="container mx-auto p-6 max-w-4xl">
-      <SEO 
-        title={t("privacy.title")} 
-        description={t("privacy.subtitle")}
-        path="/privacy"
-      />
+      <SeoHead pageKey="privacy" />
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <Shield className="h-8 w-8 text-primary" />

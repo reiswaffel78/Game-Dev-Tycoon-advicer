@@ -10,6 +10,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
+import { SeoHead } from "@/seo/SeoHead";
 import type { Source } from "@shared/schema";
 
 const trustLabels: Record<number, string> = {
@@ -108,6 +109,7 @@ export default function Sources() {
 
   return (
     <div className="p-6 space-y-6 max-w-5xl mx-auto">
+      <SeoHead pageKey="sources" />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Database className="h-6 w-6 text-primary" />

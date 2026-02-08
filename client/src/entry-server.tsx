@@ -1,19 +1,25 @@
+import React from "react";
 import { renderToString } from "react-dom/server";
 import { Router } from "wouter";
-import { HelmetProvider, HelmetServerState } from "react-helmet-async";
+import HelmetAsync from "react-helmet-async";
+import type { HelmetServerState } from "react-helmet-async";
+import { I18nextProvider } from "react-i18next";
 import App from "./App";
 import { extractLocaleFromPath } from "@/lib/locale";
-import i18n from "@/lib/i18n";
+import { createI18nInstance, initI18n } from "@/lib/i18n";
+
+const { HelmetProvider } = HelmetAsync;
 
 interface RenderResult {
   html: string;
   helmet: HelmetServerState;
+  i18nLanguage: string;
 }
 
-export function render(url: string): RenderResult {
+export async function render(url: string): Promise<RenderResult> {
   const { locale, basePath } = extractLocaleFromPath(url);
 
-  i18n.changeLanguage(locale);
+  const i18n = await initI18n(createI18nInstance(), locale);
 
   const staticHook = (): [string, (to: string) => void] => {
     return [basePath, () => {}];
@@ -23,14 +29,17 @@ export function render(url: string): RenderResult {
 
   const html = renderToString(
     <HelmetProvider context={helmetContext}>
-      <Router hook={staticHook}>
-        <App />
-      </Router>
+      <I18nextProvider i18n={i18n}>
+        <Router hook={staticHook}>
+          <App />
+        </Router>
+      </I18nextProvider>
     </HelmetProvider>
   );
 
   return {
     html,
     helmet: helmetContext.helmet!,
+    i18nLanguage: i18n.language,
   };
 }

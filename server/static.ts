@@ -3,7 +3,35 @@ import fs from "fs";
 import path from "path";
 import { pathToFileURL } from "url";
 
-type SSRModule = { render: (url: string) => { html: string; helmet: any } };
+type SSRModule = {
+  render: (url: string) => Promise<{ html: string; helmet: any; i18nLanguage: string }>;
+};
+
+const SUPPORTED_LOCALES = ["en", "de", "fr"] as const;
+const DEFAULT_LOCALE = "en";
+
+function normalizeLocalizedUrl(originalUrl: string): string {
+  const url = new URL(originalUrl, "http://localhost");
+  const pathname = url.pathname;
+  const trimmed =
+    pathname !== "/" && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+  const segments = trimmed.split("/").filter(Boolean);
+  const lastSegment = segments[segments.length - 1];
+  const hasLocaleSegment =
+    lastSegment && SUPPORTED_LOCALES.includes(lastSegment as (typeof SUPPORTED_LOCALES)[number]);
+  const locale = hasLocaleSegment ? lastSegment : DEFAULT_LOCALE;
+  const baseSegments = hasLocaleSegment ? segments.slice(0, -1) : segments;
+  const basePath = baseSegments.length ? `/${baseSegments.join("/")}` : "/";
+
+  if (hasLocaleSegment && locale !== DEFAULT_LOCALE) {
+    const normalized =
+      basePath === "/" ? `/${locale}/` : `${basePath}/${locale}/`;
+    return `${normalized}${url.search}${url.hash}`;
+  }
+
+  const normalizedBase = basePath === "/" ? "/" : basePath;
+  return `${normalizedBase}${url.search}${url.hash}`;
+}
 
 let ssrModule: SSRModule | null = null;
 let ssrModuleError: Error | null = null;
@@ -52,6 +80,11 @@ export async function serveStatic(app: Express) {
     if (url.startsWith("/api/") || url.includes(".")) {
       return res.sendFile(path.resolve(distPath, "index.html"));
     }
+
+    const normalizedUrl = normalizeLocalizedUrl(url);
+    if (normalizedUrl !== url) {
+      return res.redirect(301, normalizedUrl);
+    }
     
     try {
       if (ssrModuleError) {
@@ -69,7 +102,7 @@ export async function serveStatic(app: Express) {
       console.log("[SSR] Rendering route:", url);
       
       // Render the app
-      const { html: appHtml, helmet } = ssrModule.render(url);
+      const { html: appHtml, helmet, i18nLanguage } = await ssrModule.render(url);
       
       console.log("[SSR] Render complete. HTML length:", appHtml?.length || 0);
       
@@ -100,6 +133,11 @@ export async function serveStatic(app: Express) {
         "</head>",
         `${helmetHead}\n</head>`
       );
+
+      const i18nScript = `<script>window.__I18N_INITIAL_LANGUAGE__ = ${JSON.stringify(
+        i18nLanguage
+      )};</script>`;
+      finalHtml = finalHtml.replace("</body>", `${i18nScript}\n</body>`);
       
       // Inject the rendered app HTML into the template
       finalHtml = finalHtml.replace(

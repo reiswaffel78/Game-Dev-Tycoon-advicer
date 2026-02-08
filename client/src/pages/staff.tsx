@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
-import { SEO } from "@/components/seo";
+import { SeoHead } from "@/seo/SeoHead";
 import { Users, Search, Calendar, Briefcase, GraduationCap, Zap, Target, ClipboardList } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -138,11 +138,7 @@ export default function Staff() {
 
   return (
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
-      <SEO 
-        title={t("staff.title")} 
-        description={t("staff.subtitle")}
-        path="/staff"
-      />
+      <SeoHead pageKey="staff" />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Users className="h-6 w-6 text-primary" />

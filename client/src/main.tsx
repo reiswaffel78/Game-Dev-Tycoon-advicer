@@ -1,13 +1,11 @@
 import { createRoot, hydrateRoot } from "react-dom/client";
 import { Router } from "wouter";
-import HelmetAsync from "react-helmet-async";
+import { HelmetProvider } from "react-helmet-async";
 import { I18nextProvider } from "react-i18next";
 import App from "./App";
 import { useLocaleLocation } from "@/lib/locale";
 import { initClientI18n } from "@/lib/i18n";
 import "./index.css";
-
-const { HelmetProvider } = HelmetAsync;
 
 const container = document.getElementById("root")!;
 

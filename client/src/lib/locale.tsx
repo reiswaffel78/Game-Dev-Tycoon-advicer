@@ -5,6 +5,22 @@ export const SUPPORTED_LOCALES = [
   "en",
   "de",
   "fr",
+  "it",
+  "es",
+  "ko",
+  "ja",
+  "zh",
+  "hi",
+  "tr",
+  "pt",
+  "ru",
+  "cs",
+  "nl",
+  "ar",
+  "el",
+  "hu",
+  "pl",
+  "sv",
 ] as const;
 export const DEFAULT_LOCALE = "en";
 export type Locale = (typeof SUPPORTED_LOCALES)[number];

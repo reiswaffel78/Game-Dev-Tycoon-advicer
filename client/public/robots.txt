@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://game-dev-tycoon-advicer.com/sitemap.xml
+Sitemap: https://gamedevtycoonadvisor.com/sitemap.xml

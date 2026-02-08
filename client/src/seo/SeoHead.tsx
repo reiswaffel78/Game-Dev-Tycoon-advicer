@@ -1,4 +1,4 @@
-import HelmetAsync from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "@/lib/locale";
 import {
@@ -14,8 +14,6 @@ import {
 interface SeoHeadProps {
   pageKey: PageKey;
 }
-
-const { Helmet } = HelmetAsync;
 
 export function SeoHead({ pageKey }: SeoHeadProps) {
   const { t, i18n } = useTranslation();

@@ -5,12 +5,28 @@ import {
   type Locale,
 } from "@/lib/locale";
 
-export const BASE_URL = "https://game-dev-tycoon-advicer.com";
+export const BASE_URL = "https://gamedevtycoonadvisor.com";
 
 export const OG_LOCALES: Record<Locale, string> = {
   en: "en_US",
   de: "de_DE",
   fr: "fr_FR",
+  it: "it_IT",
+  es: "es_ES",
+  ko: "ko_KR",
+  ja: "ja_JP",
+  zh: "zh_CN",
+  hi: "hi_IN",
+  tr: "tr_TR",
+  pt: "pt_PT",
+  ru: "ru_RU",
+  cs: "cs_CZ",
+  nl: "nl_NL",
+  ar: "ar_SA",
+  el: "el_GR",
+  hu: "hu_HU",
+  pl: "pl_PL",
+  sv: "sv_SE",
 };
 
 export type PageKey =

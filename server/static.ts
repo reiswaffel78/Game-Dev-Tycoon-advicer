@@ -7,7 +7,11 @@ type SSRModule = {
   render: (url: string) => Promise<{ html: string; helmet: any; i18nLanguage: string }>;
 };
 
-const SUPPORTED_LOCALES = ["en", "de", "fr"] as const;
+const SUPPORTED_LOCALES = [
+  "en", "de", "fr", "it", "es", "ko", "ja", "zh",
+  "hi", "tr", "pt", "ru", "cs", "nl", "ar", "el",
+  "hu", "pl", "sv",
+] as const;
 const DEFAULT_LOCALE = "en";
 
 function normalizeLocalizedUrl(originalUrl: string): string {

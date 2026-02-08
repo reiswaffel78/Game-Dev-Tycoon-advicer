@@ -21,6 +21,22 @@ export function LanguageSwitcher() {
     en: { name: "English", flag: "EN" },
     de: { name: "Deutsch", flag: "DE" },
     fr: { name: "Français", flag: "FR" },
+    it: { name: "Italiano", flag: "IT" },
+    es: { name: "Español", flag: "ES" },
+    ko: { name: "한국어", flag: "KO" },
+    ja: { name: "日本語", flag: "JA" },
+    zh: { name: "中文", flag: "ZH" },
+    hi: { name: "हिन्दी", flag: "HI" },
+    tr: { name: "Türkçe", flag: "TR" },
+    pt: { name: "Português", flag: "PT" },
+    ru: { name: "Русский", flag: "RU" },
+    cs: { name: "Čeština", flag: "CS" },
+    nl: { name: "Nederlands", flag: "NL" },
+    ar: { name: "العربية", flag: "AR" },
+    el: { name: "Ελληνικά", flag: "EL" },
+    hu: { name: "Magyar", flag: "HU" },
+    pl: { name: "Polski", flag: "PL" },
+    sv: { name: "Svenska", flag: "SV" },
   };
 
   const switchLocale = (newLocale: Locale) => {

@@ -1,14 +1,12 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { Router } from "wouter";
-import HelmetAsync from "react-helmet-async";
+import { HelmetProvider } from "react-helmet-async";
 import type { HelmetServerState } from "react-helmet-async";
 import { I18nextProvider } from "react-i18next";
 import App from "./App";
 import { extractLocaleFromPath } from "@/lib/locale";
 import { createI18nInstance, initI18n } from "@/lib/i18n";
-
-const { HelmetProvider } = HelmetAsync;
 
 interface RenderResult {
   html: string;

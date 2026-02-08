@@ -130,7 +130,7 @@ curl -s http://localhost:3001/faq | grep -i "og:title"
 For `/faq`, you should see:
 - `<title>FAQ | Game Dev Tycoon Advisor</title>`
 - `<meta name="description" content="...">`
-- `<link rel="canonical" href="https://game-dev-tycoon-advicer.com/faq">`
+- `<link rel="canonical" href="https://gamedevtycoonadvisor.com/faq">`
 - `<meta property="og:title" content="FAQ | Game Dev Tycoon Advisor">`
 
 ## Hydration

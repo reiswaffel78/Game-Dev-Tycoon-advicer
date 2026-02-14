@@ -20,28 +20,44 @@ export function SeoHead({ pageKey }: SeoHeadProps) {
   const locale: Locale = isLocale(i18n.language)
     ? i18n.language
     : DEFAULT_LOCALE;
-  const { titleKey, descriptionKey } = getSeoConfig(pageKey);
+  const { titleKey, descriptionKey, schemaType } = getSeoConfig(pageKey);
   const title = t(titleKey);
   const description = t(descriptionKey);
   const fullTitle = `${title} | Game Dev Tycoon Advisor`;
   const canonicalUrl = getCanonicalUrl(pageKey, locale);
   const alternates = getHreflangLinks(pageKey);
+  const resolvedSchemaType = schemaType ?? "WebApplication";
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "Game Dev Tycoon Advisor",
-    description,
-    url: canonicalUrl,
-    applicationCategory: "GameApplication",
-    operatingSystem: "Web Browser",
-    inLanguage: locale,
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
-  };
+  const jsonLd =
+    resolvedSchemaType === "Article"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: title,
+          description,
+          url: canonicalUrl,
+          inLanguage: locale,
+          publisher: {
+            "@type": "Organization",
+            name: "Game Dev Tycoon Advisor",
+            url: BASE_URL,
+          },
+        }
+      : {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: "Game Dev Tycoon Advisor",
+          description,
+          url: canonicalUrl,
+          applicationCategory: "GameApplication",
+          operatingSystem: "Web Browser",
+          inLanguage: locale,
+          offers: {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "USD",
+          },
+        };
 
   return (
     <Helmet>

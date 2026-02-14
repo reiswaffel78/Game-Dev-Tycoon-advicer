@@ -17,6 +17,7 @@ import {
   BookOpen,
   Compass,
   Shield,
+  Sparkles,
 } from "lucide-react";
 import {
   Sidebar,
@@ -106,6 +107,29 @@ export function AppSidebar() {
     },
   ];
 
+  const articleItems = [
+    {
+      title: t("nav.guide"),
+      url: "/game-dev-tycoon-guide",
+      icon: BookOpen,
+    },
+    {
+      title: t("nav.bestCombos"),
+      url: "/game-dev-tycoon-best-combos",
+      icon: Sparkles,
+    },
+    {
+      title: t("nav.slidersExplained"),
+      url: "/game-dev-tycoon-sliders",
+      icon: SlidersHorizontal,
+    },
+    {
+      title: t("nav.researchOrder"),
+      url: "/game-dev-tycoon-research-order",
+      icon: FlaskConical,
+    },
+  ];
+
   const dataItems = [
     {
       title: t("nav.sources"),
@@ -167,6 +191,29 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {toolsItems.map((item) => (
+                <SidebarMenuItem key={item.url}>
+                  <SidebarMenuButton
+                    asChild
+                    isActive={location === item.url}
+                    data-testid={`nav-${item.url.replace(/\//g, "-").slice(1)}`}
+                  >
+                    <Link href={item.url}>
+                      <item.icon className="h-4 w-4" />
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup>
+          <SidebarGroupLabel className="text-sidebar-foreground/50 text-xs uppercase tracking-wider">
+            {t("nav.articles")}
+          </SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {articleItems.map((item) => (
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton
                     asChild

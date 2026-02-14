@@ -100,10 +100,15 @@
     "faq": "FAQ",
     "handbuch": "Manual",
     "appGuide": "App Guide",
+    "guide": "Game Guide",
+    "bestCombos": "Best Combos",
+    "slidersExplained": "Sliders Explained",
+    "researchOrder": "Research Order",
     "sources": "Data Sources",
     "privacy": "Privacy Policy",
     "tools": "Tools",
     "guides": "Guides",
+    "articles": "Articles",
     "data": "Data"
   },
   "dashboard": {
@@ -661,6 +666,216 @@
       "checklist": ["Check off completed milestones", "Add your own tasks", "Progress is saved locally"],
       "faq": ["Organized by categories", "Quick answers to common problems", "Click a question to see the answer"],
       "manual": ["6 categories with all details", "From basics to advanced", "Ideal for reference during gameplay"]
+    }
+  },
+  "guide": {
+    "title": "Game Dev Tycoon Guide",
+    "subtitle": "A full walkthrough from the garage to the R&D lab, focused on the decisions that drive reviews.",
+    "quickChecklistTitle": "Quick start checklist",
+    "quickChecklist": [
+      "Pick a strong topic-genre combo before you start development.",
+      "Match the platform and audience to your genre.",
+      "Use slider presets for the three phases.",
+      "Avoid repeating the same combo in consecutive games.",
+      "Research tech upgrades before the market moves on."
+    ],
+    "phasesTitle": "Phase-by-phase walkthrough",
+    "phases": {
+      "garage": {
+        "title": "Garage (Years 1-3)",
+        "subtitle": "Build fans and stability with reliable, medium games.",
+        "steps": [
+          "Aim for 7+ reviews to build a fanbase early.",
+          "Use small/medium games to control costs.",
+          "Research audiences as soon as possible."
+        ]
+      },
+      "office": {
+        "title": "First Office (Years 3-6)",
+        "subtitle": "Scale your team and shift to better engines.",
+        "steps": [
+          "Hire for complementary skills and train new staff immediately.",
+          "Invest in custom engines with the right feature set.",
+          "Align platform choice with genre popularity."
+        ]
+      },
+      "rdLab": {
+        "title": "R&D Lab (Year 6+)",
+        "subtitle": "Unlock advanced tech and prepare for AAA games.",
+        "steps": [
+          "Prioritize graphics upgrades and high-value genre features.",
+          "Keep one or two staff focused on research.",
+          "Only build sequels when the original scored 9+."
+        ]
+      }
+    },
+    "pitfalls": {
+      "title": "Common mistakes that cost reviews",
+      "items": [
+        "Ignoring sliders and relying only on a good combo.",
+        "Choosing platforms that don’t match your target audience.",
+        "Repeating the same combo too often.",
+        "Skipping research until it’s already too late."
+      ]
+    },
+    "cta": {
+      "title": "Use the tools to execute the guide",
+      "description": "Jump into the recommender and presets to apply the advice above to your next game.",
+      "primary": "Find the best genre for your topic",
+      "secondary": "Get slider presets"
+    }
+  },
+  "bestCombos": {
+    "title": "Best Topic-Genre Combos",
+    "subtitle": "Understand the fit system and use reliable combinations that score well across eras.",
+    "fit": {
+      "title": "How the fit rating works",
+      "description": "Each topic-genre pair gets a fit score between -3 and +3. The higher the fit, the better your reviews.",
+      "bullets": [
+        "Fit is the biggest single factor in review scores.",
+        "Great sliders can’t fully fix a bad fit.",
+        "Use the recommender to see the exact fit values."
+      ]
+    },
+    "starterCombos": {
+      "title": "Starter combos that work across eras",
+      "items": [
+        "Action + Military / Sci-Fi / Fantasy",
+        "RPG + Fantasy / Medieval",
+        "Simulation + City / Transport / Business",
+        "Strategy + Medieval / History",
+        "Adventure + Fantasy / Detective",
+        "Casual + Kids / Party"
+      ]
+    },
+    "avoid": {
+      "title": "Combos to avoid or delay",
+      "items": [
+        "Kids + Horror (very low fit)",
+        "War + Casual (weak audience match)",
+        "Mature themes on family platforms",
+        "Repeating the same combo back-to-back"
+      ]
+    },
+    "cta": {
+      "title": "Want the exact best combos?",
+      "description": "Use the recommender to sort every topic by fit and unlock year.",
+      "primary": "Use the Genre Recommender",
+      "secondary": "Check slider presets"
+    }
+  },
+  "slidersExplained": {
+    "title": "Game Dev Tycoon Sliders Explained",
+    "subtitle": "Understand what each phase prioritizes and set sliders for better reviews.",
+    "why": {
+      "title": "Why sliders matter",
+      "items": [
+        "Sliders decide how your team spends time in each phase.",
+        "Even a perfect combo can fail with the wrong slider focus.",
+        "Each genre has a different ideal balance per phase."
+      ]
+    },
+    "phases": {
+      "title": "Phase priorities",
+      "phase1": {
+        "title": "Engine & Gameplay",
+        "focus": "Balance engine work with gameplay depending on genre and game size.",
+        "tips": [
+          "Action and Simulation lean heavily on gameplay.",
+          "Large games need more engine investment.",
+          "Avoid extremes unless a genre strongly favors it."
+        ]
+      },
+      "phase2": {
+        "title": "Story & Design",
+        "focus": "Story matters more for narrative genres; design wins for casual titles.",
+        "tips": [
+          "RPG and Adventure need higher story focus.",
+          "Casual games lean toward design and usability.",
+          "Keep tech from falling too far behind."
+        ]
+      },
+      "phase3": {
+        "title": "Polish & Tech",
+        "focus": "Polish is critical for review scores; tech must match platform era.",
+        "tips": [
+          "Never drop polish too low on medium/large games.",
+          "Invest in tech when targeting advanced platforms.",
+          "Marketing and polish together boost sales."
+        ]
+      }
+    },
+    "workflow": {
+      "title": "Fast workflow",
+      "steps": [
+        "Pick your topic and genre.",
+        "Open Slider Presets for the genre.",
+        "Apply the values for each phase in-game.",
+        "Re-check sliders when you change game size."
+      ]
+    },
+    "cta": {
+      "title": "Want exact numbers per genre?",
+      "description": "Use the presets to copy the best slider values instantly.",
+      "primary": "Open Slider Presets",
+      "secondary": "Find best genre"
+    }
+  },
+  "researchOrder": {
+    "title": "Game Dev Tycoon Research Order",
+    "subtitle": "A practical priority list so you unlock what matters before you need it.",
+    "priorities": {
+      "title": "Recommended research order",
+      "items": [
+        "New audiences (Young, Everyone, Mature)",
+        "Core genre features (Dialogues, AI, Multiplayer)",
+        "Graphics upgrades before new platform waves",
+        "Marketing and gameplay improvements",
+        "R&D lab and custom engines when available",
+        "Hardware lab only after a strong cash buffer"
+      ]
+    },
+    "eras": {
+      "title": "Era-specific priorities",
+      "early": {
+        "title": "Early game",
+        "items": [
+          "Unlock audiences quickly for better fit.",
+          "Focus on cheap, high-impact features.",
+          "Avoid research you can’t afford to use."
+        ]
+      },
+      "mid": {
+        "title": "Mid game",
+        "items": [
+          "Upgrade graphics when 3D platforms appear.",
+          "Start building a reusable custom engine.",
+          "Add multiplayer and online features as they unlock."
+        ]
+      },
+      "late": {
+        "title": "Late game",
+        "items": [
+          "Keep tech at platform level to avoid review penalties.",
+          "Invest in hardware lab only with a dedicated team.",
+          "Prioritize features that match your core genres."
+        ]
+      }
+    },
+    "mistakes": {
+      "title": "Common research mistakes",
+      "items": [
+        "Spreading points across low-impact research.",
+        "Unlocking features you never include in engines.",
+        "Delaying graphics upgrades too long.",
+        "Building hardware without enough cash flow."
+      ]
+    },
+    "cta": {
+      "title": "Use the research tracker",
+      "description": "Keep your unlocks and prerequisites organized in the Research Guide.",
+      "primary": "Open Research Guide",
+      "secondary": "Follow the Timeline"
     }
   },
   "sources": {

@@ -35,6 +35,10 @@ export type PageKey =
   | "genreRecommender"
   | "platformRecommender"
   | "sliders"
+  | "guide"
+  | "bestCombos"
+  | "slidersExplained"
+  | "researchOrder"
   | "planner"
   | "research"
   | "staff"
@@ -50,6 +54,7 @@ export interface SeoPageConfig {
   path: string;
   titleKey: string;
   descriptionKey: string;
+  schemaType?: "WebApplication" | "Article";
 }
 
 export const SEO_CONFIG: Record<PageKey, SeoPageConfig> = {
@@ -77,6 +82,30 @@ export const SEO_CONFIG: Record<PageKey, SeoPageConfig> = {
     path: "/sliders",
     titleKey: "sliders.title",
     descriptionKey: "sliders.subtitle",
+  },
+  guide: {
+    path: "/game-dev-tycoon-guide",
+    titleKey: "guide.title",
+    descriptionKey: "guide.subtitle",
+    schemaType: "Article",
+  },
+  bestCombos: {
+    path: "/game-dev-tycoon-best-combos",
+    titleKey: "bestCombos.title",
+    descriptionKey: "bestCombos.subtitle",
+    schemaType: "Article",
+  },
+  slidersExplained: {
+    path: "/game-dev-tycoon-sliders",
+    titleKey: "slidersExplained.title",
+    descriptionKey: "slidersExplained.subtitle",
+    schemaType: "Article",
+  },
+  researchOrder: {
+    path: "/game-dev-tycoon-research-order",
+    titleKey: "researchOrder.title",
+    descriptionKey: "researchOrder.subtitle",
+    schemaType: "Article",
   },
   planner: {
     path: "/planner",

@@ -18,6 +18,8 @@ const plannerSchema = z.object({
   cash: z.number().min(0),
   fans: z.number().min(0),
   unlockedOnly: z.boolean(),
+  useUnlockedTopicsFilter: z.boolean().optional().default(false),
+  unlockedTopicIds: z.array(z.string()).optional().default([]),
 });
 
 const createChecklistItemSchema = z.object({
@@ -191,13 +193,15 @@ export async function registerRoutes(
         return res.status(400).json({ error: "Invalid request body", details: parsed.error });
       }
 
-      const { year, month, cash, fans, unlockedOnly } = parsed.data;
+      const { year, month, cash, fans, unlockedOnly, useUnlockedTopicsFilter, unlockedTopicIds } = parsed.data;
       const recommendations = await generatePlannerRecommendations(
         year,
         month,
         cash,
         fans,
-        unlockedOnly
+        unlockedOnly,
+        useUnlockedTopicsFilter,
+        unlockedTopicIds
       );
       res.json(recommendations);
     } catch (error) {

@@ -1,5 +1,5 @@
-import { useState, useCallback } from "react";
-import { useMutation } from "@tanstack/react-query";
+import { useState, useCallback, useEffect, useMemo } from "react";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslation } from "react-i18next";
@@ -17,6 +17,8 @@ import {
   ArrowRight,
   CheckCircle2,
   Clock,
+  AlertTriangle,
+  Search,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -25,6 +27,7 @@ import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -44,7 +47,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { SeoHead } from "@/seo/SeoHead";
-import type { Platform, PlannerRecommendation } from "@shared/schema";
+import type { Platform, PlannerRecommendation, Topic } from "@shared/schema";
 
 const toNumber = (val: unknown, fallback: number) => {
   if (val === '' || val === undefined || val === null) return fallback;
@@ -59,6 +62,8 @@ const saveStateSchema = z.object({
   cash: z.preprocess((v) => toNumber(v, 0), z.number().min(0)),
   fans: z.preprocess((v) => toNumber(v, 0), z.number().min(0)),
   unlockedOnly: z.boolean(),
+  useUnlockedTopicsFilter: z.boolean().default(false),
+  unlockedTopicIds: z.array(z.string()).default([]),
 });
 
 type SaveStateForm = z.infer<typeof saveStateSchema>;
@@ -115,6 +120,8 @@ function NumericInput({ value, onChange, onBlur: parentBlur, fallback, min, ...p
     />
   );
 }
+
+const UNLOCKED_TOPICS_STORAGE_KEY = "gdt_unlocked_topic_ids_v1";
 
 const getSizeLabels = (t: (key: string) => string) => ({
   small: t("planner.sizes.small"),
@@ -262,8 +269,71 @@ export default function Planner() {
       cash: 70000,
       fans: 0,
       unlockedOnly: false,
+      useUnlockedTopicsFilter: false,
+      unlockedTopicIds: [],
     },
   });
+
+  const [topicSearch, setTopicSearch] = useState("");
+
+  const topicsQuery = useQuery({
+    queryKey: ["topics"],
+    queryFn: async () => {
+      const res = await fetch("/api/topics");
+      if (!res.ok) throw new Error("Failed to load topics");
+      return res.json() as Promise<Topic[]>;
+    },
+  });
+
+  const useUnlockedTopicsFilter = form.watch("useUnlockedTopicsFilter");
+  const unlockedTopicIds = form.watch("unlockedTopicIds");
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const raw = window.localStorage.getItem(UNLOCKED_TOPICS_STORAGE_KEY);
+    if (!raw) return;
+
+    try {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) {
+        form.setValue("unlockedTopicIds", parsed.filter((id): id is string => typeof id === "string"));
+      }
+    } catch {
+      // Ignore invalid saved values
+    }
+  }, [form]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    window.localStorage.setItem(UNLOCKED_TOPICS_STORAGE_KEY, JSON.stringify(unlockedTopicIds ?? []));
+  }, [unlockedTopicIds]);
+
+  const filteredTopics = useMemo(() => {
+    const allTopics = topicsQuery.data ?? [];
+    if (!topicSearch.trim()) return allTopics;
+    const q = topicSearch.trim().toLowerCase();
+
+    return allTopics.filter((topic) =>
+      translateTopic(t as any, topic.id, topic.name).toLowerCase().includes(q)
+    );
+  }, [topicsQuery.data, topicSearch, t]);
+
+  const topicIdSet = useMemo(() => new Set((topicsQuery.data ?? []).map((topic) => topic.id)), [topicsQuery.data]);
+  const selectedExistingCount = (unlockedTopicIds ?? []).filter((id) => topicIdSet.has(id)).length;
+  const showFallbackWarning = useUnlockedTopicsFilter && (unlockedTopicIds?.length ?? 0) > 0 && selectedExistingCount === 0;
+
+  const toggleTopicSelection = (topicId: string, checked: boolean) => {
+    const current = form.getValues("unlockedTopicIds");
+    if (checked) {
+      if (!current.includes(topicId)) {
+        form.setValue("unlockedTopicIds", [...current, topicId], { shouldDirty: true });
+      }
+      return;
+    }
+
+    form.setValue("unlockedTopicIds", current.filter((id) => id !== topicId), { shouldDirty: true });
+  };
 
   const planMutation = useMutation({
     mutationFn: async (data: SaveStateForm) => {
@@ -454,6 +524,97 @@ export default function Planner() {
                     </FormItem>
                   )}
                 />
+
+                <div className="rounded-md border p-3 space-y-3">
+                  <FormField
+                    control={form.control}
+                    name="useUnlockedTopicsFilter"
+                    render={({ field }) => (
+                      <FormItem className="flex items-center justify-between">
+                        <div className="space-y-0.5">
+                          <FormLabel className="text-sm">{t("planner.unlockedTopicsFilter.title")}</FormLabel>
+                          <FormDescription className="text-xs">
+                            {t("planner.unlockedTopicsFilter.description")}
+                          </FormDescription>
+                        </div>
+                        <FormControl>
+                          <Switch
+                            checked={field.value}
+                            onCheckedChange={field.onChange}
+                            data-testid="switch-unlocked-topics-filter"
+                          />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+
+                  <div className="relative">
+                    <Search className="pointer-events-none absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                    <Input
+                      value={topicSearch}
+                      onChange={(e) => setTopicSearch(e.target.value)}
+                      placeholder={t("planner.unlockedTopicsFilter.searchPlaceholder")}
+                      className="pl-8"
+                      data-testid="input-topic-search"
+                    />
+                  </div>
+
+                  <div className="flex items-center justify-between text-xs text-muted-foreground">
+                    <span>{t("planner.unlockedTopicsFilter.selectedCount", { selected: unlockedTopicIds.length, total: (topicsQuery.data ?? []).length })}</span>
+                    <div className="flex items-center gap-2">
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => form.setValue("unlockedTopicIds", (topicsQuery.data ?? []).map((topic) => topic.id), { shouldDirty: true })}
+                        disabled={(topicsQuery.data ?? []).length === 0}
+                        data-testid="btn-select-all-topics"
+                      >
+                        {t("planner.unlockedTopicsFilter.selectAll")}
+                      </Button>
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => form.setValue("unlockedTopicIds", [], { shouldDirty: true })}
+                        disabled={unlockedTopicIds.length === 0}
+                        data-testid="btn-clear-topics"
+                      >
+                        {t("planner.unlockedTopicsFilter.clear")}
+                      </Button>
+                    </div>
+                  </div>
+
+                  <ScrollArea className="h-48 rounded-md border">
+                    <div className="space-y-2 p-2">
+                      {topicsQuery.data && filteredTopics.length > 0 ? (
+                        filteredTopics.map((topic) => {
+                          const checked = unlockedTopicIds.includes(topic.id);
+                          return (
+                            <label key={topic.id} className="flex items-center gap-2 rounded px-1 py-1 text-sm hover:bg-muted/50">
+                              <Checkbox
+                                checked={checked}
+                                onCheckedChange={(value) => toggleTopicSelection(topic.id, value === true)}
+                              />
+                              <span>{translateTopic(t as any, topic.id, topic.name)}</span>
+                            </label>
+                          );
+                        })
+                      ) : topicsQuery.isLoading ? (
+                        <p className="text-xs text-muted-foreground px-1 py-2">{t("common.loading")}</p>
+                      ) : (
+                        <p className="text-xs text-muted-foreground px-1 py-2">{t("planner.unlockedTopicsFilter.noTopics")}</p>
+                      )}
+                    </div>
+                  </ScrollArea>
+
+                  {showFallbackWarning && (
+                    <p className="text-xs text-amber-600 flex items-center gap-1">
+                      <AlertTriangle className="h-3.5 w-3.5" />
+                      {t("planner.unlockedTopicsFilter.emptyFallbackWarning")}
+                    </p>
+                  )}
+                </div>
 
                 <Button
                   type="submit"

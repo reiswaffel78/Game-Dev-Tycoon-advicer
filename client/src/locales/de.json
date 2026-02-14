@@ -100,10 +100,15 @@
     "faq": "FAQ",
     "handbuch": "Handbuch",
     "appGuide": "App-Anleitung",
+    "guide": "Game Guide",
+    "bestCombos": "Beste Kombinationen",
+    "slidersExplained": "Slider erklärt",
+    "researchOrder": "Forschungs-Reihenfolge",
     "sources": "Datenquellen",
     "privacy": "Datenschutz",
     "tools": "Werkzeuge",
     "guides": "Anleitungen",
+    "articles": "Artikel",
     "data": "Daten"
   },
   "dashboard": {
@@ -661,6 +666,216 @@
       "checklist": ["Hake erledigte Meilensteine ab", "Füge eigene Aufgaben hinzu", "Fortschritt wird lokal gespeichert"],
       "faq": ["Nach Kategorien organisiert", "Schnelle Antworten auf gängige Probleme", "Klicke auf eine Frage um die Antwort zu sehen"],
       "manual": ["6 Kategorien mit allen Details", "Von Grundlagen bis Fortgeschritten", "Ideal zum Nachschlagen während des Spiels"]
+    }
+  },
+  "guide": {
+    "title": "Game Dev Tycoon Guide",
+    "subtitle": "Ein vollständiger Walkthrough von der Garage bis zum R&D-Labor, mit Fokus auf die entscheidenden Reviews-Treiber.",
+    "quickChecklistTitle": "Schnellstart-Checkliste",
+    "quickChecklist": [
+      "Wähle vor dem Start eine starke Topic-Genre-Kombination.",
+      "Passe Plattform und Zielgruppe an dein Genre an.",
+      "Nutze die Slider-Voreinstellungen für alle drei Phasen.",
+      "Vermeide die gleiche Kombination in zwei Spielen hintereinander.",
+      "Forsche Technik-Upgrades bevor der Markt weiterzieht."
+    ],
+    "phasesTitle": "Phase-für-Phase Walkthrough",
+    "phases": {
+      "garage": {
+        "title": "Garage (Jahre 1-3)",
+        "subtitle": "Baue Fans und Stabilität mit zuverlässigen Mittelspielen.",
+        "steps": [
+          "Ziele früh auf 7+ Reviews, um Fans aufzubauen.",
+          "Setze auf kleine/mittlere Spiele, um Kosten zu kontrollieren.",
+          "Schalte Zielgruppen so früh wie möglich frei."
+        ]
+      },
+      "office": {
+        "title": "Erstes Büro (Jahre 3-6)",
+        "subtitle": "Skaliere dein Team und nutze bessere Engines.",
+        "steps": [
+          "Stelle für komplementäre Skills ein und trainiere neue Mitarbeiter sofort.",
+          "Investiere in eigene Engines mit passenden Features.",
+          "Wähle Plattformen passend zur Genre-Popularität."
+        ]
+      },
+      "rdLab": {
+        "title": "R&D-Labor (ab Jahr 6)",
+        "subtitle": "Schalte High-End-Tech frei und bereite AAA-Spiele vor.",
+        "steps": [
+          "Priorisiere Grafik-Upgrades und starke Genre-Features.",
+          "Halte 1-2 Mitarbeiter für Forschung frei.",
+          "Sequels nur bei 9+ Vorgängern."
+        ]
+      }
+    },
+    "pitfalls": {
+      "title": "Häufige Fehler, die Reviews kosten",
+      "items": [
+        "Slider ignorieren und nur auf Kombos setzen.",
+        "Plattformen wählen, die nicht zur Zielgruppe passen.",
+        "Gleiche Kombos zu oft wiederholen.",
+        "Forschung starten, wenn es bereits zu spät ist."
+      ]
+    },
+    "cta": {
+      "title": "Setze den Guide direkt um",
+      "description": "Nutze Recommender und Presets, um die Tipps sofort in dein nächstes Spiel zu übertragen.",
+      "primary": "Bestes Genre finden",
+      "secondary": "Slider-Presets holen"
+    }
+  },
+  "bestCombos": {
+    "title": "Beste Topic-Genre-Kombinationen",
+    "subtitle": "Verstehe das Fit-System und nutze stabile Kombos für starke Reviews.",
+    "fit": {
+      "title": "So funktioniert der Fit-Score",
+      "description": "Jede Topic-Genre-Kombination bekommt einen Fit-Wert von -3 bis +3. Je höher der Fit, desto besser die Reviews.",
+      "bullets": [
+        "Der Fit ist der wichtigste Einzel-Faktor für Reviews.",
+        "Gute Slider können schlechten Fit nicht komplett ausgleichen.",
+        "Der Recommender zeigt dir die exakten Fit-Werte."
+      ]
+    },
+    "starterCombos": {
+      "title": "Stabile Kombos für viele Epochen",
+      "items": [
+        "Action + Militär / Sci-Fi / Fantasy",
+        "RPG + Fantasy / Mittelalter",
+        "Simulation + Stadt / Transport / Business",
+        "Strategie + Mittelalter / Geschichte",
+        "Adventure + Fantasy / Detektiv",
+        "Casual + Kinder / Party"
+      ]
+    },
+    "avoid": {
+      "title": "Kombos vermeiden oder spät spielen",
+      "items": [
+        "Kinder + Horror (sehr niedriger Fit)",
+        "Krieg + Casual (schwacher Zielgruppen-Fit)",
+        "Erwachsene Themen auf Familienplattformen",
+        "Gleiches Kombo direkt hintereinander"
+      ]
+    },
+    "cta": {
+      "title": "Exakte Kombos sehen?",
+      "description": "Nutze den Recommender, um jedes Topic nach Fit und Freischaltjahr zu sortieren.",
+      "primary": "Genre-Empfehlungen öffnen",
+      "secondary": "Slider-Presets prüfen"
+    }
+  },
+  "slidersExplained": {
+    "title": "Game Dev Tycoon Slider erklärt",
+    "subtitle": "Verstehe die Prioritäten je Phase und stelle Slider für bessere Reviews ein.",
+    "why": {
+      "title": "Warum Slider wichtig sind",
+      "items": [
+        "Slider bestimmen, wie dein Team Zeit in jeder Phase investiert.",
+        "Selbst perfekte Kombos scheitern mit falschem Fokus.",
+        "Jedes Genre braucht pro Phase eine andere Balance."
+      ]
+    },
+    "phases": {
+      "title": "Prioritäten je Phase",
+      "phase1": {
+        "title": "Engine & Gameplay",
+        "focus": "Balance zwischen Engine und Gameplay je Genre und Spielgröße.",
+        "tips": [
+          "Action und Simulation brauchen mehr Gameplay-Fokus.",
+          "Große Spiele brauchen mehr Engine-Investment.",
+          "Extreme vermeiden, wenn das Genre es nicht verlangt."
+        ]
+      },
+      "phase2": {
+        "title": "Story & Design",
+        "focus": "Story ist wichtiger für narrative Genres, Design für Casual.",
+        "tips": [
+          "RPG und Adventure benötigen höheren Story-Fokus.",
+          "Casual-Titel profitieren von mehr Design.",
+          "Tech darf nicht zu weit abfallen."
+        ]
+      },
+      "phase3": {
+        "title": "Polish & Tech",
+        "focus": "Polish ist entscheidend für Reviews, Tech muss zur Plattform passen.",
+        "tips": [
+          "Polish niemals zu niedrig ansetzen.",
+          "Tech erhöhen, wenn du moderne Plattformen nutzt.",
+          "Marketing + Polish sorgt für bessere Verkäufe."
+        ]
+      }
+    },
+    "workflow": {
+      "title": "Schneller Ablauf",
+      "steps": [
+        "Topic und Genre auswählen.",
+        "Slider-Presets für das Genre öffnen.",
+        "Werte je Phase im Spiel übernehmen.",
+        "Bei anderer Spielgröße erneut prüfen."
+      ]
+    },
+    "cta": {
+      "title": "Exakte Werte pro Genre?",
+      "description": "Nutze die Presets, um die besten Slider-Werte sofort zu kopieren.",
+      "primary": "Slider-Presets öffnen",
+      "secondary": "Bestes Genre finden"
+    }
+  },
+  "researchOrder": {
+    "title": "Game Dev Tycoon Forschungs-Reihenfolge",
+    "subtitle": "Eine praxisnahe Prioritätenliste, damit du rechtzeitig freischaltest.",
+    "priorities": {
+      "title": "Empfohlene Reihenfolge",
+      "items": [
+        "Neue Zielgruppen (Jung, Alle, Erwachsen)",
+        "Kern-Genre-Features (Dialoge, KI, Multiplayer)",
+        "Grafik-Upgrades vor neuen Plattform-Wellen",
+        "Marketing- und Gameplay-Verbesserungen",
+        "R&D-Labor und eigene Engines sobald verfügbar",
+        "Hardware-Labor erst mit stabilem Cash-Polster"
+      ]
+    },
+    "eras": {
+      "title": "Prioritäten nach Spielphase",
+      "early": {
+        "title": "Frühes Spiel",
+        "items": [
+          "Zielgruppen schnell freischalten.",
+          "Günstige, hohe Impact-Features priorisieren.",
+          "Forschung vermeiden, die du nicht nutzen kannst."
+        ]
+      },
+      "mid": {
+        "title": "Mittelspiel",
+        "items": [
+          "Grafik upgraden, wenn 3D-Plattformen starten.",
+          "Wiederverwendbare Engine aufbauen.",
+          "Multiplayer und Online-Features rechtzeitig freischalten."
+        ]
+      },
+      "late": {
+        "title": "Spätes Spiel",
+        "items": [
+          "Tech-Niveau an Plattformen anpassen.",
+          "Hardware-Labor nur mit dediziertem Team.",
+          "Features nach deinen Kern-Genres priorisieren."
+        ]
+      }
+    },
+    "mistakes": {
+      "title": "Häufige Forschungsfehler",
+      "items": [
+        "Forschungspunkte auf Low-Impact-Themen verteilen.",
+        "Features freischalten, die nie in Engines landen.",
+        "Grafik-Upgrades zu lange verzögern.",
+        "Hardware bauen ohne gesicherten Cashflow."
+      ]
+    },
+    "cta": {
+      "title": "Nutze den Forschungs-Tracker",
+      "description": "Behalte Freischaltungen und Voraussetzungen im Forschungs-Guide im Blick.",
+      "primary": "Forschungs-Guide öffnen",
+      "secondary": "Timeline folgen"
     }
   },
   "sources": {

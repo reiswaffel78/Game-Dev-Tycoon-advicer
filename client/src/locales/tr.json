@@ -1,56 +1,188 @@
 {
   "data": {
     "genres": {
-      "action": { "name": "Aksiyon", "description": "Dövüş ve reflekslere dayalı hızlı tempolu oynanış" },
-      "adventure": { "name": "Macera", "description": "Hikâye odaklı keşif oyunları" },
-      "rpg": { "name": "RPG", "description": "Karakter gelişimi içeren rol yapma oyunları" },
-      "simulation": { "name": "Simülasyon", "description": "Gerçek dünya simülasyon oyunları" },
-      "strategy": { "name": "Strateji", "description": "Taktiksel ve stratejik oynanış" },
-      "casual": { "name": "Gündelik", "description": "Kolay oynanabilen gündelik oyunlar" }
+      "action": {
+        "name": "Aksiyon",
+        "description": "Dövüş ve reflekslere dayalı hızlı tempolu oynanış"
+      },
+      "adventure": {
+        "name": "Macera",
+        "description": "Hikâye odaklı keşif oyunları"
+      },
+      "rpg": {
+        "name": "RPG",
+        "description": "Karakter gelişimi içeren rol yapma oyunları"
+      },
+      "simulation": {
+        "name": "Simülasyon",
+        "description": "Gerçek dünya simülasyon oyunları"
+      },
+      "strategy": {
+        "name": "Strateji",
+        "description": "Taktiksel ve stratejik oynanış"
+      },
+      "casual": {
+        "name": "Gündelik",
+        "description": "Kolay oynanabilen gündelik oyunlar"
+      }
     },
     "topics": {
-      "aliens": { "name": "Uzaylılar", "description": "Dünya dışı varlık temaları" },
-      "fantasy": { "name": "Fantastik", "description": "Büyülü dünyalar ve yaratıklar" },
-      "scifi": { "name": "Bilim Kurgu", "description": "Bilim kurgu temaları" },
-      "medieval": { "name": "Ortaçağ", "description": "Ortaçağ dönemi ortamı" },
-      "military": { "name": "Askeri", "description": "Askeri ve savaş temaları" },
-      "pirates": { "name": "Korsanlar", "description": "Korsan maceraları ve deniz savaşları" },
-      "vampires": { "name": "Vampirler", "description": "Vampir ve karanlık temalar" },
-      "zombies": { "name": "Zombiler", "description": "Zombi kıyameti temaları" },
-      "sports": { "name": "Spor", "description": "Atletik yarışma temaları" },
-      "racing": { "name": "Yarış", "description": "Araç yarışı temaları" },
-      "city": { "name": "Şehir", "description": "Şehir kurma ve yönetimi" },
-      "business": { "name": "İş Dünyası", "description": "İş simülasyonu temaları" },
-      "hospital": { "name": "Hastane", "description": "Tıp ve hastane temaları" },
-      "prison": { "name": "Hapishane", "description": "Hapishane yönetimi temaları" },
-      "space": { "name": "Uzay", "description": "Uzay keşfi temaları" },
-      "hunting": { "name": "Avcılık", "description": "Avcılık ve yaban hayatı temaları" },
-      "martial-arts": { "name": "Dövüş Sanatları", "description": "Dövüş sanatları temaları" },
-      "mystery": { "name": "Gizem", "description": "Dedektiflik ve gizem temaları" },
-      "comedy": { "name": "Komedi", "description": "Eğlenceli ve komik temalar" },
-      "dance": { "name": "Dans", "description": "Dans ve ritim temaları" }
+      "aliens": {
+        "name": "Uzaylılar",
+        "description": "Dünya dışı varlık temaları"
+      },
+      "fantasy": {
+        "name": "Fantastik",
+        "description": "Büyülü dünyalar ve yaratıklar"
+      },
+      "scifi": {
+        "name": "Bilim Kurgu",
+        "description": "Bilim kurgu temaları"
+      },
+      "medieval": {
+        "name": "Ortaçağ",
+        "description": "Ortaçağ dönemi ortamı"
+      },
+      "military": {
+        "name": "Askeri",
+        "description": "Askeri ve savaş temaları"
+      },
+      "pirates": {
+        "name": "Korsanlar",
+        "description": "Korsan maceraları ve deniz savaşları"
+      },
+      "vampires": {
+        "name": "Vampirler",
+        "description": "Vampir ve karanlık temalar"
+      },
+      "zombies": {
+        "name": "Zombiler",
+        "description": "Zombi kıyameti temaları"
+      },
+      "sports": {
+        "name": "Spor",
+        "description": "Atletik yarışma temaları"
+      },
+      "racing": {
+        "name": "Yarış",
+        "description": "Araç yarışı temaları"
+      },
+      "city": {
+        "name": "Şehir",
+        "description": "Şehir kurma ve yönetimi"
+      },
+      "business": {
+        "name": "İş Dünyası",
+        "description": "İş simülasyonu temaları"
+      },
+      "hospital": {
+        "name": "Hastane",
+        "description": "Tıp ve hastane temaları"
+      },
+      "prison": {
+        "name": "Hapishane",
+        "description": "Hapishane yönetimi temaları"
+      },
+      "space": {
+        "name": "Uzay",
+        "description": "Uzay keşfi temaları"
+      },
+      "hunting": {
+        "name": "Avcılık",
+        "description": "Avcılık ve yaban hayatı temaları"
+      },
+      "martial-arts": {
+        "name": "Dövüş Sanatları",
+        "description": "Dövüş sanatları temaları"
+      },
+      "mystery": {
+        "name": "Gizem",
+        "description": "Dedektiflik ve gizem temaları"
+      },
+      "comedy": {
+        "name": "Komedi",
+        "description": "Eğlenceli ve komik temalar"
+      },
+      "dance": {
+        "name": "Dans",
+        "description": "Dans ve ritim temaları"
+      }
     },
     "platforms": {
-      "pc": { "name": "PC", "description": "Kişisel bilgisayar platformu" },
-      "govodore-64": { "name": "Govodore 64", "description": "Erken dönem ev bilgisayarı" },
-      "tes": { "name": "TES", "description": "8-bit konsol" },
-      "master-v": { "name": "Master V", "description": "16-bit konsol" },
-      "super-tes": { "name": "Super TES", "description": "Gelişmiş 16-bit konsol" },
-      "genovation": { "name": "Genovation", "description": "CD tabanlı konsol" },
-      "playstation": { "name": "Playsystem", "description": "32-bit CD konsol" },
-      "nuu-64": { "name": "nuu 64", "description": "64-bit kartuş konsol" },
-      "dreamvast": { "name": "DreamVast", "description": "İnternet destekli konsol" },
-      "playsystem-2": { "name": "Playsystem 2", "description": "Gelişmiş DVD konsol" },
-      "game-sphere": { "name": "Game Sphere", "description": "Disk tabanlı konsol" },
-      "mbox": { "name": "mBox", "description": "İlk mBox konsol" },
-      "playsystem-3": { "name": "Playsystem 3", "description": "HD oyun konsolu" },
-      "mbox-next": { "name": "mBox Next", "description": "Yeni nesil mBox" },
-      "whoops": { "name": "whoops", "description": "Hareket kontrollü konsol" }
+      "pc": {
+        "name": "PC",
+        "description": "Kişisel bilgisayar platformu"
+      },
+      "govodore-64": {
+        "name": "Govodore 64",
+        "description": "Erken dönem ev bilgisayarı"
+      },
+      "tes": {
+        "name": "TES",
+        "description": "8-bit konsol"
+      },
+      "master-v": {
+        "name": "Master V",
+        "description": "16-bit konsol"
+      },
+      "super-tes": {
+        "name": "Super TES",
+        "description": "Gelişmiş 16-bit konsol"
+      },
+      "genovation": {
+        "name": "Genovation",
+        "description": "CD tabanlı konsol"
+      },
+      "playstation": {
+        "name": "Playsystem",
+        "description": "32-bit CD konsol"
+      },
+      "nuu-64": {
+        "name": "nuu 64",
+        "description": "64-bit kartuş konsol"
+      },
+      "dreamvast": {
+        "name": "DreamVast",
+        "description": "İnternet destekli konsol"
+      },
+      "playsystem-2": {
+        "name": "Playsystem 2",
+        "description": "Gelişmiş DVD konsol"
+      },
+      "game-sphere": {
+        "name": "Game Sphere",
+        "description": "Disk tabanlı konsol"
+      },
+      "mbox": {
+        "name": "mBox",
+        "description": "İlk mBox konsol"
+      },
+      "playsystem-3": {
+        "name": "Playsystem 3",
+        "description": "HD oyun konsolu"
+      },
+      "mbox-next": {
+        "name": "mBox Next",
+        "description": "Yeni nesil mBox"
+      },
+      "whoops": {
+        "name": "whoops",
+        "description": "Hareket kontrollü konsol"
+      }
     },
     "audiences": {
-      "young": { "name": "Genç", "description": "Genç oyuncular için uygun oyunlar" },
-      "everyone": { "name": "Herkes", "description": "Her yaş için uygun oyunlar" },
-      "mature": { "name": "Yetişkin", "description": "Yetişkin kitleye yönelik oyunlar" }
+      "young": {
+        "name": "Genç",
+        "description": "Genç oyuncular için uygun oyunlar"
+      },
+      "everyone": {
+        "name": "Herkes",
+        "description": "Her yaş için uygun oyunlar"
+      },
+      "mature": {
+        "name": "Yetişkin",
+        "description": "Yetişkin kitleye yönelik oyunlar"
+      }
     }
   },
   "common": {
@@ -271,23 +403,91 @@
     "recommended": "Önerilen",
     "optional": "İsteğe Bağlı",
     "items": {
-      "basic-2d-graphics": { "name": "Temel 2D Grafikler v1", "description": "Başlangıç grafik teknolojisi", "tip": "Baştan itibaren mevcut" },
-      "basic-sound": { "name": "Temel Ses v1", "description": "Başlangıç ses teknolojisi", "tip": "Baştan itibaren mevcut" },
-      "2d-graphics-v2": { "name": "2D Grafikler v2", "description": "Geliştirilmiş 2D grafikler", "tip": "Daha iyi oyun puanları için erken araştır" },
-      "sound-v2": { "name": "Ses v2", "description": "Geliştirilmiş ses tasarımı", "tip": "Grafik iyileştirmelerinden sonra araştır" },
-      "2d-graphics-v3": { "name": "2D Grafikler v3", "description": "İleri düzey 2D grafikler", "tip": "İlk ofise geçmeden önce şart" },
-      "save-game": { "name": "Oyun Kaydetme", "description": "Oyuncuların ilerlemeyi kaydetmesine olanak tanır", "tip": "RPG ve Macera oyunları için çok önemli" },
-      "dialogue-system": { "name": "Diyalog Sistemi", "description": "NPC diyalog seçenekleri", "tip": "Macera ve RPG türleri için harika" },
-      "3d-graphics-v1": { "name": "3D Grafikler v1", "description": "3D çağına giriş", "tip": "Modern platformlar için şart. Mümkün olduğunca erken araştır" },
-      "3d-graphics-v2": { "name": "3D Grafikler v2", "description": "Geliştirilmiş 3D görüntüleme", "tip": "Grafik teknolojisini güncel tut" },
-      "surround-sound": { "name": "Surround Ses", "description": "Sürükleyici ses deneyimi", "tip": "Tüm türlerde kaliteyi artırır" },
-      "multiplayer": { "name": "Çok Oyunculu", "description": "Çevrimiçi çok oyunculu desteği", "tip": "Aksiyon ve Strateji oyunları için harika" },
-      "online-play": { "name": "Çevrimiçi Oyun", "description": "İnternet üzerinden çok oyunculu", "tip": "Çevrimiçi platformlar ortaya çıkınca araştır" },
-      "3d-graphics-v4": { "name": "3D Grafikler v4", "description": "Üst düzey 3D grafikler", "tip": "AAA oyunlar için gerekli" },
-      "hd-audio": { "name": "HD Ses", "description": "Yüksek çözünürlüklü ses", "tip": "Modern oyunlar için standart" },
-      "advanced-ai": { "name": "Gelişmiş YZ", "description": "Daha akıllı düşman davranışları", "tip": "Strateji ve Simülasyon için önemli" },
-      "open-world": { "name": "Açık Dünya", "description": "Doğrusal olmayan keşif", "tip": "Macera ve RPG oyunları için harika" },
-      "vr-support": { "name": "VR Desteği", "description": "Sanal gerçeklik oyunu", "tip": "Gelecek teknolojisi yatırımı" }
+      "basic-2d-graphics": {
+        "name": "Temel 2D Grafikler v1",
+        "description": "Başlangıç grafik teknolojisi",
+        "tip": "Baştan itibaren mevcut"
+      },
+      "basic-sound": {
+        "name": "Temel Ses v1",
+        "description": "Başlangıç ses teknolojisi",
+        "tip": "Baştan itibaren mevcut"
+      },
+      "2d-graphics-v2": {
+        "name": "2D Grafikler v2",
+        "description": "Geliştirilmiş 2D grafikler",
+        "tip": "Daha iyi oyun puanları için erken araştır"
+      },
+      "sound-v2": {
+        "name": "Ses v2",
+        "description": "Geliştirilmiş ses tasarımı",
+        "tip": "Grafik iyileştirmelerinden sonra araştır"
+      },
+      "2d-graphics-v3": {
+        "name": "2D Grafikler v3",
+        "description": "İleri düzey 2D grafikler",
+        "tip": "İlk ofise geçmeden önce şart"
+      },
+      "save-game": {
+        "name": "Oyun Kaydetme",
+        "description": "Oyuncuların ilerlemeyi kaydetmesine olanak tanır",
+        "tip": "RPG ve Macera oyunları için çok önemli"
+      },
+      "dialogue-system": {
+        "name": "Diyalog Sistemi",
+        "description": "NPC diyalog seçenekleri",
+        "tip": "Macera ve RPG türleri için harika"
+      },
+      "3d-graphics-v1": {
+        "name": "3D Grafikler v1",
+        "description": "3D çağına giriş",
+        "tip": "Modern platformlar için şart. Mümkün olduğunca erken araştır"
+      },
+      "3d-graphics-v2": {
+        "name": "3D Grafikler v2",
+        "description": "Geliştirilmiş 3D görüntüleme",
+        "tip": "Grafik teknolojisini güncel tut"
+      },
+      "surround-sound": {
+        "name": "Surround Ses",
+        "description": "Sürükleyici ses deneyimi",
+        "tip": "Tüm türlerde kaliteyi artırır"
+      },
+      "multiplayer": {
+        "name": "Çok Oyunculu",
+        "description": "Çevrimiçi çok oyunculu desteği",
+        "tip": "Aksiyon ve Strateji oyunları için harika"
+      },
+      "online-play": {
+        "name": "Çevrimiçi Oyun",
+        "description": "İnternet üzerinden çok oyunculu",
+        "tip": "Çevrimiçi platformlar ortaya çıkınca araştır"
+      },
+      "3d-graphics-v4": {
+        "name": "3D Grafikler v4",
+        "description": "Üst düzey 3D grafikler",
+        "tip": "AAA oyunlar için gerekli"
+      },
+      "hd-audio": {
+        "name": "HD Ses",
+        "description": "Yüksek çözünürlüklü ses",
+        "tip": "Modern oyunlar için standart"
+      },
+      "advanced-ai": {
+        "name": "Gelişmiş YZ",
+        "description": "Daha akıllı düşman davranışları",
+        "tip": "Strateji ve Simülasyon için önemli"
+      },
+      "open-world": {
+        "name": "Açık Dünya",
+        "description": "Doğrusal olmayan keşif",
+        "tip": "Macera ve RPG oyunları için harika"
+      },
+      "vr-support": {
+        "name": "VR Desteği",
+        "description": "Sanal gerçeklik oyunu",
+        "tip": "Gelecek teknolojisi yatırımı"
+      }
     }
   },
   "staff": {
@@ -321,21 +521,66 @@
     "fromYear": "Başlangıç Yılı",
     "untilYear": "Bitiş Yılı",
     "items": {
-      "garage-solo": { "title": "Garajda Tek Başına Çalış", "description": "Garaj aşamasında personel işe alamazsın. Becerilerini geliştirmeye ve ilk ofisin için para biriktirmeye odaklan." },
-      "garage-skills": { "title": "Becerilerini Dengele", "description": "Kendini hem Tasarım hem de Teknoloji konusunda eğit. Kaliteli oyunlar yapmak için 700/700 dağılımı idealdir." },
-      "garage-save": { "title": "İlk Ofis İçin Biriktir", "description": "İlk ofisi açmak için 1 milyon dolara ihtiyacın var. Yıl 4-5'te agresif bir şekilde biriktir." },
-      "first-hire": { "title": "İlk Çalışanını İşe Al", "description": "Tamamlayıcı becerilere sahip birini işe al. Tasarım'da güçlüysen Teknoloji'de güçlü birini al, tersi de geçerli." },
-      "first-training": { "title": "Hemen Eğitime Başla", "description": "Yeni işe alınanların istatistikleri düşüktür. Becerilerini hızla yükseltmek için eğitim ver. Önce en zayıf alanlarına odaklan." },
-      "first-specialist": { "title": "Uzmanlar ve Çok Yönlüler", "description": "Oyunun başlarında: birden fazla iş yapabilen çok yönlü çalışanlar al. Sonra: daha büyük ekiplerde belirli roller için uzmanlar al." },
-      "first-team-size": { "title": "Ekip Boyutu İpuçları", "description": "Küçük oyunlar: 1-2 kişi. Orta oyunlar: 2-3 kişi. En iyi verimlilik için ekip boyutunu oyun boyutuyla eşleştir." },
-      "second-expand": { "title": "6 Çalışana Genişle", "description": "İkinci ofis en fazla 6 çalışana izin verir. Nakit akışın elverdiği ölçüde kademeli olarak işe al." },
-      "second-roles": { "title": "Görevleri Belirle", "description": "2-3 çalışanı Tasarım görevlerine (Sanat, Hikâye, Ses) ve 2-3'ünü Teknoloji görevlerine (Motor, YZ, Bölüm Tasarımı) ata." },
-      "second-large-games": { "title": "Büyük Oyun Ekipleri", "description": "Büyük oyunlar 4+ kişi gerektirir. AAA oyunlar 6 kişi gerektirir. Yeterli eğitimli personelin olduğundan emin ol." },
-      "second-specialists": { "title": "Uzmanları İşe Al", "description": "Belirli alanlarda daha iyi oyun kalitesi için Grafik Uzmanları, Ses Mühendisleri ve Yazarlar almayı düşün." },
-      "rd-lab-unlock": { "title": "Ar-Ge Laboratuvarı Avantajları", "description": "Ar-Ge laboratuvarı yeni motorlar ve donanım araştırmanı sağlar. Etkili kullanmak için en az 4 çalışana ihtiyacın var." },
-      "rd-dedicated": { "title": "Adanmış Ar-Ge Personeli", "description": "1-2 çalışanı kalıcı olarak Ar-Ge'ye ata. Yüksek Araştırma hızı ve Teknoloji becerilerine sahip olmalılar." },
-      "hw-lab-unlock": { "title": "Donanım Laboratuvarı Ekibi", "description": "Kendi konsolunu yaratmak adanmış bir ekip gerektirir. En iyi Teknoloji uzmanlarını ata." },
-      "hw-console-team": { "title": "Konsol Geliştirme", "description": "Bir konsol yapmak 6+ ay boyunca 2-3 adanmış personel gerektirir. Ekip kapasiteni buna göre planla." }
+      "garage-solo": {
+        "title": "Garajda Tek Başına Çalış",
+        "description": "Garaj aşamasında personel işe alamazsın. Becerilerini geliştirmeye ve ilk ofisin için para biriktirmeye odaklan."
+      },
+      "garage-skills": {
+        "title": "Becerilerini Dengele",
+        "description": "Kendini hem Tasarım hem de Teknoloji konusunda eğit. Kaliteli oyunlar yapmak için 700/700 dağılımı idealdir."
+      },
+      "garage-save": {
+        "title": "İlk Ofis İçin Biriktir",
+        "description": "İlk ofisi açmak için 1 milyon dolara ihtiyacın var. Yıl 4-5'te agresif bir şekilde biriktir."
+      },
+      "first-hire": {
+        "title": "İlk Çalışanını İşe Al",
+        "description": "Tamamlayıcı becerilere sahip birini işe al. Tasarım'da güçlüysen Teknoloji'de güçlü birini al, tersi de geçerli."
+      },
+      "first-training": {
+        "title": "Hemen Eğitime Başla",
+        "description": "Yeni işe alınanların istatistikleri düşüktür. Becerilerini hızla yükseltmek için eğitim ver. Önce en zayıf alanlarına odaklan."
+      },
+      "first-specialist": {
+        "title": "Uzmanlar ve Çok Yönlüler",
+        "description": "Oyunun başlarında: birden fazla iş yapabilen çok yönlü çalışanlar al. Sonra: daha büyük ekiplerde belirli roller için uzmanlar al."
+      },
+      "first-team-size": {
+        "title": "Ekip Boyutu İpuçları",
+        "description": "Küçük oyunlar: 1-2 kişi. Orta oyunlar: 2-3 kişi. En iyi verimlilik için ekip boyutunu oyun boyutuyla eşleştir."
+      },
+      "second-expand": {
+        "title": "6 Çalışana Genişle",
+        "description": "İkinci ofis en fazla 6 çalışana izin verir. Nakit akışın elverdiği ölçüde kademeli olarak işe al."
+      },
+      "second-roles": {
+        "title": "Görevleri Belirle",
+        "description": "2-3 çalışanı Tasarım görevlerine (Sanat, Hikâye, Ses) ve 2-3'ünü Teknoloji görevlerine (Motor, YZ, Bölüm Tasarımı) ata."
+      },
+      "second-large-games": {
+        "title": "Büyük Oyun Ekipleri",
+        "description": "Büyük oyunlar 4+ kişi gerektirir. AAA oyunlar 6 kişi gerektirir. Yeterli eğitimli personelin olduğundan emin ol."
+      },
+      "second-specialists": {
+        "title": "Uzmanları İşe Al",
+        "description": "Belirli alanlarda daha iyi oyun kalitesi için Grafik Uzmanları, Ses Mühendisleri ve Yazarlar almayı düşün."
+      },
+      "rd-lab-unlock": {
+        "title": "Ar-Ge Laboratuvarı Avantajları",
+        "description": "Ar-Ge laboratuvarı yeni motorlar ve donanım araştırmanı sağlar. Etkili kullanmak için en az 4 çalışana ihtiyacın var."
+      },
+      "rd-dedicated": {
+        "title": "Adanmış Ar-Ge Personeli",
+        "description": "1-2 çalışanı kalıcı olarak Ar-Ge'ye ata. Yüksek Araştırma hızı ve Teknoloji becerilerine sahip olmalılar."
+      },
+      "hw-lab-unlock": {
+        "title": "Donanım Laboratuvarı Ekibi",
+        "description": "Kendi konsolunu yaratmak adanmış bir ekip gerektirir. En iyi Teknoloji uzmanlarını ata."
+      },
+      "hw-console-team": {
+        "title": "Konsol Geliştirme",
+        "description": "Bir konsol yapmak 6+ ay boyunca 2-3 adanmış personel gerektirir. Ekip kapasiteni buna göre planla."
+      }
     }
   },
   "timeline": {
@@ -368,27 +613,111 @@
       "featureUnlock": "Özellik Açılışı"
     },
     "items": {
-      "start-game": { "title": "Oyun Başlangıcı", "description": "70.000$ ile garajında başlıyorsun. Deneyim kazanmak için küçük oyunlar yap.", "action": "Aksiyon veya Macera oyunları yap - yeni başlayanlar için affedicilerdir" },
-      "pc-available": { "title": "PC Platformu Mevcut", "description": "PC başlangıç platformun. Lisans ücreti gerekmiyor.", "action": "İlk oyunların için PC kullan" },
-      "govodore-64": { "title": "Govodore 64 Çıktı", "description": "İlk uygun fiyatlı konsol. Gündelik ve Aksiyon oyunları için iyi.", "action": "Gündelik oyunlar yapıyorsan lisans almayı düşün" },
-      "first-hit": { "title": "İlk Hit'i Hedefle", "description": "2. yıla kadar hayran kitlesi oluşturmak için 7+ puan alan bir oyun yapmaya çalış.", "action": "İyi konu-tür kombinasyonlarına ve doğru kaydırıcı ayarlarına odaklan" },
-      "office-goal": { "title": "Ofis İçin Biriktir", "description": "İlk ofisin için şimdiye kadar 1 milyona yakın paran olmalı.", "action": "Yoksa, iyi kombinasyonlarla orta boyutlu oyunlara odaklan" },
-      "tes-release": { "title": "TES Çıktı", "description": "Geniş kitleye sahip büyük konsol. Aksiyon oyunları için harika.", "action": "Güçlü platform - lisansını al" },
-      "first-office-available": { "title": "İlk Ofis Kullanılabilir", "description": "1 milyon para ile ilk ofisine taşınabilir ve personel işe alabilirsin.", "action": "Paran olur olmaz taşın" },
-      "super-tes": { "title": "Super TES Çıktı", "description": "16-bit çağı başlıyor. Harika grafik yetenekleri.", "action": "TES'ten yükselt - bu popüler platform" },
-      "playsystem": { "title": "PlaySystem Çıktı", "description": "Devrim niteliğinde 3D konsol. Oyunların geleceği.", "action": "ÖNEMLİ: Bu lisansı al ve 3D grafikleri araştır" },
-      "3d-era": { "title": "3D Grafik Çağı", "description": "Yüksek puan alan oyunlar için 3D grafikler artık şart.", "action": "Mümkün olduğunda hemen 3D Grafikler v1'i araştır" },
-      "dreamvast": { "title": "DreamVast Çıktı", "description": "Çevrimiçi yeteneklere sahip gelişmiş konsol.", "action": "Deneysel oyunlar için iyi bir platform" },
-      "playsystem-2": { "title": "PlaySystem 2 Çıktı", "description": "Tüm zamanların en çok satan konsolu. Devasa kitle.", "action": "Olmazsa olmaz platform - dev kurulu kullanıcı tabanı" },
-      "second-office-time": { "title": "İkinci Ofisi Düşün", "description": "Artık daha büyük bir ofise genişlemeye hazır olmalısın.", "action": "İkinci ofis için 5 milyon paraya ihtiyacın var" },
-      "mbox": { "title": "mBox Çıktı", "description": "Konsol pazarında yeni rakip.", "action": "Batı pazarları için iyi" },
-      "playsystem-3": { "title": "PlaySystem 3 Çıktı", "description": "HD oyun dönemi başlıyor. Yüksek geliştirme maliyetleri.", "action": "Nicelik yerine niteliğe odaklan" },
-      "mbox-360": { "title": "mBox 360 Çıktı", "description": "Güçlü çevrimiçi özellikler ve başarı sistemi.", "action": "Çok oyunculu oyunlar için harika" },
-      "own-console": { "title": "Kendi Konsolunu Yarat", "description": "Donanım laboratuvarı kendi oyun konsolunu tasarlamana olanak tanır.", "action": "Yalnızca mali açıdan güçlüysen dene" },
-      "genre-combo-tip": { "title": "Konu-Tür Kombinasyonlarında Usta Ol", "description": "Doğru konu-tür kombinasyonu başarı için çok önemlidir.", "action": "En uygun kombinasyonları bulmak için bu rehberi kullan" },
-      "sequel-strategy": { "title": "Devam Oyunu Stratejisi", "description": "Başarılı oyunların devamları daha iyi performans gösterir. Seriler oluştur.", "action": "Devam oyunu yapmadan önce 9+ puan bekle" },
-      "engine-importance": { "title": "Özel Motor Avantajları", "description": "Özel oyun motorları oluşturmak oyun kalitesini önemli ölçüde artırır.", "action": "Motor geliştirme için Ar-Ge laboratuvarına yatırım yap" },
-      "aaa-games": { "title": "AAA Oyun Geliştirme", "description": "Büyük ekip + Özel Motor + Uygun pazarlama = AAA başarısı.", "action": "AAA oyunları yalnızca deneyimli ekiple dene" }
+      "start-game": {
+        "title": "Oyun Başlangıcı",
+        "description": "70.000$ ile garajında başlıyorsun. Deneyim kazanmak için küçük oyunlar yap.",
+        "action": "Aksiyon veya Macera oyunları yap - yeni başlayanlar için affedicilerdir"
+      },
+      "pc-available": {
+        "title": "PC Platformu Mevcut",
+        "description": "PC başlangıç platformun. Lisans ücreti gerekmiyor.",
+        "action": "İlk oyunların için PC kullan"
+      },
+      "govodore-64": {
+        "title": "Govodore 64 Çıktı",
+        "description": "İlk uygun fiyatlı konsol. Gündelik ve Aksiyon oyunları için iyi.",
+        "action": "Gündelik oyunlar yapıyorsan lisans almayı düşün"
+      },
+      "first-hit": {
+        "title": "İlk Hit'i Hedefle",
+        "description": "2. yıla kadar hayran kitlesi oluşturmak için 7+ puan alan bir oyun yapmaya çalış.",
+        "action": "İyi konu-tür kombinasyonlarına ve doğru kaydırıcı ayarlarına odaklan"
+      },
+      "office-goal": {
+        "title": "Ofis İçin Biriktir",
+        "description": "İlk ofisin için şimdiye kadar 1 milyona yakın paran olmalı.",
+        "action": "Yoksa, iyi kombinasyonlarla orta boyutlu oyunlara odaklan"
+      },
+      "tes-release": {
+        "title": "TES Çıktı",
+        "description": "Geniş kitleye sahip büyük konsol. Aksiyon oyunları için harika.",
+        "action": "Güçlü platform - lisansını al"
+      },
+      "first-office-available": {
+        "title": "İlk Ofis Kullanılabilir",
+        "description": "1 milyon para ile ilk ofisine taşınabilir ve personel işe alabilirsin.",
+        "action": "Paran olur olmaz taşın"
+      },
+      "super-tes": {
+        "title": "Super TES Çıktı",
+        "description": "16-bit çağı başlıyor. Harika grafik yetenekleri.",
+        "action": "TES'ten yükselt - bu popüler platform"
+      },
+      "playsystem": {
+        "title": "PlaySystem Çıktı",
+        "description": "Devrim niteliğinde 3D konsol. Oyunların geleceği.",
+        "action": "ÖNEMLİ: Bu lisansı al ve 3D grafikleri araştır"
+      },
+      "3d-era": {
+        "title": "3D Grafik Çağı",
+        "description": "Yüksek puan alan oyunlar için 3D grafikler artık şart.",
+        "action": "Mümkün olduğunda hemen 3D Grafikler v1'i araştır"
+      },
+      "dreamvast": {
+        "title": "DreamVast Çıktı",
+        "description": "Çevrimiçi yeteneklere sahip gelişmiş konsol.",
+        "action": "Deneysel oyunlar için iyi bir platform"
+      },
+      "playsystem-2": {
+        "title": "PlaySystem 2 Çıktı",
+        "description": "Tüm zamanların en çok satan konsolu. Devasa kitle.",
+        "action": "Olmazsa olmaz platform - dev kurulu kullanıcı tabanı"
+      },
+      "second-office-time": {
+        "title": "İkinci Ofisi Düşün",
+        "description": "Artık daha büyük bir ofise genişlemeye hazır olmalısın.",
+        "action": "İkinci ofis için 5 milyon paraya ihtiyacın var"
+      },
+      "mbox": {
+        "title": "mBox Çıktı",
+        "description": "Konsol pazarında yeni rakip.",
+        "action": "Batı pazarları için iyi"
+      },
+      "playsystem-3": {
+        "title": "PlaySystem 3 Çıktı",
+        "description": "HD oyun dönemi başlıyor. Yüksek geliştirme maliyetleri.",
+        "action": "Nicelik yerine niteliğe odaklan"
+      },
+      "mbox-360": {
+        "title": "mBox 360 Çıktı",
+        "description": "Güçlü çevrimiçi özellikler ve başarı sistemi.",
+        "action": "Çok oyunculu oyunlar için harika"
+      },
+      "own-console": {
+        "title": "Kendi Konsolunu Yarat",
+        "description": "Donanım laboratuvarı kendi oyun konsolunu tasarlamana olanak tanır.",
+        "action": "Yalnızca mali açıdan güçlüysen dene"
+      },
+      "genre-combo-tip": {
+        "title": "Konu-Tür Kombinasyonlarında Usta Ol",
+        "description": "Doğru konu-tür kombinasyonu başarı için çok önemlidir.",
+        "action": "En uygun kombinasyonları bulmak için bu rehberi kullan"
+      },
+      "sequel-strategy": {
+        "title": "Devam Oyunu Stratejisi",
+        "description": "Başarılı oyunların devamları daha iyi performans gösterir. Seriler oluştur.",
+        "action": "Devam oyunu yapmadan önce 9+ puan bekle"
+      },
+      "engine-importance": {
+        "title": "Özel Motor Avantajları",
+        "description": "Özel oyun motorları oluşturmak oyun kalitesini önemli ölçüde artırır.",
+        "action": "Motor geliştirme için Ar-Ge laboratuvarına yatırım yap"
+      },
+      "aaa-games": {
+        "title": "AAA Oyun Geliştirme",
+        "description": "Büyük ekip + Özel Motor + Uygun pazarlama = AAA başarısı.",
+        "action": "AAA oyunları yalnızca deneyimli ekiple dene"
+      }
     }
   },
   "checklist": {
@@ -628,11 +957,27 @@
     "proTip4": "Soruların varsa: Önce SSS'yi kontrol et, sonra detaylı açıklamalar için el kitabına bak.",
     "workflow": {
       "planGame": "Yeni Bir Oyun Planla",
-      "planGameSteps": ["'Tür Önerici'ye git ve istediğin konuyu seç", "Konun için en iyi türü not et", "'Platform Önerici'ye geç ve tür + kitle seç", "'Kaydırıcı Ayarları'nı aç ve türün için değerleri kopyala", "Her şeyi birleştirmek için 'Oyun Planlayıcı'yı kullan"],
+      "planGameSteps": [
+        "'Tür Önerici'ye git ve istediğin konuyu seç",
+        "Konun için en iyi türü not et",
+        "'Platform Önerici'ye geç ve tür + kitle seç",
+        "'Kaydırıcı Ayarları'nı aç ve türün için değerleri kopyala",
+        "Her şeyi birleştirmek için 'Oyun Planlayıcı'yı kullan"
+      ],
       "findSliders": "Optimal Kaydırıcıları Bul",
-      "findSlidersSteps": ["'Kaydırıcı Ayarları'na git", "Listeden türünü seç", "Üç aşama için değerleri oku", "Oyun içinde kaydırıcıları buna göre ayarla"],
+      "findSlidersSteps": [
+        "'Kaydırıcı Ayarları'na git",
+        "Listeden türünü seç",
+        "Üç aşama için değerleri oku",
+        "Oyun içinde kaydırıcıları buna göre ayarla"
+      ],
       "trackProgress": "İlerlemeyi Takip Et",
-      "trackProgressSteps": ["'Kontrol Listesi' sayfasını aç", "Kilometre taşlarını gözden geçir", "Başardıklarını işaretle", "İstersen kendi hedeflerini ekle"]
+      "trackProgressSteps": [
+        "'Kontrol Listesi' sayfasını aç",
+        "Kilometre taşlarını gözden geçir",
+        "Başardıklarını işaretle",
+        "İstersen kendi hedeflerini ekle"
+      ]
     },
     "featureDesc": {
       "dashboard": "En iyi konu-tür kombinasyonlarının ve önemli istatistiklerin hızlı özetini sunan ana sayfan.",
@@ -649,18 +994,66 @@
       "manual": "Tüm oyun mekanikleri için eksiksiz başvuru kaynağı."
     },
     "featureTips": {
-      "dashboard": ["En iyi 5 kombinasyonu bir bakışta gösterir", "Tüm önemli özelliklere hızlı erişim", "Güncel veritabanı istatistikleri görüntülenir"],
-      "topicRecommender": ["Önce listeden bir tür seç", "Konular uyumluluğa göre sıralanır", "Yeşil değerlendirmeler optimal kombinasyonları gösterir"],
-      "genreRecommender": ["Aklında belirli bir tema olduğunda ideal", "Açılma yılını ve maliyetleri gösterir", "En iyi sonuçlar için uyum değerine dikkat et"],
-      "platformRecommender": ["En iyi sonuçlar için tür VE kitle seç", "Lisans maliyetlerini ve pazar payını değerlendir", "Zaman filtresi geçmiş platformlara yardımcı olur"],
-      "sliderPresets": ["Listeden türünü seç", "Her aşama için değerleri kopyala", "Yüksek değerler = o alana daha fazla odaklanma"],
-      "planner": ["Tüm önerileri tek bir planda birleştir", "Birden fazla oyun fikrini kaydet", "Planlarını referans olarak dışa aktar"],
-      "research": ["Kategori ve yıla göre sıralanmış", "Teknolojiler arası bağımlılıkları gösterir", "Araştırmanı planlamana yardımcı olur"],
-      "staff": ["Her ofis aşaması için farklı ipuçları", "Optimal ekip boyutları açıklanır", "Farklı roller için beceri öncelikleri"],
-      "timeline": ["Rehberi kronolojik sırayla takip et", "Önemli platform çıkışları işaretlenmiştir", "Her dönem için stratejik ipuçları"],
-      "checklist": ["Tamamlanan kilometre taşlarını işaretle", "Kendi görevlerini ekle", "İlerleme yerel olarak kaydedilir"],
-      "faq": ["Kategorilere göre düzenlenmiş", "Sık karşılaşılan sorunlara hızlı yanıtlar", "Yanıtı görmek için soruya tıkla"],
-      "manual": ["Tüm detaylarla 6 kategori", "Temel bilgilerden ileri düzeye", "Oyun sırasında başvuru için ideal"]
+      "dashboard": [
+        "En iyi 5 kombinasyonu bir bakışta gösterir",
+        "Tüm önemli özelliklere hızlı erişim",
+        "Güncel veritabanı istatistikleri görüntülenir"
+      ],
+      "topicRecommender": [
+        "Önce listeden bir tür seç",
+        "Konular uyumluluğa göre sıralanır",
+        "Yeşil değerlendirmeler optimal kombinasyonları gösterir"
+      ],
+      "genreRecommender": [
+        "Aklında belirli bir tema olduğunda ideal",
+        "Açılma yılını ve maliyetleri gösterir",
+        "En iyi sonuçlar için uyum değerine dikkat et"
+      ],
+      "platformRecommender": [
+        "En iyi sonuçlar için tür VE kitle seç",
+        "Lisans maliyetlerini ve pazar payını değerlendir",
+        "Zaman filtresi geçmiş platformlara yardımcı olur"
+      ],
+      "sliderPresets": [
+        "Listeden türünü seç",
+        "Her aşama için değerleri kopyala",
+        "Yüksek değerler = o alana daha fazla odaklanma"
+      ],
+      "planner": [
+        "Tüm önerileri tek bir planda birleştir",
+        "Birden fazla oyun fikrini kaydet",
+        "Planlarını referans olarak dışa aktar"
+      ],
+      "research": [
+        "Kategori ve yıla göre sıralanmış",
+        "Teknolojiler arası bağımlılıkları gösterir",
+        "Araştırmanı planlamana yardımcı olur"
+      ],
+      "staff": [
+        "Her ofis aşaması için farklı ipuçları",
+        "Optimal ekip boyutları açıklanır",
+        "Farklı roller için beceri öncelikleri"
+      ],
+      "timeline": [
+        "Rehberi kronolojik sırayla takip et",
+        "Önemli platform çıkışları işaretlenmiştir",
+        "Her dönem için stratejik ipuçları"
+      ],
+      "checklist": [
+        "Tamamlanan kilometre taşlarını işaretle",
+        "Kendi görevlerini ekle",
+        "İlerleme yerel olarak kaydedilir"
+      ],
+      "faq": [
+        "Kategorilere göre düzenlenmiş",
+        "Sık karşılaşılan sorunlara hızlı yanıtlar",
+        "Yanıtı görmek için soruya tıkla"
+      ],
+      "manual": [
+        "Tüm detaylarla 6 kategori",
+        "Temel bilgilerden ileri düzeye",
+        "Oyun sırasında başvuru için ideal"
+      ]
     }
   },
   "sources": {
@@ -728,6 +1121,216 @@
     "contact": {
       "title": "İletişim",
       "description": "Bu gizlilik politikası veya veri uygulamalarımız hakkında soruların varsa, lütfen web sitesi üzerinden bizimle iletişime geç."
+    }
+  },
+  "guide": {
+    "title": "Oyun Geliştiricisi Kralı Kılavuzu",
+    "subtitle": "Garajdan Ar-Ge laboratuvarına kadar, incelemeleri yönlendiren kararlara odaklanan tam bir yol haritası.",
+    "quickChecklistTitle": "Hızlı başlangıç ​​kontrol listesi",
+    "quickChecklist": [
+      "Geliştirmeye başlamadan önce güçlü bir konu-tür birleşimi seçin.",
+      "Platformu ve izleyiciyi türünüzle eşleştirin.",
+      "Üç aşama için kaydırıcı ön ayarlarını kullanın.",
+      "Art arda oyunlarda aynı komboyu tekrarlamaktan kaçının.",
+      "Piyasa ilerlemeden önce teknoloji yükseltmelerini araştırın."
+    ],
+    "phasesTitle": "Aşama aşama izlenecek yol",
+    "phases": {
+      "garage": {
+        "title": "Garaj (1-3 Yaş)",
+        "subtitle": "Güvenilir, orta düzey oyunlarla hayranlar ve istikrar oluşturun.",
+        "steps": [
+          "Erken bir hayran kitlesi oluşturmak için 7'den fazla yorum almayı hedefleyin.",
+          "Maliyetleri kontrol etmek için küçük/orta ölçekli oyunları kullanın.",
+          "Hedef kitleyi mümkün olan en kısa sürede araştırın."
+        ]
+      },
+      "office": {
+        "title": "Birinci Ofis (3-6 Yaş)",
+        "subtitle": "Ekibinizi ölçeklendirin ve daha iyi motorlara geçin.",
+        "steps": [
+          "Tamamlayıcı beceriler için işe alın ve yeni personeli hemen eğitin.",
+          "Doğru özellik setine sahip özel motorlara yatırım yapın.",
+          "Platform seçimini türün popülerliğine uygun hale getirin."
+        ]
+      },
+      "rdLab": {
+        "title": "Ar-Ge Laboratuvarı (6+ Yıl)",
+        "subtitle": "Gelişmiş teknolojinin kilidini açın ve AAA oyunlarına hazırlanın.",
+        "steps": [
+          "Grafik yükseltmelerine ve yüksek değerli tür özelliklerine öncelik verin.",
+          "Bir veya iki personelin araştırmaya odaklanmasını sağlayın.",
+          "Yalnızca orijinali 9'dan fazla puan aldığında devam filmleri oluşturun."
+        ]
+      }
+    },
+    "pitfalls": {
+      "title": "İncelemelere mal olan yaygın hatalar",
+      "items": [
+        "Kaydırıcıları göz ardı etmek ve yalnızca iyi bir kombinasyona güvenmek.",
+        "Hedef kitlenizle eşleşmeyen platformları seçmek.",
+        "Aynı kombinasyonu çok sık tekrarlamak.",
+        "Çok geç olana kadar araştırmayı atlamak."
+      ]
+    },
+    "cta": {
+      "title": "Kılavuzu yürütmek için araçları kullanın",
+      "description": "Yukarıdaki tavsiyeyi bir sonraki oyununuzda uygulamak için öneriye ve ön ayarlara geçin.",
+      "primary": "Konunuza en uygun türü bulun",
+      "secondary": "Kaydırıcı ön ayarlarını edinin"
+    }
+  },
+  "bestCombos": {
+    "title": "En İyi Konu-Tür Kombinasyonları",
+    "subtitle": "Uyum sistemini anlayın ve çağlar boyunca iyi puan alan güvenilir kombinasyonları kullanın.",
+    "fit": {
+      "title": "Uygunluk derecesi nasıl çalışır?",
+      "description": "Her konu-tür çifti -3 ile +3 arasında bir uyum puanı alır. Uyum ne kadar yüksek olursa, yorumlarınız o kadar iyi olur.",
+      "bullets": [
+        "Uyum, inceleme puanlarındaki en büyük faktördür.",
+        "Harika kaydırıcılar kötü uyumu tam olarak düzeltemez.",
+        "Tam uyum değerlerini görmek için öneriyi kullanın."
+      ]
+    },
+    "starterCombos": {
+      "title": "Çağlar boyunca işe yarayan başlangıç ​​kombinasyonları",
+      "items": [
+        "Aksiyon + Askeri / Bilim Kurgu / Fantazi",
+        "RYO + Fantezi / Orta Çağ",
+        "Simülasyon + Şehir / Ulaşım / İş",
+        "Strateji + Orta Çağ / Tarih",
+        "Macera + Fantazi / Dedektif",
+        "Günlük + Çocuk / Parti"
+      ]
+    },
+    "avoid": {
+      "title": "Kaçınılması veya geciktirilmesi gereken kombinasyonlar",
+      "items": [
+        "Çocuklar + Korku (çok düşük uyum)",
+        "Savaş + Basit Eğlence (zayıf izleyici eşleşmesi)",
+        "Aile platformlarında yetişkinlere yönelik temalar",
+        "Aynı kombinasyonu arka arkaya tekrarlamak"
+      ]
+    },
+    "cta": {
+      "title": "Tam olarak en iyi kombinasyonları mı istiyorsunuz?",
+      "description": "Her konuyu uygun ve kilit açma yılına göre sıralamak için öneri aracını kullanın.",
+      "primary": "Tür Öneri Aracını Kullanın",
+      "secondary": "Kaydırıcı ön ayarlarını kontrol edin"
+    }
+  },
+  "slidersExplained": {
+    "title": "Game Dev Tycoon Sliders'ın Açıklaması",
+    "subtitle": "Her aşamanın neye öncelik verdiğini anlayın ve daha iyi incelemeler için kaydırıcıları ayarlayın.",
+    "why": {
+      "title": "Kaydırıcılar neden önemlidir?",
+      "items": [
+        "Kaydırıcılar, ekibinizin her aşamada nasıl zaman harcayacağına karar verir.",
+        "Mükemmel bir kombinasyon bile yanlış kaydırıcı odağıyla başarısız olabilir.",
+        "Her türün aşama başına farklı bir ideal dengesi vardır."
+      ]
+    },
+    "phases": {
+      "title": "Aşama öncelikleri",
+      "phase1": {
+        "title": "Motor ve Oynanış",
+        "focus": "Türe ve oyun boyutuna bağlı olarak motor çalışmasını oynanışla dengeleyin.",
+        "tips": [
+          "Aksiyon ve Simülasyon ağırlıklı olarak oynanışa dayanır.",
+          "Büyük oyunlar daha fazla motor yatırımına ihtiyaç duyar.",
+          "Bir tür onu güçlü bir şekilde desteklemediği sürece aşırılıklardan kaçının."
+        ]
+      },
+      "phase2": {
+        "title": "Hikaye ve Tasarım",
+        "focus": "Hikaye türleri için hikaye daha önemli; tasarım sıradan başlıklar için kazanır.",
+        "tips": [
+          "RPG ve Macera daha yüksek hikaye odağına ihtiyaç duyar.",
+          "Gündelik oyunlar tasarım ve kullanılabilirliğe odaklanır.",
+          "Teknolojinin çok geride kalmasını önleyin."
+        ]
+      },
+      "phase3": {
+        "title": "Lehçe ve Teknoloji",
+        "focus": "Lehçe, inceleme puanları açısından kritik öneme sahiptir; teknoloji platform çağına uygun olmalıdır.",
+        "tips": [
+          "Orta/büyük oyunlarda cilayı asla çok aşağıya düşürmeyin.",
+          "Gelişmiş platformları hedeflerken teknolojiye yatırım yapın.",
+          "Pazarlama ve cilalama birlikte satışları artırır."
+        ]
+      }
+    },
+    "workflow": {
+      "title": "Hızlı iş akışı",
+      "steps": [
+        "Konunuzu ve türünüzü seçin.",
+        "Tür için Kaydırıcı Ön Ayarlarını açın.",
+        "Oyun içindeki her aşama için değerleri uygulayın.",
+        "Oyun boyutunu değiştirdiğinizde kaydırıcıları yeniden kontrol edin."
+      ]
+    },
+    "cta": {
+      "title": "Tür başına kesin sayıları mı istiyorsunuz?",
+      "description": "En iyi kaydırıcı değerlerini anında kopyalamak için ön ayarları kullanın.",
+      "primary": "Kaydırıcı Ön Ayarlarını Aç",
+      "secondary": "En iyi türü bulun"
+    }
+  },
+  "researchOrder": {
+    "title": "Game Dev Tycoon Araştırma Emri",
+    "subtitle": "Pratik bir öncelik listesi sayesinde önemli olanın kilidini ihtiyacınız olmadan önce açabilirsiniz.",
+    "priorities": {
+      "title": "Önerilen araştırma sırası",
+      "items": [
+        "Yeni kitleler (Genç, Herkes, Yetişkin)",
+        "Temel tür özellikleri (Diyaloglar, Yapay Zeka, Çok Oyunculu)",
+        "Yeni platform dalgalarından önce grafik yükseltmeleri",
+        "Pazarlama ve oynanış iyileştirmeleri",
+        "Ar-Ge laboratuvarı ve mevcut olduğunda özel motorlar",
+        "Donanım laboratuvarı ancak güçlü bir nakit tamponundan sonra"
+      ]
+    },
+    "eras": {
+      "title": "Çağa özgü öncelikler",
+      "early": {
+        "title": "Erken oyun",
+        "items": [
+          "Daha iyi uyum için kitlelerin kilidini hızla açın.",
+          "Ucuz, yüksek etkili özelliklere odaklanın.",
+          "Kullanmaya gücünüzün yetmediği araştırmalardan kaçının."
+        ]
+      },
+      "mid": {
+        "title": "Orta oyun",
+        "items": [
+          "3D platformlar göründüğünde grafikleri yükseltin.",
+          "Yeniden kullanılabilir bir özel motor oluşturmaya başlayın.",
+          "Kilitleri açıldıkça çok oyunculu ve çevrimiçi özellikler ekleyin."
+        ]
+      },
+      "late": {
+        "title": "Geç oyun",
+        "items": [
+          "İnceleme cezalarından kaçınmak için teknolojiyi platform düzeyinde tutun.",
+          "Donanım laboratuvarına yalnızca özel bir ekiple yatırım yapın.",
+          "Temel türlerinizle eşleşen özelliklere öncelik verin."
+        ]
+      }
+    },
+    "mistakes": {
+      "title": "Yaygın araştırma hataları",
+      "items": [
+        "Düşük etkili araştırmalarda puanların yayılması.",
+        "Motorlara asla dahil etmediğiniz özelliklerin kilidini açar.",
+        "Grafik yükseltmelerini çok uzun süre geciktirmek.",
+        "Yeterli nakit akışı olmadan donanım inşa etmek."
+      ]
+    },
+    "cta": {
+      "title": "Araştırma izleyiciyi kullanın",
+      "description": "Kilit açma işlemlerinizi ve önkoşullarınızı Araştırma Kılavuzu'nda düzenli tutun.",
+      "primary": "Açık Araştırma Kılavuzu",
+      "secondary": "Zaman Çizelgesini Takip Edin"
     }
   }
 }

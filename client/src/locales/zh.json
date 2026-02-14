@@ -1,56 +1,188 @@
 {
   "data": {
     "genres": {
-      "action": { "name": "动作", "description": "快节奏战斗和反应类游戏玩法" },
-      "adventure": { "name": "冒险", "description": "故事驱动的探索游戏" },
-      "rpg": { "name": "角色扮演", "description": "具有角色成长的角色扮演游戏" },
-      "simulation": { "name": "模拟", "description": "真实世界模拟游戏" },
-      "strategy": { "name": "策略", "description": "战术和策略类游戏玩法" },
-      "casual": { "name": "休闲", "description": "易于游玩的休闲游戏" }
+      "action": {
+        "name": "动作",
+        "description": "快节奏战斗和反应类游戏玩法"
+      },
+      "adventure": {
+        "name": "冒险",
+        "description": "故事驱动的探索游戏"
+      },
+      "rpg": {
+        "name": "角色扮演",
+        "description": "具有角色成长的角色扮演游戏"
+      },
+      "simulation": {
+        "name": "模拟",
+        "description": "真实世界模拟游戏"
+      },
+      "strategy": {
+        "name": "策略",
+        "description": "战术和策略类游戏玩法"
+      },
+      "casual": {
+        "name": "休闲",
+        "description": "易于游玩的休闲游戏"
+      }
     },
     "topics": {
-      "aliens": { "name": "外星人", "description": "外星主题" },
-      "fantasy": { "name": "奇幻", "description": "魔法世界和奇幻生物" },
-      "scifi": { "name": "科幻", "description": "科幻主题" },
-      "medieval": { "name": "中世纪", "description": "中世纪时代设定" },
-      "military": { "name": "军事", "description": "军事和战争主题" },
-      "pirates": { "name": "海盗", "description": "海盗冒险和海战" },
-      "vampires": { "name": "吸血鬼", "description": "吸血鬼和黑暗主题" },
-      "zombies": { "name": "僵尸", "description": "僵尸末日主题" },
-      "sports": { "name": "体育", "description": "体育竞技主题" },
-      "racing": { "name": "竞速", "description": "车辆竞速主题" },
-      "city": { "name": "城市", "description": "城市建设和管理" },
-      "business": { "name": "商业", "description": "商业模拟主题" },
-      "hospital": { "name": "医院", "description": "医疗和医院主题" },
-      "prison": { "name": "监狱", "description": "监狱管理主题" },
-      "space": { "name": "太空", "description": "太空探索主题" },
-      "hunting": { "name": "狩猎", "description": "狩猎和野生动物主题" },
-      "martial-arts": { "name": "武术", "description": "武术格斗主题" },
-      "mystery": { "name": "悬疑", "description": "侦探和悬疑主题" },
-      "comedy": { "name": "喜剧", "description": "幽默和喜剧主题" },
-      "dance": { "name": "舞蹈", "description": "舞蹈和节奏主题" }
+      "aliens": {
+        "name": "外星人",
+        "description": "外星主题"
+      },
+      "fantasy": {
+        "name": "奇幻",
+        "description": "魔法世界和奇幻生物"
+      },
+      "scifi": {
+        "name": "科幻",
+        "description": "科幻主题"
+      },
+      "medieval": {
+        "name": "中世纪",
+        "description": "中世纪时代设定"
+      },
+      "military": {
+        "name": "军事",
+        "description": "军事和战争主题"
+      },
+      "pirates": {
+        "name": "海盗",
+        "description": "海盗冒险和海战"
+      },
+      "vampires": {
+        "name": "吸血鬼",
+        "description": "吸血鬼和黑暗主题"
+      },
+      "zombies": {
+        "name": "僵尸",
+        "description": "僵尸末日主题"
+      },
+      "sports": {
+        "name": "体育",
+        "description": "体育竞技主题"
+      },
+      "racing": {
+        "name": "竞速",
+        "description": "车辆竞速主题"
+      },
+      "city": {
+        "name": "城市",
+        "description": "城市建设和管理"
+      },
+      "business": {
+        "name": "商业",
+        "description": "商业模拟主题"
+      },
+      "hospital": {
+        "name": "医院",
+        "description": "医疗和医院主题"
+      },
+      "prison": {
+        "name": "监狱",
+        "description": "监狱管理主题"
+      },
+      "space": {
+        "name": "太空",
+        "description": "太空探索主题"
+      },
+      "hunting": {
+        "name": "狩猎",
+        "description": "狩猎和野生动物主题"
+      },
+      "martial-arts": {
+        "name": "武术",
+        "description": "武术格斗主题"
+      },
+      "mystery": {
+        "name": "悬疑",
+        "description": "侦探和悬疑主题"
+      },
+      "comedy": {
+        "name": "喜剧",
+        "description": "幽默和喜剧主题"
+      },
+      "dance": {
+        "name": "舞蹈",
+        "description": "舞蹈和节奏主题"
+      }
     },
     "platforms": {
-      "pc": { "name": "PC", "description": "个人电脑平台" },
-      "govodore-64": { "name": "Govodore 64", "description": "早期家用电脑" },
-      "tes": { "name": "TES", "description": "8位游戏机" },
-      "master-v": { "name": "Master V", "description": "16位游戏机" },
-      "super-tes": { "name": "Super TES", "description": "高级16位游戏机" },
-      "genovation": { "name": "Genovation", "description": "基于CD的游戏机" },
-      "playstation": { "name": "Playsystem", "description": "32位CD游戏机" },
-      "nuu-64": { "name": "nuu 64", "description": "64位卡带游戏机" },
-      "dreamvast": { "name": "DreamVast", "description": "支持互联网的游戏机" },
-      "playsystem-2": { "name": "Playsystem 2", "description": "高级DVD游戏机" },
-      "game-sphere": { "name": "Game Sphere", "description": "基于光盘的游戏机" },
-      "mbox": { "name": "mBox", "description": "第一代mBox游戏机" },
-      "playsystem-3": { "name": "Playsystem 3", "description": "高清游戏机" },
-      "mbox-next": { "name": "mBox Next", "description": "次世代mBox" },
-      "whoops": { "name": "whoops", "description": "体感控制游戏机" }
+      "pc": {
+        "name": "PC",
+        "description": "个人电脑平台"
+      },
+      "govodore-64": {
+        "name": "Govodore 64",
+        "description": "早期家用电脑"
+      },
+      "tes": {
+        "name": "TES",
+        "description": "8位游戏机"
+      },
+      "master-v": {
+        "name": "Master V",
+        "description": "16位游戏机"
+      },
+      "super-tes": {
+        "name": "Super TES",
+        "description": "高级16位游戏机"
+      },
+      "genovation": {
+        "name": "Genovation",
+        "description": "基于CD的游戏机"
+      },
+      "playstation": {
+        "name": "Playsystem",
+        "description": "32位CD游戏机"
+      },
+      "nuu-64": {
+        "name": "nuu 64",
+        "description": "64位卡带游戏机"
+      },
+      "dreamvast": {
+        "name": "DreamVast",
+        "description": "支持互联网的游戏机"
+      },
+      "playsystem-2": {
+        "name": "Playsystem 2",
+        "description": "高级DVD游戏机"
+      },
+      "game-sphere": {
+        "name": "Game Sphere",
+        "description": "基于光盘的游戏机"
+      },
+      "mbox": {
+        "name": "mBox",
+        "description": "第一代mBox游戏机"
+      },
+      "playsystem-3": {
+        "name": "Playsystem 3",
+        "description": "高清游戏机"
+      },
+      "mbox-next": {
+        "name": "mBox Next",
+        "description": "次世代mBox"
+      },
+      "whoops": {
+        "name": "whoops",
+        "description": "体感控制游戏机"
+      }
     },
     "audiences": {
-      "young": { "name": "青少年", "description": "适合年轻玩家的游戏" },
-      "everyone": { "name": "全年龄", "description": "适合所有年龄段的游戏" },
-      "mature": { "name": "成人", "description": "面向成年观众的游戏" }
+      "young": {
+        "name": "青少年",
+        "description": "适合年轻玩家的游戏"
+      },
+      "everyone": {
+        "name": "全年龄",
+        "description": "适合所有年龄段的游戏"
+      },
+      "mature": {
+        "name": "成人",
+        "description": "面向成年观众的游戏"
+      }
     }
   },
   "common": {
@@ -271,23 +403,91 @@
     "recommended": "推荐",
     "optional": "可选",
     "items": {
-      "basic-2d-graphics": { "name": "基础2D图形 v1", "description": "初始图形技术", "tip": "从一开始就可用" },
-      "basic-sound": { "name": "基础音效 v1", "description": "初始音效技术", "tip": "从一开始就可用" },
-      "2d-graphics-v2": { "name": "2D图形 v2", "description": "改进的2D图形", "tip": "早期研究以获得更好的游戏分数" },
-      "sound-v2": { "name": "音效 v2", "description": "改进的音效设计", "tip": "在图形改进后研究" },
-      "2d-graphics-v3": { "name": "2D图形 v3", "description": "高级2D图形", "tip": "在搬到第一个办公室之前必需" },
-      "save-game": { "name": "游戏保存", "description": "允许玩家保存进度", "tip": "对RPG和冒险游戏非常重要" },
-      "dialogue-system": { "name": "对话系统", "description": "NPC对话选项", "tip": "非常适合冒险和RPG类型" },
-      "3d-graphics-v1": { "name": "3D图形 v1", "description": "进入3D时代", "tip": "现代平台必需。可用时尽快研究" },
-      "3d-graphics-v2": { "name": "3D图形 v2", "description": "改进的3D渲染", "tip": "保持图形技术最新" },
-      "surround-sound": { "name": "环绕音效", "description": "沉浸式音频体验", "tip": "提升所有类型的质量" },
-      "multiplayer": { "name": "多人游戏", "description": "在线多人游戏支持", "tip": "非常适合动作和策略游戏" },
-      "online-play": { "name": "在线游戏", "description": "互联网多人游戏", "tip": "在线平台出现时研究" },
-      "3d-graphics-v4": { "name": "3D图形 v4", "description": "高端3D图形", "tip": "AAA游戏所需" },
-      "hd-audio": { "name": "高清音频", "description": "高清晰度音频", "tip": "现代游戏的标准" },
-      "advanced-ai": { "name": "高级AI", "description": "更智能的敌人行为", "tip": "对策略和模拟游戏很重要" },
-      "open-world": { "name": "开放世界", "description": "非线性探索", "tip": "非常适合冒险和RPG游戏" },
-      "vr-support": { "name": "VR支持", "description": "虚拟现实游戏", "tip": "未来技术投资" }
+      "basic-2d-graphics": {
+        "name": "基础2D图形 v1",
+        "description": "初始图形技术",
+        "tip": "从一开始就可用"
+      },
+      "basic-sound": {
+        "name": "基础音效 v1",
+        "description": "初始音效技术",
+        "tip": "从一开始就可用"
+      },
+      "2d-graphics-v2": {
+        "name": "2D图形 v2",
+        "description": "改进的2D图形",
+        "tip": "早期研究以获得更好的游戏分数"
+      },
+      "sound-v2": {
+        "name": "音效 v2",
+        "description": "改进的音效设计",
+        "tip": "在图形改进后研究"
+      },
+      "2d-graphics-v3": {
+        "name": "2D图形 v3",
+        "description": "高级2D图形",
+        "tip": "在搬到第一个办公室之前必需"
+      },
+      "save-game": {
+        "name": "游戏保存",
+        "description": "允许玩家保存进度",
+        "tip": "对RPG和冒险游戏非常重要"
+      },
+      "dialogue-system": {
+        "name": "对话系统",
+        "description": "NPC对话选项",
+        "tip": "非常适合冒险和RPG类型"
+      },
+      "3d-graphics-v1": {
+        "name": "3D图形 v1",
+        "description": "进入3D时代",
+        "tip": "现代平台必需。可用时尽快研究"
+      },
+      "3d-graphics-v2": {
+        "name": "3D图形 v2",
+        "description": "改进的3D渲染",
+        "tip": "保持图形技术最新"
+      },
+      "surround-sound": {
+        "name": "环绕音效",
+        "description": "沉浸式音频体验",
+        "tip": "提升所有类型的质量"
+      },
+      "multiplayer": {
+        "name": "多人游戏",
+        "description": "在线多人游戏支持",
+        "tip": "非常适合动作和策略游戏"
+      },
+      "online-play": {
+        "name": "在线游戏",
+        "description": "互联网多人游戏",
+        "tip": "在线平台出现时研究"
+      },
+      "3d-graphics-v4": {
+        "name": "3D图形 v4",
+        "description": "高端3D图形",
+        "tip": "AAA游戏所需"
+      },
+      "hd-audio": {
+        "name": "高清音频",
+        "description": "高清晰度音频",
+        "tip": "现代游戏的标准"
+      },
+      "advanced-ai": {
+        "name": "高级AI",
+        "description": "更智能的敌人行为",
+        "tip": "对策略和模拟游戏很重要"
+      },
+      "open-world": {
+        "name": "开放世界",
+        "description": "非线性探索",
+        "tip": "非常适合冒险和RPG游戏"
+      },
+      "vr-support": {
+        "name": "VR支持",
+        "description": "虚拟现实游戏",
+        "tip": "未来技术投资"
+      }
     }
   },
   "staff": {
@@ -321,21 +521,66 @@
     "fromYear": "起始年份",
     "untilYear": "结束年份",
     "items": {
-      "garage-solo": { "title": "在车库独自工作", "description": "在车库阶段您无法招聘员工。专注于提升技能并为第一个办公室存钱。" },
-      "garage-skills": { "title": "平衡您的技能", "description": "在设计和技术两方面训练自己。700/700的分割对于制作高质量游戏是最佳的。" },
-      "garage-save": { "title": "为第一个办公室存钱", "description": "您需要100万美元来解锁第一个办公室。在第4-5年积极存钱。" },
-      "first-hire": { "title": "招聘您的第一个员工", "description": "招聘具有互补技能的人。如果您在设计方面很强，就招聘技术方面很强的人，反之亦然。" },
-      "first-training": { "title": "立即培训", "description": "新员工统计数据较低。使用培训快速提升他们的技能。首先优先处理他们最弱的领域。" },
-      "first-specialist": { "title": "专家 vs 通才", "description": "早期游戏：招聘能够执行多项任务的通才。后期：在更大的团队中为特定角色招聘专家。" },
-      "first-team-size": { "title": "团队规模提示", "description": "小型游戏：1-2人。中型游戏：2-3人。将团队规模与游戏规模匹配以获得最佳效率。" },
-      "second-expand": { "title": "扩展到6名员工", "description": "第二个办公室最多允许6名员工。根据您的现金流逐步招聘。" },
-      "second-roles": { "title": "分配角色", "description": "指定2-3名员工负责设计任务（艺术、故事、音效），2-3名负责技术（引擎、AI、关卡设计）。" },
-      "second-large-games": { "title": "大型游戏团队", "description": "大型游戏需要4人以上。AAA游戏需要6人。确保您有足够的训练有素的员工。" },
-      "second-specialists": { "title": "招聘专家", "description": "考虑图形专家、音效工程师和作家，以在特定领域提高游戏质量。" },
-      "rd-lab-unlock": { "title": "研发实验室优势", "description": "研发实验室允许您研究新引擎和硬件。您需要至少4名员工才能有效使用它。" },
-      "rd-dedicated": { "title": "专职研发员工", "description": "将1-2名员工永久分配到研发。他们应该具有高研究速度和技术技能。" },
-      "hw-lab-unlock": { "title": "硬件实验室团队", "description": "创建您自己的游戏机需要专职团队。分配您最好的技术专家。" },
-      "hw-console-team": { "title": "游戏机开发", "description": "构建游戏机需要2-3名专职员工，持续6个月以上。相应地规划您的团队容量。" }
+      "garage-solo": {
+        "title": "在车库独自工作",
+        "description": "在车库阶段您无法招聘员工。专注于提升技能并为第一个办公室存钱。"
+      },
+      "garage-skills": {
+        "title": "平衡您的技能",
+        "description": "在设计和技术两方面训练自己。700/700的分割对于制作高质量游戏是最佳的。"
+      },
+      "garage-save": {
+        "title": "为第一个办公室存钱",
+        "description": "您需要100万美元来解锁第一个办公室。在第4-5年积极存钱。"
+      },
+      "first-hire": {
+        "title": "招聘您的第一个员工",
+        "description": "招聘具有互补技能的人。如果您在设计方面很强，就招聘技术方面很强的人，反之亦然。"
+      },
+      "first-training": {
+        "title": "立即培训",
+        "description": "新员工统计数据较低。使用培训快速提升他们的技能。首先优先处理他们最弱的领域。"
+      },
+      "first-specialist": {
+        "title": "专家 vs 通才",
+        "description": "早期游戏：招聘能够执行多项任务的通才。后期：在更大的团队中为特定角色招聘专家。"
+      },
+      "first-team-size": {
+        "title": "团队规模提示",
+        "description": "小型游戏：1-2人。中型游戏：2-3人。将团队规模与游戏规模匹配以获得最佳效率。"
+      },
+      "second-expand": {
+        "title": "扩展到6名员工",
+        "description": "第二个办公室最多允许6名员工。根据您的现金流逐步招聘。"
+      },
+      "second-roles": {
+        "title": "分配角色",
+        "description": "指定2-3名员工负责设计任务（艺术、故事、音效），2-3名负责技术（引擎、AI、关卡设计）。"
+      },
+      "second-large-games": {
+        "title": "大型游戏团队",
+        "description": "大型游戏需要4人以上。AAA游戏需要6人。确保您有足够的训练有素的员工。"
+      },
+      "second-specialists": {
+        "title": "招聘专家",
+        "description": "考虑图形专家、音效工程师和作家，以在特定领域提高游戏质量。"
+      },
+      "rd-lab-unlock": {
+        "title": "研发实验室优势",
+        "description": "研发实验室允许您研究新引擎和硬件。您需要至少4名员工才能有效使用它。"
+      },
+      "rd-dedicated": {
+        "title": "专职研发员工",
+        "description": "将1-2名员工永久分配到研发。他们应该具有高研究速度和技术技能。"
+      },
+      "hw-lab-unlock": {
+        "title": "硬件实验室团队",
+        "description": "创建您自己的游戏机需要专职团队。分配您最好的技术专家。"
+      },
+      "hw-console-team": {
+        "title": "游戏机开发",
+        "description": "构建游戏机需要2-3名专职员工，持续6个月以上。相应地规划您的团队容量。"
+      }
     }
   },
   "timeline": {
@@ -368,27 +613,111 @@
       "featureUnlock": "功能解锁"
     },
     "items": {
-      "start-game": { "title": "游戏开始", "description": "您从车库开始，拥有$70K。制作小型游戏以积累经验。", "action": "制作动作或冒险游戏 - 它们对初学者很友好" },
-      "pc-available": { "title": "PC平台可用", "description": "PC是您的起始平台。无需许可费。", "action": "在所有早期游戏中使用PC" },
-      "govodore-64": { "title": "Govodore 64发布", "description": "第一个价格合理的游戏机。适合休闲和动作游戏。", "action": "如果制作休闲游戏，考虑获得许可" },
-      "first-hit": { "title": "瞄准第一个成功", "description": "到第2年，尝试制作一个得分7+的游戏以建立粉丝。", "action": "专注于良好的主题-类型组合和适当的滑块设置" },
-      "office-goal": { "title": "为办公室存钱", "description": "您现在应该接近100万美元用于第一个办公室。", "action": "如果没有，专注于具有良好组合的中型游戏" },
-      "tes-release": { "title": "TES发布", "description": "拥有大量受众的主要游戏机。非常适合动作游戏。", "action": "强大的平台 - 获得许可" },
-      "first-office-available": { "title": "第一个办公室可用", "description": "拥有100万现金，您可以搬到第一个办公室并招聘员工。", "action": "一有钱就搬家" },
-      "super-tes": { "title": "Super TES发布", "description": "16位时代开始。出色的图形功能。", "action": "从TES升级 - 这是热门平台" },
-      "playsystem": { "title": "PlaySystem发布", "description": "革命性的3D游戏机。游戏的未来。", "action": "必需：获得此许可并研究3D图形" },
-      "3d-era": { "title": "3D图形时代", "description": "3D图形成为高分游戏的必需品。", "action": "可用时立即研究3D图形 v1" },
-      "dreamvast": { "title": "DreamVast发布", "description": "具有在线功能的高级游戏机。", "action": "实验性游戏的良好平台" },
-      "playsystem-2": { "title": "PlaySystem 2发布", "description": "有史以来最畅销的游戏机。庞大的受众。", "action": "必备平台 - 巨大的安装基础" },
-      "second-office-time": { "title": "考虑第二个办公室", "description": "现在您应该准备好扩展到更大的办公室。", "action": "第二个办公室需要500万现金" },
-      "mbox": { "title": "mBox发布", "description": "游戏机市场的新竞争对手。", "action": "适合西方市场" },
-      "playsystem-3": { "title": "PlaySystem 3发布", "description": "高清游戏到来。高开发成本。", "action": "专注于质量而非数量" },
-      "mbox-360": { "title": "mBox 360发布", "description": "强大的在线功能和成就系统。", "action": "非常适合多人游戏" },
-      "own-console": { "title": "创建您自己的游戏机", "description": "硬件实验室允许您设计自己的游戏机。", "action": "仅在财务稳定时尝试" },
-      "genre-combo-tip": { "title": "掌握主题-类型组合", "description": "正确的主题-类型组合对成功至关重要。", "action": "使用此指南找到最佳组合" },
-      "sequel-strategy": { "title": "续集策略", "description": "成功游戏的续集表现更好。建立系列。", "action": "在制作续集之前等待9+分数" },
-      "engine-importance": { "title": "自定义引擎优势", "description": "构建自定义游戏引擎显著提高游戏质量。", "action": "投资研发实验室进行引擎开发" },
-      "aaa-games": { "title": "AAA游戏开发", "description": "大型团队 + 自定义引擎 + 适当的营销 = AAA成功。", "action": "仅在有经验的团队时尝试AAA游戏" }
+      "start-game": {
+        "title": "游戏开始",
+        "description": "您从车库开始，拥有$70K。制作小型游戏以积累经验。",
+        "action": "制作动作或冒险游戏 - 它们对初学者很友好"
+      },
+      "pc-available": {
+        "title": "PC平台可用",
+        "description": "PC是您的起始平台。无需许可费。",
+        "action": "在所有早期游戏中使用PC"
+      },
+      "govodore-64": {
+        "title": "Govodore 64发布",
+        "description": "第一个价格合理的游戏机。适合休闲和动作游戏。",
+        "action": "如果制作休闲游戏，考虑获得许可"
+      },
+      "first-hit": {
+        "title": "瞄准第一个成功",
+        "description": "到第2年，尝试制作一个得分7+的游戏以建立粉丝。",
+        "action": "专注于良好的主题-类型组合和适当的滑块设置"
+      },
+      "office-goal": {
+        "title": "为办公室存钱",
+        "description": "您现在应该接近100万美元用于第一个办公室。",
+        "action": "如果没有，专注于具有良好组合的中型游戏"
+      },
+      "tes-release": {
+        "title": "TES发布",
+        "description": "拥有大量受众的主要游戏机。非常适合动作游戏。",
+        "action": "强大的平台 - 获得许可"
+      },
+      "first-office-available": {
+        "title": "第一个办公室可用",
+        "description": "拥有100万现金，您可以搬到第一个办公室并招聘员工。",
+        "action": "一有钱就搬家"
+      },
+      "super-tes": {
+        "title": "Super TES发布",
+        "description": "16位时代开始。出色的图形功能。",
+        "action": "从TES升级 - 这是热门平台"
+      },
+      "playsystem": {
+        "title": "PlaySystem发布",
+        "description": "革命性的3D游戏机。游戏的未来。",
+        "action": "必需：获得此许可并研究3D图形"
+      },
+      "3d-era": {
+        "title": "3D图形时代",
+        "description": "3D图形成为高分游戏的必需品。",
+        "action": "可用时立即研究3D图形 v1"
+      },
+      "dreamvast": {
+        "title": "DreamVast发布",
+        "description": "具有在线功能的高级游戏机。",
+        "action": "实验性游戏的良好平台"
+      },
+      "playsystem-2": {
+        "title": "PlaySystem 2发布",
+        "description": "有史以来最畅销的游戏机。庞大的受众。",
+        "action": "必备平台 - 巨大的安装基础"
+      },
+      "second-office-time": {
+        "title": "考虑第二个办公室",
+        "description": "现在您应该准备好扩展到更大的办公室。",
+        "action": "第二个办公室需要500万现金"
+      },
+      "mbox": {
+        "title": "mBox发布",
+        "description": "游戏机市场的新竞争对手。",
+        "action": "适合西方市场"
+      },
+      "playsystem-3": {
+        "title": "PlaySystem 3发布",
+        "description": "高清游戏到来。高开发成本。",
+        "action": "专注于质量而非数量"
+      },
+      "mbox-360": {
+        "title": "mBox 360发布",
+        "description": "强大的在线功能和成就系统。",
+        "action": "非常适合多人游戏"
+      },
+      "own-console": {
+        "title": "创建您自己的游戏机",
+        "description": "硬件实验室允许您设计自己的游戏机。",
+        "action": "仅在财务稳定时尝试"
+      },
+      "genre-combo-tip": {
+        "title": "掌握主题-类型组合",
+        "description": "正确的主题-类型组合对成功至关重要。",
+        "action": "使用此指南找到最佳组合"
+      },
+      "sequel-strategy": {
+        "title": "续集策略",
+        "description": "成功游戏的续集表现更好。建立系列。",
+        "action": "在制作续集之前等待9+分数"
+      },
+      "engine-importance": {
+        "title": "自定义引擎优势",
+        "description": "构建自定义游戏引擎显著提高游戏质量。",
+        "action": "投资研发实验室进行引擎开发"
+      },
+      "aaa-games": {
+        "title": "AAA游戏开发",
+        "description": "大型团队 + 自定义引擎 + 适当的营销 = AAA成功。",
+        "action": "仅在有经验的团队时尝试AAA游戏"
+      }
     }
   },
   "checklist": {
@@ -628,11 +957,27 @@
     "proTip4": "对于问题：首先查看FAQ，然后查看手册以获取详细说明。",
     "workflow": {
       "planGame": "规划新游戏",
-      "planGameSteps": ["转到'类型推荐'并选择您想要的主题", "记录您主题的最佳类型", "切换到'平台推荐'并选择类型 + 受众", "打开'滑块预设'并复制您类型的值", "使用'游戏规划器'组合所有内容"],
+      "planGameSteps": [
+        "转到'类型推荐'并选择您想要的主题",
+        "记录您主题的最佳类型",
+        "切换到'平台推荐'并选择类型 + 受众",
+        "打开'滑块预设'并复制您类型的值",
+        "使用'游戏规划器'组合所有内容"
+      ],
       "findSliders": "找到最佳滑块",
-      "findSlidersSteps": ["转到'滑块预设'", "从列表中选择您的类型", "阅读所有三个阶段的值", "相应地设置游戏中的滑块"],
+      "findSlidersSteps": [
+        "转到'滑块预设'",
+        "从列表中选择您的类型",
+        "阅读所有三个阶段的值",
+        "相应地设置游戏中的滑块"
+      ],
       "trackProgress": "跟踪进度",
-      "trackProgressSteps": ["打开'检查清单'页面", "浏览里程碑", "勾选您已经完成的内容", "如果需要，添加您自己的目标"]
+      "trackProgressSteps": [
+        "打开'检查清单'页面",
+        "浏览里程碑",
+        "勾选您已经完成的内容",
+        "如果需要，添加您自己的目标"
+      ]
     },
     "featureDesc": {
       "dashboard": "您的首页，快速概览最佳主题-类型组合和重要统计信息。",
@@ -649,18 +994,276 @@
       "manual": "所有游戏机制的完整参考。"
     },
     "featureTips": {
-      "dashboard": ["一目了然地显示前5个最佳组合", "快速访问所有重要功能", "显示当前数据库统计信息"],
-      "topicRecommender": ["首先从列表中选择类型", "主题按兼容性排序", "绿色评级显示最佳组合"],
-      "genreRecommender": ["当您有特定主题时理想", "显示解锁年份和成本", "注意匹配度评级以获得最佳结果"],
-      "platformRecommender": ["选择类型和受众以获得最佳结果", "考虑许可成本和市场份额", "时间筛选有助于历史平台"],
-      "sliderPresets": ["从列表中选择您的类型", "复制每个阶段的值", "高值 = 更多关注该领域"],
-      "planner": ["将所有推荐组合到一个计划中", "保存多个游戏想法", "导出您的计划作为参考"],
-      "research": ["按类别和年份排序", "显示技术之间的依赖关系", "帮助规划您的研究"],
-      "staff": ["每个办公室阶段的不同提示", "解释最佳团队规模", "不同角色的技能优先级"],
-      "timeline": ["按时间顺序遵循指南", "标记重要的平台发布", "每个时间段的策略提示"],
-      "checklist": ["勾选已完成的里程碑", "添加您自己的任务", "进度本地保存"],
-      "faq": ["按类别组织", "常见问题的快速答案", "点击问题查看答案"],
-      "manual": ["6个类别，包含所有详细信息", "从基础到高级", "游戏过程中参考的理想选择"]
+      "dashboard": [
+        "一目了然地显示前5个最佳组合",
+        "快速访问所有重要功能",
+        "显示当前数据库统计信息"
+      ],
+      "topicRecommender": [
+        "首先从列表中选择类型",
+        "主题按兼容性排序",
+        "绿色评级显示最佳组合"
+      ],
+      "genreRecommender": [
+        "当您有特定主题时理想",
+        "显示解锁年份和成本",
+        "注意匹配度评级以获得最佳结果"
+      ],
+      "platformRecommender": [
+        "选择类型和受众以获得最佳结果",
+        "考虑许可成本和市场份额",
+        "时间筛选有助于历史平台"
+      ],
+      "sliderPresets": [
+        "从列表中选择您的类型",
+        "复制每个阶段的值",
+        "高值 = 更多关注该领域"
+      ],
+      "planner": [
+        "将所有推荐组合到一个计划中",
+        "保存多个游戏想法",
+        "导出您的计划作为参考"
+      ],
+      "research": [
+        "按类别和年份排序",
+        "显示技术之间的依赖关系",
+        "帮助规划您的研究"
+      ],
+      "staff": [
+        "每个办公室阶段的不同提示",
+        "解释最佳团队规模",
+        "不同角色的技能优先级"
+      ],
+      "timeline": [
+        "按时间顺序遵循指南",
+        "标记重要的平台发布",
+        "每个时间段的策略提示"
+      ],
+      "checklist": [
+        "勾选已完成的里程碑",
+        "添加您自己的任务",
+        "进度本地保存"
+      ],
+      "faq": [
+        "按类别组织",
+        "常见问题的快速答案",
+        "点击问题查看答案"
+      ],
+      "manual": [
+        "6个类别，包含所有详细信息",
+        "从基础到高级",
+        "游戏过程中参考的理想选择"
+      ]
+    }
+  },
+  "guide": {
+    "title": "Game Dev Tycoon 进阶指南",
+    "subtitle": "从车库到研发实验室的完整路线，聚焦真正影响评分的关键决策。",
+    "quickChecklistTitle": "快速上手清单",
+    "quickChecklist": [
+      "开始开发前，先选一个强势的题材-类型组合。",
+      "让平台与受众和你的类型保持一致。",
+      "三个开发阶段都使用滑块预设。",
+      "避免连续两款游戏使用同一组合。",
+      "在市场换代前提前完成关键技术升级。"
+    ],
+    "phasesTitle": "分阶段实战流程",
+    "phases": {
+      "garage": {
+        "title": "车库阶段（第 1-3 年）",
+        "subtitle": "用稳定的小/中型项目积累口碑与现金流。",
+        "steps": [
+          "尽量拿到 7+ 评价，尽早建立粉丝基础。",
+          "以小型或中型项目控制成本风险。",
+          "受众研究尽量提早解锁。"
+        ]
+      },
+      "office": {
+        "title": "第一办公室（第 3-6 年）",
+        "subtitle": "扩充团队并切换到更强的引擎路线。",
+        "steps": [
+          "按互补技能招人，并立即培训新员工。",
+          "投资功能匹配的自研引擎。",
+          "平台选择要跟随类型热度与市场趋势。"
+        ]
+      },
+      "rdLab": {
+        "title": "研发实验室（第 6 年起）",
+        "subtitle": "解锁高级技术，为 AAA 项目做准备。",
+        "steps": [
+          "优先图形升级和高价值类型功能。",
+          "安排 1-2 名员工长期专注研究。",
+          "只有前作评分 9+ 时再做续作。"
+        ]
+      }
+    },
+    "pitfalls": {
+      "title": "最常见且最伤评分的错误",
+      "items": [
+        "只看题材-类型组合，忽略滑块分配。",
+        "选择与目标受众不匹配的平台。",
+        "同一组合重复使用过于频繁。",
+        "研究节奏过慢，错过版本窗口。"
+      ]
+    },
+    "cta": {
+      "title": "用工具把指南落地",
+      "description": "进入推荐器和预设页面，把上面的建议直接应用到下一款游戏。",
+      "primary": "为题材找到最佳类型",
+      "secondary": "打开滑块预设"
+    }
+  },
+  "bestCombos": {
+    "title": "最佳题材-类型组合",
+    "subtitle": "理解适配系统，使用在多个时代都稳定高分的组合。",
+    "fit": {
+      "title": "适配评分的工作方式",
+      "description": "每个题材-类型组合都有 -3 到 +3 的适配值。分数越高，评测通常越好。",
+      "bullets": [
+        "适配值是影响评分最大的单项因素。",
+        "滑块再好也难以完全弥补低适配。",
+        "在推荐器里可查看精确适配分。"
+      ]
+    },
+    "starterCombos": {
+      "title": "开局到中期都实用的组合",
+      "items": [
+        "åŠ¨ä½œ + å†›äº‹ / ç§‘å¹» / å¥‡å¹»",
+        "RPG + å¥‡å¹» / ä¸­ä¸–çºª",
+        "æ¨¡æ‹Ÿ + åŸŽå¸‚ / è¿è¾“ / å•†ä¸š",
+        "ç­–ç•¥ + ä¸­ä¸–çºª / åŽ†å²",
+        "å†’é™© + å¥‡å¹» / ä¾¦æŽ¢",
+        "ä¼‘é—² + å„¿ç«¥ / æ´¾å¯¹"
+      ]
+    },
+    "avoid": {
+      "title": "建议避免或延后尝试的组合",
+      "items": [
+        "Kids + Horror（适配极低）",
+        "War + Casual（受众匹配弱）",
+        "家庭平台上的成人主题",
+        "连续复用同一组合"
+      ]
+    },
+    "cta": {
+      "title": "想看精确最优组合？",
+      "description": "使用推荐器按适配分和解锁年份排序所有题材。",
+      "primary": "打开类型推荐器",
+      "secondary": "查看滑块预设"
+    }
+  },
+  "slidersExplained": {
+    "title": "Game Dev Tycoon 滑块详解",
+    "subtitle": "理解三阶段重点，让滑块配置更贴合类型并提高评分。",
+    "why": {
+      "title": "为什么滑块非常关键",
+      "items": [
+        "滑块决定团队在各阶段的时间投入分配。",
+        "即使组合完美，滑块错配也会导致翻车。",
+        "不同类型在每个阶段的最佳平衡点并不相同。"
+      ]
+    },
+    "phases": {
+      "title": "阶段优先级",
+      "phase1": {
+        "title": "引擎与玩法",
+        "focus": "根据类型和项目规模，平衡引擎投入与玩法投入。",
+        "tips": [
+          "Action 与 Simulation 通常更依赖玩法质量。",
+          "大型项目通常需要更高的引擎投入。",
+          "除非类型明确要求，否则避免极端分配。"
+        ]
+      },
+      "phase2": {
+        "title": "剧情与设计",
+        "focus": "叙事型类型更吃剧情；休闲类型更看重设计与易用性。",
+        "tips": [
+          "RPG 与 Adventure 通常需要更高剧情权重。",
+          "Casual 更强调设计与可上手性。",
+          "不要让技术相关投入在此阶段掉队太多。"
+        ]
+      },
+      "phase3": {
+        "title": "打磨与技术",
+        "focus": "打磨质量直接影响评测表现；技术水平需匹配平台时代。",
+        "tips": [
+          "中大型项目不要把打磨拉得过低。",
+          "面向高阶平台时，提高技术侧投入。",
+          "营销与打磨配合通常能提升销量。"
+        ]
+      }
+    },
+    "workflow": {
+      "title": "快速操作流程",
+      "steps": [
+        "先确定题材与类型。",
+        "打开对应类型的滑块预设。",
+        "在游戏中按阶段应用预设数值。",
+        "项目规模变更后重新核对滑块。"
+      ]
+    },
+    "cta": {
+      "title": "想看各类型的精确数值？",
+      "description": "使用预设可以一键参考最佳滑块配置。",
+      "primary": "打开滑块预设",
+      "secondary": "查找最佳类型"
+    }
+  },
+  "researchOrder": {
+    "title": "Game Dev Tycoon 研究顺序",
+    "subtitle": "一份实用优先级清单，确保你在正确时间解锁最重要内容。",
+    "priorities": {
+      "title": "推荐研究优先级",
+      "items": [
+        "新受众（Young、Everyone、Mature）",
+        "核心类型功能（Dialogues、AI、Multiplayer）",
+        "新平台浪潮到来前的图形升级",
+        "营销与玩法相关提升",
+        "解锁后尽快规划研发实验室与自研引擎",
+        "硬件实验室需在现金缓冲充足后再投入"
+      ]
+    },
+    "eras": {
+      "title": "分时期研究重点",
+      "early": {
+        "title": "前期",
+        "items": [
+          "尽快解锁受众，提升适配上限。",
+          "优先低成本高回报的研究项。",
+          "不要研究短期无法落地的内容。"
+        ]
+      },
+      "mid": {
+        "title": "中期",
+        "items": [
+          "3D 平台出现后及时升级图形技术。",
+          "开始搭建可复用的自研引擎路线。",
+          "多人和在线功能解锁后逐步纳入。"
+        ]
+      },
+      "late": {
+        "title": "后期",
+        "items": [
+          "让技术水平跟上平台代际，避免评分惩罚。",
+          "仅在有专门团队时投入硬件实验室。",
+          "优先支持你主力类型的高价值功能。"
+        ]
+      }
+    },
+    "mistakes": {
+      "title": "常见研究失误",
+      "items": [
+        "把研究点分散到低影响项目上。",
+        "解锁了功能却从不放进引擎配置。",
+        "图形升级节奏明显滞后。",
+        "现金流不足时贸然做硬件研发。"
+      ]
+    },
+    "cta": {
+      "title": "使用研究追踪",
+      "description": "在 Research Guide 中持续管理解锁项与前置条件。",
+      "primary": "打开 Research Guide",
+      "secondary": "按 Timeline 推进"
     }
   },
   "sources": {

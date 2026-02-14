@@ -1,56 +1,188 @@
 {
   "data": {
     "genres": {
-      "action": { "name": "Akce", "description": "Rychlý gameplay s boji a reflexy" },
-      "adventure": { "name": "Dobrodružství", "description": "Příběhové hry s průzkumem" },
-      "rpg": { "name": "RPG", "description": "Hry na hrdiny s vývojem postavy" },
-      "simulation": { "name": "Simulace", "description": "Hry simulující reálný svět" },
-      "strategy": { "name": "Strategie", "description": "Taktický a strategický gameplay" },
-      "casual": { "name": "Casual", "description": "Jednoduché a nenáročné hry" }
+      "action": {
+        "name": "Akce",
+        "description": "Rychlý gameplay s boji a reflexy"
+      },
+      "adventure": {
+        "name": "Dobrodružství",
+        "description": "Příběhové hry s průzkumem"
+      },
+      "rpg": {
+        "name": "RPG",
+        "description": "Hry na hrdiny s vývojem postavy"
+      },
+      "simulation": {
+        "name": "Simulace",
+        "description": "Hry simulující reálný svět"
+      },
+      "strategy": {
+        "name": "Strategie",
+        "description": "Taktický a strategický gameplay"
+      },
+      "casual": {
+        "name": "Casual",
+        "description": "Jednoduché a nenáročné hry"
+      }
     },
     "topics": {
-      "aliens": { "name": "Mimozemšťané", "description": "Mimozemská tématika" },
-      "fantasy": { "name": "Fantasy", "description": "Magické světy a pohádkové bytosti" },
-      "scifi": { "name": "Sci-fi", "description": "Vědeckofantastická tématika" },
-      "medieval": { "name": "Středověk", "description": "Středověké prostředí" },
-      "military": { "name": "Vojenské", "description": "Vojenská a válečná tématika" },
-      "pirates": { "name": "Piráti", "description": "Pirátská dobrodružství a námořní bitvy" },
-      "vampires": { "name": "Upíři", "description": "Upířská a temná tématika" },
-      "zombies": { "name": "Zombie", "description": "Zombie apokalypsa" },
-      "sports": { "name": "Sport", "description": "Sportovní soutěže" },
-      "racing": { "name": "Závodění", "description": "Závody vozidel" },
-      "city": { "name": "Město", "description": "Stavba a správa měst" },
-      "business": { "name": "Byznys", "description": "Podnikatelská simulace" },
-      "hospital": { "name": "Nemocnice", "description": "Zdravotnická tématika" },
-      "prison": { "name": "Vězení", "description": "Správa vězení" },
-      "space": { "name": "Vesmír", "description": "Průzkum vesmíru" },
-      "hunting": { "name": "Lov", "description": "Lovecká a přírodní tématika" },
-      "martial-arts": { "name": "Bojová umění", "description": "Bojová umění a souboje" },
-      "mystery": { "name": "Záhady", "description": "Detektivní a záhadná tématika" },
-      "comedy": { "name": "Komedie", "description": "Humorná tématika" },
-      "dance": { "name": "Tanec", "description": "Taneční a rytmická tématika" }
+      "aliens": {
+        "name": "Mimozemšťané",
+        "description": "Mimozemská tématika"
+      },
+      "fantasy": {
+        "name": "Fantasy",
+        "description": "Magické světy a pohádkové bytosti"
+      },
+      "scifi": {
+        "name": "Sci-fi",
+        "description": "Vědeckofantastická tématika"
+      },
+      "medieval": {
+        "name": "Středověk",
+        "description": "Středověké prostředí"
+      },
+      "military": {
+        "name": "Vojenské",
+        "description": "Vojenská a válečná tématika"
+      },
+      "pirates": {
+        "name": "Piráti",
+        "description": "Pirátská dobrodružství a námořní bitvy"
+      },
+      "vampires": {
+        "name": "Upíři",
+        "description": "Upířská a temná tématika"
+      },
+      "zombies": {
+        "name": "Zombie",
+        "description": "Zombie apokalypsa"
+      },
+      "sports": {
+        "name": "Sport",
+        "description": "Sportovní soutěže"
+      },
+      "racing": {
+        "name": "Závodění",
+        "description": "Závody vozidel"
+      },
+      "city": {
+        "name": "Město",
+        "description": "Stavba a správa měst"
+      },
+      "business": {
+        "name": "Byznys",
+        "description": "Podnikatelská simulace"
+      },
+      "hospital": {
+        "name": "Nemocnice",
+        "description": "Zdravotnická tématika"
+      },
+      "prison": {
+        "name": "Vězení",
+        "description": "Správa vězení"
+      },
+      "space": {
+        "name": "Vesmír",
+        "description": "Průzkum vesmíru"
+      },
+      "hunting": {
+        "name": "Lov",
+        "description": "Lovecká a přírodní tématika"
+      },
+      "martial-arts": {
+        "name": "Bojová umění",
+        "description": "Bojová umění a souboje"
+      },
+      "mystery": {
+        "name": "Záhady",
+        "description": "Detektivní a záhadná tématika"
+      },
+      "comedy": {
+        "name": "Komedie",
+        "description": "Humorná tématika"
+      },
+      "dance": {
+        "name": "Tanec",
+        "description": "Taneční a rytmická tématika"
+      }
     },
     "platforms": {
-      "pc": { "name": "PC", "description": "Osobní počítač" },
-      "govodore-64": { "name": "Govodore 64", "description": "Raný domácí počítač" },
-      "tes": { "name": "TES", "description": "8bitová konzole" },
-      "master-v": { "name": "Master V", "description": "16bitová konzole" },
-      "super-tes": { "name": "Super TES", "description": "Vylepšená 16bitová konzole" },
-      "genovation": { "name": "Genovation", "description": "CD konzole" },
-      "playstation": { "name": "Playsystem", "description": "32bitová CD konzole" },
-      "nuu-64": { "name": "nuu 64", "description": "64bitová cartridge konzole" },
-      "dreamvast": { "name": "DreamVast", "description": "Konzole s internetem" },
-      "playsystem-2": { "name": "Playsystem 2", "description": "Vylepšená DVD konzole" },
-      "game-sphere": { "name": "Game Sphere", "description": "Disková konzole" },
-      "mbox": { "name": "mBox", "description": "První konzole mBox" },
-      "playsystem-3": { "name": "Playsystem 3", "description": "HD herní konzole" },
-      "mbox-next": { "name": "mBox Next", "description": "mBox nové generace" },
-      "whoops": { "name": "whoops", "description": "Konzole s pohybovým ovládáním" }
+      "pc": {
+        "name": "PC",
+        "description": "Osobní počítač"
+      },
+      "govodore-64": {
+        "name": "Govodore 64",
+        "description": "Raný domácí počítač"
+      },
+      "tes": {
+        "name": "TES",
+        "description": "8bitová konzole"
+      },
+      "master-v": {
+        "name": "Master V",
+        "description": "16bitová konzole"
+      },
+      "super-tes": {
+        "name": "Super TES",
+        "description": "Vylepšená 16bitová konzole"
+      },
+      "genovation": {
+        "name": "Genovation",
+        "description": "CD konzole"
+      },
+      "playstation": {
+        "name": "Playsystem",
+        "description": "32bitová CD konzole"
+      },
+      "nuu-64": {
+        "name": "nuu 64",
+        "description": "64bitová cartridge konzole"
+      },
+      "dreamvast": {
+        "name": "DreamVast",
+        "description": "Konzole s internetem"
+      },
+      "playsystem-2": {
+        "name": "Playsystem 2",
+        "description": "Vylepšená DVD konzole"
+      },
+      "game-sphere": {
+        "name": "Game Sphere",
+        "description": "Disková konzole"
+      },
+      "mbox": {
+        "name": "mBox",
+        "description": "První konzole mBox"
+      },
+      "playsystem-3": {
+        "name": "Playsystem 3",
+        "description": "HD herní konzole"
+      },
+      "mbox-next": {
+        "name": "mBox Next",
+        "description": "mBox nové generace"
+      },
+      "whoops": {
+        "name": "whoops",
+        "description": "Konzole s pohybovým ovládáním"
+      }
     },
     "audiences": {
-      "young": { "name": "Děti", "description": "Hry pro mladší hráče" },
-      "everyone": { "name": "Pro všechny", "description": "Hry pro všechny věkové kategorie" },
-      "mature": { "name": "Dospělí", "description": "Hry pro dospělé" }
+      "young": {
+        "name": "Děti",
+        "description": "Hry pro mladší hráče"
+      },
+      "everyone": {
+        "name": "Pro všechny",
+        "description": "Hry pro všechny věkové kategorie"
+      },
+      "mature": {
+        "name": "Dospělí",
+        "description": "Hry pro dospělé"
+      }
     }
   },
   "common": {
@@ -137,8 +269,8 @@
     "filterByYear": "Filtrovat podle roku",
     "unlockYear": "Rok odemčení",
     "researchCost": "Cena výzkumu",
-    "topRecommendationsFor": "Nejlepší doporučení pro '{{name}}'",
-    "sliderPresetsFor": "Předvolby sliderů pro '{{name}}'",
+    "topRecommendationsFor": "Nejlepší doporučení pro „{{name}}“",
+    "sliderPresetsFor": "Předvolby sliderů pro „{{name}}“",
     "resultsCount": "{{count}} výsledků",
     "allStages": "Všechny fáze",
     "stage": "Fáze {{number}}",
@@ -271,23 +403,91 @@
     "recommended": "Doporučené",
     "optional": "Volitelné",
     "items": {
-      "basic-2d-graphics": { "name": "Základní 2D grafika v1", "description": "Počáteční grafická technologie", "tip": "Dostupná od začátku" },
-      "basic-sound": { "name": "Základní zvuk v1", "description": "Počáteční zvuková technologie", "tip": "Dostupná od začátku" },
-      "2d-graphics-v2": { "name": "2D grafika v2", "description": "Vylepšená 2D grafika", "tip": "Prozkoumej brzy pro lepší hodnocení" },
-      "sound-v2": { "name": "Zvuk v2", "description": "Vylepšený zvukový design", "tip": "Prozkoumej po vylepšení grafiky" },
-      "2d-graphics-v3": { "name": "2D grafika v3", "description": "Pokročilá 2D grafika", "tip": "Nutná před přesunem do první kanceláře" },
-      "save-game": { "name": "Uložení hry", "description": "Umožní hráčům ukládat postup", "tip": "Velmi důležité pro RPG a dobrodružné hry" },
-      "dialogue-system": { "name": "Systém dialogů", "description": "Možnosti dialogu s NPC", "tip": "Skvělé pro dobrodružství a RPG" },
-      "3d-graphics-v1": { "name": "3D grafika v1", "description": "Vstup do éry 3D", "tip": "Nezbytná pro moderní platformy. Prozkoumej hned, jak bude dostupná" },
-      "3d-graphics-v2": { "name": "3D grafika v2", "description": "Vylepšený 3D rendering", "tip": "Drž grafiku na úrovni" },
-      "surround-sound": { "name": "Prostorový zvuk", "description": "Pohlcující audio zážitek", "tip": "Zlepšuje kvalitu všech žánrů" },
-      "multiplayer": { "name": "Multiplayer", "description": "Podpora online multiplayeru", "tip": "Super pro akční hry a strategie" },
-      "online-play": { "name": "Online hraní", "description": "Internetový multiplayer", "tip": "Prozkoumej, až se objeví online platformy" },
-      "3d-graphics-v4": { "name": "3D grafika v4", "description": "Špičková 3D grafika", "tip": "Nutná pro AAA hry" },
-      "hd-audio": { "name": "HD audio", "description": "Audio ve vysoké kvalitě", "tip": "Standard pro moderní hry" },
-      "advanced-ai": { "name": "Pokročilá AI", "description": "Chytřejší chování nepřátel", "tip": "Důležité pro strategie a simulace" },
-      "open-world": { "name": "Otevřený svět", "description": "Nelineární průzkum", "tip": "Skvělé pro dobrodružství a RPG" },
-      "vr-support": { "name": "Podpora VR", "description": "Virtuální realita", "tip": "Investice do technologií budoucnosti" }
+      "basic-2d-graphics": {
+        "name": "Základní 2D grafika v1",
+        "description": "Počáteční grafická technologie",
+        "tip": "Dostupná od začátku"
+      },
+      "basic-sound": {
+        "name": "Základní zvuk v1",
+        "description": "Počáteční zvuková technologie",
+        "tip": "Dostupná od začátku"
+      },
+      "2d-graphics-v2": {
+        "name": "2D grafika v2",
+        "description": "Vylepšená 2D grafika",
+        "tip": "Prozkoumej brzy pro lepší hodnocení"
+      },
+      "sound-v2": {
+        "name": "Zvuk v2",
+        "description": "Vylepšený zvukový design",
+        "tip": "Prozkoumej po vylepšení grafiky"
+      },
+      "2d-graphics-v3": {
+        "name": "2D grafika v3",
+        "description": "Pokročilá 2D grafika",
+        "tip": "Nutná před přesunem do první kanceláře"
+      },
+      "save-game": {
+        "name": "Uložení hry",
+        "description": "Umožní hráčům ukládat postup",
+        "tip": "Velmi důležité pro RPG a dobrodružné hry"
+      },
+      "dialogue-system": {
+        "name": "Systém dialogů",
+        "description": "Možnosti dialogu s NPC",
+        "tip": "Skvělé pro dobrodružství a RPG"
+      },
+      "3d-graphics-v1": {
+        "name": "3D grafika v1",
+        "description": "Vstup do éry 3D",
+        "tip": "Nezbytná pro moderní platformy. Prozkoumej hned, jak bude dostupná"
+      },
+      "3d-graphics-v2": {
+        "name": "3D grafika v2",
+        "description": "Vylepšený 3D rendering",
+        "tip": "Drž grafiku na úrovni"
+      },
+      "surround-sound": {
+        "name": "Prostorový zvuk",
+        "description": "Pohlcující audio zážitek",
+        "tip": "Zlepšuje kvalitu všech žánrů"
+      },
+      "multiplayer": {
+        "name": "Multiplayer",
+        "description": "Podpora online multiplayeru",
+        "tip": "Super pro akční hry a strategie"
+      },
+      "online-play": {
+        "name": "Online hraní",
+        "description": "Internetový multiplayer",
+        "tip": "Prozkoumej, až se objeví online platformy"
+      },
+      "3d-graphics-v4": {
+        "name": "3D grafika v4",
+        "description": "Špičková 3D grafika",
+        "tip": "Nutná pro AAA hry"
+      },
+      "hd-audio": {
+        "name": "HD audio",
+        "description": "Audio ve vysoké kvalitě",
+        "tip": "Standard pro moderní hry"
+      },
+      "advanced-ai": {
+        "name": "Pokročilá AI",
+        "description": "Chytřejší chování nepřátel",
+        "tip": "Důležité pro strategie a simulace"
+      },
+      "open-world": {
+        "name": "Otevřený svět",
+        "description": "Nelineární průzkum",
+        "tip": "Skvělé pro dobrodružství a RPG"
+      },
+      "vr-support": {
+        "name": "Podpora VR",
+        "description": "Virtuální realita",
+        "tip": "Investice do technologií budoucnosti"
+      }
     }
   },
   "staff": {
@@ -321,21 +521,66 @@
     "fromYear": "Od roku",
     "untilYear": "Do roku",
     "items": {
-      "garage-solo": { "title": "V garáži pracuj sám", "description": "V garáži nemůžeš nabírat zaměstnance. Soustřeď se na zlepšování dovedností a šetření na první kancelář." },
-      "garage-skills": { "title": "Vyvažuj své dovednosti", "description": "Trénuj Design i Technologii. Poměr 700/700 je nejlepší pro kvalitní hry." },
-      "garage-save": { "title": "Šetři na první kancelář", "description": "Na první kancelář potřebuješ $1M. V letech 4-5 hodně šetři." },
-      "first-hire": { "title": "Zaměstnej prvního člověka", "description": "Vezmi někoho s doplňujícími dovednostmi. Jsi silný v Designu? Vezmi technologa a naopak." },
-      "first-training": { "title": "Škol hned", "description": "Noví zaměstnanci mají nízké staty. Školení je rychle vylepší. Začni nejslabšími oblastmi." },
-      "first-specialist": { "title": "Specialisté vs. univerzálové", "description": "Na začátku: univerzálové, co zvládnou všechno. Později: specialisté pro konkrétní role ve větších týmech." },
-      "first-team-size": { "title": "Tipy k velikosti týmu", "description": "Malé hry: 1-2 lidi. Střední: 2-3. Slaď velikost týmu s velikostí hry." },
-      "second-expand": { "title": "Rozšiř na 6 zaměstnanců", "description": "Druhá kancelář umožňuje až 6 zaměstnanců. Najímej postupně podle rozpočtu." },
-      "second-roles": { "title": "Přiřaď role", "description": "Urči 2-3 lidi na Design (Umění, Příběh, Zvuk) a 2-3 na Technologii (Engine, AI, Level design)." },
-      "second-large-games": { "title": "Tým pro velké hry", "description": "Velké hry vyžadují 4+ lidí. AAA potřebuje 6. Ujisti se, že máš dostatek vyškolených lidí." },
-      "second-specialists": { "title": "Najmi specialisty", "description": "Zvaž specialistu na grafiku, zvukaře a scenáristu pro lepší kvalitu v konkrétních oblastech." },
-      "rd-lab-unlock": { "title": "Výhody R&D laboratoře", "description": "R&D laboratoř umožňuje vyvíjet nové enginy a hardware. Potřebuješ minimálně 4 zaměstnance." },
-      "rd-dedicated": { "title": "Vyhrazený R&D tým", "description": "Přiřaď 1-2 lidi natrvalo k R&D. Musí mít vysokou rychlost výzkumu a technické dovednosti." },
-      "hw-lab-unlock": { "title": "Tým hardwarové laboratoře", "description": "Vlastní konzole vyžaduje vyhrazený tým. Nasaď nejlepší technické specialisty." },
-      "hw-console-team": { "title": "Vývoj konzole", "description": "Stavba konzole potřebuje 2-3 vyhrazené lidi na 6+ měsíců. Plánuj kapacity týmu." }
+      "garage-solo": {
+        "title": "V garáži pracuj sám",
+        "description": "V garáži nemůžeš nabírat zaměstnance. Soustřeď se na zlepšování dovedností a šetření na první kancelář."
+      },
+      "garage-skills": {
+        "title": "Vyvažuj své dovednosti",
+        "description": "Trénuj Design i Technologii. Poměr 700/700 je nejlepší pro kvalitní hry."
+      },
+      "garage-save": {
+        "title": "Šetři na první kancelář",
+        "description": "Na první kancelář potřebuješ $1M. V letech 4-5 hodně šetři."
+      },
+      "first-hire": {
+        "title": "Zaměstnej prvního člověka",
+        "description": "Vezmi někoho s doplňujícími dovednostmi. Jsi silný v Designu? Vezmi technologa a naopak."
+      },
+      "first-training": {
+        "title": "Škol hned",
+        "description": "Noví zaměstnanci mají nízké staty. Školení je rychle vylepší. Začni nejslabšími oblastmi."
+      },
+      "first-specialist": {
+        "title": "Specialisté vs. univerzálové",
+        "description": "Na začátku: univerzálové, co zvládnou všechno. Později: specialisté pro konkrétní role ve větších týmech."
+      },
+      "first-team-size": {
+        "title": "Tipy k velikosti týmu",
+        "description": "Malé hry: 1-2 lidi. Střední: 2-3. Slaď velikost týmu s velikostí hry."
+      },
+      "second-expand": {
+        "title": "Rozšiř na 6 zaměstnanců",
+        "description": "Druhá kancelář umožňuje až 6 zaměstnanců. Najímej postupně podle rozpočtu."
+      },
+      "second-roles": {
+        "title": "Přiřaď role",
+        "description": "Urči 2-3 lidi na Design (Umění, Příběh, Zvuk) a 2-3 na Technologii (Engine, AI, Level design)."
+      },
+      "second-large-games": {
+        "title": "Tým pro velké hry",
+        "description": "Velké hry vyžadují 4+ lidí. AAA potřebuje 6. Ujisti se, že máš dostatek vyškolených lidí."
+      },
+      "second-specialists": {
+        "title": "Najmi specialisty",
+        "description": "Zvaž specialistu na grafiku, zvukaře a scenáristu pro lepší kvalitu v konkrétních oblastech."
+      },
+      "rd-lab-unlock": {
+        "title": "Výhody R&D laboratoře",
+        "description": "R&D laboratoř umožňuje vyvíjet nové enginy a hardware. Potřebuješ minimálně 4 zaměstnance."
+      },
+      "rd-dedicated": {
+        "title": "Vyhrazený R&D tým",
+        "description": "Přiřaď 1-2 lidi natrvalo k R&D. Musí mít vysokou rychlost výzkumu a technické dovednosti."
+      },
+      "hw-lab-unlock": {
+        "title": "Tým hardwarové laboratoře",
+        "description": "Vlastní konzole vyžaduje vyhrazený tým. Nasaď nejlepší technické specialisty."
+      },
+      "hw-console-team": {
+        "title": "Vývoj konzole",
+        "description": "Stavba konzole potřebuje 2-3 vyhrazené lidi na 6+ měsíců. Plánuj kapacity týmu."
+      }
     }
   },
   "timeline": {
@@ -368,27 +613,111 @@
       "featureUnlock": "Odemčení funkce"
     },
     "items": {
-      "start-game": { "title": "Začátek hry", "description": "Začínáš v garáži se $70K. Dělej malé hry pro získání zkušeností.", "action": "Udělej akci nebo dobrodružství — jsou odpouštějící pro začátečníky" },
-      "pc-available": { "title": "PC dostupné", "description": "PC je tvá startovní platforma. Bez licenčních poplatků.", "action": "Používej PC pro všechny první hry" },
-      "govodore-64": { "title": "Govodore 64 vydán", "description": "První dostupná konzole. Dobrá pro casual a akční hry.", "action": "Zvaž licenci, pokud děláš casual hry" },
-      "first-hit": { "title": "Zamiř na první hit", "description": "Do roku 2 se pokus udělat hru na 7+, abys získal fanoušky.", "action": "Soustřeď se na dobré kombo téma-žánr a správné slidery" },
-      "office-goal": { "title": "Šetři na kancelář", "description": "Teď bys měl mít kolem $1M na první kancelář.", "action": "Pokud ne, zaměř se na střední hry s dobrými komby" },
-      "tes-release": { "title": "TES vydán", "description": "Velká konzole s širokým publikem. Skvělá pro akční hry.", "action": "Silná platforma — kup licenci" },
-      "first-office-available": { "title": "První kancelář dostupná", "description": "S $1M v pokladně se můžeš přestěhovat a začít najímat.", "action": "Přestěhuj se hned, jak budeš mít peníze" },
-      "super-tes": { "title": "Super TES vydán", "description": "Začátek 16bitové éry. Skvělé grafické možnosti.", "action": "Upgrade z TES — to je žhavá platforma" },
-      "playsystem": { "title": "PlaySystem vydán", "description": "Revoluční 3D konzole. Budoucnost hraní.", "action": "NUTNÉ: Pořiď licenci a prozkoumej 3D grafiku" },
-      "3d-era": { "title": "Éra 3D grafiky", "description": "3D grafika se stává nezbytnou pro vysoká hodnocení.", "action": "Prozkoumej 3D grafiku v1 hned, jak bude dostupná" },
-      "dreamvast": { "title": "DreamVast vydán", "description": "Pokročilá konzole s online schopnostmi.", "action": "Dobrá platforma pro experimentální hry" },
-      "playsystem-2": { "title": "PlaySystem 2 vydán", "description": "Nejprodávanější konzole v historii. Obrovské publikum.", "action": "Povinná platforma — gigantická uživatelská základna" },
-      "second-office-time": { "title": "Zvaž druhou kancelář", "description": "Teď by sis měl být připraven na rozšíření.", "action": "Na druhou kancelář potřebuješ $5M" },
-      "mbox": { "title": "mBox vydán", "description": "Nový hráč na trhu konzolí.", "action": "Dobrý pro západní trhy" },
-      "playsystem-3": { "title": "PlaySystem 3 vydán", "description": "Přichází HD hraní. Vysoké vývojové náklady.", "action": "Soustřeď se na kvalitu místo kvantity" },
-      "mbox-360": { "title": "mBox 360 vydán", "description": "Silné online funkce a systém achievementů.", "action": "Skvělé pro multiplayerové hry" },
-      "own-console": { "title": "Postav vlastní konzoli", "description": "Hardwarová laboratoř ti umožní navrhnout vlastní herní konzoli.", "action": "Zkoušej to jen s finanční stabilitou" },
-      "genre-combo-tip": { "title": "Ovládni komba téma-žánr", "description": "Správné kombo tématu a žánru je klíčové pro úspěch.", "action": "Použij tohoto průvodce k nalezení nejlepších komb" },
-      "sequel-strategy": { "title": "Strategie sequelů", "description": "Sequely úspěšných her mají lepší výsledky. Buduj franšízy.", "action": "Čekej na hodnocení 9+ než uděláš sequel" },
-      "engine-importance": { "title": "Výhody vlastního enginu", "description": "Vlastní herní engine výrazně zlepšuje kvalitu her.", "action": "Investuj do R&D laboratoře pro vývoj enginu" },
-      "aaa-games": { "title": "Vývoj AAA her", "description": "Velký tým + vlastní engine + správný marketing = AAA úspěch.", "action": "AAA hry zkoušej jen se zkušeným týmem" }
+      "start-game": {
+        "title": "Začátek hry",
+        "description": "Začínáš v garáži se $70K. Dělej malé hry pro získání zkušeností.",
+        "action": "Udělej akci nebo dobrodružství — jsou odpouštějící pro začátečníky"
+      },
+      "pc-available": {
+        "title": "PC dostupné",
+        "description": "PC je tvá startovní platforma. Bez licenčních poplatků.",
+        "action": "Používej PC pro všechny první hry"
+      },
+      "govodore-64": {
+        "title": "Govodore 64 vydán",
+        "description": "První dostupná konzole. Dobrá pro casual a akční hry.",
+        "action": "Zvaž licenci, pokud děláš casual hry"
+      },
+      "first-hit": {
+        "title": "Zamiř na první hit",
+        "description": "Do roku 2 se pokus udělat hru na 7+, abys získal fanoušky.",
+        "action": "Soustřeď se na dobré kombo téma-žánr a správné slidery"
+      },
+      "office-goal": {
+        "title": "Šetři na kancelář",
+        "description": "Teď bys měl mít kolem $1M na první kancelář.",
+        "action": "Pokud ne, zaměř se na střední hry s dobrými komby"
+      },
+      "tes-release": {
+        "title": "TES vydán",
+        "description": "Velká konzole s širokým publikem. Skvělá pro akční hry.",
+        "action": "Silná platforma — kup licenci"
+      },
+      "first-office-available": {
+        "title": "První kancelář dostupná",
+        "description": "S $1M v pokladně se můžeš přestěhovat a začít najímat.",
+        "action": "Přestěhuj se hned, jak budeš mít peníze"
+      },
+      "super-tes": {
+        "title": "Super TES vydán",
+        "description": "Začátek 16bitové éry. Skvělé grafické možnosti.",
+        "action": "Upgrade z TES — to je žhavá platforma"
+      },
+      "playsystem": {
+        "title": "PlaySystem vydán",
+        "description": "Revoluční 3D konzole. Budoucnost hraní.",
+        "action": "NUTNÉ: Pořiď licenci a prozkoumej 3D grafiku"
+      },
+      "3d-era": {
+        "title": "Éra 3D grafiky",
+        "description": "3D grafika se stává nezbytnou pro vysoká hodnocení.",
+        "action": "Prozkoumej 3D grafiku v1 hned, jak bude dostupná"
+      },
+      "dreamvast": {
+        "title": "DreamVast vydán",
+        "description": "Pokročilá konzole s online schopnostmi.",
+        "action": "Dobrá platforma pro experimentální hry"
+      },
+      "playsystem-2": {
+        "title": "PlaySystem 2 vydán",
+        "description": "Nejprodávanější konzole v historii. Obrovské publikum.",
+        "action": "Povinná platforma — gigantická uživatelská základna"
+      },
+      "second-office-time": {
+        "title": "Zvaž druhou kancelář",
+        "description": "Teď by sis měl být připraven na rozšíření.",
+        "action": "Na druhou kancelář potřebuješ $5M"
+      },
+      "mbox": {
+        "title": "mBox vydán",
+        "description": "Nový hráč na trhu konzolí.",
+        "action": "Dobrý pro západní trhy"
+      },
+      "playsystem-3": {
+        "title": "PlaySystem 3 vydán",
+        "description": "Přichází HD hraní. Vysoké vývojové náklady.",
+        "action": "Soustřeď se na kvalitu místo kvantity"
+      },
+      "mbox-360": {
+        "title": "mBox 360 vydán",
+        "description": "Silné online funkce a systém achievementů.",
+        "action": "Skvělé pro multiplayerové hry"
+      },
+      "own-console": {
+        "title": "Postav vlastní konzoli",
+        "description": "Hardwarová laboratoř ti umožní navrhnout vlastní herní konzoli.",
+        "action": "Zkoušej to jen s finanční stabilitou"
+      },
+      "genre-combo-tip": {
+        "title": "Ovládni komba téma-žánr",
+        "description": "Správné kombo tématu a žánru je klíčové pro úspěch.",
+        "action": "Použij tohoto průvodce k nalezení nejlepších komb"
+      },
+      "sequel-strategy": {
+        "title": "Strategie sequelů",
+        "description": "Sequely úspěšných her mají lepší výsledky. Buduj franšízy.",
+        "action": "Čekej na hodnocení 9+ než uděláš sequel"
+      },
+      "engine-importance": {
+        "title": "Výhody vlastního enginu",
+        "description": "Vlastní herní engine výrazně zlepšuje kvalitu her.",
+        "action": "Investuj do R&D laboratoře pro vývoj enginu"
+      },
+      "aaa-games": {
+        "title": "Vývoj AAA her",
+        "description": "Velký tým + vlastní engine + správný marketing = AAA úspěch.",
+        "action": "AAA hry zkoušej jen se zkušeným týmem"
+      }
     }
   },
   "checklist": {
@@ -628,11 +957,27 @@
     "proTip4": "Máš otázky? Nejdřív FAQ, pak příručka pro podrobnosti.",
     "workflow": {
       "planGame": "Naplánuj novou hru",
-      "planGameSteps": ["Jdi na 'Doporučení žánrů' a vyber téma", "Zapiš si nejlepší žánr pro tvé téma", "Přepni na 'Doporučení platforem' a vyber žánr + publikum", "Otevři 'Předvolby sliderů' a zkopíruj hodnoty", "Použij 'Plánovač her' ke složení všeho dohromady"],
+      "planGameSteps": [
+        "Jdi na „Doporučení žánrů“ a vyber téma",
+        "Zapiš si nejlepší žánr pro tvé téma",
+        "Přepni na „Doporučení platforem“ a vyber žánr + publikum",
+        "Otevři „Předvolby sliderů“ a zkopíruj hodnoty",
+        "Použij „Plánovač her“ ke složení všeho dohromady"
+      ],
       "findSliders": "Najdi ideální slidery",
-      "findSlidersSteps": ["Jdi na 'Předvolby sliderů'", "Vyber svůj žánr ze seznamu", "Přečti hodnoty pro všechny tři fáze", "Nastav slidery ve hře podle toho"],
+      "findSlidersSteps": [
+        "Jdi na „Předvolby sliderů“",
+        "Vyber svůj žánr ze seznamu",
+        "Přečti hodnoty pro všechny tři fáze",
+        "Nastav slidery ve hře podle toho"
+      ],
       "trackProgress": "Sleduj postup",
-      "trackProgressSteps": ["Otevři stránku 'Checklist'", "Projdi milníky", "Zaškrtni splněné", "Přidej vlastní cíle"]
+      "trackProgressSteps": [
+        "Otevři stránku „Checklist“",
+        "Projdi milníky",
+        "Zaškrtni splněné",
+        "Přidej vlastní cíle"
+      ]
     },
     "featureDesc": {
       "dashboard": "Domovská stránka s rychlým přehledem nejlepších komb téma-žánr a důležitých statistik.",
@@ -649,18 +994,66 @@
       "manual": "Kompletní reference všech herních mechanik."
     },
     "featureTips": {
-      "dashboard": ["Zobrazuje top 5 nejlepších komb naráz", "Rychlý přístup ke všem důležitým funkcím", "Aktuální statistiky databáze"],
-      "topicRecommender": ["Nejdřív vyber žánr ze seznamu", "Témata jsou seřazená podle kompatibility", "Zelená hodnocení = nejlepší komba"],
-      "genreRecommender": ["Ideální, když máš na mysli konkrétní téma", "Ukazuje rok odemčení a cenu", "Dávej pozor na hodnocení kompatibility"],
-      "platformRecommender": ["Vyber žánr I publikum pro nejlepší výsledky", "Zvaž licenční náklady a podíl na trhu", "Filtr času pomáhá s historickými platformami"],
-      "sliderPresets": ["Vyber žánr ze seznamu", "Zkopíruj hodnoty pro každou fázi", "Vysoké hodnoty = víc zaměření na oblast"],
-      "planner": ["Sluč všechna doporučení do jednoho plánu", "Ulož více herních nápadů", "Exportuj plány jako referenci"],
-      "research": ["Seřazeno podle kategorie a roku", "Ukazuje závislosti mezi technologiemi", "Pomáhá plánovat výzkum"],
-      "staff": ["Různé tipy pro každou fázi kanceláře", "Vysvětleny ideální velikosti týmu", "Priority dovedností pro různé role"],
-      "timeline": ["Sleduj průvodce chronologicky", "Důležitá vydání platforem jsou označena", "Strategické tipy pro každé období"],
-      "checklist": ["Zaškrtávej splněné milníky", "Přidávej vlastní úkoly", "Postup se ukládá lokálně"],
-      "faq": ["Organizováno do kategorií", "Rychlé odpovědi na časté problémy", "Klikni na otázku pro odpověď"],
-      "manual": ["6 kategorií se všemi detaily", "Od základů po pokročilé", "Ideální jako reference během hraní"]
+      "dashboard": [
+        "Zobrazuje top 5 nejlepších komb naráz",
+        "Rychlý přístup ke všem důležitým funkcím",
+        "Aktuální statistiky databáze"
+      ],
+      "topicRecommender": [
+        "Nejdřív vyber žánr ze seznamu",
+        "Témata jsou seřazená podle kompatibility",
+        "Zelená hodnocení = nejlepší komba"
+      ],
+      "genreRecommender": [
+        "Ideální, když máš na mysli konkrétní téma",
+        "Ukazuje rok odemčení a cenu",
+        "Dávej pozor na hodnocení kompatibility"
+      ],
+      "platformRecommender": [
+        "Vyber žánr I publikum pro nejlepší výsledky",
+        "Zvaž licenční náklady a podíl na trhu",
+        "Filtr času pomáhá s historickými platformami"
+      ],
+      "sliderPresets": [
+        "Vyber žánr ze seznamu",
+        "Zkopíruj hodnoty pro každou fázi",
+        "Vysoké hodnoty = víc zaměření na oblast"
+      ],
+      "planner": [
+        "Sluč všechna doporučení do jednoho plánu",
+        "Ulož více herních nápadů",
+        "Exportuj plány jako referenci"
+      ],
+      "research": [
+        "Seřazeno podle kategorie a roku",
+        "Ukazuje závislosti mezi technologiemi",
+        "Pomáhá plánovat výzkum"
+      ],
+      "staff": [
+        "Různé tipy pro každou fázi kanceláře",
+        "Vysvětleny ideální velikosti týmu",
+        "Priority dovedností pro různé role"
+      ],
+      "timeline": [
+        "Sleduj průvodce chronologicky",
+        "Důležitá vydání platforem jsou označena",
+        "Strategické tipy pro každé období"
+      ],
+      "checklist": [
+        "Zaškrtávej splněné milníky",
+        "Přidávej vlastní úkoly",
+        "Postup se ukládá lokálně"
+      ],
+      "faq": [
+        "Organizováno do kategorií",
+        "Rychlé odpovědi na časté problémy",
+        "Klikni na otázku pro odpověď"
+      ],
+      "manual": [
+        "6 kategorií se všemi detaily",
+        "Od základů po pokročilé",
+        "Ideální jako reference během hraní"
+      ]
     }
   },
   "sources": {
@@ -728,6 +1121,216 @@
     "contact": {
       "title": "Kontakt",
       "description": "Máte-li dotazy ohledně ochrany soukromí nebo našich datových postupů, kontaktujte nás prostřednictvím webu."
+    }
+  },
+  "guide": {
+    "title": "Průvodce pro vývojáře hry",
+    "subtitle": "Úplný návod od garáže po výzkumnou a vývojovou laboratoř, zaměřený na rozhodnutí, která řídí recenze.",
+    "quickChecklistTitle": "Kontrolní seznam pro rychlý start",
+    "quickChecklist": [
+      "Než začnete s vývojem, vyberte si silnou kombinaci témat a žánrů.",
+      "Přizpůsobte platformu a publikum vašemu žánru.",
+      "Použijte přednastavení posuvníku pro tři fáze.",
+      "Vyhněte se opakování stejného komba v po sobě jdoucích hrách.",
+      "Prozkoumejte upgrady technologií, než se trh pohne dál."
+    ],
+    "phasesTitle": "Fáze po fázi průvodce",
+    "phases": {
+      "garage": {
+        "title": "Garáž (1-3 roky)",
+        "subtitle": "Vybudujte si fanoušky a stabilitu pomocí spolehlivých, středních her.",
+        "steps": [
+          "Zaměřte se na 7+ recenzí, abyste si brzy vybudovali základnu fanoušků.",
+          "Ke kontrole nákladů používejte malé/střední hry.",
+          "Prozkoumejte publikum co nejdříve."
+        ]
+      },
+      "office": {
+        "title": "První kancelář (3.–6. rok)",
+        "subtitle": "Rozšiřte svůj tým a přejděte na lepší motory.",
+        "steps": [
+          "Najměte si doplňkové dovednosti a okamžitě zaškolte nové zaměstnance.",
+          "Investujte do vlastních motorů se správnou sadou funkcí.",
+          "Slaďte výběr platformy s oblíbeností žánru."
+        ]
+      },
+      "rdLab": {
+        "title": "R&D Lab (ročník 6+)",
+        "subtitle": "Odemkněte pokročilé technologie a připravte se na AAA hry.",
+        "steps": [
+          "Upřednostněte upgrady grafiky a vysoce hodnotné žánrové funkce.",
+          "Udržujte jednoho nebo dva zaměstnance zaměřené na výzkum.",
+          "Pokračování stavte pouze tehdy, když originál získal 9+."
+        ]
+      }
+    },
+    "pitfalls": {
+      "title": "Časté chyby, které stojí recenze",
+      "items": [
+        "Ignorování posuvníků a spoléhání se pouze na dobré kombo.",
+        "Výběr platforem, které neodpovídají vaší cílové skupině.",
+        "Příliš často opakování stejné kombinace.",
+        "Přeskakování výzkumu, dokud již není příliš pozdě."
+      ]
+    },
+    "cta": {
+      "title": "Použijte nástroje k provedení průvodce",
+      "description": "Skočte do doporučujícího a předvoleb, abyste mohli použít výše uvedené rady v další hře.",
+      "primary": "Najděte nejlepší žánr pro své téma",
+      "secondary": "Získejte předvolby posuvníku"
+    }
+  },
+  "bestCombos": {
+    "title": "Nejlepší kombinace témat a žánrů",
+    "subtitle": "Pochopte systém přizpůsobení a používejte spolehlivé kombinace, které dosahují dobrých výsledků v různých obdobích.",
+    "fit": {
+      "title": "Jak funguje hodnocení vhodnosti",
+      "description": "Každá dvojice téma-žánr získá vhodné skóre mezi -3 a +3. Čím vyšší fit, tím lepší jsou vaše recenze.",
+      "bullets": [
+        "Přizpůsobení je největším faktorem ve skóre recenzí.",
+        "Skvělé posuvníky nemohou zcela opravit špatné přizpůsobení.",
+        "Chcete-li zobrazit přesné hodnoty přizpůsobení, použijte doporučení."
+      ]
+    },
+    "starterCombos": {
+      "title": "Startovací komba, která fungují napříč érami",
+      "items": [
+        "Akční + Vojenská / Sci-Fi / Fantasy",
+        "RPG + fantasy / středověk",
+        "Simulace + Město / Doprava / Obchod",
+        "Strategie + Středověk / Historie",
+        "Dobrodružství + Fantasy / detektivka",
+        "Neformální + děti / párty"
+      ]
+    },
+    "avoid": {
+      "title": "Kombinace, kterým se lze vyhnout nebo je zdržet",
+      "items": [
+        "Děti + horor (velmi nízké)",
+        "Válka + příležitostné (slabé publikum)",
+        "Vyspělá témata na rodinných platformách",
+        "Opakování stejného komba zády k sobě"
+      ]
+    },
+    "cta": {
+      "title": "Chcete přesně ta nejlepší komba?",
+      "description": "Pomocí doporučujícího seřaďte každé téma podle vhodného a odemknutého roku.",
+      "primary": "Použijte Doporučení žánru",
+      "secondary": "Zkontrolujte předvolby posuvníku"
+    }
+  },
+  "slidersExplained": {
+    "title": "Game Dev Tycoon Sliders vysvětleno",
+    "subtitle": "Pochopte, co jednotlivé fáze upřednostňují, a nastavte posuvníky pro lepší recenze.",
+    "why": {
+      "title": "Proč na posuvnících záleží",
+      "items": [
+        "Posuvníky rozhodují o tom, jak váš tým tráví čas v každé fázi.",
+        "I dokonalé kombo může selhat se špatným zaostřením posuvníku.",
+        "Každý žánr má jinou ideální rovnováhu na fázi."
+      ]
+    },
+    "phases": {
+      "title": "Priority fází",
+      "phase1": {
+        "title": "Motor a hratelnost",
+        "focus": "Vyvažte práci motoru s hratelností v závislosti na žánru a velikosti hry.",
+        "tips": [
+          "Akce a simulace se hodně opírají o hratelnost.",
+          "Velké hry vyžadují více investic do enginu.",
+          "Vyhněte se extrémům, pokud je žánr výrazně neupřednostňuje."
+        ]
+      },
+      "phase2": {
+        "title": "Příběh a design",
+        "focus": "Na příběhu záleží spíše u narativních žánrů; design vítězí u neformálních titulů.",
+        "tips": [
+          "RPG a dobrodružství vyžadují vyšší zaměření příběhu.",
+          "Neformální hry se přiklánějí k designu a použitelnosti.",
+          "Zabraňte tomu, aby technika příliš zaostávala."
+        ]
+      },
+      "phase3": {
+        "title": "LeÅ¡tÄ›nÃ­ a technologie",
+        "focus": "Polština je rozhodující pro hodnocení hodnocení; technologie musí odpovídat době platformy.",
+        "tips": [
+          "U středních/velkých her nikdy neklesejte příliš nízko.",
+          "Při cílení na pokročilé platformy investujte do technologií.",
+          "Marketing a leštění společně zvyšují prodej."
+        ]
+      }
+    },
+    "workflow": {
+      "title": "Rychlý pracovní postup",
+      "steps": [
+        "Vyberte si téma a žánr.",
+        "Otevřete Předvolby posuvníku pro žánr.",
+        "Použijte hodnoty pro každou fázi ve hře.",
+        "Při změně velikosti hry znovu zkontrolujte posuvníky."
+      ]
+    },
+    "cta": {
+      "title": "Chcete přesná čísla podle žánru?",
+      "description": "Pomocí předvoleb můžete okamžitě zkopírovat nejlepší hodnoty posuvníku.",
+      "primary": "Otevřete Předvolby posuvníku",
+      "secondary": "Najděte nejlepší žánr"
+    }
+  },
+  "researchOrder": {
+    "title": "PoÅ™adÃ­ vÃ½zkumu v Game Dev Tycoon",
+    "subtitle": "Praktický seznam priorit, takže odemknete to, na čem záleží, dříve, než to budete potřebovat.",
+    "priorities": {
+      "title": "Doporučené pořadí výzkumu",
+      "items": [
+        "Nové publikum (mladí, všichni, dospělí)",
+        "Základní funkce žánru (dialogy, AI, multiplayer)",
+        "Upgrady grafiky před vlnami nových platforem",
+        "Marketingová a herní vylepšení",
+        "Laboratoř výzkumu a vývoje a vlastní motory, pokud jsou k dispozici",
+        "Hardwarová laboratoř pouze po silném cash bufferu"
+      ]
+    },
+    "eras": {
+      "title": "Priority specifické pro éru",
+      "early": {
+        "title": "Raná hra",
+        "items": [
+          "Rychle odemkněte publika, aby se lépe přizpůsobila.",
+          "Zaměřte se na levné funkce s vysokým dopadem.",
+          "Vyhněte se výzkumu, který si nemůžete dovolit použít."
+        ]
+      },
+      "mid": {
+        "title": "Střední hra",
+        "items": [
+          "Upgradujte grafiku, když se objeví 3D platformy.",
+          "Začněte vytvářet znovu použitelný vlastní engine.",
+          "Přidávejte funkce pro více hráčů a online funkce, jakmile se odemknou."
+        ]
+      },
+      "late": {
+        "title": "Pozdní hra",
+        "items": [
+          "Udržujte technologii na úrovni platformy, abyste se vyhnuli sankcím za kontrolu.",
+          "Investujte do hardwarové laboratoře pouze s vyhrazeným týmem.",
+          "Upřednostněte funkce, které odpovídají vašim hlavním žánrům."
+        ]
+      }
+    },
+    "mistakes": {
+      "title": "Časté chyby ve výzkumu",
+      "items": [
+        "Šíření bodů napříč výzkumem s nízkým dopadem.",
+        "Odemykání funkcí, které nikdy nezahrnujete do motorů.",
+        "Příliš dlouhé zpoždění upgradů grafiky.",
+        "Stavba hardwaru bez dostatečného cash flow."
+      ]
+    },
+    "cta": {
+      "title": "Použijte výzkumný sledovač",
+      "description": "Udržujte své odemknutí a předpoklady uspořádané v Průvodci výzkumem.",
+      "primary": "Otevřete průvodce výzkumem",
+      "secondary": "Sledujte časovou osu"
     }
   }
 }

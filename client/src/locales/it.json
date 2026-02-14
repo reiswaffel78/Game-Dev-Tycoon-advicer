@@ -1,56 +1,188 @@
 {
   "data": {
     "genres": {
-      "action": { "name": "Azione", "description": "Gameplay frenetico con combattimenti e riflessi" },
-      "adventure": { "name": "Avventura", "description": "Giochi esplorativi guidati dalla storia" },
-      "rpg": { "name": "RPG", "description": "Giochi di ruolo con progressione del personaggio" },
-      "simulation": { "name": "Simulazione", "description": "Giochi di simulazione del mondo reale" },
-      "strategy": { "name": "Strategia", "description": "Gameplay tattico e strategico" },
-      "casual": { "name": "Casual", "description": "Giochi casual facili da giocare" }
+      "action": {
+        "name": "Azione",
+        "description": "Gameplay frenetico con combattimenti e riflessi"
+      },
+      "adventure": {
+        "name": "Avventura",
+        "description": "Giochi esplorativi guidati dalla storia"
+      },
+      "rpg": {
+        "name": "RPG",
+        "description": "Giochi di ruolo con progressione del personaggio"
+      },
+      "simulation": {
+        "name": "Simulazione",
+        "description": "Giochi di simulazione del mondo reale"
+      },
+      "strategy": {
+        "name": "Strategia",
+        "description": "Gameplay tattico e strategico"
+      },
+      "casual": {
+        "name": "Casual",
+        "description": "Giochi casual facili da giocare"
+      }
     },
     "topics": {
-      "aliens": { "name": "Alieni", "description": "Temi extraterrestri" },
-      "fantasy": { "name": "Fantasy", "description": "Mondi magici e creature fantastiche" },
-      "scifi": { "name": "Fantascienza", "description": "Temi di fantascienza" },
-      "medieval": { "name": "Medievale", "description": "Ambientazione del Medioevo" },
-      "military": { "name": "Militare", "description": "Temi militari e di guerra" },
-      "pirates": { "name": "Pirati", "description": "Avventure piratesche e battaglie navali" },
-      "vampires": { "name": "Vampiri", "description": "Temi di vampiri e oscurità" },
-      "zombies": { "name": "Zombie", "description": "Temi dell'apocalisse zombie" },
-      "sports": { "name": "Sport", "description": "Temi di competizione atletica" },
-      "racing": { "name": "Corse", "description": "Temi di corse automobilistiche" },
-      "city": { "name": "Città", "description": "Costruzione e gestione di città" },
-      "business": { "name": "Business", "description": "Temi di simulazione aziendale" },
-      "hospital": { "name": "Ospedale", "description": "Temi medici e ospedalieri" },
-      "prison": { "name": "Prigione", "description": "Temi di gestione carceraria" },
-      "space": { "name": "Spazio", "description": "Temi di esplorazione spaziale" },
-      "hunting": { "name": "Caccia", "description": "Temi di caccia e fauna selvatica" },
-      "martial-arts": { "name": "Arti Marziali", "description": "Temi di combattimento nelle arti marziali" },
-      "mystery": { "name": "Mistero", "description": "Temi investigativi e misteriosi" },
-      "comedy": { "name": "Commedia", "description": "Temi umoristici e comici" },
-      "dance": { "name": "Danza", "description": "Temi di danza e ritmo" }
+      "aliens": {
+        "name": "Alieni",
+        "description": "Temi extraterrestri"
+      },
+      "fantasy": {
+        "name": "Fantasy",
+        "description": "Mondi magici e creature fantastiche"
+      },
+      "scifi": {
+        "name": "Fantascienza",
+        "description": "Temi di fantascienza"
+      },
+      "medieval": {
+        "name": "Medievale",
+        "description": "Ambientazione del Medioevo"
+      },
+      "military": {
+        "name": "Militare",
+        "description": "Temi militari e di guerra"
+      },
+      "pirates": {
+        "name": "Pirati",
+        "description": "Avventure piratesche e battaglie navali"
+      },
+      "vampires": {
+        "name": "Vampiri",
+        "description": "Temi di vampiri e oscurità"
+      },
+      "zombies": {
+        "name": "Zombie",
+        "description": "Temi dell'apocalisse zombie"
+      },
+      "sports": {
+        "name": "Sport",
+        "description": "Temi di competizione atletica"
+      },
+      "racing": {
+        "name": "Corse",
+        "description": "Temi di corse automobilistiche"
+      },
+      "city": {
+        "name": "Città",
+        "description": "Costruzione e gestione di città"
+      },
+      "business": {
+        "name": "Business",
+        "description": "Temi di simulazione aziendale"
+      },
+      "hospital": {
+        "name": "Ospedale",
+        "description": "Temi medici e ospedalieri"
+      },
+      "prison": {
+        "name": "Prigione",
+        "description": "Temi di gestione carceraria"
+      },
+      "space": {
+        "name": "Spazio",
+        "description": "Temi di esplorazione spaziale"
+      },
+      "hunting": {
+        "name": "Caccia",
+        "description": "Temi di caccia e fauna selvatica"
+      },
+      "martial-arts": {
+        "name": "Arti Marziali",
+        "description": "Temi di combattimento nelle arti marziali"
+      },
+      "mystery": {
+        "name": "Mistero",
+        "description": "Temi investigativi e misteriosi"
+      },
+      "comedy": {
+        "name": "Commedia",
+        "description": "Temi umoristici e comici"
+      },
+      "dance": {
+        "name": "Danza",
+        "description": "Temi di danza e ritmo"
+      }
     },
     "platforms": {
-      "pc": { "name": "PC", "description": "Piattaforma per computer personali" },
-      "govodore-64": { "name": "Govodore 64", "description": "Primo computer domestico" },
-      "tes": { "name": "TES", "description": "Console 8-bit" },
-      "master-v": { "name": "Master V", "description": "Console 16-bit" },
-      "super-tes": { "name": "Super TES", "description": "Console 16-bit avanzata" },
-      "genovation": { "name": "Genovation", "description": "Console basata su CD" },
-      "playstation": { "name": "Playsystem", "description": "Console CD 32-bit" },
-      "nuu-64": { "name": "nuu 64", "description": "Console a cartucce 64-bit" },
-      "dreamvast": { "name": "DreamVast", "description": "Console con connessione internet" },
-      "playsystem-2": { "name": "Playsystem 2", "description": "Console DVD avanzata" },
-      "game-sphere": { "name": "Game Sphere", "description": "Console basata su dischi" },
-      "mbox": { "name": "mBox", "description": "Prima console mBox" },
-      "playsystem-3": { "name": "Playsystem 3", "description": "Console per gaming HD" },
-      "mbox-next": { "name": "mBox Next", "description": "mBox di nuova generazione" },
-      "whoops": { "name": "whoops", "description": "Console con controllo del movimento" }
+      "pc": {
+        "name": "PC",
+        "description": "Piattaforma per computer personali"
+      },
+      "govodore-64": {
+        "name": "Govodore 64",
+        "description": "Primo computer domestico"
+      },
+      "tes": {
+        "name": "TES",
+        "description": "Console 8-bit"
+      },
+      "master-v": {
+        "name": "Master V",
+        "description": "Console 16-bit"
+      },
+      "super-tes": {
+        "name": "Super TES",
+        "description": "Console 16-bit avanzata"
+      },
+      "genovation": {
+        "name": "Genovation",
+        "description": "Console basata su CD"
+      },
+      "playstation": {
+        "name": "Playsystem",
+        "description": "Console CD 32-bit"
+      },
+      "nuu-64": {
+        "name": "nuu 64",
+        "description": "Console a cartucce 64-bit"
+      },
+      "dreamvast": {
+        "name": "DreamVast",
+        "description": "Console con connessione internet"
+      },
+      "playsystem-2": {
+        "name": "Playsystem 2",
+        "description": "Console DVD avanzata"
+      },
+      "game-sphere": {
+        "name": "Game Sphere",
+        "description": "Console basata su dischi"
+      },
+      "mbox": {
+        "name": "mBox",
+        "description": "Prima console mBox"
+      },
+      "playsystem-3": {
+        "name": "Playsystem 3",
+        "description": "Console per gaming HD"
+      },
+      "mbox-next": {
+        "name": "mBox Next",
+        "description": "mBox di nuova generazione"
+      },
+      "whoops": {
+        "name": "whoops",
+        "description": "Console con controllo del movimento"
+      }
     },
     "audiences": {
-      "young": { "name": "Giovani", "description": "Giochi adatti ai giocatori più giovani" },
-      "everyone": { "name": "Tutti", "description": "Giochi per tutte le età" },
-      "mature": { "name": "Maturo", "description": "Giochi per un pubblico maturo" }
+      "young": {
+        "name": "Giovani",
+        "description": "Giochi adatti ai giocatori più giovani"
+      },
+      "everyone": {
+        "name": "Tutti",
+        "description": "Giochi per tutte le età"
+      },
+      "mature": {
+        "name": "Maturo",
+        "description": "Giochi per un pubblico maturo"
+      }
     }
   },
   "common": {
@@ -271,23 +403,91 @@
     "recommended": "Raccomandato",
     "optional": "Opzionale",
     "items": {
-      "basic-2d-graphics": { "name": "Grafica 2D Base v1", "description": "Tecnologia grafica iniziale", "tip": "Disponibile dall'inizio" },
-      "basic-sound": { "name": "Audio Base v1", "description": "Tecnologia audio iniziale", "tip": "Disponibile dall'inizio" },
-      "2d-graphics-v2": { "name": "Grafica 2D v2", "description": "Grafica 2D migliorata", "tip": "Ricerca presto per punteggi di gioco migliori" },
-      "sound-v2": { "name": "Audio v2", "description": "Design audio migliorato", "tip": "Ricerca dopo i miglioramenti grafici" },
-      "2d-graphics-v3": { "name": "Grafica 2D v3", "description": "Grafica 2D avanzata", "tip": "Essenziale prima di trasferirsi al primo ufficio" },
-      "save-game": { "name": "Salvataggio Gioco", "description": "Permetti ai giocatori di salvare i progressi", "tip": "Molto importante per RPG e giochi di Avventura" },
-      "dialogue-system": { "name": "Sistema di Dialoghi", "description": "Opzioni di dialogo NPC", "tip": "Ottimo per generi Avventura e RPG" },
-      "3d-graphics-v1": { "name": "Grafica 3D v1", "description": "Entra nell'era 3D", "tip": "Essenziale per piattaforme moderne. Ricerca il prima possibile quando disponibile" },
-      "3d-graphics-v2": { "name": "Grafica 3D v2", "description": "Rendering 3D migliorato", "tip": "Mantieni la tecnologia grafica aggiornata" },
-      "surround-sound": { "name": "Audio Surround", "description": "Esperienza audio immersiva", "tip": "Migliora la qualità per tutti i generi" },
-      "multiplayer": { "name": "Multigiocatore", "description": "Supporto multigiocatore online", "tip": "Ottimo per giochi di Azione e Strategia" },
-      "online-play": { "name": "Gioco Online", "description": "Multigiocatore internet", "tip": "Ricerca quando emergono piattaforme online" },
-      "3d-graphics-v4": { "name": "Grafica 3D v4", "description": "Grafica 3D di alta gamma", "tip": "Necessaria per giochi AAA" },
-      "hd-audio": { "name": "Audio HD", "description": "Audio ad alta definizione", "tip": "Standard per giochi moderni" },
-      "advanced-ai": { "name": "IA Avanzata", "description": "Comportamento nemico più intelligente", "tip": "Importante per Strategia e Simulazione" },
-      "open-world": { "name": "Mondo Aperto", "description": "Esplorazione non lineare", "tip": "Ottimo per giochi di Avventura e RPG" },
-      "vr-support": { "name": "Supporto VR", "description": "Gaming in realtà virtuale", "tip": "Investimento tecnologico futuro" }
+      "basic-2d-graphics": {
+        "name": "Grafica 2D Base v1",
+        "description": "Tecnologia grafica iniziale",
+        "tip": "Disponibile dall'inizio"
+      },
+      "basic-sound": {
+        "name": "Audio Base v1",
+        "description": "Tecnologia audio iniziale",
+        "tip": "Disponibile dall'inizio"
+      },
+      "2d-graphics-v2": {
+        "name": "Grafica 2D v2",
+        "description": "Grafica 2D migliorata",
+        "tip": "Ricerca presto per punteggi di gioco migliori"
+      },
+      "sound-v2": {
+        "name": "Audio v2",
+        "description": "Design audio migliorato",
+        "tip": "Ricerca dopo i miglioramenti grafici"
+      },
+      "2d-graphics-v3": {
+        "name": "Grafica 2D v3",
+        "description": "Grafica 2D avanzata",
+        "tip": "Essenziale prima di trasferirsi al primo ufficio"
+      },
+      "save-game": {
+        "name": "Salvataggio Gioco",
+        "description": "Permetti ai giocatori di salvare i progressi",
+        "tip": "Molto importante per RPG e giochi di Avventura"
+      },
+      "dialogue-system": {
+        "name": "Sistema di Dialoghi",
+        "description": "Opzioni di dialogo NPC",
+        "tip": "Ottimo per generi Avventura e RPG"
+      },
+      "3d-graphics-v1": {
+        "name": "Grafica 3D v1",
+        "description": "Entra nell'era 3D",
+        "tip": "Essenziale per piattaforme moderne. Ricerca il prima possibile quando disponibile"
+      },
+      "3d-graphics-v2": {
+        "name": "Grafica 3D v2",
+        "description": "Rendering 3D migliorato",
+        "tip": "Mantieni la tecnologia grafica aggiornata"
+      },
+      "surround-sound": {
+        "name": "Audio Surround",
+        "description": "Esperienza audio immersiva",
+        "tip": "Migliora la qualità per tutti i generi"
+      },
+      "multiplayer": {
+        "name": "Multigiocatore",
+        "description": "Supporto multigiocatore online",
+        "tip": "Ottimo per giochi di Azione e Strategia"
+      },
+      "online-play": {
+        "name": "Gioco Online",
+        "description": "Multigiocatore internet",
+        "tip": "Ricerca quando emergono piattaforme online"
+      },
+      "3d-graphics-v4": {
+        "name": "Grafica 3D v4",
+        "description": "Grafica 3D di alta gamma",
+        "tip": "Necessaria per giochi AAA"
+      },
+      "hd-audio": {
+        "name": "Audio HD",
+        "description": "Audio ad alta definizione",
+        "tip": "Standard per giochi moderni"
+      },
+      "advanced-ai": {
+        "name": "IA Avanzata",
+        "description": "Comportamento nemico più intelligente",
+        "tip": "Importante per Strategia e Simulazione"
+      },
+      "open-world": {
+        "name": "Mondo Aperto",
+        "description": "Esplorazione non lineare",
+        "tip": "Ottimo per giochi di Avventura e RPG"
+      },
+      "vr-support": {
+        "name": "Supporto VR",
+        "description": "Gaming in realtà virtuale",
+        "tip": "Investimento tecnologico futuro"
+      }
     }
   },
   "staff": {
@@ -321,21 +521,66 @@
     "fromYear": "Dall'Anno",
     "untilYear": "Fino all'Anno",
     "items": {
-      "garage-solo": { "title": "Lavora da Solo nel Garage", "description": "Non puoi assumere personale nella fase garage. Concentrati sullo sviluppo delle tue competenze e sul risparmio per il primo ufficio." },
-      "garage-skills": { "title": "Bilancia le Tue Competenze", "description": "Allenati sia in Design che in Tecnologia. Una divisione 700/700 è ottimale per creare giochi di qualità." },
-      "garage-save": { "title": "Risparmia per il Primo Ufficio", "description": "Hai bisogno di 1 milione di dollari per sbloccare il primo ufficio. Risparmia aggressivamente negli anni 4-5." },
-      "first-hire": { "title": "Assumi il Tuo Primo Dipendente", "description": "Assumi qualcuno con competenze complementari. Se sei forte in Design, assumi qualcuno forte in Tecnologia e viceversa." },
-      "first-training": { "title": "Allena Immediatamente", "description": "Le nuove assunzioni hanno statistiche basse. Usa la formazione per aumentare rapidamente le loro competenze. Dai priorità alle loro aree più deboli per prime." },
-      "first-specialist": { "title": "Specialisti vs Generalisti", "description": "Prima fase: assumi generalisti che possono fare più compiti. Dopo: specialisti per ruoli specifici in team più grandi." },
-      "first-team-size": { "title": "Consigli Dimensione Team", "description": "Giochi piccoli: 1-2 persone. Giochi medi: 2-3 persone. Abbina la dimensione del team alla dimensione del gioco per la migliore efficienza." },
-      "second-expand": { "title": "Espandi a 6 Dipendenti", "description": "Il secondo ufficio permette fino a 6 dipendenti. Assumi gradualmente quando il flusso di cassa lo permette." },
-      "second-roles": { "title": "Assegna Ruoli", "description": "Designa 2-3 dipendenti per compiti di Design (Arte, Storia, Audio) e 2-3 per Tecnologia (Motore, IA, Progettazione Livelli)." },
-      "second-large-games": { "title": "Team per Giochi Grandi", "description": "I giochi grandi necessitano di 4+ persone. I giochi AAA necessitano di 6 persone. Assicurati di avere abbastanza personale formato." },
-      "second-specialists": { "title": "Assumi Specialisti", "description": "Considera Specialisti Grafici, Ingegneri Audio e Scrittori per una migliore qualità del gioco in aree specifiche." },
-      "rd-lab-unlock": { "title": "Vantaggi Laboratorio R&S", "description": "Il laboratorio R&S ti permette di ricercare nuovi motori e hardware. Hai bisogno di almeno 4 dipendenti per usarlo efficacemente." },
-      "rd-dedicated": { "title": "Personale R&S Dedicato", "description": "Assegna 1-2 dipendenti permanentemente a R&S. Dovrebbero avere alta velocità di Ricerca e competenze in Tecnologia." },
-      "hw-lab-unlock": { "title": "Team Laboratorio Hardware", "description": "Creare la tua console richiede un team dedicato. Assegna i tuoi migliori specialisti in Tecnologia." },
-      "hw-console-team": { "title": "Sviluppo Console", "description": "Costruire una console necessita di 2-3 personale dedicato per 6+ mesi. Pianifica di conseguenza la capacità del tuo team." }
+      "garage-solo": {
+        "title": "Lavora da Solo nel Garage",
+        "description": "Non puoi assumere personale nella fase garage. Concentrati sullo sviluppo delle tue competenze e sul risparmio per il primo ufficio."
+      },
+      "garage-skills": {
+        "title": "Bilancia le Tue Competenze",
+        "description": "Allenati sia in Design che in Tecnologia. Una divisione 700/700 è ottimale per creare giochi di qualità."
+      },
+      "garage-save": {
+        "title": "Risparmia per il Primo Ufficio",
+        "description": "Hai bisogno di 1 milione di dollari per sbloccare il primo ufficio. Risparmia aggressivamente negli anni 4-5."
+      },
+      "first-hire": {
+        "title": "Assumi il Tuo Primo Dipendente",
+        "description": "Assumi qualcuno con competenze complementari. Se sei forte in Design, assumi qualcuno forte in Tecnologia e viceversa."
+      },
+      "first-training": {
+        "title": "Allena Immediatamente",
+        "description": "Le nuove assunzioni hanno statistiche basse. Usa la formazione per aumentare rapidamente le loro competenze. Dai priorità alle loro aree più deboli per prime."
+      },
+      "first-specialist": {
+        "title": "Specialisti vs Generalisti",
+        "description": "Prima fase: assumi generalisti che possono fare più compiti. Dopo: specialisti per ruoli specifici in team più grandi."
+      },
+      "first-team-size": {
+        "title": "Consigli Dimensione Team",
+        "description": "Giochi piccoli: 1-2 persone. Giochi medi: 2-3 persone. Abbina la dimensione del team alla dimensione del gioco per la migliore efficienza."
+      },
+      "second-expand": {
+        "title": "Espandi a 6 Dipendenti",
+        "description": "Il secondo ufficio permette fino a 6 dipendenti. Assumi gradualmente quando il flusso di cassa lo permette."
+      },
+      "second-roles": {
+        "title": "Assegna Ruoli",
+        "description": "Designa 2-3 dipendenti per compiti di Design (Arte, Storia, Audio) e 2-3 per Tecnologia (Motore, IA, Progettazione Livelli)."
+      },
+      "second-large-games": {
+        "title": "Team per Giochi Grandi",
+        "description": "I giochi grandi necessitano di 4+ persone. I giochi AAA necessitano di 6 persone. Assicurati di avere abbastanza personale formato."
+      },
+      "second-specialists": {
+        "title": "Assumi Specialisti",
+        "description": "Considera Specialisti Grafici, Ingegneri Audio e Scrittori per una migliore qualità del gioco in aree specifiche."
+      },
+      "rd-lab-unlock": {
+        "title": "Vantaggi Laboratorio R&S",
+        "description": "Il laboratorio R&S ti permette di ricercare nuovi motori e hardware. Hai bisogno di almeno 4 dipendenti per usarlo efficacemente."
+      },
+      "rd-dedicated": {
+        "title": "Personale R&S Dedicato",
+        "description": "Assegna 1-2 dipendenti permanentemente a R&S. Dovrebbero avere alta velocità di Ricerca e competenze in Tecnologia."
+      },
+      "hw-lab-unlock": {
+        "title": "Team Laboratorio Hardware",
+        "description": "Creare la tua console richiede un team dedicato. Assegna i tuoi migliori specialisti in Tecnologia."
+      },
+      "hw-console-team": {
+        "title": "Sviluppo Console",
+        "description": "Costruire una console necessita di 2-3 personale dedicato per 6+ mesi. Pianifica di conseguenza la capacità del tuo team."
+      }
     }
   },
   "timeline": {
@@ -368,27 +613,111 @@
       "featureUnlock": "Sblocco Caratteristica"
     },
     "items": {
-      "start-game": { "title": "Inizio Gioco", "description": "Inizi nel tuo garage con $70K. Crea piccoli giochi per costruire esperienza.", "action": "Crea giochi di Azione o Avventura - sono perdonanti per i principianti" },
-      "pc-available": { "title": "Piattaforma PC Disponibile", "description": "Il PC è la tua piattaforma iniziale. Nessuna tariffa di licenza richiesta.", "action": "Usa PC per tutti i tuoi giochi iniziali" },
-      "govodore-64": { "title": "Govodore 64 Rilasciato", "description": "Prima console economica. Buona per giochi Casual e Azione.", "action": "Considera di ottenere la licenza se fai giochi casual" },
-      "first-hit": { "title": "Mira al Primo Successo", "description": "Entro l'anno 2, prova a creare un gioco che ottenga 7+ per costruire fan.", "action": "Concentrati su buone combinazioni tema-genere e impostazioni slider corrette" },
-      "office-goal": { "title": "Risparmia per l'Ufficio", "description": "Dovresti avere quasi 1 milione ora per il tuo primo ufficio.", "action": "Se no, concentrati su giochi di media dimensione con buone combinazioni" },
-      "tes-release": { "title": "TES Rilasciato", "description": "Console importante con grande pubblico. Ottima per giochi di Azione.", "action": "Piattaforma forte - ottieni la licenza" },
-      "first-office-available": { "title": "Primo Ufficio Disponibile", "description": "Con 1 milione di denaro, puoi trasferirti al primo ufficio e assumere personale.", "action": "Trasferisciti non appena hai i soldi" },
-      "super-tes": { "title": "Super TES Rilasciato", "description": "Inizia l'era 16-bit. Grandi capacità grafiche.", "action": "Aggiorna da TES - questa è la piattaforma calda" },
-      "playsystem": { "title": "PlaySystem Rilasciato", "description": "Console 3D rivoluzionaria. Il futuro del gaming.", "action": "ESSENZIALE: Ottieni questa licenza e ricercare grafica 3D" },
-      "3d-era": { "title": "Era Grafica 3D", "description": "La grafica 3D diventa essenziale per giochi ad alto punteggio.", "action": "Ricerca Grafica 3D v1 immediatamente quando disponibile" },
-      "dreamvast": { "title": "DreamVast Rilasciato", "description": "Console avanzata con capacità online.", "action": "Buona piattaforma per giochi sperimentali" },
-      "playsystem-2": { "title": "PlaySystem 2 Rilasciato", "description": "Console più venduta di sempre. Pubblico enorme.", "action": "Piattaforma obbligatoria - base installata enorme" },
-      "second-office-time": { "title": "Considera il Secondo Ufficio", "description": "A questo punto dovresti essere pronto per espanderti a un ufficio più grande.", "action": "Hai bisogno di 5 milioni di denaro per il secondo ufficio" },
-      "mbox": { "title": "mBox Rilasciato", "description": "Nuovo concorrente nel mercato delle console.", "action": "Buono per i mercati occidentali" },
-      "playsystem-3": { "title": "PlaySystem 3 Rilasciato", "description": "Arriva il gaming HD. Costi di sviluppo elevati.", "action": "Concentrati sulla qualità piuttosto che sulla quantità" },
-      "mbox-360": { "title": "mBox 360 Rilasciato", "description": "Forti caratteristiche online e sistema di achievement.", "action": "Ottimo per giochi multigiocatore" },
-      "own-console": { "title": "Crea la Tua Console", "description": "Il laboratorio hardware ti permette di progettare la tua console di gioco.", "action": "Tenta solo se finanziariamente stabile" },
-      "genre-combo-tip": { "title": "Padroneggia le Combinazioni Tema-Genere", "description": "La giusta combinazione tema-genere è cruciale per il successo.", "action": "Usa questa guida per trovare combinazioni ottimali" },
-      "sequel-strategy": { "title": "Strategia Sequel", "description": "I sequel di giochi di successo performano meglio. Costruisci franchise.", "action": "Aspetta un punteggio 9+ prima di fare sequel" },
-      "engine-importance": { "title": "Vantaggi Motore Personalizzato", "description": "Costruire motori di gioco personalizzati migliora significativamente la qualità del gioco.", "action": "Investi nel laboratorio R&S per lo sviluppo del motore" },
-      "aaa-games": { "title": "Sviluppo Giochi AAA", "description": "Team grande + Motore Personalizzato + Marketing appropriato = successo AAA.", "action": "Tenta giochi AAA solo con team esperto" }
+      "start-game": {
+        "title": "Inizio Gioco",
+        "description": "Inizi nel tuo garage con $70K. Crea piccoli giochi per costruire esperienza.",
+        "action": "Crea giochi di Azione o Avventura - sono perdonanti per i principianti"
+      },
+      "pc-available": {
+        "title": "Piattaforma PC Disponibile",
+        "description": "Il PC è la tua piattaforma iniziale. Nessuna tariffa di licenza richiesta.",
+        "action": "Usa PC per tutti i tuoi giochi iniziali"
+      },
+      "govodore-64": {
+        "title": "Govodore 64 Rilasciato",
+        "description": "Prima console economica. Buona per giochi Casual e Azione.",
+        "action": "Considera di ottenere la licenza se fai giochi casual"
+      },
+      "first-hit": {
+        "title": "Mira al Primo Successo",
+        "description": "Entro l'anno 2, prova a creare un gioco che ottenga 7+ per costruire fan.",
+        "action": "Concentrati su buone combinazioni tema-genere e impostazioni slider corrette"
+      },
+      "office-goal": {
+        "title": "Risparmia per l'Ufficio",
+        "description": "Dovresti avere quasi 1 milione ora per il tuo primo ufficio.",
+        "action": "Se no, concentrati su giochi di media dimensione con buone combinazioni"
+      },
+      "tes-release": {
+        "title": "TES Rilasciato",
+        "description": "Console importante con grande pubblico. Ottima per giochi di Azione.",
+        "action": "Piattaforma forte - ottieni la licenza"
+      },
+      "first-office-available": {
+        "title": "Primo Ufficio Disponibile",
+        "description": "Con 1 milione di denaro, puoi trasferirti al primo ufficio e assumere personale.",
+        "action": "Trasferisciti non appena hai i soldi"
+      },
+      "super-tes": {
+        "title": "Super TES Rilasciato",
+        "description": "Inizia l'era 16-bit. Grandi capacità grafiche.",
+        "action": "Aggiorna da TES - questa è la piattaforma calda"
+      },
+      "playsystem": {
+        "title": "PlaySystem Rilasciato",
+        "description": "Console 3D rivoluzionaria. Il futuro del gaming.",
+        "action": "ESSENZIALE: Ottieni questa licenza e ricercare grafica 3D"
+      },
+      "3d-era": {
+        "title": "Era Grafica 3D",
+        "description": "La grafica 3D diventa essenziale per giochi ad alto punteggio.",
+        "action": "Ricerca Grafica 3D v1 immediatamente quando disponibile"
+      },
+      "dreamvast": {
+        "title": "DreamVast Rilasciato",
+        "description": "Console avanzata con capacità online.",
+        "action": "Buona piattaforma per giochi sperimentali"
+      },
+      "playsystem-2": {
+        "title": "PlaySystem 2 Rilasciato",
+        "description": "Console più venduta di sempre. Pubblico enorme.",
+        "action": "Piattaforma obbligatoria - base installata enorme"
+      },
+      "second-office-time": {
+        "title": "Considera il Secondo Ufficio",
+        "description": "A questo punto dovresti essere pronto per espanderti a un ufficio più grande.",
+        "action": "Hai bisogno di 5 milioni di denaro per il secondo ufficio"
+      },
+      "mbox": {
+        "title": "mBox Rilasciato",
+        "description": "Nuovo concorrente nel mercato delle console.",
+        "action": "Buono per i mercati occidentali"
+      },
+      "playsystem-3": {
+        "title": "PlaySystem 3 Rilasciato",
+        "description": "Arriva il gaming HD. Costi di sviluppo elevati.",
+        "action": "Concentrati sulla qualità piuttosto che sulla quantità"
+      },
+      "mbox-360": {
+        "title": "mBox 360 Rilasciato",
+        "description": "Forti caratteristiche online e sistema di achievement.",
+        "action": "Ottimo per giochi multigiocatore"
+      },
+      "own-console": {
+        "title": "Crea la Tua Console",
+        "description": "Il laboratorio hardware ti permette di progettare la tua console di gioco.",
+        "action": "Tenta solo se finanziariamente stabile"
+      },
+      "genre-combo-tip": {
+        "title": "Padroneggia le Combinazioni Tema-Genere",
+        "description": "La giusta combinazione tema-genere è cruciale per il successo.",
+        "action": "Usa questa guida per trovare combinazioni ottimali"
+      },
+      "sequel-strategy": {
+        "title": "Strategia Sequel",
+        "description": "I sequel di giochi di successo performano meglio. Costruisci franchise.",
+        "action": "Aspetta un punteggio 9+ prima di fare sequel"
+      },
+      "engine-importance": {
+        "title": "Vantaggi Motore Personalizzato",
+        "description": "Costruire motori di gioco personalizzati migliora significativamente la qualità del gioco.",
+        "action": "Investi nel laboratorio R&S per lo sviluppo del motore"
+      },
+      "aaa-games": {
+        "title": "Sviluppo Giochi AAA",
+        "description": "Team grande + Motore Personalizzato + Marketing appropriato = successo AAA.",
+        "action": "Tenta giochi AAA solo con team esperto"
+      }
     }
   },
   "checklist": {
@@ -628,11 +957,27 @@
     "proTip4": "Per domande: Controlla prima la FAQ, poi il manuale per spiegazioni dettagliate.",
     "workflow": {
       "planGame": "Pianifica un Nuovo Gioco",
-      "planGameSteps": ["Vai a 'Consigliatore di Generi' e seleziona il tuo tema desiderato", "Nota il miglior genere per il tuo tema", "Passa a 'Consigliatore di Piattaforme' e seleziona genere + pubblico", "Apri 'Preset Slider' e copia i valori per il tuo genere", "Usa il 'Pianificatore di Giochi' per combinare tutto"],
+      "planGameSteps": [
+        "Vai a 'Consigliatore di Generi' e seleziona il tuo tema desiderato",
+        "Nota il miglior genere per il tuo tema",
+        "Passa a 'Consigliatore di Piattaforme' e seleziona genere + pubblico",
+        "Apri 'Preset Slider' e copia i valori per il tuo genere",
+        "Usa il 'Pianificatore di Giochi' per combinare tutto"
+      ],
       "findSliders": "Trova Slider Ottimali",
-      "findSlidersSteps": ["Vai a 'Preset Slider'", "Seleziona il tuo genere dalla lista", "Leggi i valori per tutte e tre le fasi", "Imposta gli slider nel gioco di conseguenza"],
+      "findSlidersSteps": [
+        "Vai a 'Preset Slider'",
+        "Seleziona il tuo genere dalla lista",
+        "Leggi i valori per tutte e tre le fasi",
+        "Imposta gli slider nel gioco di conseguenza"
+      ],
       "trackProgress": "Traccia i Progressi",
-      "trackProgressSteps": ["Apri la pagina 'Lista di Controllo'", "Attraversa le tappe", "Spunta quello che hai già raggiunto", "Aggiungi i tuoi obiettivi se desiderato"]
+      "trackProgressSteps": [
+        "Apri la pagina 'Lista di Controllo'",
+        "Attraversa le tappe",
+        "Spunta quello che hai già raggiunto",
+        "Aggiungi i tuoi obiettivi se desiderato"
+      ]
     },
     "featureDesc": {
       "dashboard": "La tua home page con una rapida panoramica delle migliori combinazioni tema-genere e statistiche importanti.",
@@ -649,18 +994,66 @@
       "manual": "Il riferimento completo per tutte le meccaniche di gioco."
     },
     "featureTips": {
-      "dashboard": ["Mostra le top 5 migliori combinazioni a colpo d'occhio", "Accesso rapido a tutte le funzionalità importanti", "Le statistiche del database attuali sono visualizzate"],
-      "topicRecommender": ["Prima seleziona un genere dalla lista", "I temi sono ordinati per compatibilità", "Le valutazioni verdi mostrano combinazioni ottimali"],
-      "genreRecommender": ["Ideale quando hai un tema specifico in mente", "Mostra anno di sblocco e costi", "Presta attenzione alla valutazione di affinità per i migliori risultati"],
-      "platformRecommender": ["Seleziona genere E pubblico per i migliori risultati", "Considera costi di licenza e quota di mercato", "Il filtro temporale aiuta con piattaforme storiche"],
-      "sliderPresets": ["Seleziona il tuo genere dalla lista", "Copia i valori per ogni fase", "Valori alti = più concentrazione su quell'area"],
-      "planner": ["Combina tutte le raccomandazioni in un piano", "Salva più idee di gioco", "Esporta i tuoi piani come riferimento"],
-      "research": ["Ordinato per categoria e anno", "Mostra dipendenze tra tecnologie", "Aiuta a pianificare la tua ricerca"],
-      "staff": ["Consigli diversi per ogni fase di ufficio", "Dimensioni team ottimali spiegate", "Priorità competenze per ruoli diversi"],
-      "timeline": ["Segui la guida cronologicamente", "I rilasci di piattaforme importanti sono segnati", "Consigli strategici per ogni periodo di tempo"],
-      "checklist": ["Spunta le tappe completate", "Aggiungi i tuoi compiti", "I progressi sono salvati localmente"],
-      "faq": ["Organizzato per categorie", "Risposte rapide a problemi comuni", "Clicca una domanda per vedere la risposta"],
-      "manual": ["6 categorie con tutti i dettagli", "Dalle basi all'avanzato", "Ideale per riferimento durante il gameplay"]
+      "dashboard": [
+        "Mostra le top 5 migliori combinazioni a colpo d'occhio",
+        "Accesso rapido a tutte le funzionalità importanti",
+        "Le statistiche del database attuali sono visualizzate"
+      ],
+      "topicRecommender": [
+        "Prima seleziona un genere dalla lista",
+        "I temi sono ordinati per compatibilità",
+        "Le valutazioni verdi mostrano combinazioni ottimali"
+      ],
+      "genreRecommender": [
+        "Ideale quando hai un tema specifico in mente",
+        "Mostra anno di sblocco e costi",
+        "Presta attenzione alla valutazione di affinità per i migliori risultati"
+      ],
+      "platformRecommender": [
+        "Seleziona genere E pubblico per i migliori risultati",
+        "Considera costi di licenza e quota di mercato",
+        "Il filtro temporale aiuta con piattaforme storiche"
+      ],
+      "sliderPresets": [
+        "Seleziona il tuo genere dalla lista",
+        "Copia i valori per ogni fase",
+        "Valori alti = più concentrazione su quell'area"
+      ],
+      "planner": [
+        "Combina tutte le raccomandazioni in un piano",
+        "Salva più idee di gioco",
+        "Esporta i tuoi piani come riferimento"
+      ],
+      "research": [
+        "Ordinato per categoria e anno",
+        "Mostra dipendenze tra tecnologie",
+        "Aiuta a pianificare la tua ricerca"
+      ],
+      "staff": [
+        "Consigli diversi per ogni fase di ufficio",
+        "Dimensioni team ottimali spiegate",
+        "Priorità competenze per ruoli diversi"
+      ],
+      "timeline": [
+        "Segui la guida cronologicamente",
+        "I rilasci di piattaforme importanti sono segnati",
+        "Consigli strategici per ogni periodo di tempo"
+      ],
+      "checklist": [
+        "Spunta le tappe completate",
+        "Aggiungi i tuoi compiti",
+        "I progressi sono salvati localmente"
+      ],
+      "faq": [
+        "Organizzato per categorie",
+        "Risposte rapide a problemi comuni",
+        "Clicca una domanda per vedere la risposta"
+      ],
+      "manual": [
+        "6 categorie con tutti i dettagli",
+        "Dalle basi all'avanzato",
+        "Ideale per riferimento durante il gameplay"
+      ]
     }
   },
   "sources": {
@@ -728,6 +1121,216 @@
     "contact": {
       "title": "Contatto",
       "description": "Se hai domande su questa privacy policy o le nostre pratiche sui dati, contattaci tramite il sito web."
+    }
+  },
+  "guide": {
+    "title": "Guida al magnate degli sviluppatori di giochi",
+    "subtitle": "Un percorso completo dal garage al laboratorio di ricerca e sviluppo, incentrato sulle decisioni che guidano le recensioni.",
+    "quickChecklistTitle": "Lista di controllo di avvio rapido",
+    "quickChecklist": [
+      "Scegli una combinazione forte di argomento e genere prima di iniziare lo sviluppo.",
+      "Abbina la piattaforma e il pubblico al tuo genere.",
+      "Utilizza le preimpostazioni del dispositivo di scorrimento per le tre fasi.",
+      "Evita di ripetere la stessa combo in partite consecutive.",
+      "Ricerca aggiornamenti tecnologici prima che il mercato cambi."
+    ],
+    "phasesTitle": "Procedura dettagliata fase per fase",
+    "phases": {
+      "garage": {
+        "title": "Garage (anni 1-3)",
+        "subtitle": "Costruisci fan e stabilità con giochi affidabili e medi.",
+        "steps": [
+          "Punta a ricevere più di 7 recensioni per creare presto una base di fan.",
+          "Utilizzare giochi di piccole/medie dimensioni per controllare i costi.",
+          "Ricerca il pubblico il prima possibile."
+        ]
+      },
+      "office": {
+        "title": "Primo Ufficio (anni 3-6)",
+        "subtitle": "Amplia la tua squadra e passa a motori migliori.",
+        "steps": [
+          "Assumi competenze complementari e forma immediatamente nuovo personale.",
+          "Investi in motori personalizzati con il giusto set di funzionalità.",
+          "Allinea la scelta della piattaforma con la popolarità del genere."
+        ]
+      },
+      "rdLab": {
+        "title": "Laboratorio di ricerca e sviluppo (anno 6+)",
+        "subtitle": "Sblocca la tecnologia avanzata e preparati per i giochi AAA.",
+        "steps": [
+          "Dai priorità agli aggiornamenti grafici e alle funzionalità di genere di alto valore.",
+          "Mantenere uno o due membri del personale concentrati sulla ricerca.",
+          "Costruisci sequel solo quando l'originale ha ottenuto 9+."
+        ]
+      }
+    },
+    "pitfalls": {
+      "title": "Errori comuni che costano recensioni",
+      "items": [
+        "Ignorando gli slider e basandosi solo su una buona combinazione.",
+        "Scegliere piattaforme che non corrispondono al tuo pubblico di destinazione.",
+        "Ripetendo la stessa combinazione troppo spesso.",
+        "Saltare la ricerca finché non è già troppo tardi."
+      ]
+    },
+    "cta": {
+      "title": "Utilizzare gli strumenti per eseguire la guida",
+      "description": "Accedi al suggerimento e alle impostazioni predefinite per applicare i consigli sopra riportati al tuo prossimo gioco.",
+      "primary": "Trova il genere migliore per il tuo argomento",
+      "secondary": "Ottieni i preset dello slider"
+    }
+  },
+  "bestCombos": {
+    "title": "Le migliori combinazioni argomento-genere",
+    "subtitle": "Comprendere il sistema di adattamento e utilizzare combinazioni affidabili che ottengono buoni risultati in tutte le epoche.",
+    "fit": {
+      "title": "Come funziona la valutazione di idoneità",
+      "description": "Ciascuna coppia argomento-genere ottiene un punteggio di idoneità compreso tra -3 e +3. Maggiore è l'adattamento, migliori saranno le tue recensioni.",
+      "bullets": [
+        "L'idoneità è il fattore più importante nei punteggi delle recensioni.",
+        "Gli slider efficaci non possono risolvere completamente un cattivo adattamento.",
+        "Utilizza il suggeritore per vedere i valori di adattamento esatti."
+      ]
+    },
+    "starterCombos": {
+      "title": "Combo iniziali che funzionano attraverso le epoche",
+      "items": [
+        "Azione + Militare/Fantascienza/Fantasy",
+        "Gioco di ruolo + Fantasy/Medievale",
+        "Simulazione + Città/Trasporti/Affari",
+        "Strategia + Medievale/Storia",
+        "Avventura + Fantasia/Detective",
+        "Casual + Bambini/Festa"
+      ]
+    },
+    "avoid": {
+      "title": "Combo da evitare o ritardare",
+      "items": [
+        "Bambini + Horror (vestibilità molto bassa)",
+        "Guerra + Casual (corrispondenza di pubblico debole)",
+        "Temi maturi su piattaforme familiari",
+        "Ripetendo la stessa combo uno dopo l'altro"
+      ]
+    },
+    "cta": {
+      "title": "Vuoi le migliori combinazioni esatte?",
+      "description": "Utilizza il suggerimento per ordinare ogni argomento in base all'anno di adattamento e sblocco.",
+      "primary": "Utilizza il suggerimento del genere",
+      "secondary": "Controlla le preimpostazioni dello slider"
+    }
+  },
+  "slidersExplained": {
+    "title": "Spiegazione degli slider di Game Dev Tycoon",
+    "subtitle": "Comprendi a cosa dà priorità ciascuna fase e imposta i dispositivi di scorrimento per revisioni migliori.",
+    "why": {
+      "title": "Perché gli slider sono importanti",
+      "items": [
+        "I cursori decidono come la tua squadra trascorre il tempo in ogni fase.",
+        "Anche una combinazione perfetta può fallire con la messa a fuoco sbagliata dello slider.",
+        "Ogni genere ha un equilibrio ideale diverso per fase."
+      ]
+    },
+    "phases": {
+      "title": "Priorità di fase",
+      "phase1": {
+        "title": "Motore e gameplay",
+        "focus": "Il motore di bilanciamento funziona con il gameplay a seconda del genere e delle dimensioni del gioco.",
+        "tips": [
+          "Azione e simulazione si basano fortemente sul gameplay.",
+          "I giochi di grandi dimensioni richiedono maggiori investimenti nel motore.",
+          "Evita gli estremi a meno che un genere non li favorisca fortemente."
+        ]
+      },
+      "phase2": {
+        "title": "Storia e design",
+        "focus": "La storia conta di più per i generi narrativi; il design vince per titoli casual.",
+        "tips": [
+          "I giochi di ruolo e di avventura necessitano di una maggiore attenzione alla storia.",
+          "I giochi casuali tendono al design e all'usabilità.",
+          "Evita che la tecnologia rimanga troppo indietro."
+        ]
+      },
+      "phase3": {
+        "title": "Polacco e tecnologico",
+        "focus": "Il polacco è fondamentale per i punteggi delle recensioni; la tecnologia deve corrispondere all’era della piattaforma.",
+        "tips": [
+          "Non abbassare mai il lucido troppo in basso su giochi medio/grandi.",
+          "Investi nella tecnologia quando prendi di mira piattaforme avanzate.",
+          "Marketing e lucidatura insieme aumentano le vendite."
+        ]
+      }
+    },
+    "workflow": {
+      "title": "Flusso di lavoro veloce",
+      "steps": [
+        "Scegli l'argomento e il genere.",
+        "Apri i preset degli slider per il genere.",
+        "Applica i valori per ogni fase del gioco.",
+        "Ricontrolla i cursori quando cambi le dimensioni del gioco."
+      ]
+    },
+    "cta": {
+      "title": "Vuoi numeri esatti per genere?",
+      "description": "Utilizza le preimpostazioni per copiare istantaneamente i migliori valori del cursore.",
+      "primary": "Apri le preimpostazioni dello slider",
+      "secondary": "Trova il miglior genere"
+    }
+  },
+  "researchOrder": {
+    "title": "Ordine di ricerca del magnate degli sviluppatori di giochi",
+    "subtitle": "Un pratico elenco di priorità in modo da sbloccare ciò che conta prima che ne abbia bisogno.",
+    "priorities": {
+      "title": "Ordine di ricerca consigliato",
+      "items": [
+        "Nuovo pubblico (giovani, tutti, maturi)",
+        "Funzionalità principali del genere (dialoghi, intelligenza artificiale, multiplayer)",
+        "Aggiornamenti grafici prima delle ondate di nuove piattaforme",
+        "Miglioramenti al marketing e al gameplay",
+        "Laboratorio di ricerca e sviluppo e motori personalizzati quando disponibili",
+        "Laboratorio hardware solo dopo una forte liquidità"
+      ]
+    },
+    "eras": {
+      "title": "Priorità specifiche dell'epoca",
+      "early": {
+        "title": "Inizio partita",
+        "items": [
+          "Sblocca rapidamente il pubblico per una migliore adattabilità.",
+          "Concentrati su funzionalità economiche e di grande impatto.",
+          "Evita la ricerca che non puoi permetterti di utilizzare."
+        ]
+      },
+      "mid": {
+        "title": "A metà partita",
+        "items": [
+          "Aggiorna la grafica quando appaiono le piattaforme 3D.",
+          "Inizia a creare un motore personalizzato riutilizzabile.",
+          "Aggiungi funzionalità multiplayer e online non appena si sbloccano."
+        ]
+      },
+      "late": {
+        "title": "Gioco in ritardo",
+        "items": [
+          "Mantieni la tecnologia a livello di piattaforma per evitare penalità di revisione.",
+          "Investi in laboratorio hardware solo con un team dedicato.",
+          "Dai priorità alle funzionalità che corrispondono ai tuoi generi principali."
+        ]
+      }
+    },
+    "mistakes": {
+      "title": "Errori comuni nella ricerca",
+      "items": [
+        "Punti di diffusione nella ricerca a basso impatto.",
+        "Funzionalità di sblocco che non includi mai nei motori.",
+        "Ritardare troppo gli aggiornamenti grafici.",
+        "Costruire hardware senza abbastanza flusso di cassa."
+      ]
+    },
+    "cta": {
+      "title": "Utilizza il tracker di ricerca",
+      "description": "Mantieni gli sblocchi e i prerequisiti organizzati nella Guida alla ricerca.",
+      "primary": "Guida alla ricerca aperta",
+      "secondary": "Segui la sequenza temporale"
     }
   }
 }

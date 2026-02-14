@@ -411,12 +411,33 @@ function createDefaultPreset(stage: number): SliderPreset {
   };
 }
 
+export function getEffectivePlannerTopics(
+  allTopics: Topic[],
+  useUnlockedTopicsFilter: boolean,
+  unlockedTopicIds: string[]
+): { topics: Topic[]; usedFallback: boolean } {
+  if (!useUnlockedTopicsFilter || unlockedTopicIds.length === 0) {
+    return { topics: allTopics, usedFallback: false };
+  }
+
+  const unlockedSet = new Set(unlockedTopicIds);
+  const filteredTopics = allTopics.filter((topic) => unlockedSet.has(topic.id));
+
+  if (filteredTopics.length === 0) {
+    return { topics: allTopics, usedFallback: true };
+  }
+
+  return { topics: filteredTopics, usedFallback: false };
+}
+
 export async function generatePlannerRecommendations(
   year: number,
   month: number,
   cash: number,
   fans: number,
-  unlockedOnly: boolean
+  unlockedOnly: boolean,
+  useUnlockedTopicsFilter = false,
+  unlockedTopicIds: string[] = []
 ): Promise<PlannerRecommendation> {
   const allTopics = await storage.getAllTopics();
   const allGenres = await storage.getAllGenres();
@@ -425,6 +446,12 @@ export async function generatePlannerRecommendations(
   const topicGenreFits = await storage.getTopicGenreFits();
   const platformGenreFits = await storage.getPlatformGenreFits();
   const platformAudienceFits = await storage.getPlatformAudienceFits();
+
+  const { topics: effectiveTopics } = getEffectivePlannerTopics(
+    allTopics,
+    useUnlockedTopicsFilter,
+    unlockedTopicIds
+  );
 
   // Filter platforms by availability
   const availablePlatforms = allPlatforms.filter((p) => {
@@ -441,7 +468,7 @@ export async function generatePlannerRecommendations(
     score: number;
   }[] = [];
 
-  for (const topic of allTopics) {
+  for (const topic of effectiveTopics) {
     if (unlockedOnly && topic.unlockYear && topic.unlockYear > year) continue;
 
     for (const genre of allGenres) {

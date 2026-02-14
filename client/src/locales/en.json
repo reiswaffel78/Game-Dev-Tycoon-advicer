@@ -226,6 +226,17 @@
     "fans": "Fans",
     "unlockedOnly": "Unlocked Only",
     "unlockedOnlyDesc": "Only recommend items you've already researched",
+
+    "unlockedTopicsFilter": {
+      "title": "Filter by unlocked topics",
+      "description": "Use only topics you've already unlocked in your save.",
+      "searchPlaceholder": "Search topics...",
+      "selectAll": "Select all",
+      "clear": "Clear",
+      "selectedCount": "{{selected}}/{{total}} selected",
+      "noTopics": "No topics found.",
+      "emptyFallbackWarning": "No selected topics are currently available. Using all topics as fallback."
+    },
     "generatePlan": "Generate Plan",
     "generating": "Generating...",
     "configureSaveState": "Configure Your Save State",

@@ -296,7 +296,7 @@ export default function SliderPresets() {
         </Card>
       )}
 
-      <div className={`grid gap-6 ${multiGenreMode ? "lg:grid-cols-[280px,280px,1fr]" : "lg:grid-cols-[320px,1fr]"}`}>
+      <div className={`grid gap-6 ${multiGenreMode ? "lg:grid-cols-[280px,280px,1fr]" : "lg:grid-cols-[320px,1fr]"}`} style={{ minWidth: 0 }}>
         {genresLoading ? (
           <Card className="h-fit">
             <CardContent className="p-6 space-y-2">
@@ -348,7 +348,7 @@ export default function SliderPresets() {
           </>
         ) : null}
 
-        <div className="space-y-4">
+        <div className="space-y-4 min-w-0">
           {!hasSelection ? (
             <Card>
               <CardContent className="py-16 text-center">
@@ -399,7 +399,7 @@ export default function SliderPresets() {
                   <TabsTrigger value="3">{t("recommender.stage", { number: 3 })}</TabsTrigger>
                 </TabsList>
                 <TabsContent value="all" className="mt-4">
-                  <div className="grid gap-4 md:grid-cols-3">
+                  <div className="grid gap-4 grid-cols-1 xl:grid-cols-3">
                     {presets.map((preset) => (
                       <PresetCard key={preset.stage} preset={preset} genreId={displayGenreId} t={t} />
                     ))}

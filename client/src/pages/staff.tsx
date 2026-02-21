@@ -157,11 +157,16 @@ export default function Staff() {
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Users className="h-6 w-6 text-primary" />
-          {t("staff.title")}
+          {t("staff.h1")}
         </h1>
         <p className="text-muted-foreground">
           {t("staff.subtitle")}
         </p>
+      </div>
+
+      <div className="space-y-2">
+        <h2 className="text-xl font-semibold">{t("staff.h2")}</h2>
+        <p className="text-sm text-muted-foreground">{t("staff.seoIntro")}</p>
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4">

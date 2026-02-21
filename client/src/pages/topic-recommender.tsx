@@ -222,11 +222,16 @@ export default function TopicRecommender() {
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Tag className="h-6 w-6 text-primary" />
-          {t("nav.topicRecommender")}
+          {t("recommender.topicH1")}
         </h1>
         <p className="text-muted-foreground">
           {t("dashboard.getStartedDesc")}
         </p>
+      </div>
+
+      <div className="space-y-2">
+        <h2 className="text-xl font-semibold">{t("recommender.topicH2")}</h2>
+        <p className="text-sm text-muted-foreground">{t("recommender.topicSeoIntro")}</p>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[320px,1fr]">

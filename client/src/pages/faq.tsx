@@ -90,11 +90,16 @@ export default function FAQPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <HelpCircle className="h-8 w-8 text-primary" />
-          {t("faq.title")}
+          {t("faq.h1")}
         </h1>
         <p className="text-muted-foreground">
           {t("faq.subtitle")}
         </p>
+      </div>
+
+      <div className="space-y-2 mb-6">
+        <h2 className="text-xl font-semibold">{t("faq.h2")}</h2>
+        <p className="text-muted-foreground text-sm">{t("faq.seoIntro")}</p>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">

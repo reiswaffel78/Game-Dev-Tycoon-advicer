@@ -172,11 +172,16 @@ export default function Timeline() {
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Clock className="h-6 w-6 text-primary" />
-          {t("timeline.title")}
+          {t("timeline.h1")}
         </h1>
         <p className="text-muted-foreground">
           {t("timeline.subtitle")}
         </p>
+      </div>
+
+      <div className="space-y-2">
+        <h2 className="text-xl font-semibold">{t("timeline.h2")}</h2>
+        <p className="text-muted-foreground text-sm">{t("timeline.seoIntro")}</p>
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4">

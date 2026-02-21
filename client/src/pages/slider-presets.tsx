@@ -284,7 +284,7 @@ export default function SliderPresets() {
         <div className="flex items-center justify-between flex-wrap gap-3">
           <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
             <SlidersHorizontal className="h-6 w-6 text-primary" />
-            {t("sliders.title")}
+            {t("sliders.h1")}
           </h1>
           <Button
             variant={multiGenreMode ? "default" : "outline"}
@@ -300,6 +300,11 @@ export default function SliderPresets() {
         <p className="text-muted-foreground">
           {multiGenreMode ? t("sliders.multiGenreSubtitle") : t("sliders.subtitle")}
         </p>
+      </div>
+
+      <div className="space-y-2">
+        <h2 className="text-xl font-semibold">{t("sliders.h2")}</h2>
+        <p className="text-sm text-muted-foreground">{t("sliders.seoIntro")}</p>
       </div>
 
       {multiGenreMode && (

@@ -253,6 +253,9 @@
     "genres": "Genres",
     "platforms": "Platforms",
     "lastUpdate": "Last Update",
+    "h1": "Game Dev Tycoon Topic Genre Platform Recommender Tool",
+    "h2": "What Is the Best Game to Make in Game Dev Tycoon?",
+    "seoIntro": "Use our interactive guide tool to discover the best settings and combinations. Whether you need a combination finder, a cheat sheet, or the best setup for beginners, this planner and recommender helps you make a good game every time.",
     "getStarted": "Get Started",
     "getStartedDesc": "Choose a recommender to find your perfect game setup"
   },
@@ -283,7 +286,16 @@
     "searchGenres": "Search genres...",
     "searchPlatforms": "Search platforms...",
     "confidenceTooltip": "Confidence level based on source agreement",
-    "score": "Score"
+    "score": "Score",
+    "topicH1": "What Topic Should I Use in Game Dev Tycoon?",
+    "topicH2": "Game Dev Tycoon Topic Genre Combo Finder",
+    "topicSeoIntro": "Check which topic works with action, RPG, or any other genre. Our topic compatibility checker helps you find the best topic for RPG games, discover whether fantasy or sci-fi gives the best genre combination, and compare strange vs great combo topic lists. Use this topic and audience match tool to maximize your review scores.",
+    "genreH1": "Which Genre Makes Most Money in Game Dev Tycoon?",
+    "genreH2": "Game Dev Tycoon Genre Picker Tool",
+    "genreSeoIntro": "Find the most profitable genre for early game and late game. Compare action vs RPG to see which is better, get simulation genre tips and setup advice, and discover the best genre for high score. Explore multi genre combinations that work, casual genre slider and topic setup, and learn which topic to pick for the strategy genre.",
+    "platformH1": "Game Dev Tycoon – Which Console to Target",
+    "platformH2": "PC vs Console – Which Is Better in Game Dev Tycoon?",
+    "platformSeoIntro": "Use our platform market share guide to find the best console for mature audience games. Discover the Gameling's best genre topic combo, what games to make for mBox, and use our platform compatibility tool. Whether you should make games for PC or console depends on your audience – this audience platform match guide helps you decide."
   },
   "sliders": {
     "title": "Slider Presets",
@@ -343,7 +355,10 @@
     "swapGenres": "Swap Primary ↔ Secondary",
     "selectBothGenres": "Select Two Genres",
     "selectBothGenresDesc": "Pick a primary and secondary genre to see blended slider settings",
-    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Slider Presets"
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Slider Presets",
+    "h1": "Game Dev Tycoon Optimal Slider Percentages",
+    "h2": "RPG Slider Settings – Phase 1, 2, and 3",
+    "seoIntro": "Get the right action slider time allocation and adventure genre slider guide for every game. This slider cheat sheet covers all genres, including simulation slider percentages and strategy slider phase allocation. Find out what sliders to use for the casual genre, use our slider preset tool per genre, understand the tech design ratio, and learn how to set sliders correctly for maximum review scores."
   },
   "planner": {
     "title": "Game Planner",
@@ -405,7 +420,10 @@
       "unlockTopic": "Unlock {{name}} to expand your game portfolio.",
       "unlockGenre": "Unlock {{name}} genre for new game opportunities.",
       "feature": "Improves graphics quality for future AAA titles."
-    }
+    },
+    "h1": "Game Dev Tycoon – Next Game Recommendation Based on Save",
+    "h2": "What to Make Next Based on Your Game History",
+    "seoIntro": "Use this research priority planner and personalized game advice tool to decide what to research next in mid game. Plan your next release after a combo repeat, track your combos with our combo tracking tool, use the genre rotation planner, and learn how to plan your game pipeline for maximum growth."
   },
   "research": {
     "title": "Research Guide",
@@ -514,7 +532,10 @@
         "description": "Virtual reality gaming",
         "tip": "Future technology investment"
       }
-    }
+    },
+    "h1": "What to Research First in Game Dev Tycoon",
+    "h2": "How to Get Research Points Fast",
+    "seoIntro": "Learn the R&D lab unlock requirements and use our research points farming guide to progress efficiently. Follow the best research priorities list, know when to unlock medium games, and find out how to unlock AAA games through research. Check the research point cost per topic and use this complete research guide from garage to AAA."
   },
   "staff": {
     "title": "Staff Guide",
@@ -607,7 +628,10 @@
         "title": "Console Development",
         "description": "Building a console needs 2-3 dedicated staff for 6+ months. Plan your team capacity accordingly."
       }
-    }
+    },
+    "h1": "How to Train Employees Fast in Game Dev Tycoon",
+    "h2": "Design vs Tech Specialist – What's the Difference?",
+    "seoIntro": "Learn when to specialize staff and how many employees you need for each phase. Understand all staff roles explained in detail, discover how to hire better employees, and compare employee stats like design, tech, research, and speed. This guide also covers staff burnout and vacation management and shows you the balanced team setup explained step by step."
   },
   "timeline": {
     "title": "Timeline",
@@ -744,7 +768,10 @@
         "description": "Large team + Custom Engine + Proper marketing = AAA success.",
         "action": "Only attempt AAA games with experienced team"
       }
-    }
+    },
+    "h1": "Game Dev Tycoon Year by Year Progression Guide",
+    "h2": "When Do New Platforms Come Out?",
+    "seoIntro": "Find office unlock requirements and timing, the full console release schedule in-game, and learn when the mBox comes out. Use our platform release dates guide to track year 3, year 5, and year 10 milestones. Know exactly when to move to the second office and follow the full progression timeline from start to finish."
   },
   "checklist": {
     "title": "Game Progress Checklist",
@@ -763,12 +790,18 @@
     "noItemsYet": "No Items Yet",
     "addItemsHint": "Add custom tasks or select milestones from below to get started.",
     "suggestedMilestones": "Suggested Milestones",
-    "suggestedMilestonesHint": "Important events from the timeline that you might want to track:"
+    "suggestedMilestonesHint": "Important events from the timeline that you might want to track:",
+    "h1": "Things to Check Before Releasing a Game in Game Dev Tycoon",
+    "h2": "Avoid Low Score Checklist",
+    "seoIntro": "Use this common mistakes to avoid list before every release. Includes the AAA game checklist before release, sequel requirements checklist, and engine checklist before starting a new game. Follow our step by step game release guide, review the quality checklist for graphics, staff, and sliders, and learn how to avoid bad reviews with this comprehensive checklist."
   },
   "faq": {
     "title": "Frequently Asked Questions (FAQ)",
     "subtitle": "Answers to the most common questions about Game Dev Tycoon. Find quick solutions to your game problems.",
     "questions": "questions",
+    "h1": "Why Do I Keep Going Bankrupt in Game Dev Tycoon?",
+    "h2": "How to Get a 10/10 Review in Game Dev Tycoon",
+    "seoIntro": "Understand the same combo penalty explained, learn about bugs effect on review score, and get sequel rules and timing right. Find out if Game Dev Tycoon has multiplayer, how long a playthrough takes, and the difference between score and review score. Get essential tips for beginners to avoid going broke.",
     "categories": {
       "basics": "Basics",
       "sliders": "Sliders",
@@ -1085,6 +1118,9 @@
   "guide": {
     "title": "Game Dev Tycoon Guide",
     "subtitle": "A full walkthrough from the garage to the R&D lab, focused on the decisions that drive reviews.",
+    "h1": "Game Dev Tycoon Beginner Guide – From Garage to AAA",
+    "h2": "Tips and Tricks for High Score",
+    "seoIntro": "Learn how to build a billion dollar studio and survive the garage phase. This step by step strategy guide shows you how to get a 10 rating consistently, with mid game tips for expanding your office and staff, late game strategy for custom console and MMO development, and tips for the mobile iOS and Android versions.",
     "quickChecklistTitle": "Quick start checklist",
     "quickChecklist": [
       "Pick a strong topic-genre combo before you start development.",
@@ -1141,6 +1177,9 @@
   },
   "bestCombos": {
     "title": "Best Topic-Genre Combos",
+    "h1": "Best Combos for High Review Scores in Game Dev Tycoon",
+    "h2": "Fantasy RPG Combo – How to Play",
+    "seoIntro": "Discover the best sci-fi action combo settings and the best combo for mature audience on PC. Explore the adventure time travel combo guide, post-apocalyptic RPG combination, and the best multi-genre combo for action adventure. See top rated combos for all genres in 2025 and understand the difference between strange combo vs great combo.",
     "subtitle": "Understand the fit system and use reliable combinations that score well across eras.",
     "fit": {
       "title": "How the fit rating works",
@@ -1180,6 +1219,9 @@
   },
   "slidersExplained": {
     "title": "Game Dev Tycoon Sliders Explained",
+    "h1": "How Do Sliders Work in Game Dev Tycoon?",
+    "h2": "What Does Each Slider Do?",
+    "seoIntro": "Understand the engine, gameplay, and story slider effect on your games. Learn phase 1, 2, 3 slider priorities explained in detail, the slider impact on review score, and the tech design ratio slider guide. Avoid slider mistakes that cause low reviews, get the slider guide for action, RPG, and simulation genres, and master time allocation sliders for all phases.",
     "subtitle": "Understand what each phase prioritizes and set sliders for better reviews.",
     "why": {
       "title": "Why sliders matter",
@@ -1237,6 +1279,9 @@
   },
   "researchOrder": {
     "title": "Game Dev Tycoon Research Order",
+    "h1": "What to Research First in the Garage",
+    "h2": "Research Unlock Order by Year",
+    "seoIntro": "Follow the best research priorities from beginner to AAA. Learn the R&D lab research unlock order, the 3D graphics research order from v1 to v7, and browse the full research tree guide. Find out how to unlock multi genre research, check research cost and timing, and understand the hardware lab research unlock requirements.",
     "subtitle": "A practical priority list so you unlock what matters before you need it.",
     "priorities": {
       "title": "Recommended research order",
@@ -1398,6 +1443,49 @@
     }
   },
   "seo": {
+    "brand": "Game Dev Tycoon Advisor",
+    "title": {
+      "dashboard": "Game Dev Tycoon Optimal Game Setup Calculator",
+      "topicRecommender": "Game Dev Tycoon Best Topic for Each Genre",
+      "genreRecommender": "Game Dev Tycoon Best Genre to Develop",
+      "platformRecommender": "Game Dev Tycoon Best Platform for Each Genre",
+      "sliders": "Game Dev Tycoon Slider Settings for Every Genre",
+      "planner": "Game Dev Tycoon Save Game Planner Tool",
+      "research": "Game Dev Tycoon Research Order Early Game",
+      "staff": "Game Dev Tycoon Best Staff Specialization Guide",
+      "timeline": "Game Dev Tycoon Unlock Timeline All Buildings",
+      "checklist": "Game Dev Tycoon Pre-Release Checklist",
+      "faq": "Game Dev Tycoon Why Are My Games Getting Low Scores",
+      "guide": "Complete Game Dev Tycoon Guide 2025",
+      "bestCombos": "Game Dev Tycoon Best Genre Topic Combinations List",
+      "slidersExplained": "Game Dev Tycoon Sliders Explained for Beginners",
+      "researchOrder": "Game Dev Tycoon Best Research Order Complete List",
+      "handbuch": "Game Dev Tycoon Complete Manual",
+      "appGuide": "Game Dev Tycoon Advisor App Guide",
+      "privacy": "Privacy Policy",
+      "sources": "Game Dev Tycoon Data Sources & Trust Levels"
+    },
+    "description": {
+      "dashboard": "Find the best topic, genre & platform combos in Game Dev Tycoon. Free interactive setup calculator and recommender tool for beginners.",
+      "topicRecommender": "Find the best topic for any genre in Game Dev Tycoon. Topic-genre compatibility checker for fantasy, sci-fi and all topics.",
+      "genreRecommender": "Discover which genre makes the most money in Game Dev Tycoon. Free genre picker tool with profit and high score analysis.",
+      "platformRecommender": "Find the best console to target in Game Dev Tycoon. PC vs console comparison and audience-platform match guide.",
+      "sliders": "Optimal slider percentages for all genres in Game Dev Tycoon. Preset tool with phase 1, 2, 3 time allocation for every genre.",
+      "planner": "Plan your next game in Game Dev Tycoon. Personalized recommendations based on your save state and release history.",
+      "research": "What to research first in Game Dev Tycoon. Complete guide with R&D lab unlock requirements and research point costs.",
+      "staff": "How to train employees fast in Game Dev Tycoon. Design vs tech specialist guide with balanced team setup explained.",
+      "timeline": "Year-by-year progression guide for Game Dev Tycoon. Console release schedule, office unlock timing and key milestones.",
+      "checklist": "Check everything before releasing a game in Game Dev Tycoon. Avoid low scores with our step-by-step release checklist.",
+      "faq": "Answers to common Game Dev Tycoon questions. Why do you keep going bankrupt? How to get 10/10? Tips for beginners.",
+      "guide": "Beginner guide from garage to AAA in Game Dev Tycoon. Tips, tricks and step-by-step strategy for high scores in 2025.",
+      "bestCombos": "Best combos for high review scores in Game Dev Tycoon. Fantasy RPG, sci-fi action and more top-rated combinations ranked.",
+      "slidersExplained": "How do sliders work in Game Dev Tycoon? Learn what each slider does, phase priorities and impact on review scores.",
+      "researchOrder": "Best research order from garage to AAA in Game Dev Tycoon. Complete research unlock list by year with priorities.",
+      "handbuch": "Complete Game Dev Tycoon manual covering all game mechanics, strategies, tips and advanced techniques.",
+      "appGuide": "Learn how to use Game Dev Tycoon Advisor. Features, workflows and how to get started with the app.",
+      "privacy": "Privacy policy for Game Dev Tycoon Advisor. Learn about our data practices and your privacy rights.",
+      "sources": "Community-sourced data and trust levels used by Game Dev Tycoon Advisor for accurate recommendations."
+    },
     "suffix": {
       "dashboard": "Best Combos, Sliders & Tips for Every Genre",
       "topicRecommender": "Find the Best Topic for Your Game",

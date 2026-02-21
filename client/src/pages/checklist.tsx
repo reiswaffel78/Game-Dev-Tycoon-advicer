@@ -179,11 +179,15 @@ export default function ChecklistPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <ClipboardList className="h-8 w-8 text-primary" />
-          {t("checklist.title")}
+          {t("checklist.h1")}
         </h1>
         <p className="text-muted-foreground">
           {t("checklist.subtitle")}
         </p>
+        <div className="mt-4 space-y-2">
+          <h2 className="text-xl font-semibold">{t("checklist.h2")}</h2>
+          <p className="text-muted-foreground text-sm">{t("checklist.seoIntro")}</p>
+        </div>
       </div>
 
       <Card className="mb-6">

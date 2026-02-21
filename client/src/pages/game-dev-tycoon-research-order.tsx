@@ -22,10 +22,12 @@ export default function GameDevTycoonResearchOrderPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <FlaskConical className="h-8 w-8 text-primary" />
-          {t("researchOrder.title")}
+          {t("researchOrder.h1")}
         </h1>
         <p className="text-muted-foreground">{t("researchOrder.subtitle")}</p>
       </div>
+
+      <p className="text-muted-foreground mb-8">{t("researchOrder.seoIntro")}</p>
 
       <div className="space-y-8">
         <section>
@@ -52,7 +54,7 @@ export default function GameDevTycoonResearchOrderPage() {
         <section>
           <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
             <Lightbulb className="h-6 w-6 text-amber-500" />
-            {t("researchOrder.eras.title")}
+            {t("researchOrder.h2")}
           </h2>
           <div className="grid gap-4 md:grid-cols-3">
             {eras.map((era) => (

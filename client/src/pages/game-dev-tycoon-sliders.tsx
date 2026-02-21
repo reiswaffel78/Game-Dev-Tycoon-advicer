@@ -22,10 +22,12 @@ export default function GameDevTycoonSlidersPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <SlidersHorizontal className="h-8 w-8 text-primary" />
-          {t("slidersExplained.title")}
+          {t("slidersExplained.h1")}
         </h1>
         <p className="text-muted-foreground">{t("slidersExplained.subtitle")}</p>
       </div>
+
+      <p className="text-muted-foreground mb-8">{t("slidersExplained.seoIntro")}</p>
 
       <div className="space-y-8">
         <section>
@@ -48,7 +50,7 @@ export default function GameDevTycoonSlidersPage() {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-4">{t("slidersExplained.phases.title")}</h2>
+          <h2 className="text-2xl font-semibold mb-4">{t("slidersExplained.h2")}</h2>
           <div className="grid gap-4 md:grid-cols-3">
             {phases.map((phase, index) => (
               <Card key={phase}>

@@ -119,10 +119,13 @@ export default function Dashboard() {
             </div>
             <div>
               <h1 className="text-3xl font-bold tracking-tight">
-                {t("dashboard.title")}
+                {t("dashboard.h1")}
               </h1>
               <p className="text-muted-foreground">
                 {t("dashboard.subtitle")}
+              </p>
+              <p className="text-sm text-muted-foreground mt-1">
+                {t("dashboard.seoIntro")}
               </p>
             </div>
           </div>
@@ -171,7 +174,7 @@ export default function Dashboard() {
         <div className="space-y-4">
           <h2 className="text-xl font-semibold flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-primary" />
-            {t("dashboard.getStarted")}
+            {t("dashboard.h2")}
           </h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             <QuickActionCard

@@ -49,16 +49,17 @@ export default function GameDevTycoonGuidePage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <BookOpen className="h-8 w-8 text-primary" />
-          {t("guide.title")}
+          {t("guide.h1")}
         </h1>
         <p className="text-muted-foreground">{t("guide.subtitle")}</p>
+        <p className="text-muted-foreground text-sm mt-4">{t("guide.seoIntro")}</p>
       </div>
 
       <div className="space-y-8">
         <section>
           <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
             <CheckCircle2 className="h-6 w-6 text-emerald-500" />
-            {t("guide.quickChecklistTitle")}
+            {t("guide.h2")}
           </h2>
           <Card>
             <CardContent className="p-6 space-y-3">

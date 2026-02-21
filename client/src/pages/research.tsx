@@ -146,13 +146,12 @@ export default function Research() {
         url: `${BASE_URL}/research`,
         inLanguage: t("lang", { defaultValue: "en" }),
         totalTime: "PT30M",
-        step: [
-          { "@type": "HowToStep", position: 1, name: t("research.graphics", { defaultValue: "Graphics" }), text: "Research 2D Graphics v2–v4, then 3D Graphics v1–v5 to unlock visual quality improvements for higher review scores." },
-          { "@type": "HowToStep", position: 2, name: t("research.sound", { defaultValue: "Sound" }), text: "Research Sound technologies to improve audio quality. Prioritize after core graphics are unlocked." },
-          { "@type": "HowToStep", position: 3, name: t("research.gameFeatures", { defaultValue: "Game Features" }), text: "Unlock gameplay features like Multiplayer, Online, and Level Editor to expand game scope and audience." },
-          { "@type": "HowToStep", position: 4, name: t("research.ai", { defaultValue: "AI" }), text: "Research AI technologies to improve NPC behavior and game world interaction quality." },
-          { "@type": "HowToStep", position: 5, name: t("research.hardware", { defaultValue: "Hardware" }), text: "Develop custom hardware and consoles in the Hardware Lab for maximum revenue potential." },
-        ],
+        step: (t("schema.research.steps", { returnObjects: true }) as string[]).map((text, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: [t("research.graphics", { defaultValue: "Graphics" }), t("research.sound", { defaultValue: "Sound" }), t("research.gameFeatures", { defaultValue: "Game Features" }), t("research.ai", { defaultValue: "AI" }), t("research.hardware", { defaultValue: "Hardware" })][i],
+          text,
+        })),
       }), [t])} />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">

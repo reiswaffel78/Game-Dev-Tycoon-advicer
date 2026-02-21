@@ -147,13 +147,12 @@ export default function Staff() {
         url: `${BASE_URL}/staff`,
         inLanguage: t("lang", { defaultValue: "en" }),
         totalTime: "PT20M",
-        step: [
-          { "@type": "HowToStep", position: 1, name: t("staff.garage"), text: "Solo development phase (Years 1-4). Focus on building skills and saving money before hiring. Train design and technology skills evenly." },
-          { "@type": "HowToStep", position: 2, name: t("staff.firstOffice"), text: "Hire your first employees (Years 5-10). Prioritize specialists with high technology or design stats. Begin training staff skills." },
-          { "@type": "HowToStep", position: 3, name: t("staff.secondOffice"), text: "Expand your team for larger projects. Balance specialists across technology, design, and speed. Start using the training system." },
-          { "@type": "HowToStep", position: 4, name: t("staff.rdLab"), text: "Unlock the R&D Lab to research new technologies. Assign dedicated researchers with high stats for faster breakthroughs." },
-          { "@type": "HowToStep", position: 5, name: t("staff.hardwareLab"), text: "Build the Hardware Lab to develop custom consoles. Requires specialized staff and significant investment for maximum returns." },
-        ],
+        step: (t("schema.staff.steps", { returnObjects: true }) as string[]).map((text, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: [t("staff.garage"), t("staff.firstOffice"), t("staff.secondOffice"), t("staff.rdLab"), t("staff.hardwareLab")][i],
+          text,
+        })),
       }), [t])} />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">

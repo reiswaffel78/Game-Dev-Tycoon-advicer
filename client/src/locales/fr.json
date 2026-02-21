@@ -1349,6 +1349,44 @@
       "description": "Si vous avez des questions concernant cette politique de confidentialité ou nos pratiques en matière de données, veuillez nous contacter via le site web."
     }
   },
+  "schema": {
+    "research": {
+      "steps": [
+        "Recherchez Graphismes 2D v2–v4, puis Graphismes 3D v1–v5 pour débloquer des améliorations visuelles et obtenir de meilleures notes.",
+        "Recherchez les technologies sonores pour améliorer la qualité audio. À prioriser après le déblocage des graphismes de base.",
+        "Débloquez des fonctionnalités comme Multijoueur, En ligne et Éditeur de niveaux pour élargir la portée et le public du jeu.",
+        "Recherchez les technologies d'IA pour améliorer le comportement des PNJ et la qualité d'interaction du monde de jeu.",
+        "Développez du matériel et des consoles personnalisés dans le Labo Hardware pour un potentiel de revenus maximal."
+      ]
+    },
+    "staff": {
+      "steps": [
+        "Phase de développement solo (Années 1-4). Concentrez-vous sur le développement des compétences et l'épargne. Entraînez design et technologie de manière équilibrée.",
+        "Embauchez vos premiers employés (Années 5-10). Priorisez les spécialistes avec des stats élevées en technologie ou design. Commencez la formation du personnel.",
+        "Élargissez votre équipe pour des projets plus importants. Équilibrez les spécialistes entre technologie, design et vitesse. Utilisez le système de formation.",
+        "Débloquez le Labo R&D pour rechercher de nouvelles technologies. Assignez des chercheurs dédiés avec des stats élevées pour des percées plus rapides.",
+        "Construisez le Labo Hardware pour développer des consoles personnalisées. Nécessite du personnel spécialisé et un investissement important pour un rendement maximal."
+      ]
+    },
+    "timeline": {
+      "stepNames": ["Années 1–5 : Phase Garage", "Années 6–10 : Premier Bureau", "Années 11–15 : Phase de Croissance", "Années 16–20 : Ère R&D", "Années 21–35 : Hardware & Héritage"],
+      "steps": [
+        "Commencez dans le garage. Développez de petits jeux, acquérez des compétences et économisez. Ciblez les jeux textuels et 2D sur les premières plateformes.",
+        "Déménagez au premier bureau, embauchez du personnel et prenez des projets moyens. Recherchez les technologies clés et développez-vous sur de nouvelles plateformes.",
+        "Passez au deuxième bureau, construisez des équipes plus grandes. Débloquez les tailles MMO et AAA. Développez des suites de titres à succès.",
+        "Construisez le Labo R&D pour la recherche avancée. Développez des moteurs de jeu personnalisés. Ciblez les plateformes haut de gamme pour des notes maximales.",
+        "Construisez le Labo Hardware, développez des consoles personnalisées. Créez des blockbusters AAA et dominez toutes les plateformes. Atteignez le statut légendaire."
+      ]
+    },
+    "checklist": {
+      "stepNames": ["Examiner les jalons", "Ajouter des objectifs personnalisés", "Suivre la progression"],
+      "steps": [
+        "Parcourez les jalons de la chronologie et ajoutez les plus importants à votre liste de suivi personnelle.",
+        "Créez vos propres objectifs et tâches pour suivre des réalisations ou stratégies spécifiques.",
+        "Cochez les jalons terminés au fur et à mesure de votre progression dans le jeu pour surveiller votre avancement global."
+      ]
+    }
+  },
   "seo": {
     "suffix": {
       "dashboard": "Meilleurs combos, curseurs & astuces par genre",

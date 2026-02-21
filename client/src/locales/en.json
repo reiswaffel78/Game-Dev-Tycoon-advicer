@@ -1359,6 +1359,44 @@
       "description": "If you have any questions about this privacy policy or our data practices, please contact us through the website."
     }
   },
+  "schema": {
+    "research": {
+      "steps": [
+        "Research 2D Graphics v2–v4, then 3D Graphics v1–v5 to unlock visual quality improvements for higher review scores.",
+        "Research Sound technologies to improve audio quality. Prioritize after core graphics are unlocked.",
+        "Unlock gameplay features like Multiplayer, Online, and Level Editor to expand game scope and audience.",
+        "Research AI technologies to improve NPC behavior and game world interaction quality.",
+        "Develop custom hardware and consoles in the Hardware Lab for maximum revenue potential."
+      ]
+    },
+    "staff": {
+      "steps": [
+        "Solo development phase (Years 1-4). Focus on building skills and saving money before hiring. Train design and technology skills evenly.",
+        "Hire your first employees (Years 5-10). Prioritize specialists with high technology or design stats. Begin training staff skills.",
+        "Expand your team for larger projects. Balance specialists across technology, design, and speed. Start using the training system.",
+        "Unlock the R&D Lab to research new technologies. Assign dedicated researchers with high stats for faster breakthroughs.",
+        "Build the Hardware Lab to develop custom consoles. Requires specialized staff and significant investment for maximum returns."
+      ]
+    },
+    "timeline": {
+      "stepNames": ["Year 1–5: Garage Phase", "Year 6–10: First Office", "Year 11–15: Growth Phase", "Year 16–20: R&D Era", "Year 21–35: Hardware & Legacy"],
+      "steps": [
+        "Start in the garage. Develop small games, build skills, and save money. Target text-based and 2D games on early platforms.",
+        "Move to first office, hire staff, and take on medium-sized projects. Research key technologies and expand to newer platforms.",
+        "Upgrade to second office, build larger teams. Unlock MMO and AAA game sizes. Develop sequels of successful titles.",
+        "Build R&D Lab for advanced research. Develop custom game engines. Target high-end platforms for maximum reviews.",
+        "Build Hardware Lab, develop custom consoles. Create AAA blockbusters and dominate all platforms. Achieve legendary status."
+      ]
+    },
+    "checklist": {
+      "stepNames": ["Review Timeline Milestones", "Add Custom Goals", "Track Completion"],
+      "steps": [
+        "Browse the timeline milestones and add important ones to your personal checklist for tracking.",
+        "Create your own custom goals and tasks to track specific achievements or strategies.",
+        "Check off completed milestones as you progress through the game to monitor your overall progress."
+      ]
+    }
+  },
   "seo": {
     "suffix": {
       "dashboard": "Best Combos, Sliders & Tips for Every Genre",

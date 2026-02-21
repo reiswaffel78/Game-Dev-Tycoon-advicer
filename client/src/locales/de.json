@@ -1349,6 +1349,44 @@
       "description": "Bei Fragen zu dieser Datenschutzerklärung oder unseren Datenpraktiken kontaktieren Sie uns bitte über die Website."
     }
   },
+  "schema": {
+    "research": {
+      "steps": [
+        "Erforsche 2D-Grafik v2–v4, dann 3D-Grafik v1–v5 um visuelle Qualitätsverbesserungen für höhere Bewertungen freizuschalten.",
+        "Erforsche Sound-Technologien zur Verbesserung der Audioqualität. Priorisiere nach dem Freischalten der Kern-Grafik.",
+        "Schalte Gameplay-Features wie Multiplayer, Online und Level-Editor frei, um Spielumfang und Zielgruppe zu erweitern.",
+        "Erforsche KI-Technologien zur Verbesserung des NPC-Verhaltens und der Spielwelt-Interaktionsqualität.",
+        "Entwickle eigene Hardware und Konsolen im Hardware-Labor für maximales Umsatzpotenzial."
+      ]
+    },
+    "staff": {
+      "steps": [
+        "Solo-Entwicklungsphase (Jahre 1-4). Fokus auf Fähigkeiten aufbauen und Geld sparen vor der Einstellung. Design- und Technik-Fähigkeiten gleichmäßig trainieren.",
+        "Stelle deine ersten Mitarbeiter ein (Jahre 5-10). Priorisiere Spezialisten mit hohen Technik- oder Design-Werten. Beginne mit dem Training der Mitarbeiterfähigkeiten.",
+        "Erweitere dein Team für größere Projekte. Balanciere Spezialisten über Technik, Design und Geschwindigkeit. Nutze das Trainingssystem.",
+        "Schalte das F&E-Labor frei um neue Technologien zu erforschen. Weise dedizierte Forscher mit hohen Werten für schnellere Durchbrüche zu.",
+        "Baue das Hardware-Labor um eigene Konsolen zu entwickeln. Erfordert spezialisiertes Personal und erhebliche Investitionen für maximale Rendite."
+      ]
+    },
+    "timeline": {
+      "stepNames": ["Jahr 1–5: Garagenphase", "Jahr 6–10: Erstes Büro", "Jahr 11–15: Wachstumsphase", "Jahr 16–20: F&E-Ära", "Jahr 21–35: Hardware & Vermächtnis"],
+      "steps": [
+        "Starte in der Garage. Entwickle kleine Spiele, baue Fähigkeiten auf und spare Geld. Ziele auf textbasierte und 2D-Spiele auf frühen Plattformen.",
+        "Ziehe ins erste Büro, stelle Mitarbeiter ein und übernimm mittelgroße Projekte. Erforsche Schlüsseltechnologien und expandiere auf neuere Plattformen.",
+        "Upgrade auf zweites Büro, baue größere Teams auf. Schalte MMO- und AAA-Spielgrößen frei. Entwickle Fortsetzungen erfolgreicher Titel.",
+        "Baue das F&E-Labor für fortgeschrittene Forschung. Entwickle eigene Game-Engines. Ziele auf High-End-Plattformen für maximale Bewertungen.",
+        "Baue das Hardware-Labor, entwickle eigene Konsolen. Erstelle AAA-Blockbuster und dominiere alle Plattformen. Erreiche legendären Status."
+      ]
+    },
+    "checklist": {
+      "stepNames": ["Timeline-Meilensteine prüfen", "Eigene Ziele hinzufügen", "Fortschritt verfolgen"],
+      "steps": [
+        "Durchsuche die Timeline-Meilensteine und füge wichtige zu deiner persönlichen Checkliste hinzu.",
+        "Erstelle eigene Ziele und Aufgaben um bestimmte Erfolge oder Strategien zu verfolgen.",
+        "Hake abgeschlossene Meilensteine ab, während du im Spiel voranschreitest, um deinen Gesamtfortschritt zu überwachen."
+      ]
+    }
+  },
   "seo": {
     "suffix": {
       "dashboard": "Beste Kombos, Regler & Tipps für jedes Genre",

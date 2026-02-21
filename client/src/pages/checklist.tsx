@@ -169,11 +169,12 @@ export default function ChecklistPage() {
         description: t("checklist.subtitle"),
         url: `${BASE_URL}/checklist`,
         inLanguage: t("lang", { defaultValue: "en" }),
-        step: [
-          { "@type": "HowToStep", position: 1, name: "Review Timeline Milestones", text: "Browse the timeline milestones and add important ones to your personal checklist for tracking." },
-          { "@type": "HowToStep", position: 2, name: "Add Custom Goals", text: "Create your own custom goals and tasks to track specific achievements or strategies." },
-          { "@type": "HowToStep", position: 3, name: "Track Completion", text: "Check off completed milestones as you progress through the game to monitor your overall progress." },
-        ],
+        step: (t("schema.checklist.steps", { returnObjects: true }) as string[]).map((text, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: (t("schema.checklist.stepNames", { returnObjects: true }) as string[])[i],
+          text,
+        })),
       }), [t])} />
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">

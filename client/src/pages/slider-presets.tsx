@@ -164,10 +164,10 @@ function GenreSelector({
 
   return (
     <Card className="h-fit">
-      <CardHeader className="pb-3">
+      <CardHeader className="px-6 py-3">
         <CardTitle className="text-base">{label}</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-3">
+      <CardContent className="px-6 pt-0 pb-0 space-y-1.5">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input

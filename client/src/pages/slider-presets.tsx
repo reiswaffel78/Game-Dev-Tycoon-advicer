@@ -179,7 +179,7 @@ function GenreSelector({
           />
         </div>
         <ScrollArea className="max-h-[400px] -mx-3">
-          <div className="px-3 space-y-0.5">
+          <div className="px-3 space-y-0.5 pb-0.5">
             {filteredGenres.map((genre) => (
               <button
                 key={genre.id}

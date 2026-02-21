@@ -178,7 +178,7 @@ function GenreSelector({
             data-testid={`input-${testIdPrefix}-search`}
           />
         </div>
-        <ScrollArea className="h-[400px] -mx-3">
+        <ScrollArea className="max-h-[400px] -mx-3">
           <div className="px-3 space-y-1">
             {filteredGenres.map((genre) => (
               <button

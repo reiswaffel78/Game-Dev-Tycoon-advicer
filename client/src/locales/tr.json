@@ -332,7 +332,18 @@
         "stage2": "Orta geliştirme aşamasında Bölüm Tasarımı ve YZ'ye odaklan. Diyaloglar'ı düşük tut.",
         "stage3": "Son geliştirme aşamasında Dünya Tasarımı ve Ses'e odaklan. Grafikler'i düşük tut."
       }
-    }
+    },
+    "multiGenre": "Çoklu Tür",
+    "multiGenreSubtitle": "Resmi oyun formülünü kullanarak iki türün karışık kaydırıcı ayarlarını hesaplayın",
+    "multiGenreInfo": "Game Dev Tycoon'da çoklu tür oyunları birincil türü 2/3 ve ikincil türü 1/3 oranında ağırlıklandırır. Sıralama önemlidir – türleri değiştirmek farklı sonuçlar verir.",
+    "primaryGenre": "Birincil Tür (×2)",
+    "secondaryGenre": "İkincil Tür (×1)",
+    "primaryLabel": "Birincil",
+    "secondaryLabel": "İkincil",
+    "swapGenres": "Birincil ↔ İkincil Değiştir",
+    "selectBothGenres": "İki Tür Seçin",
+    "selectBothGenresDesc": "Karışık kaydırıcı ayarlarını görmek için birincil ve ikincil tür seçin",
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Kaydırıcı Ön Ayarları"
   },
   "planner": {
     "title": "Oyun Planlayıcı",

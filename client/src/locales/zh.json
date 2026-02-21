@@ -332,7 +332,18 @@
         "stage2": "在中期开发阶段，专注于关卡设计和AI。保持对话最少。",
         "stage3": "在最终开发阶段，专注于世界设计和音效。保持图形最少。"
       }
-    }
+    },
+    "multiGenre": "多类型",
+    "multiGenreSubtitle": "使用官方游戏公式，结合两种类型计算混合滑块设置",
+    "multiGenreInfo": "在Game Dev Tycoon中，多类型游戏将主类型权重设为2/3，副类型权重设为1/3。顺序很重要 – 交换类型会得到不同的结果。",
+    "primaryGenre": "主类型 (×2)",
+    "secondaryGenre": "副类型 (×1)",
+    "primaryLabel": "主要",
+    "secondaryLabel": "次要",
+    "swapGenres": "交换主要 ↔ 次要",
+    "selectBothGenres": "选择两种类型",
+    "selectBothGenresDesc": "选择主类型和副类型以查看混合滑块设置",
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} 滑块预设"
   },
   "planner": {
     "title": "游戏规划器",

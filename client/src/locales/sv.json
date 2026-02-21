@@ -332,7 +332,18 @@
         "stage2": "I mellanfasen, fokusera på Leveldesign och AI. Håll Dialoger minimalt.",
         "stage3": "I den sista utvecklingsfasen, fokusera på Världsdesign och Ljud. Håll Grafik minimalt."
       }
-    }
+    },
+    "multiGenre": "Multi-genre",
+    "multiGenreSubtitle": "Kombinera två genrer för att beräkna blandade reglage-inställningar med spelets officiella formel",
+    "multiGenreInfo": "I Game Dev Tycoon viktar multi-genre-spel den primära genren med 2/3 och den sekundära genren med 1/3. Ordningen spelar roll – att byta genrer ger olika resultat.",
+    "primaryGenre": "Primär genre (×2)",
+    "secondaryGenre": "Sekundär genre (×1)",
+    "primaryLabel": "Primär",
+    "secondaryLabel": "Sekundär",
+    "swapGenres": "Byt Primär ↔ Sekundär",
+    "selectBothGenres": "Välj två genrer",
+    "selectBothGenresDesc": "Välj en primär och sekundär genre för att se blandade reglage-inställningar",
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Reglage-förinställningar"
   },
   "planner": {
     "title": "Spelplanerare",

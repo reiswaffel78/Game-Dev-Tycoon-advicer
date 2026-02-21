@@ -332,7 +332,18 @@
         "stage2": "En la etapa intermedia de desarrollo, enfócate en Diseño de Niveles e IA. Mantén Diálogos al mínimo.",
         "stage3": "En la etapa final de desarrollo, enfócate en Diseño del Mundo y Sonido. Mantén Gráficos al mínimo."
       }
-    }
+    },
+    "multiGenre": "Multi-Género",
+    "multiGenreSubtitle": "Combina dos géneros para calcular ajustes de slider combinados usando la fórmula oficial del juego",
+    "multiGenreInfo": "En Game Dev Tycoon, los juegos multi-género ponderan el género principal a 2/3 y el género secundario a 1/3. El orden importa – intercambiar géneros da resultados diferentes.",
+    "primaryGenre": "Género principal (×2)",
+    "secondaryGenre": "Género secundario (×1)",
+    "primaryLabel": "Principal",
+    "secondaryLabel": "Secundario",
+    "swapGenres": "Intercambiar Principal ↔ Secundario",
+    "selectBothGenres": "Seleccionar dos géneros",
+    "selectBothGenresDesc": "Elige un género principal y secundario para ver los ajustes de slider combinados",
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Presets de Slider"
   },
   "planner": {
     "title": "Planificador de Juegos",

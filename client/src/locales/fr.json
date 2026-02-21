@@ -332,7 +332,18 @@
         "stage2": "En milieu de développement, concentrez-vous sur le Level Design et l'IA. Gardez les Dialogues au minimum.",
         "stage3": "En fin de développement, concentrez-vous sur le Design du monde et le Son. Gardez les Graphismes au minimum."
       }
-    }
+    },
+    "multiGenre": "Multi-Genre",
+    "multiGenreSubtitle": "Combinez deux genres pour calculer les réglages de curseurs mixtes avec la formule officielle du jeu",
+    "multiGenreInfo": "Dans Game Dev Tycoon, les jeux multi-genre pondèrent le genre principal à 2/3 et le genre secondaire à 1/3. L'ordre compte – inverser les genres donne des résultats différents.",
+    "primaryGenre": "Genre principal (×2)",
+    "secondaryGenre": "Genre secondaire (×1)",
+    "primaryLabel": "Principal",
+    "secondaryLabel": "Secondaire",
+    "swapGenres": "Inverser Principal ↔ Secondaire",
+    "selectBothGenres": "Sélectionner deux genres",
+    "selectBothGenresDesc": "Choisissez un genre principal et secondaire pour voir les réglages de curseurs mixtes",
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Préréglages des curseurs"
   },
   "planner": {
     "title": "Planificateur de jeu",

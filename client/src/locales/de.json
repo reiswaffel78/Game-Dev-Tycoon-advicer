@@ -332,7 +332,18 @@
         "stage2": "In der mittleren Entwicklungsphase auf Level-Design und KI konzentrieren. Dialoge minimal halten.",
         "stage3": "In der letzten Entwicklungsphase auf Welt-Design und Sound konzentrieren. Grafik minimal halten."
       }
-    }
+    },
+    "multiGenre": "Multi-Genre",
+    "multiGenreSubtitle": "Kombiniere zwei Genres, um gemischte Slider-Einstellungen mit der offiziellen Spielformel zu berechnen",
+    "multiGenreInfo": "In Game Dev Tycoon gewichten Multi-Genre-Spiele das Hauptgenre mit 2/3 und das Nebengenre mit 1/3. Die Reihenfolge ist wichtig – ein Tausch der Genres liefert andere Ergebnisse.",
+    "primaryGenre": "Hauptgenre (×2)",
+    "secondaryGenre": "Nebengenre (×1)",
+    "primaryLabel": "Primär",
+    "secondaryLabel": "Sekundär",
+    "swapGenres": "Primär ↔ Sekundär tauschen",
+    "selectBothGenres": "Zwei Genres auswählen",
+    "selectBothGenresDesc": "Wähle ein Haupt- und ein Nebengenre, um gemischte Slider-Einstellungen zu sehen",
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Slider-Voreinstellungen"
   },
   "planner": {
     "title": "Spiel-Planer",

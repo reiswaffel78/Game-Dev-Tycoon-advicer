@@ -6,6 +6,7 @@ import {
   getRecommendationsByGenre,
   getRecommendationsByPlatform,
   getSliderPresets,
+  getMultiGenreSliderPresets,
   generatePlannerRecommendations,
   getTopCombinations,
 } from "./recommendation-engine";
@@ -174,7 +175,22 @@ export async function registerRoutes(
     }
   });
 
-  // Slider presets
+  // Multi-genre slider presets: (primary × 2 + secondary) / 3
+  // Must be registered before the single-genre route to avoid matching "multi" as a genreId
+  app.get("/api/sliders/multi/:primaryGenreId/:secondaryGenreId", async (req, res) => {
+    try {
+      const presets = await getMultiGenreSliderPresets(
+        req.params.primaryGenreId,
+        req.params.secondaryGenreId
+      );
+      res.json(presets);
+    } catch (error) {
+      console.error("Error getting multi-genre slider presets:", error);
+      res.status(500).json({ error: "Failed to get multi-genre slider presets" });
+    }
+  });
+
+  // Slider presets (single genre)
   app.get("/api/sliders/:genreId", async (req, res) => {
     try {
       const presets = await getSliderPresets(req.params.genreId);

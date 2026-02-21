@@ -332,7 +332,18 @@
         "stage2": "W środkowej fazie postaw na Projekt poziomów i AI. Dialogi zostaw na minimum.",
         "stage3": "W ostatniej fazie skup się na Projekcie świata i Dźwięku. Grafika może być minimalna."
       }
-    }
+    },
+    "multiGenre": "Multi-gatunek",
+    "multiGenreSubtitle": "Połącz dwa gatunki, aby obliczyć mieszane ustawienia suwaków przy użyciu oficjalnej formuły gry",
+    "multiGenreInfo": "W Game Dev Tycoon gry wielogatunkowe ważą główny gatunek na 2/3, a poboczny gatunek na 1/3. Kolejność ma znaczenie – zamiana gatunków daje inne wyniki.",
+    "primaryGenre": "Główny gatunek (×2)",
+    "secondaryGenre": "Poboczny gatunek (×1)",
+    "primaryLabel": "Główny",
+    "secondaryLabel": "Poboczny",
+    "swapGenres": "Zamień Główny ↔ Poboczny",
+    "selectBothGenres": "Wybierz dwa gatunki",
+    "selectBothGenresDesc": "Wybierz główny i poboczny gatunek, aby zobaczyć mieszane ustawienia suwaków",
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Presety suwaków"
   },
   "planner": {
     "title": "Planer gier",

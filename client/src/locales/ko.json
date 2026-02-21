@@ -332,7 +332,18 @@
         "stage2": "중간 개발 단계에서는 레벨 디자인과 AI에 집중하세요. 대화는 최소화하세요.",
         "stage3": "최종 개발 단계에서는 월드 디자인과 사운드에 집중하세요. 그래픽은 최소화하세요."
       }
-    }
+    },
+    "multiGenre": "멀티 장르",
+    "multiGenreSubtitle": "공식 게임 공식을 사용하여 두 장르의 혼합 슬라이더 설정을 계산합니다",
+    "multiGenreInfo": "Game Dev Tycoon에서 멀티 장르 게임은 주 장르를 2/3, 부 장르를 1/3로 가중합니다. 순서가 중요합니다 – 장르를 바꾸면 다른 결과가 나옵니다.",
+    "primaryGenre": "주 장르 (×2)",
+    "secondaryGenre": "부 장르 (×1)",
+    "primaryLabel": "주 장르",
+    "secondaryLabel": "부 장르",
+    "swapGenres": "주 장르 ↔ 부 장르 교체",
+    "selectBothGenres": "두 장르 선택",
+    "selectBothGenresDesc": "혼합 슬라이더 설정을 보려면 주 장르와 부 장르를 선택하세요",
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} 슬라이더 프리셋"
   },
   "planner": {
     "title": "게임 플래너",

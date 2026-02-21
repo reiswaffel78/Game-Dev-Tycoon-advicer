@@ -332,7 +332,18 @@
         "stage2": "Ve druhé fázi se soustřeď na Level design a AI. Dialogy drž na minimu.",
         "stage3": "Ve třetí fázi se soustřeď na Design světa a Zvuk. Grafiku drž na minimu."
       }
-    }
+    },
+    "multiGenre": "Multi-žánr",
+    "multiGenreSubtitle": "Kombinujte dva žánry pro výpočet smíšených nastavení posuvníků pomocí oficiálního herního vzorce",
+    "multiGenreInfo": "V Game Dev Tycoon multi-žánrové hry váží primární žánr na 2/3 a sekundární žánr na 1/3. Pořadí je důležité – záměna žánrů dává odlišné výsledky.",
+    "primaryGenre": "Primární žánr (×2)",
+    "secondaryGenre": "Sekundární žánr (×1)",
+    "primaryLabel": "Primární",
+    "secondaryLabel": "Sekundární",
+    "swapGenres": "Prohodit Primární ↔ Sekundární",
+    "selectBothGenres": "Vyberte dva žánry",
+    "selectBothGenresDesc": "Vyberte primární a sekundární žánr pro zobrazení smíšených nastavení posuvníků",
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Předvolby posuvníků"
   },
   "planner": {
     "title": "Plánovač her",

@@ -332,7 +332,18 @@
         "stage2": "A középső fejlesztési szakaszban fókuszálj a Pályadizájnra és az MI-re. A Párbeszédeket tartsd alacsonyan.",
         "stage3": "A záró fejlesztési szakaszban koncentrálj a Világdizájnra és a Hangra. A Grafikát tartsd alacsonyan."
       }
-    }
+    },
+    "multiGenre": "Multi-műfaj",
+    "multiGenreSubtitle": "Kombinálj két műfajt a kevert csúszka-beállítások kiszámításához a hivatalos játékképlet alapján",
+    "multiGenreInfo": "A Game Dev Tycoonban a multi-műfajú játékok az elsődleges műfajt 2/3, a másodlagos műfajt 1/3 súllyal számolják. A sorrend számít – a műfajok felcserélése eltérő eredményt ad.",
+    "primaryGenre": "Elsődleges műfaj (×2)",
+    "secondaryGenre": "Másodlagos műfaj (×1)",
+    "primaryLabel": "Elsődleges",
+    "secondaryLabel": "Másodlagos",
+    "swapGenres": "Elsődleges ↔ Másodlagos csere",
+    "selectBothGenres": "Válassz két műfajt",
+    "selectBothGenresDesc": "Válassz egy elsődleges és másodlagos műfajt a kevert csúszka-beállítások megtekintéséhez",
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Csúszka-előbeállítások"
   },
   "planner": {
     "title": "Játéktervező",

@@ -332,7 +332,18 @@
         "stage2": "開発中期段階では、レベルデザインとAIに集中してください。対話は最小限に抑えます。",
         "stage3": "開発最終段階では、ワールドデザインとサウンドに集中してください。グラフィックスは最小限に抑えます。"
       }
-    }
+    },
+    "multiGenre": "マルチジャンル",
+    "multiGenreSubtitle": "公式のゲーム計算式を使って、2つのジャンルの混合スライダー設定を算出します",
+    "multiGenreInfo": "Game Dev Tycoonでは、マルチジャンルゲームはメインジャンルを2/3、サブジャンルを1/3で加重します。順序が重要です – ジャンルを入れ替えると異なる結果になります。",
+    "primaryGenre": "メインジャンル (×2)",
+    "secondaryGenre": "サブジャンル (×1)",
+    "primaryLabel": "メイン",
+    "secondaryLabel": "サブ",
+    "swapGenres": "メイン ↔ サブ を入れ替え",
+    "selectBothGenres": "2つのジャンルを選択",
+    "selectBothGenresDesc": "混合スライダー設定を表示するにはメインとサブのジャンルを選択してください",
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} スライダープリセット"
   },
   "planner": {
     "title": "ゲームプランナー",

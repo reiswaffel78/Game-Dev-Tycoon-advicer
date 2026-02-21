@@ -332,7 +332,18 @@
         "stage2": "In the middle development stage, focus on Level Design and AI. Keep Dialogues minimal.",
         "stage3": "In the final development stage, focus on World Design and Sound. Keep Graphics minimal."
       }
-    }
+    },
+    "multiGenre": "Multi-Genre",
+    "multiGenreSubtitle": "Combine two genres to calculate blended slider settings using the official game formula",
+    "multiGenreInfo": "In Game Dev Tycoon, multi-genre games weight the primary genre at 2/3 and the secondary genre at 1/3. The order matters – swapping genres gives different results.",
+    "primaryGenre": "Primary Genre (×2)",
+    "secondaryGenre": "Secondary Genre (×1)",
+    "primaryLabel": "Primary",
+    "secondaryLabel": "Secondary",
+    "swapGenres": "Swap Primary ↔ Secondary",
+    "selectBothGenres": "Select Two Genres",
+    "selectBothGenresDesc": "Pick a primary and secondary genre to see blended slider settings",
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Slider Presets"
   },
   "planner": {
     "title": "Game Planner",

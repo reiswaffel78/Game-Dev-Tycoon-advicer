@@ -349,6 +349,64 @@ export async function getSliderPresets(genreId: string): Promise<SliderPreset[]>
   });
 }
 
+export async function getMultiGenreSliderPresets(
+  primaryGenreId: string,
+  secondaryGenreId: string
+): Promise<SliderPreset[]> {
+  const primaryWeights = await storage.getGenreDevWeightsByGenre(primaryGenreId);
+  const secondaryWeights = await storage.getGenreDevWeightsByGenre(secondaryGenreId);
+
+  if (primaryWeights.length === 0) {
+    return [1, 2, 3].map((stage) => createDefaultPreset(stage));
+  }
+  if (secondaryWeights.length === 0) {
+    return getSliderPresets(primaryGenreId);
+  }
+
+  return primaryWeights.map((pw) => {
+    const sw = secondaryWeights.find((w) => w.stage === pw.stage);
+    if (!sw) {
+      return createDefaultPreset(pw.stage);
+    }
+
+    const blend = (a: number, b: number) => (a * 2 + b) / 3;
+
+    let stageSliders: { name: string; value: number }[];
+
+    if (pw.stage === 1) {
+      stageSliders = [
+        { name: "Engine", value: blend(pw.engine, sw.engine) },
+        { name: "Gameplay", value: blend(pw.gameplay, sw.gameplay) },
+        { name: "Story/Quests", value: blend(pw.storyQuests, sw.storyQuests) },
+      ];
+    } else if (pw.stage === 2) {
+      stageSliders = [
+        { name: "Dialogues", value: blend(pw.dialogues, sw.dialogues) },
+        { name: "Level Design", value: blend(pw.levelDesign, sw.levelDesign) },
+        { name: "AI", value: blend(pw.ai, sw.ai) },
+      ];
+    } else {
+      stageSliders = [
+        { name: "World Design", value: blend(pw.worldDesign, sw.worldDesign) },
+        { name: "Graphics", value: blend(pw.graphics, sw.graphics) },
+        { name: "Sound", value: blend(pw.sound, sw.sound) },
+      ];
+    }
+
+    const sliders = stageSliders.map((s) => ({
+      name: s.name,
+      value: Math.round(s.value * 100),
+      importance: getImportance(s.value),
+    }));
+
+    return {
+      stage: pw.stage,
+      sliders,
+      explanation: generateExplanation(pw.stage, sliders),
+    };
+  });
+}
+
 function getImportance(value: number): "high" | "medium" | "low" {
   if (value >= 0.4) return "high";
   if (value >= 0.2) return "medium";

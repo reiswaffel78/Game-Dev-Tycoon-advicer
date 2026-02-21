@@ -332,7 +332,18 @@
         "stage2": "In de middelste ontwikkelfase focus je op Level Design en AI. Houd Dialogen minimaal.",
         "stage3": "In de laatste ontwikkelfase focus je op Wereldontwerp en Geluid. Houd Graphics minimaal."
       }
-    }
+    },
+    "multiGenre": "Multi-Genre",
+    "multiGenreSubtitle": "Combineer twee genres om gemengde sliderinstellingen te berekenen met de officiële spelformule",
+    "multiGenreInfo": "In Game Dev Tycoon wegen multi-genre games het primaire genre op 2/3 en het secundaire genre op 1/3. De volgorde is belangrijk – genres omwisselen geeft andere resultaten.",
+    "primaryGenre": "Primair genre (×2)",
+    "secondaryGenre": "Secundair genre (×1)",
+    "primaryLabel": "Primair",
+    "secondaryLabel": "Secundair",
+    "swapGenres": "Primair ↔ Secundair wisselen",
+    "selectBothGenres": "Twee genres selecteren",
+    "selectBothGenresDesc": "Kies een primair en secundair genre om gemengde sliderinstellingen te zien",
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Slider-presets"
   },
   "planner": {
     "title": "Gameplanner",

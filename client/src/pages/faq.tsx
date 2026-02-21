@@ -1,6 +1,8 @@
+import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SeoHead } from "@/seo/SeoHead";
+import { BASE_URL } from "@/seo/seo";
 import {
   Accordion,
   AccordionContent,
@@ -62,12 +64,29 @@ const categories: FAQCategory[] = [
   },
 ];
 
+const allItemKeys = categories.flatMap((c) => c.itemKeys);
+
 export default function FAQPage() {
   const { t } = useTranslation();
 
+  const faqJsonLd = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: allItemKeys.map((key) => ({
+      "@type": "Question",
+      name: t(`faq.items.${key}.question`),
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: t(`faq.items.${key}.answer`),
+      },
+    })),
+    url: `${BASE_URL}/faq`,
+    inLanguage: t("lang", { defaultValue: "en" }),
+  }), [t]);
+
   return (
     <div className="container mx-auto p-6 max-w-4xl">
-      <SeoHead pageKey="faq" />
+      <SeoHead pageKey="faq" jsonLdExtra={faqJsonLd} />
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <HelpCircle className="h-8 w-8 text-primary" />

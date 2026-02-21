@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
+import { BASE_URL } from "@/seo/seo";
 import { translateGenre } from "@/lib/translate-data";
 import type { TFunction } from "i18next";
 import { SlidersHorizontal, Search, Info, Zap, Cpu, Sparkles, Layers, X, ArrowRightLeft } from "lucide-react";
@@ -260,7 +261,25 @@ export default function SliderPresets() {
 
   return (
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
-      <SeoHead pageKey="sliders" />
+      <SeoHead pageKey="sliders" jsonLdExtra={useMemo(() => ({
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        name: t("sliders.title"),
+        description: t("sliders.subtitle"),
+        url: `${BASE_URL}/sliders`,
+        inLanguage: t("lang", { defaultValue: "en" }),
+        keywords: ["Game Dev Tycoon", "slider presets", "development focus", "genre settings", "game development sliders"],
+        creator: {
+          "@type": "Organization",
+          name: "Game Dev Tycoon Advisor",
+          url: BASE_URL,
+        },
+        variableMeasured: [
+          "Engine", "Gameplay", "Story/Quests", "Dialogues", "Level Design",
+          "AI", "World Design", "Graphics", "Sound",
+        ],
+        license: "https://creativecommons.org/licenses/by-sa/4.0/",
+      }), [t])} />
       <div className="space-y-2">
         <div className="flex items-center justify-between flex-wrap gap-3">
           <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">

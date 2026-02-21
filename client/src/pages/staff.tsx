@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
+import { BASE_URL } from "@/seo/seo";
 import { Users, Search, Calendar, Briefcase, GraduationCap, Zap, Target, ClipboardList } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -138,7 +139,22 @@ export default function Staff() {
 
   return (
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
-      <SeoHead pageKey="staff" />
+      <SeoHead pageKey="staff" jsonLdExtra={useMemo(() => ({
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: t("staff.title"),
+        description: t("staff.subtitle"),
+        url: `${BASE_URL}/staff`,
+        inLanguage: t("lang", { defaultValue: "en" }),
+        totalTime: "PT20M",
+        step: [
+          { "@type": "HowToStep", position: 1, name: t("staff.garage"), text: "Solo development phase (Years 1-4). Focus on building skills and saving money before hiring. Train design and technology skills evenly." },
+          { "@type": "HowToStep", position: 2, name: t("staff.firstOffice"), text: "Hire your first employees (Years 5-10). Prioritize specialists with high technology or design stats. Begin training staff skills." },
+          { "@type": "HowToStep", position: 3, name: t("staff.secondOffice"), text: "Expand your team for larger projects. Balance specialists across technology, design, and speed. Start using the training system." },
+          { "@type": "HowToStep", position: 4, name: t("staff.rdLab"), text: "Unlock the R&D Lab to research new technologies. Assign dedicated researchers with high stats for faster breakthroughs." },
+          { "@type": "HowToStep", position: 5, name: t("staff.hardwareLab"), text: "Build the Hardware Lab to develop custom consoles. Requires specialized staff and significant investment for maximum returns." },
+        ],
+      }), [t])} />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Users className="h-6 w-6 text-primary" />

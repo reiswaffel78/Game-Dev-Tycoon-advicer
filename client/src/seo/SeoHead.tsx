@@ -13,9 +13,10 @@ import {
 
 interface SeoHeadProps {
   pageKey: PageKey;
+  jsonLdExtra?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-export function SeoHead({ pageKey }: SeoHeadProps) {
+export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
   const { t, i18n } = useTranslation();
   const locale: Locale = isLocale(i18n.language)
     ? i18n.language
@@ -92,6 +93,13 @@ export function SeoHead({ pageKey }: SeoHeadProps) {
       <meta name="twitter:url" content={canonicalUrl} />
 
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      {jsonLdExtra && (
+        Array.isArray(jsonLdExtra)
+          ? jsonLdExtra.map((extra, i) => (
+              <script key={`ld-extra-${i}`} type="application/ld+json">{JSON.stringify(extra)}</script>
+            ))
+          : <script type="application/ld+json">{JSON.stringify(jsonLdExtra)}</script>
+      )}
     </Helmet>
   );
 }

@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
+import { BASE_URL } from "@/seo/seo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -161,7 +162,19 @@ export default function ChecklistPage() {
 
   return (
     <div className="container mx-auto p-6 max-w-4xl">
-      <SeoHead pageKey="checklist" />
+      <SeoHead pageKey="checklist" jsonLdExtra={useMemo(() => ({
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: t("checklist.title"),
+        description: t("checklist.subtitle"),
+        url: `${BASE_URL}/checklist`,
+        inLanguage: t("lang", { defaultValue: "en" }),
+        step: [
+          { "@type": "HowToStep", position: 1, name: "Review Timeline Milestones", text: "Browse the timeline milestones and add important ones to your personal checklist for tracking." },
+          { "@type": "HowToStep", position: 2, name: "Add Custom Goals", text: "Create your own custom goals and tasks to track specific achievements or strategies." },
+          { "@type": "HowToStep", position: 3, name: "Track Completion", text: "Check off completed milestones as you progress through the game to monitor your overall progress." },
+        ],
+      }), [t])} />
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <ClipboardList className="h-8 w-8 text-primary" />

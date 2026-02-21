@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
+import { BASE_URL } from "@/seo/seo";
 import { FlaskConical, Search, Lightbulb, Calendar, Coins, Target, Link2, Palette, Volume2, Gamepad2, Bot, Cpu } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -137,7 +138,22 @@ export default function Research() {
 
   return (
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
-      <SeoHead pageKey="research" />
+      <SeoHead pageKey="research" jsonLdExtra={useMemo(() => ({
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: t("research.title"),
+        description: t("research.subtitle"),
+        url: `${BASE_URL}/research`,
+        inLanguage: t("lang", { defaultValue: "en" }),
+        totalTime: "PT30M",
+        step: [
+          { "@type": "HowToStep", position: 1, name: t("research.graphics", { defaultValue: "Graphics" }), text: "Research 2D Graphics v2–v4, then 3D Graphics v1–v5 to unlock visual quality improvements for higher review scores." },
+          { "@type": "HowToStep", position: 2, name: t("research.sound", { defaultValue: "Sound" }), text: "Research Sound technologies to improve audio quality. Prioritize after core graphics are unlocked." },
+          { "@type": "HowToStep", position: 3, name: t("research.gameFeatures", { defaultValue: "Game Features" }), text: "Unlock gameplay features like Multiplayer, Online, and Level Editor to expand game scope and audience." },
+          { "@type": "HowToStep", position: 4, name: t("research.ai", { defaultValue: "AI" }), text: "Research AI technologies to improve NPC behavior and game world interaction quality." },
+          { "@type": "HowToStep", position: 5, name: t("research.hardware", { defaultValue: "Hardware" }), text: "Develop custom hardware and consoles in the Hardware Lab for maximum revenue potential." },
+        ],
+      }), [t])} />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <FlaskConical className="h-6 w-6 text-primary" />

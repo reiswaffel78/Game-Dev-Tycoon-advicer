@@ -1,6 +1,8 @@
+import { useMemo } from "react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
+import { BASE_URL } from "@/seo/seo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -15,7 +17,21 @@ export default function GameDevTycoonBestCombosPage() {
 
   return (
     <div className="container mx-auto p-6 max-w-5xl">
-      <SeoHead pageKey="bestCombos" />
+      <SeoHead pageKey="bestCombos" jsonLdExtra={useMemo(() => ({
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        name: t("bestCombos.title"),
+        description: t("bestCombos.subtitle"),
+        url: `${BASE_URL}/game-dev-tycoon-best-combos`,
+        inLanguage: t("lang", { defaultValue: "en" }),
+        keywords: ["Game Dev Tycoon", "best combinations", "topic genre fit", "game development", "combo guide"],
+        creator: {
+          "@type": "Organization",
+          name: "Game Dev Tycoon Advisor",
+          url: BASE_URL,
+        },
+        license: "https://creativecommons.org/licenses/by-sa/4.0/",
+      }), [t])} />
 
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">

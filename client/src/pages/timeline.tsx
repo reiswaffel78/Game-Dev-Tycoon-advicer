@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import type { TFunction } from "i18next";
@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { SeoHead } from "@/seo/SeoHead";
+import { BASE_URL } from "@/seo/seo";
 import type { TimelineMilestone } from "@shared/schema";
 
 const getEventTypeConfig = (t: TFunction): Record<string, { label: string; color: string; bgColor: string }> => ({
@@ -153,7 +154,22 @@ export default function Timeline() {
 
   return (
     <div className="p-6 space-y-6 max-w-4xl mx-auto">
-      <SeoHead pageKey="timeline" />
+      <SeoHead pageKey="timeline" jsonLdExtra={useMemo(() => ({
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: t("timeline.title"),
+        description: t("timeline.subtitle"),
+        url: `${BASE_URL}/timeline`,
+        inLanguage: t("lang", { defaultValue: "en" }),
+        totalTime: "PT45M",
+        step: [
+          { "@type": "HowToStep", position: 1, name: "Year 1–5: Garage Phase", text: "Start in the garage. Develop small games, build skills, and save money. Target text-based and 2D games on early platforms." },
+          { "@type": "HowToStep", position: 2, name: "Year 6–10: First Office", text: "Move to first office, hire staff, and take on medium-sized projects. Research key technologies and expand to newer platforms." },
+          { "@type": "HowToStep", position: 3, name: "Year 11–15: Growth Phase", text: "Upgrade to second office, build larger teams. Unlock MMO and AAA game sizes. Develop sequels of successful titles." },
+          { "@type": "HowToStep", position: 4, name: "Year 16–20: R&D Era", text: "Build R&D Lab for advanced research. Develop custom game engines. Target high-end platforms for maximum reviews." },
+          { "@type": "HowToStep", position: 5, name: "Year 21–35: Hardware & Legacy", text: "Build Hardware Lab, develop custom consoles. Create AAA blockbusters and dominate all platforms. Achieve legendary status." },
+        ],
+      }), [t])} />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Clock className="h-6 w-6 text-primary" />

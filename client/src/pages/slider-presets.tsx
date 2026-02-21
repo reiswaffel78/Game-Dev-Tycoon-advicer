@@ -179,12 +179,12 @@ function GenreSelector({
           />
         </div>
         <ScrollArea className="max-h-[400px] -mx-3">
-          <div className="px-3 space-y-1">
+          <div className="px-3 space-y-0.5">
             {filteredGenres.map((genre) => (
               <button
                 key={genre.id}
                 onClick={() => onSelect(genre)}
-                className={`w-full text-left px-3 py-2.5 rounded-md transition-colors ${
+                className={`w-full text-left px-3 py-1.5 rounded-md transition-colors ${
                   selectedGenre?.id === genre.id
                     ? "bg-primary text-primary-foreground"
                     : "hover-elevate"

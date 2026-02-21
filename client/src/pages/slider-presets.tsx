@@ -296,143 +296,240 @@ export default function SliderPresets() {
         </Card>
       )}
 
-      <div className={`grid gap-6 ${multiGenreMode ? "lg:grid-cols-[280px,280px,1fr]" : "lg:grid-cols-[320px,1fr]"}`} style={{ minWidth: 0 }}>
-        {genresLoading ? (
-          <Card className="h-fit">
-            <CardContent className="p-6 space-y-2">
-              {[...Array(8)].map((_, i) => (
-                <Skeleton key={i} className="h-10 w-full" />
-              ))}
-            </CardContent>
-          </Card>
-        ) : genres ? (
-          <>
+      {multiGenreMode ? (
+        <div className="space-y-6">
+          <div className="grid gap-6 sm:grid-cols-2">
+            {genresLoading ? (
+              <Card className="h-fit">
+                <CardContent className="p-6 space-y-2">
+                  {[...Array(8)].map((_, i) => (
+                    <Skeleton key={i} className="h-10 w-full" />
+                  ))}
+                </CardContent>
+              </Card>
+            ) : genres ? (
+              <>
+                <GenreSelector
+                  genres={genres}
+                  selectedGenre={selectedGenre}
+                  onSelect={setSelectedGenre}
+                  search={search}
+                  onSearchChange={setSearch}
+                  label={t("sliders.primaryGenre")}
+                  excludeGenreId={secondaryGenre?.id}
+                  t={t}
+                  testIdPrefix="primary"
+                />
+                <div className="space-y-2">
+                  <GenreSelector
+                    genres={genres}
+                    selectedGenre={secondaryGenre}
+                    onSelect={setSecondaryGenre}
+                    search={secondarySearch}
+                    onSearchChange={setSecondarySearch}
+                    label={t("sliders.secondaryGenre")}
+                    excludeGenreId={selectedGenre?.id}
+                    t={t}
+                    testIdPrefix="secondary"
+                  />
+                  {selectedGenre && secondaryGenre && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={handleSwapGenres}
+                      className="w-full gap-2"
+                      data-testid="button-swap-genres"
+                    >
+                      <ArrowRightLeft className="h-4 w-4" />
+                      {t("sliders.swapGenres")}
+                    </Button>
+                  )}
+                </div>
+              </>
+            ) : null}
+          </div>
+
+          <div className="space-y-4">
+            {!hasSelection ? (
+              <Card>
+                <CardContent className="py-16 text-center">
+                  <SlidersHorizontal className="h-16 w-16 mx-auto text-muted-foreground/30 mb-4" />
+                  <h3 className="text-lg font-medium mb-2">
+                    {t("sliders.selectBothGenres")}
+                  </h3>
+                  <p className="text-muted-foreground max-w-md mx-auto">
+                    {t("sliders.selectBothGenresDesc")}
+                  </p>
+                </CardContent>
+              </Card>
+            ) : presetsLoading ? (
+              <div className="space-y-4">
+                {[...Array(3)].map((_, i) => (
+                  <Card key={i}>
+                    <CardContent className="p-6">
+                      <Skeleton className="h-48 w-full" />
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            ) : presets && presets.length > 0 ? (
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <h2 className="text-lg font-semibold" data-testid="text-presets-title">
+                    {presetsTitle}
+                  </h2>
+                </div>
+                {selectedGenre && secondaryGenre && (
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <Badge variant="default" className="gap-1" data-testid="badge-primary-genre">
+                      {t("sliders.primaryLabel")}: {translateGenre(t, selectedGenre.id, selectedGenre.name)}
+                      <span className="text-xs opacity-75">(×2)</span>
+                    </Badge>
+                    <span className="text-muted-foreground">+</span>
+                    <Badge variant="secondary" className="gap-1" data-testid="badge-secondary-genre">
+                      {t("sliders.secondaryLabel")}: {translateGenre(t, secondaryGenre.id, secondaryGenre.name)}
+                      <span className="text-xs opacity-75">(×1)</span>
+                    </Badge>
+                  </div>
+                )}
+                <Tabs defaultValue="all" className="w-full">
+                  <TabsList>
+                    <TabsTrigger value="all">{t("recommender.allStages")}</TabsTrigger>
+                    <TabsTrigger value="1">{t("recommender.stage", { number: 1 })}</TabsTrigger>
+                    <TabsTrigger value="2">{t("recommender.stage", { number: 2 })}</TabsTrigger>
+                    <TabsTrigger value="3">{t("recommender.stage", { number: 3 })}</TabsTrigger>
+                  </TabsList>
+                  <TabsContent value="all" className="mt-4">
+                    <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
+                      {presets.map((preset) => (
+                        <PresetCard key={preset.stage} preset={preset} genreId={displayGenreId} t={t} />
+                      ))}
+                    </div>
+                  </TabsContent>
+                  {[1, 2, 3].map((stage) => (
+                    <TabsContent key={stage} value={String(stage)} className="mt-4">
+                      {presets.find((p) => p.stage === stage) && (
+                        <div className="max-w-md">
+                          <PresetCard
+                            preset={presets.find((p) => p.stage === stage)!}
+                            genreId={displayGenreId}
+                            t={t}
+                          />
+                        </div>
+                      )}
+                    </TabsContent>
+                  ))}
+                </Tabs>
+              </div>
+            ) : (
+              <Card>
+                <CardContent className="py-12 text-center">
+                  <SlidersHorizontal className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
+                  <h3 className="text-lg font-medium mb-2">{t("recommender.noResults")}</h3>
+                  <p className="text-muted-foreground">
+                    {t("recommender.adjustFilters")}
+                  </p>
+                </CardContent>
+              </Card>
+            )}
+          </div>
+        </div>
+      ) : (
+        <div className="grid gap-6 lg:grid-cols-[320px,1fr]">
+          {genresLoading ? (
+            <Card className="h-fit">
+              <CardContent className="p-6 space-y-2">
+                {[...Array(8)].map((_, i) => (
+                  <Skeleton key={i} className="h-10 w-full" />
+                ))}
+              </CardContent>
+            </Card>
+          ) : genres ? (
             <GenreSelector
               genres={genres}
               selectedGenre={selectedGenre}
               onSelect={setSelectedGenre}
               search={search}
               onSearchChange={setSearch}
-              label={multiGenreMode ? t("sliders.primaryGenre") : t("recommender.selectGenre")}
-              excludeGenreId={multiGenreMode ? secondaryGenre?.id : undefined}
+              label={t("recommender.selectGenre")}
               t={t}
-              testIdPrefix={multiGenreMode ? "primary" : "slider"}
+              testIdPrefix="slider"
             />
-            {multiGenreMode && (
-              <div className="space-y-2">
-                <GenreSelector
-                  genres={genres}
-                  selectedGenre={secondaryGenre}
-                  onSelect={setSecondaryGenre}
-                  search={secondarySearch}
-                  onSearchChange={setSecondarySearch}
-                  label={t("sliders.secondaryGenre")}
-                  excludeGenreId={selectedGenre?.id}
-                  t={t}
-                  testIdPrefix="secondary"
-                />
-                {selectedGenre && secondaryGenre && (
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={handleSwapGenres}
-                    className="w-full gap-2"
-                    data-testid="button-swap-genres"
-                  >
-                    <ArrowRightLeft className="h-4 w-4" />
-                    {t("sliders.swapGenres")}
-                  </Button>
-                )}
-              </div>
-            )}
-          </>
-        ) : null}
+          ) : null}
 
-        <div className="space-y-4 min-w-0">
-          {!hasSelection ? (
-            <Card>
-              <CardContent className="py-16 text-center">
-                <SlidersHorizontal className="h-16 w-16 mx-auto text-muted-foreground/30 mb-4" />
-                <h3 className="text-lg font-medium mb-2">
-                  {multiGenreMode ? t("sliders.selectBothGenres") : t("recommender.selectGenre")}
-                </h3>
-                <p className="text-muted-foreground max-w-md mx-auto">
-                  {multiGenreMode ? t("sliders.selectBothGenresDesc") : t("sliders.selectGenre")}
-                </p>
-              </CardContent>
-            </Card>
-          ) : presetsLoading ? (
-            <div className="space-y-4">
-              {[...Array(3)].map((_, i) => (
-                <Card key={i}>
-                  <CardContent className="p-6">
-                    <Skeleton className="h-48 w-full" />
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          ) : presets && presets.length > 0 ? (
-            <div className="space-y-4">
-              <div className="flex items-center gap-2 flex-wrap">
-                <h2 className="text-lg font-semibold" data-testid="text-presets-title">
-                  {presetsTitle}
-                </h2>
-              </div>
-              {multiGenreMode && selectedGenre && secondaryGenre && (
-                <div className="flex items-center gap-2 flex-wrap">
-                  <Badge variant="default" className="gap-1" data-testid="badge-primary-genre">
-                    {t("sliders.primaryLabel")}: {translateGenre(t, selectedGenre.id, selectedGenre.name)}
-                    <span className="text-xs opacity-75">(×2)</span>
-                  </Badge>
-                  <span className="text-muted-foreground">+</span>
-                  <Badge variant="secondary" className="gap-1" data-testid="badge-secondary-genre">
-                    {t("sliders.secondaryLabel")}: {translateGenre(t, secondaryGenre.id, secondaryGenre.name)}
-                    <span className="text-xs opacity-75">(×1)</span>
-                  </Badge>
-                </div>
-              )}
-              <Tabs defaultValue="all" className="w-full">
-                <TabsList>
-                  <TabsTrigger value="all">{t("recommender.allStages")}</TabsTrigger>
-                  <TabsTrigger value="1">{t("recommender.stage", { number: 1 })}</TabsTrigger>
-                  <TabsTrigger value="2">{t("recommender.stage", { number: 2 })}</TabsTrigger>
-                  <TabsTrigger value="3">{t("recommender.stage", { number: 3 })}</TabsTrigger>
-                </TabsList>
-                <TabsContent value="all" className="mt-4">
-                  <div className="grid gap-4 grid-cols-1 xl:grid-cols-3">
-                    {presets.map((preset) => (
-                      <PresetCard key={preset.stage} preset={preset} genreId={displayGenreId} t={t} />
-                    ))}
-                  </div>
-                </TabsContent>
-                {[1, 2, 3].map((stage) => (
-                  <TabsContent key={stage} value={String(stage)} className="mt-4">
-                    {presets.find((p) => p.stage === stage) && (
-                      <div className="max-w-md">
-                        <PresetCard
-                          preset={presets.find((p) => p.stage === stage)!}
-                          genreId={displayGenreId}
-                          t={t}
-                        />
-                      </div>
-                    )}
-                  </TabsContent>
+          <div className="space-y-4 min-w-0">
+            {!hasSelection ? (
+              <Card>
+                <CardContent className="py-16 text-center">
+                  <SlidersHorizontal className="h-16 w-16 mx-auto text-muted-foreground/30 mb-4" />
+                  <h3 className="text-lg font-medium mb-2">
+                    {t("recommender.selectGenre")}
+                  </h3>
+                  <p className="text-muted-foreground max-w-md mx-auto">
+                    {t("sliders.selectGenre")}
+                  </p>
+                </CardContent>
+              </Card>
+            ) : presetsLoading ? (
+              <div className="space-y-4">
+                {[...Array(3)].map((_, i) => (
+                  <Card key={i}>
+                    <CardContent className="p-6">
+                      <Skeleton className="h-48 w-full" />
+                    </CardContent>
+                  </Card>
                 ))}
-              </Tabs>
-            </div>
-          ) : (
-            <Card>
-              <CardContent className="py-12 text-center">
-                <SlidersHorizontal className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
-                <h3 className="text-lg font-medium mb-2">{t("recommender.noResults")}</h3>
-                <p className="text-muted-foreground">
-                  {t("recommender.adjustFilters")}
-                </p>
-              </CardContent>
-            </Card>
-          )}
+              </div>
+            ) : presets && presets.length > 0 ? (
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <h2 className="text-lg font-semibold" data-testid="text-presets-title">
+                    {presetsTitle}
+                  </h2>
+                </div>
+                <Tabs defaultValue="all" className="w-full">
+                  <TabsList>
+                    <TabsTrigger value="all">{t("recommender.allStages")}</TabsTrigger>
+                    <TabsTrigger value="1">{t("recommender.stage", { number: 1 })}</TabsTrigger>
+                    <TabsTrigger value="2">{t("recommender.stage", { number: 2 })}</TabsTrigger>
+                    <TabsTrigger value="3">{t("recommender.stage", { number: 3 })}</TabsTrigger>
+                  </TabsList>
+                  <TabsContent value="all" className="mt-4">
+                    <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
+                      {presets.map((preset) => (
+                        <PresetCard key={preset.stage} preset={preset} genreId={displayGenreId} t={t} />
+                      ))}
+                    </div>
+                  </TabsContent>
+                  {[1, 2, 3].map((stage) => (
+                    <TabsContent key={stage} value={String(stage)} className="mt-4">
+                      {presets.find((p) => p.stage === stage) && (
+                        <div className="max-w-md">
+                          <PresetCard
+                            preset={presets.find((p) => p.stage === stage)!}
+                            genreId={displayGenreId}
+                            t={t}
+                          />
+                        </div>
+                      )}
+                    </TabsContent>
+                  ))}
+                </Tabs>
+              </div>
+            ) : (
+              <Card>
+                <CardContent className="py-12 text-center">
+                  <SlidersHorizontal className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
+                  <h3 className="text-lg font-medium mb-2">{t("recommender.noResults")}</h3>
+                  <p className="text-muted-foreground">
+                    {t("recommender.adjustFilters")}
+                  </p>
+                </CardContent>
+              </Card>
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

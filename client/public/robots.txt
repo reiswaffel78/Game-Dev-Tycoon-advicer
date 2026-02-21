@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://gamedevtycoonadvisor.com/sitemap.xml
+LLMsTxt: https://gamedevtycoonadvisor.com/llm.txt

@@ -1337,5 +1337,28 @@
       "primary": "Otwarty przewodnik po badaniach",
       "secondary": "Postępuj zgodnie z osią czasu"
     }
+  },
+  "seo": {
+    "suffix": {
+      "dashboard": "Najlepsze kombinacje, suwaki i porady dla każdego gatunku",
+      "topicRecommender": "Znajdź najlepszą tematykę do swojej gry",
+      "genreRecommender": "Znajdź najlepszy gatunek do swojej tematyki",
+      "platformRecommender": "Najlepsza platforma wg gatunku i odbiorców",
+      "sliders": "Optymalne ustawienia dla każdego gatunku i fazy",
+      "guide": "Kompletny poradnik i wskazówki strategiczne",
+      "bestCombos": "Najlepsze pary gatunek-tematyka w rankingu",
+      "slidersExplained": "Punkty designu vs techniki i wagi faz",
+      "researchOrder": "Kiedy odblokować tematykę, funkcje i technologię",
+      "planner": "Spersonalizowany plan wydań i badań",
+      "research": "Czas odblokowania, koszty i wymagania",
+      "staff": "Zatrudnianie, szkolenie i optymalizacja zespołu",
+      "timeline": "Roczne kamienie milowe i premiery platform",
+      "checklist": "Śledź kamienie milowe i własne cele",
+      "faq": "Szybkie odpowiedzi na częste pytania o grze",
+      "handbuch": "Kompletne mechaniki, strategie i porady",
+      "appGuide": "Funkcje, przepływy pracy i jak zacząć",
+      "privacy": "Game Dev Tycoon Advisor",
+      "sources": "Dane społeczności i poziomy zaufania"
+    }
   }
 }

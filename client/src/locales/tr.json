@@ -1337,5 +1337,28 @@
       "primary": "Açık Araştırma Kılavuzu",
       "secondary": "Zaman Çizelgesini Takip Edin"
     }
+  },
+  "seo": {
+    "suffix": {
+      "dashboard": "Her Tür İçin En İyi Kombinasyonlar, Kaydırıcılar ve İpuçları",
+      "topicRecommender": "Oyununuz İçin En İyi Konuyu Bulun",
+      "genreRecommender": "Konunuz İçin En İyi Türü Bulun",
+      "platformRecommender": "Tür ve Kitleye Göre En İyi Platform",
+      "sliders": "Her Tür ve Aşama İçin Optimal Ayarlar",
+      "guide": "Tam Rehber ve Strateji İpuçları",
+      "bestCombos": "En Yüksek Puanlı Tür-Konu Çiftleri",
+      "slidersExplained": "Tasarım vs Teknik Puanları ve Aşama Ağırlıkları",
+      "researchOrder": "Konu, Özellik ve Teknolojiyi Ne Zaman Açmalı",
+      "planner": "Kişiselleştirilmiş Çıkış ve Araştırma Planı",
+      "research": "Açma Zamanlaması, Maliyetler ve Ön Koşullar",
+      "staff": "İşe Alım, Eğitim ve Takım Optimizasyonu",
+      "timeline": "Yıllık Dönüm Noktaları ve Platform Çıkışları",
+      "checklist": "Dönüm Noktalarını ve Hedefleri Takip Edin",
+      "faq": "Sık Sorulan Oyun Sorularına Hızlı Cevaplar",
+      "handbuch": "Tüm Mekanikler, Stratejiler ve İpuçları",
+      "appGuide": "Özellikler, İş Akışları ve Nasıl Başlanır",
+      "privacy": "Game Dev Tycoon Advisor",
+      "sources": "Topluluk Verileri ve Güven Seviyeleri"
+    }
   }
 }

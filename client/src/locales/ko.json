@@ -1337,5 +1337,28 @@
       "primary": "연구 가이드 열기",
       "secondary": "타임라인을 따르세요"
     }
+  },
+  "seo": {
+    "suffix": {
+      "dashboard": "모든 장르별 최고 조합, 슬라이더 & 팁",
+      "topicRecommender": "게임에 가장 적합한 주제 찾기",
+      "genreRecommender": "주제에 가장 적합한 장르 찾기",
+      "platformRecommender": "장르 & 타겟별 최적 플랫폼",
+      "sliders": "모든 장르 & 단계별 최적 설정",
+      "guide": "전체 공략 & 전략 팁",
+      "bestCombos": "최고 점수 장르-주제 조합 랭킹",
+      "slidersExplained": "디자인 vs 기술 포인트 & 단계 가중치",
+      "researchOrder": "주제, 기능 & 기술 해금 시기",
+      "planner": "맞춤형 출시 & 연구 계획",
+      "research": "해금 시기, 비용 & 선행 조건",
+      "staff": "채용, 훈련 & 팀 최적화",
+      "timeline": "연도별 마일스톤 & 플랫폼 출시",
+      "checklist": "마일스톤 & 목표 추적",
+      "faq": "자주 묻는 게임 질문과 답변",
+      "handbuch": "전체 메카닉, 전략 & 팁",
+      "appGuide": "기능, 워크플로 & 시작 가이드",
+      "privacy": "Game Dev Tycoon Advisor",
+      "sources": "커뮤니티 데이터 & 신뢰도"
+    }
   }
 }

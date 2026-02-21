@@ -1337,5 +1337,28 @@
       "primary": "Nyílt kutatási útmutató",
       "secondary": "Kövesse az Idővonalat"
     }
+  },
+  "seo": {
+    "suffix": {
+      "dashboard": "Legjobb kombók, csúszkák és tippek minden műfajhoz",
+      "topicRecommender": "Találd meg a legjobb témát a játékodhoz",
+      "genreRecommender": "Találd meg a legjobb műfajt a témádhoz",
+      "platformRecommender": "Legjobb platform műfaj és közönség szerint",
+      "sliders": "Optimális beállítások minden műfajhoz és fázishoz",
+      "guide": "Teljes útmutató és stratégiai tippek",
+      "bestCombos": "Legjobb műfaj-téma párosítások rangsorolva",
+      "slidersExplained": "Dizájn vs technika pontok és fázissúlyok",
+      "researchOrder": "Mikor oldd fel a témákat, funkciókat és technológiákat",
+      "planner": "Személyre szabott kiadási és kutatási terv",
+      "research": "Feloldási idő, költségek és előfeltételek",
+      "staff": "Felvétel, képzés és csapatoptimalizálás",
+      "timeline": "Éves mérföldkövek és platformmegjelenések",
+      "checklist": "Mérföldkövek és egyéni célok követése",
+      "faq": "Gyors válaszok gyakori játékkérdésekre",
+      "handbuch": "Teljes mechanikák, stratégiák és tippek",
+      "appGuide": "Funkciók, munkafolyamatok és első lépések",
+      "privacy": "Game Dev Tycoon Advisor",
+      "sources": "Közösségi adatok és megbízhatósági szintek"
+    }
   }
 }

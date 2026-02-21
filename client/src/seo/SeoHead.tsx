@@ -20,10 +20,11 @@ export function SeoHead({ pageKey }: SeoHeadProps) {
   const locale: Locale = isLocale(i18n.language)
     ? i18n.language
     : DEFAULT_LOCALE;
-  const { titleKey, descriptionKey, schemaType } = getSeoConfig(pageKey);
+  const { titleKey, descriptionKey, titleSuffixKey, schemaType } = getSeoConfig(pageKey);
   const title = t(titleKey);
   const description = t(descriptionKey);
-  const fullTitle = `${title} | Game Dev Tycoon Advisor`;
+  const titleSuffix = t(titleSuffixKey);
+  const fullTitle = `${title} | ${titleSuffix}`;
   const canonicalUrl = getCanonicalUrl(pageKey, locale);
   const alternates = getHreflangLinks(pageKey);
   const resolvedSchemaType = schemaType ?? "WebApplication";

@@ -1337,5 +1337,28 @@
       "primary": "Guida alla ricerca aperta",
       "secondary": "Segui la sequenza temporale"
     }
+  },
+  "seo": {
+    "suffix": {
+      "dashboard": "Migliori combo, slider e consigli per ogni genere",
+      "topicRecommender": "Trova il miglior tema per il tuo gioco",
+      "genreRecommender": "Trova il miglior genere per il tuo tema",
+      "platformRecommender": "Miglior piattaforma per genere e pubblico",
+      "sliders": "Impostazioni ottimali per ogni genere e fase",
+      "guide": "Guida completa e consigli strategici",
+      "bestCombos": "Migliori coppie genere-tema in classifica",
+      "slidersExplained": "Punti Design vs Tech e pesi delle fasi",
+      "researchOrder": "Quando sbloccare temi, funzioni e tecnologie",
+      "planner": "Piano personalizzato di uscite e ricerca",
+      "research": "Tempistiche, costi e prerequisiti di sblocco",
+      "staff": "Assunzione, formazione e gestione del team",
+      "timeline": "Traguardi annuali e uscite piattaforme",
+      "checklist": "Monitora traguardi e obiettivi personalizzati",
+      "faq": "Risposte rapide alle domande più comuni",
+      "handbuch": "Meccaniche, strategie e consigli completi",
+      "appGuide": "Funzioni, flussi di lavoro e come iniziare",
+      "privacy": "Game Dev Tycoon Advisor",
+      "sources": "Dati della community e livelli di affidabilità"
+    }
   }
 }

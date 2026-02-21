@@ -1337,5 +1337,28 @@
       "title": "Kontakt",
       "description": "Om du har frågor om den här integritetspolicyn eller hur vi hanterar data, kontakta oss via webbplatsen."
     }
+  },
+  "seo": {
+    "suffix": {
+      "dashboard": "Bästa kombos, reglage & tips för varje genre",
+      "topicRecommender": "Hitta det bästa temat för ditt spel",
+      "genreRecommender": "Hitta den bästa genren för ditt tema",
+      "platformRecommender": "Bästa plattform efter genre & målgrupp",
+      "sliders": "Optimala inställningar per genre & fas",
+      "guide": "Komplett genomgång & strategitips",
+      "bestCombos": "Topprankade genre-tema-par",
+      "slidersExplained": "Design vs teknikpoäng & fasvikter",
+      "researchOrder": "När du ska låsa upp teman, funktioner & teknik",
+      "planner": "Personlig utgivnings- & forskningsplan",
+      "research": "Upplåsningstid, kostnader & förutsättningar",
+      "staff": "Anställning, utbildning & teamoptimering",
+      "timeline": "Årliga milstolpar & plattformssläpp",
+      "checklist": "Följ milstolpar & egna mål",
+      "faq": "Snabba svar på vanliga spelfrågor",
+      "handbuch": "Kompletta mekaniker, strategier & tips",
+      "appGuide": "Funktioner, arbetsflöden & kom igång",
+      "privacy": "Game Dev Tycoon Advisor",
+      "sources": "Communitydata & förtroendenivåer"
+    }
   }
 }

@@ -1337,5 +1337,28 @@
       "title": "Kontakt",
       "description": "Bei Fragen zu dieser Datenschutzerklärung oder unseren Datenpraktiken kontaktieren Sie uns bitte über die Website."
     }
+  },
+  "seo": {
+    "suffix": {
+      "dashboard": "Beste Kombos, Regler & Tipps für jedes Genre",
+      "topicRecommender": "Finde das beste Thema für dein Spiel",
+      "genreRecommender": "Finde das beste Genre für dein Thema",
+      "platformRecommender": "Beste Plattform nach Genre & Zielgruppe",
+      "sliders": "Optimale Einstellungen für jedes Genre & Phase",
+      "guide": "Komplettlösung & Strategietipps",
+      "bestCombos": "Top Genre-Thema-Paare im Ranking",
+      "slidersExplained": "Design- vs. Technik-Punkte & Phasengewichte",
+      "researchOrder": "Wann Themen, Features & Technik freischalten",
+      "planner": "Personalisierter Release- & Forschungsplan",
+      "research": "Freischaltzeiten, Kosten & Voraussetzungen",
+      "staff": "Einstellung, Training & Teamoptimierung",
+      "timeline": "Meilensteine & Plattform-Releases pro Jahr",
+      "checklist": "Meilensteine & eigene Ziele verfolgen",
+      "faq": "Schnelle Antworten auf häufige Spielfragen",
+      "handbuch": "Komplette Mechaniken, Strategien & Tipps",
+      "appGuide": "Funktionen, Abläufe & Erste Schritte",
+      "privacy": "Game Dev Tycoon Advisor",
+      "sources": "Community-Daten & Vertrauensstufen"
+    }
   }
 }

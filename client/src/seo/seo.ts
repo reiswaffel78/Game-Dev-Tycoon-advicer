@@ -54,6 +54,7 @@ export interface SeoPageConfig {
   path: string;
   titleKey: string;
   descriptionKey: string;
+  titleSuffixKey: string;
   schemaType?: "WebApplication" | "Article";
 }
 
@@ -62,100 +63,119 @@ export const SEO_CONFIG: Record<PageKey, SeoPageConfig> = {
     path: "/",
     titleKey: "dashboard.title",
     descriptionKey: "dashboard.subtitle",
+    titleSuffixKey: "seo.suffix.dashboard",
   },
   topicRecommender: {
     path: "/recommend/topic",
     titleKey: "nav.topicRecommender",
     descriptionKey: "dashboard.getStartedDesc",
+    titleSuffixKey: "seo.suffix.topicRecommender",
   },
   genreRecommender: {
     path: "/recommend/genre",
     titleKey: "nav.genreRecommender",
     descriptionKey: "dashboard.getStartedDesc",
+    titleSuffixKey: "seo.suffix.genreRecommender",
   },
   platformRecommender: {
     path: "/recommend/platform",
     titleKey: "nav.platformRecommender",
     descriptionKey: "dashboard.getStartedDesc",
+    titleSuffixKey: "seo.suffix.platformRecommender",
   },
   sliders: {
     path: "/sliders",
     titleKey: "sliders.title",
     descriptionKey: "sliders.subtitle",
+    titleSuffixKey: "seo.suffix.sliders",
   },
   guide: {
     path: "/game-dev-tycoon-guide",
     titleKey: "guide.title",
     descriptionKey: "guide.subtitle",
+    titleSuffixKey: "seo.suffix.guide",
     schemaType: "Article",
   },
   bestCombos: {
     path: "/game-dev-tycoon-best-combos",
     titleKey: "bestCombos.title",
     descriptionKey: "bestCombos.subtitle",
+    titleSuffixKey: "seo.suffix.bestCombos",
     schemaType: "Article",
   },
   slidersExplained: {
     path: "/game-dev-tycoon-sliders",
     titleKey: "slidersExplained.title",
     descriptionKey: "slidersExplained.subtitle",
+    titleSuffixKey: "seo.suffix.slidersExplained",
     schemaType: "Article",
   },
   researchOrder: {
     path: "/game-dev-tycoon-research-order",
     titleKey: "researchOrder.title",
     descriptionKey: "researchOrder.subtitle",
+    titleSuffixKey: "seo.suffix.researchOrder",
     schemaType: "Article",
   },
   planner: {
     path: "/planner",
     titleKey: "planner.title",
     descriptionKey: "planner.subtitle",
+    titleSuffixKey: "seo.suffix.planner",
   },
   research: {
     path: "/research",
     titleKey: "research.title",
     descriptionKey: "research.subtitle",
+    titleSuffixKey: "seo.suffix.research",
   },
   staff: {
     path: "/staff",
     titleKey: "staff.title",
     descriptionKey: "staff.subtitle",
+    titleSuffixKey: "seo.suffix.staff",
   },
   timeline: {
     path: "/timeline",
     titleKey: "timeline.title",
     descriptionKey: "timeline.subtitle",
+    titleSuffixKey: "seo.suffix.timeline",
   },
   checklist: {
     path: "/checklist",
     titleKey: "checklist.title",
     descriptionKey: "checklist.subtitle",
+    titleSuffixKey: "seo.suffix.checklist",
   },
   faq: {
     path: "/faq",
     titleKey: "faq.title",
     descriptionKey: "faq.subtitle",
+    titleSuffixKey: "seo.suffix.faq",
   },
   handbuch: {
     path: "/handbuch",
     titleKey: "manual.title",
     descriptionKey: "manual.subtitle",
+    titleSuffixKey: "seo.suffix.handbuch",
   },
   appGuide: {
     path: "/app-guide",
     titleKey: "appGuide.title",
     descriptionKey: "appGuide.subtitle",
+    titleSuffixKey: "seo.suffix.appGuide",
   },
   privacy: {
     path: "/privacy",
     titleKey: "privacy.title",
     descriptionKey: "privacy.subtitle",
+    titleSuffixKey: "seo.suffix.privacy",
   },
   sources: {
     path: "/sources",
     titleKey: "sources.title",
     descriptionKey: "sources.subtitle",
+    titleSuffixKey: "seo.suffix.sources",
   },
 };
 

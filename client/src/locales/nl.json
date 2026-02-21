@@ -1337,5 +1337,28 @@
       "primary": "Open onderzoeksgids",
       "secondary": "Volg de tijdlijn"
     }
+  },
+  "seo": {
+    "suffix": {
+      "dashboard": "Beste combo's, schuifregelaars & tips per genre",
+      "topicRecommender": "Vind het beste onderwerp voor je spel",
+      "genreRecommender": "Vind het beste genre voor je onderwerp",
+      "platformRecommender": "Beste platform per genre & doelgroep",
+      "sliders": "Optimale instellingen per genre & fase",
+      "guide": "Complete walkthrough & strategietips",
+      "bestCombos": "Best scorende genre-onderwerp-paren",
+      "slidersExplained": "Design- vs techniekpunten & fasegewichten",
+      "researchOrder": "Wanneer onderwerpen, functies & tech ontgrendelen",
+      "planner": "Gepersonaliseerd release- & onderzoeksplan",
+      "research": "Ontgrendeltijd, kosten & vereisten",
+      "staff": "Werving, training & teamoptimalisatie",
+      "timeline": "Jaarlijkse mijlpalen & platformreleases",
+      "checklist": "Volg mijlpalen & eigen doelen",
+      "faq": "Snelle antwoorden op veelgestelde vragen",
+      "handbuch": "Complete mechanica, strategieën & tips",
+      "appGuide": "Functies, workflows & aan de slag",
+      "privacy": "Game Dev Tycoon Advisor",
+      "sources": "Communitydata & betrouwbaarheidsniveaus"
+    }
   }
 }

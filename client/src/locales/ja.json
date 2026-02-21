@@ -1337,5 +1337,28 @@
       "primary": "オープンリサーチガイド",
       "secondary": "タイムラインをたどる"
     }
+  },
+  "seo": {
+    "suffix": {
+      "dashboard": "全ジャンル別ベストコンボ・スライダー＆攻略",
+      "topicRecommender": "ゲームに最適なトピックを見つける",
+      "genreRecommender": "トピックに最適なジャンルを見つける",
+      "platformRecommender": "ジャンル＆対象別ベストプラットフォーム",
+      "sliders": "全ジャンル＆段階別の最適設定",
+      "guide": "完全攻略＆戦略のヒント",
+      "bestCombos": "最高スコアのジャンル・トピック組合せ",
+      "slidersExplained": "デザインvs技術ポイント＆段階の重み",
+      "researchOrder": "トピック・機能・技術の解放タイミング",
+      "planner": "カスタムリリース＆研究プラン",
+      "research": "解放時期・コスト＆前提条件",
+      "staff": "採用・育成＆チーム最適化",
+      "timeline": "年別マイルストーン＆プラットフォーム発売",
+      "checklist": "マイルストーン＆目標の追跡",
+      "faq": "よくあるゲームの質問と回答",
+      "handbuch": "全メカニクス・戦略＆攻略のヒント",
+      "appGuide": "機能・ワークフロー＆使い方ガイド",
+      "privacy": "Game Dev Tycoon Advisor",
+      "sources": "コミュニティデータ＆信頼レベル"
+    }
   }
 }

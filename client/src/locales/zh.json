@@ -1337,5 +1337,28 @@
       "title": "联系",
       "description": "如果您对此隐私政策或我们的数据做法有任何疑问，请通过网站联系我们。"
     }
+  },
+  "seo": {
+    "suffix": {
+      "dashboard": "各类型最佳组合、滑块与技巧",
+      "topicRecommender": "为你的游戏找到最佳主题",
+      "genreRecommender": "为你的主题找到最佳类型",
+      "platformRecommender": "按类型与受众选最佳平台",
+      "sliders": "各类型与阶段的最优设置",
+      "guide": "完整攻略与策略技巧",
+      "bestCombos": "最高分类型-主题配对排名",
+      "slidersExplained": "设计vs技术点数与阶段权重",
+      "researchOrder": "主题、功能与技术解锁时机",
+      "planner": "个性化发行与研究计划",
+      "research": "解锁时间、费用与前置条件",
+      "staff": "招聘、培训与团队优化",
+      "timeline": "逐年里程碑与平台发布",
+      "checklist": "追踪里程碑与自定义目标",
+      "faq": "常见游戏问题快速解答",
+      "handbuch": "完整机制、策略与技巧",
+      "appGuide": "功能、工作流与入门指南",
+      "privacy": "Game Dev Tycoon Advisor",
+      "sources": "社区数据与可信度"
+    }
   }
 }

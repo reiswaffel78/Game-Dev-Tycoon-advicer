@@ -1337,5 +1337,28 @@
       "primary": "Otevřete průvodce výzkumem",
       "secondary": "Sledujte časovou osu"
     }
+  },
+  "seo": {
+    "suffix": {
+      "dashboard": "Nejlepší komba, posuvníky a tipy pro každý žánr",
+      "topicRecommender": "Najděte nejlepší téma pro vaši hru",
+      "genreRecommender": "Najděte nejlepší žánr pro vaše téma",
+      "platformRecommender": "Nejlepší platforma dle žánru a publika",
+      "sliders": "Optimální nastavení pro každý žánr a fázi",
+      "guide": "Kompletní průvodce a strategické tipy",
+      "bestCombos": "Nejlepší páry žánr-téma v žebříčku",
+      "slidersExplained": "Design vs technika: body a váhy fází",
+      "researchOrder": "Kdy odemknout témata, funkce a technologie",
+      "planner": "Personalizovaný plán vydání a výzkumu",
+      "research": "Časy odemknutí, náklady a předpoklady",
+      "staff": "Nábor, školení a optimalizace týmu",
+      "timeline": "Roční milníky a vydání platforem",
+      "checklist": "Sledujte milníky a vlastní cíle",
+      "faq": "Rychlé odpovědi na časté herní otázky",
+      "handbuch": "Kompletní mechaniky, strategie a tipy",
+      "appGuide": "Funkce, pracovní postupy a jak začít",
+      "privacy": "Game Dev Tycoon Advisor",
+      "sources": "Komunitní data a úrovně důvěry"
+    }
   }
 }

@@ -308,23 +308,6 @@ export default function SliderPresets() {
         <p className="text-sm text-muted-foreground">{t("sliders.seoIntro")}</p>
       </div>
 
-      <Card className="border-primary/20 bg-primary/5" data-testid="card-sliders-explained-link">
-        <CardContent className="py-4 px-5">
-          <div className="flex items-start gap-3">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 mt-0.5">
-              <BookOpen className="h-5 w-5 text-primary" />
-            </div>
-            <div className="space-y-1.5">
-              <h3 className="text-sm font-semibold">{t("sliders.explainedBox.title")}</h3>
-              <p className="text-sm text-muted-foreground">{t("sliders.explainedBox.text")}</p>
-              <Link href="/game-dev-tycoon-sliders" className="inline-flex items-center text-sm font-medium text-primary hover:underline" data-testid="link-sliders-explained">
-                {t("sliders.explainedBox.linkText")}
-              </Link>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
       {multiGenreMode && (
         <Card className="border-primary/20 bg-primary/5">
           <CardContent className="py-3 px-4">
@@ -572,6 +555,23 @@ export default function SliderPresets() {
           </div>
         </div>
       )}
+
+      <Card className="border-primary/20 bg-primary/5" data-testid="card-sliders-explained-link">
+        <CardContent className="py-4 px-5">
+          <div className="flex items-start gap-3">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 mt-0.5">
+              <BookOpen className="h-5 w-5 text-primary" />
+            </div>
+            <div className="space-y-1.5">
+              <h3 className="text-sm font-semibold">{t("sliders.explainedBox.title")}</h3>
+              <p className="text-sm text-muted-foreground">{t("sliders.explainedBox.text")}</p>
+              <Link href="/game-dev-tycoon-sliders" className="inline-flex items-center text-sm font-medium text-primary hover:underline" data-testid="link-sliders-explained">
+                {t("sliders.explainedBox.linkText")}
+              </Link>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }

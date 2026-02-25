@@ -358,7 +358,12 @@
     "multiGenrePresetsFor": "{{primary}} / {{secondary}} Slider Presets",
     "h1": "Game Dev Tycoon Optimal Slider Percentages",
     "h2": "RPG Slider Settings – Phase 1, 2, and 3",
-    "seoIntro": "Get the right action slider time allocation and adventure genre slider guide for every game. This slider cheat sheet covers all genres, including simulation slider percentages and strategy slider phase allocation. Find out what sliders to use for the casual genre, use our slider preset tool per genre, understand the tech design ratio, and learn how to set sliders correctly for maximum review scores."
+    "seoIntro": "Get the right action slider time allocation and adventure genre slider guide for every game. This slider cheat sheet covers all genres, including simulation slider percentages and strategy slider phase allocation. Find out what sliders to use for the casual genre, use our slider preset tool per genre, understand the tech design ratio, and learn how to set sliders correctly for maximum review scores.",
+    "explainedBox": {
+      "title": "How Do Sliders Actually Work?",
+      "text": "Not sure why your review scores are low? The sliders control how development time is split between Design and Tech points across three phases. Each genre has different phase weights that determine which sliders matter most. Understanding the slider mechanics, the design vs tech balance, and how phase priorities affect your final score is the key to getting 10/10 reviews.",
+      "linkText": "Read our complete Game Dev Tycoon Sliders Explained guide →"
+    }
   },
   "planner": {
     "title": "Game Planner",

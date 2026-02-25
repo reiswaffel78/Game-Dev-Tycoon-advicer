@@ -5,7 +5,8 @@ import { SeoHead } from "@/seo/SeoHead";
 import { BASE_URL } from "@/seo/seo";
 import { translateGenre } from "@/lib/translate-data";
 import type { TFunction } from "i18next";
-import { SlidersHorizontal, Search, Info, Zap, Cpu, Sparkles, Layers, X, ArrowRightLeft } from "lucide-react";
+import { SlidersHorizontal, Search, Info, Zap, Cpu, Sparkles, Layers, X, ArrowRightLeft, BookOpen } from "lucide-react";
+import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -306,6 +307,23 @@ export default function SliderPresets() {
         <h2 className="text-xl font-semibold">{t("sliders.h2")}</h2>
         <p className="text-sm text-muted-foreground">{t("sliders.seoIntro")}</p>
       </div>
+
+      <Card className="border-primary/20 bg-primary/5" data-testid="card-sliders-explained-link">
+        <CardContent className="py-4 px-5">
+          <div className="flex items-start gap-3">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 mt-0.5">
+              <BookOpen className="h-5 w-5 text-primary" />
+            </div>
+            <div className="space-y-1.5">
+              <h3 className="text-sm font-semibold">{t("sliders.explainedBox.title")}</h3>
+              <p className="text-sm text-muted-foreground">{t("sliders.explainedBox.text")}</p>
+              <Link href="/game-dev-tycoon-sliders" className="inline-flex items-center text-sm font-medium text-primary hover:underline" data-testid="link-sliders-explained">
+                {t("sliders.explainedBox.linkText")}
+              </Link>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
 
       {multiGenreMode && (
         <Card className="border-primary/20 bg-primary/5">

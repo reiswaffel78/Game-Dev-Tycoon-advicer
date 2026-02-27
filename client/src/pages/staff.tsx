@@ -174,7 +174,7 @@ export default function Staff() {
         <p className="text-sm text-muted-foreground">{t("staff.seoIntro")}</p>
       </div>
 
-      <Link href={handbuchTeamHref} data-cta-id="staff_to_handbook">
+      <Link href={handbuchTeamHref} data-cta-id="staff_to_handbook" className="block -mt-2">
         <Card className="border-primary/30 bg-primary/5 hover:bg-primary/10 transition-colors cursor-pointer">
           <CardContent className="p-5 flex items-center gap-3">
             <BookOpen className="h-5 w-5 text-primary shrink-0" />

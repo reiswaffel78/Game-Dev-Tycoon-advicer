@@ -1090,7 +1090,9 @@
         "从基础到高级",
         "游戏过程中参考的理想选择"
       ]
-    }
+    },
+    "openTool": "打开工具",
+    "startWorkflow": "开始使用"
   },
   "guide": {
     "title": "Game Dev Tycoon 进阶指南",

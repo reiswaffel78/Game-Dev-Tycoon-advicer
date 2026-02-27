@@ -1090,7 +1090,9 @@
         "Temel bilgilerden ileri düzeye",
         "Oyun sırasında başvuru için ideal"
       ]
-    }
+    },
+    "openTool": "Aracı aç",
+    "startWorkflow": "Başla"
   },
   "sources": {
     "title": "Veri Kaynakları",

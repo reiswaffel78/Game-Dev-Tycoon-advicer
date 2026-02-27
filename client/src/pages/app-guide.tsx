@@ -1,7 +1,10 @@
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { SeoHead } from "@/seo/SeoHead";
 import { Badge } from "@/components/ui/badge";
+import { buildLocalizedPath, extractLocaleFromPath } from "@/lib/locale";
 import {
   Compass,
   LayoutDashboard,
@@ -24,41 +27,39 @@ import {
 
 type FeatureKey = "dashboard" | "topicRecommender" | "genreRecommender" | "platformRecommender" | "sliderPresets" | "planner" | "research" | "staff" | "timeline" | "checklist" | "faq" | "manual";
 
-const featureConfig = [
-  { icon: LayoutDashboard, key: "dashboard" as FeatureKey, path: "/" },
-  { icon: Tag, key: "topicRecommender" as FeatureKey, path: "/recommend/topic" },
-  { icon: Layers, key: "genreRecommender" as FeatureKey, path: "/recommend/genre" },
-  { icon: Monitor, key: "platformRecommender" as FeatureKey, path: "/recommend/platform" },
-  { icon: SlidersHorizontal, key: "sliderPresets" as FeatureKey, path: "/sliders" },
-  { icon: CalendarClock, key: "planner" as FeatureKey, path: "/planner" },
-  { icon: FlaskConical, key: "research" as FeatureKey, path: "/research" },
-  { icon: Users, key: "staff" as FeatureKey, path: "/staff" },
-  { icon: Clock, key: "timeline" as FeatureKey, path: "/timeline" },
-  { icon: ClipboardList, key: "checklist" as FeatureKey, path: "/checklist" },
-  { icon: HelpCircle, key: "faq" as FeatureKey, path: "/faq" },
-  { icon: BookOpen, key: "manual" as FeatureKey, path: "/handbuch" },
+const featureConfig: { icon: typeof LayoutDashboard; key: FeatureKey; path: string; ctaId: string }[] = [
+  { icon: LayoutDashboard, key: "dashboard",           path: "/",                   ctaId: "app_guide_to_dashboard" },
+  { icon: Tag,            key: "topicRecommender",    path: "/recommend/topic",    ctaId: "app_guide_to_topic" },
+  { icon: Layers,         key: "genreRecommender",    path: "/recommend/genre",    ctaId: "app_guide_to_genre" },
+  { icon: Monitor,        key: "platformRecommender", path: "/recommend/platform", ctaId: "app_guide_to_platform" },
+  { icon: SlidersHorizontal, key: "sliderPresets",   path: "/sliders",            ctaId: "app_guide_to_sliders" },
+  { icon: CalendarClock,  key: "planner",             path: "/planner",            ctaId: "app_guide_to_planner" },
+  { icon: FlaskConical,   key: "research",            path: "/research",           ctaId: "app_guide_to_research" },
+  { icon: Users,          key: "staff",               path: "/staff",              ctaId: "app_guide_to_staff" },
+  { icon: Clock,          key: "timeline",            path: "/timeline",           ctaId: "app_guide_to_timeline" },
+  { icon: ClipboardList,  key: "checklist",           path: "/checklist",          ctaId: "app_guide_to_checklist" },
+  { icon: HelpCircle,     key: "faq",                 path: "/faq",                ctaId: "app_guide_to_faq" },
+  { icon: BookOpen,       key: "manual",              path: "/handbuch",           ctaId: "app_guide_to_handbuch" },
+];
+
+const workflowCtas: { key: string; path: string; ctaId: string }[] = [
+  { key: "planGame",       path: "/recommend/genre", ctaId: "app_guide_workflow_plan" },
+  { key: "findSliders",    path: "/sliders",         ctaId: "app_guide_workflow_sliders" },
+  { key: "trackProgress",  path: "/checklist",       ctaId: "app_guide_workflow_progress" },
 ];
 
 export default function AppGuidePage() {
   const { t } = useTranslation();
+  const [pathname] = useLocation();
+  const { locale } = extractLocaleFromPath(pathname);
 
-  const workflows = [
-    {
-      title: t("appGuide.workflow.planGame"),
-      icon: Target,
-      steps: t("appGuide.workflow.planGameSteps", { returnObjects: true }) as string[],
-    },
-    {
-      title: t("appGuide.workflow.findSliders"),
-      icon: SlidersHorizontal,
-      steps: t("appGuide.workflow.findSlidersSteps", { returnObjects: true }) as string[],
-    },
-    {
-      title: t("appGuide.workflow.trackProgress"),
-      icon: ClipboardList,
-      steps: t("appGuide.workflow.trackProgressSteps", { returnObjects: true }) as string[],
-    },
-  ];
+  const workflows = workflowCtas.map((wf) => ({
+    title: t(`appGuide.workflow.${wf.key}`),
+    icon: wf.key === "planGame" ? Target : wf.key === "findSliders" ? SlidersHorizontal : ClipboardList,
+    steps: t(`appGuide.workflow.${wf.key}Steps`, { returnObjects: true }) as string[],
+    ctaPath: wf.path,
+    ctaId: wf.ctaId,
+  }));
 
   return (
     <div className="container mx-auto p-6 max-w-5xl">
@@ -86,15 +87,15 @@ export default function AppGuidePage() {
           
           <div className="grid gap-4 md:grid-cols-3">
             {workflows.map((workflow) => (
-              <Card key={workflow.title} data-testid={`workflow-card-${workflow.title.toLowerCase().replace(/\s+/g, '-')}`}>
+              <Card key={workflow.title} data-testid={`workflow-card-${workflow.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex flex-col">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-lg flex items-center gap-2">
                     <workflow.icon className="h-5 w-5 text-primary" />
                     {workflow.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <ol className="space-y-2">
+                <CardContent className="flex flex-col flex-1 gap-4">
+                  <ol className="space-y-2 flex-1">
                     {workflow.steps.map((step, index) => (
                       <li key={index} className="flex gap-2 text-sm">
                         <Badge variant="outline" className="h-5 w-5 flex items-center justify-center p-0 shrink-0">
@@ -104,6 +105,12 @@ export default function AppGuidePage() {
                       </li>
                     ))}
                   </ol>
+                  <Button asChild size="sm" className="w-full" data-cta-id={workflow.ctaId}>
+                    <Link href={buildLocalizedPath(workflow.ctaPath, locale)}>
+                      {t("appGuide.startWorkflow")}
+                      <ArrowRight className="h-4 w-4 ml-1.5" />
+                    </Link>
+                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -122,8 +129,9 @@ export default function AppGuidePage() {
           <div className="grid gap-4 md:grid-cols-2">
             {featureConfig.map((feature) => {
               const tips = t(`appGuide.featureTips.${feature.key}`, { returnObjects: true }) as string[];
+              const localizedHref = buildLocalizedPath(feature.path, locale);
               return (
-                <Card key={feature.path} data-testid={`feature-card-${feature.key}`}>
+                <Card key={feature.path} data-testid={`feature-card-${feature.key}`} className="flex flex-col">
                   <CardHeader className="pb-3">
                     <CardTitle className="text-lg flex items-center gap-2">
                       <feature.icon className="h-5 w-5 text-primary" />
@@ -133,8 +141,8 @@ export default function AppGuidePage() {
                       </Badge>
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-3">
-                    <p className="text-sm text-muted-foreground">
+                  <CardContent className="flex flex-col flex-1 gap-3">
+                    <p className="text-sm text-muted-foreground flex-1">
                       {t(`appGuide.featureDesc.${feature.key}`)}
                     </p>
                     <div className="space-y-1">
@@ -145,6 +153,12 @@ export default function AppGuidePage() {
                         </div>
                       ))}
                     </div>
+                    <Button asChild size="sm" variant="outline" className="w-full mt-1" data-cta-id={feature.ctaId}>
+                      <Link href={localizedHref}>
+                        {t("appGuide.openTool")}
+                        <ArrowRight className="h-3.5 w-3.5 ml-1.5" />
+                      </Link>
+                    </Button>
                   </CardContent>
                 </Card>
               );

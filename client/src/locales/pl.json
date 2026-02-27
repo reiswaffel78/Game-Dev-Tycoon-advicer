@@ -1090,7 +1090,9 @@
         "Od podstaw po zaawansowane",
         "Idealne jako referencja podczas gry"
       ]
-    }
+    },
+    "openTool": "Otwórz narzędzie",
+    "startWorkflow": "Zacznij"
   },
   "sources": {
     "title": "Źródła danych",

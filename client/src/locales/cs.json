@@ -1090,7 +1090,9 @@
         "Od základů po pokročilé",
         "Ideální jako reference během hraní"
       ]
-    }
+    },
+    "openTool": "Otevřít nástroj",
+    "startWorkflow": "Začít"
   },
   "sources": {
     "title": "Zdroje dat",

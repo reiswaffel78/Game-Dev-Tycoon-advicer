@@ -1090,7 +1090,9 @@
         "Az alapoktól a haladó technikákig",
         "Ideális referencia játék közben"
       ]
-    }
+    },
+    "openTool": "Eszköz megnyitása",
+    "startWorkflow": "Kezdés"
   },
   "sources": {
     "title": "Adatforrások",

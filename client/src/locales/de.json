@@ -1090,7 +1090,9 @@
         "Von Grundlagen bis Fortgeschritten",
         "Ideal zum Nachschlagen während des Spiels"
       ]
-    }
+    },
+    "openTool": "Tool öffnen",
+    "startWorkflow": "Jetzt starten"
   },
   "guide": {
     "title": "Game Dev Tycoon Leitfaden",

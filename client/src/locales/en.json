@@ -1138,7 +1138,9 @@
         "From basics to advanced",
         "Ideal for reference during gameplay"
       ]
-    }
+    },
+    "openTool": "Open Tool",
+    "startWorkflow": "Get Started"
   },
   "guide": {
     "title": "Game Dev Tycoon Guide",

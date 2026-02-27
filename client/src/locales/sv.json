@@ -1090,7 +1090,9 @@
         "Från grunder till avancerat",
         "Perfekt som uppslagsverk medan du spelar"
       ]
-    }
+    },
+    "openTool": "Öppna verktyget",
+    "startWorkflow": "Kom igång"
   },
   "guide": {
     "title": "Guide för Game Dev Tycoon",

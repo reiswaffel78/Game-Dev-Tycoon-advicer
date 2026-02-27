@@ -1090,7 +1090,9 @@
         "Des bases à l'avancé",
         "Idéal comme référence pendant le jeu"
       ]
-    }
+    },
+    "openTool": "Ouvrir l'outil",
+    "startWorkflow": "Commencer"
   },
   "guide": {
     "title": "Guide Game Dev Tycoon",

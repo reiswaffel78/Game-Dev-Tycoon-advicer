@@ -1090,7 +1090,9 @@
         "Van basis tot geavanceerd",
         "Ideaal als referentie tijdens het spelen"
       ]
-    }
+    },
+    "openTool": "Tool openen",
+    "startWorkflow": "Beginnen"
   },
   "sources": {
     "title": "Databronnen",

@@ -1090,7 +1090,9 @@
         "Do básico ao avançado",
         "Ideal para consulta durante o gameplay"
       ]
-    }
+    },
+    "openTool": "Abrir ferramenta",
+    "startWorkflow": "Começar"
   },
   "sources": {
     "title": "Fontes de Dados",

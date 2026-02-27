@@ -1393,6 +1393,18 @@
     "plannerToChecklist": {
       "title": "Sprawdź przed publikacją",
       "body": "Przejrzyj listę kontrolną, aby uniknąć typowych błędów przed przesłaniem gry."
+    },
+    "timelineToPlatform": {
+      "title": "Wybierz właściwą platformę",
+      "body": "Skorzystaj z narzędzia do rekomendacji platform, aby znaleźć najlepszą dla swojej aktualnej ery."
+    },
+    "timelineToResearch": {
+      "title": "Ustal priorytety badań",
+      "body": "Zaplanuj, które technologie odblokować w następnej kolejności na podstawie aktualnego roku gry."
+    },
+    "timelineToChecklist": {
+      "title": "Śledź swoje kamienie milowe",
+      "body": "Dodaj kluczowe kamienie milowe do listy kontrolnej i śledź postępy w grze."
     }
   }
 }

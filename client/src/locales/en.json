@@ -1534,6 +1534,18 @@
     "plannerToChecklist": {
       "title": "Review Before You Release",
       "body": "Run through the checklist to catch common mistakes before submitting your game."
+    },
+    "timelineToPlatform": {
+      "title": "Choose the Right Platform",
+      "body": "Use the platform recommender to find the best platform for your current era."
+    },
+    "timelineToResearch": {
+      "title": "Prioritize Your Research",
+      "body": "Plan which technologies to unlock next based on your current game year."
+    },
+    "timelineToChecklist": {
+      "title": "Track Your Milestones",
+      "body": "Add key milestones to your checklist and track your progress through the game."
     }
   },
   "shareNudge": {

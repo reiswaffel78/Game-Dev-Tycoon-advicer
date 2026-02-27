@@ -1393,6 +1393,18 @@
     "plannerToChecklist": {
       "title": "Zkontrolujte před vydáním",
       "body": "Projděte seznam, abyste se vyhnuli běžným chybám před odesláním hry."
+    },
+    "timelineToPlatform": {
+      "title": "Vyberte správnou platformu",
+      "body": "Použijte doporučovač platforem k nalezení nejlepší platformy pro vaši aktuální éru."
+    },
+    "timelineToResearch": {
+      "title": "Stanovte priority výzkumu",
+      "body": "Naplánujte, které technologie odemknout jako další na základě aktuálního herního roku."
+    },
+    "timelineToChecklist": {
+      "title": "Sledujte milníky",
+      "body": "Přidejte klíčové milníky do svého kontrolního seznamu a sledujte pokrok ve hře."
     }
   }
 }

@@ -1393,6 +1393,18 @@
     "plannerToChecklist": {
       "title": "Ellenőrizd közzététel előtt",
       "body": "Menj végig az ellenőrzőlistán, hogy elkerüld a gyakori hibákat a játék beküldése előtt."
+    },
+    "timelineToPlatform": {
+      "title": "Válaszd ki a megfelelő platformot",
+      "body": "Használd a platform-ajánlót, hogy megtaláld a legjobb platformot az aktuális korszakodhoz."
+    },
+    "timelineToResearch": {
+      "title": "Kutatási prioritások meghatározása",
+      "body": "Tervezd meg, melyik technológiát kell legközelebb feloldani az aktuális játékév alapján."
+    },
+    "timelineToChecklist": {
+      "title": "Kövesd nyomon a mérföldköveket",
+      "body": "Adj hozzá kulcsfontosságú mérföldköveket az ellenőrzőlistához, és kövesd a haladást."
     }
   }
 }

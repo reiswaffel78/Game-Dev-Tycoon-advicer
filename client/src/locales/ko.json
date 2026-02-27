@@ -1393,6 +1393,18 @@
     "plannerToChecklist": {
       "title": "출시 전에 검토하기",
       "body": "게임 제출 전 체크리스트를 확인해 흔한 실수를 방지하세요."
+    },
+    "timelineToPlatform": {
+      "title": "올바른 플랫폼 선택하기",
+      "body": "플랫폼 추천기를 사용해 현재 시대에 맞는 최고의 플랫폼을 찾아보세요."
+    },
+    "timelineToResearch": {
+      "title": "연구 우선순위 정하기",
+      "body": "현재 게임 연도를 기반으로 다음에 잠금 해제할 기술을 계획하세요."
+    },
+    "timelineToChecklist": {
+      "title": "마일스톤 추적하기",
+      "body": "주요 마일스톤을 체크리스트에 추가하고 게임 진행 상황을 추적하세요."
     }
   }
 }

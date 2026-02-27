@@ -1441,6 +1441,18 @@
     "plannerToChecklist": {
       "title": "Vor dem Release prüfen",
       "body": "Geh die Checkliste durch, um häufige Fehler vor der Spielabgabe zu vermeiden."
+    },
+    "timelineToPlatform": {
+      "title": "Die passende Plattform wählen",
+      "body": "Nutze den Plattform-Empfehlungsrechner, um die beste Plattform für deine aktuelle Spielphase zu finden."
+    },
+    "timelineToResearch": {
+      "title": "Forschung priorisieren",
+      "body": "Plane, welche Technologien du als Nächstes freischalten solltest, basierend auf deinem aktuellen Spieljahr."
+    },
+    "timelineToChecklist": {
+      "title": "Meilensteine abhaken",
+      "body": "Füge wichtige Meilensteine zur Checkliste hinzu und verfolge deinen Fortschritt im Spiel."
     }
   }
 }

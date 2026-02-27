@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import type { TFunction } from "i18next";
 import { Clock, Search, Calendar, Lightbulb, ArrowRight } from "lucide-react";
+import { NextStepCTA } from "@/components/next-step-cta";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -237,33 +238,76 @@ export default function Timeline() {
         </div>
       ) : filteredMilestones && filteredMilestones.length > 0 ? (
         <div className="space-y-8">
-          {sortedYears.map((year) => (
-            <div key={year} className="space-y-2">
-              <div className="sticky top-0 z-10 bg-background/95 backdrop-blur py-2">
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center justify-center w-16 h-8 rounded-md bg-primary text-primary-foreground font-bold text-sm">
-                    {t("common.yearPrefix")}{year}
+          {(() => {
+            let platformCtaShown = false;
+            let researchCtaShown = false;
+            return sortedYears.map((year, idx) => {
+              const yearMilestones = groupedByYear?.[year] || [];
+              const hasPlatformRelease = yearMilestones.some(m => m.eventType === "platform_release");
+              const hasFeatureUnlock = yearMilestones.some(m => m.eventType === "feature_unlock");
+              const isLastYear = idx === sortedYears.length - 1;
+
+              const showPlatformCta = hasPlatformRelease && !platformCtaShown;
+              const showResearchCta = hasFeatureUnlock && !researchCtaShown && platformCtaShown;
+              if (showPlatformCta) platformCtaShown = true;
+              if (showResearchCta) researchCtaShown = true;
+
+              return (
+                <div key={year}>
+                  <div className="space-y-2">
+                    <div className="sticky top-0 z-10 bg-background/95 backdrop-blur py-2">
+                      <div className="flex items-center gap-3">
+                        <div className="flex items-center justify-center w-16 h-8 rounded-md bg-primary text-primary-foreground font-bold text-sm">
+                          {t("common.yearPrefix")}{year}
+                        </div>
+                        <div className="flex-1 h-px bg-border" />
+                        <Badge variant="outline">{yearMilestones.length} {t("timeline.events")}</Badge>
+                      </div>
+                    </div>
+                    
+                    <div className="pl-2">
+                      {yearMilestones
+                        .sort((a, b) => {
+                          const monthA = a.month || 1;
+                          const monthB = b.month || 1;
+                          const weekA = a.week || 1;
+                          const weekB = b.week || 1;
+                          return monthA !== monthB ? monthA - monthB : weekA - weekB;
+                        })
+                        .map((milestone) => (
+                          <MilestoneCard key={milestone.id} milestone={milestone} t={t} />
+                        ))}
+                    </div>
                   </div>
-                  <div className="flex-1 h-px bg-border" />
-                  <Badge variant="outline">{groupedByYear?.[year].length} {t("timeline.events")}</Badge>
+
+                  {showPlatformCta && (
+                    <NextStepCTA
+                      href="/recommend/platform"
+                      titleKey="nextStep.timelineToPlatform.title"
+                      bodyKey="nextStep.timelineToPlatform.body"
+                      dataCdaId="timeline_to_platform"
+                    />
+                  )}
+                  {showResearchCta && (
+                    <NextStepCTA
+                      href="/research"
+                      titleKey="nextStep.timelineToResearch.title"
+                      bodyKey="nextStep.timelineToResearch.body"
+                      dataCdaId="timeline_to_research"
+                    />
+                  )}
+                  {isLastYear && (
+                    <NextStepCTA
+                      href="/checklist"
+                      titleKey="nextStep.timelineToChecklist.title"
+                      bodyKey="nextStep.timelineToChecklist.body"
+                      dataCdaId="timeline_to_checklist"
+                    />
+                  )}
                 </div>
-              </div>
-              
-              <div className="pl-2">
-                {groupedByYear?.[year]
-                  .sort((a, b) => {
-                    const monthA = a.month || 1;
-                    const monthB = b.month || 1;
-                    const weekA = a.week || 1;
-                    const weekB = b.week || 1;
-                    return monthA !== monthB ? monthA - monthB : weekA - weekB;
-                  })
-                  .map((milestone) => (
-                    <MilestoneCard key={milestone.id} milestone={milestone} t={t} />
-                  ))}
-              </div>
-            </div>
-          ))}
+              );
+            });
+          })()}
         </div>
       ) : (
         <Card>

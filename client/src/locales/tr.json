@@ -1393,6 +1393,18 @@
     "plannerToChecklist": {
       "title": "Yayınlamadan önce gözden geçirin",
       "body": "Oyununuzu göndermeden önce yaygın hataları önlemek için kontrol listesini gözden geçirin."
+    },
+    "timelineToPlatform": {
+      "title": "Doğru platformu seçin",
+      "body": "Mevcut dönem için en iyi platformu bulmak üzere platform önericisini kullanın."
+    },
+    "timelineToResearch": {
+      "title": "Araştırma önceliklerini belirleyin",
+      "body": "Mevcut oyun yılınıza göre sırada hangi teknolojileri açacağınızı planlayın."
+    },
+    "timelineToChecklist": {
+      "title": "Dönüm noktalarınızı takip edin",
+      "body": "Önemli dönüm noktalarını listenize ekleyin ve oyundaki ilerlemenizi takip edin."
     }
   }
 }

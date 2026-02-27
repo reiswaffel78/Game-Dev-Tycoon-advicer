@@ -1393,6 +1393,18 @@
     "plannerToChecklist": {
       "title": "Kontrollera innan publicering",
       "body": "Gå igenom checklistan för att undvika vanliga misstag innan du skickar in ditt spel."
+    },
+    "timelineToPlatform": {
+      "title": "Välj rätt plattform",
+      "body": "Använd plattformsrekommendatorn för att hitta den bästa plattformen för din nuvarande era."
+    },
+    "timelineToResearch": {
+      "title": "Prioritera forskning",
+      "body": "Planera vilka teknologier du ska låsa upp härnäst baserat på ditt nuvarande spelår."
+    },
+    "timelineToChecklist": {
+      "title": "Följ dina milstolpar",
+      "body": "Lägg till viktiga milstolpar i din checklista och följ dina framsteg i spelet."
     }
   }
 }

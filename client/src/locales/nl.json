@@ -1393,6 +1393,18 @@
     "plannerToChecklist": {
       "title": "Controleer voor publicatie",
       "body": "Loop de checklist door om veelgemaakte fouten voor indiening te vermijden."
+    },
+    "timelineToPlatform": {
+      "title": "Kies het juiste platform",
+      "body": "Gebruik de platformaanbeveler om het beste platform voor je huidige tijdperk te vinden."
+    },
+    "timelineToResearch": {
+      "title": "Onderzoek prioriteren",
+      "body": "Plan welke technologieën je als volgende wilt ontgrendelen op basis van je huidige speljaar."
+    },
+    "timelineToChecklist": {
+      "title": "Mijlpalen bijhouden",
+      "body": "Voeg belangrijke mijlpalen toe aan je checklist en volg je voortgang in het spel."
     }
   }
 }

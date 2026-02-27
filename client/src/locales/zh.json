@@ -1393,6 +1393,18 @@
     "plannerToChecklist": {
       "title": "发布前检查",
       "body": "在提交游戏之前，通过检查清单避免常见错误。"
+    },
+    "timelineToPlatform": {
+      "title": "选择合适的平台",
+      "body": "使用平台推荐工具，找到适合当前时代的最佳平台。"
+    },
+    "timelineToResearch": {
+      "title": "确定研究优先级",
+      "body": "根据当前游戏年份，规划接下来要解锁的技术。"
+    },
+    "timelineToChecklist": {
+      "title": "追踪里程碑",
+      "body": "将关键里程碑添加到清单，并追踪游戏中的进度。"
     }
   }
 }

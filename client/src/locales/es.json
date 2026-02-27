@@ -1393,6 +1393,18 @@
     "plannerToChecklist": {
       "title": "Revisar antes de publicar",
       "body": "Repasa la lista para detectar errores comunes antes de enviar tu juego."
+    },
+    "timelineToPlatform": {
+      "title": "Elegir la plataforma adecuada",
+      "body": "Usa el recomendador de plataformas para encontrar la mejor opción para tu era actual."
+    },
+    "timelineToResearch": {
+      "title": "Priorizar la investigación",
+      "body": "Planifica qué tecnologías desbloquear a continuación según tu año de juego actual."
+    },
+    "timelineToChecklist": {
+      "title": "Seguir tus hitos",
+      "body": "Añade hitos clave a tu lista y rastrea tu progreso en el juego."
     }
   }
 }

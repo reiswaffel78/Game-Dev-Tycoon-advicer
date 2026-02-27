@@ -150,6 +150,7 @@ function GenreSelector({
   excludeGenreId,
   t,
   testIdPrefix,
+  multiGenreButton,
 }: {
   genres: Genre[];
   selectedGenre: Genre | null;
@@ -160,6 +161,7 @@ function GenreSelector({
   excludeGenreId?: string;
   t: TFunction;
   testIdPrefix: string;
+  multiGenreButton?: React.ReactNode;
 }) {
   const filteredGenres = genres
     .filter((g) => g.name.toLowerCase().includes(search.toLowerCase()))
@@ -168,7 +170,10 @@ function GenreSelector({
   return (
     <Card className="h-fit">
       <CardHeader className="px-6 py-3">
-        <CardTitle className="text-base">{label}</CardTitle>
+        <div className="flex items-center justify-between gap-2">
+          <CardTitle className="text-base">{label}</CardTitle>
+          {multiGenreButton}
+        </div>
       </CardHeader>
       <CardContent className="px-6 pt-0 pb-0 space-y-1.5">
         <div className="relative">
@@ -289,22 +294,10 @@ export default function SliderPresets() {
         license: "https://creativecommons.org/licenses/by-sa/4.0/",
       }), [t])} />
       <div className="space-y-2">
-        <div className="flex items-center justify-between flex-wrap gap-3">
-          <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
-            <SlidersHorizontal className="h-6 w-6 text-primary" />
-            {t("sliders.h1")}
-          </h1>
-          <Button
-            variant={multiGenreMode ? "default" : "outline"}
-            size="sm"
-            onClick={handleToggleMultiGenre}
-            className="gap-2"
-            data-testid="button-toggle-multi-genre"
-          >
-            <Layers className="h-4 w-4" />
-            {t("sliders.multiGenre")}
-          </Button>
-        </div>
+        <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
+          <SlidersHorizontal className="h-6 w-6 text-primary" />
+          {t("sliders.h1")}
+        </h1>
         <p className="text-muted-foreground">
           {multiGenreMode ? t("sliders.multiGenreSubtitle") : t("sliders.subtitle")}
         </p>
@@ -351,6 +344,18 @@ export default function SliderPresets() {
                   excludeGenreId={secondaryGenre?.id}
                   t={t}
                   testIdPrefix="primary"
+                  multiGenreButton={
+                    <Button
+                      variant={multiGenreMode ? "default" : "outline"}
+                      size="sm"
+                      onClick={handleToggleMultiGenre}
+                      className="gap-1.5 shrink-0"
+                      data-testid="button-toggle-multi-genre"
+                    >
+                      <Layers className="h-3.5 w-3.5" />
+                      {t("sliders.multiGenre")}
+                    </Button>
+                  }
                 />
                 <div className="space-y-2">
                   <GenreSelector
@@ -486,6 +491,18 @@ export default function SliderPresets() {
               label={t("recommender.selectGenre")}
               t={t}
               testIdPrefix="slider"
+              multiGenreButton={
+                <Button
+                  variant={multiGenreMode ? "default" : "outline"}
+                  size="sm"
+                  onClick={handleToggleMultiGenre}
+                  className="gap-1.5 shrink-0"
+                  data-testid="button-toggle-multi-genre"
+                >
+                  <Layers className="h-3.5 w-3.5" />
+                  {t("sliders.multiGenre")}
+                </Button>
+              }
             />
           ) : null}
 

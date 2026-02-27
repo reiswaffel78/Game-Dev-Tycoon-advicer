@@ -1,10 +1,11 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
 import { BASE_URL } from "@/seo/seo";
 import { translateGenre } from "@/lib/translate-data";
 import type { TFunction } from "i18next";
+import { useShareNudge } from "@/hooks/use-share-nudge";
 import { SlidersHorizontal, Search, Info, Zap, Cpu, Sparkles, Layers, X, ArrowRightLeft, BookOpen } from "lucide-react";
 import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -225,8 +226,14 @@ export default function SliderPresets() {
     enabled: !!selectedGenre && !!secondaryGenre && multiGenreMode,
   });
 
+  const { registerInteraction } = useShareNudge();
+
   const presets = multiGenreMode ? multiPresets : singlePresets;
   const presetsLoading = multiGenreMode ? multiPresetsLoading : singlePresetsLoading;
+
+  useEffect(() => {
+    if (presets && presets.length > 0) registerInteraction();
+  }, [presets]);
   const hasSelection = multiGenreMode
     ? !!selectedGenre && !!secondaryGenre
     : !!selectedGenre;

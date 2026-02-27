@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
+import { useShareNudge } from "@/hooks/use-share-nudge";
 import { translateTopic, translatePlatform, translateAudience, translateGenre } from "@/lib/translate-data";
 import {
   Layers,
@@ -204,12 +205,18 @@ export default function GenreRecommender() {
     queryKey: ["/api/genres"],
   });
 
+  const { registerInteraction } = useShareNudge();
+
   const { data: recommendations, isLoading: recsLoading } = useQuery<
     RecommendationResult[]
   >({
     queryKey: ["/api/recommend/genre", selectedGenre?.id],
     enabled: !!selectedGenre,
   });
+
+  useEffect(() => {
+    if (recommendations && recommendations.length > 0) registerInteraction();
+  }, [recommendations]);
 
   const filteredGenres = genres?.filter((g) =>
     g.name.toLowerCase().includes(search.toLowerCase())

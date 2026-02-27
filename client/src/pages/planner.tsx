@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslation } from "react-i18next";
 import { translateGenre, translateTopic, translatePlatform, translateAudience } from "@/lib/translate-data";
+import { useShareNudge } from "@/hooks/use-share-nudge";
 import { z } from "zod";
 import {
   CalendarClock,
@@ -335,6 +336,8 @@ export default function Planner() {
     form.setValue("unlockedTopicIds", current.filter((id) => id !== topicId), { shouldDirty: true });
   };
 
+  const { registerInteraction } = useShareNudge();
+
   const planMutation = useMutation({
     mutationFn: async (data: SaveStateForm) => {
       const res = await apiRequest("POST", "/api/planner", data);
@@ -342,6 +345,7 @@ export default function Planner() {
     },
     onSuccess: (data) => {
       setRecommendations(data);
+      registerInteraction();
     },
     onError: (error) => {
       toast({

@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
+import { useShareNudge } from "@/hooks/use-share-nudge";
 import { translateGenre, translateTopic, translateAudience, translatePlatform } from "@/lib/translate-data";
 import {
   Monitor,
@@ -256,12 +257,18 @@ export default function PlatformRecommender() {
     }
   );
 
+  const { registerInteraction } = useShareNudge();
+
   const { data: recommendations, isLoading: recsLoading } = useQuery<
     RecommendationResult[]
   >({
     queryKey: ["/api/recommend/platform", selectedPlatform?.id],
     enabled: !!selectedPlatform,
   });
+
+  useEffect(() => {
+    if (recommendations && recommendations.length > 0) registerInteraction();
+  }, [recommendations]);
 
   const filteredPlatforms = platforms?.filter((p) =>
     p.name.toLowerCase().includes(search.toLowerCase())

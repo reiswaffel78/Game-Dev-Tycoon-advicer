@@ -59,7 +59,8 @@ The application models Game Dev Tycoon gameplay data:
 │   │   ├── planner.tsx        # Game planner with state management
 │   │   ├── slider-presets.tsx # Genre slider presets
 │   │   └── topic-/genre-/platform-recommender.tsx
-│   ├── hooks/          # Custom React hooks
+│   ├── hooks/          # Custom React hooks (incl. use-share-nudge for share prompt)
+│   ├── components/share-nudge.tsx  # Non-intrusive share prompt component
 │   └── lib/            # Utility functions and query client
 ├── server/             # Express backend
 │   ├── routes.ts       # API route definitions with Zod validation

@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
+import { useShareNudge } from "@/hooks/use-share-nudge";
 import { BASE_URL } from "@/seo/seo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -97,12 +98,15 @@ export default function ChecklistPage() {
     },
   });
 
+  const { registerInteraction } = useShareNudge();
+
   const updateItemMutation = useMutation({
     mutationFn: async ({ id, isCompleted }: { id: string; isCompleted: boolean }) => {
       return apiRequest("PATCH", `/api/checklist/${id}`, { isCompleted });
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/checklist", sessionId] });
+      registerInteraction();
     },
   });
 

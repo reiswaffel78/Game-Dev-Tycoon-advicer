@@ -1512,5 +1512,12 @@
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Community Data & Trust Levels"
     }
+  },
+  "shareNudge": {
+    "text": "Was this tool helpful? Share it with other players!",
+    "shareButton": "Share",
+    "copied": "Link copied!",
+    "shared": "Thanks for sharing!",
+    "shareText": "I used this to optimize my Game Dev Tycoon gameplay:"
   }
 }

@@ -29,6 +29,8 @@ import Handbuch from "@/pages/handbuch";
 import AppGuide from "@/pages/app-guide";
 import Privacy from "@/pages/privacy";
 import { Footer } from "@/components/footer";
+import { ShareNudge } from "@/components/share-nudge";
+import { ShareNudgeProvider } from "@/hooks/use-share-nudge";
 
 function AppRoutes() {
   return (
@@ -67,27 +69,30 @@ function App() {
     <ThemeProvider defaultTheme="dark" storageKey="gdt-advisor-theme">
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
-          <SidebarProvider style={sidebarStyle}>
-            <div className="flex h-screen w-full">
-              <AppSidebar />
-              <div className="flex flex-col flex-1 overflow-hidden">
-                <header className="flex items-center justify-between gap-2 px-4 py-2 border-b bg-background/80 backdrop-blur-sm sticky top-0 z-10">
-                  <SidebarTrigger data-testid="button-sidebar-toggle" />
-                  <div className="flex items-center gap-1">
-                    <LanguageSwitcher />
-                    <ThemeToggle />
-                  </div>
-                </header>
-                <main className="flex-1 overflow-auto flex flex-col">
-                  <div className="flex-1">
-                    <AppRoutes />
-                  </div>
-                  <Footer />
-                </main>
+          <ShareNudgeProvider>
+            <SidebarProvider style={sidebarStyle}>
+              <div className="flex h-screen w-full">
+                <AppSidebar />
+                <div className="flex flex-col flex-1 overflow-hidden">
+                  <header className="flex items-center justify-between gap-2 px-4 py-2 border-b bg-background/80 backdrop-blur-sm sticky top-0 z-10">
+                    <SidebarTrigger data-testid="button-sidebar-toggle" />
+                    <div className="flex items-center gap-1">
+                      <LanguageSwitcher />
+                      <ThemeToggle />
+                    </div>
+                  </header>
+                  <main className="flex-1 overflow-auto flex flex-col">
+                    <div className="flex-1">
+                      <AppRoutes />
+                    </div>
+                    <Footer />
+                  </main>
+                </div>
               </div>
-            </div>
-          </SidebarProvider>
-          <Toaster />
+            </SidebarProvider>
+            <ShareNudge />
+            <Toaster />
+          </ShareNudgeProvider>
         </TooltipProvider>
       </QueryClientProvider>
     </ThemeProvider>

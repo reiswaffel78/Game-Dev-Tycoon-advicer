@@ -1,4 +1,12 @@
-import { createContext, useContext, useState, useCallback, useRef, useEffect, type ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  useRef,
+  useEffect,
+  type ReactNode,
+} from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "react-i18next";
 
@@ -11,12 +19,12 @@ const SHOW_DELAY_MS = 5000;
 
 function getInteractions(): number {
   const v = localStorage.getItem(LS_INTERACTIONS);
-  return v ? (Number(v) || 0) : 0;
+  return v ? Number(v) || 0 : 0;
 }
 
 function getLastShown(): number {
   const v = localStorage.getItem(LS_LAST_SHOWN);
-  return v ? (Number(v) || 0) : 0;
+  return v ? Number(v) || 0 : 0;
 }
 
 function isDismissedThisSession(): boolean {
@@ -40,11 +48,14 @@ interface ShareNudgeContextValue {
   handleShare: () => Promise<void>;
 }
 
-export const ShareNudgeContext = createContext<ShareNudgeContextValue | null>(null);
+export const ShareNudgeContext = createContext<ShareNudgeContextValue | null>(
+  null,
+);
 
 export function useShareNudge() {
   const ctx = useContext(ShareNudgeContext);
-  if (!ctx) throw new Error("useShareNudge must be used within ShareNudgeProvider");
+  if (!ctx)
+    throw new Error("useShareNudge must be used within ShareNudgeProvider");
   return ctx;
 }
 
@@ -89,7 +100,9 @@ export function useShareNudgeProvider() {
   const handleShare = useCallback(async () => {
     const url = window.location.href;
     const title = document.title || "Game Dev Tycoon Advisor";
-    const text = t("shareNudge.shareText", { defaultValue: "I used this to optimize my Game Dev Tycoon gameplay:" });
+    const text = t("shareNudge.shareText", {
+      defaultValue: "I used this to optimize my Game Dev Tycoon gameplay:",
+    });
 
     try {
       if (navigator.share) {

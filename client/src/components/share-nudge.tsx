@@ -11,18 +11,20 @@ export function ShareNudge() {
 
   return (
     <div
-      className="fixed bottom-4 right-4 z-50 max-w-xs animate-in fade-in slide-in-from-bottom-4 duration-[3000ms]"
+      className="fixed bottom-4 right-4 z-50 max-w-xs animate-in fade-in slide-in-from-bottom-4 [animation-duration:3000ms]"
       role="dialog"
       aria-label="Share this tool"
       data-testid="share-nudge"
     >
-      <div className="rounded-xl border bg-card text-card-foreground shadow-lg p-4">
+      <div className="rounded-xl border border-foreground/10 dark:border-foreground/20 bg-card text-card-foreground shadow-lg p-4">
         <div className="flex items-start gap-3">
           <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 mt-0.5">
             <Share2 className="h-4 w-4 text-primary" />
           </div>
           <div className="flex-1 space-y-2">
-            <p className="text-sm font-medium leading-snug">{t("shareNudge.text")}</p>
+            <p className="text-sm font-medium leading-snug">
+              {t("shareNudge.text")}
+            </p>
             <Button
               size="sm"
               onClick={handleShare}

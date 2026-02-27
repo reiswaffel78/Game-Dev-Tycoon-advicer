@@ -344,5 +344,18 @@ export async function registerRoutes(
     }
   });
 
+  app.delete("/api/checklist/:id", async (req, res) => {
+    try {
+      const deleted = await storage.deleteUserChecklistItem(req.params.id);
+      if (!deleted) {
+        return res.status(404).json({ error: "Checklist item not found" });
+      }
+      res.json({ success: true });
+    } catch (error) {
+      console.error("Error deleting checklist item:", error);
+      res.status(500).json({ error: "Failed to delete checklist item" });
+    }
+  });
+
   return httpServer;
 }

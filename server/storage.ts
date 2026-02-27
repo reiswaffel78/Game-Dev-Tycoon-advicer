@@ -122,6 +122,7 @@ export interface IStorage {
   getUserChecklistItems(sessionId: string): Promise<UserChecklistItem[]>;
   createUserChecklistItem(item: InsertUserChecklistItem): Promise<UserChecklistItem>;
   updateUserChecklistItem(id: string, isCompleted: boolean): Promise<UserChecklistItem | undefined>;
+  deleteUserChecklistItem(id: string): Promise<boolean>;
   
   // Stats
   getStats(): Promise<{ topics: number; genres: number; platforms: number; lastUpdate: string }>;
@@ -348,6 +349,13 @@ export class DatabaseStorage implements IStorage {
       .where(eq(userChecklistItems.id, id))
       .returning();
     return result[0];
+  }
+
+  async deleteUserChecklistItem(id: string): Promise<boolean> {
+    const result = await db.delete(userChecklistItems)
+      .where(eq(userChecklistItems.id, id))
+      .returning();
+    return result.length > 0;
   }
 
   // Stats

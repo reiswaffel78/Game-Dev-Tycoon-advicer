@@ -1415,6 +1415,14 @@
     "plannerToResearch": {
       "title": "Priorytetyzuj badania",
       "body": "Zobacz, które technologie odblokować jako pierwsze, aby zmaksymalizować wyniki."
+    },
+    "staffToHandbook": {
+      "title": "Tło i zasady w podręczniku",
+      "body": "Poznaj szczegółowe mechaniki zespołu, zasady rekrutacji i strategie szkoleń w podręczniku."
+    },
+    "handbookToStaff": {
+      "title": "Praktyczne zestawy zespołu i wskazówki",
+      "body": "Konkretne rekomendacje personelu dla każdej fazy gry."
     }
   }
 }

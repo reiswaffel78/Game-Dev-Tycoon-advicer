@@ -1463,6 +1463,14 @@
     "plannerToResearch": {
       "title": "Forschung priorisieren",
       "body": "Sieh, welche Technologien du zuerst freischalten solltest, um deine Spielwertungen zu maximieren."
+    },
+    "staffToHandbook": {
+      "title": "Hintergrund & Regeln im Handbuch",
+      "body": "Lerne die detaillierten Team-Mechaniken, Einstellungsregeln und Trainingsstrategien im Spielhandbuch kennen."
+    },
+    "handbookToStaff": {
+      "title": "Praktische Team-Setups & Tipps",
+      "body": "Konkrete Mitarbeiter-Empfehlungen und praktische Tipps für jede Spielphase."
     }
   }
 }

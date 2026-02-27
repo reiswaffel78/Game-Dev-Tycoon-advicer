@@ -1415,6 +1415,14 @@
     "plannerToResearch": {
       "title": "Priorità di ricerca",
       "body": "Scopri quali tecnologie sbloccare per prime per massimizzare i tuoi punteggi."
+    },
+    "staffToHandbook": {
+      "title": "Contesto e regole nel manuale",
+      "body": "Scopri le meccaniche del team, le regole di assunzione e le strategie di formazione nel manuale."
+    },
+    "handbookToStaff": {
+      "title": "Configurazioni pratiche e consigli",
+      "body": "Raccomandazioni concrete per ogni fase del gioco."
     }
   }
 }

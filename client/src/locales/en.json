@@ -1566,6 +1566,14 @@
     "plannerToResearch": {
       "title": "Prioritize Your Research",
       "body": "See which technologies to unlock first to maximize your game scores."
+    },
+    "staffToHandbook": {
+      "title": "Background & Rules in the Manual",
+      "body": "Learn the detailed team mechanics, hiring rules, and training strategies in the game manual."
+    },
+    "handbookToStaff": {
+      "title": "Practical Team Setups & Tips",
+      "body": "See phase-specific staff recommendations and concrete tips for every stage of the game."
     }
   },
   "shareNudge": {

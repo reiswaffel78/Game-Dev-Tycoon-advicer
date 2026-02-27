@@ -1415,6 +1415,14 @@
     "plannerToResearch": {
       "title": "Prioritera forskning",
       "body": "Se vilka teknologier du bör låsa upp först för att maximera dina poäng."
+    },
+    "staffToHandbook": {
+      "title": "Bakgrund & regler i handboken",
+      "body": "Lär dig detaljerade teammekaniker, anställningsregler och träningsstrategier i spelmanualen."
+    },
+    "handbookToStaff": {
+      "title": "Praktiska teamuppsättningar & tips",
+      "body": "Konkreta personalrekommendationer för varje fas av spelet."
     }
   }
 }

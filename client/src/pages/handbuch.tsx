@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SeoHead } from "@/seo/SeoHead";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { NextStepCTA } from "@/components/next-step-cta";
 import {
   BookOpen,
   Gamepad2,
@@ -16,9 +18,19 @@ import {
   AlertTriangle,
 } from "lucide-react";
 
+const VALID_TABS = ["basics", "development", "scoring", "team", "research", "advanced"];
+
 export default function HandbuchPage() {
   const { t } = useTranslation();
-  
+
+  const [activeTab, setActiveTab] = useState<string>(() => {
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash.slice(1);
+      if (VALID_TABS.includes(hash)) return hash;
+    }
+    return "basics";
+  });
+
   return (
     <div className="container mx-auto p-6 max-w-5xl">
       <SeoHead pageKey="handbuch" />
@@ -32,7 +44,7 @@ export default function HandbuchPage() {
         </p>
       </div>
 
-      <Tabs defaultValue="basics" className="space-y-6">
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
         <TabsList className="flex-wrap h-auto gap-1">
           <TabsTrigger value="basics" className="flex items-center gap-1" data-testid="tab-basics">
             <Gamepad2 className="h-4 w-4" />
@@ -263,7 +275,7 @@ export default function HandbuchPage() {
           </Card>
         </TabsContent>
 
-        <TabsContent value="team" className="space-y-6">
+        <TabsContent value="team" id="team" className="space-y-6">
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -310,6 +322,12 @@ export default function HandbuchPage() {
               </div>
             </CardContent>
           </Card>
+          <NextStepCTA
+            href="/staff"
+            titleKey="nextStep.handbookToStaff.title"
+            bodyKey="nextStep.handbookToStaff.body"
+            dataCdaId="handbook_to_staff"
+          />
         </TabsContent>
 
         <TabsContent value="research" className="space-y-6">

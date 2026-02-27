@@ -1415,6 +1415,14 @@
     "plannerToResearch": {
       "title": "优先研究",
       "body": "了解应首先解锁哪些技术，以最大化您的游戏评分。"
+    },
+    "staffToHandbook": {
+      "title": "手册中的背景和规则",
+      "body": "在手册中了解详细的团队机制、招聘规则和培训策略。"
+    },
+    "handbookToStaff": {
+      "title": "实用团队配置和技巧",
+      "body": "游戏每个阶段的具体员工建议。"
     }
   }
 }

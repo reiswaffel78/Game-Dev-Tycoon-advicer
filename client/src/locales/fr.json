@@ -1463,6 +1463,14 @@
     "plannerToResearch": {
       "title": "Prioriser la recherche",
       "body": "Découvrez quelles technologies débloquer en premier pour maximiser vos scores."
+    },
+    "staffToHandbook": {
+      "title": "Contexte & règles dans le manuel",
+      "body": "Découvrez les mécaniques d'équipe, les règles d'embauche et les stratégies de formation dans le manuel."
+    },
+    "handbookToStaff": {
+      "title": "Configurations pratiques & conseils",
+      "body": "Recommandations concrètes pour chaque phase du jeu."
     }
   }
 }

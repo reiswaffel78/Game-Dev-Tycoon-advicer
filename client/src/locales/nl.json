@@ -1415,6 +1415,14 @@
     "plannerToResearch": {
       "title": "Onderzoek prioriteren",
       "body": "Bekijk welke technologieën je het beste als eerste kunt ontgrendelen."
+    },
+    "staffToHandbook": {
+      "title": "Achtergrond & regels in het handboek",
+      "body": "Lees de gedetailleerde teammechanica, aannameeregels en trainingsstrategieën in het handboek."
+    },
+    "handbookToStaff": {
+      "title": "Praktische teamopstellingen & tips",
+      "body": "Concrete medewerkersaanbevelingen voor elke fase van het spel."
     }
   }
 }

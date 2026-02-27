@@ -1415,6 +1415,14 @@
     "plannerToResearch": {
       "title": "Araştırmayı önceliklendirin",
       "body": "Puanlarınızı artırmak için önce hangi teknolojileri açacağınızı görün."
+    },
+    "staffToHandbook": {
+      "title": "El kitabında arka plan ve kurallar",
+      "body": "Kılavuzda detaylı takım mekaniği, işe alım kuralları ve eğitim stratejilerini öğrenin."
+    },
+    "handbookToStaff": {
+      "title": "Pratik takım kurulumları ve ipuçları",
+      "body": "Oyunun her aşaması için somut personel önerileri."
     }
   }
 }

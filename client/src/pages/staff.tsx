@@ -1,9 +1,11 @@
 import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "wouter";
 import { SeoHead } from "@/seo/SeoHead";
 import { BASE_URL } from "@/seo/seo";
-import { Users, Search, Calendar, Briefcase, GraduationCap, Zap, Target, ClipboardList } from "lucide-react";
+import { buildLocalizedPath, extractLocaleFromPath } from "@/lib/locale";
+import { Users, Search, Calendar, Briefcase, GraduationCap, Zap, Target, ClipboardList, ArrowRight, BookOpen } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -113,6 +115,9 @@ function TipCard({ tip, t }: { tip: StaffTip; t: (key: string) => string }) {
 
 export default function Staff() {
   const { t } = useTranslation();
+  const [pathname] = useLocation();
+  const { locale } = extractLocaleFromPath(pathname);
+  const handbuchTeamHref = buildLocalizedPath("/handbuch", locale) + "#team";
   const [search, setSearch] = useState("");
   const [activePhase, setActivePhase] = useState("all");
 
@@ -168,6 +173,19 @@ export default function Staff() {
         <h2 className="text-xl font-semibold">{t("staff.h2")}</h2>
         <p className="text-sm text-muted-foreground">{t("staff.seoIntro")}</p>
       </div>
+
+      <Link href={handbuchTeamHref} data-cta-id="staff_to_handbook">
+        <Card className="border-primary/30 bg-primary/5 hover:bg-primary/10 transition-colors cursor-pointer">
+          <CardContent className="p-4 flex items-start gap-3">
+            <BookOpen className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+            <div className="flex-1 min-w-0">
+              <span className="font-semibold text-sm">{t("nextStep.staffToHandbook.title")}</span>
+              <p className="text-xs text-muted-foreground mt-0.5">{t("nextStep.staffToHandbook.body")}</p>
+            </div>
+            <ArrowRight className="h-4 w-4 text-primary shrink-0 self-center" />
+          </CardContent>
+        </Card>
+      </Link>
 
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="relative flex-1">

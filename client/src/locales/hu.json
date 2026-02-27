@@ -1415,6 +1415,14 @@
     "plannerToResearch": {
       "title": "Kutatás prioritizálása",
       "body": "Nézd meg, melyik technológiákat érdemes először feloldani a legjobb pontszámokért."
+    },
+    "staffToHandbook": {
+      "title": "Háttér és szabályok a kézikönyvben",
+      "body": "Ismerje meg a részletes csapatmechanikákat, felvételi szabályokat és képzési stratégiákat."
+    },
+    "handbookToStaff": {
+      "title": "Gyakorlati csapatfelépítések és tippek",
+      "body": "Konkrét személyzeti ajánlások a játék minden szakaszában."
     }
   }
 }

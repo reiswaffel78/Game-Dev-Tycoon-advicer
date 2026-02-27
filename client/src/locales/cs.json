@@ -1415,6 +1415,14 @@
     "plannerToResearch": {
       "title": "Prioritizujte výzkum",
       "body": "Zjistěte, které technologie odemknout jako první pro maximální skóre."
+    },
+    "staffToHandbook": {
+      "title": "Kontext a pravidla v příručce",
+      "body": "Přečtěte si podrobné týmové mechaniky, pravidla náboru a tréninkové strategie v příručce."
+    },
+    "handbookToStaff": {
+      "title": "Praktické sestavy a tipy",
+      "body": "Konkrétní doporučení pro personál v každé fázi hry."
     }
   }
 }

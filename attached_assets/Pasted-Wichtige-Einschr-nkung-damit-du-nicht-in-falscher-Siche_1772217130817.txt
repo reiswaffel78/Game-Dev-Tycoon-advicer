@@ -1,0 +1,260 @@
+Wichtige Einschränkung, damit du nicht in falscher Sicherheit bist:
+
+„pro Nutzer“ ist hier technisch nur „pro Browser/Device“, weil localStorage lokal ist. Ein Nutzer mit anderem Browser/Handy sieht es wieder. Wenn du wirklich „pro Account“ willst, brauchst du Login + serverseitige Speicherung.
+
+Konkrete Spezifikation (so würde ich’s bauen)
+
+Trigger:
+
+Zähle Interaktionen (z. B. “Calculate”, Dropdown geändert, Toggle geklickt, Ergebnis-Tab gewechselt …).
+
+Wenn interactions >= 3 und lastShown > 7 Tage und der Nutzer es noch nicht in dieser Session weggedrückt hat → Share-Button einblenden.
+
+UI:
+
+Kein Modal. Ein kleiner Sticky-Button unten rechts (oder unter dem Ergebnisblock).
+
+Dismiss (X) optional, aber sinnvoll.
+
+Share-Mechanik:
+
+Wenn navigator.share verfügbar (Mobile/teilweise Desktop): native Share Sheet.
+
+Sonst: Copy Link in Clipboard + kleiner “Copied” Hinweis.
+
+Drop-in JS (ohne Framework), inkl. 7-Tage-Cap + 3 Interaktionen
+
+Du musst nur an den Stellen, die bei dir als “Interaktion” gelten, registerInteraction() aufrufen (siehe Beispiele darunter).
+
+// share-nudge.js
+(() => {
+  const LS_LAST_SHOWN = "gdt_share_last_shown_ts";
+  const SS_DISMISSED = "gdt_share_dismissed_session";
+  const LS_INTERACTIONS = "gdt_share_interactions"; // optional: persist; oder nur in-memory
+
+  const INTERACTIONS_REQUIRED = 3;
+  const COOLDOWN_MS = 7 * 24 * 60 * 60 * 1000;
+
+  // --- helpers
+  const now = () => Date.now();
+
+  function getLastShown() {
+    const v = localStorage.getItem(LS_LAST_SHOWN);
+    const n = v ? Number(v) : 0;
+    return Number.isFinite(n) ? n : 0;
+  }
+
+  function setLastShown(ts) {
+    localStorage.setItem(LS_LAST_SHOWN, String(ts));
+  }
+
+  function getInteractions() {
+    const v = localStorage.getItem(LS_INTERACTIONS);
+    const n = v ? Number(v) : 0;
+    return Number.isFinite(n) ? n : 0;
+  }
+
+  function setInteractions(n) {
+    localStorage.setItem(LS_INTERACTIONS, String(n));
+  }
+
+  function isDismissedThisSession() {
+    return sessionStorage.getItem(SS_DISMISSED) === "1";
+  }
+
+  function markDismissedThisSession() {
+    sessionStorage.setItem(SS_DISMISSED, "1");
+  }
+
+  function eligibleToShow() {
+    if (isDismissedThisSession()) return false;
+    const last = getLastShown();
+    if (last && (now() - last) < COOLDOWN_MS) return false;
+    return getInteractions() >= INTERACTIONS_REQUIRED;
+  }
+
+  // --- UI
+  function createNudge() {
+    // Container
+    const wrap = document.createElement("div");
+    wrap.id = "share-nudge";
+    wrap.setAttribute("role", "dialog");
+    wrap.setAttribute("aria-label", "Share this tool");
+
+    wrap.innerHTML = `
+      <div class="share-nudge__content">
+        <div class="share-nudge__text">
+          Help other players: share this tool
+        </div>
+        <button class="share-nudge__btn" type="button">Share</button>
+        <button class="share-nudge__close" type="button" aria-label="Close">×</button>
+      </div>
+      <div class="share-nudge__toast" aria-live="polite"></div>
+    `;
+
+    // Basic styles (oder in CSS-Datei auslagern)
+    const style = document.createElement("style");
+    style.textContent = `
+      #share-nudge {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 9999;
+        max-width: 320px;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      }
+      #share-nudge .share-nudge__content {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        gap: 8px;
+        align-items: center;
+        padding: 10px 12px;
+        background: rgba(20,20,20,0.92);
+        color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      }
+      #share-nudge .share-nudge__text {
+        font-size: 13px;
+        line-height: 1.2;
+        opacity: 0.95;
+      }
+      #share-nudge .share-nudge__btn {
+        border: 0;
+        border-radius: 10px;
+        padding: 8px 10px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      #share-nudge .share-nudge__close {
+        border: 0;
+        border-radius: 10px;
+        width: 34px;
+        height: 34px;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 1;
+        background: transparent;
+        color: #fff;
+        opacity: 0.8;
+      }
+      #share-nudge .share-nudge__close:hover { opacity: 1; }
+      #share-nudge .share-nudge__toast {
+        margin-top: 8px;
+        padding: 6px 10px;
+        background: rgba(20,20,20,0.92);
+        color: #fff;
+        border-radius: 10px;
+        font-size: 12px;
+        display: none;
+      }
+    `;
+    document.head.appendChild(style);
+
+    // handlers
+    const shareBtn = wrap.querySelector(".share-nudge__btn");
+    const closeBtn = wrap.querySelector(".share-nudge__close");
+    const toast = wrap.querySelector(".share-nudge__toast");
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.style.display = "block";
+      window.setTimeout(() => (toast.style.display = "none"), 1600);
+    }
+
+    function buildShareUrl() {
+      // Minimal: aktuelle Seite. Besser: URL enthält Zustand (Genre/Topic/etc.) als Query params.
+      // Falls du schon "state in URL" hast, ist das automatisch sharebar.
+      return window.location.href;
+    }
+
+    async function doShare() {
+      const url = buildShareUrl();
+      const title = document.title || "Game Dev Tycoon Advisor";
+      const text = "I used this to get quick picks in Game Dev Tycoon:";
+
+      // Mark as shown on successful interaction with the nudge (nicht schon beim Einblenden).
+      // Sonst “verpufft” es, wenn User es ignoriert.
+      try {
+        if (navigator.share) {
+          await navigator.share({ title, text, url });
+          setLastShown(now());
+          showToast("Shared.");
+          removeNudge();
+          return;
+        }
+      } catch (e) {
+        // user cancelled -> nicht als shown zählen
+        return;
+      }
+
+      // Fallback: copy
+      try {
+        await navigator.clipboard.writeText(url);
+        setLastShown(now());
+        showToast("Link copied.");
+        removeNudge();
+      } catch (e) {
+        // Last resort
+        window.prompt("Copy this link:", url);
+        setLastShown(now());
+        removeNudge();
+      }
+    }
+
+    function removeNudge() {
+      if (wrap && wrap.parentNode) wrap.parentNode.removeChild(wrap);
+    }
+
+    shareBtn.addEventListener("click", doShare);
+    closeBtn.addEventListener("click", () => {
+      markDismissedThisSession();
+      removeNudge();
+    });
+
+    document.body.appendChild(wrap);
+  }
+
+  // --- public-ish API: call this on interactions
+  window.GDTShareNudge = {
+    registerInteraction() {
+      const n = getInteractions() + 1;
+      setInteractions(n);
+
+      if (eligibleToShow() && !document.getElementById("share-nudge")) {
+        createNudge();
+      }
+    },
+    // optional: reset for testing
+    _resetForTesting() {
+      localStorage.removeItem(LS_LAST_SHOWN);
+      localStorage.removeItem(LS_INTERACTIONS);
+      sessionStorage.removeItem(SS_DISMISSED);
+      const el = document.getElementById("share-nudge");
+      if (el) el.remove();
+    }
+  };
+})();
+So hängst du es an “3 Interaktionen”
+
+Beispiele (du passt die Selektoren an dein UI an):
+
+// Beispiel: Calculate-Button
+document.querySelector("#calculateBtn")?.addEventListener("click", () => {
+  window.GDTShareNudge.registerInteraction();
+});
+
+// Beispiel: Dropdowns
+document.querySelectorAll("select").forEach(sel => {
+  sel.addEventListener("change", () => window.GDTShareNudge.registerInteraction());
+});
+
+// Beispiel: Tabs / Toggles / Checkboxen
+document.querySelectorAll("input[type='checkbox'], input[type='radio']").forEach(i => {
+  i.addEventListener("change", () => window.GDTShareNudge.registerInteraction());
+});
+Zwei kleine Verbesserungen, die sich fast immer lohnen
+
+Interaktionen “qualifizieren”: Zähle nicht jeden Click irgendwo, sondern nur echte Tool-Aktionen (sonst triggert es zu früh).
+
+Share-URL mit Zustand: Wenn du Genre/Topic/Platform als Query-Parameter in die URL schreibst, wird das Teilen massiv sinnvoller (weil der Link direkt das Ergebnis reproduziert).

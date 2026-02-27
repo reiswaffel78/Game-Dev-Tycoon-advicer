@@ -21,7 +21,7 @@ export function NextStepCTA({ href, titleKey, bodyKey, dataCdaId }: NextStepCTAP
   return (
     <Link href={localizedHref}>
       <div
-        className="group flex items-center justify-between gap-4 rounded-xl border border-primary/20 bg-primary/5 px-5 py-4 transition-colors hover:bg-primary/10 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        className="group flex items-center justify-between gap-4 rounded-xl border border-primary/20 bg-primary/5 px-5 py-4 mt-4 transition-colors hover:bg-primary/10 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         data-cta-id={dataCdaId}
         role="link"
         aria-label={t(titleKey)}

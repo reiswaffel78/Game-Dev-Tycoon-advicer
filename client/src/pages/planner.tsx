@@ -707,6 +707,12 @@ export default function Planner() {
                 </div>
               </div>
               <NextStepCTA
+                href="/research"
+                titleKey="nextStep.plannerToResearch.title"
+                bodyKey="nextStep.plannerToResearch.body"
+                dataCdaId="planner_to_research"
+              />
+              <NextStepCTA
                 href="/checklist"
                 titleKey="nextStep.plannerToChecklist.title"
                 bodyKey="nextStep.plannerToChecklist.body"

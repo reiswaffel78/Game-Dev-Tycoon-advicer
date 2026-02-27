@@ -504,6 +504,12 @@
         "description": "Virtual reality-spelande",
         "tip": "Investering i framtidens teknik"
       }
+    },
+    "researchOrderBox": {
+      "title": "Rekommenderad forskningsordning",
+      "body": "Vet du inte vad du ska låsa upp först? Följ vår steg-för-steg-guide.",
+      "linkText": "Visa forskningsguide",
+      "enBadge": "EN"
     }
   },
   "staff": {
@@ -1405,6 +1411,10 @@
     "timelineToChecklist": {
       "title": "Följ dina milstolpar",
       "body": "Lägg till viktiga milstolpar i din checklista och följ dina framsteg i spelet."
+    },
+    "plannerToResearch": {
+      "title": "Prioritera forskning",
+      "body": "Se vilka teknologier du bör låsa upp först för att maximera dina poäng."
     }
   }
 }

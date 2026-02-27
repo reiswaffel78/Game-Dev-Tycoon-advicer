@@ -504,6 +504,12 @@
         "description": "Virtual-Reality-Gaming",
         "tip": "Zukunftstechnologie-Investition"
       }
+    },
+    "researchOrderBox": {
+      "title": "Empfohlene Forschungsreihenfolge",
+      "body": "Unsicher, was du zuerst erforschen sollst? Folge unserer Schritt-für-Schritt-Anleitung.",
+      "linkText": "Forschungsreihenfolge anzeigen",
+      "enBadge": "EN"
     }
   },
   "staff": {
@@ -1453,6 +1459,10 @@
     "timelineToChecklist": {
       "title": "Meilensteine abhaken",
       "body": "Füge wichtige Meilensteine zur Checkliste hinzu und verfolge deinen Fortschritt im Spiel."
+    },
+    "plannerToResearch": {
+      "title": "Forschung priorisieren",
+      "body": "Sieh, welche Technologien du zuerst freischalten solltest, um deine Spielwertungen zu maximieren."
     }
   }
 }

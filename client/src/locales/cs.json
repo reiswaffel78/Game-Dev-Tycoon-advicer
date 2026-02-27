@@ -504,6 +504,12 @@
         "description": "Virtuální realita",
         "tip": "Investice do technologií budoucnosti"
       }
+    },
+    "researchOrderBox": {
+      "title": "Doporučené pořadí výzkumu",
+      "body": "Nevíte, co odemknout jako první? Postupujte podle našeho průvodce krok za krokem.",
+      "linkText": "Zobrazit průvodce výzkumem",
+      "enBadge": "EN"
     }
   },
   "staff": {
@@ -1405,6 +1411,10 @@
     "timelineToChecklist": {
       "title": "Sledujte milníky",
       "body": "Přidejte klíčové milníky do svého kontrolního seznamu a sledujte pokrok ve hře."
+    },
+    "plannerToResearch": {
+      "title": "Prioritizujte výzkum",
+      "body": "Zjistěte, které technologie odemknout jako první pro maximální skóre."
     }
   }
 }

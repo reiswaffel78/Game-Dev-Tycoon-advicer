@@ -504,6 +504,12 @@
         "description": "Juegos de realidad virtual",
         "tip": "Inversión tecnológica futura"
       }
+    },
+    "researchOrderBox": {
+      "title": "Orden de investigación recomendado",
+      "body": "¿No sabes qué desbloquear primero? Sigue nuestra guía paso a paso.",
+      "linkText": "Ver guía de investigación",
+      "enBadge": "EN"
     }
   },
   "staff": {
@@ -1405,6 +1411,10 @@
     "timelineToChecklist": {
       "title": "Seguir tus hitos",
       "body": "Añade hitos clave a tu lista y rastrea tu progreso en el juego."
+    },
+    "plannerToResearch": {
+      "title": "Priorizar investigación",
+      "body": "Descubre qué tecnologías desbloquear primero para maximizar tus puntuaciones."
     }
   }
 }

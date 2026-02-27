@@ -504,6 +504,12 @@
         "description": "Sanal gerçeklik oyunu",
         "tip": "Gelecek teknolojisi yatırımı"
       }
+    },
+    "researchOrderBox": {
+      "title": "Önerilen araştırma sırası",
+      "body": "Neyi önce açacağınızdan emin değil misiniz? Adım adım kılavuzumuzu takip edin.",
+      "linkText": "Araştırma kılavuzunu görüntüle",
+      "enBadge": "EN"
     }
   },
   "staff": {
@@ -1405,6 +1411,10 @@
     "timelineToChecklist": {
       "title": "Dönüm noktalarınızı takip edin",
       "body": "Önemli dönüm noktalarını listenize ekleyin ve oyundaki ilerlemenizi takip edin."
+    },
+    "plannerToResearch": {
+      "title": "Araştırmayı önceliklendirin",
+      "body": "Puanlarınızı artırmak için önce hangi teknolojileri açacağınızı görün."
     }
   }
 }

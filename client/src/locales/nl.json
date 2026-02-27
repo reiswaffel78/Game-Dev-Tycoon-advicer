@@ -504,6 +504,12 @@
         "description": "Virtual reality gaming",
         "tip": "Investering in toekomstige technologie"
       }
+    },
+    "researchOrderBox": {
+      "title": "Aanbevolen onderzoeksvolgorde",
+      "body": "Weet je niet wat je eerst moet ontgrendelen? Volg onze stap-voor-stap gids.",
+      "linkText": "Onderzoeksgids bekijken",
+      "enBadge": "EN"
     }
   },
   "staff": {
@@ -1405,6 +1411,10 @@
     "timelineToChecklist": {
       "title": "Mijlpalen bijhouden",
       "body": "Voeg belangrijke mijlpalen toe aan je checklist en volg je voortgang in het spel."
+    },
+    "plannerToResearch": {
+      "title": "Onderzoek prioriteren",
+      "body": "Bekijk welke technologieën je het beste als eerste kunt ontgrendelen."
     }
   }
 }

@@ -540,7 +540,13 @@
     },
     "h1": "What to Research First in Game Dev Tycoon",
     "h2": "How to Get Research Points Fast",
-    "seoIntro": "Learn the R&D lab unlock requirements and use our research points farming guide to progress efficiently. Follow the best research priorities list, know when to unlock medium games, and find out how to unlock AAA games through research. Check the research point cost per topic and use this complete research guide from garage to AAA."
+    "seoIntro": "Learn the R&D lab unlock requirements and use our research points farming guide to progress efficiently. Follow the best research priorities list, know when to unlock medium games, and find out how to unlock AAA games through research. Check the research point cost per topic and use this complete research guide from garage to AAA.",
+    "researchOrderBox": {
+      "title": "Recommended Research Order",
+      "body": "Not sure what to unlock first? Follow our step-by-step research order guide.",
+      "linkText": "View Research Order Guide",
+      "enBadge": "EN"
+    }
   },
   "staff": {
     "title": "Staff Guide",
@@ -1429,7 +1435,13 @@
       ]
     },
     "timeline": {
-      "stepNames": ["Year 1–5: Garage Phase", "Year 6–10: First Office", "Year 11–15: Growth Phase", "Year 16–20: R&D Era", "Year 21–35: Hardware & Legacy"],
+      "stepNames": [
+        "Year 1–5: Garage Phase",
+        "Year 6–10: First Office",
+        "Year 11–15: Growth Phase",
+        "Year 16–20: R&D Era",
+        "Year 21–35: Hardware & Legacy"
+      ],
       "steps": [
         "Start in the garage. Develop small games, build skills, and save money. Target text-based and 2D games on early platforms.",
         "Move to first office, hire staff, and take on medium-sized projects. Research key technologies and expand to newer platforms.",
@@ -1439,7 +1451,11 @@
       ]
     },
     "checklist": {
-      "stepNames": ["Review Timeline Milestones", "Add Custom Goals", "Track Completion"],
+      "stepNames": [
+        "Review Timeline Milestones",
+        "Add Custom Goals",
+        "Track Completion"
+      ],
       "steps": [
         "Browse the timeline milestones and add important ones to your personal checklist for tracking.",
         "Create your own custom goals and tasks to track specific achievements or strategies.",
@@ -1546,6 +1562,10 @@
     "timelineToChecklist": {
       "title": "Track Your Milestones",
       "body": "Add key milestones to your checklist and track your progress through the game."
+    },
+    "plannerToResearch": {
+      "title": "Prioritize Your Research",
+      "body": "See which technologies to unlock first to maximize your game scores."
     }
   },
   "shareNudge": {

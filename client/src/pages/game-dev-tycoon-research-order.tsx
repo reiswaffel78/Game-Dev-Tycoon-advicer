@@ -1,5 +1,6 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
+import { buildLocalizedPath, extractLocaleFromPath } from "@/lib/locale";
 import { SeoHead } from "@/seo/SeoHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,10 @@ type EraKey = "early" | "mid" | "late";
 
 export default function GameDevTycoonResearchOrderPage() {
   const { t } = useTranslation();
+  const [pathname] = useLocation();
+  const { locale } = extractLocaleFromPath(pathname);
+  const researchPath = buildLocalizedPath("/research", locale);
+  const timelinePath = buildLocalizedPath("/timeline", locale);
 
   const priorities = t("researchOrder.priorities.items", { returnObjects: true }) as string[];
   const mistakes = t("researchOrder.mistakes.items", { returnObjects: true }) as string[];
@@ -99,11 +104,11 @@ export default function GameDevTycoonResearchOrderPage() {
                 <p className="text-sm text-muted-foreground">{t("researchOrder.cta.description")}</p>
               </div>
               <div className="flex flex-wrap gap-3">
-                <Button asChild>
-                  <Link href="/research">{t("researchOrder.cta.primary")}</Link>
+                <Button asChild data-cta-id="research_order_to_research">
+                  <Link href={researchPath}>{t("researchOrder.cta.primary")}</Link>
                 </Button>
-                <Button variant="outline" asChild>
-                  <Link href="/timeline">{t("researchOrder.cta.secondary")}</Link>
+                <Button variant="outline" asChild data-cta-id="research_order_to_timeline">
+                  <Link href={timelinePath}>{t("researchOrder.cta.secondary")}</Link>
                 </Button>
               </div>
             </CardContent>

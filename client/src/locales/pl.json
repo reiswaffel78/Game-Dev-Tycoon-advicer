@@ -504,6 +504,12 @@
         "description": "Gry w wirtualnej rzeczywistości",
         "tip": "Inwestycja w technologię przyszłości"
       }
+    },
+    "researchOrderBox": {
+      "title": "Zalecana kolejność badań",
+      "body": "Nie wiesz, co odblokować najpierw? Skorzystaj z naszego przewodnika krok po kroku.",
+      "linkText": "Zobacz przewodnik badań",
+      "enBadge": "EN"
     }
   },
   "staff": {
@@ -1405,6 +1411,10 @@
     "timelineToChecklist": {
       "title": "Śledź swoje kamienie milowe",
       "body": "Dodaj kluczowe kamienie milowe do listy kontrolnej i śledź postępy w grze."
+    },
+    "plannerToResearch": {
+      "title": "Priorytetyzuj badania",
+      "body": "Zobacz, które technologie odblokować jako pierwsze, aby zmaksymalizować wyniki."
     }
   }
 }

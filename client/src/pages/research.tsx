@@ -1,9 +1,11 @@
 import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "wouter";
 import { SeoHead } from "@/seo/SeoHead";
 import { BASE_URL } from "@/seo/seo";
-import { FlaskConical, Search, Lightbulb, Calendar, Coins, Target, Link2, Palette, Volume2, Gamepad2, Bot, Cpu } from "lucide-react";
+import { buildLocalizedPath, extractLocaleFromPath } from "@/lib/locale";
+import { FlaskConical, Search, Lightbulb, Calendar, Coins, Target, Link2, Palette, Volume2, Gamepad2, Bot, Cpu, ArrowRight, ListChecks } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -113,6 +115,9 @@ function ResearchCard({ item, t }: { item: ResearchItem; t: (key: string) => str
 
 export default function Research() {
   const { t } = useTranslation();
+  const [pathname] = useLocation();
+  const { locale } = extractLocaleFromPath(pathname);
+  const isEnglish = locale === "en";
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
 
@@ -167,6 +172,29 @@ export default function Research() {
         <h2 className="text-xl font-semibold">{t("research.h2")}</h2>
         <p className="text-sm text-muted-foreground">{t("research.seoIntro")}</p>
       </div>
+
+      <Link
+        href="/game-dev-tycoon-research-order"
+        data-cta-id="research_to_research_order"
+      >
+        <Card className="border-primary/30 bg-primary/5 hover:bg-primary/10 transition-colors cursor-pointer">
+          <CardContent className="p-4 flex items-start gap-3">
+            <ListChecks className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="font-semibold text-sm">{t("research.researchOrderBox.title")}</span>
+                {!isEnglish && (
+                  <Badge variant="secondary" className="text-xs px-1.5 py-0 h-4">
+                    {t("research.researchOrderBox.enBadge")}
+                  </Badge>
+                )}
+              </div>
+              <p className="text-xs text-muted-foreground mt-0.5">{t("research.researchOrderBox.body")}</p>
+            </div>
+            <ArrowRight className="h-4 w-4 text-primary shrink-0 self-center" />
+          </CardContent>
+        </Card>
+      </Link>
 
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="relative flex-1">

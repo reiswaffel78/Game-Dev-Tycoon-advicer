@@ -504,6 +504,12 @@
         "description": "Virtuálisvalóság-élmény",
         "tip": "Jövőbe mutató technológiai befektetés"
       }
+    },
+    "researchOrderBox": {
+      "title": "Ajánlott kutatási sorrend",
+      "body": "Nem tudod, mit oldd fel először? Kövesd lépésről lépésre szóló útmutatónkat.",
+      "linkText": "Kutatási útmutató megtekintése",
+      "enBadge": "EN"
     }
   },
   "staff": {
@@ -1405,6 +1411,10 @@
     "timelineToChecklist": {
       "title": "Kövesd nyomon a mérföldköveket",
       "body": "Adj hozzá kulcsfontosságú mérföldköveket az ellenőrzőlistához, és kövesd a haladást."
+    },
+    "plannerToResearch": {
+      "title": "Kutatás prioritizálása",
+      "body": "Nézd meg, melyik technológiákat érdemes először feloldani a legjobb pontszámokért."
     }
   }
 }

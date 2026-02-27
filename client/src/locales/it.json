@@ -504,6 +504,12 @@
         "description": "Gaming in realtà virtuale",
         "tip": "Investimento tecnologico futuro"
       }
+    },
+    "researchOrderBox": {
+      "title": "Ordine di ricerca consigliato",
+      "body": "Non sai cosa sbloccare per primo? Segui la nostra guida passo passo.",
+      "linkText": "Visualizza la guida di ricerca",
+      "enBadge": "EN"
     }
   },
   "staff": {
@@ -1405,6 +1411,10 @@
     "timelineToChecklist": {
       "title": "Tieni traccia dei traguardi",
       "body": "Aggiungi traguardi chiave alla tua lista e monitora i progressi nel gioco."
+    },
+    "plannerToResearch": {
+      "title": "Priorità di ricerca",
+      "body": "Scopri quali tecnologie sbloccare per prime per massimizzare i tuoi punteggi."
     }
   }
 }

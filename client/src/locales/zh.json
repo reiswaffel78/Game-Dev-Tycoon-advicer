@@ -504,6 +504,12 @@
         "description": "虚拟现实游戏",
         "tip": "未来技术投资"
       }
+    },
+    "researchOrderBox": {
+      "title": "推荐研究顺序",
+      "body": "不确定先解锁什么？请按照我们的分步指南操作。",
+      "linkText": "查看研究指南",
+      "enBadge": "EN"
     }
   },
   "staff": {
@@ -1405,6 +1411,10 @@
     "timelineToChecklist": {
       "title": "追踪里程碑",
       "body": "将关键里程碑添加到清单，并追踪游戏中的进度。"
+    },
+    "plannerToResearch": {
+      "title": "优先研究",
+      "body": "了解应首先解锁哪些技术，以最大化您的游戏评分。"
     }
   }
 }

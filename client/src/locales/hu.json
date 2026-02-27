@@ -839,6 +839,20 @@
         "question": "Hogyan fejleszd a legjobb játékmotort?",
         "answer": "A legjobb motort így fejleszted: 1) Magas tech-képességek a csapatban, 2) Minden elérhető funkció beépítése, 3) Elegendő idő és pénz befektetése, 4) Rendszeres frissítések. Egy jó motor több játékhoz is használható, és hosszú távon időt takarít meg."
       }
+    },
+    "links": {
+      "moreTo": "Bővebben:",
+      "topicRecommender": "Témaajánló",
+      "platformRecommender": "Platformajánló",
+      "sliders": "Csúszkabeállítások",
+      "slidersPage": "Csúszka-útmutató",
+      "staff": "Személyzeti útmutató",
+      "handbuch": "Játékkézikönyv",
+      "research": "Kutatási útmutató",
+      "researchOrder": "Kutatási sorrend",
+      "timeline": "Idősor",
+      "planner": "Játéktervező",
+      "checklist": "Ellenőrzőlista"
     }
   },
   "manual": {

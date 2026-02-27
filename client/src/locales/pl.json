@@ -839,6 +839,20 @@
         "question": "Jak stworzyć najlepszy silnik gry?",
         "answer": "Najlepszy silnik stworzysz przez: 1) Wysokie umiejętności technologiczne w zespole, 2) Uwzględnienie wszystkich dostępnych funkcji, 3) Zainwestowanie wystarczająco dużo czasu i pieniędzy, 4) Regularne aktualizacje. Dobry silnik może być używany w wielu grach i oszczędza czas na dłuższą metę."
       }
+    },
+    "links": {
+      "moreTo": "Więcej na ten temat:",
+      "topicRecommender": "Polecacz tematów",
+      "platformRecommender": "Polecacz platform",
+      "sliders": "Presety suwaków",
+      "slidersPage": "Przewodnik suwaków",
+      "staff": "Przewodnik po personelu",
+      "handbuch": "Podręcznik gry",
+      "research": "Przewodnik badań",
+      "researchOrder": "Kolejność badań",
+      "timeline": "Oś czasu",
+      "planner": "Planer gry",
+      "checklist": "Lista kontrolna"
     }
   },
   "manual": {

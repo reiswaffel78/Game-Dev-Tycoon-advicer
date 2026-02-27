@@ -839,6 +839,20 @@
         "question": "En iyi oyun motorunu nasıl geliştiririm?",
         "answer": "En iyi motoru şöyle geliştir: 1) Ekipte yüksek teknoloji becerileri, 2) Mevcut tüm özellikleri dahil et, 3) Yeterli zaman ve para yatır, 4) Düzenli güncellemeler. İyi bir motor birden fazla oyunda kullanılabilir ve uzun vadede zaman kazandırır."
       }
+    },
+    "links": {
+      "moreTo": "Daha fazlası:",
+      "topicRecommender": "Konu Tavsiyecisi",
+      "platformRecommender": "Platform Tavsiyecisi",
+      "sliders": "Kaydırıcı Ayarları",
+      "slidersPage": "Kaydırıcı Rehberi",
+      "staff": "Personel Rehberi",
+      "handbuch": "Oyun Kılavuzu",
+      "research": "Araştırma Rehberi",
+      "researchOrder": "Araştırma Sırası",
+      "timeline": "Zaman Çizelgesi",
+      "planner": "Oyun Planlayıcısı",
+      "checklist": "Kontrol Listesi"
     }
   },
   "manual": {

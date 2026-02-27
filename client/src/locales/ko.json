@@ -839,6 +839,20 @@
         "question": "최고의 게임 엔진을 어떻게 개발하나요?",
         "answer": "다음을 통해 최고의 엔진을 개발하세요: 1) 팀의 높은 기술 능력, 2) 사용 가능한 모든 기능 포함, 3) 충분한 시간과 돈 투자, 4) 정기적인 업데이트. 좋은 엔진은 여러 게임에 사용할 수 있으며 장기적으로 시간을 절약합니다."
       }
+    },
+    "links": {
+      "moreTo": "더 알아보기:",
+      "topicRecommender": "주제 추천기",
+      "platformRecommender": "플랫폼 추천기",
+      "sliders": "슬라이더 프리셋",
+      "slidersPage": "슬라이더 가이드",
+      "staff": "직원 가이드",
+      "handbuch": "게임 매뉴얼",
+      "research": "연구 가이드",
+      "researchOrder": "연구 순서 가이드",
+      "timeline": "타임라인",
+      "planner": "게임 플래너",
+      "checklist": "체크리스트"
     }
   },
   "manual": {

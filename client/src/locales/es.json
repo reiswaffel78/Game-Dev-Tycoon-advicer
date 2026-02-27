@@ -839,6 +839,20 @@
         "question": "¿Cómo desarrollo el mejor motor de juego?",
         "answer": "Desarrolla el mejor motor: 1) Altas habilidades técnicas en el equipo, 2) Incluyendo todas las características disponibles, 3) Invirtiendo suficiente tiempo y dinero, 4) Actualizaciones regulares. Un buen motor puede usarse para múltiples juegos y ahorra tiempo a largo plazo."
       }
+    },
+    "links": {
+      "moreTo": "Más sobre esto:",
+      "topicRecommender": "Recomendador de temas",
+      "platformRecommender": "Recomendador de plataformas",
+      "sliders": "Preajustes de deslizadores",
+      "slidersPage": "Guía de deslizadores",
+      "staff": "Guía de personal",
+      "handbuch": "Manual del juego",
+      "research": "Guía de investigación",
+      "researchOrder": "Orden de investigación",
+      "timeline": "Línea de tiempo",
+      "planner": "Planificador",
+      "checklist": "Lista de verificación"
     }
   },
   "manual": {

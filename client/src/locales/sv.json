@@ -839,6 +839,20 @@
         "question": "Hur utvecklar jag den bästa spelmotorn?",
         "answer": "Utveckla den bästa motorn genom att: 1) Ha hög teknikkompetens i teamet, 2) Inkludera alla tillgängliga funktioner, 3) Investera tillräckligt med tid och pengar, 4) Uppdatera regelbundet. En bra motor kan användas till flera spel och sparar tid i längden."
       }
+    },
+    "links": {
+      "moreTo": "Mer om detta:",
+      "topicRecommender": "Ämnesrekommendatör",
+      "platformRecommender": "Plattformsrekommendatör",
+      "sliders": "Reglageinställningar",
+      "slidersPage": "Reglageguide",
+      "staff": "Personalguide",
+      "handbuch": "Spelhandbok",
+      "research": "Forskningsguide",
+      "researchOrder": "Forskningsordning",
+      "timeline": "Tidslinje",
+      "planner": "Spelplanerare",
+      "checklist": "Checklista"
     }
   },
   "manual": {

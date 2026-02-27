@@ -839,6 +839,20 @@
         "question": "Como desenvolver a melhor engine?",
         "answer": "Desenvolva a melhor engine com: 1) Altas habilidades técnicas na equipe, 2) Incluindo todos os recursos disponíveis, 3) Investindo tempo e dinheiro suficientes, 4) Atualizações regulares. Uma boa engine pode ser usada em vários jogos e economiza tempo a longo prazo."
       }
+    },
+    "links": {
+      "moreTo": "Saiba mais:",
+      "topicRecommender": "Recomendador de temas",
+      "platformRecommender": "Recomendador de plataformas",
+      "sliders": "Predefinições de controles",
+      "slidersPage": "Guia de controles",
+      "staff": "Guia de pessoal",
+      "handbuch": "Manual do jogo",
+      "research": "Guia de pesquisa",
+      "researchOrder": "Ordem de pesquisa",
+      "timeline": "Linha do tempo",
+      "planner": "Planejador",
+      "checklist": "Lista de verificação"
     }
   },
   "manual": {

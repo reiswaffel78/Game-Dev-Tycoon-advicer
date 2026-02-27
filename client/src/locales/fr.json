@@ -839,6 +839,20 @@
         "question": "Comment développer le meilleur moteur de jeu ?",
         "answer": "Développez le meilleur moteur en : 1) Ayant des compétences techniques élevées dans l'équipe, 2) Incluant toutes les fonctionnalités disponibles, 3) Investissant assez de temps et d'argent, 4) Faisant des mises à jour régulières. Un bon moteur peut être utilisé pour plusieurs jeux et fait gagner du temps à long terme."
       }
+    },
+    "links": {
+      "moreTo": "En savoir plus:",
+      "topicRecommender": "Recommandeur de thèmes",
+      "platformRecommender": "Recommandeur de plateformes",
+      "sliders": "Préréglages des curseurs",
+      "slidersPage": "Guide des curseurs",
+      "staff": "Guide du personnel",
+      "handbuch": "Manuel du jeu",
+      "research": "Guide de recherche",
+      "researchOrder": "Ordre de recherche",
+      "timeline": "Chronologie",
+      "planner": "Planificateur",
+      "checklist": "Liste de contrôle"
     }
   },
   "manual": {

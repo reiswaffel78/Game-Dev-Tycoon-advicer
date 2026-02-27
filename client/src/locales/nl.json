@@ -839,6 +839,20 @@
         "question": "Hoe ontwikkel ik de beste game-engine?",
         "answer": "Ontwikkel de beste engine door: 1) Hoge techvaardigheden in het team, 2) Alle beschikbare features op te nemen, 3) Genoeg tijd en geld te investeren, 4) Regelmatige updates. Een goede engine kan voor meerdere games worden gebruikt en bespaart op de lange termijn tijd."
       }
+    },
+    "links": {
+      "moreTo": "Meer hierover:",
+      "topicRecommender": "Onderwerpaanbeveler",
+      "platformRecommender": "Platformaanbeveler",
+      "sliders": "Schuifregelaars",
+      "slidersPage": "Schuifgids",
+      "staff": "Personeelsgids",
+      "handbuch": "Spelhandboek",
+      "research": "Onderzoeksgids",
+      "researchOrder": "Onderzoeksvolgorde",
+      "timeline": "Tijdlijn",
+      "planner": "Spelplanner",
+      "checklist": "Controlelijst"
     }
   },
   "manual": {

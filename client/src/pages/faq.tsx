@@ -1,8 +1,10 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SeoHead } from "@/seo/SeoHead";
 import { BASE_URL } from "@/seo/seo";
+import { buildLocalizedPath, extractLocaleFromPath } from "@/lib/locale";
 import {
   Accordion,
   AccordionContent,
@@ -10,13 +12,20 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { HelpCircle, Gamepad2, TrendingUp, Users, Building2, Lightbulb } from "lucide-react";
+import { HelpCircle, Gamepad2, TrendingUp, Users, Building2, Lightbulb, ArrowRight } from "lucide-react";
 
 interface FAQCategory {
   key: string;
   icon: typeof HelpCircle;
   color: string;
   itemKeys: string[];
+}
+
+interface RelatedLink {
+  labelKey: string;
+  href: string;
+  ctaId: string;
+  enOnly?: boolean;
 }
 
 const categories: FAQCategory[] = [
@@ -64,10 +73,35 @@ const categories: FAQCategory[] = [
   },
 ];
 
+const relatedLinks: Record<string, RelatedLink[]> = {
+  basics1: [{ labelKey: "faq.links.topicRecommender", href: "/recommend/topic", ctaId: "faq_basics1_topic" }],
+  basics2: [{ labelKey: "faq.links.sliders", href: "/sliders", ctaId: "faq_basics2_sliders" }],
+  basics3: [{ labelKey: "faq.links.timeline", href: "/timeline", ctaId: "faq_basics3_timeline" }],
+  sliders1: [{ labelKey: "faq.links.sliders", href: "/sliders", ctaId: "faq_sliders1_sliders" }],
+  sliders2: [
+    { labelKey: "faq.links.sliders", href: "/sliders", ctaId: "faq_sliders2_sliders" },
+    { labelKey: "faq.links.slidersPage", href: "/game-dev-tycoon-sliders", ctaId: "faq_sliders2_page", enOnly: true },
+  ],
+  staff1: [{ labelKey: "faq.links.staff", href: "/staff", ctaId: "faq_staff1_staff" }],
+  staff2: [{ labelKey: "faq.links.handbuch", href: "/handbuch", ctaId: "faq_staff2_handbuch" }],
+  research1: [{ labelKey: "faq.links.researchOrder", href: "/game-dev-tycoon-research-order", ctaId: "faq_research1_order", enOnly: true }],
+  research2: [{ labelKey: "faq.links.research", href: "/research", ctaId: "faq_research2_research" }],
+  platforms1: [{ labelKey: "faq.links.platformRecommender", href: "/recommend/platform", ctaId: "faq_platforms1_platform" }],
+  platforms2: [{ labelKey: "faq.links.timeline", href: "/timeline", ctaId: "faq_platforms2_timeline" }],
+  strategy1: [{ labelKey: "faq.links.topicRecommender", href: "/recommend/topic", ctaId: "faq_strategy1_topic" }],
+  strategy2: [{ labelKey: "faq.links.planner", href: "/planner", ctaId: "faq_strategy2_planner" }],
+  strategy3: [{ labelKey: "faq.links.timeline", href: "/timeline", ctaId: "faq_strategy3_timeline" }],
+  advanced1: [{ labelKey: "faq.links.research", href: "/research", ctaId: "faq_advanced1_research" }],
+  advanced2: [{ labelKey: "faq.links.planner", href: "/planner", ctaId: "faq_advanced2_planner" }],
+};
+
 const allItemKeys = categories.flatMap((c) => c.itemKeys);
 
 export default function FAQPage() {
   const { t } = useTranslation();
+  const [pathname] = useLocation();
+  const { locale } = extractLocaleFromPath(pathname);
+  const isEnglish = locale === "en";
 
   const faqJsonLd = useMemo(() => ({
     "@context": "https://schema.org",
@@ -133,20 +167,49 @@ export default function FAQPage() {
               </CardHeader>
               <CardContent>
                 <Accordion type="single" collapsible className="w-full">
-                  {category.itemKeys.map((itemKey, index) => (
-                    <AccordionItem 
-                      key={itemKey} 
-                      value={`${category.key}-${index}`}
-                      data-testid={`faq-item-${category.key}-${index}`}
-                    >
-                      <AccordionTrigger className="text-left" data-testid={`faq-trigger-${category.key}-${index}`}>
-                        {t(`faq.items.${itemKey}.question`)}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        {t(`faq.items.${itemKey}.answer`)}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
+                  {category.itemKeys.map((itemKey, index) => {
+                    const links = relatedLinks[itemKey] ?? [];
+                    return (
+                      <AccordionItem 
+                        key={itemKey} 
+                        value={`${category.key}-${index}`}
+                        data-testid={`faq-item-${category.key}-${index}`}
+                      >
+                        <AccordionTrigger className="text-left" data-testid={`faq-trigger-${category.key}-${index}`}>
+                          {t(`faq.items.${itemKey}.question`)}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground">
+                          {t(`faq.items.${itemKey}.answer`)}
+                          {links.length > 0 && (
+                            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-3 pt-3 border-t border-border/50">
+                              <span className="text-xs text-muted-foreground/70 shrink-0">
+                                {t("faq.links.moreTo")}
+                              </span>
+                              {links.map((link) => {
+                                const href = link.enOnly
+                                  ? link.href
+                                  : buildLocalizedPath(link.href, locale);
+                                return (
+                                  <Link
+                                    key={link.ctaId}
+                                    href={href}
+                                    data-cta-id={link.ctaId}
+                                    className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+                                  >
+                                    {t(link.labelKey)}
+                                    {link.enOnly && !isEnglish && (
+                                      <span className="text-muted-foreground font-normal">(EN)</span>
+                                    )}
+                                    <ArrowRight className="h-3 w-3" />
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          )}
+                        </AccordionContent>
+                      </AccordionItem>
+                    );
+                  })}
                 </Accordion>
               </CardContent>
             </Card>

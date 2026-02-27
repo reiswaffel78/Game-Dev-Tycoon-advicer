@@ -839,6 +839,20 @@
         "question": "Jak vyvinout nejlepší engine?",
         "answer": "Nejlepší engine: 1) Vysoké technické dovednosti v týmu, 2) Zahrň všechny dostupné funkce, 3) Investuj dostatek času a peněz, 4) Pravidelně aktualizuj. Dobrý engine se dá použít v mnoha hrách a šetří čas."
       }
+    },
+    "links": {
+      "moreTo": "Více k tématu:",
+      "topicRecommender": "Doporučovač témat",
+      "platformRecommender": "Doporučovač platforem",
+      "sliders": "Předvolby posuvníků",
+      "slidersPage": "Průvodce posuvníky",
+      "staff": "Průvodce personálem",
+      "handbuch": "Herní příručka",
+      "research": "Průvodce výzkumem",
+      "researchOrder": "Pořadí výzkumu",
+      "timeline": "Časová osa",
+      "planner": "Herní plánovač",
+      "checklist": "Kontrolní seznam"
     }
   },
   "manual": {

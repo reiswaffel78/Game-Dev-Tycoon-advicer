@@ -839,6 +839,20 @@
         "question": "Wie entwickle ich die beste Spiel-Engine?",
         "answer": "Entwickle die beste Engine durch: 1) Hohe Tech-Skills im Team, 2) Alle verfügbaren Features einbauen, 3) Genug Zeit und Geld investieren, 4) Regelmäßige Updates. Eine gute Engine kann für mehrere Spiele genutzt werden und spart langfristig Zeit."
       }
+    },
+    "links": {
+      "moreTo": "Mehr dazu:",
+      "topicRecommender": "Themen-Empfehler",
+      "platformRecommender": "Plattform-Empfehler",
+      "sliders": "Slider-Presets",
+      "slidersPage": "Slider-Guide",
+      "staff": "Mitarbeiter-Guide",
+      "handbuch": "Spielhandbuch",
+      "research": "Forschungs-Guide",
+      "researchOrder": "Forschungsreihenfolge",
+      "timeline": "Timeline",
+      "planner": "Spielplaner",
+      "checklist": "Checkliste"
     }
   },
   "manual": {

@@ -839,6 +839,20 @@
         "question": "我如何开发最佳游戏引擎？",
         "answer": "通过以下方式开发最佳引擎：1）团队中的高技术技能，2）包括所有可用功能，3）投入足够的时间和金钱，4）定期更新。一个好的引擎可以用于多个游戏，从长远来看可以节省时间。"
       }
+    },
+    "links": {
+      "moreTo": "了解更多:",
+      "topicRecommender": "主题推荐器",
+      "platformRecommender": "平台推荐器",
+      "sliders": "滑块预设",
+      "slidersPage": "滑块指南",
+      "staff": "员工指南",
+      "handbuch": "游戏手册",
+      "research": "研究指南",
+      "researchOrder": "研究顺序指南",
+      "timeline": "时间轴",
+      "planner": "游戏规划器",
+      "checklist": "清单"
     }
   },
   "manual": {

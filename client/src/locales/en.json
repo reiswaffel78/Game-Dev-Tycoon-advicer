@@ -887,6 +887,20 @@
         "question": "How do I develop the best game engine?",
         "answer": "Develop the best engine by: 1) High tech skills in the team, 2) Including all available features, 3) Investing enough time and money, 4) Regular updates. A good engine can be used for multiple games and saves time in the long run."
       }
+    },
+    "links": {
+      "moreTo": "More on this:",
+      "topicRecommender": "Topic Recommender",
+      "platformRecommender": "Platform Recommender",
+      "sliders": "Slider Presets",
+      "slidersPage": "Slider Guide",
+      "staff": "Staff Guide",
+      "handbuch": "Game Manual",
+      "research": "Research Guide",
+      "researchOrder": "Research Order Guide",
+      "timeline": "Timeline",
+      "planner": "Game Planner",
+      "checklist": "Checklist"
     }
   },
   "manual": {

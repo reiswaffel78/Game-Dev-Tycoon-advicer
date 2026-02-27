@@ -5,9 +5,9 @@ import { useTranslation } from "react-i18next";
 const LS_INTERACTIONS = "gdt_share_interactions";
 const LS_LAST_SHOWN = "gdt_share_last_shown_ts";
 const SS_DISMISSED = "gdt_share_dismissed_session";
-const INTERACTIONS_REQUIRED = 3;
+const INTERACTIONS_REQUIRED = 2;
 const COOLDOWN_MS = 7 * 24 * 60 * 60 * 1000;
-const SHOW_DELAY_MS = 4000;
+const SHOW_DELAY_MS = 5000;
 
 function getInteractions(): number {
   const v = localStorage.getItem(LS_INTERACTIONS);

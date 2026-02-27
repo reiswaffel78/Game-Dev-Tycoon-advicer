@@ -11,7 +11,7 @@ export function ShareNudge() {
 
   return (
     <div
-      className="fixed bottom-4 right-4 z-50 max-w-xs animate-in fade-in slide-in-from-bottom-4 duration-500"
+      className="fixed bottom-4 right-4 z-50 max-w-xs animate-in fade-in slide-in-from-bottom-4 duration-[875ms]"
       role="dialog"
       aria-label="Share this tool"
       data-testid="share-nudge"

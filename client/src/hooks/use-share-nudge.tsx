@@ -24,9 +24,10 @@ function isDismissedThisSession(): boolean {
 }
 
 function isEligible(count?: number): boolean {
-  if (isDismissedThisSession()) return false;
-  const last = getLastShown();
-  if (last && (Date.now() - last) < COOLDOWN_MS) return false;
+  // TODO: Re-enable for production
+  // if (isDismissedThisSession()) return false;
+  // const last = getLastShown();
+  // if (last && (Date.now() - last) < COOLDOWN_MS) return false;
   const n = count !== undefined ? count : getInteractions();
   return n >= INTERACTIONS_REQUIRED;
 }
@@ -77,8 +78,9 @@ export function useShareNudgeProvider() {
   }, [triggerShow]);
 
   const dismiss = useCallback(() => {
-    sessionStorage.setItem(SS_DISMISSED, "1");
-    localStorage.setItem(LS_LAST_SHOWN, String(Date.now()));
+    // TODO: Re-enable for production
+    // sessionStorage.setItem(SS_DISMISSED, "1");
+    // localStorage.setItem(LS_LAST_SHOWN, String(Date.now()));
     setVisible(false);
     setShouldShow(false);
     if (delayTimer.current) clearTimeout(delayTimer.current);

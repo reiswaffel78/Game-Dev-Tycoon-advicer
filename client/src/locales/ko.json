@@ -1371,5 +1371,28 @@
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "커뮤니티 데이터 & 신뢰도"
     }
+  },
+  "nextStep": {
+    "label": "다음 단계",
+    "topicToGenre": {
+      "title": "지금 최고의 장르를 선택하세요",
+      "body": "주제를 사용해 가장 높은 점수의 장르 조합을 찾아보세요."
+    },
+    "genreToPlatform": {
+      "title": "최고의 플랫폼 찾기",
+      "body": "장르를 최고의 플랫폼과 관객에 맞춰 최대한의 리뷰 점수를 얻으세요."
+    },
+    "platformToSliders": {
+      "title": "슬라이더 프리셋 가져오기",
+      "body": "세 가지 개발 단계 모두에서 장르에 최적화된 슬라이더 설정을 적용하세요."
+    },
+    "slidersToPlanner": {
+      "title": "다음 출시 계획 세우기",
+      "body": "저장 상태를 입력하고 맞춤 출시 및 연구 추천을 받으세요."
+    },
+    "plannerToChecklist": {
+      "title": "출시 전에 검토하기",
+      "body": "게임 제출 전 체크리스트를 확인해 흔한 실수를 방지하세요."
+    }
   }
 }

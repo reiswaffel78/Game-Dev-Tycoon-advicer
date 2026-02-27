@@ -1371,5 +1371,28 @@
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Dane społeczności i poziomy zaufania"
     }
+  },
+  "nextStep": {
+    "label": "Następny krok",
+    "topicToGenre": {
+      "title": "Teraz wybierz najlepszy gatunek",
+      "body": "Użyj swojego tematu, aby znaleźć kombinacje gatunków z najwyższymi ocenami."
+    },
+    "genreToPlatform": {
+      "title": "Znajdź najlepszą platformę",
+      "body": "Dopasuj swój gatunek do najlepszej platformy i odbiorców, aby uzyskać maksymalne oceny."
+    },
+    "platformToSliders": {
+      "title": "Pobierz preset suwaków",
+      "body": "Zastosuj optymalne ustawienia suwaków dla swojego gatunku we wszystkich trzech fazach."
+    },
+    "slidersToPlanner": {
+      "title": "Zaplanuj kolejne wydanie",
+      "body": "Wprowadź stan zapisu, aby otrzymać spersonalizowane rekomendacje dotyczące wydania."
+    },
+    "plannerToChecklist": {
+      "title": "Sprawdź przed publikacją",
+      "body": "Przejrzyj listę kontrolną, aby uniknąć typowych błędów przed przesłaniem gry."
+    }
   }
 }

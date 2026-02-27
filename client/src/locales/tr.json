@@ -1371,5 +1371,28 @@
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Topluluk Verileri ve Güven Seviyeleri"
     }
+  },
+  "nextStep": {
+    "label": "Sonraki adım",
+    "topicToGenre": {
+      "title": "Şimdi en iyi türü seçin",
+      "body": "En yüksek puanlı tür kombinasyonlarını bulmak için konunuzu kullanın."
+    },
+    "genreToPlatform": {
+      "title": "En iyi platformu bulun",
+      "body": "Maksimum inceleme puanları için türünüzü en iyi platform ve hedef kitleyle eşleştirin."
+    },
+    "platformToSliders": {
+      "title": "Kaydırıcı ön ayarınızı alın",
+      "body": "Üç geliştirme aşamasında türünüz için en uygun kaydırıcı ayarlarını uygulayın."
+    },
+    "slidersToPlanner": {
+      "title": "Sonraki sürümü planlayın",
+      "body": "Kayıt durumunuzu girin ve kişiselleştirilmiş yayın ve araştırma önerileri alın."
+    },
+    "plannerToChecklist": {
+      "title": "Yayınlamadan önce gözden geçirin",
+      "body": "Oyununuzu göndermeden önce yaygın hataları önlemek için kontrol listesini gözden geçirin."
+    }
   }
 }

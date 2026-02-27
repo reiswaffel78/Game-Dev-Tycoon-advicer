@@ -1369,7 +1369,13 @@
       ]
     },
     "timeline": {
-      "stepNames": ["Années 1–5 : Phase Garage", "Années 6–10 : Premier Bureau", "Années 11–15 : Phase de Croissance", "Années 16–20 : Ère R&D", "Années 21–35 : Hardware & Héritage"],
+      "stepNames": [
+        "Années 1–5 : Phase Garage",
+        "Années 6–10 : Premier Bureau",
+        "Années 11–15 : Phase de Croissance",
+        "Années 16–20 : Ère R&D",
+        "Années 21–35 : Hardware & Héritage"
+      ],
       "steps": [
         "Commencez dans le garage. Développez de petits jeux, acquérez des compétences et économisez. Ciblez les jeux textuels et 2D sur les premières plateformes.",
         "Déménagez au premier bureau, embauchez du personnel et prenez des projets moyens. Recherchez les technologies clés et développez-vous sur de nouvelles plateformes.",
@@ -1379,7 +1385,11 @@
       ]
     },
     "checklist": {
-      "stepNames": ["Examiner les jalons", "Ajouter des objectifs personnalisés", "Suivre la progression"],
+      "stepNames": [
+        "Examiner les jalons",
+        "Ajouter des objectifs personnalisés",
+        "Suivre la progression"
+      ],
       "steps": [
         "Parcourez les jalons de la chronologie et ajoutez les plus importants à votre liste de suivi personnelle.",
         "Créez vos propres objectifs et tâches pour suivre des réalisations ou stratégies spécifiques.",
@@ -1408,6 +1418,29 @@
       "appGuide": "Fonctions, flux de travail & prise en main",
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Données communautaires & niveaux de confiance"
+    }
+  },
+  "nextStep": {
+    "label": "Étape suivante",
+    "topicToGenre": {
+      "title": "Choisissez maintenant le meilleur genre",
+      "body": "Utilisez votre thème pour trouver les meilleures combinaisons de genres."
+    },
+    "genreToPlatform": {
+      "title": "Trouver la meilleure plateforme",
+      "body": "Associez votre genre à la meilleure plateforme et audience pour des notes maximales."
+    },
+    "platformToSliders": {
+      "title": "Obtenir votre préréglage de sliders",
+      "body": "Appliquez les paramètres de sliders optimaux pour votre genre dans les trois phases."
+    },
+    "slidersToPlanner": {
+      "title": "Planifier votre prochaine sortie",
+      "body": "Entrez votre état de sauvegarde pour obtenir des recommandations personnalisées."
+    },
+    "plannerToChecklist": {
+      "title": "Vérifier avant de publier",
+      "body": "Parcourez la liste pour éviter les erreurs courantes avant de soumettre votre jeu."
     }
   }
 }

@@ -1513,6 +1513,29 @@
       "sources": "Community Data & Trust Levels"
     }
   },
+  "nextStep": {
+    "label": "Next Step",
+    "topicToGenre": {
+      "title": "Now Pick the Best Genre",
+      "body": "Use your topic to find the highest-scoring genre combinations."
+    },
+    "genreToPlatform": {
+      "title": "Find the Best Platform",
+      "body": "Match your genre to the best platform and audience for maximum review scores."
+    },
+    "platformToSliders": {
+      "title": "Get Your Slider Preset",
+      "body": "Apply the optimal slider settings for your genre in all three development phases."
+    },
+    "slidersToPlanner": {
+      "title": "Plan Your Next Release",
+      "body": "Enter your save state and get personalized release and research recommendations."
+    },
+    "plannerToChecklist": {
+      "title": "Review Before You Release",
+      "body": "Run through the checklist to catch common mistakes before submitting your game."
+    }
+  },
   "shareNudge": {
     "text": "Was this tool helpful? Share it with other players!",
     "shareButton": "Share",

@@ -1371,5 +1371,28 @@
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "社区数据与可信度"
     }
+  },
+  "nextStep": {
+    "label": "下一步",
+    "topicToGenre": {
+      "title": "现在选择最佳类型",
+      "body": "使用您的主题找到得分最高的类型组合。"
+    },
+    "genreToPlatform": {
+      "title": "找到最佳平台",
+      "body": "将您的类型与最佳平台和受众匹配，以获得最高评测分数。"
+    },
+    "platformToSliders": {
+      "title": "获取滑块预设",
+      "body": "在三个开发阶段中，为您的类型应用最佳滑块设置。"
+    },
+    "slidersToPlanner": {
+      "title": "规划下一个发行版",
+      "body": "输入您的存档状态，获取个性化的发行和研究建议。"
+    },
+    "plannerToChecklist": {
+      "title": "发布前检查",
+      "body": "在提交游戏之前，通过检查清单避免常见错误。"
+    }
   }
 }

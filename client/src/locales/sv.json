@@ -1371,5 +1371,28 @@
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Communitydata & förtroendenivåer"
     }
+  },
+  "nextStep": {
+    "label": "Nästa steg",
+    "topicToGenre": {
+      "title": "Välj nu det bästa genret",
+      "body": "Använd ditt ämne för att hitta genrekombinationer med högsta poäng."
+    },
+    "genreToPlatform": {
+      "title": "Hitta den bästa plattformen",
+      "body": "Matcha ditt genre med den bästa plattformen och målgruppen för maximala recensionspoäng."
+    },
+    "platformToSliders": {
+      "title": "Hämta din sliderinställning",
+      "body": "Tillämpa de optimala sliderinställningarna för ditt genre i alla tre utvecklingsfaserna."
+    },
+    "slidersToPlanner": {
+      "title": "Planera din nästa release",
+      "body": "Ange ditt sparläge och få personliga rekommendationer för release och forskning."
+    },
+    "plannerToChecklist": {
+      "title": "Kontrollera innan publicering",
+      "body": "Gå igenom checklistan för att undvika vanliga misstag innan du skickar in ditt spel."
+    }
   }
 }

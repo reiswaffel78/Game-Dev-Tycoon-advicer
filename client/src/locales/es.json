@@ -1371,5 +1371,28 @@
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Datos de la comunidad y niveles de confianza"
     }
+  },
+  "nextStep": {
+    "label": "Siguiente paso",
+    "topicToGenre": {
+      "title": "Ahora elige el mejor género",
+      "body": "Usa tu tema para encontrar las combinaciones de géneros con mayor puntuación."
+    },
+    "genreToPlatform": {
+      "title": "Encontrar la mejor plataforma",
+      "body": "Combina tu género con la mejor plataforma y audiencia para puntuaciones máximas."
+    },
+    "platformToSliders": {
+      "title": "Obtener tu preset de sliders",
+      "body": "Aplica la configuración óptima de sliders para tu género en las tres fases de desarrollo."
+    },
+    "slidersToPlanner": {
+      "title": "Planifica tu próximo lanzamiento",
+      "body": "Introduce tu estado de guardado y recibe recomendaciones personalizadas de lanzamiento."
+    },
+    "plannerToChecklist": {
+      "title": "Revisar antes de publicar",
+      "body": "Repasa la lista para detectar errores comunes antes de enviar tu juego."
+    }
   }
 }

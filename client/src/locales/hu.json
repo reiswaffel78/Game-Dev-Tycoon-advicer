@@ -1371,5 +1371,28 @@
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Közösségi adatok és megbízhatósági szintek"
     }
+  },
+  "nextStep": {
+    "label": "Következő lépés",
+    "topicToGenre": {
+      "title": "Most válaszd ki a legjobb műfajt",
+      "body": "Használd a témádat, hogy megtaláld a legjobb pontszámú műfajkombinációkat."
+    },
+    "genreToPlatform": {
+      "title": "Találd meg a legjobb platformot",
+      "body": "Párosítsd a műfajodat a legjobb platformmal és közönséggel a maximális értékelésekért."
+    },
+    "platformToSliders": {
+      "title": "Szerezd meg a csúszka-beállítást",
+      "body": "Alkalmazd az optimális csúszkabeállításokat a műfajodhoz mindhárom fejlesztési fázisban."
+    },
+    "slidersToPlanner": {
+      "title": "Tervezd meg a következő kiadást",
+      "body": "Add meg a mentési állapotodat, és kapj személyre szabott kiadási ajánlásokat."
+    },
+    "plannerToChecklist": {
+      "title": "Ellenőrizd közzététel előtt",
+      "body": "Menj végig az ellenőrzőlistán, hogy elkerüld a gyakori hibákat a játék beküldése előtt."
+    }
   }
 }

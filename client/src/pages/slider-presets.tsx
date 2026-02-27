@@ -6,6 +6,7 @@ import { BASE_URL } from "@/seo/seo";
 import { translateGenre } from "@/lib/translate-data";
 import type { TFunction } from "i18next";
 import { useShareNudge } from "@/hooks/use-share-nudge";
+import { NextStepCTA } from "@/components/next-step-cta";
 import { SlidersHorizontal, Search, Info, Zap, Cpu, Sparkles, Layers, X, ArrowRightLeft, BookOpen } from "lucide-react";
 import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -578,6 +579,15 @@ export default function SliderPresets() {
             )}
           </div>
         </div>
+      )}
+
+      {hasSelection && presets && presets.length > 0 && (
+        <NextStepCTA
+          href="/planner"
+          titleKey="nextStep.slidersToPlanner.title"
+          bodyKey="nextStep.slidersToPlanner.body"
+          dataCdaId="sliders_to_planner"
+        />
       )}
 
       <Card className="border-primary/20 bg-primary/5" data-testid="card-sliders-explained-link">

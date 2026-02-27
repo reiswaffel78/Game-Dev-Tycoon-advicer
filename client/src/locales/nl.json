@@ -1371,5 +1371,28 @@
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Communitydata & betrouwbaarheidsniveaus"
     }
+  },
+  "nextStep": {
+    "label": "Volgende stap",
+    "topicToGenre": {
+      "title": "Kies nu het beste genre",
+      "body": "Gebruik je topic om de genre-combinaties met de hoogste scores te vinden."
+    },
+    "genreToPlatform": {
+      "title": "Vind het beste platform",
+      "body": "Combineer je genre met het beste platform en publiek voor maximale reviewscores."
+    },
+    "platformToSliders": {
+      "title": "Haal je sliderpreset op",
+      "body": "Pas de optimale sliderinstellingen toe voor je genre in alle drie de ontwikkelfasen."
+    },
+    "slidersToPlanner": {
+      "title": "Plan je volgende release",
+      "body": "Voer je spelstatus in en ontvang gepersonaliseerde aanbevelingen voor releases."
+    },
+    "plannerToChecklist": {
+      "title": "Controleer voor publicatie",
+      "body": "Loop de checklist door om veelgemaakte fouten voor indiening te vermijden."
+    }
   }
 }

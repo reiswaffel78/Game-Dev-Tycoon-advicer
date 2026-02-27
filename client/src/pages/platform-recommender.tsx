@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
 import { useShareNudge } from "@/hooks/use-share-nudge";
+import { NextStepCTA } from "@/components/next-step-cta";
 import { translateGenre, translateTopic, translateAudience, translatePlatform } from "@/lib/translate-data";
 import {
   Monitor,
@@ -369,6 +370,12 @@ export default function PlatformRecommender() {
               {recommendations.map((rec, i) => (
                 <RecommendationCard key={i} result={rec} rank={i + 1} />
               ))}
+              <NextStepCTA
+                href="/sliders"
+                titleKey="nextStep.platformToSliders.title"
+                bodyKey="nextStep.platformToSliders.body"
+                dataCdaId="platform_to_sliders"
+              />
             </div>
           ) : (
             <Card>

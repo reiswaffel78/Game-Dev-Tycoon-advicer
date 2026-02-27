@@ -1371,5 +1371,28 @@
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Komunitní data a úrovně důvěry"
     }
+  },
+  "nextStep": {
+    "label": "Další krok",
+    "topicToGenre": {
+      "title": "Nyní vyberte nejlepší žánr",
+      "body": "Použijte své téma k nalezení kombinací žánrů s nejvyššími hodnoceními."
+    },
+    "genreToPlatform": {
+      "title": "Najděte nejlepší platformu",
+      "body": "Spojte svůj žánr s nejlepší platformou a publikem pro maximální hodnocení recenzí."
+    },
+    "platformToSliders": {
+      "title": "Získejte přednastavení posuvníků",
+      "body": "Použijte optimální nastavení posuvníků pro svůj žánr ve všech třech fázích vývoje."
+    },
+    "slidersToPlanner": {
+      "title": "Naplánujte příští vydání",
+      "body": "Zadejte stav uložení a získejte personalizovaná doporučení pro vydání."
+    },
+    "plannerToChecklist": {
+      "title": "Zkontrolujte před vydáním",
+      "body": "Projděte seznam, abyste se vyhnuli běžným chybám před odesláním hry."
+    }
   }
 }

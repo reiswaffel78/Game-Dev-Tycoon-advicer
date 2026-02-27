@@ -1369,7 +1369,13 @@
       ]
     },
     "timeline": {
-      "stepNames": ["Jahr 1–5: Garagenphase", "Jahr 6–10: Erstes Büro", "Jahr 11–15: Wachstumsphase", "Jahr 16–20: F&E-Ära", "Jahr 21–35: Hardware & Vermächtnis"],
+      "stepNames": [
+        "Jahr 1–5: Garagenphase",
+        "Jahr 6–10: Erstes Büro",
+        "Jahr 11–15: Wachstumsphase",
+        "Jahr 16–20: F&E-Ära",
+        "Jahr 21–35: Hardware & Vermächtnis"
+      ],
       "steps": [
         "Starte in der Garage. Entwickle kleine Spiele, baue Fähigkeiten auf und spare Geld. Ziele auf textbasierte und 2D-Spiele auf frühen Plattformen.",
         "Ziehe ins erste Büro, stelle Mitarbeiter ein und übernimm mittelgroße Projekte. Erforsche Schlüsseltechnologien und expandiere auf neuere Plattformen.",
@@ -1379,7 +1385,11 @@
       ]
     },
     "checklist": {
-      "stepNames": ["Timeline-Meilensteine prüfen", "Eigene Ziele hinzufügen", "Fortschritt verfolgen"],
+      "stepNames": [
+        "Timeline-Meilensteine prüfen",
+        "Eigene Ziele hinzufügen",
+        "Fortschritt verfolgen"
+      ],
       "steps": [
         "Durchsuche die Timeline-Meilensteine und füge wichtige zu deiner persönlichen Checkliste hinzu.",
         "Erstelle eigene Ziele und Aufgaben um bestimmte Erfolge oder Strategien zu verfolgen.",
@@ -1408,6 +1418,29 @@
       "appGuide": "Funktionen, Abläufe & Erste Schritte",
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Community-Daten & Vertrauensstufen"
+    }
+  },
+  "nextStep": {
+    "label": "Nächster Schritt",
+    "topicToGenre": {
+      "title": "Jetzt das passende Genre wählen",
+      "body": "Nutze dein Topic, um die Genre-Kombinationen mit den höchsten Wertungen zu finden."
+    },
+    "genreToPlatform": {
+      "title": "Die beste Plattform finden",
+      "body": "Kombiniere dein Genre mit der besten Plattform und Zielgruppe für maximale Review-Wertungen."
+    },
+    "platformToSliders": {
+      "title": "Slider-Preset holen",
+      "body": "Wende die optimalen Slider-Einstellungen für dein Genre in allen drei Entwicklungsphasen an."
+    },
+    "slidersToPlanner": {
+      "title": "Nächsten Release planen",
+      "body": "Gib deinen Spielstand ein und erhalte personalisierte Release- und Forschungsempfehlungen."
+    },
+    "plannerToChecklist": {
+      "title": "Vor dem Release prüfen",
+      "body": "Geh die Checkliste durch, um häufige Fehler vor der Spielabgabe zu vermeiden."
     }
   }
 }

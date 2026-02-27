@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
 import { useShareNudge } from "@/hooks/use-share-nudge";
+import { NextStepCTA } from "@/components/next-step-cta";
 import { translateGenre, translatePlatform, translateAudience, translateTopic } from "@/lib/translate-data";
 import {
   Tag,
@@ -336,6 +337,12 @@ export default function TopicRecommender() {
               {recommendations.map((rec, i) => (
                 <RecommendationCard key={i} result={rec} rank={i + 1} />
               ))}
+              <NextStepCTA
+                href="/recommend/genre"
+                titleKey="nextStep.topicToGenre.title"
+                bodyKey="nextStep.topicToGenre.body"
+                dataCdaId="topic_to_genre"
+              />
             </div>
           ) : (
             <Card>

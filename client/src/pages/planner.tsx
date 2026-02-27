@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslation } from "react-i18next";
 import { translateGenre, translateTopic, translatePlatform, translateAudience } from "@/lib/translate-data";
 import { useShareNudge } from "@/hooks/use-share-nudge";
+import { NextStepCTA } from "@/components/next-step-cta";
 import { z } from "zod";
 import {
   CalendarClock,
@@ -705,6 +706,12 @@ export default function Planner() {
                   ))}
                 </div>
               </div>
+              <NextStepCTA
+                href="/checklist"
+                titleKey="nextStep.plannerToChecklist.title"
+                bodyKey="nextStep.plannerToChecklist.body"
+                dataCdaId="planner_to_checklist"
+              />
             </>
           ) : (
             <Card>

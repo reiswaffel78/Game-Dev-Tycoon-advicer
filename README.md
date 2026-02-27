@@ -39,7 +39,14 @@ A free, community-driven companion tool for **Game Dev Tycoon** (including the N
 
 ## Screenshots
 
-> Add your own screenshots here. Recommended: Dashboard, Recommender results, Slider Presets view.
+
+<img width="1871" height="845" alt="Screenshot 2026-02-27 09 00 09" src="https://github.com/user-attachments/assets/2bc69842-a4cf-4295-97e3-94dd7d1e53c2" />
+
+<img width="1868" height="807" alt="Screenshot 2026-02-27 09 26 06" src="https://github.com/user-attachments/assets/cb1fa97a-3380-46cf-bbbf-d6a2c03cf914" />
+
+<img width="1859" height="835" alt="Screenshot 2026-02-27 09 26 32" src="https://github.com/user-attachments/assets/82c96e9d-1f23-4b19-af8c-b9c104fade8a" />
+
+<img width="1865" height="816" alt="Screenshot 2026-02-27 09 26 42" src="https://github.com/user-attachments/assets/97f09465-b60a-4118-b307-60262d9d1b4a" />
 
 ## Tech Stack
 

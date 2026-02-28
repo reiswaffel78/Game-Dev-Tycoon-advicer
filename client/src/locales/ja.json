@@ -1144,9 +1144,25 @@
   },
   "sources": {
     "title": "データソース",
-    "subtitle": "このアプリケーションで使用されるデータソースに関する情報",
+    "subtitle": "許可されたデータソースとその信頼度レベルの一覧",
     "trustLevel": "信頼レベル",
-    "lastUpdated": "最終更新"
+    "lastUpdated": "最終更新",
+    "trustLabels": {
+      "veryHigh": "非常に高い",
+      "high": "高い",
+      "medium": "中程度",
+      "low": "低い"
+    },
+    "active": "有効",
+    "inactive": "無効",
+    "trustPrefix": "信頼度",
+    "lastFetched": "最終取得",
+    "never": "なし",
+    "trustPriorityTitle": "信頼度レベルの優先順位",
+    "trustPriorityBody": "複数のソースが相反するデータを提供した場合、信頼度の高いソースが優先されます。スコア計算式はこれを次のように加味しています：",
+    "configuredSources": "設定済みソース",
+    "noSources": "ソースが設定されていません",
+    "noSourcesBody": "データソースは設定後にここに表示されます。"
   },
   "language": {
     "en": "英語",

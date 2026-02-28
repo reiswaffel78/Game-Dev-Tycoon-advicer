@@ -1144,9 +1144,25 @@
   },
   "sources": {
     "title": "Zdroje dat",
-    "subtitle": "Informace o zdrojích dat použitých v této aplikaci",
+    "subtitle": "Přehled povolených zdrojů dat a jejich úrovní důvěryhodnosti",
     "trustLevel": "Úroveň důvěry",
-    "lastUpdated": "Poslední aktualizace"
+    "lastUpdated": "Poslední aktualizace",
+    "trustLabels": {
+      "veryHigh": "Velmi vysoká",
+      "high": "Vysoká",
+      "medium": "Střední",
+      "low": "Nízká"
+    },
+    "active": "Aktivní",
+    "inactive": "Neaktivní",
+    "trustPrefix": "Důvěryhodnost",
+    "lastFetched": "Naposledy načteno",
+    "never": "Nikdy",
+    "trustPriorityTitle": "Priorita úrovní důvěryhodnosti",
+    "trustPriorityBody": "Pokud více zdrojů poskytuje protichůdná data, mají přednost zdroje s vyšší důvěryhodností. Bodovací vzorec to zohledňuje:",
+    "configuredSources": "Nakonfigurované zdroje",
+    "noSources": "Žádné zdroje nejsou nakonfigurovány",
+    "noSourcesBody": "Zdroje dat se zobrazí zde, jakmile budou nakonfigurovány."
   },
   "language": {
     "en": "Angličtina",

@@ -1144,9 +1144,25 @@
   },
   "sources": {
     "title": "데이터 소스",
-    "subtitle": "이 애플리케이션에서 사용되는 데이터 소스에 대한 정보",
+    "subtitle": "허용된 데이터 소스 및 신뢰도 수준 개요",
     "trustLevel": "신뢰 수준",
-    "lastUpdated": "마지막 업데이트"
+    "lastUpdated": "마지막 업데이트",
+    "trustLabels": {
+      "veryHigh": "매우 높음",
+      "high": "높음",
+      "medium": "보통",
+      "low": "낮음"
+    },
+    "active": "활성",
+    "inactive": "비활성",
+    "trustPrefix": "신뢰도",
+    "lastFetched": "마지막 가져옴",
+    "never": "없음",
+    "trustPriorityTitle": "신뢰도 수준 우선순위",
+    "trustPriorityBody": "여러 소스에서 상충되는 데이터를 제공할 경우, 신뢰도가 높은 소스가 우선시됩니다. 점수 계산 공식은 이를 다음과 같이 반영합니다:",
+    "configuredSources": "구성된 소스",
+    "noSources": "구성된 소스 없음",
+    "noSourcesBody": "데이터 소스가 구성되면 여기에 표시됩니다."
   },
   "language": {
     "en": "영어",

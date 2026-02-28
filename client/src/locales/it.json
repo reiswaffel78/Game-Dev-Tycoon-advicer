@@ -1144,9 +1144,25 @@
   },
   "sources": {
     "title": "Fonti Dati",
-    "subtitle": "Informazioni sulle fonti di dati utilizzate in questa applicazione",
+    "subtitle": "Panoramica delle fonti di dati autorizzate e dei loro livelli di attendibilità",
     "trustLevel": "Livello di Fiducia",
-    "lastUpdated": "Ultimo Aggiornamento"
+    "lastUpdated": "Ultimo Aggiornamento",
+    "trustLabels": {
+      "veryHigh": "Molto alta",
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Bassa"
+    },
+    "active": "Attiva",
+    "inactive": "Inattiva",
+    "trustPrefix": "Attendibilità",
+    "lastFetched": "Ultimo aggiornamento",
+    "never": "Mai",
+    "trustPriorityTitle": "Priorità dei livelli di attendibilità",
+    "trustPriorityBody": "Quando più fonti forniscono dati contrastanti, le fonti con attendibilità più alta hanno la precedenza. La formula di punteggio li bilancia di conseguenza:",
+    "configuredSources": "Fonti configurate",
+    "noSources": "Nessuna fonte configurata",
+    "noSourcesBody": "Le fonti di dati appariranno qui una volta configurate."
   },
   "language": {
     "en": "Inglese",

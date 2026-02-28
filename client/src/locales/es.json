@@ -1144,9 +1144,25 @@
   },
   "sources": {
     "title": "Fuentes de Datos",
-    "subtitle": "Información sobre las fuentes de datos utilizadas en esta aplicación",
+    "subtitle": "Resumen de las fuentes de datos autorizadas y sus niveles de confianza",
     "trustLevel": "Nivel de Confianza",
-    "lastUpdated": "Última Actualización"
+    "lastUpdated": "Última Actualización",
+    "trustLabels": {
+      "veryHigh": "Muy alto",
+      "high": "Alto",
+      "medium": "Medio",
+      "low": "Bajo"
+    },
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "trustPrefix": "Confianza",
+    "lastFetched": "Última obtención",
+    "never": "Nunca",
+    "trustPriorityTitle": "Prioridad de niveles de confianza",
+    "trustPriorityBody": "Cuando varias fuentes ofrecen datos contradictorios, las fuentes con mayor confianza tienen prioridad. La fórmula de puntuación lo tiene en cuenta:",
+    "configuredSources": "Fuentes configuradas",
+    "noSources": "No hay fuentes configuradas",
+    "noSourcesBody": "Las fuentes de datos aparecerán aquí una vez configuradas."
   },
   "language": {
     "en": "Inglés",

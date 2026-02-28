@@ -1144,9 +1144,25 @@
   },
   "sources": {
     "title": "Adatforrások",
-    "subtitle": "Információk az alkalmazásban használt adatforrásokról",
+    "subtitle": "Az engedélyezett adatforrások és megbízhatósági szintjeik áttekintése",
     "trustLevel": "Megbízhatósági szint",
-    "lastUpdated": "Utolsó frissítés"
+    "lastUpdated": "Utolsó frissítés",
+    "trustLabels": {
+      "veryHigh": "Nagyon magas",
+      "high": "Magas",
+      "medium": "Közepes",
+      "low": "Alacsony"
+    },
+    "active": "Aktív",
+    "inactive": "Inaktív",
+    "trustPrefix": "Megbízhatóság",
+    "lastFetched": "Utoljára lekérve",
+    "never": "Soha",
+    "trustPriorityTitle": "Megbízhatósági szintek prioritása",
+    "trustPriorityBody": "Ha több forrás ütköző adatot ad meg, a magasabb megbízhatóságú forrásoknak van elsőbbségük. A pontozási képlet ennek megfelelően súlyozza ezeket:",
+    "configuredSources": "Konfigurált források",
+    "noSources": "Nincsenek konfigurált források",
+    "noSourcesBody": "Az adatforrások itt jelennek meg, amint konfigurálják őket."
   },
   "language": {
     "en": "English",

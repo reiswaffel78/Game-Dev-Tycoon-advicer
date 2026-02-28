@@ -1366,9 +1366,25 @@
   },
   "sources": {
     "title": "Datakällor",
-    "subtitle": "Information om datakällorna som används i den här applikationen",
+    "subtitle": "Översikt över godkända datakällor och deras förtroendenivåer",
     "trustLevel": "Tillförlitlighet",
-    "lastUpdated": "Senast uppdaterad"
+    "lastUpdated": "Senast uppdaterad",
+    "trustLabels": {
+      "veryHigh": "Mycket hög",
+      "high": "Hög",
+      "medium": "Medel",
+      "low": "Låg"
+    },
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "trustPrefix": "Förtroende",
+    "lastFetched": "Senast hämtad",
+    "never": "Aldrig",
+    "trustPriorityTitle": "Prioritet för förtroendenivåer",
+    "trustPriorityBody": "När flera källor ger motstridiga data ges källor med högre förtroende prioritet. Poängformeln väger dessa i enlighet med detta:",
+    "configuredSources": "Konfigurerade källor",
+    "noSources": "Inga källor konfigurerade",
+    "noSourcesBody": "Datakällor visas här när de har konfigurerats."
   },
   "language": {
     "en": "English",

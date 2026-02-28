@@ -1366,9 +1366,25 @@
   },
   "sources": {
     "title": "Data Sources",
-    "subtitle": "Information about the data sources used in this application",
+    "subtitle": "View the whitelisted sources used for data ingestion and their trust levels",
     "trustLevel": "Trust Level",
-    "lastUpdated": "Last Updated"
+    "lastUpdated": "Last Updated",
+    "trustLabels": {
+      "veryHigh": "Very High",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "active": "Active",
+    "inactive": "Inactive",
+    "trustPrefix": "Trust",
+    "lastFetched": "Last fetched",
+    "never": "Never",
+    "trustPriorityTitle": "Trust Level Priority",
+    "trustPriorityBody": "When multiple sources provide conflicting data, higher trust sources take priority. The scoring formula weighs these accordingly:",
+    "configuredSources": "Configured Sources",
+    "noSources": "No Sources Configured",
+    "noSourcesBody": "Data sources will appear here once configured."
   },
   "language": {
     "en": "English",

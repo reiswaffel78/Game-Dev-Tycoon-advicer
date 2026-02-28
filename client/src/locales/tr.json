@@ -1144,9 +1144,25 @@
   },
   "sources": {
     "title": "Veri Kaynakları",
-    "subtitle": "Bu uygulamada kullanılan veri kaynakları hakkında bilgiler",
+    "subtitle": "İzin verilen veri kaynaklarına ve güven düzeylerine genel bakış",
     "trustLevel": "Güven Düzeyi",
-    "lastUpdated": "Son Güncelleme"
+    "lastUpdated": "Son Güncelleme",
+    "trustLabels": {
+      "veryHigh": "Çok yüksek",
+      "high": "Yüksek",
+      "medium": "Orta",
+      "low": "Düşük"
+    },
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "trustPrefix": "Güven",
+    "lastFetched": "Son alınma",
+    "never": "Hiç",
+    "trustPriorityTitle": "Güven Düzeyi Önceliği",
+    "trustPriorityBody": "Birden fazla kaynak çakışan veriler sunduğunda, daha yüksek güven düzeyine sahip kaynaklar öncelik kazanır. Puanlama formülü bunu buna göre ağırlıklandırır:",
+    "configuredSources": "Yapılandırılmış Kaynaklar",
+    "noSources": "Yapılandırılmış Kaynak Yok",
+    "noSourcesBody": "Veri kaynakları yapılandırıldıktan sonra burada görünecektir."
   },
   "language": {
     "en": "English",

@@ -1144,9 +1144,25 @@
   },
   "sources": {
     "title": "Źródła danych",
-    "subtitle": "Informacje o źródłach danych wykorzystywanych w tej aplikacji",
+    "subtitle": "Przegląd dozwolonych źródeł danych i ich poziomów zaufania",
     "trustLevel": "Poziom zaufania",
-    "lastUpdated": "Ostatnia aktualizacja"
+    "lastUpdated": "Ostatnia aktualizacja",
+    "trustLabels": {
+      "veryHigh": "Bardzo wysoki",
+      "high": "Wysoki",
+      "medium": "Średni",
+      "low": "Niski"
+    },
+    "active": "Aktywne",
+    "inactive": "Nieaktywne",
+    "trustPrefix": "Zaufanie",
+    "lastFetched": "Ostatnie pobranie",
+    "never": "Nigdy",
+    "trustPriorityTitle": "Priorytety poziomów zaufania",
+    "trustPriorityBody": "Gdy wiele źródeł dostarcza sprzeczne dane, źródła z wyższym poziomem zaufania mają pierwszeństwo. Formuła punktacji uwzględnia to w następujący sposób:",
+    "configuredSources": "Skonfigurowane źródła",
+    "noSources": "Brak skonfigurowanych źródeł",
+    "noSourcesBody": "Źródła danych pojawią się tutaj po ich skonfigurowaniu."
   },
   "language": {
     "en": "English",

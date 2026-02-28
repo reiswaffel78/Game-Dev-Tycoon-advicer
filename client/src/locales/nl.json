@@ -1144,9 +1144,25 @@
   },
   "sources": {
     "title": "Databronnen",
-    "subtitle": "Informatie over de databronnen die in deze applicatie worden gebruikt",
+    "subtitle": "Overzicht van de toegestane gegevensbronnen en hun betrouwbaarheidsniveaus",
     "trustLevel": "Betrouwbaarheidsniveau",
-    "lastUpdated": "Laatst bijgewerkt"
+    "lastUpdated": "Laatst bijgewerkt",
+    "trustLabels": {
+      "veryHigh": "Zeer hoog",
+      "high": "Hoog",
+      "medium": "Gemiddeld",
+      "low": "Laag"
+    },
+    "active": "Actief",
+    "inactive": "Inactief",
+    "trustPrefix": "Betrouwbaarheid",
+    "lastFetched": "Laatst opgehaald",
+    "never": "Nooit",
+    "trustPriorityTitle": "Prioriteit van betrouwbaarheidsniveaus",
+    "trustPriorityBody": "Wanneer meerdere bronnen tegenstrijdige gegevens leveren, krijgen bronnen met een hogere betrouwbaarheid voorrang. De scoringsformule weegt dit dienovereenkomstig:",
+    "configuredSources": "Geconfigureerde bronnen",
+    "noSources": "Geen bronnen geconfigureerd",
+    "noSourcesBody": "Gegevensbronnen verschijnen hier zodra ze zijn geconfigureerd."
   },
   "language": {
     "en": "English",

@@ -1366,9 +1366,25 @@
   },
   "sources": {
     "title": "数据源",
-    "subtitle": "有关此应用程序中使用的数据源的信息",
+    "subtitle": "已授权数据来源及其可信度等级概览",
     "trustLevel": "信任级别",
-    "lastUpdated": "最后更新"
+    "lastUpdated": "最后更新",
+    "trustLabels": {
+      "veryHigh": "非常高",
+      "high": "高",
+      "medium": "中等",
+      "low": "低"
+    },
+    "active": "活跃",
+    "inactive": "非活跃",
+    "trustPrefix": "可信度",
+    "lastFetched": "最后获取",
+    "never": "从未",
+    "trustPriorityTitle": "可信度等级优先级",
+    "trustPriorityBody": "当多个来源提供相互矛盾的数据时，可信度较高的来源优先采用。评分公式相应地对这些来源进行加权：",
+    "configuredSources": "已配置来源",
+    "noSources": "未配置来源",
+    "noSourcesBody": "数据来源配置完成后将显示在此处。"
   },
   "language": {
     "en": "英语",

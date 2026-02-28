@@ -11,14 +11,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { SeoHead } from "@/seo/SeoHead";
+import { useTranslation } from "react-i18next";
 import type { Source } from "@shared/schema";
-
-const trustLabels: Record<number, string> = {
-  4: "Very High",
-  3: "High",
-  2: "Medium",
-  1: "Low",
-};
 
 const trustColors: Record<number, string> = {
   4: "bg-emerald-500",
@@ -28,15 +22,24 @@ const trustColors: Record<number, string> = {
 };
 
 function SourceCard({ source }: { source: Source }) {
+  const { t, i18n } = useTranslation();
+
   const lastFetched = source.lastFetchedAt
-    ? new Date(source.lastFetchedAt).toLocaleDateString("en-US", {
+    ? new Date(source.lastFetchedAt).toLocaleDateString(i18n.language, {
         year: "numeric",
         month: "short",
         day: "numeric",
         hour: "2-digit",
         minute: "2-digit",
       })
-    : "Never";
+    : t("sources.never");
+
+  const trustLabelKeys: Record<number, string> = {
+    4: t("sources.trustLabels.veryHigh"),
+    3: t("sources.trustLabels.high"),
+    2: t("sources.trustLabels.medium"),
+    1: t("sources.trustLabels.low"),
+  };
 
   return (
     <Card>
@@ -58,14 +61,15 @@ function SourceCard({ source }: { source: Source }) {
                 <Badge
                   variant="outline"
                   className="text-xs border-emerald-500/50 text-emerald-600 dark:text-emerald-400"
+                  data-testid="badge-active"
                 >
                   <CheckCircle2 className="h-3 w-3 mr-1" />
-                  Active
+                  {t("sources.active")}
                 </Badge>
               ) : (
-                <Badge variant="outline" className="text-xs">
+                <Badge variant="outline" className="text-xs" data-testid="badge-inactive">
                   <XCircle className="h-3 w-3 mr-1" />
-                  Inactive
+                  {t("sources.inactive")}
                 </Badge>
               )}
             </div>
@@ -83,16 +87,16 @@ function SourceCard({ source }: { source: Source }) {
             <div className="flex items-center gap-4 text-sm">
               <span className="flex items-center gap-1.5">
                 <Shield className="h-3.5 w-3.5 text-muted-foreground" />
-                <span className="text-muted-foreground">Trust:</span>
+                <span className="text-muted-foreground">{t("sources.trustPrefix")}:</span>
                 <Badge
                   className={`${trustColors[source.trustLevel]} text-white border-0 text-xs`}
                 >
-                  {trustLabels[source.trustLevel] ?? source.trustLevel}
+                  {trustLabelKeys[source.trustLevel] ?? source.trustLevel}
                 </Badge>
               </span>
               <span className="flex items-center gap-1.5 text-muted-foreground">
                 <Clock className="h-3.5 w-3.5" />
-                Last fetched: {lastFetched}
+                {t("sources.lastFetched")}: {lastFetched}
               </span>
             </div>
           </div>
@@ -103,32 +107,38 @@ function SourceCard({ source }: { source: Source }) {
 }
 
 export default function Sources() {
+  const { t } = useTranslation();
   const { data: sources, isLoading } = useQuery<Source[]>({
     queryKey: ["/api/sources"],
   });
+
+  const trustLevelKeys: Record<number, string> = {
+    4: t("sources.trustLabels.veryHigh"),
+    3: t("sources.trustLabels.high"),
+    2: t("sources.trustLabels.medium"),
+    1: t("sources.trustLabels.low"),
+  };
 
   return (
     <div className="p-6 space-y-6 max-w-5xl mx-auto">
       <SeoHead pageKey="sources" />
       <div className="space-y-2">
-        <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
+        <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2" data-testid="text-sources-title">
           <Database className="h-6 w-6 text-primary" />
-          Data Sources
+          {t("sources.title")}
         </h1>
-        <p className="text-muted-foreground">
-          View the whitelisted sources used for data ingestion and their trust
-          levels
+        <p className="text-muted-foreground" data-testid="text-sources-subtitle">
+          {t("sources.subtitle")}
         </p>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Trust Level Priority</CardTitle>
+          <CardTitle className="text-base">{t("sources.trustPriorityTitle")}</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="text-sm text-muted-foreground mb-4">
-            When multiple sources provide conflicting data, higher trust sources
-            take priority. The scoring formula weighs these accordingly:
+            {t("sources.trustPriorityBody")}
           </p>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {[4, 3, 2, 1].map((level) => (
@@ -142,7 +152,7 @@ export default function Sources() {
                   {level}
                 </Badge>
                 <span className="text-sm font-medium">
-                  {trustLabels[level]}
+                  {trustLevelKeys[level]}
                 </span>
               </div>
             ))}
@@ -151,7 +161,7 @@ export default function Sources() {
       </Card>
 
       <div className="space-y-4">
-        <h2 className="text-lg font-semibold">Configured Sources</h2>
+        <h2 className="text-lg font-semibold" data-testid="text-configured-sources">{t("sources.configuredSources")}</h2>
         {isLoading ? (
           <div className="space-y-3">
             {[...Array(4)].map((_, i) => (
@@ -179,9 +189,9 @@ export default function Sources() {
           <Card>
             <CardContent className="py-12 text-center">
               <Database className="h-12 w-12 mx-auto text-muted-foreground/30 mb-4" />
-              <h3 className="text-lg font-medium mb-2">No Sources Configured</h3>
+              <h3 className="text-lg font-medium mb-2" data-testid="text-no-sources">{t("sources.noSources")}</h3>
               <p className="text-muted-foreground">
-                Data sources will appear here once configured.
+                {t("sources.noSourcesBody")}
               </p>
             </CardContent>
           </Card>

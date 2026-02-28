@@ -1366,9 +1366,25 @@
   },
   "sources": {
     "title": "Datenquellen",
-    "subtitle": "Informationen zu den verwendeten Datenquellen dieser Anwendung",
+    "subtitle": "Übersicht der freigeschalteten Datenquellen und ihrer Vertrauensstufen",
     "trustLevel": "Vertrauensstufe",
-    "lastUpdated": "Zuletzt aktualisiert"
+    "lastUpdated": "Zuletzt aktualisiert",
+    "trustLabels": {
+      "veryHigh": "Sehr hoch",
+      "high": "Hoch",
+      "medium": "Mittel",
+      "low": "Niedrig"
+    },
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "trustPrefix": "Vertrauen",
+    "lastFetched": "Zuletzt abgerufen",
+    "never": "Nie",
+    "trustPriorityTitle": "Vertrauensstufen-Priorität",
+    "trustPriorityBody": "Bei widersprüchlichen Daten aus mehreren Quellen haben Quellen mit höherer Vertrauensstufe Vorrang. Die Bewertungsformel berücksichtigt dies entsprechend:",
+    "configuredSources": "Konfigurierte Quellen",
+    "noSources": "Keine Quellen konfiguriert",
+    "noSourcesBody": "Datenquellen werden hier angezeigt, sobald sie eingerichtet sind."
   },
   "language": {
     "en": "English",

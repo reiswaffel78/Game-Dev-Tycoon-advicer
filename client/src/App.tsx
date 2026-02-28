@@ -31,6 +31,7 @@ import Privacy from "@/pages/privacy";
 import { Footer } from "@/components/footer";
 import { ShareNudge } from "@/components/share-nudge";
 import { ShareNudgeProvider } from "@/hooks/use-share-nudge";
+import { useFirstVisitToday } from "@/hooks/use-first-visit-today";
 
 function AppRoutes() {
   return (
@@ -64,6 +65,7 @@ function App() {
     "--sidebar-width": "16rem",
     "--sidebar-width-icon": "3rem",
   } as React.CSSProperties;
+  const isFirstVisitToday = useFirstVisitToday();
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="gdt-advisor-theme">
@@ -82,7 +84,7 @@ function App() {
                     </div>
                   </header>
                   <main className="flex-1 overflow-auto flex flex-col">
-                    <div className="flex-1">
+                    <div className={`flex-1${isFirstVisitToday ? " animate-page-fade-in" : ""}`}>
                       <AppRoutes />
                     </div>
                     <Footer />

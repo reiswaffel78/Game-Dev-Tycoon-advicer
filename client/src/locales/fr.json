@@ -254,7 +254,10 @@
     "platforms": "Plateformes",
     "lastUpdate": "Dernière mise à jour",
     "getStarted": "Commencer",
-    "getStartedDesc": "Choisissez un outil de recommandation pour trouver votre configuration de jeu idéale"
+    "getStartedDesc": "Choisissez un outil de recommandation pour trouver votre configuration de jeu idéale",
+    "h1": "Outil de recommandation de thèmes, genres et plateformes pour Game Dev Tycoon",
+    "h2": "Quel est le meilleur jeu à créer dans Game Dev Tycoon ?",
+    "seoIntro": "Utilisez notre outil de guide interactif pour découvrir les meilleurs paramètres et combinaisons. Que vous ayez besoin d'un chercheur de combinaisons, d'un guide récapitulatif ou de la meilleure configuration pour débutants, ce planificateur et recommandeur vous aide à créer un bon jeu à chaque fois."
   },
   "recommender": {
     "selectTopic": "Sélectionner un thème",
@@ -283,7 +286,16 @@
     "searchGenres": "Rechercher des genres...",
     "searchPlatforms": "Rechercher des plateformes...",
     "confidenceTooltip": "Niveau de confiance basé sur l'accord des sources",
-    "score": "Score"
+    "score": "Score",
+    "topicH1": "Quel thème devrais-je utiliser dans Game Dev Tycoon ?",
+    "topicH2": "Chercheur de combos thème/genre pour Game Dev Tycoon",
+    "topicSeoIntro": "Vérifiez quel thème fonctionne avec l'action, le RPG ou tout autre genre. Notre testeur de compatibilité des thèmes vous aide à trouver le meilleur thème pour les jeux RPG, à découvrir si la fantasy ou la science-fiction offre la meilleure combinaison de genres, et à comparer les listes de thèmes de combos insolites ou excellents. Utilisez cet outil de correspondance entre thème et public pour maximiser vos notes de test.",
+    "genreH1": "Quel genre rapporte le plus d'argent dans Game Dev Tycoon ?",
+    "genreH2": "Outil de sélection de genre pour Game Dev Tycoon",
+    "genreSeoIntro": "Trouvez le genre le plus rentable pour le début et la fin de partie. Comparez l'action au RPG pour voir lequel est le meilleur, obtenez des conseils sur le genre simulation et des avis de configuration, et découvrez le meilleur genre pour obtenir un score élevé. Explorez les combinaisons multi-genres qui fonctionnent, le réglage des curseurs pour le genre occasionnel et apprenez quel thème choisir pour le genre stratégie.",
+    "platformH1": "Game Dev Tycoon – Quelle console cibler",
+    "platformH2": "PC ou Console – Lequel est le meilleur dans Game Dev Tycoon ?",
+    "platformSeoIntro": "Utilisez notre guide des parts de marché des plateformes pour trouver la meilleure console pour les jeux destinés à un public mature. Découvrez le meilleur combo thème/genre pour le Gameling, quels jeux créer pour la mBox, et utilisez notre outil de compatibilité de plateforme. Le choix de créer des jeux pour PC ou console dépend de votre public – ce guide de correspondance public/plateforme vous aide à décider."
   },
   "sliders": {
     "title": "Préréglages des curseurs",
@@ -343,7 +355,15 @@
     "swapGenres": "Inverser Principal ↔ Secondaire",
     "selectBothGenres": "Sélectionner deux genres",
     "selectBothGenresDesc": "Choisissez un genre principal et secondaire pour voir les réglages de curseurs mixtes",
-    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Préréglages des curseurs"
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Préréglages des curseurs",
+    "h1": "Pourcentages optimaux des curseurs de Game Dev Tycoon",
+    "h2": "Paramètres des curseurs RPG – Phases 1, 2 et 3",
+    "seoIntro": "Obtenez la bonne allocation de temps pour le curseur d'action et le guide des curseurs pour le genre aventure pour chaque jeu. Ce guide récapitulatif des curseurs couvre tous les genres, y compris les pourcentages des curseurs de simulation et l'allocation des phases de curseurs de stratégie. Découvrez quels curseurs utiliser pour le genre occasionnel, utilisez notre outil de préréglage de curseurs par genre, comprenez le ratio technologie/design et apprenez à régler les curseurs correctement pour obtenir les meilleures notes de test.",
+    "explainedBox": {
+      "title": "Comment fonctionnent réellement les curseurs ?",
+      "text": "Vous ne savez pas pourquoi vos notes de test sont basses ? Les curseurs contrôlent la répartition du temps de développement entre les points de Design et de Technologie sur trois phases. Chaque genre a des poids de phase différents qui déterminent quels curseurs importent le plus. Comprendre la mécanique des curseurs, l'équilibre entre design et technologie, et comment les priorités de phase affectent votre score final est la clé pour obtenir des notes de 10/10.",
+      "linkText": "Lisez notre guide complet sur les curseurs de Game Dev Tycoon →"
+    }
   },
   "planner": {
     "title": "Planificateur de jeu",
@@ -395,7 +415,20 @@
       "unlockTopic": "Débloquez {{name}} pour élargir votre portefeuille de jeux.",
       "unlockGenre": "Débloquez le genre {{name}} pour de nouvelles opportunités de jeu.",
       "feature": "Améliore la qualité graphique pour les futurs titres AAA."
-    }
+    },
+    "unlockedTopicsFilter": {
+      "title": "Filtrer par thèmes débloqués",
+      "description": "N'utilisez que les thèmes que vous avez déjà débloqués dans votre sauvegarde.",
+      "searchPlaceholder": "Rechercher des thèmes...",
+      "selectAll": "Tout sélectionner",
+      "clear": "Effacer",
+      "selectedCount": "{{selected}}/{{total}} sélectionnés",
+      "noTopics": "Aucun thème trouvé.",
+      "emptyFallbackWarning": "Aucun sujet sélectionné n'est actuellement disponible. Utilisation de tous les sujets par défaut."
+    },
+    "h1": "Game Dev Tycoon – Recommandation du prochain jeu basée sur la sauvegarde",
+    "h2": "Quoi créer ensuite selon l'historique de vos jeux",
+    "seoIntro": "Utilisez ce planificateur de priorités de recherche et cet outil de conseil personnalisé pour décider quoi rechercher ensuite en milieu de partie. Planifiez votre prochaine sortie après une répétition de combo, suivez vos combos avec notre outil de suivi, utilisez le planificateur de rotation des genres et apprenez à planifier votre pipeline de production pour une croissance maximale."
   },
   "research": {
     "title": "Guide de recherche",
@@ -505,12 +538,9 @@
         "tip": "Investissement technologique d'avenir"
       }
     },
-    "researchOrderBox": {
-      "title": "Ordre de recherche recommandé",
-      "body": "Pas sûr de quoi débloquer en premier ? Suivez notre guide étape par étape.",
-      "linkText": "Voir le guide de recherche",
-      "enBadge": "EN"
-    }
+    "h1": "Quoi rechercher en priorité dans Game Dev Tycoon",
+    "h2": "Comment obtenir des points de recherche rapidement",
+    "seoIntro": "Découvrez les conditions de déblocage du labo R&D et utilisez notre guide de collecte de points de recherche pour progresser efficacement. Suivez la liste des meilleures priorités de recherche, sachez quand débloquer les jeux moyens et découvrez comment débloquer les jeux AAA par la recherche. Consultez le coût en points de recherche par sujet et utilisez ce guide complet du garage au AAA."
   },
   "staff": {
     "title": "Guide du personnel",
@@ -603,7 +633,10 @@
         "title": "Développement de console",
         "description": "Construire une console nécessite 2-3 employés dédiés pendant 6+ mois. Planifiez la capacité de votre équipe en conséquence."
       }
-    }
+    },
+    "h1": "Comment former les employés rapidement dans Game Dev Tycoon",
+    "h2": "Spécialiste Design vs Tech – Quelle est la différence ?",
+    "seoIntro": "Découvrez quand spécialiser votre personnel et de combien d'employés vous avez besoin pour chaque phase. Comprenez tous les rôles du personnel expliqués en détail, découvrez comment recruter de meilleurs employés et comparez les stats des employés comme le design, la tech, la recherche et la vitesse. Ce guide couvre également le burn-out du personnel et la gestion des vacances, et vous présente la configuration d'équipe équilibrée expliquée étape par étape."
   },
   "timeline": {
     "title": "Chronologie",
@@ -740,7 +773,10 @@
         "description": "Grande équipe + Moteur personnalisé + Marketing adéquat = succès AAA.",
         "action": "Ne tentez les jeux AAA qu'avec une équipe expérimentée"
       }
-    }
+    },
+    "h1": "Guide de progression année par année dans Game Dev Tycoon",
+    "h2": "Quand les nouvelles plateformes sortent-elles ?",
+    "seoIntro": "Retrouvez les conditions et le moment du déblocage des bureaux, le calendrier complet des sorties de consoles en jeu, et apprenez quand la mBox sort. Utilisez notre guide des dates de sortie des plateformes pour suivre les étapes clés des années 3, 5 et 10. Sachez exactement quand déménager dans le deuxième bureau et suivez la chronologie complète de progression du début à la fin."
   },
   "checklist": {
     "title": "Liste de progression du jeu",
@@ -759,7 +795,10 @@
     "noItemsYet": "Aucun élément",
     "addItemsHint": "Ajoutez des tâches personnalisées ou sélectionnez des jalons ci-dessous pour commencer.",
     "suggestedMilestones": "Jalons suggérés",
-    "suggestedMilestonesHint": "Événements importants de la chronologie que vous pourriez vouloir suivre :"
+    "suggestedMilestonesHint": "Événements importants de la chronologie que vous pourriez vouloir suivre :",
+    "h1": "Éléments à vérifier avant de sortir un jeu dans Game Dev Tycoon",
+    "h2": "Liste de contrôle pour éviter les scores bas",
+    "seoIntro": "Utilisez cette liste des erreurs courantes à éviter avant chaque sortie. Inclut la checklist des jeux AAA avant sortie, la checklist des conditions pour les suites et la checklist du moteur avant de commencer un nouveau jeu. Suivez notre guide de sortie de jeu étape par étape, passez en revue la checklist qualité pour les graphismes, le personnel et les curseurs, et apprenez comment éviter les mauvaises critiques avec cette liste complète."
   },
   "faq": {
     "title": "Foire aux questions (FAQ)",
@@ -840,20 +879,9 @@
         "answer": "Développez le meilleur moteur en : 1) Ayant des compétences techniques élevées dans l'équipe, 2) Incluant toutes les fonctionnalités disponibles, 3) Investissant assez de temps et d'argent, 4) Faisant des mises à jour régulières. Un bon moteur peut être utilisé pour plusieurs jeux et fait gagner du temps à long terme."
       }
     },
-    "links": {
-      "moreTo": "En savoir plus:",
-      "topicRecommender": "Recommandeur de thèmes",
-      "platformRecommender": "Recommandeur de plateformes",
-      "sliders": "Préréglages des curseurs",
-      "slidersPage": "Guide des curseurs",
-      "staff": "Guide du personnel",
-      "handbuch": "Manuel du jeu",
-      "research": "Guide de recherche",
-      "researchOrder": "Ordre de recherche",
-      "timeline": "Chronologie",
-      "planner": "Planificateur",
-      "checklist": "Liste de contrôle"
-    }
+    "h1": "Pourquoi est-ce que je fais toujours faillite dans Game Dev Tycoon ?",
+    "h2": "Comment obtenir une note de 10/10 dans Game Dev Tycoon",
+    "seoIntro": "Comprenez l'explication de la pénalité pour combo identique, découvrez l'effet des bugs sur le score de critique, et maîtrisez les règles et le timing des suites. Découvrez si Game Dev Tycoon propose du multijoueur, combien de temps dure une partie et la différence entre le score et la note de critique. Obtenez des conseils essentiels pour débutants afin d'éviter la faillite."
   },
   "manual": {
     "title": "Manuel de Game Dev Tycoon",
@@ -1090,9 +1118,7 @@
         "Des bases à l'avancé",
         "Idéal comme référence pendant le jeu"
       ]
-    },
-    "openTool": "Ouvrir l'outil",
-    "startWorkflow": "Commencer"
+    }
   },
   "guide": {
     "title": "Guide Game Dev Tycoon",
@@ -1149,7 +1175,10 @@
       "description": "Utilisez le outil de recommandation et les préréglages pour appliquer ces conseils à votre prochain jeu.",
       "primary": "Trouver le meilleur genre pour votre thème",
       "secondary": "Obtenir les préréglages de curseurs"
-    }
+    },
+    "h1": "Guide du débutant Game Dev Tycoon – Du Garage au AAA",
+    "h2": "Conseils et astuces pour un score élevé",
+    "seoIntro": "Apprenez à bâtir un studio d'un milliard de dollars et à survivre à la phase du garage. Ce guide stratégique étape par étape vous montre comment obtenir systématiquement une note de 10, avec des conseils de milieu de partie pour agrandir votre bureau et votre équipe, une stratégie de fin de partie pour le développement de consoles personnalisées et de MMO, ainsi que des conseils pour les versions mobiles iOS et Android."
   },
   "bestCombos": {
     "title": "Meilleures combinaisons thème-genre",
@@ -1188,7 +1217,10 @@
       "description": "Utilisez le outil de recommandation pour classer chaque thème par affinité et année de déblocage.",
       "primary": "Utiliser le Recommandateur de genres",
       "secondary": "Vérifier les préréglages de curseurs"
-    }
+    },
+    "h1": "Meilleurs combos pour des notes de critique élevées dans Game Dev Tycoon",
+    "h2": "Combo RPG Fantasy – Comment jouer",
+    "seoIntro": "Découvrez les meilleurs réglages de combo action science-fiction et le meilleur combo pour un public averti sur PC. Explorez le guide du combo aventure voyage dans le temps, la combinaison RPG post-apocalyptique et le meilleur combo multi-genres pour l'action-aventure. Consultez les combos les mieux notés pour tous les genres en 2025 et comprenez la différence entre un combo étrange et un excellent combo."
   },
   "slidersExplained": {
     "title": "Curseurs Game Dev Tycoon expliqués",
@@ -1245,7 +1277,10 @@
       "description": "Utilisez les préréglages pour copier instantanément les meilleures valeurs de curseurs.",
       "primary": "Ouvrir les préréglages de curseurs",
       "secondary": "Trouver le meilleur genre"
-    }
+    },
+    "h1": "Comment fonctionnent les curseurs dans Game Dev Tycoon ?",
+    "h2": "À quoi sert chaque curseur ?",
+    "seoIntro": "Comprenez l'effet des curseurs de moteur, de gameplay et d'histoire sur vos jeux. Découvrez en détail les priorités des curseurs pour les phases 1, 2 et 3, l'impact des curseurs sur les notes des critiques et le guide du ratio technologie/design. Évitez les erreurs de curseurs qui entraînent de mauvaises notes, obtenez le guide des curseurs pour les genres action, RPG et simulation, et maîtrisez l'allocation du temps pour toutes les phases."
   },
   "researchOrder": {
     "title": "Ordre de recherche dans Game Dev Tycoon",
@@ -1302,7 +1337,10 @@
       "description": "Gardez vos déblocages et prérequis organisés dans le Guide de recherche.",
       "primary": "Ouvrir le Guide de recherche",
       "secondary": "Suivre la chronologie"
-    }
+    },
+    "h1": "Que rechercher en premier dans le garage",
+    "h2": "Ordre de déblocage des recherches par année",
+    "seoIntro": "Suivez les meilleures priorités de recherche, du niveau débutant au AAA. Apprenez l'ordre de déblocage des recherches du laboratoire R&D, l'ordre de recherche des graphismes 3D de la v1 à la v7, et parcourez le guide complet de l'arbre de recherche. Découvrez comment débloquer la recherche multi-genre, vérifiez les coûts et les délais de recherche, et comprenez les conditions de déblocage du laboratoire de matériel."
   },
   "sources": {
     "title": "Sources de données",
@@ -1440,53 +1478,113 @@
       "appGuide": "Fonctions, flux de travail & prise en main",
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Données communautaires & niveaux de confiance"
+    },
+    "brand": "Game Dev Tycoon Advisor",
+    "title": {
+      "dashboard": "Calculateur de configuration de jeu optimale Game Dev Tycoon",
+      "topicRecommender": "Meilleur sujet pour chaque genre dans Game Dev Tycoon",
+      "genreRecommender": "Meilleur genre à développer dans Game Dev Tycoon",
+      "platformRecommender": "Meilleure plateforme pour chaque genre dans Game Dev Tycoon",
+      "sliders": "Réglages des curseurs pour chaque genre dans Game Dev Tycoon",
+      "planner": "Outil de planification de sauvegarde Game Dev Tycoon",
+      "research": "Ordre de recherche en début de partie Game Dev Tycoon",
+      "staff": "Guide des meilleures spécialisations du personnel Game Dev Tycoon",
+      "timeline": "Chronologie des déblocages de tous les bâtiments Game Dev Tycoon",
+      "checklist": "Liste de contrôle avant la sortie Game Dev Tycoon",
+      "faq": "Game Dev Tycoon : Pourquoi mes jeux obtiennent-ils de mauvaises notes ?",
+      "guide": "Guide complet Game Dev Tycoon 2025",
+      "bestCombos": "Liste des meilleures combinaisons genre/sujet dans Game Dev Tycoon",
+      "slidersExplained": "Les curseurs de Game Dev Tycoon expliqués aux débutants",
+      "researchOrder": "Liste complète du meilleur ordre de recherche Game Dev Tycoon",
+      "handbuch": "Manuel complet Game Dev Tycoon",
+      "appGuide": "Guide de l'application Game Dev Tycoon Advisor",
+      "privacy": "Politique de confidentialité",
+      "sources": "Sources de données et niveaux de confiance de Game Dev Tycoon"
+    },
+    "description": {
+      "dashboard": "Trouvez les meilleures combinaisons de thèmes, genres et plateformes dans Game Dev Tycoon. Calculateur de configuration interactif gratuit et outil de recommandation pour débutants.",
+      "topicRecommender": "Trouvez le meilleur thème pour n'importe quel genre dans Game Dev Tycoon. Vérificateur de compatibilité thème-genre pour la fantasy, la science-fiction et tous les thèmes.",
+      "genreRecommender": "Découvrez quel genre rapporte le plus d'argent dans Game Dev Tycoon. Outil gratuit de sélection de genre avec analyse des profits et des scores élevés.",
+      "platformRecommender": "Trouvez la meilleure console à cibler dans Game Dev Tycoon. Comparaison PC vs console et guide de correspondance audience-plateforme.",
+      "sliders": "Pourcentages de curseurs optimaux pour tous les genres dans Game Dev Tycoon. Outil de préréglages avec allocation de temps pour les phases 1, 2 et 3 pour chaque genre.",
+      "planner": "Planifiez votre prochain jeu dans Game Dev Tycoon. Recommandations personnalisées basées sur votre état de sauvegarde et votre historique de sorties.",
+      "research": "Que rechercher en premier dans Game Dev Tycoon. Guide complet avec les conditions de déblocage du labo R&D et les coûts en points de recherche.",
+      "staff": "Comment former les employés rapidement dans Game Dev Tycoon. Guide spécialiste design vs technologie avec explication de la configuration d'équipe équilibrée.",
+      "timeline": "Guide de progression année par année pour Game Dev Tycoon. Calendrier de sortie des consoles, timing de déblocage des bureaux et étapes clés.",
+      "checklist": "Vérifiez tout avant de sortir un jeu dans Game Dev Tycoon. Évitez les scores bas grâce à notre liste de contrôle de sortie étape par étape.",
+      "faq": "Réponses aux questions courantes sur Game Dev Tycoon. Pourquoi faites-vous toujours faillite ? Comment obtenir 10/10 ? Conseils pour les débutants.",
+      "guide": "Guide pour débutants du garage au AAA dans Game Dev Tycoon. Conseils, astuces et stratégie étape par étape pour des scores élevés en 2025.",
+      "bestCombos": "Meilleures combinaisons pour des scores de critiques élevés dans Game Dev Tycoon. RPG fantasy, action de science-fiction et plus de combinaisons les mieux notées classées.",
+      "slidersExplained": "Comment fonctionnent les curseurs dans Game Dev Tycoon ? Découvrez ce que fait chaque curseur, les priorités des phases et l'impact sur les scores de critique.",
+      "researchOrder": "Meilleur ordre de recherche du garage au AAA dans Game Dev Tycoon. Liste complète de déblocage de recherche par année avec priorités.",
+      "handbuch": "Manuel complet de Game Dev Tycoon couvrant toutes les mécaniques de jeu, les stratégies, les conseils et les techniques avancées.",
+      "appGuide": "Apprenez à utiliser Game Dev Tycoon Advisor. Fonctionnalités, flux de travail et comment débuter avec l'application.",
+      "privacy": "Politique de confidentialité de Game Dev Tycoon Advisor. En savoir plus sur nos pratiques en matière de données et vos droits à la vie privée.",
+      "sources": "Données communautaires et niveaux de confiance utilisés par Game Dev Tycoon Advisor pour des recommandations précises."
     }
   },
-  "nextStep": {
-    "label": "Étape suivante",
-    "topicToGenre": {
-      "title": "Choisissez maintenant le meilleur genre",
-      "body": "Utilisez votre thème pour trouver les meilleures combinaisons de genres."
-    },
-    "genreToPlatform": {
-      "title": "Trouver la meilleure plateforme",
-      "body": "Associez votre genre à la meilleure plateforme et audience pour des notes maximales."
-    },
-    "platformToSliders": {
-      "title": "Obtenir votre préréglage de sliders",
-      "body": "Appliquez les paramètres de sliders optimaux pour votre genre dans les trois phases."
-    },
-    "slidersToPlanner": {
-      "title": "Planifier votre prochaine sortie",
-      "body": "Entrez votre état de sauvegarde pour obtenir des recommandations personnalisées."
-    },
-    "plannerToChecklist": {
-      "title": "Vérifier avant de publier",
-      "body": "Parcourez la liste pour éviter les erreurs courantes avant de soumettre votre jeu."
-    },
-    "timelineToPlatform": {
-      "title": "Choisir la bonne plateforme",
-      "body": "Utilisez le recommandeur de plateformes pour trouver la meilleure plateforme pour votre ère actuelle."
-    },
-    "timelineToResearch": {
-      "title": "Prioriser la recherche",
-      "body": "Planifiez quelles technologies débloquer ensuite selon votre année de jeu actuelle."
-    },
-    "timelineToChecklist": {
-      "title": "Suivre vos jalons",
-      "body": "Ajoutez des jalons clés à votre liste et suivez votre progression dans le jeu."
-    },
-    "plannerToResearch": {
-      "title": "Prioriser la recherche",
-      "body": "Découvrez quelles technologies débloquer en premier pour maximiser vos scores."
-    },
-    "staffToHandbook": {
-      "title": "Contexte & règles dans le manuel",
-      "body": "Découvrez les mécaniques d'équipe, les règles d'embauche et les stratégies de formation dans le manuel."
-    },
-    "handbookToStaff": {
-      "title": "Configurations pratiques & conseils",
-      "body": "Recommandations concrètes pour chaque phase du jeu."
-    }
+  "sliders.explainedBox": {
+    "title": "Comment fonctionnent réellement les curseurs ?",
+    "text": "Vous ne savez pas pourquoi vos notes de test sont basses ? Les curseurs contrôlent la répartition du temps de développement entre les points de Design et de Technologie sur trois phases. Chaque genre a des poids de phase différents qui déterminent quels curseurs importent le plus. Comprendre la mécanique des curseurs, l'équilibre entre design et technologie, et comment les priorités de phase affectent votre score final est la clé pour obtenir des notes de 10/10.",
+    "linkText": "Lisez notre guide complet sur les curseurs de Game Dev Tycoon →"
+  },
+  "planner.unlockedTopicsFilter": {
+    "title": "Filtrer par thèmes débloqués",
+    "description": "N'utilisez que les thèmes que vous avez déjà débloqués dans votre sauvegarde.",
+    "searchPlaceholder": "Rechercher des thèmes...",
+    "selectAll": "Tout sélectionner",
+    "clear": "Effacer",
+    "selectedCount": "{{selected}}/{{total}} sélectionnés",
+    "noTopics": "Aucun thème trouvé.",
+    "emptyFallbackWarning": "Aucun sujet sélectionné n'est actuellement disponible. Utilisation de tous les sujets par défaut."
+  },
+  "seo.title": {
+    "dashboard": "Calculateur de configuration de jeu optimale Game Dev Tycoon",
+    "topicRecommender": "Meilleur sujet pour chaque genre dans Game Dev Tycoon",
+    "genreRecommender": "Meilleur genre à développer dans Game Dev Tycoon",
+    "platformRecommender": "Meilleure plateforme pour chaque genre dans Game Dev Tycoon",
+    "sliders": "Réglages des curseurs pour chaque genre dans Game Dev Tycoon",
+    "planner": "Outil de planification de sauvegarde Game Dev Tycoon",
+    "research": "Ordre de recherche en début de partie Game Dev Tycoon",
+    "staff": "Guide des meilleures spécialisations du personnel Game Dev Tycoon",
+    "timeline": "Chronologie des déblocages de tous les bâtiments Game Dev Tycoon",
+    "checklist": "Liste de contrôle avant la sortie Game Dev Tycoon",
+    "faq": "Game Dev Tycoon : Pourquoi mes jeux obtiennent-ils de mauvaises notes ?",
+    "guide": "Guide complet Game Dev Tycoon 2025",
+    "bestCombos": "Liste des meilleures combinaisons genre/sujet dans Game Dev Tycoon",
+    "slidersExplained": "Les curseurs de Game Dev Tycoon expliqués aux débutants",
+    "researchOrder": "Liste complète du meilleur ordre de recherche Game Dev Tycoon",
+    "handbuch": "Manuel complet Game Dev Tycoon",
+    "appGuide": "Guide de l'application Game Dev Tycoon Advisor",
+    "privacy": "Politique de confidentialité",
+    "sources": "Sources de données et niveaux de confiance de Game Dev Tycoon"
+  },
+  "seo.description": {
+    "dashboard": "Trouvez les meilleures combinaisons de thèmes, genres et plateformes dans Game Dev Tycoon. Calculateur de configuration interactif gratuit et outil de recommandation pour débutants.",
+    "topicRecommender": "Trouvez le meilleur thème pour n'importe quel genre dans Game Dev Tycoon. Vérificateur de compatibilité thème-genre pour la fantasy, la science-fiction et tous les thèmes.",
+    "genreRecommender": "Découvrez quel genre rapporte le plus d'argent dans Game Dev Tycoon. Outil gratuit de sélection de genre avec analyse des profits et des scores élevés.",
+    "platformRecommender": "Trouvez la meilleure console à cibler dans Game Dev Tycoon. Comparaison PC vs console et guide de correspondance audience-plateforme.",
+    "sliders": "Pourcentages de curseurs optimaux pour tous les genres dans Game Dev Tycoon. Outil de préréglages avec allocation de temps pour les phases 1, 2 et 3 pour chaque genre.",
+    "planner": "Planifiez votre prochain jeu dans Game Dev Tycoon. Recommandations personnalisées basées sur votre état de sauvegarde et votre historique de sorties.",
+    "research": "Que rechercher en premier dans Game Dev Tycoon. Guide complet avec les conditions de déblocage du labo R&D et les coûts en points de recherche.",
+    "staff": "Comment former les employés rapidement dans Game Dev Tycoon. Guide spécialiste design vs technologie avec explication de la configuration d'équipe équilibrée.",
+    "timeline": "Guide de progression année par année pour Game Dev Tycoon. Calendrier de sortie des consoles, timing de déblocage des bureaux et étapes clés.",
+    "checklist": "Vérifiez tout avant de sortir un jeu dans Game Dev Tycoon. Évitez les scores bas grâce à notre liste de contrôle de sortie étape par étape.",
+    "faq": "Réponses aux questions courantes sur Game Dev Tycoon. Pourquoi faites-vous toujours faillite ? Comment obtenir 10/10 ? Conseils pour les débutants.",
+    "guide": "Guide pour débutants du garage au AAA dans Game Dev Tycoon. Conseils, astuces et stratégie étape par étape pour des scores élevés en 2025.",
+    "bestCombos": "Meilleures combinaisons pour des scores de critiques élevés dans Game Dev Tycoon. RPG fantasy, action de science-fiction et plus de combinaisons les mieux notées classées.",
+    "slidersExplained": "Comment fonctionnent les curseurs dans Game Dev Tycoon ? Découvrez ce que fait chaque curseur, les priorités des phases et l'impact sur les scores de critique.",
+    "researchOrder": "Meilleur ordre de recherche du garage au AAA dans Game Dev Tycoon. Liste complète de déblocage de recherche par année avec priorités.",
+    "handbuch": "Manuel complet de Game Dev Tycoon couvrant toutes les mécaniques de jeu, les stratégies, les conseils et les techniques avancées.",
+    "appGuide": "Apprenez à utiliser Game Dev Tycoon Advisor. Fonctionnalités, flux de travail et comment débuter avec l'application.",
+    "privacy": "Politique de confidentialité de Game Dev Tycoon Advisor. En savoir plus sur nos pratiques en matière de données et vos droits à la vie privée.",
+    "sources": "Données communautaires et niveaux de confiance utilisés par Game Dev Tycoon Advisor pour des recommandations précises."
+  },
+  "shareNudge": {
+    "text": "Cet outil vous a été utile ? Partagez-le avec d'autres joueurs !",
+    "shareButton": "Partager",
+    "copied": "Lien copié !",
+    "shared": "Merci du partage !",
+    "shareText": "J'ai utilisé ceci pour optimiser mon gameplay dans Game Dev Tycoon :"
   }
 }

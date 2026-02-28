@@ -254,7 +254,10 @@
     "platforms": "Plattformen",
     "lastUpdate": "Letztes Update",
     "getStarted": "Loslegen",
-    "getStartedDesc": "Wähle einen Empfehler, um dein perfektes Spiel-Setup zu finden"
+    "getStartedDesc": "Wähle einen Empfehler, um dein perfektes Spiel-Setup zu finden",
+    "h1": "Game Dev Tycoon Themen-Genre-Plattform-Empfehlungstool",
+    "h2": "Was ist das beste Spiel, das man in Game Dev Tycoon entwickeln kann?",
+    "seoIntro": "Nutzen Sie unseren interaktiven Guide, um die besten Einstellungen und Kombinationen zu entdecken. Egal, ob Sie einen Kombinations-Finder, ein Cheat-Sheet oder das beste Setup für Anfänger suchen – dieser Planer und Empfehlungs-Tool hilft Ihnen dabei, jedes Mal ein gutes Spiel zu entwickeln."
   },
   "recommender": {
     "selectTopic": "Topic auswählen",
@@ -283,7 +286,16 @@
     "searchGenres": "Genres suchen...",
     "searchPlatforms": "Plattformen suchen...",
     "confidenceTooltip": "Konfidenzniveau basierend auf Quellenübereinstimmung",
-    "score": "Punktzahl"
+    "score": "Punktzahl",
+    "topicH1": "Welches Thema sollte ich in Game Dev Tycoon verwenden?",
+    "topicH2": "Game Dev Tycoon Themen-Genre-Kombi-Finder",
+    "topicSeoIntro": "Prüfen Sie, welches Thema zu Action, Rollenspiel oder jedem anderen Genre passt. Unser Tool zur Themenkompatibilität hilft Ihnen dabei, das beste Thema für RPGs zu finden, herauszufinden, ob Fantasy oder Sci-Fi die beste Genre-Kombination liefert, und Listen mit seltsamen versus großartigen Kombinationen zu vergleichen. Nutzen Sie dieses Tool zur Abstimmung von Thema und Zielgruppe, um Ihre Wertungen zu maximieren.",
+    "genreH1": "Welches Genre bringt in Game Dev Tycoon das meiste Geld?",
+    "genreH2": "Game Dev Tycoon Genre-Auswahl-Tool",
+    "genreSeoIntro": "Finden Sie das profitabelste Genre für die frühe und späte Spielphase. Vergleichen Sie Action vs. RPG, holen Sie sich Tipps und Setup-Ratschläge für Simulationen und entdecken Sie das beste Genre für Highscores. Erkunden Sie funktionierende Multi-Genre-Kombinationen, Regler-Einstellungen für Casual-Games sowie Themen-Setups und erfahren Sie, welches Thema Sie für das Strategie-Genre wählen sollten.",
+    "platformH1": "Game Dev Tycoon – Welche Konsole man wählen sollte",
+    "platformH2": "PC vs. Konsole – Was ist in Game Dev Tycoon besser?",
+    "platformSeoIntro": "Nutzen Sie unseren Leitfaden für Marktanteile, um die beste Konsole für Spiele für ein erwachsenes Publikum zu finden. Entdecken Sie die besten Genre-Themen-Kombis für den Gameling, welche Spiele Sie für die mBox entwickeln sollten, und nutzen Sie unser Tool für Plattformkompatibilität. Ob Sie Spiele für PC oder Konsole entwickeln sollten, hängt von Ihrer Zielgruppe ab – dieser Leitfaden zur Abstimmung von Zielgruppe und Plattform hilft Ihnen bei der Entscheidung."
   },
   "sliders": {
     "title": "Slider-Voreinstellungen",
@@ -343,7 +355,15 @@
     "swapGenres": "Primär ↔ Sekundär tauschen",
     "selectBothGenres": "Zwei Genres auswählen",
     "selectBothGenresDesc": "Wähle ein Haupt- und ein Nebengenre, um gemischte Slider-Einstellungen zu sehen",
-    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Slider-Voreinstellungen"
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Slider-Voreinstellungen",
+    "h1": "Optimale Regler-Prozentsätze für Game Dev Tycoon",
+    "h2": "RPG-Regler-Einstellungen – Phase 1, 2 und 3",
+    "seoIntro": "Erhalten Sie die richtige Zeitverteilung für Action-Regler und den Adventure-Genre-Regler-Guide für jedes Spiel. Dieses Cheat-Sheet deckt alle Genres ab, einschließlich der Prozentsätze für Simulationen und der Phasenverteilung für Strategie-Spiele. Finden Sie heraus, welche Regler-Einstellungen für das Casual-Genre ideal sind, nutzen Sie unser Voreinstellungs-Tool pro Genre, verstehen Sie das Technik-Design-Verhältnis und lernen Sie, wie man Regler für maximale Wertungen korrekt einstellt.",
+    "explainedBox": {
+      "title": "Wie funktionieren die Regler eigentlich?",
+      "text": "Sie sind sich nicht sicher, warum Ihre Wertungen so niedrig sind? Die Regler steuern, wie die Entwicklungszeit während der drei Phasen zwischen Design- und Technik-Punkten aufgeteilt wird. Jedes Genre hat unterschiedliche Phasengewichtungen, die bestimmen, welche Regler am wichtigsten sind. Das Verständnis der Regler-Mechanik, der Balance zwischen Design und Technik sowie der Einfluss der Phasenprioritäten auf Ihre Endwertung ist der Schlüssel zu 10/10-Bewertungen.",
+      "linkText": "Lesen Sie unseren kompletten Guide zur Erklärung der Game Dev Tycoon Regler →"
+    }
   },
   "planner": {
     "title": "Spiel-Planer",
@@ -395,7 +415,20 @@
       "unlockTopic": "Schalte {{name}} frei, um dein Spielportfolio zu erweitern.",
       "unlockGenre": "Schalte das Genre {{name}} für neue Spielmöglichkeiten frei.",
       "feature": "Verbessert die Grafikqualität für zukünftige AAA-Titel."
-    }
+    },
+    "unlockedTopicsFilter": {
+      "title": "Nach freigeschalteten Themen filtern",
+      "description": "Nur Themen verwenden, die Sie bereits in Ihrem Spielstand freigeschaltet haben.",
+      "searchPlaceholder": "Themen suchen...",
+      "selectAll": "Alle auswählen",
+      "clear": "Löschen",
+      "selectedCount": "{{selected}}/{{total}} ausgewählt",
+      "noTopics": "Keine Themen gefunden.",
+      "emptyFallbackWarning": "Keine ausgewählten Themen sind derzeit verfügbar. Alle Themen werden als Ausweichoption verwendet."
+    },
+    "h1": "Game Dev Tycoon – Empfehlung für das nächste Spiel basierend auf dem Spielstand",
+    "h2": "Was du als Nächstes machen solltest, basierend auf deiner Spielhistorie",
+    "seoIntro": "Nutze diesen Forschungs-Prioritätsplaner und das personalisierte Spielberatungs-Tool, um zu entscheiden, was du im Mid-Game als Nächstes erforschen solltest. Plane deine nächste Veröffentlichung nach einer Combo-Wiederholung, verfolge deine Combos mit unserem Combo-Tracking-Tool, nutze den Genre-Rotationsplaner und lerne, wie du deine Spiele-Pipeline für maximales Wachstum planst."
   },
   "research": {
     "title": "Forschungs-Guide",
@@ -505,12 +538,9 @@
         "tip": "Zukunftstechnologie-Investition"
       }
     },
-    "researchOrderBox": {
-      "title": "Empfohlene Forschungsreihenfolge",
-      "body": "Unsicher, was du zuerst erforschen sollst? Folge unserer Schritt-für-Schritt-Anleitung.",
-      "linkText": "Forschungsreihenfolge anzeigen",
-      "enBadge": "EN"
-    }
+    "h1": "Was man in Game Dev Tycoon zuerst erforschen sollte",
+    "h2": "Wie man schnell Forschungspunkte bekommt",
+    "seoIntro": "Erfahre mehr über die Freischaltbedingungen für das F&E-Labor und nutze unseren Leitfaden zum Farmen von Forschungspunkten, um effizient voranzukommen. Befolge die Liste der besten Forschungsprioritäten, erfahre, wann du mittelgroße Spiele freischalten solltest, und finde heraus, wie du AAA-Spiele durch Forschung freischaltest. Überprüfe die Forschungspunktkosten pro Thema und nutze diesen vollständigen Forschungsleitfaden von der Garage bis zu AAA."
   },
   "staff": {
     "title": "Mitarbeiter-Guide",
@@ -603,7 +633,10 @@
         "title": "Konsolen-Entwicklung",
         "description": "Das Bauen einer Konsole braucht 2-3 dedizierte Mitarbeiter für 6+ Monate. Plane deine Teamkapazität entsprechend."
       }
-    }
+    },
+    "h1": "Wie man Mitarbeiter in Game Dev Tycoon schnell ausbildet",
+    "h2": "Design- vs. Technik-Spezialist – Was ist der Unterschied?",
+    "seoIntro": "Erfahre, wann du Personal spezialisieren solltest und wie viele Mitarbeiter du für jede Phase benötigst. Verstehe alle Mitarbeiterrollen im Detail, entdecke, wie du bessere Mitarbeiter einstellst, und vergleiche Mitarbeiterstatistiken wie Design, Technik, Forschung und Geschwindigkeit. Dieser Leitfaden behandelt auch Mitarbeiter-Burnout und Urlaubsmanagement und zeigt dir den ausgewogenen Teamaufbau Schritt für Schritt erklärt."
   },
   "timeline": {
     "title": "Timeline",
@@ -740,7 +773,10 @@
         "description": "Großes Team + Custom Engine + Richtiges Marketing = AAA-Erfolg.",
         "action": "AAA-Spiele nur mit erfahrenem Team versuchen"
       }
-    }
+    },
+    "h1": "Game Dev Tycoon Fortschritts-Leitfaden Jahr für Jahr",
+    "h2": "Wann kommen neue Plattformen heraus?",
+    "seoIntro": "Finde die Freischaltbedingungen und das Timing für das Büro, den vollständigen Konsolen-Release-Zeitplan im Spiel und erfahre, wann die mBox erscheint. Nutze unseren Leitfaden für Plattform-Veröffentlichungstermine, um Meilensteine in Jahr 3, Jahr 5 und Jahr 10 zu verfolgen. Wisse genau, wann du in das zweite Büro umziehen musst, und folge dem gesamten Fortschritts-Zeitplan von Anfang bis Ende."
   },
   "checklist": {
     "title": "Spielfortschritts-Checkliste",
@@ -759,7 +795,10 @@
     "noItemsYet": "Noch keine Einträge",
     "addItemsHint": "Füge eigene Aufgaben hinzu oder wähle Meilensteine von unten.",
     "suggestedMilestones": "Vorgeschlagene Meilensteine",
-    "suggestedMilestonesHint": "Wichtige Events aus der Timeline, die du vielleicht tracken möchtest:"
+    "suggestedMilestonesHint": "Wichtige Events aus der Timeline, die du vielleicht tracken möchtest:",
+    "h1": "Dinge, die vor der Veröffentlichung eines Spiels in Game Dev Tycoon zu prüfen sind",
+    "h2": "Checkliste zur Vermeidung niedriger Bewertungen",
+    "seoIntro": "Nutze diese Liste der zu vermeidenden häufigen Fehler vor jeder Veröffentlichung. Enthält die AAA-Spiel-Checkliste vor dem Release, die Checkliste für Sequel-Anforderungen und die Engine-Checkliste vor dem Start eines neuen Spiels. Folge unserem Schritt-für-Schritt-Leitfaden für Spieleveröffentlichungen, überprüfe die Qualitäts-Checkliste für Grafiken, Personal und Schieberegler und lerne, wie du schlechte Kritiken mit dieser umfassenden Checkliste vermeidest."
   },
   "faq": {
     "title": "Häufig gestellte Fragen (FAQ)",
@@ -840,20 +879,9 @@
         "answer": "Entwickle die beste Engine durch: 1) Hohe Tech-Skills im Team, 2) Alle verfügbaren Features einbauen, 3) Genug Zeit und Geld investieren, 4) Regelmäßige Updates. Eine gute Engine kann für mehrere Spiele genutzt werden und spart langfristig Zeit."
       }
     },
-    "links": {
-      "moreTo": "Mehr dazu:",
-      "topicRecommender": "Themen-Empfehler",
-      "platformRecommender": "Plattform-Empfehler",
-      "sliders": "Slider-Presets",
-      "slidersPage": "Slider-Guide",
-      "staff": "Mitarbeiter-Guide",
-      "handbuch": "Spielhandbuch",
-      "research": "Forschungs-Guide",
-      "researchOrder": "Forschungsreihenfolge",
-      "timeline": "Timeline",
-      "planner": "Spielplaner",
-      "checklist": "Checkliste"
-    }
+    "h1": "Warum gehe ich in Game Dev Tycoon immer wieder pleite?",
+    "h2": "Wie man in Game Dev Tycoon eine 10/10-Bewertung bekommt",
+    "seoIntro": "Verstehe die Strafe für gleiche Kombinationen, erfahre mehr über die Auswirkungen von Bugs auf die Bewertung und lerne die Regeln und das Timing für Sequels kennen. Finde heraus, ob Game Dev Tycoon einen Multiplayer-Modus hat, wie lange ein Spieldurchgang dauert und was der Unterschied zwischen Score und Review-Score ist. Erhalte wichtige Tipps für Anfänger, um nicht pleitezugehen."
   },
   "manual": {
     "title": "Game Dev Tycoon Handbuch",
@@ -1090,9 +1118,7 @@
         "Von Grundlagen bis Fortgeschritten",
         "Ideal zum Nachschlagen während des Spiels"
       ]
-    },
-    "openTool": "Tool öffnen",
-    "startWorkflow": "Jetzt starten"
+    }
   },
   "guide": {
     "title": "Game Dev Tycoon Leitfaden",
@@ -1149,7 +1175,10 @@
       "description": "Nutze Recommender und Presets, um die Tipps sofort in dein nächstes Spiel zu übertragen.",
       "primary": "Bestes Genre finden",
       "secondary": "Slider-Presets holen"
-    }
+    },
+    "h1": "Game Dev Tycoon Einsteiger-Leitfaden – Von der Garage bis AAA",
+    "h2": "Tipps und Tricks für hohe Punktzahlen",
+    "seoIntro": "Lerne, wie du ein Milliarden-Dollar-Studio aufbaust und die Garagenphase überlebst. Dieser Schritt-für-Schritt-Strategieleitfaden zeigt dir, wie du beständig eine 10er-Bewertung erhältst, mit Tipps für das Mid-Game zum Ausbau deines Büros und Personals, Strategien für das Late-Game zur Entwicklung eigener Konsolen und MMOs sowie Tipps für die mobilen iOS- und Android-Versionen."
   },
   "bestCombos": {
     "title": "Beste Topic-Genre-Kombinationen",
@@ -1188,7 +1217,10 @@
       "description": "Nutze den Recommender, um jedes Topic nach Fit und Freischaltjahr zu sortieren.",
       "primary": "Genre-Empfehlungen öffnen",
       "secondary": "Slider-Presets prüfen"
-    }
+    },
+    "h1": "Beste Kombinationen für hohe Bewertungen in Game Dev Tycoon",
+    "h2": "Fantasy-RPG-Combo – Spielanleitung",
+    "seoIntro": "Entdecke die besten Sci-Fi-Action-Combo-Einstellungen und die beste Kombination für ein erwachsenes Publikum auf dem PC. Erkunde den Leitfaden zur Adventure-Zeitreise-Kombination, die postapokalyptische RPG-Kombination und die beste Multi-Genre-Kombination für Action-Adventure. Siehe die am besten bewerteten Kombinationen für alle Genres im Jahr 2025 und verstehe den Unterschied zwischen einer seltsamen Combo und einer großartigen Combo."
   },
   "slidersExplained": {
     "title": "Game Dev Tycoon Slider erklärt",
@@ -1245,7 +1277,10 @@
       "description": "Nutze die Presets, um die besten Slider-Werte sofort zu kopieren.",
       "primary": "Slider-Presets öffnen",
       "secondary": "Bestes Genre finden"
-    }
+    },
+    "h1": "Wie funktionieren die Regler in Game Dev Tycoon?",
+    "h2": "Was bewirkt jeder Regler?",
+    "seoIntro": "Verstehe die Auswirkungen der Regler für Engine, Gameplay und Story auf deine Spiele. Lerne die Prioritäten der Regler in Phase 1, 2 und 3 im Detail kennen, den Einfluss der Regler auf die Bewertung und den Leitfaden für das Technik-Design-Verhältnis. Vermeide Regler-Fehler, die zu schlechten Bewertungen führen, erhalte den Regler-Guide für Action-, RPG- und Simulations-Genres und meistere die Zeitmanagement-Regler für alle Phasen."
   },
   "researchOrder": {
     "title": "Game Dev Tycoon Forschungs-Reihenfolge",
@@ -1302,7 +1337,10 @@
       "description": "Behalte Freischaltungen und Voraussetzungen im Forschungs-Guide im Blick.",
       "primary": "Forschungs-Guide öffnen",
       "secondary": "Timeline folgen"
-    }
+    },
+    "h1": "Was man in der Garage zuerst erforschen sollte",
+    "h2": "Reihenfolge der Forschungsfreischaltungen nach Jahren",
+    "seoIntro": "Folge den besten Forschungsprioritäten vom Anfänger bis zum AAA-Studio. Lerne die Freischaltreihenfolge im F&E-Labor, die 3D-Grafik-Forschungsreihenfolge von V1 bis V7 und durchstöbere den vollständigen Forschungsbaum-Guide. Finde heraus, wie du die Multi-Genre-Forschung freischaltest, prüfe Forschungskosten und -dauer und verstehe die Anforderungen für Freischaltungen im Hardware-Labor."
   },
   "sources": {
     "title": "Datenquellen",
@@ -1440,53 +1478,113 @@
       "appGuide": "Funktionen, Abläufe & Erste Schritte",
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Community-Daten & Vertrauensstufen"
+    },
+    "brand": "Game Dev Tycoon Advisor",
+    "title": {
+      "dashboard": "Game Dev Tycoon Rechner für das optimale Spiele-Setup",
+      "topicRecommender": "Game Dev Tycoon Bestes Thema für jedes Genre",
+      "genreRecommender": "Game Dev Tycoon Bestes Genre zum Entwickeln",
+      "platformRecommender": "Game Dev Tycoon Beste Plattform für jedes Genre",
+      "sliders": "Game Dev Tycoon Regler-Einstellungen für jedes Genre",
+      "planner": "Game Dev Tycoon Spielstand-Planer-Tool",
+      "research": "Game Dev Tycoon Forschungsreihenfolge im frühen Spiel",
+      "staff": "Game Dev Tycoon Guide für die beste Mitarbeiter-Spezialisierung",
+      "timeline": "Game Dev Tycoon Zeitstrahl für die Freischaltung aller Gebäude",
+      "checklist": "Game Dev Tycoon Checkliste vor der Veröffentlichung",
+      "faq": "Game Dev Tycoon Warum erhalten meine Spiele so schlechte Bewertungen",
+      "guide": "Vollständiger Game Dev Tycoon Guide 2025",
+      "bestCombos": "Game Dev Tycoon Liste der besten Genre-Themen-Kombinationen",
+      "slidersExplained": "Game Dev Tycoon Regler erklärt für Anfänger",
+      "researchOrder": "Game Dev Tycoon Beste Forschungsreihenfolge vollständige Liste",
+      "handbuch": "Game Dev Tycoon Vollständiges Handbuch",
+      "appGuide": "Game Dev Tycoon Advisor App-Leitfaden",
+      "privacy": "Datenschutzerklärung",
+      "sources": "Game Dev Tycoon Datenquellen & Vertrauensstufen"
+    },
+    "description": {
+      "dashboard": "Finde die besten Kombinationen aus Thema, Genre & Plattform in Game Dev Tycoon. Kostenloser interaktiver Setup-Rechner und Empfehlungs-Tool für Anfänger.",
+      "topicRecommender": "Finde das beste Thema für jedes Genre in Game Dev Tycoon. Kompatibilitätsprüfung für Fantasy, Sci-Fi und alle anderen Themen.",
+      "genreRecommender": "Entdecke, mit welchem Genre du in Game Dev Tycoon am meisten Geld verdienst. Kostenloser Genre-Finder mit Gewinn- und Highscore-Analyse.",
+      "platformRecommender": "Finde die beste Konsole für dein nächstes Projekt in Game Dev Tycoon. Vergleich zwischen PC und Konsole sowie Guide zur Zielgruppen-Plattform-Übereinstimmung.",
+      "sliders": "Optimale Regler-Einstellungen für alle Genres in Game Dev Tycoon. Voreinstellungs-Tool mit Zeitverteilung für Phase 1, 2 und 3 für jedes Genre.",
+      "planner": "Plane dein nächstes Spiel in Game Dev Tycoon. Personalisierte Empfehlungen basierend auf deinem Speicherstand und deiner Veröffentlichungshistorie.",
+      "research": "Was man in Game Dev Tycoon zuerst erforschen sollte. Kompletter Guide mit Freischaltbedingungen für das F&E-Labor und Forschungspunktkosten.",
+      "staff": "Wie man Mitarbeiter in Game Dev Tycoon schnell ausbildet. Guide zu Design- vs. Technik-Spezialisten mit Erklärungen zum ausgewogenen Team-Setup.",
+      "timeline": "Jahr-für-Jahr-Fortschritts-Guide für Game Dev Tycoon. Konsolen-Veröffentlichungsplan, Zeitpunkte für Büro-Freischaltungen und wichtige Meilensteine.",
+      "checklist": "Prüfe alles, bevor du ein Spiel in Game Dev Tycoon veröffentlichst. Vermeide niedrige Wertungen mit unserer Schritt-für-Schritt-Veröffentlichungs-Checkliste.",
+      "faq": "Antworten auf häufige Fragen zu Game Dev Tycoon. Warum gehst du pleite? Wie bekommt man 10/10 Punkten? Tipps für Anfänger.",
+      "guide": "Anfänger-Guide von der Garage bis zu AAA in Game Dev Tycoon. Tipps, Tricks und Schritt-für-Schritt-Strategien für Highscores im Jahr 2025.",
+      "bestCombos": "Beste Kombinationen für hohe Wertungen in Game Dev Tycoon. Fantasy-RPG, Sci-Fi-Action und weitere top-bewertete Kombinationen im Ranking.",
+      "slidersExplained": "Wie funktionieren die Regler in Game Dev Tycoon? Erfahre, was jeder Regler bewirkt, welche Prioritäten in den Phasen gelten und wie sie die Wertungen beeinflussen.",
+      "researchOrder": "Beste Forschungsreihenfolge von der Garage bis zu AAA in Game Dev Tycoon. Komplette Liste der Forschungsfreischaltungen nach Jahr mit Prioritäten.",
+      "handbuch": "Komplettes Game Dev Tycoon Handbuch, das alle Spielmechaniken, Strategien, Tipps und fortgeschrittene Techniken abdeckt.",
+      "appGuide": "Erfahre, wie du den Game Dev Tycoon Advisor nutzt. Funktionen, Arbeitsabläufe und erste Schritte mit der App.",
+      "privacy": "Datenschutzerklärung für den Game Dev Tycoon Advisor. Erfahre mehr über unsere Datenpraktiken und deine Datenschutzrechte.",
+      "sources": "Von der Community bereitgestellte Daten und Vertrauensstufen, die der Game Dev Tycoon Advisor für präzise Empfehlungen nutzt."
     }
   },
-  "nextStep": {
-    "label": "Nächster Schritt",
-    "topicToGenre": {
-      "title": "Jetzt das passende Genre wählen",
-      "body": "Nutze dein Topic, um die Genre-Kombinationen mit den höchsten Wertungen zu finden."
-    },
-    "genreToPlatform": {
-      "title": "Die beste Plattform finden",
-      "body": "Kombiniere dein Genre mit der besten Plattform und Zielgruppe für maximale Review-Wertungen."
-    },
-    "platformToSliders": {
-      "title": "Slider-Preset holen",
-      "body": "Wende die optimalen Slider-Einstellungen für dein Genre in allen drei Entwicklungsphasen an."
-    },
-    "slidersToPlanner": {
-      "title": "Nächsten Release planen",
-      "body": "Gib deinen Spielstand ein und erhalte personalisierte Release- und Forschungsempfehlungen."
-    },
-    "plannerToChecklist": {
-      "title": "Vor dem Release prüfen",
-      "body": "Geh die Checkliste durch, um häufige Fehler vor der Spielabgabe zu vermeiden."
-    },
-    "timelineToPlatform": {
-      "title": "Die passende Plattform wählen",
-      "body": "Nutze den Plattform-Empfehlungsrechner, um die beste Plattform für deine aktuelle Spielphase zu finden."
-    },
-    "timelineToResearch": {
-      "title": "Forschung priorisieren",
-      "body": "Plane, welche Technologien du als Nächstes freischalten solltest, basierend auf deinem aktuellen Spieljahr."
-    },
-    "timelineToChecklist": {
-      "title": "Meilensteine abhaken",
-      "body": "Füge wichtige Meilensteine zur Checkliste hinzu und verfolge deinen Fortschritt im Spiel."
-    },
-    "plannerToResearch": {
-      "title": "Forschung priorisieren",
-      "body": "Sieh, welche Technologien du zuerst freischalten solltest, um deine Spielwertungen zu maximieren."
-    },
-    "staffToHandbook": {
-      "title": "Hintergrund & Regeln im Handbuch",
-      "body": "Lerne die detaillierten Team-Mechaniken, Einstellungsregeln und Trainingsstrategien im Spielhandbuch kennen."
-    },
-    "handbookToStaff": {
-      "title": "Praktische Team-Setups & Tipps",
-      "body": "Konkrete Mitarbeiter-Empfehlungen und praktische Tipps für jede Spielphase."
-    }
+  "sliders.explainedBox": {
+    "title": "Wie funktionieren die Regler eigentlich?",
+    "text": "Sie sind sich nicht sicher, warum Ihre Wertungen so niedrig sind? Die Regler steuern, wie die Entwicklungszeit während der drei Phasen zwischen Design- und Technik-Punkten aufgeteilt wird. Jedes Genre hat unterschiedliche Phasengewichtungen, die bestimmen, welche Regler am wichtigsten sind. Das Verständnis der Regler-Mechanik, der Balance zwischen Design und Technik sowie der Einfluss der Phasenprioritäten auf Ihre Endwertung ist der Schlüssel zu 10/10-Bewertungen.",
+    "linkText": "Lesen Sie unseren kompletten Guide zur Erklärung der Game Dev Tycoon Regler →"
+  },
+  "planner.unlockedTopicsFilter": {
+    "title": "Nach freigeschalteten Themen filtern",
+    "description": "Nur Themen verwenden, die Sie bereits in Ihrem Spielstand freigeschaltet haben.",
+    "searchPlaceholder": "Themen suchen...",
+    "selectAll": "Alle auswählen",
+    "clear": "Löschen",
+    "selectedCount": "{{selected}}/{{total}} ausgewählt",
+    "noTopics": "Keine Themen gefunden.",
+    "emptyFallbackWarning": "Keine ausgewählten Themen sind derzeit verfügbar. Alle Themen werden als Ausweichoption verwendet."
+  },
+  "seo.title": {
+    "dashboard": "Game Dev Tycoon Rechner für das optimale Spiele-Setup",
+    "topicRecommender": "Game Dev Tycoon Bestes Thema für jedes Genre",
+    "genreRecommender": "Game Dev Tycoon Bestes Genre zum Entwickeln",
+    "platformRecommender": "Game Dev Tycoon Beste Plattform für jedes Genre",
+    "sliders": "Game Dev Tycoon Regler-Einstellungen für jedes Genre",
+    "planner": "Game Dev Tycoon Spielstand-Planer-Tool",
+    "research": "Game Dev Tycoon Forschungsreihenfolge im frühen Spiel",
+    "staff": "Game Dev Tycoon Guide für die beste Mitarbeiter-Spezialisierung",
+    "timeline": "Game Dev Tycoon Zeitstrahl für die Freischaltung aller Gebäude",
+    "checklist": "Game Dev Tycoon Checkliste vor der Veröffentlichung",
+    "faq": "Game Dev Tycoon Warum erhalten meine Spiele so schlechte Bewertungen",
+    "guide": "Vollständiger Game Dev Tycoon Guide 2025",
+    "bestCombos": "Game Dev Tycoon Liste der besten Genre-Themen-Kombinationen",
+    "slidersExplained": "Game Dev Tycoon Regler erklärt für Anfänger",
+    "researchOrder": "Game Dev Tycoon Beste Forschungsreihenfolge vollständige Liste",
+    "handbuch": "Game Dev Tycoon Vollständiges Handbuch",
+    "appGuide": "Game Dev Tycoon Advisor App-Leitfaden",
+    "privacy": "Datenschutzerklärung",
+    "sources": "Game Dev Tycoon Datenquellen & Vertrauensstufen"
+  },
+  "seo.description": {
+    "dashboard": "Finde die besten Kombinationen aus Thema, Genre & Plattform in Game Dev Tycoon. Kostenloser interaktiver Setup-Rechner und Empfehlungs-Tool für Anfänger.",
+    "topicRecommender": "Finde das beste Thema für jedes Genre in Game Dev Tycoon. Kompatibilitätsprüfung für Fantasy, Sci-Fi und alle anderen Themen.",
+    "genreRecommender": "Entdecke, mit welchem Genre du in Game Dev Tycoon am meisten Geld verdienst. Kostenloser Genre-Finder mit Gewinn- und Highscore-Analyse.",
+    "platformRecommender": "Finde die beste Konsole für dein nächstes Projekt in Game Dev Tycoon. Vergleich zwischen PC und Konsole sowie Guide zur Zielgruppen-Plattform-Übereinstimmung.",
+    "sliders": "Optimale Regler-Einstellungen für alle Genres in Game Dev Tycoon. Voreinstellungs-Tool mit Zeitverteilung für Phase 1, 2 und 3 für jedes Genre.",
+    "planner": "Plane dein nächstes Spiel in Game Dev Tycoon. Personalisierte Empfehlungen basierend auf deinem Speicherstand und deiner Veröffentlichungshistorie.",
+    "research": "Was man in Game Dev Tycoon zuerst erforschen sollte. Kompletter Guide mit Freischaltbedingungen für das F&E-Labor und Forschungspunktkosten.",
+    "staff": "Wie man Mitarbeiter in Game Dev Tycoon schnell ausbildet. Guide zu Design- vs. Technik-Spezialisten mit Erklärungen zum ausgewogenen Team-Setup.",
+    "timeline": "Jahr-für-Jahr-Fortschritts-Guide für Game Dev Tycoon. Konsolen-Veröffentlichungsplan, Zeitpunkte für Büro-Freischaltungen und wichtige Meilensteine.",
+    "checklist": "Prüfe alles, bevor du ein Spiel in Game Dev Tycoon veröffentlichst. Vermeide niedrige Wertungen mit unserer Schritt-für-Schritt-Veröffentlichungs-Checkliste.",
+    "faq": "Antworten auf häufige Fragen zu Game Dev Tycoon. Warum gehst du pleite? Wie bekommt man 10/10 Punkten? Tipps für Anfänger.",
+    "guide": "Anfänger-Guide von der Garage bis zu AAA in Game Dev Tycoon. Tipps, Tricks und Schritt-für-Schritt-Strategien für Highscores im Jahr 2025.",
+    "bestCombos": "Beste Kombinationen für hohe Wertungen in Game Dev Tycoon. Fantasy-RPG, Sci-Fi-Action und weitere top-bewertete Kombinationen im Ranking.",
+    "slidersExplained": "Wie funktionieren die Regler in Game Dev Tycoon? Erfahre, was jeder Regler bewirkt, welche Prioritäten in den Phasen gelten und wie sie die Wertungen beeinflussen.",
+    "researchOrder": "Beste Forschungsreihenfolge von der Garage bis zu AAA in Game Dev Tycoon. Komplette Liste der Forschungsfreischaltungen nach Jahr mit Prioritäten.",
+    "handbuch": "Komplettes Game Dev Tycoon Handbuch, das alle Spielmechaniken, Strategien, Tipps und fortgeschrittene Techniken abdeckt.",
+    "appGuide": "Erfahre, wie du den Game Dev Tycoon Advisor nutzt. Funktionen, Arbeitsabläufe und erste Schritte mit der App.",
+    "privacy": "Datenschutzerklärung für den Game Dev Tycoon Advisor. Erfahre mehr über unsere Datenpraktiken und deine Datenschutzrechte.",
+    "sources": "Von der Community bereitgestellte Daten und Vertrauensstufen, die der Game Dev Tycoon Advisor für präzise Empfehlungen nutzt."
+  },
+  "shareNudge": {
+    "text": "War dieses Tool hilfreich? Teile es mit anderen Spielern!",
+    "shareButton": "Teilen",
+    "copied": "Link kopiert!",
+    "shared": "Danke fürs Teilen!",
+    "shareText": "Ich habe das hier genutzt, um mein Gameplay in Game Dev Tycoon zu optimieren:"
   }
 }

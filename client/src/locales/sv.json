@@ -254,7 +254,10 @@
     "platforms": "Plattformar",
     "lastUpdate": "Senast uppdaterad",
     "getStarted": "Kom igång",
-    "getStartedDesc": "Välj ett rekommendationsverktyg för att hitta din perfekta speluppsättning"
+    "getStartedDesc": "Välj ett rekommendationsverktyg för att hitta din perfekta speluppsättning",
+    "h1": "Game Dev Tycoon Ämnesgenreplattformsrekommendationsverktyg",
+    "h2": "Vilket är det bästa spelet att göra i Game Dev Tycoon?",
+    "seoIntro": "Använd vår interaktiva guide för att upptäcka de bästa inställningarna och kombinationerna. Oavsett om du behöver en kombinationssökare, en fusklapp eller den bästa inställningen för nybörjare, hjälper den här planeraren och rekommendationen dig att göra ett bra spel varje gång."
   },
   "recommender": {
     "selectTopic": "Välj ett tema",
@@ -283,7 +286,16 @@
     "searchGenres": "Sök genrer...",
     "searchPlatforms": "Sök plattformar...",
     "confidenceTooltip": "Konfidensnivå baserad på källöverensstämmelse",
-    "score": "Poäng"
+    "score": "Poäng",
+    "topicH1": "Vilket ämne ska jag använda i Game Dev Tycoon?",
+    "topicH2": "Game Dev Tycoon Ämne Genre Combo Finder",
+    "topicSeoIntro": "Kontrollera vilket ämne som fungerar med action, RPG eller någon annan genre. Vår ämneskompatibilitetskontroll hjälper dig att hitta det bästa ämnet för RPG-spel, ta reda på om fantasy eller sci-fi ger den bästa genrekombinationen och jämför konstiga kontra fantastiska kombinationsämneslistor. Använd det här verktyget för ämnes- och publikmatchning för att maximera dina recensionspoäng.",
+    "genreH1": "Vilken genre tjänar mest pengar i Game Dev Tycoon?",
+    "genreH2": "Game Dev Tycoon Genre Picker Tool",
+    "genreSeoIntro": "Hitta den mest lönsamma genren för tidigt spel och sent spel. Jämför action mot RPG för att se vilket som är bättre, få tips om simuleringsgenren och installationsråd och upptäck den bästa genren för höga poäng. Utforska kombinationer av flera genrer som fungerar, avslappnade genrereglar och ämnesinställningar, och lär dig vilket ämne du ska välja för strategigenren.",
+    "platformH1": "Game Dev Tycoon – Vilken konsol ska man rikta in sig på",
+    "platformH2": "PC vs Konsol – Vilket är bättre i Game Dev Tycoon?",
+    "platformSeoIntro": "Använd vår marknadsandelsguide för plattformar för att hitta den bästa konsolen för spel för en mogen publik. Upptäck Gameling bästa genre-ämneskombination, vilka spel du ska göra för mBox och använd vårt plattformkompatibilitetsverktyg. Om du ska göra spel för PC eller konsol beror på din publik – den här publikplattformsmatchningsguiden hjälper dig att bestämma dig."
   },
   "sliders": {
     "title": "Reglagemallar",
@@ -343,7 +355,15 @@
     "swapGenres": "Byt Primär ↔ Sekundär",
     "selectBothGenres": "Välj två genrer",
     "selectBothGenresDesc": "Välj en primär och sekundär genre för att se blandade reglage-inställningar",
-    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Reglage-förinställningar"
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Reglage-förinställningar",
+    "h1": "Game Dev Tycoon Optimala procentandelar för reglage",
+    "h2": "RPG-reglageinställningar – Fas 1, 2 och 3",
+    "seoIntro": "Få rätt tidsallokering för actionreglage och äventyrsgenreguiden för varje spel. Den här fusklappen för reglage täcker alla genrer, inklusive procentandelar för simuleringsreglage och fasallokering för strategireglage. Ta reda på vilka reglage du ska använda för den avslappnade genren, använd vårt verktyg för förinställningar för reglage per genre, förstå förhållandet mellan teknisk design och lär dig hur du ställer in reglagen korrekt för maximala recensionspoäng.",
+    "explainedBox": {
+      "title": "Hur fungerar reglagen egentligen?",
+      "text": "Är du osäker på varför dina recensionspoäng är låga? Reglagen styr hur utvecklingstiden fördelas mellan design- och teknikpoäng över tre faser. Varje genre har olika fasvikter som avgör vilka reglage som spelar störst roll. Att förstå reglagemekaniken, balansen mellan design och teknik och hur fasprioriteringar påverkar ditt slutresultat är nyckeln till att få 10/10 recensioner.",
+      "linkText": "Läs vår kompletta guide Game Dev Tycoon Reglage förklaras →"
+    }
   },
   "planner": {
     "title": "Spelplanerare",
@@ -395,7 +415,20 @@
       "unlockTopic": "Lås upp {{name}} för att bredda ditt spelutbud.",
       "unlockGenre": "Lås upp genren {{name}} för nya spelmöjligheter.",
       "feature": "Förbättrar grafikkvaliteten för framtida AAA-titlar."
-    }
+    },
+    "unlockedTopicsFilter": {
+      "title": "Filtrera efter upplåsta ämnen",
+      "description": "Använd endast ämnen som du redan har låst upp i din sparning.",
+      "searchPlaceholder": "Sök ämnen...",
+      "selectAll": "Välj alla",
+      "clear": "Rensa",
+      "selectedCount": "{{selected}}/{{total}} valda",
+      "noTopics": "Inga ämnen hittades.",
+      "emptyFallbackWarning": "Inga valda ämnen är tillgängliga för närvarande. Använder alla ämnen som reserv."
+    },
+    "h1": "Game Dev Tycoon – Nästa spelrekommendation baserat på sparfil",
+    "h2": "Vad man ska skapa härnäst baserat på din spelhistorik",
+    "seoIntro": "Använd den här forskningsprioriteringsplaneraren och det personliga spelrådgivningsverktyget för att bestämma vad du ska undersöka härnäst i mitten av spelet. Planera din nästa release efter en kombinationsupprepning, spåra dina kombinationer med vårt kombinationsspårningsverktyg, använd genre rotationsplaneraren och lär dig hur du planerar din spelpipeline för maximal tillväxt."
   },
   "research": {
     "title": "Forskningsguide",
@@ -505,12 +538,9 @@
         "tip": "Investering i framtidens teknik"
       }
     },
-    "researchOrderBox": {
-      "title": "Rekommenderad forskningsordning",
-      "body": "Vet du inte vad du ska låsa upp först? Följ vår steg-för-steg-guide.",
-      "linkText": "Visa forskningsguide",
-      "enBadge": "EN"
-    }
+    "h1": "Vad man ska undersöka först i Game Dev Tycoon",
+    "h2": "Hur man får forskningspoäng snabbt",
+    "seoIntro": "Lär dig kraven för att låsa upp FoU-labbet och använd vår guide för att farma forskningspoäng för att göra framsteg effektivt. Följ listan över bästa forskningsprioriteringar, vet när du ska låsa upp medelstora spel och ta reda på hur du låser upp AAA-spel genom forskning. Kontrollera forskningspoängkostnaden per ämne och använd denna kompletta forskningsguide från garage till AAA."
   },
   "staff": {
     "title": "Personalguide",
@@ -603,7 +633,10 @@
         "title": "Konsolutveckling",
         "description": "Att bygga en konsol kräver 2–3 dedikerade medarbetare under 6+ månader. Planera din teamkapacitet därefter."
       }
-    }
+    },
+    "h1": "Hur man tränar anställda snabbt i Game Dev Tycoon",
+    "h2": "Design vs Tech Specialist – Vad är skillnaden?",
+    "seoIntro": "Lär dig när du ska specialisera personal och hur många anställda du behöver för varje fas. Förstå alla personalroller förklarade i detalj, upptäck hur du anställer bättre anställda och jämför anställdas statistik som design, teknik, forskning och hastighet. Den här guiden täcker också personalutbrändhet och semesterhantering och visar dig den balanserade teaminställningen förklarad steg för steg."
   },
   "timeline": {
     "title": "Tidslinje",
@@ -740,7 +773,10 @@
         "description": "Stort team + egen motor + ordentlig marknadsföring = AAA-framgång.",
         "action": "Försök bara med AAA-spel om du har ett erfaret team"
       }
-    }
+    },
+    "h1": "Game Dev Tycoon År för år framstegsguide",
+    "h2": "När kommer nya plattformar ut?",
+    "seoIntro": "Hitta krav och tidpunkter för att låsa upp kontor, det fullständiga schemat för konsolsläpp i spelet och lär dig när mBox kommer ut. Använd vår guide för plattformsläppdatum för att spåra milstolparna år 3, år 5 och år 10. Vet exakt när du ska flytta till det andra kontoret och följ hela framstegstidslinjen från början till slut."
   },
   "checklist": {
     "title": "Checklista för spelframsteg",
@@ -759,7 +795,10 @@
     "noItemsYet": "Inga uppgifter ännu",
     "addItemsHint": "Lägg till egna uppgifter eller välj milstolpar nedan för att komma igång.",
     "suggestedMilestones": "Föreslagna milstolpar",
-    "suggestedMilestonesHint": "Viktiga händelser från tidslinjen som du kanske vill följa:"
+    "suggestedMilestonesHint": "Viktiga händelser från tidslinjen som du kanske vill följa:",
+    "h1": "Saker att kontrollera innan du släpper ett spel i Game Dev Tycoon",
+    "h2": "Checklista för att undvika låga poäng",
+    "seoIntro": "Använd denna lista över vanliga misstag att undvika före varje release. Innehåller checklistan för AAA-spel före release, kravlista för uppföljare och checklista för spelmotorer innan du startar ett nytt spel. Följ vår steg-för-steg-guide för spelreleaser, granska kvalitetschecklistan för grafik, personal och reglage, och lär dig hur du undviker dåliga recensioner med denna omfattande checklista."
   },
   "faq": {
     "title": "Vanliga frågor (FAQ)",
@@ -840,20 +879,9 @@
         "answer": "Utveckla den bästa motorn genom att: 1) Ha hög teknikkompetens i teamet, 2) Inkludera alla tillgängliga funktioner, 3) Investera tillräckligt med tid och pengar, 4) Uppdatera regelbundet. En bra motor kan användas till flera spel och sparar tid i längden."
       }
     },
-    "links": {
-      "moreTo": "Mer om detta:",
-      "topicRecommender": "Ämnesrekommendatör",
-      "platformRecommender": "Plattformsrekommendatör",
-      "sliders": "Reglageinställningar",
-      "slidersPage": "Reglageguide",
-      "staff": "Personalguide",
-      "handbuch": "Spelhandbok",
-      "research": "Forskningsguide",
-      "researchOrder": "Forskningsordning",
-      "timeline": "Tidslinje",
-      "planner": "Spelplanerare",
-      "checklist": "Checklista"
-    }
+    "h1": "Varför fortsätter jag att gå i konkurs i Game Dev Tycoon?",
+    "h2": "Hur man får 10/10 i betyg i Game Dev Tycoon",
+    "seoIntro": "Förstå straffavgiften för samma kombination, lär dig om hur buggar påverkar recensionsbetyget och få koll på regler och timing för uppföljare. Ta reda på om Game Dev Tycoon har multiplayer, hur lång en genomspelning tar och skillnaden mellan poäng och recensionsbetyg. Få viktiga tips för nybörjare för att undvika att bli pank."
   },
   "manual": {
     "title": "Game Dev Tycoon-handbok",
@@ -1090,9 +1118,7 @@
         "Från grunder till avancerat",
         "Perfekt som uppslagsverk medan du spelar"
       ]
-    },
-    "openTool": "Öppna verktyget",
-    "startWorkflow": "Kom igång"
+    }
   },
   "guide": {
     "title": "Guide för Game Dev Tycoon",
@@ -1149,7 +1175,10 @@
       "description": "Öppna rekommenderaren och presets för att tillämpa råden i nästa spel.",
       "primary": "Hitta bästa genren för ditt tema",
       "secondary": "Öppna reglagepresets"
-    }
+    },
+    "h1": "Nybörjarguide för Game Dev Tycoon – Från garage till AAA",
+    "h2": "Tips och tricks för höga poäng",
+    "seoIntro": "Lär dig hur du bygger en miljardstudio och överlever garagefasen. Denna steg-för-steg-strategiguide visar hur du konsekvent får betyg 10, med tips för mitten av spelet om att expandera kontor och personal, sen-spels-strategi för anpassade konsoler och MMO-utveckling, samt tips för mobilversionerna till iOS och Android."
   },
   "bestCombos": {
     "title": "Bästa tema-genre-kombinationer",
@@ -1188,7 +1217,10 @@
       "description": "Använd rekommenderaren för att sortera teman efter fit och upplåsningsår.",
       "primary": "Använd genrerekommenderaren",
       "secondary": "Kolla reglagepresets"
-    }
+    },
+    "h1": "Bästa kombinationerna för höga recensionsbetyg i Game Dev Tycoon",
+    "h2": "Fantasy RPG-kombination – Så spelar du",
+    "seoIntro": "Upptäck de bästa inställningarna för sci-fi action-kombinationer och den bästa kombinationen för en mogen publik på PC. Utforska kombinationsguiden för adventure tidsresor, postapokalyptiska RPG-kombinationer och den bästa multigenre-kombinationen för action adventure. Se topprankade kombinationer för alla genrer 2025 och förstå skillnaden mellan en konstig kombination och en fantastisk kombination."
   },
   "slidersExplained": {
     "title": "Reglagen i Game Dev Tycoon förklarade",
@@ -1245,7 +1277,10 @@
       "description": "Använd presets för att kopiera bästa reglagevärden direkt.",
       "primary": "Öppna reglagepresets",
       "secondary": "Hitta bästa genre"
-    }
+    },
+    "h1": "Hur fungerar reglagen i Game Dev Tycoon?",
+    "h2": "Vad gör varje reglage?",
+    "seoIntro": "Förstå effekten av reglagen för motor, gameplay och berättelse på dina spel. Lär dig prioriteringar för reglagen i fas 1, 2 och 3 förklarade i detalj, reglagens inverkan på recensionsbetyget och reglageguiden för teknik/design-förhållande. Undvik misstag med reglagen som ger låga betyg, få reglageguiden för action-, RPG- och simuleringsgenrer och bemästra reglagen för tidsallokering i alla faser."
   },
   "researchOrder": {
     "title": "Forskningsordning i Game Dev Tycoon",
@@ -1302,7 +1337,10 @@
       "description": "Håll koll på upplåsningar och krav i Research Guide.",
       "primary": "Öppna Research Guide",
       "secondary": "Följ Timeline"
-    }
+    },
+    "h1": "Vad du bör forska om först i garaget",
+    "h2": "Upplåsningsordning för forskning efter år",
+    "seoIntro": "Följ de bästa forskningsprioriteringarna från nybörjare till AAA. Lär dig upplåsningsordningen för forskning i FoU-labbet, forskningsordningen för 3D-grafik från v1 till v7 och bläddra i den fullständiga guiden för forskningsträdet. Ta reda på hur du låser upp forskning om flera genrer, kontrollera forskningskostnad och tidsåtgång samt förstå kraven för att låsa upp forskning i hårdvarulabbet."
   },
   "sources": {
     "title": "Datakällor",
@@ -1392,53 +1430,151 @@
       "appGuide": "Funktioner, arbetsflöden & kom igång",
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Communitydata & förtroendenivåer"
+    },
+    "brand": "Game Dev Tycoon Advisor",
+    "title": {
+      "dashboard": "Kalkylator för optimal spelinställning i Game Dev Tycoon",
+      "topicRecommender": "Bästa ämnen för varje genre i Game Dev Tycoon",
+      "genreRecommender": "Bästa genre att utveckla i Game Dev Tycoon",
+      "platformRecommender": "Bästa plattformar för varje genre i Game Dev Tycoon",
+      "sliders": "Reglageinställningar för varje genre i Game Dev Tycoon",
+      "planner": "Planeringsverktyg för sparfiler i Game Dev Tycoon",
+      "research": "Forskningsordning för tidigt spel i Game Dev Tycoon",
+      "staff": "Guide för bästa personalspecialiseringar i Game Dev Tycoon",
+      "timeline": "Tidslinje för upplåsning av alla byggnader i Game Dev Tycoon",
+      "checklist": "Checklista inför spelsläpp i Game Dev Tycoon",
+      "faq": "Varför får mina spel låga betyg i Game Dev Tycoon",
+      "guide": "Komplett guide till Game Dev Tycoon 2025",
+      "bestCombos": "Lista över bästa kombinationer av genre och ämne i Game Dev Tycoon",
+      "slidersExplained": "Förklaring av reglage i Game Dev Tycoon för nybörjare",
+      "researchOrder": "Komplett lista över bästa forskningsordning i Game Dev Tycoon",
+      "handbuch": "Komplett manual för Game Dev Tycoon",
+      "appGuide": "Appguide för Game Dev Tycoon Advisor",
+      "privacy": "Integritetspolicy",
+      "sources": "Datakällor och tillförlitlighetsnivåer för Game Dev Tycoon"
+    },
+    "description": {
+      "dashboard": "Hitta de bästa kombinationerna av ämne, genre och plattform i Game Dev Tycoon. Gratis interaktiv kalkylator och rekommendationsverktyg för nybörjare.",
+      "topicRecommender": "Hitta det bästa ämnet för valfri genre i Game Dev Tycoon. Kompatibilitetskontroll för ämnen och genrer för fantasy, sci-fi och alla ämnen.",
+      "genreRecommender": "Upptäck vilken genre som tjänar mest pengar i Game Dev Tycoon. Gratis verktyg för genreväljare med analys av vinst och poäng.",
+      "platformRecommender": "Hitta den bästa konsolen att satsa på i Game Dev Tycoon. Jämförelse mellan PC och konsol samt guide för matchning av publik och plattform.",
+      "sliders": "Optimala procentsatser för reglage för alla genrer i Game Dev Tycoon. Förinställningsverktyg med tidsfördelning för fas 1, 2 och 3 för varje genre.",
+      "planner": "Planera ditt nästa spel i Game Dev Tycoon. Personliga rekommendationer baserade på ditt speltillstånd och din utgivningshistorik.",
+      "research": "Vad du ska forska på först i Game Dev Tycoon. Komplett guide med krav för att låsa upp FoU-labbet och kostnader för forskningspoäng.",
+      "staff": "Hur man tränar anställda snabbt i Game Dev Tycoon. Guide för design- jämfört med teknikspecialister med förklaring av balanserad teamuppsättning.",
+      "timeline": "Steg-för-steg-guide för framsteg år för år i Game Dev Tycoon. Schema för konsolsläpp, tidpunkt för att låsa upp kontor och viktiga milstolpar.",
+      "checklist": "Kontrollera allt innan du ger ut ett spel i Game Dev Tycoon. Undvik låga poäng med vår steg-för-steg-checklista för utgivning.",
+      "faq": "Svar på vanliga frågor om Game Dev Tycoon. Varför går du i konkurs hela tiden? Hur får man 10/10? Tips för nybörjare.",
+      "guide": "Nybörjarguide från garage till AAA i Game Dev Tycoon. Tips, tricks och steg-för-steg-strategi för höga poäng 2025.",
+      "bestCombos": "Bästa kombinationerna för höga recensionspoäng i Game Dev Tycoon. Fantasy-RPG, sci-fi-action och fler topprankade kombinationer.",
+      "slidersExplained": "Hur fungerar reglagen i Game Dev Tycoon? Lär dig vad varje reglage gör, prioriteringar i faserna och påverkan på recensionspoäng.",
+      "researchOrder": "Bästa forskningsordningen från garage till AAA i Game Dev Tycoon. Komplett lista över forskningsupplåsningar per år med prioriteringar.",
+      "handbuch": "Komplett manual för Game Dev Tycoon som täcker alla spelmekaniker, strategier, tips och avancerade tekniker.",
+      "appGuide": "Lär dig hur du använder Game Dev Tycoon Advisor. Funktioner, arbetsflöden och hur du kommer igång med appen.",
+      "privacy": "Integritetspolicy för Game Dev Tycoon Advisor. Lär dig om vår datapraxis och dina integritetsrättigheter.",
+      "sources": "Data från communityn och tillförlitlighetsnivåer som används av Game Dev Tycoon Advisor för korrekta rekommendationer."
     }
   },
-  "nextStep": {
-    "label": "Nästa steg",
-    "topicToGenre": {
-      "title": "Välj nu det bästa genret",
-      "body": "Använd ditt ämne för att hitta genrekombinationer med högsta poäng."
-    },
-    "genreToPlatform": {
-      "title": "Hitta den bästa plattformen",
-      "body": "Matcha ditt genre med den bästa plattformen och målgruppen för maximala recensionspoäng."
-    },
-    "platformToSliders": {
-      "title": "Hämta din sliderinställning",
-      "body": "Tillämpa de optimala sliderinställningarna för ditt genre i alla tre utvecklingsfaserna."
-    },
-    "slidersToPlanner": {
-      "title": "Planera din nästa release",
-      "body": "Ange ditt sparläge och få personliga rekommendationer för release och forskning."
-    },
-    "plannerToChecklist": {
-      "title": "Kontrollera innan publicering",
-      "body": "Gå igenom checklistan för att undvika vanliga misstag innan du skickar in ditt spel."
-    },
-    "timelineToPlatform": {
-      "title": "Välj rätt plattform",
-      "body": "Använd plattformsrekommendatorn för att hitta den bästa plattformen för din nuvarande era."
-    },
-    "timelineToResearch": {
-      "title": "Prioritera forskning",
-      "body": "Planera vilka teknologier du ska låsa upp härnäst baserat på ditt nuvarande spelår."
-    },
-    "timelineToChecklist": {
-      "title": "Följ dina milstolpar",
-      "body": "Lägg till viktiga milstolpar i din checklista och följ dina framsteg i spelet."
-    },
-    "plannerToResearch": {
-      "title": "Prioritera forskning",
-      "body": "Se vilka teknologier du bör låsa upp först för att maximera dina poäng."
-    },
-    "staffToHandbook": {
-      "title": "Bakgrund & regler i handboken",
-      "body": "Lär dig detaljerade teammekaniker, anställningsregler och träningsstrategier i spelmanualen."
-    },
-    "handbookToStaff": {
-      "title": "Praktiska teamuppsättningar & tips",
-      "body": "Konkreta personalrekommendationer för varje fas av spelet."
-    }
+  "sliders.explainedBox": {
+    "title": "Hur fungerar reglagen egentligen?",
+    "text": "Är du osäker på varför dina recensionspoäng är låga? Reglagen styr hur utvecklingstiden fördelas mellan design- och teknikpoäng över tre faser. Varje genre har olika fasvikter som avgör vilka reglage som spelar störst roll. Att förstå reglagemekaniken, balansen mellan design och teknik och hur fasprioriteringar påverkar ditt slutresultat är nyckeln till att få 10/10 recensioner.",
+    "linkText": "Läs vår kompletta guide Game Dev Tycoon Reglage förklaras →"
+  },
+  "planner.unlockedTopicsFilter": {
+    "title": "Filtrera efter upplåsta ämnen",
+    "description": "Använd endast ämnen som du redan har låst upp i din sparning.",
+    "searchPlaceholder": "Sök ämnen...",
+    "selectAll": "Välj alla",
+    "clear": "Rensa",
+    "selectedCount": "{{selected}}/{{total}} valda",
+    "noTopics": "Inga ämnen hittades.",
+    "emptyFallbackWarning": "Inga valda ämnen är tillgängliga för närvarande. Använder alla ämnen som reserv."
+  },
+  "schema.research.steps": [
+    "Forska om 2D-grafik v2–v4, sedan 3D-grafik v1–v5 för att låsa upp förbättringar av den visuella kvaliteten för högre recensionsbetyg.",
+    "Forska om ljudteknik för att förbättra ljudkvaliteten. Prioritera efter att grundläggande grafik har låsts upp.",
+    "Lås upp gameplay-funktioner som multiplayer, online och nivåredigerare för att utöka spelets omfattning och publik.",
+    "Forska om AI-teknik för att förbättra NPC-beteenden och kvaliteten på interaktioner i spelvärlden.",
+    "Utveckla anpassad hårdvara och konsoler i hårdvarulabbet för maximal intäktspotential."
+  ],
+  "schema.staff.steps": [
+    "Soloutvecklingsfas (År 1–4). Fokusera på att bygga färdigheter och spara pengar innan du anställer. Träna design- och teknikfärdigheter jämnt.",
+    "Anställ dina första medarbetare (År 5–10). Prioritera specialister med hög teknik- eller designstatistik. Börja träna personalens färdigheter.",
+    "Utöka ditt team för större projekt. Balansera specialister mellan teknik, design och snabbhet. Börja använda träningssystemet.",
+    "Lås upp FoU-labbet för att forska om ny teknik. Tilldela dedikerade forskare med hög statistik för snabbare genombrott.",
+    "Bygg hårdvarulabbet för att utveckla egna konsoler. Kräver specialiserad personal och betydande investeringar för maximal avkastning."
+  ],
+  "schema.timeline.stepNames": [
+    "År 1–5: Garagefasen",
+    "År 6–10: Första kontoret",
+    "År 11–15: Tillväxtfasen",
+    "År 16–20: FoU-eran",
+    "År 21–35: Hårdvara och arv"
+  ],
+  "schema.timeline.steps": [
+    "Börja i garaget. Utveckla små spel, bygg färdigheter och spara pengar. Satsa på textbaserade spel och 2D-spel på tidiga plattformar.",
+    "Flytta till det första kontoret, anställ personal och ta dig an medelstora projekt. Forska om nyckelteknik och expandera till nyare plattformar.",
+    "Uppgradera till det andra kontoret, bygg större team. Lås upp spelstorlekarna MMO och AAA. Utveckla uppföljare till framgångsrika titlar.",
+    "Bygg FoU-labbet för avancerad forskning. Utveckla egna spelmotorer. Satsa på högpresterande plattformar för maximala betyg.",
+    "Bygg hårdvarulabb, utveckla anpassade konsoler. Skapa AAA-blockbusters och dominera alla plattformar. Uppnå legendarisk status."
+  ],
+  "schema.checklist.stepNames": [
+    "Granska milstolpar i tidslinjen",
+    "Lägg till anpassade mål",
+    "Följ slutförande"
+  ],
+  "schema.checklist.steps": [
+    "Bläddra bland milstolparna i tidslinjen och lägg till de viktigaste i din personliga checklista för uppföljning.",
+    "Skapa dina egna anpassade mål och uppgifter för att följa specifika prestationer eller strategier.",
+    "Bocka av avklarade milstolpar allt eftersom du spelar för att hålla koll på dina framsteg."
+  ],
+  "seo.title": {
+    "dashboard": "Kalkylator för optimal spelinställning i Game Dev Tycoon",
+    "topicRecommender": "Bästa ämnen för varje genre i Game Dev Tycoon",
+    "genreRecommender": "Bästa genre att utveckla i Game Dev Tycoon",
+    "platformRecommender": "Bästa plattformar för varje genre i Game Dev Tycoon",
+    "sliders": "Reglageinställningar för varje genre i Game Dev Tycoon",
+    "planner": "Planeringsverktyg för sparfiler i Game Dev Tycoon",
+    "research": "Forskningsordning för tidigt spel i Game Dev Tycoon",
+    "staff": "Guide för bästa personalspecialiseringar i Game Dev Tycoon",
+    "timeline": "Tidslinje för upplåsning av alla byggnader i Game Dev Tycoon",
+    "checklist": "Checklista inför spelsläpp i Game Dev Tycoon",
+    "faq": "Varför får mina spel låga betyg i Game Dev Tycoon",
+    "guide": "Komplett guide till Game Dev Tycoon 2025",
+    "bestCombos": "Lista över bästa kombinationer av genre och ämne i Game Dev Tycoon",
+    "slidersExplained": "Förklaring av reglage i Game Dev Tycoon för nybörjare",
+    "researchOrder": "Komplett lista över bästa forskningsordning i Game Dev Tycoon",
+    "handbuch": "Komplett manual för Game Dev Tycoon",
+    "appGuide": "Appguide för Game Dev Tycoon Advisor",
+    "privacy": "Integritetspolicy",
+    "sources": "Datakällor och tillförlitlighetsnivåer för Game Dev Tycoon"
+  },
+  "seo.description": {
+    "dashboard": "Hitta de bästa kombinationerna av ämne, genre och plattform i Game Dev Tycoon. Gratis interaktiv kalkylator och rekommendationsverktyg för nybörjare.",
+    "topicRecommender": "Hitta det bästa ämnet för valfri genre i Game Dev Tycoon. Kompatibilitetskontroll för ämnen och genrer för fantasy, sci-fi och alla ämnen.",
+    "genreRecommender": "Upptäck vilken genre som tjänar mest pengar i Game Dev Tycoon. Gratis verktyg för genreväljare med analys av vinst och poäng.",
+    "platformRecommender": "Hitta den bästa konsolen att satsa på i Game Dev Tycoon. Jämförelse mellan PC och konsol samt guide för matchning av publik och plattform.",
+    "sliders": "Optimala procentsatser för reglage för alla genrer i Game Dev Tycoon. Förinställningsverktyg med tidsfördelning för fas 1, 2 och 3 för varje genre.",
+    "planner": "Planera ditt nästa spel i Game Dev Tycoon. Personliga rekommendationer baserade på ditt speltillstånd och din utgivningshistorik.",
+    "research": "Vad du ska forska på först i Game Dev Tycoon. Komplett guide med krav för att låsa upp FoU-labbet och kostnader för forskningspoäng.",
+    "staff": "Hur man tränar anställda snabbt i Game Dev Tycoon. Guide för design- jämfört med teknikspecialister med förklaring av balanserad teamuppsättning.",
+    "timeline": "Steg-för-steg-guide för framsteg år för år i Game Dev Tycoon. Schema för konsolsläpp, tidpunkt för att låsa upp kontor och viktiga milstolpar.",
+    "checklist": "Kontrollera allt innan du ger ut ett spel i Game Dev Tycoon. Undvik låga poäng med vår steg-för-steg-checklista för utgivning.",
+    "faq": "Svar på vanliga frågor om Game Dev Tycoon. Varför går du i konkurs hela tiden? Hur får man 10/10? Tips för nybörjare.",
+    "guide": "Nybörjarguide från garage till AAA i Game Dev Tycoon. Tips, tricks och steg-för-steg-strategi för höga poäng 2025.",
+    "bestCombos": "Bästa kombinationerna för höga recensionspoäng i Game Dev Tycoon. Fantasy-RPG, sci-fi-action och fler topprankade kombinationer.",
+    "slidersExplained": "Hur fungerar reglagen i Game Dev Tycoon? Lär dig vad varje reglage gör, prioriteringar i faserna och påverkan på recensionspoäng.",
+    "researchOrder": "Bästa forskningsordningen från garage till AAA i Game Dev Tycoon. Komplett lista över forskningsupplåsningar per år med prioriteringar.",
+    "handbuch": "Komplett manual för Game Dev Tycoon som täcker alla spelmekaniker, strategier, tips och avancerade tekniker.",
+    "appGuide": "Lär dig hur du använder Game Dev Tycoon Advisor. Funktioner, arbetsflöden och hur du kommer igång med appen.",
+    "privacy": "Integritetspolicy för Game Dev Tycoon Advisor. Lär dig om vår datapraxis och dina integritetsrättigheter.",
+    "sources": "Data från communityn och tillförlitlighetsnivåer som används av Game Dev Tycoon Advisor för korrekta rekommendationer."
+  },
+  "shareNudge": {
+    "text": "Var detta verktyg användbart? Dela det med andra spelare!",
+    "shareButton": "Dela",
+    "copied": "Länk kopierad!",
+    "shared": "Tack för att du delar!",
+    "shareText": "Jag använde detta för att optimera mitt Game Dev Tycoon-spelande:"
   }
 }

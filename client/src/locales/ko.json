@@ -254,7 +254,10 @@
     "platforms": "플랫폼",
     "lastUpdate": "마지막 업데이트",
     "getStarted": "시작하기",
-    "getStartedDesc": "추천 도구를 선택하여 완벽한 게임 설정 찾기"
+    "getStartedDesc": "추천 도구를 선택하여 완벽한 게임 설정 찾기",
+    "h1": "Game Dev Tycoon 주제 장르 플랫폼 추천 도구",
+    "h2": "Game Dev Tycoon에서 만들기 가장 좋은 게임은 무엇인가요?",
+    "seoIntro": "인터랙티브 가이드 도구를 사용하여 최적의 설정과 조합을 찾아보세요. 조합 검색기, 치트 시트, 초보자를 위한 최적의 설정 등 무엇이 필요하든 이 플래너와 추천 도구가 매번 좋은 게임을 만들 수 있도록 도와줍니다."
   },
   "recommender": {
     "selectTopic": "주제 선택",
@@ -283,7 +286,16 @@
     "searchGenres": "장르 검색...",
     "searchPlatforms": "플랫폼 검색...",
     "confidenceTooltip": "소스 합의 기반 신뢰 수준",
-    "score": "점수"
+    "score": "점수",
+    "topicH1": "Game Dev Tycoon에서 어떤 주제를 사용해야 하나요?",
+    "topicH2": "Game Dev Tycoon 주제 장르 콤보 검색기",
+    "topicSeoIntro": "어떤 주제가 액션, RPG 또는 다른 장르와 잘 어울리는지 확인하세요. 주제 호환성 확인 도구를 통해 RPG 게임에 가장 적합한 주제를 찾고, 판타지나 SF 중 어떤 것이 최고의 장르 조합을 제공하는지 알아보고, 기발한 조합과 환상적인 조합 주제 목록을 비교해 보세요. 이 주제 및 대상 일치 도구를 사용하여 리뷰 점수를 극대화하세요.",
+    "genreH1": "Game Dev Tycoon에서 어떤 장르가 가장 돈을 많이 버나요?",
+    "genreH2": "Game Dev Tycoon 장르 선택 도구",
+    "genreSeoIntro": "초반부와 후반부에 가장 수익성이 높은 장르를 찾아보세요. 액션과 RPG를 비교하여 어느 쪽이 더 나은지 확인하고, 시뮬레이션 장르 팁과 설정 조언을 얻고, 높은 점수를 위한 최적의 장르를 발견하세요. 효과적인 다중 장르 조합, 캐주얼 장르 슬라이더 및 주제 설정을 살펴보고 전략 장르에 어떤 주제를 선택해야 하는지 알아보세요.",
+    "platformH1": "Game Dev Tycoon – 어떤 콘솔을 목표로 삼아야 할까",
+    "platformH2": "PC vs 콘솔 – Game Dev Tycoon에서 어느 쪽이 더 나을까?",
+    "platformSeoIntro": "플랫폼 시장 점유율 가이드를 사용하여 성인 타겟 게임에 가장 적합한 콘솔을 찾아보세요. Gameling의 최고 장르 주제 콤보, mBox용으로 어떤 게임을 만들어야 하는지 알아보고 플랫폼 호환성 도구를 활용하세요. PC용 게임을 만들지 콘솔용 게임을 만들지는 타겟 오디언스에 달려 있습니다. 이 오디언스 플랫폼 일치 가이드가 결정을 도와드립니다."
   },
   "sliders": {
     "title": "슬라이더 사전 설정",
@@ -343,7 +355,15 @@
     "swapGenres": "주 장르 ↔ 부 장르 교체",
     "selectBothGenres": "두 장르 선택",
     "selectBothGenresDesc": "혼합 슬라이더 설정을 보려면 주 장르와 부 장르를 선택하세요",
-    "multiGenrePresetsFor": "{{primary}} / {{secondary}} 슬라이더 프리셋"
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} 슬라이더 프리셋",
+    "h1": "Game Dev Tycoon 최적의 슬라이더 퍼센트",
+    "h2": "RPG 슬라이더 설정 – 단계 1, 2, 3",
+    "seoIntro": "모든 게임에 대한 적절한 액션 슬라이더 시간 할당과 어드벤처 장르 슬라이더 가이드를 확인하세요. 이 슬라이더 치트 시트는 시뮬레이션 슬라이더 퍼센트 및 전략 슬라이더 단계별 할당을 포함한 모든 장르를 다룹니다. 캐주얼 장르에 어떤 슬라이더를 사용할지 알아보고, 장르별 슬라이더 프리셋 도구를 사용하고, 기술/디자인 비율을 이해하며, 최대 리뷰 점수를 위해 슬라이더를 올바르게 설정하는 방법을 배우세요.",
+    "explainedBox": {
+      "title": "슬라이더는 실제로 어떻게 작동하나요?",
+      "text": "왜 리뷰 점수가 낮은지 궁금하신가요? 슬라이더는 세 단계에 걸쳐 개발 시간을 디자인 포인트와 기술 포인트로 나누는 방식을 제어합니다. 각 장르마다 어떤 슬라이더가 가장 중요한지 결정하는 단계별 가중치가 다릅니다. 슬라이더 메커니즘, 디자인 대 기술의 균형, 단계별 우선순위가 최종 점수에 미치는 영향을 이해하는 것이 10/10 리뷰를 받는 핵심입니다.",
+      "linkText": "Game Dev Tycoon 슬라이더 설명 전체 가이드 읽기 →"
+    }
   },
   "planner": {
     "title": "게임 플래너",
@@ -395,7 +415,20 @@
       "unlockTopic": "게임 포트폴리오를 확장하기 위해 {{name}} 해제.",
       "unlockGenre": "새로운 게임 기회를 위해 {{name}} 장르 해제.",
       "feature": "향후 AAA 타이틀의 그래픽 품질 향상."
-    }
+    },
+    "unlockedTopicsFilter": {
+      "title": "잠금 해제된 주제로 필터링",
+      "description": "저장 파일에서 이미 잠금 해제한 주제만 사용합니다.",
+      "searchPlaceholder": "주제 검색...",
+      "selectAll": "모두 선택",
+      "clear": "지우기",
+      "selectedCount": "{{selected}}/{{total}}개 선택됨",
+      "noTopics": "주제를 찾을 수 없습니다.",
+      "emptyFallbackWarning": "선택한 주제를 현재 사용할 수 없습니다. 대체 수단으로 모든 주제를 사용합니다."
+    },
+    "h1": "Game Dev Tycoon – 저장 데이터를 기반으로 한 다음 게임 추천",
+    "h2": "게임 이력을 기반으로 다음에 제작할 게임",
+    "seoIntro": "이 연구 우선순위 플래너와 맞춤형 게임 조언 도구를 사용하여 게임 중반에 다음에 무엇을 연구할지 결정하세요. 콤보 반복 후 다음 출시를 계획하고, 콤보 추적 도구로 콤보를 추적하고, 장르 로테이션 플래너를 사용하며, 최대 성장을 위한 게임 파이프라인 계획 방법을 알아보세요."
   },
   "research": {
     "title": "연구 가이드",
@@ -505,12 +538,9 @@
         "tip": "미래 기술 투자"
       }
     },
-    "researchOrderBox": {
-      "title": "권장 연구 순서",
-      "body": "무엇을 먼저 해금해야 할지 모르겠나요? 단계별 가이드를 따르세요.",
-      "linkText": "연구 가이드 보기",
-      "enBadge": "EN"
-    }
+    "h1": "Game Dev Tycoon에서 무엇을 먼저 연구해야 할까",
+    "h2": "연구 포인트를 빠르게 얻는 방법",
+    "seoIntro": "R&D 실험실 해금 요구 사항을 배우고 연구 포인트 파밍 가이드를 사용하여 효율적으로 진행하세요. 최적의 연구 우선순위 목록을 따르고, 중형 게임을 해금할 시기를 파악하며, 연구를 통해 AAA 게임을 해금하는 방법을 알아보세요. 주제별 연구 포인트 비용을 확인하고 차고에서 AAA까지 아우르는 완벽한 연구 가이드를 활용하세요."
   },
   "staff": {
     "title": "직원 가이드",
@@ -603,7 +633,10 @@
         "title": "콘솔 개발",
         "description": "콘솔을 구축하려면 6개월 이상 동안 2-3명의 전담 직원이 필요합니다. 그에 따라 팀 용량을 계획하세요."
       }
-    }
+    },
+    "h1": "Game Dev Tycoon에서 직원을 빠르게 교육하는 방법",
+    "h2": "디자인 vs 기술 전문가 – 차이점은 무엇인가요?",
+    "seoIntro": "직원을 전문화할 시기와 각 단계별로 필요한 직원 수를 알아보세요. 상세히 설명된 모든 직원 역할을 이해하고, 더 나은 직원을 고용하는 방법을 발견하며, 디자인, 기술, 연구, 속도와 같은 직원 능력치를 비교해 보세요. 이 가이드는 또한 직원의 번아웃 및 휴가 관리도 다루며 단계별로 설명된 균형 잡힌 팀 구성을 보여줍니다."
   },
   "timeline": {
     "title": "타임라인",
@@ -740,7 +773,10 @@
         "description": "대규모 팀 + 커스텀 엔진 + 적절한 마케팅 = AAA 성공.",
         "action": "경험이 풍부한 팀으로만 AAA 게임 시도"
       }
-    }
+    },
+    "h1": "Game Dev Tycoon 연도별 진행 가이드",
+    "h2": "새 플랫폼은 언제 출시되나요?",
+    "seoIntro": "사무실 해금 요구 사항 및 시기, 게임 내 전체 콘솔 출시 일정을 확인하고 mBox가 언제 출시되는지 알아보세요. 플랫폼 출시일 가이드를 사용하여 3년 차, 5년 차, 10년 차 마일스톤을 추적하세요. 두 번째 사무실로 이사할 시기를 정확히 파악하고 시작부터 끝까지 전체 진행 타임라인을 따르세요."
   },
   "checklist": {
     "title": "게임 진행 체크리스트",
@@ -759,7 +795,10 @@
     "noItemsYet": "아직 항목 없음",
     "addItemsHint": "시작하려면 사용자 정의 작업을 추가하거나 아래에서 이정표를 선택하세요.",
     "suggestedMilestones": "제안된 이정표",
-    "suggestedMilestonesHint": "추적하고 싶을 수 있는 타임라인의 중요한 이벤트:"
+    "suggestedMilestonesHint": "추적하고 싶을 수 있는 타임라인의 중요한 이벤트:",
+    "h1": "Game Dev Tycoon에서 게임을 출시하기 전 확인해야 할 사항",
+    "h2": "낮은 점수 방지 체크리스트",
+    "seoIntro": "모든 출시 전에 이 '피해야 할 흔한 실수' 목록을 사용하세요. 출시 전 AAA 게임 체크리스트, 후속작 요구 사항 체크리스트, 새 게임 시작 전 엔진 체크리스트가 포함되어 있습니다. 단계별 게임 출시 가이드를 따르고 그래픽, 직원 및 슬라이더에 대한 품질 체크리스트를 검토하며 이 종합 체크리스트를 통해 나쁜 리뷰를 피하는 방법을 배우세요."
   },
   "faq": {
     "title": "자주 묻는 질문 (FAQ)",
@@ -840,20 +879,9 @@
         "answer": "다음을 통해 최고의 엔진을 개발하세요: 1) 팀의 높은 기술 능력, 2) 사용 가능한 모든 기능 포함, 3) 충분한 시간과 돈 투자, 4) 정기적인 업데이트. 좋은 엔진은 여러 게임에 사용할 수 있으며 장기적으로 시간을 절약합니다."
       }
     },
-    "links": {
-      "moreTo": "더 알아보기:",
-      "topicRecommender": "주제 추천기",
-      "platformRecommender": "플랫폼 추천기",
-      "sliders": "슬라이더 프리셋",
-      "slidersPage": "슬라이더 가이드",
-      "staff": "직원 가이드",
-      "handbuch": "게임 매뉴얼",
-      "research": "연구 가이드",
-      "researchOrder": "연구 순서 가이드",
-      "timeline": "타임라인",
-      "planner": "게임 플래너",
-      "checklist": "체크리스트"
-    }
+    "h1": "Game Dev Tycoon에서 왜 계속 파산하나요?",
+    "h2": "Game Dev Tycoon에서 10/10 리뷰를 받는 방법",
+    "seoIntro": "동일 콤보 패널티에 대한 설명을 이해하고, 버그가 리뷰 점수에 미치는 영향을 배우며, 후속작 규칙과 시기를 올바르게 파악하세요. Game Dev Tycoon에 멀티플레이가 있는지, 플레이 시간이 얼마나 걸리는지, 점수와 리뷰 점수의 차이점이 무엇인지 알아보세요. 파산을 피하기 위한 초보자 필수 팁을 확인하세요."
   },
   "manual": {
     "title": "Game Dev Tycoon 매뉴얼",
@@ -1090,9 +1118,7 @@
         "기본부터 고급까지",
         "게임플레이 중 참조에 이상적"
       ]
-    },
-    "openTool": "도구 열기",
-    "startWorkflow": "시작하기"
+    }
   },
   "sources": {
     "title": "데이터 소스",
@@ -1216,7 +1242,10 @@
       "description": "추천 및 사전 설정으로 이동하여 위의 조언을 다음 게임에 적용하세요.",
       "primary": "주제에 가장 적합한 장르를 찾으세요",
       "secondary": "슬라이더 사전 설정 가져오기"
-    }
+    },
+    "h1": "Game Dev Tycoon 초보자 가이드 – 차고에서 AAA까지",
+    "h2": "높은 점수를 위한 팁과 요령",
+    "seoIntro": "10억 달러 규모의 스튜디오를 건설하고 차고 단계를 견뎌내는 방법을 배우세요. 이 단계별 전략 가이드는 사무실 및 직원 확장을 위한 게임 중반 팁, 맞춤형 콘솔 및 MMO 개발을 위한 게임 후반 전략, 모바일 iOS 및 Android 버전에 대한 팁과 함께 지속적으로 10점 평점을 받는 방법을 보여줍니다."
   },
   "bestCombos": {
     "title": "최고의 주제-장르 콤보",
@@ -1255,7 +1284,10 @@
       "description": "추천기를 사용하여 모든 주제를 적합성 및 잠금 해제 연도별로 정렬하세요.",
       "primary": "장르 추천 도구 사용",
       "secondary": "슬라이더 사전 설정 확인"
-    }
+    },
+    "h1": "Game Dev Tycoon에서 높은 리뷰 점수를 받기 위한 최적의 콤보",
+    "h2": "판타지 RPG 콤보 – 플레이 방법",
+    "seoIntro": "최고의 SF 액션 콤보 설정과 PC의 성인 관객을 위한 최적의 콤보를 발견하세요. 어드벤처 시간 여행 콤보 가이드, 포스트 아포칼립스 RPG 조합, 액션 어드벤처를 위한 최적의 멀티 장르 콤보를 살펴보세요. 2025년 모든 장르에 대한 최고 평점 콤보를 확인하고 이상한 콤보와 훌륭한 콤보의 차이점을 이해하세요."
   },
   "slidersExplained": {
     "title": "Game Dev Tycoon 슬라이더 설명",
@@ -1312,7 +1344,10 @@
       "description": "사전 설정을 사용하여 최상의 슬라이더 값을 즉시 복사하십시오.",
       "primary": "슬라이더 사전 설정 열기",
       "secondary": "최고의 장르를 찾아보세요"
-    }
+    },
+    "h1": "Game Dev Tycoon에서 슬라이더는 어떻게 작동하나요?",
+    "h2": "각 슬라이더는 어떤 역할을 하나요?",
+    "seoIntro": "엔진, 게임플레이, 스토리 슬라이더가 게임에 미치는 영향을 이해해 보세요. 단계별(1, 2, 3단계) 슬라이더 우선순위에 대한 상세 설명, 슬라이더가 리뷰 점수에 미치는 영향, 기술 및 디자인 비율 슬라이더 가이드를 확인하세요. 낮은 리뷰 점수의 원인이 되는 실수를 방지하고, 액션, RPG, 시뮬레이션 장르별 슬라이더 가이드와 모든 단계의 시간 배분 슬라이더 마스터하는 법을 알아보세요."
   },
   "researchOrder": {
     "title": "게임 개발 거물 연구 명령",
@@ -1369,7 +1404,10 @@
       "description": "연구 가이드에서 잠금 해제 및 전제 조건을 체계적으로 정리하세요.",
       "primary": "연구 가이드 열기",
       "secondary": "타임라인을 따르세요"
-    }
+    },
+    "h1": "차고에서 가장 먼저 연구해야 할 것",
+    "h2": "연도별 연구 해금 순서",
+    "seoIntro": "초보자부터 AAA급까지 최적의 연구 우선순위를 따르세요. R&D 연구소의 연구 해금 순서, v1에서 v7까지의 3D 그래픽 연구 순서를 확인하고 전체 연구 트리 가이드를 살펴보세요. 복합 장르 연구 해금 방법, 연구 비용 및 시점 확인, 하드웨어 연구소 연구 해금 요구 사항을 이해해 보세요."
   },
   "seo": {
     "suffix": {
@@ -1392,53 +1430,151 @@
       "appGuide": "기능, 워크플로 & 시작 가이드",
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "커뮤니티 데이터 & 신뢰도"
+    },
+    "brand": "Game Dev Tycoon 어드바이저",
+    "title": {
+      "dashboard": "Game Dev Tycoon 최적의 게임 설정 계산기",
+      "topicRecommender": "Game Dev Tycoon 장르별 최적의 주제",
+      "genreRecommender": "Game Dev Tycoon 개발하기 가장 좋은 장르",
+      "platformRecommender": "Game Dev Tycoon 장르별 최적의 플랫폼",
+      "sliders": "Game Dev Tycoon 장르별 슬라이더 설정",
+      "planner": "Game Dev Tycoon 세이브 게임 플래너 도구",
+      "research": "Game Dev Tycoon 게임 초반 연구 순서",
+      "staff": "Game Dev Tycoon 최적의 직원 전문화 가이드",
+      "timeline": "Game Dev Tycoon 모든 건물 해금 타임라인",
+      "checklist": "Game Dev Tycoon 출시 전 체크리스트",
+      "faq": "Game Dev Tycoon 왜 내 게임 점수가 낮을까",
+      "guide": "2025년 Game Dev Tycoon 완벽 가이드",
+      "bestCombos": "Game Dev Tycoon 최적의 장르 주제 조합 목록",
+      "slidersExplained": "초보자를 위한 Game Dev Tycoon 슬라이더 설명",
+      "researchOrder": "Game Dev Tycoon 최적의 연구 순서 전체 목록",
+      "handbuch": "Game Dev Tycoon 전체 매뉴얼",
+      "appGuide": "Game Dev Tycoon 어드바이저 앱 가이드",
+      "privacy": "개인정보 처리방침",
+      "sources": "Game Dev Tycoon 데이터 소스 및 신뢰도"
+    },
+    "description": {
+      "dashboard": "Game Dev Tycoon에서 최고의 주제, 장르 및 플랫폼 조합을 찾아보세요. 초보자를 위한 무료 인터랙티브 설정 계산기 및 추천 도구입니다.",
+      "topicRecommender": "Game Dev Tycoon의 모든 장르에 어울리는 최고의 주제를 찾아보세요. 판타지, SF 등 모든 주제에 대한 주제-장르 호환성 확인 도구입니다.",
+      "genreRecommender": "Game Dev Tycoon에서 어떤 장르가 가장 많은 수익을 올리는지 확인해 보세요. 수익 및 최고 점수 분석 기능이 포함된 무료 장르 선택 도구입니다.",
+      "platformRecommender": "Game Dev Tycoon에서 목표로 할 최적의 콘솔을 찾아보세요. PC 대 콘솔 비교 및 타겟층-플랫폼 매칭 가이드를 제공합니다.",
+      "sliders": "Game Dev Tycoon의 모든 장르에 대한 최적의 슬라이더 비율입니다. 장르별 1, 2, 3단계 시간 배분 프리셋 도구입니다.",
+      "planner": "Game Dev Tycoon에서 다음 게임을 계획하세요. 저장 데이터 및 출시 이력을 기반으로 개인화된 추천을 제공합니다.",
+      "research": "Game Dev Tycoon에서 무엇을 먼저 연구해야 할까요? R&D 연구소 해금 조건 및 연구 포인트 비용이 포함된 완벽 가이드입니다.",
+      "staff": "Game Dev Tycoon에서 직원을 빠르게 교육하는 방법입니다. 디자인 및 기술 전문가 가이드와 균형 잡힌 팀 구성 방법을 설명합니다.",
+      "timeline": "Game Dev Tycoon 연도별 진행 가이드입니다. 콘솔 출시 일정, 사무실 해금 시기 및 주요 마일스톤을 확인하세요.",
+      "checklist": "Game Dev Tycoon에서 게임을 출시하기 전에 모든 것을 확인하세요. 단계별 출시 체크리스트를 통해 낮은 점수를 방지할 수 있습니다.",
+      "faq": "Game Dev Tycoon에 대한 자주 묻는 질문의 답변입니다. 왜 계속 파산하나요? 어떻게 10/10 점수를 받나요? 초보자를 위한 팁을 확인하세요.",
+      "guide": "차고에서 AAA급 게임 제작까지, Game Dev Tycoon 초보자 가이드입니다. 2025년 최신 고득점 전략 및 팁을 확인하세요.",
+      "bestCombos": "Game Dev Tycoon 고득점 리뷰를 위한 최고의 조합입니다. 판타지 RPG, SF 액션 등 최고 등급의 조합 순위를 확인해 보세요.",
+      "slidersExplained": "Game Dev Tycoon에서 슬라이더는 어떻게 작동하나요? 각 슬라이더의 기능, 단계별 우선순위 및 리뷰 점수에 미치는 영향을 알아보세요.",
+      "researchOrder": "차고에서 AAA급까지, Game Dev Tycoon 최고의 연구 순서입니다. 연도별 연구 해금 목록과 우선순위를 완벽하게 정리했습니다.",
+      "handbuch": "모든 게임 메커니즘, 전략, 팁 및 고급 기술을 다루는 Game Dev Tycoon 전체 매뉴얼입니다.",
+      "appGuide": "Game Dev Tycoon Advisor 사용 방법을 배워보세요. 기능, 워크플로 및 앱 시작 가이드를 제공합니다.",
+      "privacy": "Game Dev Tycoon Advisor의 개인정보 처리방침입니다. 데이터 관리 방식과 개인정보 보호 권리에 대해 알아보세요.",
+      "sources": "정확한 추천을 위해 Game Dev Tycoon Advisor가 사용하는 커뮤니티 기반 데이터 소스 및 신뢰도 정보입니다."
     }
   },
-  "nextStep": {
-    "label": "다음 단계",
-    "topicToGenre": {
-      "title": "지금 최고의 장르를 선택하세요",
-      "body": "주제를 사용해 가장 높은 점수의 장르 조합을 찾아보세요."
-    },
-    "genreToPlatform": {
-      "title": "최고의 플랫폼 찾기",
-      "body": "장르를 최고의 플랫폼과 관객에 맞춰 최대한의 리뷰 점수를 얻으세요."
-    },
-    "platformToSliders": {
-      "title": "슬라이더 프리셋 가져오기",
-      "body": "세 가지 개발 단계 모두에서 장르에 최적화된 슬라이더 설정을 적용하세요."
-    },
-    "slidersToPlanner": {
-      "title": "다음 출시 계획 세우기",
-      "body": "저장 상태를 입력하고 맞춤 출시 및 연구 추천을 받으세요."
-    },
-    "plannerToChecklist": {
-      "title": "출시 전에 검토하기",
-      "body": "게임 제출 전 체크리스트를 확인해 흔한 실수를 방지하세요."
-    },
-    "timelineToPlatform": {
-      "title": "올바른 플랫폼 선택하기",
-      "body": "플랫폼 추천기를 사용해 현재 시대에 맞는 최고의 플랫폼을 찾아보세요."
-    },
-    "timelineToResearch": {
-      "title": "연구 우선순위 정하기",
-      "body": "현재 게임 연도를 기반으로 다음에 잠금 해제할 기술을 계획하세요."
-    },
-    "timelineToChecklist": {
-      "title": "마일스톤 추적하기",
-      "body": "주요 마일스톤을 체크리스트에 추가하고 게임 진행 상황을 추적하세요."
-    },
-    "plannerToResearch": {
-      "title": "연구 우선순위 정하기",
-      "body": "최고 점수를 위해 먼저 해금해야 할 기술을 확인하세요."
-    },
-    "staffToHandbook": {
-      "title": "매뉴얼에서 배경과 규칙 확인",
-      "body": "매뉴얼에서 팀 메카닉, 고용 규칙, 훈련 전략을 자세히 알아보세요."
-    },
-    "handbookToStaff": {
-      "title": "실용적인 팀 구성과 팁",
-      "body": "게임의 각 단계에 맞는 구체적인 직원 추천사항."
-    }
+  "sliders.explainedBox": {
+    "title": "슬라이더는 실제로 어떻게 작동하나요?",
+    "text": "왜 리뷰 점수가 낮은지 궁금하신가요? 슬라이더는 세 단계에 걸쳐 개발 시간을 디자인 포인트와 기술 포인트로 나누는 방식을 제어합니다. 각 장르마다 어떤 슬라이더가 가장 중요한지 결정하는 단계별 가중치가 다릅니다. 슬라이더 메커니즘, 디자인 대 기술의 균형, 단계별 우선순위가 최종 점수에 미치는 영향을 이해하는 것이 10/10 리뷰를 받는 핵심입니다.",
+    "linkText": "Game Dev Tycoon 슬라이더 설명 전체 가이드 읽기 →"
+  },
+  "planner.unlockedTopicsFilter": {
+    "title": "잠금 해제된 주제로 필터링",
+    "description": "저장 파일에서 이미 잠금 해제한 주제만 사용합니다.",
+    "searchPlaceholder": "주제 검색...",
+    "selectAll": "모두 선택",
+    "clear": "지우기",
+    "selectedCount": "{{selected}}/{{total}}개 선택됨",
+    "noTopics": "주제를 찾을 수 없습니다.",
+    "emptyFallbackWarning": "선택한 주제를 현재 사용할 수 없습니다. 대체 수단으로 모든 주제를 사용합니다."
+  },
+  "schema.research.steps": [
+    "2D 그래픽 v2–v4를 연구한 뒤, 3D 그래픽 v1–v5를 연구하여 시각적 품질을 개선하고 더 높은 리뷰 점수를 획득하세요.",
+    "사운드 기술을 연구하여 오디오 품질을 개선하세요. 핵심 그래픽이 해금된 후 우선적으로 진행하세요.",
+    "멀티플레이어, 온라인, 레벨 에디터와 같은 게임플레이 기능을 해금하여 게임의 규모와 타겟층을 확대하세요.",
+    "AI 기술을 연구하여 NPC 행동과 게임 월드 상호작용 품질을 개선하세요.",
+    "하드웨어 연구소에서 커스텀 하드웨어와 콘솔을 개발하여 수익 잠재력을 극대화하세요."
+  ],
+  "schema.staff.steps": [
+    "1인 개발 단계(1~4년 차). 채용 전 기술을 연마하고 자금을 비축하는 데 집중하세요. 디자인과 기술 스킬을 고르게 훈련하세요.",
+    "첫 직원 채용(5~10년 차). 기술이나 디자인 스탯이 높은 전문가를 우선 채용하세요. 직원 스킬 훈련을 시작하세요.",
+    "더 큰 프로젝트를 위해 팀을 확장하세요. 기술, 디자인, 속도 분야의 전문가 균형을 맞추세요. 훈련 시스템을 활용하기 시작하세요.",
+    "R&D 연구소를 해금하여 새로운 기술을 연구하세요. 더 빠른 기술 혁신을 위해 스탯이 높은 전담 연구원을 배치하세요.",
+    "하드웨어 연구소를 건설하여 커스텀 콘솔을 개발하세요. 최대 수익을 내려면 전문 인력과 상당한 투자가 필요합니다."
+  ],
+  "schema.timeline.stepNames": [
+    "1~5년 차: 차고 단계",
+    "6~10년 차: 첫 번째 사무실",
+    "11~15년 차: 성장 단계",
+    "16~20년 차: R&D 시대",
+    "21~35년 차: 하드웨어 및 레거시"
+  ],
+  "schema.timeline.steps": [
+    "차고에서 시작하세요. 소규모 게임을 개발하고 기술을 연마하며 자금을 비축하세요. 초기 플랫폼에서 텍스트 기반 및 2D 게임을 공략하세요.",
+    "첫 번째 사무실로 이전하여 직원을 채용하고 중형 프로젝트를 수행하세요. 핵심 기술을 연구하고 최신 플랫폼으로 확장하세요.",
+    "두 번째 사무실로 업그레이드하고 더 큰 팀을 꾸리세요. MMO 및 AAA급 게임 규모를 해금하세요. 성공한 타이틀의 후속작을 개발하세요.",
+    "고급 연구를 위해 R&D 연구소를 건설하세요. 커스텀 게임 엔진을 개발하세요. 높은 리뷰 점수를 위해 고사양 플랫폼을 공략하세요.",
+    "하드웨어 연구소를 건설하고 맞춤형 콘솔을 개발하세요. AAA급 대작 게임을 제작하여 모든 플랫폼을 장악하고 전설적인 지위에 오르세요."
+  ],
+  "schema.checklist.stepNames": [
+    "타임라인 마일스톤 검토",
+    "커스텀 목표 추가",
+    "완료 추적"
+  ],
+  "schema.checklist.steps": [
+    "타임라인 마일스톤을 탐색하고 중요한 항목을 개인 체크리스트에 추가하여 추적하세요.",
+    "특정 업적이나 전략을 추적하기 위해 자신만의 커스텀 목표와 작업을 만드세요.",
+    "게임을 진행하며 완료된 마일스톤을 체크하여 전체 진행 상황을 모니터링하세요."
+  ],
+  "seo.title": {
+    "dashboard": "Game Dev Tycoon 최적의 게임 설정 계산기",
+    "topicRecommender": "Game Dev Tycoon 장르별 최적의 주제",
+    "genreRecommender": "Game Dev Tycoon 개발하기 가장 좋은 장르",
+    "platformRecommender": "Game Dev Tycoon 장르별 최적의 플랫폼",
+    "sliders": "Game Dev Tycoon 장르별 슬라이더 설정",
+    "planner": "Game Dev Tycoon 세이브 게임 플래너 도구",
+    "research": "Game Dev Tycoon 게임 초반 연구 순서",
+    "staff": "Game Dev Tycoon 최적의 직원 전문화 가이드",
+    "timeline": "Game Dev Tycoon 모든 건물 해금 타임라인",
+    "checklist": "Game Dev Tycoon 출시 전 체크리스트",
+    "faq": "Game Dev Tycoon 왜 내 게임 점수가 낮을까",
+    "guide": "2025년 Game Dev Tycoon 완벽 가이드",
+    "bestCombos": "Game Dev Tycoon 최적의 장르 주제 조합 목록",
+    "slidersExplained": "초보자를 위한 Game Dev Tycoon 슬라이더 설명",
+    "researchOrder": "Game Dev Tycoon 최적의 연구 순서 전체 목록",
+    "handbuch": "Game Dev Tycoon 전체 매뉴얼",
+    "appGuide": "Game Dev Tycoon 어드바이저 앱 가이드",
+    "privacy": "개인정보 처리방침",
+    "sources": "Game Dev Tycoon 데이터 소스 및 신뢰도"
+  },
+  "seo.description": {
+    "dashboard": "Game Dev Tycoon에서 최고의 주제, 장르 및 플랫폼 조합을 찾아보세요. 초보자를 위한 무료 인터랙티브 설정 계산기 및 추천 도구입니다.",
+    "topicRecommender": "Game Dev Tycoon의 모든 장르에 어울리는 최고의 주제를 찾아보세요. 판타지, SF 등 모든 주제에 대한 주제-장르 호환성 확인 도구입니다.",
+    "genreRecommender": "Game Dev Tycoon에서 어떤 장르가 가장 많은 수익을 올리는지 확인해 보세요. 수익 및 최고 점수 분석 기능이 포함된 무료 장르 선택 도구입니다.",
+    "platformRecommender": "Game Dev Tycoon에서 목표로 할 최적의 콘솔을 찾아보세요. PC 대 콘솔 비교 및 타겟층-플랫폼 매칭 가이드를 제공합니다.",
+    "sliders": "Game Dev Tycoon의 모든 장르에 대한 최적의 슬라이더 비율입니다. 장르별 1, 2, 3단계 시간 배분 프리셋 도구입니다.",
+    "planner": "Game Dev Tycoon에서 다음 게임을 계획하세요. 저장 데이터 및 출시 이력을 기반으로 개인화된 추천을 제공합니다.",
+    "research": "Game Dev Tycoon에서 무엇을 먼저 연구해야 할까요? R&D 연구소 해금 조건 및 연구 포인트 비용이 포함된 완벽 가이드입니다.",
+    "staff": "Game Dev Tycoon에서 직원을 빠르게 교육하는 방법입니다. 디자인 및 기술 전문가 가이드와 균형 잡힌 팀 구성 방법을 설명합니다.",
+    "timeline": "Game Dev Tycoon 연도별 진행 가이드입니다. 콘솔 출시 일정, 사무실 해금 시기 및 주요 마일스톤을 확인하세요.",
+    "checklist": "Game Dev Tycoon에서 게임을 출시하기 전에 모든 것을 확인하세요. 단계별 출시 체크리스트를 통해 낮은 점수를 방지할 수 있습니다.",
+    "faq": "Game Dev Tycoon에 대한 자주 묻는 질문의 답변입니다. 왜 계속 파산하나요? 어떻게 10/10 점수를 받나요? 초보자를 위한 팁을 확인하세요.",
+    "guide": "차고에서 AAA급 게임 제작까지, Game Dev Tycoon 초보자 가이드입니다. 2025년 최신 고득점 전략 및 팁을 확인하세요.",
+    "bestCombos": "Game Dev Tycoon 고득점 리뷰를 위한 최고의 조합입니다. 판타지 RPG, SF 액션 등 최고 등급의 조합 순위를 확인해 보세요.",
+    "slidersExplained": "Game Dev Tycoon에서 슬라이더는 어떻게 작동하나요? 각 슬라이더의 기능, 단계별 우선순위 및 리뷰 점수에 미치는 영향을 알아보세요.",
+    "researchOrder": "차고에서 AAA급까지, Game Dev Tycoon 최고의 연구 순서입니다. 연도별 연구 해금 목록과 우선순위를 완벽하게 정리했습니다.",
+    "handbuch": "모든 게임 메커니즘, 전략, 팁 및 고급 기술을 다루는 Game Dev Tycoon 전체 매뉴얼입니다.",
+    "appGuide": "Game Dev Tycoon Advisor 사용 방법을 배워보세요. 기능, 워크플로 및 앱 시작 가이드를 제공합니다.",
+    "privacy": "Game Dev Tycoon Advisor의 개인정보 처리방침입니다. 데이터 관리 방식과 개인정보 보호 권리에 대해 알아보세요.",
+    "sources": "정확한 추천을 위해 Game Dev Tycoon Advisor가 사용하는 커뮤니티 기반 데이터 소스 및 신뢰도 정보입니다."
+  },
+  "shareNudge": {
+    "text": "이 도구가 도움이 되었나요? 다른 플레이어와 공유해 보세요!",
+    "shareButton": "공유하기",
+    "copied": "링크가 복사되었습니다!",
+    "shared": "공유해 주셔서 감사합니다!",
+    "shareText": "Game Dev Tycoon 게임 플레이를 최적화하는 데 이것을 사용했습니다:"
   }
 }

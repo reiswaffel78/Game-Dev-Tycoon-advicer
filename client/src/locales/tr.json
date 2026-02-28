@@ -254,7 +254,10 @@
     "platforms": "Platformlar",
     "lastUpdate": "Son Güncelleme",
     "getStarted": "Başla",
-    "getStartedDesc": "Mükemmel oyun ayarını bulmak için bir önerici seç"
+    "getStartedDesc": "Mükemmel oyun ayarını bulmak için bir önerici seç",
+    "h1": "Game Dev Tycoon Konu Tür Platform Öneri Aracı",
+    "h2": "Game Dev Tycoon'da Yapılacak En İyi Oyun Hangisi?",
+    "seoIntro": "En iyi ayarları ve kombinasyonları keşfetmek için etkileşimli kılavuz aracımızı kullanın. İster bir kombinasyon bulucuya, ister bir hile sayfasına veya yeni başlayanlar için en iyi kuruluma ihtiyacınız olsun, bu planlayıcı ve önerici her seferinde iyi bir oyun yapmanıza yardımcı olur."
   },
   "recommender": {
     "selectTopic": "Bir Konu Seç",
@@ -283,7 +286,16 @@
     "searchGenres": "Tür ara...",
     "searchPlatforms": "Platform ara...",
     "confidenceTooltip": "Kaynak uyumuna dayalı güven düzeyi",
-    "score": "Puan"
+    "score": "Puan",
+    "topicH1": "Game Dev Tycoon'da Hangi Konuyu Kullanmalıyım?",
+    "topicH2": "Game Dev Tycoon Konu Türü Kombinasyon Bulucu",
+    "topicSeoIntro": "Hangi konunun aksiyon, RPG veya başka bir türle çalıştığını kontrol edin. Konu uyumluluk denetleyicimiz, RPG oyunları için en iyi konuyu bulmanıza, fantastik veya bilim kurgunun en iyi tür kombinasyonunu verip vermediğini keşfetmenize ve garip ve harika kombinasyon konu listelerini karşılaştırmanıza yardımcı olur. İnceleme puanlarınızı en üst düzeye çıkarmak için bu konu ve hedef kitle eşleştirme aracını kullanın.",
+    "genreH1": "Game Dev Tycoon'da Hangi Tür En Çok Para Kazandırır?",
+    "genreH2": "Game Dev Tycoon Tür Seçici Aracı",
+    "genreSeoIntro": "Erken oyun ve geç oyun için en kârlı türü bulun. Hangisinin daha iyi olduğunu görmek için aksiyon ve RPG'yi karşılaştırın, simülasyon türü ipuçları ve kurulum tavsiyesi alın ve yüksek puan için en iyi türü keşfedin. İşe yarayan çoklu tür kombinasyonlarını, gündelik tür kaydırıcısını ve konu kurulumunu keşfedin ve strateji türü için hangi konuyu seçeceğinizi öğrenin.",
+    "platformH1": "Game Dev Tycoon – Hangi Konsolu Hedeflemeli",
+    "platformH2": "PC mi Konsol mu – Game Dev Tycoon'da Hangisi Daha İyi?",
+    "platformSeoIntro": "Olgun hedef kitle oyunları için en iyi konsolu bulmak üzere platform pazar payı kılavuzumuzu kullanın. Gameling'in en iyi tür konu kombinasyonunu, mBox için hangi oyunların yapılacağını keşfedin ve platform uyumluluk aracımızı kullanın. PC veya konsol için oyun yapıp yapmamanız hedef kitlenize bağlıdır – bu hedef kitle platformu eşleştirme kılavuzu karar vermenize yardımcı olur."
   },
   "sliders": {
     "title": "Kaydırıcı Ayarları",
@@ -343,7 +355,15 @@
     "swapGenres": "Birincil ↔ İkincil Değiştir",
     "selectBothGenres": "İki Tür Seçin",
     "selectBothGenresDesc": "Karışık kaydırıcı ayarlarını görmek için birincil ve ikincil tür seçin",
-    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Kaydırıcı Ön Ayarları"
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Kaydırıcı Ön Ayarları",
+    "h1": "Game Dev Tycoon Optimum Kaydırıcı Yüzdeleri",
+    "h2": "RPG Kaydırıcı Ayarları – 1, 2 ve 3. Aşamalar",
+    "seoIntro": "Her oyun için doğru aksiyon kaydırıcısı zaman ayırma ve macera türü kaydırıcı kılavuzunu edinin. Bu kaydırıcı hile sayfası, simülasyon kaydırıcı yüzdeleri ve strateji kaydırıcı aşama tahsisi dahil olmak üzere tüm türleri kapsar. Gündelik tür için hangi kaydırıcıların kullanılacağını öğrenin, tür başına kaydırıcı ön ayar aracımızı kullanın, teknik tasarım oranını anlayın ve maksimum inceleme puanı için kaydırıcıları doğru şekilde nasıl ayarlayacağınızı öğrenin.",
+    "explainedBox": {
+      "title": "Kaydırıcılar Aslında Nasıl Çalışır?",
+      "text": "İnceleme puanlarınızın neden düşük olduğundan emin değil misiniz? Kaydırıcılar, geliştirme süresinin üç aşamada Tasarım ve Teknik puanlar arasında nasıl bölüneceğini kontrol eder. Her tür, hangi kaydırıcıların en önemli olduğunu belirleyen farklı aşama ağırlıklarına sahiptir. Kaydırıcı mekaniğini, tasarım ve teknik dengesini ve aşama önceliklerinin nihai puanınızı nasıl etkilediğini anlamak, 10/10 inceleme almanın anahtarıdır.",
+      "linkText": "Tam Game Dev Tycoon Kaydırıcıları Anlatıldı kılavuzumuzu okuyun →"
+    }
   },
   "planner": {
     "title": "Oyun Planlayıcı",
@@ -395,7 +415,20 @@
       "unlockTopic": "Oyun portföyünü genişletmek için {{name}} konusunu aç.",
       "unlockGenre": "Yeni oyun fırsatları için {{name}} türünü aç.",
       "feature": "Gelecekteki AAA oyunlar için grafik kalitesini artırır."
-    }
+    },
+    "unlockedTopicsFilter": {
+      "title": "Kilidi açılmış konulara göre filtrele",
+      "description": "Kaydınızda zaten kilidini açtığınız konuları kullanın.",
+      "searchPlaceholder": "Konuları ara...",
+      "selectAll": "Tümünü seç",
+      "clear": "Temizle",
+      "selectedCount": "{{selected}}/{{total}} seçildi",
+      "noTopics": "Konu bulunamadı.",
+      "emptyFallbackWarning": "Seçilen konu yok. Yedek olarak tüm konular kullanılıyor."
+    },
+    "h1": "Game Dev Tycoon – Kayda Göre Bir Sonraki Oyun Önerisi",
+    "h2": "Oyun Geçmişinize Göre Sırada Ne Yapmalı",
+    "seoIntro": "Oyunun ortasında sırada ne araştıracağınıza karar vermek için bu araştırma önceliği planlayıcısını ve kişiselleştirilmiş oyun tavsiye aracını kullanın. Bir kombo tekrarından sonra bir sonraki sürümünüzü planlayın, kombo izleme aracımızla kombinasyonlarınızı takip edin, tür rotasyonu planlayıcısını kullanın ve maksimum büyüme için oyun hattınızı nasıl planlayacağınızı öğrenin."
   },
   "research": {
     "title": "Araştırma Rehberi",
@@ -505,12 +538,9 @@
         "tip": "Gelecek teknolojisi yatırımı"
       }
     },
-    "researchOrderBox": {
-      "title": "Önerilen araştırma sırası",
-      "body": "Neyi önce açacağınızdan emin değil misiniz? Adım adım kılavuzumuzu takip edin.",
-      "linkText": "Araştırma kılavuzunu görüntüle",
-      "enBadge": "EN"
-    }
+    "h1": "Game Dev Tycoon'da İlk Önce Ne Araştırmalı",
+    "h2": "Araştırma Puanları Nasıl Hızlı Alınır",
+    "seoIntro": "Ar-Ge laboratuvarı açma gereksinimlerini öğrenin ve verimli ilerlemek için araştırma puanları toplama kılavuzumuzu kullanın. En iyi araştırma öncelikleri listesini takip edin, orta büyüklükteki oyunların kilidini ne zaman açacağınızı bilin ve araştırma yoluyla AAA oyunlarının kilidini nasıl açacağınızı öğrenin. Konu başına araştırma puanı maliyetini kontrol edin ve garajdan AAA'ya bu eksiksiz araştırma kılavuzunu kullanın."
   },
   "staff": {
     "title": "Personel Rehberi",
@@ -603,7 +633,10 @@
         "title": "Konsol Geliştirme",
         "description": "Bir konsol yapmak 6+ ay boyunca 2-3 adanmış personel gerektirir. Ekip kapasiteni buna göre planla."
       }
-    }
+    },
+    "h1": "Game Dev Tycoon'da Çalışanlar Nasıl Hızlı Eğitilir",
+    "h2": "Tasarım ve Teknik Uzmanı – Fark Nedir?",
+    "seoIntro": "Personeli ne zaman uzmanlaştırmanız gerektiğini ve her aşama için kaç çalışana ihtiyacınız olduğunu öğrenin. Tüm personel rollerini ayrıntılı olarak anlayın, daha iyi çalışanları nasıl işe alacağınızı keşfedin ve tasarım, teknik, araştırma ve hız gibi çalışan istatistiklerini karşılaştırın. Bu kılavuz ayrıca personel tükenmişliğini ve tatil yönetimini kapsar ve dengeli ekip kurulumunu adım adım açıklar."
   },
   "timeline": {
     "title": "Zaman Çizelgesi",
@@ -740,7 +773,10 @@
         "description": "Büyük ekip + Özel Motor + Uygun pazarlama = AAA başarısı.",
         "action": "AAA oyunları yalnızca deneyimli ekiple dene"
       }
-    }
+    },
+    "h1": "Game Dev Tycoon Yıl Yıl İlerleme Kılavuzu",
+    "h2": "Yeni Platformlar Ne Zaman Çıkıyor?",
+    "seoIntro": "Ofis açma gereksinimlerini ve zamanlamasını, oyun içi tam konsol yayın programını bulun ve mBox'ın ne zaman çıktığını öğrenin. 3., 5. ve 10. yıl dönüm noktalarını takip etmek için platform yayın tarihleri ​​kılavuzumuzu kullanın. İkinci ofise ne zaman taşınacağınızı tam olarak bilin ve baştan sona tam ilerleme zaman çizelgesini takip edin."
   },
   "checklist": {
     "title": "Oyun İlerleme Kontrol Listesi",
@@ -759,7 +795,10 @@
     "noItemsYet": "Henüz Öğe Yok",
     "addItemsHint": "Başlamak için özel görevler ekle veya aşağıdan kilometre taşlarını seç.",
     "suggestedMilestones": "Önerilen Kilometre Taşları",
-    "suggestedMilestonesHint": "Takip etmek isteyebileceğin zaman çizelgesinden önemli olaylar:"
+    "suggestedMilestonesHint": "Takip etmek isteyebileceğin zaman çizelgesinden önemli olaylar:",
+    "h1": "Game Dev Tycoon'da Bir Oyun Yayınlamadan Önce Kontrol Edilmesi Gerekenler",
+    "h2": "Düşük Puanı Önleme Kontrol Listesi",
+    "seoIntro": "Her sürümden önce kaçınılması gereken yaygın hataları görmek için bu listeyi kullanın. Sürümden önce AAA oyun kontrol listesi, devam oyunu gereksinimleri kontrol listesi ve yeni bir oyuna başlamadan önce motor kontrol listesini içerir. Adım adım oyun yayınlama kılavuzumuzu izleyin, grafikler, personel ve kaydırıcılar için kalite kontrol listesini inceleyin ve bu kapsamlı kontrol listesi ile kötü incelemelerden nasıl kaçınacağınızı öğrenin."
   },
   "faq": {
     "title": "Sıkça Sorulan Sorular (SSS)",
@@ -840,20 +879,9 @@
         "answer": "En iyi motoru şöyle geliştir: 1) Ekipte yüksek teknoloji becerileri, 2) Mevcut tüm özellikleri dahil et, 3) Yeterli zaman ve para yatır, 4) Düzenli güncellemeler. İyi bir motor birden fazla oyunda kullanılabilir ve uzun vadede zaman kazandırır."
       }
     },
-    "links": {
-      "moreTo": "Daha fazlası:",
-      "topicRecommender": "Konu Tavsiyecisi",
-      "platformRecommender": "Platform Tavsiyecisi",
-      "sliders": "Kaydırıcı Ayarları",
-      "slidersPage": "Kaydırıcı Rehberi",
-      "staff": "Personel Rehberi",
-      "handbuch": "Oyun Kılavuzu",
-      "research": "Araştırma Rehberi",
-      "researchOrder": "Araştırma Sırası",
-      "timeline": "Zaman Çizelgesi",
-      "planner": "Oyun Planlayıcısı",
-      "checklist": "Kontrol Listesi"
-    }
+    "h1": "Neden Game Dev Tycoon'da Sürekli İflas Ediyorum?",
+    "h2": "Game Dev Tycoon'da Nasıl 10/10 İnceleme Alınır?",
+    "seoIntro": "Aynı kombo cezasının açıklamasını anlayın, hataların inceleme puanı üzerindeki etkisini öğrenin ve devam oyunu kurallarını ve zamanlamasını doğru yapın. Game Dev Tycoon'da çok oyunculu mod olup olmadığını, bir oyunun ne kadar sürdüğünü ve puan ile inceleme puanı arasındaki farkı öğrenin. İflastan kaçınmak için yeni başlayanlara yönelik temel ipuçları alın."
   },
   "manual": {
     "title": "Game Dev Tycoon El Kitabı",
@@ -1090,9 +1118,7 @@
         "Temel bilgilerden ileri düzeye",
         "Oyun sırasında başvuru için ideal"
       ]
-    },
-    "openTool": "Aracı aç",
-    "startWorkflow": "Başla"
+    }
   },
   "sources": {
     "title": "Veri Kaynakları",
@@ -1216,7 +1242,10 @@
       "description": "Yukarıdaki tavsiyeyi bir sonraki oyununuzda uygulamak için öneriye ve ön ayarlara geçin.",
       "primary": "Konunuza en uygun türü bulun",
       "secondary": "Kaydırıcı ön ayarlarını edinin"
-    }
+    },
+    "h1": "Game Dev Tycoon Yeni Başlayanlar İçin Kılavuz – Garajdan AAA'ya",
+    "h2": "Yüksek Puan İçin İpuçları ve Püf Noktaları",
+    "seoIntro": "Milyar dolarlık bir stüdyo kurmayı ve garaj aşamasında hayatta kalmayı öğrenin. Bu adım adım strateji kılavuzu, ofisinizi ve personelinizi genişletmek için orta oyun ipuçları, özel konsol ve MMO geliştirme için geç oyun stratejisi ve mobil iOS ve Android sürümleri için ipuçları ile sürekli olarak nasıl 10 puan alacağınızı gösterir."
   },
   "bestCombos": {
     "title": "En İyi Konu-Tür Kombinasyonları",
@@ -1255,7 +1284,10 @@
       "description": "Her konuyu uygun ve kilit açma yılına göre sıralamak için öneri aracını kullanın.",
       "primary": "Tür Öneri Aracını Kullanın",
       "secondary": "Kaydırıcı ön ayarlarını kontrol edin"
-    }
+    },
+    "h1": "Game Dev Tycoon'da Yüksek İnceleme Puanları İçin En İyi Kombolar",
+    "h2": "Fantezi RPG Kombosu – Nasıl Oynanır",
+    "seoIntro": "En iyi bilim kurgu aksiyon kombo ayarlarını ve PC'de olgun kitle için en iyi kombo ayarlarını keşfedin. Macera zaman yolculuğu kombo kılavuzunu, kıyamet sonrası RPG kombinasyonunu ve aksiyon macera için en iyi çoklu tür kombo kılavuzunu keşfedin. 2025'te tüm türler için en iyi puan alan komboları görün ve garip kombo ile harika kombo arasındaki farkı anlayın."
   },
   "slidersExplained": {
     "title": "Game Dev Tycoon Sliders'ın Açıklaması",
@@ -1312,7 +1344,10 @@
       "description": "En iyi kaydırıcı değerlerini anında kopyalamak için ön ayarları kullanın.",
       "primary": "Kaydırıcı Ön Ayarlarını Aç",
       "secondary": "En iyi türü bulun"
-    }
+    },
+    "h1": "Game Dev Tycoon'da Kaydırıcılar Nasıl Çalışır?",
+    "h2": "Her Kaydırıcı Ne İşe Yarar?",
+    "seoIntro": "Motor, oyun ve hikaye kaydırıcısının oyunlarınız üzerindeki etkisini anlayın. 1, 2, 3. aşama kaydırıcı önceliklerini ayrıntılı olarak açıklayın, kaydırıcının inceleme puanı üzerindeki etkisini ve teknik tasarım oranı kaydırıcı kılavuzunu öğrenin. Düşük incelemelere neden olan kaydırıcı hatalarından kaçının, aksiyon, RPG ve simülasyon türleri için kaydırıcı kılavuzunu alın ve tüm aşamalar için zaman ayırma kaydırıcılarında ustalaşın."
   },
   "researchOrder": {
     "title": "Game Dev Tycoon Araştırma Emri",
@@ -1369,7 +1404,10 @@
       "description": "Kilit açma işlemlerinizi ve önkoşullarınızı Araştırma Kılavuzu'nda düzenli tutun.",
       "primary": "Açık Araştırma Kılavuzu",
       "secondary": "Zaman Çizelgesini Takip Edin"
-    }
+    },
+    "h1": "Garajda İlk Olarak Ne Araştırılmalı?",
+    "h2": "Yıla Göre Araştırma Kilidi Açma Sırası",
+    "seoIntro": "Yeni başlayandan AAA'ya kadar en iyi araştırma önceliklerini izleyin. Ar-Ge laboratuvarı araştırma kilidi açma sırasını, v1'den v7'ye 3D grafik araştırma sırasını öğrenin ve tam araştırma ağacı kılavuzuna göz atın. Çoklu tür araştırmasının nasıl kilidini açacağınızı öğrenin, araştırma maliyetini ve zamanlamasını kontrol edin ve donanım laboratuvarı araştırma kilidi açma gereksinimlerini anlayın."
   },
   "seo": {
     "suffix": {
@@ -1392,53 +1430,151 @@
       "appGuide": "Özellikler, İş Akışları ve Nasıl Başlanır",
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Topluluk Verileri ve Güven Seviyeleri"
+    },
+    "brand": "Game Dev Tycoon Danışmanı",
+    "title": {
+      "dashboard": "Game Dev Tycoon Optimal Oyun Kurulumu Hesaplayıcısı",
+      "topicRecommender": "Game Dev Tycoon Her Tür İçin En İyi Konu",
+      "genreRecommender": "Game Dev Tycoon Geliştirilecek En İyi Tür",
+      "platformRecommender": "Game Dev Tycoon Her Tür İçin En İyi Platform",
+      "sliders": "Game Dev Tycoon Her Tür İçin Kaydırıcı Ayarları",
+      "planner": "Game Dev Tycoon Kayıtlı Oyun Planlayıcı Aracı",
+      "research": "Game Dev Tycoon Erken Oyun Araştırma Sırası",
+      "staff": "Game Dev Tycoon En İyi Personel Uzmanlık Rehberi",
+      "timeline": "Game Dev Tycoon Tüm Binaların Kilidini Açma Zaman Çizelgesi",
+      "checklist": "Game Dev Tycoon Yayın Öncesi Kontrol Listesi",
+      "faq": "Game Dev Tycoon Oyunlarım Neden Düşük Puanlar Alıyor",
+      "guide": "Eksiksiz Game Dev Tycoon Rehberi 2025",
+      "bestCombos": "Game Dev Tycoon En İyi Tür Konu Kombinasyonları Listesi",
+      "slidersExplained": "Game Dev Tycoon Yeni Başlayanlar İçin Kaydırıcılar Açıklaması",
+      "researchOrder": "Game Dev Tycoon En İyi Araştırma Sırası Eksiksiz Liste",
+      "handbuch": "Game Dev Tycoon Eksiksiz El Kitabı",
+      "appGuide": "Game Dev Tycoon Danışmanı Uygulama Rehberi",
+      "privacy": "Gizlilik Politikası",
+      "sources": "Game Dev Tycoon Veri Kaynakları ve Güven Düzeyleri"
+    },
+    "description": {
+      "dashboard": "Game Dev Tycoon'da en iyi konu, tür ve platform kombinasyonlarını bulun. Yeni başlayanlar için ücretsiz etkileşimli kurulum hesaplayıcısı ve önerici aracı.",
+      "topicRecommender": "Game Dev Tycoon'da herhangi bir tür için en iyi konuyu bulun. Fantastik, bilim kurgu ve tüm konular için konu-tür uyumluluk denetleyicisi.",
+      "genreRecommender": "Game Dev Tycoon'da hangi türün en çok para kazandırdığını keşfedin. Kâr ve yüksek skor analizine sahip ücretsiz tür seçici aracı.",
+      "platformRecommender": "Game Dev Tycoon'da hedeflenecek en iyi konsolu bulun. PC ve konsol karşılaştırması ve kitle-platform eşleşme rehberi.",
+      "sliders": "Game Dev Tycoon'daki tüm türler için optimum kaydırıcı yüzdeleri. Her tür için 1, 2, 3. aşama zaman tahsisi içeren ön ayar aracı.",
+      "planner": "Game Dev Tycoon'da bir sonraki oyununuzu planlayın. Kayıt durumunuza ve yayın geçmişinize göre kişiselleştirilmiş öneriler.",
+      "research": "Game Dev Tycoon'da ilk önce ne araştırılır? Ar-Ge laboratuvarı açma gereksinimleri ve araştırma puanı maliyetleriyle birlikte eksiksiz kılavuz.",
+      "staff": "Game Dev Tycoon'da çalışanlar nasıl hızlı eğitilir? Dengeli ekip kurulumu açıklanan tasarım ve teknoloji uzmanı kılavuzu.",
+      "timeline": "Game Dev Tycoon için yıllık ilerleme kılavuzu. Konsol yayın takvimi, ofis açma zamanlaması ve temel kilometre taşları.",
+      "checklist": "Game Dev Tycoon'da bir oyun yayınlamadan önce her şeyi kontrol edin. Adım adım yayın kontrol listemizle düşük puanlardan kaçının.",
+      "faq": "Yaygın Game Dev Tycoon sorularına yanıtlar. Neden sürekli iflas ediyorsunuz? Nasıl 10/10 alınır? Yeni başlayanlar için ipuçları.",
+      "guide": "Game Dev Tycoon'da garajdan AAA'ya yeni başlayanlar için kılavuz. 2025'te yüksek puanlar için ipuçları, püf noktaları ve adım adım strateji.",
+      "bestCombos": "Game Dev Tycoon'da yüksek inceleme puanları için en iyi kombinasyonlar. Fantastik RPG, bilim kurgu aksiyon ve daha fazla en çok oy alan kombinasyon sıralaması.",
+      "slidersExplained": "Kaydırıcılar Game Dev Tycoon'da nasıl çalışır? Her kaydırıcının ne yaptığını, aşama önceliklerini ve inceleme puanları üzerindeki etkisini öğrenin.",
+      "researchOrder": "Game Dev Tycoon'da garajdan AAA'ya en iyi araştırma sırası. Yıla göre önceliklerle birlikte eksiksiz araştırma açma listesi.",
+      "handbuch": "Tüm oyun mekaniklerini, stratejilerini, ipuçlarını ve ileri teknikleri kapsayan eksiksiz Game Dev Tycoon kılavuzu.",
+      "appGuide": "Game Dev Tycoon Advisor'ı nasıl kullanacağınızı öğrenin. Özellikler, iş akışları ve uygulamaya nasıl başlanacağı.",
+      "privacy": "Game Dev Tycoon Advisor için gizlilik politikası. Veri uygulamalarımız ve gizlilik haklarınız hakkında bilgi edinin.",
+      "sources": "Game Dev Tycoon Danışmanı tarafından doğru öneriler için kullanılan, topluluk kaynaklı veriler ve güven seviyeleri."
     }
   },
-  "nextStep": {
-    "label": "Sonraki adım",
-    "topicToGenre": {
-      "title": "Şimdi en iyi türü seçin",
-      "body": "En yüksek puanlı tür kombinasyonlarını bulmak için konunuzu kullanın."
-    },
-    "genreToPlatform": {
-      "title": "En iyi platformu bulun",
-      "body": "Maksimum inceleme puanları için türünüzü en iyi platform ve hedef kitleyle eşleştirin."
-    },
-    "platformToSliders": {
-      "title": "Kaydırıcı ön ayarınızı alın",
-      "body": "Üç geliştirme aşamasında türünüz için en uygun kaydırıcı ayarlarını uygulayın."
-    },
-    "slidersToPlanner": {
-      "title": "Sonraki sürümü planlayın",
-      "body": "Kayıt durumunuzu girin ve kişiselleştirilmiş yayın ve araştırma önerileri alın."
-    },
-    "plannerToChecklist": {
-      "title": "Yayınlamadan önce gözden geçirin",
-      "body": "Oyununuzu göndermeden önce yaygın hataları önlemek için kontrol listesini gözden geçirin."
-    },
-    "timelineToPlatform": {
-      "title": "Doğru platformu seçin",
-      "body": "Mevcut dönem için en iyi platformu bulmak üzere platform önericisini kullanın."
-    },
-    "timelineToResearch": {
-      "title": "Araştırma önceliklerini belirleyin",
-      "body": "Mevcut oyun yılınıza göre sırada hangi teknolojileri açacağınızı planlayın."
-    },
-    "timelineToChecklist": {
-      "title": "Dönüm noktalarınızı takip edin",
-      "body": "Önemli dönüm noktalarını listenize ekleyin ve oyundaki ilerlemenizi takip edin."
-    },
-    "plannerToResearch": {
-      "title": "Araştırmayı önceliklendirin",
-      "body": "Puanlarınızı artırmak için önce hangi teknolojileri açacağınızı görün."
-    },
-    "staffToHandbook": {
-      "title": "El kitabında arka plan ve kurallar",
-      "body": "Kılavuzda detaylı takım mekaniği, işe alım kuralları ve eğitim stratejilerini öğrenin."
-    },
-    "handbookToStaff": {
-      "title": "Pratik takım kurulumları ve ipuçları",
-      "body": "Oyunun her aşaması için somut personel önerileri."
-    }
+  "sliders.explainedBox": {
+    "title": "Kaydırıcılar Aslında Nasıl Çalışır?",
+    "text": "İnceleme puanlarınızın neden düşük olduğundan emin değil misiniz? Kaydırıcılar, geliştirme süresinin üç aşamada Tasarım ve Teknik puanlar arasında nasıl bölüneceğini kontrol eder. Her tür, hangi kaydırıcıların en önemli olduğunu belirleyen farklı aşama ağırlıklarına sahiptir. Kaydırıcı mekaniğini, tasarım ve teknik dengesini ve aşama önceliklerinin nihai puanınızı nasıl etkilediğini anlamak, 10/10 inceleme almanın anahtarıdır.",
+    "linkText": "Tam Game Dev Tycoon Kaydırıcıları Anlatıldı kılavuzumuzu okuyun →"
+  },
+  "planner.unlockedTopicsFilter": {
+    "title": "Kilidi açılmış konulara göre filtrele",
+    "description": "Kaydınızda zaten kilidini açtığınız konuları kullanın.",
+    "searchPlaceholder": "Konuları ara...",
+    "selectAll": "Tümünü seç",
+    "clear": "Temizle",
+    "selectedCount": "{{selected}}/{{total}} seçildi",
+    "noTopics": "Konu bulunamadı.",
+    "emptyFallbackWarning": "Seçilen konu yok. Yedek olarak tüm konular kullanılıyor."
+  },
+  "schema.research.steps": [
+    "Daha yüksek inceleme puanları için görsel kalite iyileştirmelerinin kilidini açmak için önce 2D Grafikler v2–v4, ardından 3D Grafikler v1–v5 üzerinde araştırma yapın.",
+    "Ses kalitesini iyileştirmek için Ses teknolojileri üzerinde araştırma yapın. Temel grafiklerin kilidi açıldıktan sonra öncelik verin.",
+    "Oyun kapsamını ve kitlesini genişletmek için Çok Oyunculu, Çevrimiçi ve Seviye Düzenleyici gibi oyun özelliklerinin kilidini açın.",
+    "NPC davranışını ve oyun dünyası etkileşim kalitesini iyileştirmek için AI teknolojileri üzerinde araştırma yapın.",
+    "Donanım Laboratuvarı'nda özel donanım ve konsollar geliştirerek maksimum gelir potansiyeline ulaşın."
+  ],
+  "schema.staff.steps": [
+    "Solo geliştirme aşaması (1-4. Yıllar). İşe alım yapmadan önce becerilerinizi geliştirmeye ve para biriktirmeye odaklanın. Tasarım ve teknoloji becerilerini eşit olarak geliştirin.",
+    "İlk çalışanlarınızı işe alın (5-10. Yıllar). Yüksek teknoloji veya tasarım istatistiklerine sahip uzmanlara öncelik verin. Personel becerilerini geliştirmeye başlayın.",
+    "Daha büyük projeler için ekibinizi genişletin. Teknoloji, tasarım ve hız konusunda uzmanları dengeleyin. Eğitim sistemini kullanmaya başlayın.",
+    "Yeni teknolojileri araştırmak için Ar-Ge Laboratuvarı'nı açın. Daha hızlı atılımlar için yüksek istatistiklere sahip özel araştırmacılar atayın.",
+    "Özel konsollar geliştirmek için Donanım Laboratuvarı'nı inşa edin. Maksimum getiri için uzman personel ve önemli yatırım gerektirir."
+  ],
+  "schema.timeline.stepNames": [
+    "1–5. Yıllar: Garaj Aşaması",
+    "6–10. Yıllar: İlk Ofis",
+    "11–15. Yıllar: Büyüme Aşaması",
+    "16–20. Yıllar: Ar-Ge Dönemi",
+    "21–35. Yıllar: Donanım ve Miras"
+  ],
+  "schema.timeline.steps": [
+    "Garajda başlayın. Küçük oyunlar geliştirin, becerilerinizi geliştirin ve para biriktirin. Erken platformlarda metin tabanlı ve 2D oyunları hedefleyin.",
+    "İlk ofise taşının, personel işe alın ve orta ölçekli projeler üstlenin. Temel teknolojileri araştırın ve daha yeni platformlara genişleyin.",
+    "İkinci ofise geçin, daha büyük ekipler kurun. MMO ve AAA oyun boyutlarının kilidini açın. Başarılı oyunların devam oyunlarını geliştirin.",
+    "Gelişmiş araştırma için Ar-Ge Laboratuvarı inşa edin. Özel oyun motorları geliştirin. Maksimum inceleme için üst düzey platformları hedefleyin.",
+    "Donanım Laboratuvarı inşa edin, özel konsollar geliştirin. AAA gişe rekorları kıracak oyunlar yaratın ve tüm platformlara hükmedin. Efsanevi statüye ulaşın."
+  ],
+  "schema.checklist.stepNames": [
+    "Zaman Çizelgesi Kilometre Taşlarını İnceleyin",
+    "Özel Hedefler Ekleyin",
+    "Tamamlanmayı İzleyin"
+  ],
+  "schema.checklist.steps": [
+    "Zaman çizelgesi kilometre taşlarına göz atın ve izleme için önemli olanları kişisel kontrol listenize ekleyin.",
+    "Belirli başarıları veya stratejileri takip etmek için kendi özel hedeflerinizi ve görevlerinizi oluşturun.",
+    "Genel ilerlemenizi izlemek için oyunda ilerledikçe tamamlanan kilometre taşlarını işaretleyin."
+  ],
+  "seo.title": {
+    "dashboard": "Game Dev Tycoon Optimal Oyun Kurulumu Hesaplayıcısı",
+    "topicRecommender": "Game Dev Tycoon Her Tür İçin En İyi Konu",
+    "genreRecommender": "Game Dev Tycoon Geliştirilecek En İyi Tür",
+    "platformRecommender": "Game Dev Tycoon Her Tür İçin En İyi Platform",
+    "sliders": "Game Dev Tycoon Her Tür İçin Kaydırıcı Ayarları",
+    "planner": "Game Dev Tycoon Kayıtlı Oyun Planlayıcı Aracı",
+    "research": "Game Dev Tycoon Erken Oyun Araştırma Sırası",
+    "staff": "Game Dev Tycoon En İyi Personel Uzmanlık Rehberi",
+    "timeline": "Game Dev Tycoon Tüm Binaların Kilidini Açma Zaman Çizelgesi",
+    "checklist": "Game Dev Tycoon Yayın Öncesi Kontrol Listesi",
+    "faq": "Game Dev Tycoon Oyunlarım Neden Düşük Puanlar Alıyor",
+    "guide": "Eksiksiz Game Dev Tycoon Rehberi 2025",
+    "bestCombos": "Game Dev Tycoon En İyi Tür Konu Kombinasyonları Listesi",
+    "slidersExplained": "Game Dev Tycoon Yeni Başlayanlar İçin Kaydırıcılar Açıklaması",
+    "researchOrder": "Game Dev Tycoon En İyi Araştırma Sırası Eksiksiz Liste",
+    "handbuch": "Game Dev Tycoon Eksiksiz El Kitabı",
+    "appGuide": "Game Dev Tycoon Danışmanı Uygulama Rehberi",
+    "privacy": "Gizlilik Politikası",
+    "sources": "Game Dev Tycoon Veri Kaynakları ve Güven Düzeyleri"
+  },
+  "seo.description": {
+    "dashboard": "Game Dev Tycoon'da en iyi konu, tür ve platform kombinasyonlarını bulun. Yeni başlayanlar için ücretsiz etkileşimli kurulum hesaplayıcısı ve önerici aracı.",
+    "topicRecommender": "Game Dev Tycoon'da herhangi bir tür için en iyi konuyu bulun. Fantastik, bilim kurgu ve tüm konular için konu-tür uyumluluk denetleyicisi.",
+    "genreRecommender": "Game Dev Tycoon'da hangi türün en çok para kazandırdığını keşfedin. Kâr ve yüksek skor analizine sahip ücretsiz tür seçici aracı.",
+    "platformRecommender": "Game Dev Tycoon'da hedeflenecek en iyi konsolu bulun. PC ve konsol karşılaştırması ve kitle-platform eşleşme rehberi.",
+    "sliders": "Game Dev Tycoon'daki tüm türler için optimum kaydırıcı yüzdeleri. Her tür için 1, 2, 3. aşama zaman tahsisi içeren ön ayar aracı.",
+    "planner": "Game Dev Tycoon'da bir sonraki oyununuzu planlayın. Kayıt durumunuza ve yayın geçmişinize göre kişiselleştirilmiş öneriler.",
+    "research": "Game Dev Tycoon'da ilk önce ne araştırılır? Ar-Ge laboratuvarı açma gereksinimleri ve araştırma puanı maliyetleriyle birlikte eksiksiz kılavuz.",
+    "staff": "Game Dev Tycoon'da çalışanlar nasıl hızlı eğitilir? Dengeli ekip kurulumu açıklanan tasarım ve teknoloji uzmanı kılavuzu.",
+    "timeline": "Game Dev Tycoon için yıllık ilerleme kılavuzu. Konsol yayın takvimi, ofis açma zamanlaması ve temel kilometre taşları.",
+    "checklist": "Game Dev Tycoon'da bir oyun yayınlamadan önce her şeyi kontrol edin. Adım adım yayın kontrol listemizle düşük puanlardan kaçının.",
+    "faq": "Yaygın Game Dev Tycoon sorularına yanıtlar. Neden sürekli iflas ediyorsunuz? Nasıl 10/10 alınır? Yeni başlayanlar için ipuçları.",
+    "guide": "Game Dev Tycoon'da garajdan AAA'ya yeni başlayanlar için kılavuz. 2025'te yüksek puanlar için ipuçları, püf noktaları ve adım adım strateji.",
+    "bestCombos": "Game Dev Tycoon'da yüksek inceleme puanları için en iyi kombinasyonlar. Fantastik RPG, bilim kurgu aksiyon ve daha fazla en çok oy alan kombinasyon sıralaması.",
+    "slidersExplained": "Kaydırıcılar Game Dev Tycoon'da nasıl çalışır? Her kaydırıcının ne yaptığını, aşama önceliklerini ve inceleme puanları üzerindeki etkisini öğrenin.",
+    "researchOrder": "Game Dev Tycoon'da garajdan AAA'ya en iyi araştırma sırası. Yıla göre önceliklerle birlikte eksiksiz araştırma açma listesi.",
+    "handbuch": "Tüm oyun mekaniklerini, stratejilerini, ipuçlarını ve ileri teknikleri kapsayan eksiksiz Game Dev Tycoon kılavuzu.",
+    "appGuide": "Game Dev Tycoon Advisor'ı nasıl kullanacağınızı öğrenin. Özellikler, iş akışları ve uygulamaya nasıl başlanacağı.",
+    "privacy": "Game Dev Tycoon Advisor için gizlilik politikası. Veri uygulamalarımız ve gizlilik haklarınız hakkında bilgi edinin.",
+    "sources": "Game Dev Tycoon Danışmanı tarafından doğru öneriler için kullanılan, topluluk kaynaklı veriler ve güven seviyeleri."
+  },
+  "shareNudge": {
+    "text": "Bu araç yardımcı oldu mu? Başka oyuncularla paylaş!",
+    "shareButton": "Paylaş",
+    "copied": "Bağlantı kopyalandı!",
+    "shared": "Paylaştığın için teşekkürler!",
+    "shareText": "Game Dev Tycoon oyunumu optimize etmek için bunu kullandım:"
   }
 }

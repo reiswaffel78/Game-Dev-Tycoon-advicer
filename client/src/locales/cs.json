@@ -254,7 +254,10 @@
     "platforms": "Platformy",
     "lastUpdate": "Poslední aktualizace",
     "getStarted": "Začít",
-    "getStartedDesc": "Vyber si doporučovací nástroj a najdi ideální nastavení pro svou hru"
+    "getStartedDesc": "Vyber si doporučovací nástroj a najdi ideální nastavení pro svou hru",
+    "h1": "Nástroj pro doporučení témat, žánrů a platforem v Game Dev Tycoon",
+    "h2": "Jakou nejlepší hru lze v Game Dev Tycoon vytvořit?",
+    "seoIntro": "Použijte náš interaktivní průvodce k nalezení nejlepších nastavení a kombinací. Ať už potřebujete vyhledávač kombinací, tahák nebo nejlepší nastavení pro začátečníky, tento plánovač a doporučovač vám pomůže vytvořit skvělou hru pokaždé."
   },
   "recommender": {
     "selectTopic": "Vyber téma",
@@ -283,7 +286,16 @@
     "searchGenres": "Hledat žánry...",
     "searchPlatforms": "Hledat platformy...",
     "confidenceTooltip": "Úroveň důvěry na základě shody zdrojů",
-    "score": "Skóre"
+    "score": "Skóre",
+    "topicH1": "Jaké téma bych měl v Game Dev Tycoon použít?",
+    "topicH2": "Vyhledávač kombinací témat a žánrů pro Game Dev Tycoon",
+    "topicSeoIntro": "Zjistěte, které téma funguje s akčním žánrem, RPG nebo jakýmkoli jiným žánrem. Náš kontrolor kompatibility témat vám pomůže najít nejlepší téma pro RPG hry, zjistit, zda fantasy nebo sci-fi nabízí nejlepší kombinaci žánrů, a porovnat seznamy divných vs. skvělých kombinací témat. Použijte tento nástroj pro shodu témat a publika k maximalizaci hodnocení v recenzích.",
+    "genreH1": "Který žánr vydělává v Game Dev Tycoon nejvíce peněz?",
+    "genreH2": "Nástroj pro výběr žánru v Game Dev Tycoon",
+    "genreSeoIntro": "Najděte nejziskovější žánr pro ranou i pozdní fázi hry. Porovnejte akční žánr vs. RPG, abyste zjistili, co je lepší, získejte tipy pro žánr simulace a rady k nastavení a objevte nejlepší žánr pro vysoké skóre. Prozkoumejte fungující multi-žánrové kombinace, nastavení posuvníků a témat pro nenáročné hry (casual) a zjistěte, jaké téma vybrat pro strategický žánr.",
+    "platformH1": "Game Dev Tycoon – Na kterou konzoli se zaměřit",
+    "platformH2": "PC vs. konzole – Co je v Game Dev Tycoon lepší?",
+    "platformSeoIntro": "Použijte našeho průvodce tržním podílem platforem a najděte nejlepší konzoli pro hry pro dospělé publikum. Objevte nejlepší kombinaci žánru a tématu pro Gameling, jaké hry vytvářet pro mBox a použijte náš nástroj pro kompatibilitu platforem. Zda byste měli vyvíjet hry pro PC nebo konzole, závisí na vašem publiku – tento průvodce shodou publika a platformy vám pomůže se rozhodnout."
   },
   "sliders": {
     "title": "Předvolby sliderů",
@@ -343,7 +355,15 @@
     "swapGenres": "Prohodit Primární ↔ Sekundární",
     "selectBothGenres": "Vyberte dva žánry",
     "selectBothGenresDesc": "Vyberte primární a sekundární žánr pro zobrazení smíšených nastavení posuvníků",
-    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Předvolby posuvníků"
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Předvolby posuvníků",
+    "h1": "Optimální procentuální nastavení posuvníků v Game Dev Tycoon",
+    "h2": "Nastavení posuvníků pro RPG – fáze 1, 2 a 3",
+    "seoIntro": "Získejte správné rozdělení času v posuvnících pro akční hry a průvodce posuvníky pro žánr adventur. Tento tahák pro posuvníky pokrývá všechny žánry, včetně procent pro simulace a rozdělení fází u strategií. Zjistěte, jaké posuvníky použít pro nenáročný žánr (casual), využijte náš nástroj pro předvolby posuvníků podle žánru, pochopte poměr technologií a designu a naučte se, jak správně nastavit posuvníky pro maximální hodnocení v recenzích.",
+    "explainedBox": {
+      "title": "Jak posuvníky vlastně fungují?",
+      "text": "Nejste si jistí, proč jsou vaše hodnocení v recenzích nízká? Posuvníky určují, jak se čas vývoje rozdělí mezi body za design a technologie ve třech fázích. Každý žánr má jinou váhu fází, která určuje, na kterých posuvnících záleží nejvíce. Pochopení mechaniky posuvníků, rovnováhy mezi designem a technologiemi a toho, jak priority fází ovlivňují vaše konečné skóre, je klíčem k získání hodnocení 10/10.",
+      "linkText": "Přečtěte si našeho kompletního průvodce vysvětlujícího posuvníky v Game Dev Tycoon →"
+    }
   },
   "planner": {
     "title": "Plánovač her",
@@ -395,7 +415,20 @@
       "unlockTopic": "Odemkni {{name}} pro rozšíření herního portfolia.",
       "unlockGenre": "Odemkni žánr {{name}} pro nové příležitosti.",
       "feature": "Vylepšuje kvalitu grafiky pro budoucí AAA tituly."
-    }
+    },
+    "unlockedTopicsFilter": {
+      "title": "Filtrovat podle odemčených témat",
+      "description": "Používejte pouze témata, která jste již ve své uložené pozici odemkli.",
+      "searchPlaceholder": "Hledat témata...",
+      "selectAll": "Vybrat vše",
+      "clear": "Vymazat",
+      "selectedCount": "Vybráno: {{selected}}/{{total}}",
+      "noTopics": "Nenalezena žádná témata.",
+      "emptyFallbackWarning": "Momentálně nejsou k dispozici žádná vybraná témata. Jako záloha jsou použita všechna témata."
+    },
+    "h1": "Game Dev Tycoon – Doporučení další hry na základě uložené pozice",
+    "h2": "Co vytvořit příště na základě vaší herní historie",
+    "seoIntro": "Pomocí tohoto plánovače priorit výzkumu a nástroje pro personalizované herní rady se rozhodněte, co zkoumat dál ve střední fázi hry. Naplánujte své další vydání po opakování kombinace, sledujte své kombinace pomocí našeho nástroje pro sledování kombinací, použijte plánovač rotace žánrů a naučte se, jak plánovat vývojový řetězec her pro maximální růst."
   },
   "research": {
     "title": "Průvodce výzkumem",
@@ -505,12 +538,9 @@
         "tip": "Investice do technologií budoucnosti"
       }
     },
-    "researchOrderBox": {
-      "title": "Doporučené pořadí výzkumu",
-      "body": "Nevíte, co odemknout jako první? Postupujte podle našeho průvodce krok za krokem.",
-      "linkText": "Zobrazit průvodce výzkumem",
-      "enBadge": "EN"
-    }
+    "h1": "Co zkoumat jako první v Game Dev Tycoon",
+    "h2": "Jak rychle získat body výzkumu",
+    "seoIntro": "Zjistěte požadavky na odemčení výzkumné laboratoře a využijte našeho průvodce farmením výzkumných bodů pro efektivní postup. Sledujte seznam nejlepších priorit výzkumu, zjistěte, kdy odemknout střední hry, a zjistěte, jak prostřednictvím výzkumu odemknout AAA hry. Zkontrolujte náklady na body výzkumu u jednotlivých témat a použijte tohoto kompletního průvodce výzkumem od garáže až po AAA."
   },
   "staff": {
     "title": "Průvodce týmem",
@@ -603,7 +633,10 @@
         "title": "Vývoj konzole",
         "description": "Stavba konzole potřebuje 2-3 vyhrazené lidi na 6+ měsíců. Plánuj kapacity týmu."
       }
-    }
+    },
+    "h1": "Jak rychle trénovat zaměstnance v Game Dev Tycoon",
+    "h2": "Specialista na design vs. techniku – jaký je v tom rozdíl?",
+    "seoIntro": "Zjistěte, kdy specializovat personál a kolik zaměstnanců potřebujete pro každou fázi. Pochopte podrobně vysvětlené role všech zaměstnanců, zjistěte, jak najmout lepší zaměstnance, a porovnejte statistiky zaměstnanců, jako je design, technika, výzkum a rychlost. Tento průvodce se také věnuje syndromu vyhoření personálu a správě dovolených a ukazuje vám krok za krokem vysvětlené vyvážené nastavení týmu."
   },
   "timeline": {
     "title": "Časová osa",
@@ -740,7 +773,10 @@
         "description": "Velký tým + vlastní engine + správný marketing = AAA úspěch.",
         "action": "AAA hry zkoušej jen se zkušeným týmem"
       }
-    }
+    },
+    "h1": "Průvodce postupem rok po roce v Game Dev Tycoon",
+    "h2": "Kdy vycházejí nové platformy?",
+    "seoIntro": "Najděte požadavky a načasování odemčení kanceláří, kompletní harmonogram vydávání konzolí ve hře a zjistěte, kdy vychází mBox. Pomocí našeho průvodce daty vydání platforem sledujte milníky 3., 5. a 10. roku. Zjistěte přesně, kdy se přestěhovat do druhé kanceláře, a sledujte celou časovou osu postupu od začátku do konce."
   },
   "checklist": {
     "title": "Checklist postupu",
@@ -759,7 +795,10 @@
     "noItemsYet": "Zatím nic",
     "addItemsHint": "Přidej vlastní úkoly nebo vyber milníky níže.",
     "suggestedMilestones": "Navrhované milníky",
-    "suggestedMilestonesHint": "Důležité události z časové osy, které bys mohl chtít sledovat:"
+    "suggestedMilestonesHint": "Důležité události z časové osy, které bys mohl chtít sledovat:",
+    "h1": "Věci, které je třeba zkontrolovat před vydáním hry v Game Dev Tycoon",
+    "h2": "Kontrolní seznam: Jak se vyhnout nízkému hodnocení",
+    "seoIntro": "Použijte tento seznam běžných chyb, kterým je třeba se vyhnout před každým vydáním. Obsahuje kontrolní seznam pro AAA hry před vydáním, kontrolní seznam požadavků na pokračování a kontrolní seznam enginu před spuštěním nové hry. Sledujte našeho průvodce vydáním hry krok za krokem, projděte si kontrolní seznam kvality grafiky, personálu a posuvníků a naučte se, jak se vyhnout špatným recenzím pomocí tohoto komplexního kontrolního seznamu."
   },
   "faq": {
     "title": "Časté dotazy (FAQ)",
@@ -840,20 +879,9 @@
         "answer": "Nejlepší engine: 1) Vysoké technické dovednosti v týmu, 2) Zahrň všechny dostupné funkce, 3) Investuj dostatek času a peněz, 4) Pravidelně aktualizuj. Dobrý engine se dá použít v mnoha hrách a šetří čas."
       }
     },
-    "links": {
-      "moreTo": "Více k tématu:",
-      "topicRecommender": "Doporučovač témat",
-      "platformRecommender": "Doporučovač platforem",
-      "sliders": "Předvolby posuvníků",
-      "slidersPage": "Průvodce posuvníky",
-      "staff": "Průvodce personálem",
-      "handbuch": "Herní příručka",
-      "research": "Průvodce výzkumem",
-      "researchOrder": "Pořadí výzkumu",
-      "timeline": "Časová osa",
-      "planner": "Herní plánovač",
-      "checklist": "Kontrolní seznam"
-    }
+    "h1": "Proč v Game Dev Tycoon neustále bankrotuji?",
+    "h2": "Jak získat hodnocení 10/10 v Game Dev Tycoon",
+    "seoIntro": "Pochopte vysvětlení postihu za stejnou kombinaci, zjistěte vliv chyb na skóre recenze a naučte se správná pravidla a načasování pokračování. Zjistěte, zda má Game Dev Tycoon multiplayer, jak dlouho trvá průchod hrou a jaký je rozdíl mezi skóre a hodnocením recenze. Získejte základní tipy pro začátečníky, jak se vyhnout bankrotu."
   },
   "manual": {
     "title": "Příručka Game Dev Tycoon",
@@ -1090,9 +1118,7 @@
         "Od základů po pokročilé",
         "Ideální jako reference během hraní"
       ]
-    },
-    "openTool": "Otevřít nástroj",
-    "startWorkflow": "Začít"
+    }
   },
   "sources": {
     "title": "Zdroje dat",
@@ -1216,7 +1242,10 @@
       "description": "Skočte do doporučujícího a předvoleb, abyste mohli použít výše uvedené rady v další hře.",
       "primary": "Najděte nejlepší žánr pro své téma",
       "secondary": "Získejte předvolby posuvníku"
-    }
+    },
+    "h1": "Průvodce pro začátečníky v Game Dev Tycoon – Od garáže po AAA",
+    "h2": "Tipy a triky pro vysoké skóre",
+    "seoIntro": "Naučte se, jak vybudovat miliardové studio a přežít fázi v garáži. Tento strategický průvodce krok za krokem vám ukáže, jak konzistentně získávat hodnocení 10, obsahuje tipy pro střední fázi hry na rozšíření kanceláře a personálu, strategii pro pozdní fázi hry pro vývoj vlastní konzole a MMO a tipy pro mobilní verze iOS a Android."
   },
   "bestCombos": {
     "title": "Nejlepší kombinace témat a žánrů",
@@ -1255,7 +1284,10 @@
       "description": "Pomocí doporučujícího seřaďte každé téma podle vhodného a odemknutého roku.",
       "primary": "Použijte Doporučení žánru",
       "secondary": "Zkontrolujte předvolby posuvníku"
-    }
+    },
+    "h1": "Nejlepší kombinace pro vysoké hodnocení recenzí v Game Dev Tycoon",
+    "h2": "Kombinace Fantasy RPG – Jak hrát",
+    "seoIntro": "Objevte nejlepší nastavení kombinace sci-fi akce a nejlepší kombinaci pro dospělé publikum na PC. Prozkoumejte průvodce kombinací dobrodružného cestování v čase, postapokalyptickou kombinaci RPG a nejlepší multižánrovou kombinaci pro akční adventuru. Podívejte se na nejlépe hodnocené kombinace pro všechny žánry v roce 2025 a pochopte rozdíl mezi divnou a skvělou kombinací."
   },
   "slidersExplained": {
     "title": "Game Dev Tycoon Sliders vysvětleno",
@@ -1312,7 +1344,10 @@
       "description": "Pomocí předvoleb můžete okamžitě zkopírovat nejlepší hodnoty posuvníku.",
       "primary": "Otevřete Předvolby posuvníku",
       "secondary": "Najděte nejlepší žánr"
-    }
+    },
+    "h1": "Jak fungují posuvníky v Game Dev Tycoon?",
+    "h2": "Co dělá který posuvník?",
+    "seoIntro": "Pochopte vliv posuvníků pro engine, hratelnost a příběh na vaše hry. Podívejte se na podrobné vysvětlení priorit posuvníků pro fáze 1, 2 a 3, dopad posuvníků na hodnocení recenzí a průvodce poměrem technologie a designu. Vyhněte se chybám s posuvníky, které způsobují nízká hodnocení, získejte průvodce posuvníky pro žánry akce, RPG a simulace a ovládněte přidělování času ve všech fázích."
   },
   "researchOrder": {
     "title": "PoÅ™adÃ­ vÃ½zkumu v Game Dev Tycoon",
@@ -1369,7 +1404,10 @@
       "description": "Udržujte své odemknutí a předpoklady uspořádané v Průvodci výzkumem.",
       "primary": "Otevřete průvodce výzkumem",
       "secondary": "Sledujte časovou osu"
-    }
+    },
+    "h1": "Co vyzkoumat v garáži jako první",
+    "h2": "Pořadí odemykání výzkumu podle let",
+    "seoIntro": "Sledujte nejlepší priority výzkumu od začátečníka až po AAA. Naučte se pořadí odemykání výzkumu v R&D laboratoři, pořadí výzkumu 3D grafiky od v1 po v7 a projděte si kompletního průvodce stromem výzkumu. Zjistěte, jak odemknout výzkum více žánrů současně, zkontrolujte cenu a čas výzkumu a pochopte požadavky na odemknutí výzkumu v hardwarové laboratoři."
   },
   "seo": {
     "suffix": {
@@ -1392,53 +1430,151 @@
       "appGuide": "Funkce, pracovní postupy a jak začít",
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Komunitní data a úrovně důvěry"
+    },
+    "brand": "Game Dev Tycoon Advisor",
+    "title": {
+      "dashboard": "Kalkulačka optimálního nastavení hry pro Game Dev Tycoon",
+      "topicRecommender": "Game Dev Tycoon: Nejlepší témata pro každý žánr",
+      "genreRecommender": "Game Dev Tycoon: Nejlepší žánr k vývoji",
+      "platformRecommender": "Game Dev Tycoon: Nejlepší platformy pro každý žánr",
+      "sliders": "Game Dev Tycoon: Nastavení posuvníků pro každý žánr",
+      "planner": "Plánovač uložených her pro Game Dev Tycoon",
+      "research": "Game Dev Tycoon: Pořadí výzkumu v začátcích hry",
+      "staff": "Průvodce nejlepšími specializacemi zaměstnanců v Game Dev Tycoon",
+      "timeline": "Game Dev Tycoon: Časová osa odemykání všech budov",
+      "checklist": "Předprodejní kontrolní seznam pro Game Dev Tycoon",
+      "faq": "Game Dev Tycoon: Proč moje hry dostávají nízká hodnocení?",
+      "guide": "Kompletní průvodce Game Dev Tycoon 2025",
+      "bestCombos": "Seznam nejlepších kombinací žánrů a témat v Game Dev Tycoon",
+      "slidersExplained": "Vysvětlení posuvníků v Game Dev Tycoon pro začátečníky",
+      "researchOrder": "Kompletní seznam nejlepšího pořadí výzkumu v Game Dev Tycoon",
+      "handbuch": "Kompletní manuál Game Dev Tycoon",
+      "appGuide": "Průvodce aplikací Game Dev Tycoon Advisor",
+      "privacy": "Zásady ochrany osobních údajů",
+      "sources": "Zdroje dat a úrovně důvěryhodnosti Game Dev Tycoon"
+    },
+    "description": {
+      "dashboard": "Najděte nejlepší kombinace témat, žánrů a platforem ve hře Game Dev Tycoon. Bezplatná interaktivní kalkulačka nastavení a doporučovací nástroj pro začátečníky.",
+      "topicRecommender": "Najděte nejlepší téma pro jakýkoli žánr v Game Dev Tycoon. Kontrola kompatibility témat a žánrů pro fantasy, sci-fi a všechna ostatní témata.",
+      "genreRecommender": "Zjistěte, který žánr v Game Dev Tycoon vydělává nejvíce peněz. Bezplatný nástroj pro výběr žánru s analýzou zisku a nejvyššího skóre.",
+      "platformRecommender": "Najděte nejlepší konzoli, na kterou se v Game Dev Tycoon zaměřit. Srovnání PC vs. konzole a průvodce shodou publika a platformy.",
+      "sliders": "Optimální procenta posuvníků pro všechny žánry v Game Dev Tycoon. Nástroj s předvolbami pro alokaci času ve fázích 1, 2 a 3 pro každý žánr.",
+      "planner": "Naplánujte si svou příští hru v Game Dev Tycoon. Personalizovaná doporučení na základě vašeho uloženého stavu a historie vydání.",
+      "research": "Co zkoumat jako první v Game Dev Tycoon. Kompletní průvodce s požadavky na odemčení výzkumné laboratoře a cenami výzkumných bodů.",
+      "staff": "Jak rychle trénovat zaměstnance v Game Dev Tycoon. Průvodce specializací na design vs. techniku s vysvětlením vyváženého týmu.",
+      "timeline": "Průvodce hrou rok po roce pro Game Dev Tycoon. Harmonogram vydávání konzolí, načasování odemykání kanceláří a klíčové milníky.",
+      "checklist": "Před vydáním hry v Game Dev Tycoon si vše zkontrolujte. Vyhněte se nízkému hodnocení s naším podrobným kontrolním seznamem pro vydání.",
+      "faq": "Odpovědi na časté dotazy ke hře Game Dev Tycoon. Proč stále bankrotujete? Jak získat hodnocení 10/10? Tipy pro začátečníky.",
+      "guide": "Průvodce pro začátečníky od garáže po AAA v Game Dev Tycoon. Tipy, triky a strategie krok za krokem pro vysoké skóre v roce 2025.",
+      "bestCombos": "Nejlepší kombinace pro vysoká hodnocení v Game Dev Tycoon. Žebříček nejlépe hodnocených kombinací jako fantasy RPG, sci-fi akce a další.",
+      "slidersExplained": "Jak fungují posuvníky v Game Dev Tycoon? Zjistěte, co který posuvník dělá, priority fází a vliv na hodnocení recenzí.",
+      "researchOrder": "Nejlepší pořadí výzkumu od garáže po AAA v Game Dev Tycoon. Kompletní seznam odemykání výzkumu podle let s prioritami.",
+      "handbuch": "Kompletní příručka pro Game Dev Tycoon pokrývající všechny herní mechaniky, strategie, tipy a pokročilé techniky.",
+      "appGuide": "Zjistěte, jak používat Game Dev Tycoon Advisor. Funkce, pracovní postupy a jak s aplikací začít.",
+      "privacy": "Zásady ochrany osobních údajů pro Game Dev Tycoon Advisor. Přečtěte si o našem nakládání s daty a svých právech na soukromí.",
+      "sources": "Komunitní data a úrovně důvěryhodnosti používané aplikací Game Dev Tycoon Advisor pro přesná doporučení."
     }
   },
-  "nextStep": {
-    "label": "Další krok",
-    "topicToGenre": {
-      "title": "Nyní vyberte nejlepší žánr",
-      "body": "Použijte své téma k nalezení kombinací žánrů s nejvyššími hodnoceními."
-    },
-    "genreToPlatform": {
-      "title": "Najděte nejlepší platformu",
-      "body": "Spojte svůj žánr s nejlepší platformou a publikem pro maximální hodnocení recenzí."
-    },
-    "platformToSliders": {
-      "title": "Získejte přednastavení posuvníků",
-      "body": "Použijte optimální nastavení posuvníků pro svůj žánr ve všech třech fázích vývoje."
-    },
-    "slidersToPlanner": {
-      "title": "Naplánujte příští vydání",
-      "body": "Zadejte stav uložení a získejte personalizovaná doporučení pro vydání."
-    },
-    "plannerToChecklist": {
-      "title": "Zkontrolujte před vydáním",
-      "body": "Projděte seznam, abyste se vyhnuli běžným chybám před odesláním hry."
-    },
-    "timelineToPlatform": {
-      "title": "Vyberte správnou platformu",
-      "body": "Použijte doporučovač platforem k nalezení nejlepší platformy pro vaši aktuální éru."
-    },
-    "timelineToResearch": {
-      "title": "Stanovte priority výzkumu",
-      "body": "Naplánujte, které technologie odemknout jako další na základě aktuálního herního roku."
-    },
-    "timelineToChecklist": {
-      "title": "Sledujte milníky",
-      "body": "Přidejte klíčové milníky do svého kontrolního seznamu a sledujte pokrok ve hře."
-    },
-    "plannerToResearch": {
-      "title": "Prioritizujte výzkum",
-      "body": "Zjistěte, které technologie odemknout jako první pro maximální skóre."
-    },
-    "staffToHandbook": {
-      "title": "Kontext a pravidla v příručce",
-      "body": "Přečtěte si podrobné týmové mechaniky, pravidla náboru a tréninkové strategie v příručce."
-    },
-    "handbookToStaff": {
-      "title": "Praktické sestavy a tipy",
-      "body": "Konkrétní doporučení pro personál v každé fázi hry."
-    }
+  "sliders.explainedBox": {
+    "title": "Jak posuvníky vlastně fungují?",
+    "text": "Nejste si jistí, proč jsou vaše hodnocení v recenzích nízká? Posuvníky určují, jak se čas vývoje rozdělí mezi body za design a technologie ve třech fázích. Každý žánr má jinou váhu fází, která určuje, na kterých posuvnících záleží nejvíce. Pochopení mechaniky posuvníků, rovnováhy mezi designem a technologiemi a toho, jak priority fází ovlivňují vaše konečné skóre, je klíčem k získání hodnocení 10/10.",
+    "linkText": "Přečtěte si našeho kompletního průvodce vysvětlujícího posuvníky v Game Dev Tycoon →"
+  },
+  "planner.unlockedTopicsFilter": {
+    "title": "Filtrovat podle odemčených témat",
+    "description": "Používejte pouze témata, která jste již ve své uložené pozici odemkli.",
+    "searchPlaceholder": "Hledat témata...",
+    "selectAll": "Vybrat vše",
+    "clear": "Vymazat",
+    "selectedCount": "Vybráno: {{selected}}/{{total}}",
+    "noTopics": "Nenalezena žádná témata.",
+    "emptyFallbackWarning": "Momentálně nejsou k dispozici žádná vybraná témata. Jako záloha jsou použita všechna témata."
+  },
+  "schema.research.steps": [
+    "Vyzkoumejte 2D grafiku v2–v4, poté 3D grafiku v1–v5, abyste odemkli vylepšení vizuální kvality pro vyšší hodnocení v recenzích.",
+    "Vyzkoumejte technologie zvuku pro zlepšení kvality audia. Prioritizujte po odemčení základní grafiky.",
+    "Odemkněte herní prvky jako Multiplayer, Online a Editor úrovní pro rozšíření rozsahu hry a publika.",
+    "Vyzkoumejte technologie AI pro zlepšení chování NPC a kvality interakce v herním světě.",
+    "Vyvíjejte vlastní hardware a konzole v hardwarové laboratoři pro maximální potenciál příjmů."
+  ],
+  "schema.staff.steps": [
+    "Fáze solo vývoje (1.–4. rok). Zaměřte se na budování dovedností a šetření peněz před najímáním zaměstnanců. Trénujte dovednosti designu a technologie rovnoměrně.",
+    "Najměte své první zaměstnance (5.–10. rok). Prioritizujte specialisty s vysokými statistikami technologie nebo designu. Začněte trénovat dovednosti personálu.",
+    "Rozšiřte svůj tým pro větší projekty. Vyvažte specialisty v technologii, designu a rychlosti. Začněte používat systém tréninku.",
+    "Odemkněte R&D laboratoř pro výzkum nových technologií. Přidělte specializované výzkumníky s vysokými statistikami pro rychlejší průlomy.",
+    "Vybudujte hardwarovou laboratoř pro vývoj vlastních konzolí. Vyžaduje specializovaný personál a významné investice pro maximální návratnost."
+  ],
+  "schema.timeline.stepNames": [
+    "1.–5. rok: Fáze v garáži",
+    "6.–10. rok: První kancelář",
+    "11.–15. rok: Fáze růstu",
+    "16.–20. rok: Éra výzkumu a vývoje",
+    "21.–35. rok: Hardware a odkaz"
+  ],
+  "schema.timeline.steps": [
+    "Začněte v garáži. Vyvíjejte malé hry, budujte dovednosti a šetřete peníze. Zaměřte se na textové a 2D hry na raných platformách.",
+    "Přesuňte se do první kanceláře, najměte zaměstnance a pusťte se do středně velkých projektů. Zkoumejte klíčové technologie a expandujte na novější platformy.",
+    "Přejděte do druhé kanceláře, vybudujte větší týmy. Odemkněte MMO a AAA velikosti her. Vyvíjejte pokračování úspěšných titulů.",
+    "Vybudujte R&D laboratoř pro pokročilý výzkum. Vyvíjejte vlastní herní enginy. Zaměřte se na high-end platformy pro maximální hodnocení v recenzích.",
+    "Postavte hardwarovou laboratoř, vyvíjejte vlastní konzole. Vytvářejte AAA trháky a ovládněte všechny platformy. Dosáhněte legendárního statusu."
+  ],
+  "schema.checklist.stepNames": [
+    "Zkontrolovat milníky časové osy",
+    "Přidat vlastní cíle",
+    "Sledovat plnění"
+  ],
+  "schema.checklist.steps": [
+    "Procházejte milníky časové osy a ty důležité si přidejte do svého osobního seznamu pro sledování.",
+    "Vytvořte si vlastní cíle a úkoly pro sledování konkrétních úspěchů nebo strategií.",
+    "Odškrtávejte si splněné milníky v průběhu hry a sledujte svůj celkový postup."
+  ],
+  "seo.title": {
+    "dashboard": "Kalkulačka optimálního nastavení hry pro Game Dev Tycoon",
+    "topicRecommender": "Game Dev Tycoon: Nejlepší témata pro každý žánr",
+    "genreRecommender": "Game Dev Tycoon: Nejlepší žánr k vývoji",
+    "platformRecommender": "Game Dev Tycoon: Nejlepší platformy pro každý žánr",
+    "sliders": "Game Dev Tycoon: Nastavení posuvníků pro každý žánr",
+    "planner": "Plánovač uložených her pro Game Dev Tycoon",
+    "research": "Game Dev Tycoon: Pořadí výzkumu v začátcích hry",
+    "staff": "Průvodce nejlepšími specializacemi zaměstnanců v Game Dev Tycoon",
+    "timeline": "Game Dev Tycoon: Časová osa odemykání všech budov",
+    "checklist": "Předprodejní kontrolní seznam pro Game Dev Tycoon",
+    "faq": "Game Dev Tycoon: Proč moje hry dostávají nízká hodnocení?",
+    "guide": "Kompletní průvodce Game Dev Tycoon 2025",
+    "bestCombos": "Seznam nejlepších kombinací žánrů a témat v Game Dev Tycoon",
+    "slidersExplained": "Vysvětlení posuvníků v Game Dev Tycoon pro začátečníky",
+    "researchOrder": "Kompletní seznam nejlepšího pořadí výzkumu v Game Dev Tycoon",
+    "handbuch": "Kompletní manuál Game Dev Tycoon",
+    "appGuide": "Průvodce aplikací Game Dev Tycoon Advisor",
+    "privacy": "Zásady ochrany osobních údajů",
+    "sources": "Zdroje dat a úrovně důvěryhodnosti Game Dev Tycoon"
+  },
+  "seo.description": {
+    "dashboard": "Najděte nejlepší kombinace témat, žánrů a platforem ve hře Game Dev Tycoon. Bezplatná interaktivní kalkulačka nastavení a doporučovací nástroj pro začátečníky.",
+    "topicRecommender": "Najděte nejlepší téma pro jakýkoli žánr v Game Dev Tycoon. Kontrola kompatibility témat a žánrů pro fantasy, sci-fi a všechna ostatní témata.",
+    "genreRecommender": "Zjistěte, který žánr v Game Dev Tycoon vydělává nejvíce peněz. Bezplatný nástroj pro výběr žánru s analýzou zisku a nejvyššího skóre.",
+    "platformRecommender": "Najděte nejlepší konzoli, na kterou se v Game Dev Tycoon zaměřit. Srovnání PC vs. konzole a průvodce shodou publika a platformy.",
+    "sliders": "Optimální procenta posuvníků pro všechny žánry v Game Dev Tycoon. Nástroj s předvolbami pro alokaci času ve fázích 1, 2 a 3 pro každý žánr.",
+    "planner": "Naplánujte si svou příští hru v Game Dev Tycoon. Personalizovaná doporučení na základě vašeho uloženého stavu a historie vydání.",
+    "research": "Co zkoumat jako první v Game Dev Tycoon. Kompletní průvodce s požadavky na odemčení výzkumné laboratoře a cenami výzkumných bodů.",
+    "staff": "Jak rychle trénovat zaměstnance v Game Dev Tycoon. Průvodce specializací na design vs. techniku s vysvětlením vyváženého týmu.",
+    "timeline": "Průvodce hrou rok po roce pro Game Dev Tycoon. Harmonogram vydávání konzolí, načasování odemykání kanceláří a klíčové milníky.",
+    "checklist": "Před vydáním hry v Game Dev Tycoon si vše zkontrolujte. Vyhněte se nízkému hodnocení s naším podrobným kontrolním seznamem pro vydání.",
+    "faq": "Odpovědi na časté dotazy ke hře Game Dev Tycoon. Proč stále bankrotujete? Jak získat hodnocení 10/10? Tipy pro začátečníky.",
+    "guide": "Průvodce pro začátečníky od garáže po AAA v Game Dev Tycoon. Tipy, triky a strategie krok za krokem pro vysoké skóre v roce 2025.",
+    "bestCombos": "Nejlepší kombinace pro vysoká hodnocení v Game Dev Tycoon. Žebříček nejlépe hodnocených kombinací jako fantasy RPG, sci-fi akce a další.",
+    "slidersExplained": "Jak fungují posuvníky v Game Dev Tycoon? Zjistěte, co který posuvník dělá, priority fází a vliv na hodnocení recenzí.",
+    "researchOrder": "Nejlepší pořadí výzkumu od garáže po AAA v Game Dev Tycoon. Kompletní seznam odemykání výzkumu podle let s prioritami.",
+    "handbuch": "Kompletní příručka pro Game Dev Tycoon pokrývající všechny herní mechaniky, strategie, tipy a pokročilé techniky.",
+    "appGuide": "Zjistěte, jak používat Game Dev Tycoon Advisor. Funkce, pracovní postupy a jak s aplikací začít.",
+    "privacy": "Zásady ochrany osobních údajů pro Game Dev Tycoon Advisor. Přečtěte si o našem nakládání s daty a svých právech na soukromí.",
+    "sources": "Komunitní data a úrovně důvěryhodnosti používané aplikací Game Dev Tycoon Advisor pro přesná doporučení."
+  },
+  "shareNudge": {
+    "text": "Byl tento nástroj užitečný? Sdílejte ho s ostatními hráči!",
+    "shareButton": "Sdílet",
+    "copied": "Odkaz zkopírován!",
+    "shared": "Díky za sdílení!",
+    "shareText": "Tohle jsem použil k optimalizaci svého hraní Game Dev Tycoon:"
   }
 }

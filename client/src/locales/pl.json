@@ -254,7 +254,10 @@
     "platforms": "Platformy",
     "lastUpdate": "Ostatnia aktualizacja",
     "getStarted": "Zaczynamy",
-    "getStartedDesc": "Wybierz narzędzie doradcze, żeby znaleźć idealny zestaw do gry"
+    "getStartedDesc": "Wybierz narzędzie doradcze, żeby znaleźć idealny zestaw do gry",
+    "h1": "Narzędzie do rekomendacji tematów, gatunków i platform w Game Dev Tycoon",
+    "h2": "Jaką grę najlepiej stworzyć w Game Dev Tycoon?",
+    "seoIntro": "Skorzystaj z naszego interaktywnego przewodnika, aby odkryć najlepsze ustawienia i kombinacje. Niezależnie od tego, czy potrzebujesz wyszukiwarki kombinacji, listy ułatwień (cheat sheet) czy najlepszej konfiguracji dla początkujących, ten planer i system rekomendacji pomoże Ci stworzyć świetną grę za każdym razem."
   },
   "recommender": {
     "selectTopic": "Wybierz tematykę",
@@ -283,7 +286,16 @@
     "searchGenres": "Szukaj gatunków...",
     "searchPlatforms": "Szukaj platform...",
     "confidenceTooltip": "Poziom pewności na podstawie zgodności źródeł",
-    "score": "Wynik"
+    "score": "Wynik",
+    "topicH1": "Jaki temat wybrać w Game Dev Tycoon?",
+    "topicH2": "Wyszukiwarka kombinacji tematów i gatunków w Game Dev Tycoon",
+    "topicSeoIntro": "Sprawdź, który temat pasuje do akcji, RPG lub dowolnego innego gatunku. Nasz system sprawdzania kompatybilności tematów pomoże Ci znaleźć najlepszy temat dla gier RPG, dowiedzieć się, czy fantasy czy sci-fi daje lepszą kombinację, oraz porównać listy tematów o „dziwnych” i „świetnych” połączeniach. Użyj tego narzędzia do dopasowania tematu i odbiorców, aby zmaksymalizować oceny recenzji.",
+    "genreH1": "Który gatunek przynosi największe zyski w Game Dev Tycoon?",
+    "genreH2": "Narzędzie do wyboru gatunku w Game Dev Tycoon",
+    "genreSeoIntro": "Znajdź najbardziej dochodowy gatunek na wczesnym i późnym etapie gry. Porównaj akcję z RPG, aby zobaczyć, co jest lepsze, uzyskaj wskazówki dotyczące gatunku symulacji i konfiguracji oraz odkryj najlepszy gatunek dla wysokich wyników. Poznaj działające kombinacje wielogatunkowe, ustawienia suwaków dla gatunku casual oraz dowiedz się, jaki temat wybrać dla gatunku strategii.",
+    "platformH1": "Game Dev Tycoon – Na jaką konsolę tworzyć gry?",
+    "platformH2": "PC czy konsola – co jest lepsze w Game Dev Tycoon?",
+    "platformSeoIntro": "Skorzystaj z naszego przewodnika po udziale platform w rynku, aby znaleźć najlepszą konsolę dla gier dla dojrzałych odbiorców. Odkryj najlepszą kombinację gatunku i tematu dla Gamelinga, sprawdź, jakie gry tworzyć na mBox i skorzystaj z naszego narzędzia kompatybilności platform. To, czy powinieneś tworzyć gry na PC czy konsole, zależy od Twoich odbiorców – ten przewodnik dopasowania platformy do odbiorców pomoże Ci podjąć decyzję."
   },
   "sliders": {
     "title": "Ustawienia suwaków",
@@ -343,7 +355,15 @@
     "swapGenres": "Zamień Główny ↔ Poboczny",
     "selectBothGenres": "Wybierz dwa gatunki",
     "selectBothGenresDesc": "Wybierz główny i poboczny gatunek, aby zobaczyć mieszane ustawienia suwaków",
-    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Presety suwaków"
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Presety suwaków",
+    "h1": "Optymalne wartości procentowe suwaków w Game Dev Tycoon",
+    "h2": "Ustawienia suwaków dla RPG – Faza 1, 2 i 3",
+    "seoIntro": "Uzyskaj właściwy podział czasu suwaków dla gier akcji i przewodnik po suwakach dla gier przygodowych. Ta lista ułatwień (cheat sheet) obejmuje wszystkie gatunki, w tym procentowe wartości suwaków dla symulacji i przydział faz dla strategii. Dowiedz się, jakich suwaków używać dla gatunku casual, skorzystaj z naszego narzędzia ustawień wstępnych dla poszczególnych gatunków, zrozum stosunek technologii do designu i dowiedz się, jak poprawnie ustawić suwaki, aby uzyskać maksymalne oceny w recenzjach.",
+    "explainedBox": {
+      "title": "Jak właściwie działają suwaki?",
+      "text": "Nie wiesz, dlaczego Twoje oceny są niskie? Suwaki kontrolują podział czasu produkcji między punkty Designu i Technologii w trzech fazach. Każdy gatunek ma inne wagi faz, które określają, które suwaki są najważniejsze. Zrozumienie mechaniki suwaków, balansu między designem a technologią oraz wpływu priorytetów faz na końcowy wynik jest kluczem do uzyskania recenzji 10/10.",
+      "linkText": "Przeczytaj nasz pełny przewodnik „Wyjaśnienie suwaków w Game Dev Tycoon” →"
+    }
   },
   "planner": {
     "title": "Planer gier",
@@ -395,7 +415,20 @@
       "unlockTopic": "Odblokuj {{name}}, żeby poszerzyć swoje portfolio gier.",
       "unlockGenre": "Odblokuj gatunek {{name}}, żeby zyskać nowe możliwości.",
       "feature": "Poprawia jakość grafiki w przyszłych tytułach AAA."
-    }
+    },
+    "unlockedTopicsFilter": {
+      "title": "Filtruj według odblokowanych tematów",
+      "description": "Używaj tylko tematów, które zostały już odblokowane w Twoim zapisie gry.",
+      "searchPlaceholder": "Szukaj tematów...",
+      "selectAll": "Zaznacz wszystko",
+      "clear": "Wyczyść",
+      "selectedCount": "Wybrano {{selected}}/{{total}}",
+      "noTopics": "Nie znaleziono żadnych tematów.",
+      "emptyFallbackWarning": "Obecnie brak dostępnych wybranych tematów. Używanie wszystkich tematów jako rezerwowych."
+    },
+    "h1": "Game Dev Tycoon – Rekomendacja kolejnej gry na podstawie zapisu",
+    "h2": "Co stworzyć jako następne na podstawie Twojej historii gier",
+    "seoIntro": "Skorzystaj z tego planera priorytetów badań i spersonalizowanego narzędzia porad dotyczących gier, aby zdecydować, co zbadać w dalszej kolejności w środkowej fazie gry. Zaplanuj następną premierę po powtórzeniu kombinacji, śledź swoje combo za pomocą naszego narzędzia do śledzenia kombinacji, użyj planera rotacji gatunków i dowiedz się, jak planować cykl produkcji gier dla maksymalnego wzrostu."
   },
   "research": {
     "title": "Poradnik badań",
@@ -505,12 +538,9 @@
         "tip": "Inwestycja w technologię przyszłości"
       }
     },
-    "researchOrderBox": {
-      "title": "Zalecana kolejność badań",
-      "body": "Nie wiesz, co odblokować najpierw? Skorzystaj z naszego przewodnika krok po kroku.",
-      "linkText": "Zobacz przewodnik badań",
-      "enBadge": "EN"
-    }
+    "h1": "Co badać jako pierwsze w Game Dev Tycoon",
+    "h2": "Jak szybko zdobywać punkty badań",
+    "seoIntro": "Poznaj wymagania dotyczące odblokowania laboratorium badawczo-rozwojowego i skorzystaj z naszego poradnika farmienia punktów badań, aby efektywnie robić postępy. Śledź listę najlepszych priorytetów badawczych, dowiedz się, kiedy odblokować gry średniej wielkości i jak odblokować gry AAA poprzez badania. Sprawdź koszt punktów badań na temat i skorzystaj z tego kompletnego przewodnika badawczego od garażu do poziomu AAA."
   },
   "staff": {
     "title": "Poradnik kadrowy",
@@ -603,7 +633,10 @@
         "title": "Tworzenie konsoli",
         "description": "Budowa konsoli wymaga 2–3 dedykowanych pracowników na ponad 6 miesięcy. Planuj pojemność zespołu z wyprzedzeniem."
       }
-    }
+    },
+    "h1": "Jak szybko szkolić pracowników w Game Dev Tycoon",
+    "h2": "Specjalista Designu vs Technologii – jaka jest różnica?",
+    "seoIntro": "Dowiedz się, kiedy specjalizować personel i ilu pracowników potrzebujesz na każdym etapie. Zrozum szczegółowo wyjaśnione role pracowników, odkryj, jak zatrudniać lepszych pracowników i porównuj statystyki takie jak design, technologia, badania i szybkość. Ten przewodnik obejmuje również wypalenie zawodowe personelu i zarządzanie urlopami oraz pokazuje zrównoważoną konfigurację zespołu krok po kroku."
   },
   "timeline": {
     "title": "Oś czasu",
@@ -740,7 +773,10 @@
         "description": "Duży zespół + własny silnik + odpowiedni marketing = sukces AAA.",
         "action": "Podejmij się gier AAA tylko z doświadczonym zespołem"
       }
-    }
+    },
+    "h1": "Przewodnik po postępach rok po roku w Game Dev Tycoon",
+    "h2": "Kiedy pojawiają się nowe platformy?",
+    "seoIntro": "Znajdź wymagania i terminy odblokowania biur, pełny harmonogram wydań konsol w grze i dowiedz się, kiedy pojawia się mBox. Skorzystaj z naszego przewodnika po datach premier platform, aby śledzić kamienie milowe w 3., 5. i 10. roku. Dowiedz się dokładnie, kiedy przenieść się do drugiego biura i śledź pełną linię czasu postępu od początku do końca."
   },
   "checklist": {
     "title": "Lista postępów w grze",
@@ -759,7 +795,10 @@
     "noItemsYet": "Brak pozycji",
     "addItemsHint": "Dodaj własne zadania lub wybierz kamienie milowe poniżej, żeby zacząć.",
     "suggestedMilestones": "Sugerowane kamienie milowe",
-    "suggestedMilestonesHint": "Ważne wydarzenia z osi czasu, które warto śledzić:"
+    "suggestedMilestonesHint": "Ważne wydarzenia z osi czasu, które warto śledzić:",
+    "h1": "Rzeczy do sprawdzenia przed wydaniem gry w Game Dev Tycoon",
+    "h2": "Lista kontrolna: Jak unikać niskich ocen",
+    "seoIntro": "Skorzystaj z tej listy typowych błędów, których należy unikać przed każdą premierą. Zawiera listę kontrolną dla gier AAA przed wydaniem, listę wymagań dla sequeli oraz listę kontrolną silnika przed rozpoczęciem nowej gry. Śledź nasz przewodnik wydawania gier krok po kroku, przejrzyj listę jakości dla grafiki, personelu i suwaków oraz dowiedz się, jak unikać złych recenzji dzięki tej kompleksowej liście."
   },
   "faq": {
     "title": "Najczęściej zadawane pytania (FAQ)",
@@ -840,20 +879,9 @@
         "answer": "Najlepszy silnik stworzysz przez: 1) Wysokie umiejętności technologiczne w zespole, 2) Uwzględnienie wszystkich dostępnych funkcji, 3) Zainwestowanie wystarczająco dużo czasu i pieniędzy, 4) Regularne aktualizacje. Dobry silnik może być używany w wielu grach i oszczędza czas na dłuższą metę."
       }
     },
-    "links": {
-      "moreTo": "Więcej na ten temat:",
-      "topicRecommender": "Polecacz tematów",
-      "platformRecommender": "Polecacz platform",
-      "sliders": "Presety suwaków",
-      "slidersPage": "Przewodnik suwaków",
-      "staff": "Przewodnik po personelu",
-      "handbuch": "Podręcznik gry",
-      "research": "Przewodnik badań",
-      "researchOrder": "Kolejność badań",
-      "timeline": "Oś czasu",
-      "planner": "Planer gry",
-      "checklist": "Lista kontrolna"
-    }
+    "h1": "Dlaczego ciągle bankrutuję w Game Dev Tycoon?",
+    "h2": "Jak uzyskać ocenę 10/10 w Game Dev Tycoon",
+    "seoIntro": "Zrozum wyjaśnienie kary za tę samą kombinację, dowiedz się o wpływie błędów na ocenę recenzji oraz poznaj zasady i terminy tworzenia sequeli. Dowiedz się, czy Game Dev Tycoon ma tryb wieloosobowy, jak długo trwa rozgrywka i jaka jest różnica między wynikiem a oceną recenzji. Uzyskaj niezbędne wskazówki dla początkujących, aby uniknąć bankructwa."
   },
   "manual": {
     "title": "Podręcznik Game Dev Tycoon",
@@ -1090,9 +1118,7 @@
         "Od podstaw po zaawansowane",
         "Idealne jako referencja podczas gry"
       ]
-    },
-    "openTool": "Otwórz narzędzie",
-    "startWorkflow": "Zacznij"
+    }
   },
   "sources": {
     "title": "Źródła danych",
@@ -1216,7 +1242,10 @@
       "description": "Przejdź do rekomendacji i gotowych ustawień, aby zastosować powyższe porady w następnej grze.",
       "primary": "Znajdź najlepszy gatunek dla swojego tematu",
       "secondary": "Pobierz gotowe ustawienia suwaków"
-    }
+    },
+    "h1": "Poradnik dla początkujących Game Dev Tycoon – od garażu do AAA",
+    "h2": "Porady i triki na wysoki wynik",
+    "seoIntro": "Dowiedz się, jak zbudować studio warte miliard dolarów i przetrwać fazę garażową. Ten przewodnik strategiczny krok po kroku pokazuje, jak konsekwentnie uzyskiwać ocenę 10, zawiera wskazówki dotyczące rozbudowy biura i personelu w środkowej fazie gry, strategię na późną fazę dla własnej konsoli i tworzenia MMO oraz porady dla wersji mobilnych iOS i Android."
   },
   "bestCombos": {
     "title": "Najlepsze kombinacje tematyczne i gatunkowe",
@@ -1255,7 +1284,10 @@
       "description": "Skorzystaj z rekomendacji, aby posortować każdy temat według roku dopasowania i odblokowania.",
       "primary": "Skorzystaj z funkcji rekomendacji gatunku",
       "secondary": "Sprawdź ustawienia wstępne suwaka"
-    }
+    },
+    "h1": "Najlepsze kombinacje dla wysokich ocen recenzji w Game Dev Tycoon",
+    "h2": "Kombinacja Fantasy RPG – jak grać",
+    "seoIntro": "Odkryj najlepsze ustawienia kombinacji Akcja Sci-Fi oraz najlepszą kombinację dla dorosłych odbiorców na PC. Zapoznaj się z przewodnikiem po kombinacjach Przygoda i Podróże w czasie, połączeniem RPG Postapokaliptyczne oraz najlepszą kombinacją wielogatunkową dla Akcji/Przygody. Zobacz najwyżej oceniane kombinacje dla wszystkich gatunków w 2025 roku i zrozum różnicę między dziwną a świetną kombinacją."
   },
   "slidersExplained": {
     "title": "Wyjaśnienie suwaków twórców gry Tycoon",
@@ -1312,7 +1344,10 @@
       "description": "Użyj ustawień wstępnych, aby natychmiast skopiować najlepsze wartości suwaków.",
       "primary": "Otwórz ustawienia wstępne suwaka",
       "secondary": "Znajdź najlepszy gatunek"
-    }
+    },
+    "h1": "Jak działają suwaki w Game Dev Tycoon?",
+    "h2": "Co robi każdy suwak?",
+    "seoIntro": "Zrozum wpływ suwaków silnika, rozgrywki i fabuły na Twoje gry. Poznaj szczegółowo wyjaśnione priorytety suwaków dla faz 1, 2 i 3, wpływ suwaków na ocenę recenzji oraz przewodnik po stosunku technologii do designu. Unikaj błędów w ustawieniu suwaków powodujących niskie oceny, pobierz poradnik suwaków dla gatunków akcji, RPG i symulacji oraz opanuj suwaki alokacji czasu dla wszystkich faz."
   },
   "researchOrder": {
     "title": "Zamówienie badawcze twórców gry Tycoon",
@@ -1369,7 +1404,10 @@
       "description": "Uporządkuj odblokowane elementy i wymagania wstępne w Przewodniku badawczym.",
       "primary": "Otwarty przewodnik po badaniach",
       "secondary": "Postępuj zgodnie z osią czasu"
-    }
+    },
+    "h1": "Co badać najpierw w garażu",
+    "h2": "Kolejność odblokowywania badań według lat",
+    "seoIntro": "Podążaj za najlepszymi priorytetami badawczymi od początkującego do AAA. Poznaj kolejność odblokowywania badań w laboratorium R&D, kolejność badań grafiki 3D od v1 do v7 i przejrzyj pełny przewodnik po drzewku technologicznym. Dowiedz się, jak odblokować badania wielogatunkowe, sprawdź koszt i czas badań oraz poznaj wymagania dotyczące odblokowania badań w laboratorium sprzętowym."
   },
   "seo": {
     "suffix": {
@@ -1392,53 +1430,151 @@
       "appGuide": "Funkcje, przepływy pracy i jak zacząć",
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Dane społeczności i poziomy zaufania"
+    },
+    "brand": "Game Dev Tycoon Advisor",
+    "title": {
+      "dashboard": "Kalkulator optymalnej konfiguracji gry w Game Dev Tycoon",
+      "topicRecommender": "Najlepsze tematy dla każdego gatunku w Game Dev Tycoon",
+      "genreRecommender": "Najlepszy gatunek do tworzenia w Game Dev Tycoon",
+      "platformRecommender": "Najlepsza platforma dla każdego gatunku w Game Dev Tycoon",
+      "sliders": "Ustawienia suwaków dla każdego gatunku w Game Dev Tycoon",
+      "planner": "Planer zapisu gry w Game Dev Tycoon",
+      "research": "Kolejność badań na początku gry w Game Dev Tycoon",
+      "staff": "Poradnik specjalizacji personelu w Game Dev Tycoon",
+      "timeline": "Oś czasu odblokowań wszystkich budynków w Game Dev Tycoon",
+      "checklist": "Lista kontrolna przed premierą gry w Game Dev Tycoon",
+      "faq": "Game Dev Tycoon: Dlaczego moje gry otrzymują niskie oceny?",
+      "guide": "Kompletny poradnik Game Dev Tycoon 2025",
+      "bestCombos": "Lista najlepszych kombinacji gatunku i tematu w Game Dev Tycoon",
+      "slidersExplained": "Wyjaśnienie suwaków w Game Dev Tycoon dla początkujących",
+      "researchOrder": "Kompletna lista najlepszej kolejności badań w Game Dev Tycoon",
+      "handbuch": "Kompletna instrukcja Game Dev Tycoon",
+      "appGuide": "Przewodnik po aplikacji Game Dev Tycoon Advisor",
+      "privacy": "Polityka prywatności",
+      "sources": "Źródła danych i poziomy zaufania Game Dev Tycoon"
+    },
+    "description": {
+      "dashboard": "Znajdź najlepsze kombinacje tematów, gatunków i platform w Game Dev Tycoon. Darmowy interaktywny kalkulator i narzędzie rekomendacji dla początkujących.",
+      "topicRecommender": "Znajdź najlepszy temat dla dowolnego gatunku w Game Dev Tycoon. Narzędzie do sprawdzania kompatybilności tematu i gatunku dla fantasy, sci-fi i wszystkich innych tematów.",
+      "genreRecommender": "Odkryj, który gatunek przynosi najwięcej pieniędzy w Game Dev Tycoon. Darmowe narzędzie do wyboru gatunku z analizą zysków i wysokich ocen.",
+      "platformRecommender": "Znajdź najlepszą konsolę docelową w Game Dev Tycoon. Porównanie PC vs konsola oraz przewodnik dopasowania odbiorców do platformy.",
+      "sliders": "Optymalne ustawienia suwaków dla wszystkich gatunków w Game Dev Tycoon. Narzędzie z gotowymi ustawieniami alokacji czasu dla faz 1, 2 i 3 dla każdego gatunku.",
+      "planner": "Zaplanuj swoją następną grę w Game Dev Tycoon. Spersonalizowane rekomendacje na podstawie Twojego stanu zapisu i historii wydań.",
+      "research": "Co badać w pierwszej kolejności w Game Dev Tycoon. Kompletny przewodnik z wymaganiami odblokowania laboratorium badawczo-rozwojowego i kosztami punktów badań.",
+      "staff": "Jak szybko szkolić pracowników w Game Dev Tycoon. Przewodnik: specjalista od designu kontra technologii oraz wyjaśnienie zbalansowanego zespołu.",
+      "timeline": "Przewodnik po postępach rok po roku w Game Dev Tycoon. Harmonogram wydań konsol, terminy odblokowania biur i kluczowe etapy.",
+      "checklist": "Sprawdź wszystko przed wydaniem gry w Game Dev Tycoon. Unikaj niskich ocen dzięki naszej liście kontrolnej wydania krok po kroku.",
+      "faq": "Odpowiedzi na najczęstsze pytania dotyczące Game Dev Tycoon. Dlaczego ciągle bankrutujesz? Jak zdobyć 10/10? Porady dla początkujących.",
+      "guide": "Przewodnik dla początkujących od garażu do AAA w Game Dev Tycoon. Porady, triki i strategia krok po kroku na wysokie wyniki w 2025 roku.",
+      "bestCombos": "Najlepsze kombinacje dla wysokich ocen recenzji w Game Dev Tycoon. Ranking najwyżej ocenianych połączeń: Fantasy RPG, akcja sci-fi i inne.",
+      "slidersExplained": "Jak działają suwaki w Game Dev Tycoon? Dowiedz się, za co odpowiada każdy suwak, jakie są priorytety faz i ich wpływ na oceny recenzji.",
+      "researchOrder": "Najlepsza kolejność badań od garażu do AAA w Game Dev Tycoon. Kompletna lista odblokowywania badań według lat z priorytetami.",
+      "handbuch": "Kompletny podręcznik do Game Dev Tycoon obejmujący wszystkie mechaniki gry, strategie, porady i zaawansowane techniki.",
+      "appGuide": "Dowiedz się, jak korzystać z Game Dev Tycoon Advisor. Funkcje, procesy pracy i sposób rozpoczęcia pracy z aplikacją.",
+      "privacy": "Polityka prywatności dla Game Dev Tycoon Advisor. Dowiedz się o naszych praktykach dotyczących danych i Twoich prawach do prywatności.",
+      "sources": "Dane pochodzące od społeczności i poziomy zaufania używane przez Game Dev Tycoon Advisor do dostarczania dokładnych rekomendacji."
     }
   },
-  "nextStep": {
-    "label": "Następny krok",
-    "topicToGenre": {
-      "title": "Teraz wybierz najlepszy gatunek",
-      "body": "Użyj swojego tematu, aby znaleźć kombinacje gatunków z najwyższymi ocenami."
-    },
-    "genreToPlatform": {
-      "title": "Znajdź najlepszą platformę",
-      "body": "Dopasuj swój gatunek do najlepszej platformy i odbiorców, aby uzyskać maksymalne oceny."
-    },
-    "platformToSliders": {
-      "title": "Pobierz preset suwaków",
-      "body": "Zastosuj optymalne ustawienia suwaków dla swojego gatunku we wszystkich trzech fazach."
-    },
-    "slidersToPlanner": {
-      "title": "Zaplanuj kolejne wydanie",
-      "body": "Wprowadź stan zapisu, aby otrzymać spersonalizowane rekomendacje dotyczące wydania."
-    },
-    "plannerToChecklist": {
-      "title": "Sprawdź przed publikacją",
-      "body": "Przejrzyj listę kontrolną, aby uniknąć typowych błędów przed przesłaniem gry."
-    },
-    "timelineToPlatform": {
-      "title": "Wybierz właściwą platformę",
-      "body": "Skorzystaj z narzędzia do rekomendacji platform, aby znaleźć najlepszą dla swojej aktualnej ery."
-    },
-    "timelineToResearch": {
-      "title": "Ustal priorytety badań",
-      "body": "Zaplanuj, które technologie odblokować w następnej kolejności na podstawie aktualnego roku gry."
-    },
-    "timelineToChecklist": {
-      "title": "Śledź swoje kamienie milowe",
-      "body": "Dodaj kluczowe kamienie milowe do listy kontrolnej i śledź postępy w grze."
-    },
-    "plannerToResearch": {
-      "title": "Priorytetyzuj badania",
-      "body": "Zobacz, które technologie odblokować jako pierwsze, aby zmaksymalizować wyniki."
-    },
-    "staffToHandbook": {
-      "title": "Tło i zasady w podręczniku",
-      "body": "Poznaj szczegółowe mechaniki zespołu, zasady rekrutacji i strategie szkoleń w podręczniku."
-    },
-    "handbookToStaff": {
-      "title": "Praktyczne zestawy zespołu i wskazówki",
-      "body": "Konkretne rekomendacje personelu dla każdej fazy gry."
-    }
+  "sliders.explainedBox": {
+    "title": "Jak właściwie działają suwaki?",
+    "text": "Nie wiesz, dlaczego Twoje oceny są niskie? Suwaki kontrolują podział czasu produkcji między punkty Designu i Technologii w trzech fazach. Każdy gatunek ma inne wagi faz, które określają, które suwaki są najważniejsze. Zrozumienie mechaniki suwaków, balansu między designem a technologią oraz wpływu priorytetów faz na końcowy wynik jest kluczem do uzyskania recenzji 10/10.",
+    "linkText": "Przeczytaj nasz pełny przewodnik „Wyjaśnienie suwaków w Game Dev Tycoon” →"
+  },
+  "planner.unlockedTopicsFilter": {
+    "title": "Filtruj według odblokowanych tematów",
+    "description": "Używaj tylko tematów, które zostały już odblokowane w Twoim zapisie gry.",
+    "searchPlaceholder": "Szukaj tematów...",
+    "selectAll": "Zaznacz wszystko",
+    "clear": "Wyczyść",
+    "selectedCount": "Wybrano {{selected}}/{{total}}",
+    "noTopics": "Nie znaleziono żadnych tematów.",
+    "emptyFallbackWarning": "Obecnie brak dostępnych wybranych tematów. Używanie wszystkich tematów jako rezerwowych."
+  },
+  "schema.research.steps": [
+    "Opracuj grafikę 2D v2–v4, a następnie grafikę 3D v1–v5, aby odblokować ulepszenia jakości wizualnej dla wyższych ocen recenzji.",
+    "Badaj technologie dźwięku, aby poprawić jakość audio. Nadaj im priorytet po odblokowaniu podstawowej grafiki.",
+    "Odblokuj funkcje rozgrywki, takie jak tryb wieloosobowy, online i edytor poziomów, aby zwiększyć zakres gry i bazę odbiorców.",
+    "Badaj technologie SI, aby poprawić zachowanie NPC i jakość interakcji ze światem gry.",
+    "Twórz własny sprzęt i konsole w Laboratorium Sprzętowym, aby uzyskać maksymalny potencjał przychodów."
+  ],
+  "schema.staff.steps": [
+    "Faza rozwoju solo (lata 1-4). Skup się na rozwijaniu umiejętności i oszczędzaniu pieniędzy przed zatrudnieniem pracowników. Trenuj umiejętności designu i technologii równomiernie.",
+    "Zatrudnij pierwszych pracowników (lata 5-10). Priorytetyzuj specjalistów z wysokimi statystykami technologii lub designu. Rozpocznij szkolenie umiejętności personelu.",
+    "Rozbuduj zespół do większych projektów. Zbalansuj specjalistów pod kątem technologii, designu i szybkości. Zacznij korzystać z systemu szkoleń.",
+    "Odblokuj Laboratorium R&D, aby badać nowe technologie. Przydziel dedykowanych badaczy z wysokimi statystykami dla szybszych przełomów.",
+    "Zbuduj Laboratorium Sprzętowe, aby tworzyć własne konsole. Wymaga to wyspecjalizowanego personelu i znacznych inwestycji dla maksymalnych zysków."
+  ],
+  "schema.timeline.stepNames": [
+    "Lata 1–5: Faza garażowa",
+    "Lata 6–10: Pierwsze biuro",
+    "Lata 11–15: Faza wzrostu",
+    "Lata 16–20: Era R&D",
+    "Lata 21–35: Sprzęt i dziedzictwo"
+  ],
+  "schema.timeline.steps": [
+    "Zacznij w garażu. Twórz małe gry, rozwijaj umiejętności i oszczędzaj pieniądze. Celuj w gry tekstowe i 2D na wczesnych platformach.",
+    "Przenieś się do pierwszego biura, zatrudnij personel i podejmij się projektów średniej wielkości. Badaj kluczowe technologie i rozszerzaj działalność na nowsze platformy.",
+    "Przenieś się do drugiego biura, buduj większe zespoły. Odblokuj rozmiary gier MMO i AAA. Twórz kontynuacje udanych tytułów.",
+    "Zbuduj Laboratorium R&D dla zaawansowanych badań. Twórz własne silniki gier. Celuj w platformy high-end, aby uzyskać najwyższe noty.",
+    "Zbuduj Hardware Lab, opracuj własne konsole. Twórz hity AAA i zdominuj wszystkie platformy. Zdobądź status legendy."
+  ],
+  "schema.checklist.stepNames": [
+    "Przejrzyj kamienie milowe",
+    "Dodaj własne cele",
+    "Śledź postępy"
+  ],
+  "schema.checklist.steps": [
+    "Przejrzyj kamienie milowe na osi czasu i dodaj te najważniejsze do swojej listy zadań.",
+    "Twórz własne cele i zadania, aby śledzić konkretne osiągnięcia lub strategie.",
+    "Odznaczaj ukończone kamienie milowe w miarę postępów w grze, aby monitorować swój rozwój."
+  ],
+  "seo.title": {
+    "dashboard": "Kalkulator optymalnej konfiguracji gry w Game Dev Tycoon",
+    "topicRecommender": "Najlepsze tematy dla każdego gatunku w Game Dev Tycoon",
+    "genreRecommender": "Najlepszy gatunek do tworzenia w Game Dev Tycoon",
+    "platformRecommender": "Najlepsza platforma dla każdego gatunku w Game Dev Tycoon",
+    "sliders": "Ustawienia suwaków dla każdego gatunku w Game Dev Tycoon",
+    "planner": "Planer zapisu gry w Game Dev Tycoon",
+    "research": "Kolejność badań na początku gry w Game Dev Tycoon",
+    "staff": "Poradnik specjalizacji personelu w Game Dev Tycoon",
+    "timeline": "Oś czasu odblokowań wszystkich budynków w Game Dev Tycoon",
+    "checklist": "Lista kontrolna przed premierą gry w Game Dev Tycoon",
+    "faq": "Game Dev Tycoon: Dlaczego moje gry otrzymują niskie oceny?",
+    "guide": "Kompletny poradnik Game Dev Tycoon 2025",
+    "bestCombos": "Lista najlepszych kombinacji gatunku i tematu w Game Dev Tycoon",
+    "slidersExplained": "Wyjaśnienie suwaków w Game Dev Tycoon dla początkujących",
+    "researchOrder": "Kompletna lista najlepszej kolejności badań w Game Dev Tycoon",
+    "handbuch": "Kompletna instrukcja Game Dev Tycoon",
+    "appGuide": "Przewodnik po aplikacji Game Dev Tycoon Advisor",
+    "privacy": "Polityka prywatności",
+    "sources": "Źródła danych i poziomy zaufania Game Dev Tycoon"
+  },
+  "seo.description": {
+    "dashboard": "Znajdź najlepsze kombinacje tematów, gatunków i platform w Game Dev Tycoon. Darmowy interaktywny kalkulator i narzędzie rekomendacji dla początkujących.",
+    "topicRecommender": "Znajdź najlepszy temat dla dowolnego gatunku w Game Dev Tycoon. Narzędzie do sprawdzania kompatybilności tematu i gatunku dla fantasy, sci-fi i wszystkich innych tematów.",
+    "genreRecommender": "Odkryj, który gatunek przynosi najwięcej pieniędzy w Game Dev Tycoon. Darmowe narzędzie do wyboru gatunku z analizą zysków i wysokich ocen.",
+    "platformRecommender": "Znajdź najlepszą konsolę docelową w Game Dev Tycoon. Porównanie PC vs konsola oraz przewodnik dopasowania odbiorców do platformy.",
+    "sliders": "Optymalne ustawienia suwaków dla wszystkich gatunków w Game Dev Tycoon. Narzędzie z gotowymi ustawieniami alokacji czasu dla faz 1, 2 i 3 dla każdego gatunku.",
+    "planner": "Zaplanuj swoją następną grę w Game Dev Tycoon. Spersonalizowane rekomendacje na podstawie Twojego stanu zapisu i historii wydań.",
+    "research": "Co badać w pierwszej kolejności w Game Dev Tycoon. Kompletny przewodnik z wymaganiami odblokowania laboratorium badawczo-rozwojowego i kosztami punktów badań.",
+    "staff": "Jak szybko szkolić pracowników w Game Dev Tycoon. Przewodnik: specjalista od designu kontra technologii oraz wyjaśnienie zbalansowanego zespołu.",
+    "timeline": "Przewodnik po postępach rok po roku w Game Dev Tycoon. Harmonogram wydań konsol, terminy odblokowania biur i kluczowe etapy.",
+    "checklist": "Sprawdź wszystko przed wydaniem gry w Game Dev Tycoon. Unikaj niskich ocen dzięki naszej liście kontrolnej wydania krok po kroku.",
+    "faq": "Odpowiedzi na najczęstsze pytania dotyczące Game Dev Tycoon. Dlaczego ciągle bankrutujesz? Jak zdobyć 10/10? Porady dla początkujących.",
+    "guide": "Przewodnik dla początkujących od garażu do AAA w Game Dev Tycoon. Porady, triki i strategia krok po kroku na wysokie wyniki w 2025 roku.",
+    "bestCombos": "Najlepsze kombinacje dla wysokich ocen recenzji w Game Dev Tycoon. Ranking najwyżej ocenianych połączeń: Fantasy RPG, akcja sci-fi i inne.",
+    "slidersExplained": "Jak działają suwaki w Game Dev Tycoon? Dowiedz się, za co odpowiada każdy suwak, jakie są priorytety faz i ich wpływ na oceny recenzji.",
+    "researchOrder": "Najlepsza kolejność badań od garażu do AAA w Game Dev Tycoon. Kompletna lista odblokowywania badań według lat z priorytetami.",
+    "handbuch": "Kompletny podręcznik do Game Dev Tycoon obejmujący wszystkie mechaniki gry, strategie, porady i zaawansowane techniki.",
+    "appGuide": "Dowiedz się, jak korzystać z Game Dev Tycoon Advisor. Funkcje, procesy pracy i sposób rozpoczęcia pracy z aplikacją.",
+    "privacy": "Polityka prywatności dla Game Dev Tycoon Advisor. Dowiedz się o naszych praktykach dotyczących danych i Twoich prawach do prywatności.",
+    "sources": "Dane pochodzące od społeczności i poziomy zaufania używane przez Game Dev Tycoon Advisor do dostarczania dokładnych rekomendacji."
+  },
+  "shareNudge": {
+    "text": "Czy to narzędzie było pomocne? Udostępnij je innym graczom!",
+    "shareButton": "Udostępnij",
+    "copied": "Link skopiowany!",
+    "shared": "Dziękujemy za udostępnienie!",
+    "shareText": "Użyłem tego, aby zoptymalizować moją rozgrywkę w Game Dev Tycoon:"
   }
 }

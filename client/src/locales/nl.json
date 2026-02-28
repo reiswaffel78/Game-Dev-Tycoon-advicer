@@ -254,7 +254,10 @@
     "platforms": "Platformen",
     "lastUpdate": "Laatste update",
     "getStarted": "Aan de slag",
-    "getStartedDesc": "Kies een aanbeveler om de perfecte game-opzet te vinden"
+    "getStartedDesc": "Kies een aanbeveler om de perfecte game-opzet te vinden",
+    "h1": "Game Dev Tycoon Onderwerp Genre Platform Aanbevelingstool",
+    "h2": "Wat is het beste spel om te maken in Game Dev Tycoon?",
+    "seoIntro": "Gebruik onze interactieve gids om de beste instellingen en combinaties te ontdekken. Of je nu een combinatiezoeker, een spiekbriefje of de beste setup voor beginners nodig hebt, deze planner en aanbevelingstool helpt je om elke keer een goed spel te maken."
   },
   "recommender": {
     "selectTopic": "Kies een onderwerp",
@@ -283,7 +286,16 @@
     "searchGenres": "Genres zoeken...",
     "searchPlatforms": "Platformen zoeken...",
     "confidenceTooltip": "Betrouwbaarheidsniveau op basis van overeenstemming tussen bronnen",
-    "score": "Score"
+    "score": "Score",
+    "topicH1": "Welk onderwerp moet ik gebruiken in Game Dev Tycoon?",
+    "topicH2": "Game Dev Tycoon Onderwerp Genre Combinatiezoeker",
+    "topicSeoIntro": "Bekijk welk onderwerp werkt bij actie, RPG of elk ander genre. Onze onderwerp-compatibiliteitschecker helpt je het beste onderwerp voor RPG-spellen te vinden, te ontdekken of fantasy of sci-fi de beste genrecombinatie oplevert, en lijsten met vreemde versus geweldige combinatie-onderwerpen te vergelijken. Gebruik deze tool voor onderwerp- en doelgroepmatch om je recensiescores te maximaliseren.",
+    "genreH1": "Welk genre brengt het meeste geld op in Game Dev Tycoon?",
+    "genreH2": "Game Dev Tycoon Genrekeuzetool",
+    "genreSeoIntro": "Vind het meest winstgevende genre voor het begin en einde van het spel. Vergelijk actie versus RPG om te zien welke beter is, krijg tips en advies voor het simulatiegenre en ontdek het beste genre voor een hoge score. Verken multi-genre combinaties die werken, slider- en onderwerpinstellingen voor het casual genre, en leer welk onderwerp je moet kiezen voor het strategiegenre.",
+    "platformH1": "Game Dev Tycoon – Op welke console moet je je richten",
+    "platformH2": "PC versus Console – Wat is beter in Game Dev Tycoon?",
+    "platformSeoIntro": "Gebruik onze gids voor marktaandeel van platforms om de beste console te vinden voor spellen voor een volwassen publiek. Ontdek de beste genre-onderwerpcombinatie voor de Gameling, welke spellen je voor de mBox moet maken en gebruik onze platform-compatibiliteitstool. Of je nu spellen voor pc of console moet maken, hangt af van je publiek – deze gids voor de match tussen publiek en platform helpt je bij je beslissing."
   },
   "sliders": {
     "title": "Slider-instellingen",
@@ -343,7 +355,15 @@
     "swapGenres": "Primair ↔ Secundair wisselen",
     "selectBothGenres": "Twee genres selecteren",
     "selectBothGenresDesc": "Kies een primair en secundair genre om gemengde sliderinstellingen te zien",
-    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Slider-presets"
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Slider-presets",
+    "h1": "Game Dev Tycoon Optimale Slider-percentages",
+    "h2": "RPG Slider-instellingen – Fase 1, 2 en 3",
+    "seoIntro": "Krijg de juiste tijdstoewijzing voor de actie-slider en de gids voor de avonturengenre-slider voor elk spel. Dit slider-spiekbriefje behandelt alle genres, inclusief de slider-percentages voor simulatie en de fase-toewijzing voor de strategie-slider. Ontdek welke sliders je moet gebruiken voor het casual genre, gebruik onze slider-voorinstellingstool per genre, begrijp de tech-design-verhouding en leer hoe je sliders correct instelt voor maximale recensiescores.",
+    "explainedBox": {
+      "title": "Hoe werken sliders eigenlijk?",
+      "text": "Niet zeker waarom je recensiescores laag zijn? De sliders bepalen hoe de ontwikkeltijd wordt verdeeld tussen Design- en Tech-punten over drie fasen. Elk genre heeft verschillende fasegewichten die bepalen welke sliders het belangrijkst zijn. Het begrijpen van de slider-mechanica, de balans tussen design en tech, en hoe fase-prioriteiten je uiteindelijke score beïnvloeden, is de sleutel tot het krijgen van 10/10 recensies.",
+      "linkText": "Lees onze volledige 'Game Dev Tycoon Sliders Uitgelegd' gids →"
+    }
   },
   "planner": {
     "title": "Gameplanner",
@@ -395,7 +415,20 @@
       "unlockTopic": "Ontgrendel {{name}} om je gameportfolio uit te breiden.",
       "unlockGenre": "Ontgrendel het genre {{name}} voor nieuwe gamemogelijkheden.",
       "feature": "Verbetert de grafische kwaliteit voor toekomstige AAA-titels."
-    }
+    },
+    "unlockedTopicsFilter": {
+      "title": "Filteren op ontgrendelde onderwerpen",
+      "description": "Gebruik alleen onderwerpen die je al hebt ontgrendeld in je opslagbestand.",
+      "searchPlaceholder": "Onderwerpen zoeken...",
+      "selectAll": "Alles selecteren",
+      "clear": "Wissen",
+      "selectedCount": "{{selected}}/{{total}} geselecteerd",
+      "noTopics": "Geen onderwerpen gevonden.",
+      "emptyFallbackWarning": "Er zijn momenteel geen geselecteerde onderwerpen beschikbaar. Alle onderwerpen worden als fallback gebruikt."
+    },
+    "h1": "Game Dev Tycoon – Aanbeveling voor volgende game op basis van opslagbestand",
+    "h2": "Wat je nu moet maken op basis van je gamegeschiedenis",
+    "seoIntro": "Gebruik deze onderzoekprioriteitsplanner en gepersonaliseerde game-adviestool om te bepalen wat je als volgende moet onderzoeken in de mid-game. Plan je volgende release na een combo-herhaling, volg je combo's met onze combo-trackingtool, gebruik de genre-rotatieplanner en leer hoe je de game-pijplijn plant voor maximale groei."
   },
   "research": {
     "title": "Onderzoeksgids",
@@ -505,12 +538,9 @@
         "tip": "Investering in toekomstige technologie"
       }
     },
-    "researchOrderBox": {
-      "title": "Aanbevolen onderzoeksvolgorde",
-      "body": "Weet je niet wat je eerst moet ontgrendelen? Volg onze stap-voor-stap gids.",
-      "linkText": "Onderzoeksgids bekijken",
-      "enBadge": "EN"
-    }
+    "h1": "Wat je eerst moet onderzoeken in Game Dev Tycoon",
+    "h2": "Hoe je snel onderzoekspunten krijgt",
+    "seoIntro": "Leer de ontgrendelingsvereisten voor het R&D-lab en gebruik onze onderzoekspunten-farminggids om efficiënt vooruitgang te boeken. Volg de lijst met de beste onderzoekprioriteiten, weet wanneer je medium games moet ontgrendelen en ontdek hoe je AAA-games ontgrendelt via onderzoek. Bekijk de onderzoekspuntenkosten per onderwerp en gebruik deze complete onderzoeksgids van garage tot AAA."
   },
   "staff": {
     "title": "Personeelsgids",
@@ -603,7 +633,10 @@
         "title": "Console-ontwikkeling",
         "description": "Een console bouwen vereist 2-3 toegewijde medewerkers gedurende 6+ maanden. Plan je teamcapaciteit zorgvuldig."
       }
-    }
+    },
+    "h1": "Hoe je werknemers snel traint in Game Dev Tycoon",
+    "h2": "Design- vs. Tech-specialist – Wat is het verschil?",
+    "seoIntro": "Leer wanneer je personeel moet specialiseren en hoeveel werknemers je nodig hebt voor elke fase. Begrijp alle personeelsrollen in detail, ontdek hoe je betere werknemers aanneemt en vergelijk statistieken zoals design, tech, onderzoek en snelheid. Deze gids behandelt ook personeelsburn-out en vakantiebeheer en laat je de gebalanceerde teamopstelling stap voor stap zien."
   },
   "timeline": {
     "title": "Tijdlijn",
@@ -740,7 +773,10 @@
         "description": "Groot team + eigen engine + goede marketing = AAA-succes.",
         "action": "Probeer AAA-games alleen met een ervaren team"
       }
-    }
+    },
+    "h1": "Game Dev Tycoon jaar-na-jaar voortgangsgids",
+    "h2": "Wanneer komen er nieuwe platforms uit?",
+    "seoIntro": "Vind de vereisten en timing voor het ontgrendelen van kantoren, het volledige releaseschema voor consoles in de game, en leer wanneer de mBox uitkomt. Gebruik onze gids met platformreleasedata om mijlpalen in jaar 3, jaar 5 en jaar 10 bij te houden. Weet precies wanneer je naar het tweede kantoor moet verhuizen en volg de volledige voortgangstijdlijn van start tot finish."
   },
   "checklist": {
     "title": "Voortgangschecklist",
@@ -759,7 +795,10 @@
     "noItemsYet": "Nog geen items",
     "addItemsHint": "Voeg eigen taken toe of selecteer mijlpalen hieronder om te beginnen.",
     "suggestedMilestones": "Voorgestelde mijlpalen",
-    "suggestedMilestonesHint": "Belangrijke gebeurtenissen uit de tijdlijn die je misschien wilt bijhouden:"
+    "suggestedMilestonesHint": "Belangrijke gebeurtenissen uit de tijdlijn die je misschien wilt bijhouden:",
+    "h1": "Dingen om te controleren voordat je een game uitbrengt in Game Dev Tycoon",
+    "h2": "Checklist om lage scores te voorkomen",
+    "seoIntro": "Gebruik deze lijst met veelvoorkomende fouten om te vermijden voor elke release. Inclusief de AAA-gamechecklist voor release, de checklist voor vervolgvereisten en de engine-checklist voordat je een nieuwe game start. Volg onze stap-voor-stap game-releasegids, bekijk de kwaliteitschecklist voor graphics, personeel en schuifregelaars, en leer hoe je slechte recensies vermijdt met deze uitgebreide checklist."
   },
   "faq": {
     "title": "Veelgestelde vragen (FAQ)",
@@ -840,20 +879,9 @@
         "answer": "Ontwikkel de beste engine door: 1) Hoge techvaardigheden in het team, 2) Alle beschikbare features op te nemen, 3) Genoeg tijd en geld te investeren, 4) Regelmatige updates. Een goede engine kan voor meerdere games worden gebruikt en bespaart op de lange termijn tijd."
       }
     },
-    "links": {
-      "moreTo": "Meer hierover:",
-      "topicRecommender": "Onderwerpaanbeveler",
-      "platformRecommender": "Platformaanbeveler",
-      "sliders": "Schuifregelaars",
-      "slidersPage": "Schuifgids",
-      "staff": "Personeelsgids",
-      "handbuch": "Spelhandboek",
-      "research": "Onderzoeksgids",
-      "researchOrder": "Onderzoeksvolgorde",
-      "timeline": "Tijdlijn",
-      "planner": "Spelplanner",
-      "checklist": "Controlelijst"
-    }
+    "h1": "Waarom ga ik steeds failliet in Game Dev Tycoon?",
+    "h2": "Hoe je een 10/10 recensie krijgt in Game Dev Tycoon",
+    "seoIntro": "Begrijp de uitleg over de straf voor dezelfde combo, leer over het effect van bugs op de recensiescore en zorg voor de juiste regels en timing voor vervolgen. Ontdek of Game Dev Tycoon multiplayer heeft, hoe lang een playthrough duurt en het verschil tussen score en recensiescore. Ontvang essentiële tips voor beginners om te voorkomen dat je blut gaat."
   },
   "manual": {
     "title": "Game Dev Tycoon Handleiding",
@@ -1090,9 +1118,7 @@
         "Van basis tot geavanceerd",
         "Ideaal als referentie tijdens het spelen"
       ]
-    },
-    "openTool": "Tool openen",
-    "startWorkflow": "Beginnen"
+    }
   },
   "sources": {
     "title": "Databronnen",
@@ -1216,7 +1242,10 @@
       "description": "Ga naar de aanbeveling en voorinstellingen om het bovenstaande advies toe te passen op je volgende game.",
       "primary": "Vind het beste genre voor uw onderwerp",
       "secondary": "Voorinstellingen voor schuifregelaars verkrijgen"
-    }
+    },
+    "h1": "Game Dev Tycoon beginnersgids – Van garage naar AAA",
+    "h2": "Tips en trucs voor een hoge score",
+    "seoIntro": "Leer hoe je een studio van een miljard dollar opbouwt en de garagefase overleeft. Deze stap-voor-stap strategiegids laat zien hoe je consequent een 10-beoordeling krijgt, met mid-game tips voor het uitbreiden van je kantoor en personeel, late-game strategie voor aangepaste consoles en MMO-ontwikkeling, en tips voor de mobiele iOS- en Android-versies."
   },
   "bestCombos": {
     "title": "Beste onderwerp-genrecombinaties",
@@ -1255,7 +1284,10 @@
       "description": "Gebruik de aanbeveling om elk onderwerp op geschiktheid te sorteren en het jaar te ontgrendelen.",
       "primary": "Gebruik de Genre-aanbeveler",
       "secondary": "Controleer de voorinstellingen van de schuifregelaar"
-    }
+    },
+    "h1": "Beste combo's voor hoge recensiescores in Game Dev Tycoon",
+    "h2": "Fantasy RPG-combo – Hoe te spelen",
+    "seoIntro": "Ontdek de beste instellingen voor de sci-fi actie-combo en de beste combo voor een volwassen publiek op de pc. Bekijk de gids voor de adventure tijdreis-combo, de post-apocalyptische RPG-combinatie en de beste multi-genre combo voor actie-adventure. Bekijk de best beoordeelde combo's voor alle genres in 2025 en begrijp het verschil tussen een vreemde combo en een geweldige combo."
   },
   "slidersExplained": {
     "title": "Game Dev Tycoon-schuifregelaars uitgelegd",
@@ -1312,7 +1344,10 @@
       "description": "Gebruik de presets om direct de beste schuifregelaarwaarden te kopiëren.",
       "primary": "Open schuifregelaarvoorinstellingen",
       "secondary": "Vind het beste genre"
-    }
+    },
+    "h1": "Hoe werken schuifregelaars in Game Dev Tycoon?",
+    "h2": "Wat doet elke schuifregelaar?",
+    "seoIntro": "Begrijp het effect van de engine-, gameplay- en story-schuifregelaars op je games. Leer de prioriteiten van schuifregelaars in fase 1, 2 en 3 in detail uitgelegd, de impact van schuifregelaars op de beoordelingsscore en de gids voor de techniek-ontwerpverhouding-schuifregelaar. Vermijd fouten met schuifregelaars die lage beoordelingen veroorzaken, bekijk de schuifregelaargids voor actie-, RPG- en simulatiegenres, en beheers de tijdtoewijzingsregelaars voor alle fasen."
   },
   "researchOrder": {
     "title": "Onderzoeksorder voor gameontwikkelaar Tycoon",
@@ -1369,7 +1404,10 @@
       "description": "Houd uw ontgrendelingen en vereisten overzichtelijk in de Onderzoeksgids.",
       "primary": "Open onderzoeksgids",
       "secondary": "Volg de tijdlijn"
-    }
+    },
+    "h1": "Wat je eerst moet onderzoeken in de garage",
+    "h2": "Volgorde van onderzoeksontgrendelingen per jaar",
+    "seoIntro": "Volg de beste onderzoeksprioriteiten van beginner tot AAA. Leer de ontgrendelingsvolgorde voor onderzoek in het R&D-lab, de volgorde voor 3D-graphics-onderzoek van v1 tot v7, en blader door de volledige onderzoeksgids. Ontdek hoe je onderzoek naar meerdere genres ontgrendelt, bekijk de onderzoekskosten en -tijd, en begrijp de vereisten voor het ontgrendelen van hardwarelab-onderzoek."
   },
   "seo": {
     "suffix": {
@@ -1392,53 +1430,151 @@
       "appGuide": "Functies, workflows & aan de slag",
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Communitydata & betrouwbaarheidsniveaus"
+    },
+    "brand": "Game Dev Tycoon Advisor",
+    "title": {
+      "dashboard": "Game Dev Tycoon Optimale Game Setup Calculator",
+      "topicRecommender": "Game Dev Tycoon Beste Onderwerp voor Elk Genre",
+      "genreRecommender": "Game Dev Tycoon Beste Genre om te Ontwikkelen",
+      "platformRecommender": "Game Dev Tycoon Beste Platform voor Elk Genre",
+      "sliders": "Game Dev Tycoon Slider-instellingen voor Elk Genre",
+      "planner": "Game Dev Tycoon Save Game Planner Tool",
+      "research": "Game Dev Tycoon Onderzoeksvolgorde Vroege Game",
+      "staff": "Game Dev Tycoon Beste Personeelsspecialisatie Gids",
+      "timeline": "Game Dev Tycoon Ontgrendelings-tijdlijn Alle Gebouwen",
+      "checklist": "Game Dev Tycoon Pre-Release Checklist",
+      "faq": "Game Dev Tycoon Waarom Krijgen Mijn Games Lage Scores",
+      "guide": "Complete Game Dev Tycoon Gids 2025",
+      "bestCombos": "Game Dev Tycoon Lijst met Beste Genre-Onderwerp Combinaties",
+      "slidersExplained": "Game Dev Tycoon Sliders Uitgelegd voor Beginners",
+      "researchOrder": "Game Dev Tycoon Beste Onderzoeksvolgorde Volledige Lijst",
+      "handbuch": "Game Dev Tycoon Volledige Handleiding",
+      "appGuide": "Game Dev Tycoon Advisor App-gids",
+      "privacy": "Privacybeleid",
+      "sources": "Game Dev Tycoon-gegevensbronnen & betrouwbaarheidsniveaus"
+    },
+    "description": {
+      "dashboard": "Vind de beste onderwerp-, genre- & platformcombinaties in Game Dev Tycoon. Gratis interactieve rekenhulp en aanbevelingstool voor beginners.",
+      "topicRecommender": "Vind het beste onderwerp voor elk genre in Game Dev Tycoon. Compatibiliteitschecker voor onderwerp en genre voor fantasy, sci-fi en alle onderwerpen.",
+      "genreRecommender": "Ontdek welk genre het meeste geld oplevert in Game Dev Tycoon. Gratis tool voor genreselectie met analyse van winst en topscores.",
+      "platformRecommender": "Vind de beste console om op te mikken in Game Dev Tycoon. Vergelijking tussen pc en console en gids voor doelgroep-platformcombinaties.",
+      "sliders": "Optimale schuifbalkpercentages voor alle genres in Game Dev Tycoon. Voorinstellingentool met tijdsverdeling voor fase 1, 2 en 3 voor elk genre.",
+      "planner": "Plan je volgende spel in Game Dev Tycoon. Gepersonaliseerde aanbevelingen op basis van je opgeslagen spel en releasegeschiedenis.",
+      "research": "Wat je als eerste moet onderzoeken in Game Dev Tycoon. Volledige gids met ontgrendelingsvereisten voor het R&D-lab en kosten voor onderzoekspunten.",
+      "staff": "Hoe je medewerkers snel traint in Game Dev Tycoon. Gids voor design- versus tech-specialisten met uitleg over een gebalanceerde teamopstelling.",
+      "timeline": "Stapsgewijze voortgangsgids per jaar voor Game Dev Tycoon. Releaseschema voor consoles, timing voor het ontgrendelen van kantoren en belangrijke mijlpalen.",
+      "checklist": "Controleer alles voordat je een game uitbrengt in Game Dev Tycoon. Voorkom lage scores met onze stapsgewijze release-checklist.",
+      "faq": "Antwoorden op veelgestelde vragen over Game Dev Tycoon. Waarom ga je steeds failliet? Hoe krijg je een 10/10? Tips voor beginners.",
+      "guide": "Gids voor beginners van garage tot AAA in Game Dev Tycoon. Tips, trucs en stapsgewijze strategie voor hoge scores in 2025.",
+      "bestCombos": "Beste combinaties voor hoge recensiescores in Game Dev Tycoon. Fantasy RPG, sci-fi actie en meer hoogst gewaardeerde combinaties op een rij.",
+      "slidersExplained": "Hoe werken schuifbalken in Game Dev Tycoon? Leer wat elke schuifbalk doet, de prioriteiten per fase en de impact op recensiescores.",
+      "researchOrder": "Beste onderzoeksvolgorde van garage tot AAA in Game Dev Tycoon. Volledige lijst met te ontgrendelen onderzoek per jaar met prioriteiten.",
+      "handbuch": "Volledige handleiding voor Game Dev Tycoon die alle spelmechanieken, strategieën, tips en geavanceerde technieken behandelt.",
+      "appGuide": "Leer hoe je Game Dev Tycoon Advisor gebruikt. Functies, workflows en hoe je aan de slag gaat met de app.",
+      "privacy": "Privacybeleid voor Game Dev Tycoon Advisor. Leer meer over onze gegevensverwerking en je privacyrechten.",
+      "sources": "Door de community verzamelde gegevens en betrouwbaarheidsniveaus die worden gebruikt door Game Dev Tycoon Advisor voor nauwkeurige aanbevelingen."
     }
   },
-  "nextStep": {
-    "label": "Volgende stap",
-    "topicToGenre": {
-      "title": "Kies nu het beste genre",
-      "body": "Gebruik je topic om de genre-combinaties met de hoogste scores te vinden."
-    },
-    "genreToPlatform": {
-      "title": "Vind het beste platform",
-      "body": "Combineer je genre met het beste platform en publiek voor maximale reviewscores."
-    },
-    "platformToSliders": {
-      "title": "Haal je sliderpreset op",
-      "body": "Pas de optimale sliderinstellingen toe voor je genre in alle drie de ontwikkelfasen."
-    },
-    "slidersToPlanner": {
-      "title": "Plan je volgende release",
-      "body": "Voer je spelstatus in en ontvang gepersonaliseerde aanbevelingen voor releases."
-    },
-    "plannerToChecklist": {
-      "title": "Controleer voor publicatie",
-      "body": "Loop de checklist door om veelgemaakte fouten voor indiening te vermijden."
-    },
-    "timelineToPlatform": {
-      "title": "Kies het juiste platform",
-      "body": "Gebruik de platformaanbeveler om het beste platform voor je huidige tijdperk te vinden."
-    },
-    "timelineToResearch": {
-      "title": "Onderzoek prioriteren",
-      "body": "Plan welke technologieën je als volgende wilt ontgrendelen op basis van je huidige speljaar."
-    },
-    "timelineToChecklist": {
-      "title": "Mijlpalen bijhouden",
-      "body": "Voeg belangrijke mijlpalen toe aan je checklist en volg je voortgang in het spel."
-    },
-    "plannerToResearch": {
-      "title": "Onderzoek prioriteren",
-      "body": "Bekijk welke technologieën je het beste als eerste kunt ontgrendelen."
-    },
-    "staffToHandbook": {
-      "title": "Achtergrond & regels in het handboek",
-      "body": "Lees de gedetailleerde teammechanica, aannameeregels en trainingsstrategieën in het handboek."
-    },
-    "handbookToStaff": {
-      "title": "Praktische teamopstellingen & tips",
-      "body": "Concrete medewerkersaanbevelingen voor elke fase van het spel."
-    }
+  "sliders.explainedBox": {
+    "title": "Hoe werken sliders eigenlijk?",
+    "text": "Niet zeker waarom je recensiescores laag zijn? De sliders bepalen hoe de ontwikkeltijd wordt verdeeld tussen Design- en Tech-punten over drie fasen. Elk genre heeft verschillende fasegewichten die bepalen welke sliders het belangrijkst zijn. Het begrijpen van de slider-mechanica, de balans tussen design en tech, en hoe fase-prioriteiten je uiteindelijke score beïnvloeden, is de sleutel tot het krijgen van 10/10 recensies.",
+    "linkText": "Lees onze volledige 'Game Dev Tycoon Sliders Uitgelegd' gids →"
+  },
+  "planner.unlockedTopicsFilter": {
+    "title": "Filteren op ontgrendelde onderwerpen",
+    "description": "Gebruik alleen onderwerpen die je al hebt ontgrendeld in je opslagbestand.",
+    "searchPlaceholder": "Onderwerpen zoeken...",
+    "selectAll": "Alles selecteren",
+    "clear": "Wissen",
+    "selectedCount": "{{selected}}/{{total}} geselecteerd",
+    "noTopics": "Geen onderwerpen gevonden.",
+    "emptyFallbackWarning": "Er zijn momenteel geen geselecteerde onderwerpen beschikbaar. Alle onderwerpen worden als fallback gebruikt."
+  },
+  "schema.research.steps": [
+    "Onderzoek 2D Graphics v2–v4, daarna 3D Graphics v1–v5 om verbeteringen in visuele kwaliteit te ontgrendelen voor hogere beoordelingen.",
+    "Onderzoek geluidstechnologieën om de audiokwaliteit te verbeteren. Geef hier prioriteit aan nadat de basisgraphics zijn ontgrendeld.",
+    "Ontgrendel gameplayfuncties zoals Multiplayer, Online en Level Editor om de omvang van het spel en de doelgroep uit te breiden.",
+    "Onderzoek AI-technologieën om het gedrag van NPC's en de kwaliteit van interactie met de spelwereld te verbeteren.",
+    "Ontwikkel aangepaste hardware en consoles in het Hardware Lab voor een maximaal omzetpotentieel."
+  ],
+  "schema.staff.steps": [
+    "Solo-ontwikkelingsfase (Jaar 1-4). Focus op het opbouwen van vaardigheden en het sparen van geld voordat je personeel aanneemt. Train ontwerp- en technologievaardigheden gelijkmatig.",
+    "Neem je eerste werknemers aan (Jaar 5-10). Geef prioriteit aan specialisten met hoge technologie- of ontwerpstatistieken. Begin met het trainen van de vaardigheden van het personeel.",
+    "Breid je team uit voor grotere projecten. Breng specialisten in balans op het gebied van technologie, ontwerp en snelheid. Begin met het gebruik van het trainingssysteem.",
+    "Ontgrendel het R&D Lab om nieuwe technologieën te onderzoeken. Wijs toegewijde onderzoekers met hoge statistieken toe voor snellere doorbraken.",
+    "Bouw het Hardware Lab om eigen consoles te ontwikkelen. Vereist gespecialiseerd personeel en een aanzienlijke investering voor een maximaal rendement."
+  ],
+  "schema.timeline.stepNames": [
+    "Jaar 1–5: Garagefase",
+    "Jaar 6–10: Eerste kantoor",
+    "Jaar 11–15: Groeifase",
+    "Jaar 16–20: R&D-tijdperk",
+    "Jaar 21–35: Hardware & Nalatenschap"
+  ],
+  "schema.timeline.steps": [
+    "Start in de garage. Ontwikkel kleine games, bouw vaardigheden op en spaar geld. Richt je op tekstgebaseerde en 2D-games op vroege platforms.",
+    "Verhuis naar het eerste kantoor, neem personeel aan en neem middelgrote projecten aan. Onderzoek belangrijke technologieën en breid uit naar nieuwere platforms.",
+    "Upgrade naar het tweede kantoor, bouw grotere teams. Ontgrendel MMO- en AAA-gamegroottes. Ontwikkel vervolgen op succesvolle titels.",
+    "Bouw een R&D Lab voor geavanceerd onderzoek. Ontwikkel eigen game-engines. Richt je op high-end platforms voor maximale beoordelingen.",
+    "Bouw het Hardware Lab, ontwikkel aangepaste consoles. Creëer AAA-kaskrakers en domineer alle platforms. Bereik de legendarische status."
+  ],
+  "schema.checklist.stepNames": [
+    "Bekijk Tijdlijnmijlpalen",
+    "Aangepaste Doelen Toevoegen",
+    "Voortgang Bijhouden"
+  ],
+  "schema.checklist.steps": [
+    "Blader door de tijdlijnmijlpalen en voeg belangrijke mijlpalen toe aan je persoonlijke checklist om ze bij te houden.",
+    "Maak je eigen aangepaste doelen en taken om specifieke prestaties of strategieën bij te houden.",
+    "Vink voltooide mijlpalen af terwijl je vordert in het spel om je algehele voortgang te monitoren."
+  ],
+  "seo.title": {
+    "dashboard": "Game Dev Tycoon Optimale Game Setup Calculator",
+    "topicRecommender": "Game Dev Tycoon Beste Onderwerp voor Elk Genre",
+    "genreRecommender": "Game Dev Tycoon Beste Genre om te Ontwikkelen",
+    "platformRecommender": "Game Dev Tycoon Beste Platform voor Elk Genre",
+    "sliders": "Game Dev Tycoon Slider-instellingen voor Elk Genre",
+    "planner": "Game Dev Tycoon Save Game Planner Tool",
+    "research": "Game Dev Tycoon Onderzoeksvolgorde Vroege Game",
+    "staff": "Game Dev Tycoon Beste Personeelsspecialisatie Gids",
+    "timeline": "Game Dev Tycoon Ontgrendelings-tijdlijn Alle Gebouwen",
+    "checklist": "Game Dev Tycoon Pre-Release Checklist",
+    "faq": "Game Dev Tycoon Waarom Krijgen Mijn Games Lage Scores",
+    "guide": "Complete Game Dev Tycoon Gids 2025",
+    "bestCombos": "Game Dev Tycoon Lijst met Beste Genre-Onderwerp Combinaties",
+    "slidersExplained": "Game Dev Tycoon Sliders Uitgelegd voor Beginners",
+    "researchOrder": "Game Dev Tycoon Beste Onderzoeksvolgorde Volledige Lijst",
+    "handbuch": "Game Dev Tycoon Volledige Handleiding",
+    "appGuide": "Game Dev Tycoon Advisor App-gids",
+    "privacy": "Privacybeleid",
+    "sources": "Game Dev Tycoon-gegevensbronnen & betrouwbaarheidsniveaus"
+  },
+  "seo.description": {
+    "dashboard": "Vind de beste onderwerp-, genre- & platformcombinaties in Game Dev Tycoon. Gratis interactieve rekenhulp en aanbevelingstool voor beginners.",
+    "topicRecommender": "Vind het beste onderwerp voor elk genre in Game Dev Tycoon. Compatibiliteitschecker voor onderwerp en genre voor fantasy, sci-fi en alle onderwerpen.",
+    "genreRecommender": "Ontdek welk genre het meeste geld oplevert in Game Dev Tycoon. Gratis tool voor genreselectie met analyse van winst en topscores.",
+    "platformRecommender": "Vind de beste console om op te mikken in Game Dev Tycoon. Vergelijking tussen pc en console en gids voor doelgroep-platformcombinaties.",
+    "sliders": "Optimale schuifbalkpercentages voor alle genres in Game Dev Tycoon. Voorinstellingentool met tijdsverdeling voor fase 1, 2 en 3 voor elk genre.",
+    "planner": "Plan je volgende spel in Game Dev Tycoon. Gepersonaliseerde aanbevelingen op basis van je opgeslagen spel en releasegeschiedenis.",
+    "research": "Wat je als eerste moet onderzoeken in Game Dev Tycoon. Volledige gids met ontgrendelingsvereisten voor het R&D-lab en kosten voor onderzoekspunten.",
+    "staff": "Hoe je medewerkers snel traint in Game Dev Tycoon. Gids voor design- versus tech-specialisten met uitleg over een gebalanceerde teamopstelling.",
+    "timeline": "Stapsgewijze voortgangsgids per jaar voor Game Dev Tycoon. Releaseschema voor consoles, timing voor het ontgrendelen van kantoren en belangrijke mijlpalen.",
+    "checklist": "Controleer alles voordat je een game uitbrengt in Game Dev Tycoon. Voorkom lage scores met onze stapsgewijze release-checklist.",
+    "faq": "Antwoorden op veelgestelde vragen over Game Dev Tycoon. Waarom ga je steeds failliet? Hoe krijg je een 10/10? Tips voor beginners.",
+    "guide": "Gids voor beginners van garage tot AAA in Game Dev Tycoon. Tips, trucs en stapsgewijze strategie voor hoge scores in 2025.",
+    "bestCombos": "Beste combinaties voor hoge recensiescores in Game Dev Tycoon. Fantasy RPG, sci-fi actie en meer hoogst gewaardeerde combinaties op een rij.",
+    "slidersExplained": "Hoe werken schuifbalken in Game Dev Tycoon? Leer wat elke schuifbalk doet, de prioriteiten per fase en de impact op recensiescores.",
+    "researchOrder": "Beste onderzoeksvolgorde van garage tot AAA in Game Dev Tycoon. Volledige lijst met te ontgrendelen onderzoek per jaar met prioriteiten.",
+    "handbuch": "Volledige handleiding voor Game Dev Tycoon die alle spelmechanieken, strategieën, tips en geavanceerde technieken behandelt.",
+    "appGuide": "Leer hoe je Game Dev Tycoon Advisor gebruikt. Functies, workflows en hoe je aan de slag gaat met de app.",
+    "privacy": "Privacybeleid voor Game Dev Tycoon Advisor. Leer meer over onze gegevensverwerking en je privacyrechten.",
+    "sources": "Door de community verzamelde gegevens en betrouwbaarheidsniveaus die worden gebruikt door Game Dev Tycoon Advisor voor nauwkeurige aanbevelingen."
+  },
+  "shareNudge": {
+    "text": "Was deze tool nuttig? Deel hem met andere spelers!",
+    "shareButton": "Delen",
+    "copied": "Link gekopieerd!",
+    "shared": "Bedankt voor het delen!",
+    "shareText": "Ik heb dit gebruikt om mijn Game Dev Tycoon-gameplay te optimaliseren:"
   }
 }

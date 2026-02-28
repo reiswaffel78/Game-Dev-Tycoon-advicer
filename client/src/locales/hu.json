@@ -254,7 +254,10 @@
     "platforms": "Platformok",
     "lastUpdate": "Utolsó frissítés",
     "getStarted": "Kezdjük el",
-    "getStartedDesc": "Válassz egy ajánlót, hogy megtaláld a tökéletes játékbeállítást"
+    "getStartedDesc": "Válassz egy ajánlót, hogy megtaláld a tökéletes játékbeállítást",
+    "h1": "Game Dev Tycoon Téma, Műfaj és Platform Ajánló Eszköz",
+    "h2": "Melyik a legjobb játék, amit elkészíthetsz a Game Dev Tycoon-ban?",
+    "seoIntro": "Használd interaktív útmutatónkat a legjobb beállítások és kombinációk felfedezéséhez. Akár kombinációkeresőre, puskára vagy a legjobb kezdő beállításokra van szükséged, ez a tervező és ajánló segít, hogy minden alkalommal jó játékot készíts."
   },
   "recommender": {
     "selectTopic": "Válassz témát",
@@ -283,7 +286,16 @@
     "searchGenres": "Műfajok keresése...",
     "searchPlatforms": "Platformok keresése...",
     "confidenceTooltip": "Megbízhatósági szint a források egyezése alapján",
-    "score": "Pontszám"
+    "score": "Pontszám",
+    "topicH1": "Milyen témát használjak a Game Dev Tycoon-ban?",
+    "topicH2": "Game Dev Tycoon Téma-Műfaj Kombináció Kereső",
+    "topicSeoIntro": "Ellenőrizd, melyik téma illik az akció, RPG vagy bármely más műfajhoz. Témakompatibilitás-ellenőrzőnk segít megtalálni a legjobb témát az RPG játékokhoz, felfedezni, hogy a fantasy vagy a sci-fi adja-e a legjobb műfaji kombinációt, és összehasonlítani a furcsa és a nagyszerű kombinációs témalistákat. Használd ezt a téma- és célközönség-egyeztető eszközt a pontszámaid maximalizálásához.",
+    "genreH1": "Melyik műfaj hozza a legtöbb pénzt a Game Dev Tycoon-ban?",
+    "genreH2": "Game Dev Tycoon Műfajválasztó Eszköz",
+    "genreSeoIntro": "Találd meg a legjövedelmezőbb műfajt a játék elején és végén. Hasonlítsd össze az akciót és az RPG-t, hogy megtudd, melyik a jobb, kapj szimulációs műfajtippeket és beállítási tanácsokat, és fedezd fel a legjobb műfajt a magas pontszámokhoz. Fedezd fel a működő többműfajú kombinációkat, a casual műfaj csúszka- és témabeállításait, és tudd meg, melyik témát érdemes választani a stratégiai műfajhoz.",
+    "platformH1": "Game Dev Tycoon – Melyik konzolt célozzuk meg",
+    "platformH2": "PC vagy konzol – Melyik a jobb a Game Dev Tycoon-ban?",
+    "platformSeoIntro": "Használd platform piaci részesedési útmutatónkat, hogy megtaláld a legjobb konzolt a felnőtt közönségnek szánt játékokhoz. Fedezd fel a Gameling legjobb műfaj-téma kombinációját, tudd meg, milyen játékokat érdemes készíteni mBox-ra, és használd platformkompatibilitási eszközünket. Hogy PC-re vagy konzolra érdemes-e játékot készítened, az a közönségedtől függ – ez a közönség-platform egyeztető útmutató segít dönteni."
   },
   "sliders": {
     "title": "Csúszka-beállítások",
@@ -343,7 +355,15 @@
     "swapGenres": "Elsődleges ↔ Másodlagos csere",
     "selectBothGenres": "Válassz két műfajt",
     "selectBothGenresDesc": "Válassz egy elsődleges és másodlagos műfajt a kevert csúszka-beállítások megtekintéséhez",
-    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Csúszka-előbeállítások"
+    "multiGenrePresetsFor": "{{primary}} / {{secondary}} Csúszka-előbeállítások",
+    "h1": "Game Dev Tycoon Optimális Csúszka Százalékok",
+    "h2": "RPG Csúszka Beállítások – 1., 2. és 3. fázis",
+    "seoIntro": "Szerezd meg a megfelelő akció csúszka időbeosztást és kaland műfaj csúszka útmutatót minden játékhoz. Ez a csúszka puska minden műfajt lefed, beleértve a szimulációs csúszka százalékokat és a stratégiai csúszka fázisbeosztást is. Tudd meg, milyen csúszkákat használj a casual műfajhoz, használd műfajonkénti csúszka-előbeállítás eszközünket, értsd meg a technológia/dizájn arányt, és tanuld meg a csúszkák helyes beállítását a maximális pontszámok eléréséhez.",
+    "explainedBox": {
+      "title": "Hogyan is működnek a csúszkák valójában?",
+      "text": "Nem tudod, miért alacsonyak az értékeléseid? A csúszkák szabályozzák, hogyan oszlik meg a fejlesztési idő a dizájn és technológiai pontok között három fázison keresztül. Minden műfajnak más fázissúlyozása van, ami meghatározza, mely csúszkák számítanak leginkább. A csúszka-mechanizmus, a dizájn és tech közötti egyensúly, valamint a fázisprioritások végső pontszámra gyakorolt hatásának megértése a kulcs a 10/10-es értékelésekhez.",
+      "linkText": "Olvasd el a teljes Game Dev Tycoon csúszkákról szóló útmutatónkat →"
+    }
   },
   "planner": {
     "title": "Játéktervező",
@@ -395,7 +415,20 @@
       "unlockTopic": "A {{name}} feloldása bővíti a játékportfóliódat.",
       "unlockGenre": "A {{name}} műfaj feloldása új lehetőségeket nyit meg.",
       "feature": "Javítja a grafikai minőséget a jövőbeli AAA játékokhoz."
-    }
+    },
+    "unlockedTopicsFilter": {
+      "title": "Szűrés feloldott témák alapján",
+      "description": "Csak olyan témák használata, amelyeket már feloldottál a mentésedben.",
+      "searchPlaceholder": "Témák keresése...",
+      "selectAll": "Összes kijelölése",
+      "clear": "Törlés",
+      "selectedCount": "{{selected}}/{{total}} kiválasztva",
+      "noTopics": "Nem található téma.",
+      "emptyFallbackWarning": "Jelenleg nincsenek elérhető kiválasztott témák. Tartalékként az összes témát használjuk."
+    },
+    "h1": "Game Dev Tycoon – Következő játék ajánlása a mentés alapján",
+    "h2": "Mit készíts legközelebb a játéktörténeted alapján",
+    "seoIntro": "Használd ezt a kutatási prioritás-tervezőt és személyre szabott játéktanácsadó eszközt, hogy eldöntsd, mit kutass legközelebb a játék közepén. Tervezd meg a következő megjelenésedet egy ismétlődő kombó után, kövesd nyomon a kombóidat a kombókövető eszközünkkel, használd a műfajrotációs tervezőt, és tanuld meg, hogyan tervezd meg a játékfejlesztési folyamatodat a maximális növekedés érdekében."
   },
   "research": {
     "title": "Kutatási útmutató",
@@ -505,12 +538,9 @@
         "tip": "Jövőbe mutató technológiai befektetés"
       }
     },
-    "researchOrderBox": {
-      "title": "Ajánlott kutatási sorrend",
-      "body": "Nem tudod, mit oldd fel először? Kövesd lépésről lépésre szóló útmutatónkat.",
-      "linkText": "Kutatási útmutató megtekintése",
-      "enBadge": "EN"
-    }
+    "h1": "Mit kutass először a Game Dev Tycoonban",
+    "h2": "Hogyan szerezz gyorsan kutatási pontokat",
+    "seoIntro": "Ismerd meg a K+F labor feloldási követelményeit, és használd kutatásipont-gyűjtő útmutatónkat a hatékony fejlődéshez. Kövesd a legjobb kutatási prioritási listát, tudd meg, mikor érdemes feloldani a közepes méretű játékokat, és hogyan oldhatod fel az AAA játékokat kutatással. Ellenőrizd a témánkénti kutatásipont-költséget, és használd ezt a teljes kutatási útmutatót a garázstól az AAA szintig."
   },
   "staff": {
     "title": "Személyzeti útmutató",
@@ -603,7 +633,10 @@
         "title": "Konzolfejlesztés",
         "description": "Konzol építéséhez 2–3 dedikált alkalmazott kell 6+ hónapra. Tervezd meg a csapatkapacitást ennek megfelelően."
       }
-    }
+    },
+    "h1": "Hogyan képezd gyorsan az alkalmazottakat a Game Dev Tycoonban",
+    "h2": "Design vs. Tech specialista – Mi a különbség?",
+    "seoIntro": "Tanuld meg, mikor érdemes specializálni a személyzetet, és hány alkalmazottra van szükséged az egyes fázisokban. Ismerd meg az összes személyzeti szerepkört részletesen, fedezd fel, hogyan vehetsz fel jobb alkalmazottakat, és hasonlítsd össze az alkalmazottak statisztikáit, mint a design, technológia, kutatás és sebesség. Ez az útmutató kitér a személyzeti kiégésre és a szabadságkezelésre is, és lépésről lépésre bemutatja a kiegyensúlyozott csapatfelállást."
   },
   "timeline": {
     "title": "Idővonal",
@@ -740,7 +773,10 @@
         "description": "Nagy csapat + Egyedi motor + Megfelelő marketing = AAA siker.",
         "action": "Csak tapasztalt csapattal vágj bele AAA játékokba"
       }
-    }
+    },
+    "h1": "Game Dev Tycoon évről évre fejlődési útmutató",
+    "h2": "Mikor jelennek meg az új platformok?",
+    "seoIntro": "Találd meg az irodafeloldási követelményeket és időzítéseket, a teljes játékon belüli konzolmegjelenési ütemtervet, és tudd meg, mikor érkezik az mBox. Használd a platformmegjelenési dátumokról szóló útmutatónkat a 3., 5. és 10. éves mérföldkövek követéséhez. Tudd pontosan, mikor kell a második irodába költözni, és kövesd a teljes fejlődési idővonalat az elejétől a végéig."
   },
   "checklist": {
     "title": "Játékhaladási ellenőrzőlista",
@@ -759,7 +795,10 @@
     "noItemsYet": "Még nincsenek elemek",
     "addItemsHint": "Adj hozzá egyéni feladatokat, vagy válassz mérföldköveket lentről a kezdéshez.",
     "suggestedMilestones": "Javasolt mérföldkövek",
-    "suggestedMilestonesHint": "Fontos események az idővonalról, amelyeket érdemes lehet nyomon követni:"
+    "suggestedMilestonesHint": "Fontos események az idővonalról, amelyeket érdemes lehet nyomon követni:",
+    "h1": "Dolgok, amiket ellenőrizz a játékkiadás előtt a Game Dev Tycoonban",
+    "h2": "Ellenőrzőlista az alacsony pontszám elkerüléséhez",
+    "seoIntro": "Használd ezt a gyakori hibák elkerülésére szolgáló listát minden megjelenés előtt. Tartalmazza az AAA játékok kiadás előtti ellenőrzőlistáját, a folytatások követelményeit és a motor-ellenőrzőlistát az új játék indítása előtt. Kövesd lépésről lépésre a játékkiadási útmutatónkat, tekintsd át a grafika, a személyzet és a csúszkák minőségi ellenőrzőlistáját, és tanuld meg, hogyan kerülheted el a rossz kritikákat ezzel az átfogó listával."
   },
   "faq": {
     "title": "Gyakran Ismételt Kérdések (GYIK)",
@@ -840,20 +879,9 @@
         "answer": "A legjobb motort így fejleszted: 1) Magas tech-képességek a csapatban, 2) Minden elérhető funkció beépítése, 3) Elegendő idő és pénz befektetése, 4) Rendszeres frissítések. Egy jó motor több játékhoz is használható, és hosszú távon időt takarít meg."
       }
     },
-    "links": {
-      "moreTo": "Bővebben:",
-      "topicRecommender": "Témaajánló",
-      "platformRecommender": "Platformajánló",
-      "sliders": "Csúszkabeállítások",
-      "slidersPage": "Csúszka-útmutató",
-      "staff": "Személyzeti útmutató",
-      "handbuch": "Játékkézikönyv",
-      "research": "Kutatási útmutató",
-      "researchOrder": "Kutatási sorrend",
-      "timeline": "Idősor",
-      "planner": "Játéktervező",
-      "checklist": "Ellenőrzőlista"
-    }
+    "h1": "Miért megyek folyton csődbe a Game Dev Tycoonban?",
+    "h2": "Hogyan szerezz 10/10-es értékelést a Game Dev Tycoonban",
+    "seoIntro": "Értsd meg az azonos kombó miatti büntetést, tanuld meg a bugok hatását az értékelési pontszámra, és ismerd meg a folytatásokra vonatkozó szabályokat és a megfelelő időzítést. Tudd meg, van-e a Game Dev Tycoonban többjátékos mód, mennyi ideig tart egy végigjátszás, és mi a különbség a pontszám és az értékelési pontszám között. Szerezz alapvető tippeket kezdőknek a csőd elkerüléséhez."
   },
   "manual": {
     "title": "Game Dev Tycoon Kézikönyv",
@@ -1090,9 +1118,7 @@
         "Az alapoktól a haladó technikákig",
         "Ideális referencia játék közben"
       ]
-    },
-    "openTool": "Eszköz megnyitása",
-    "startWorkflow": "Kezdés"
+    }
   },
   "sources": {
     "title": "Adatforrások",
@@ -1216,7 +1242,10 @@
       "description": "Ugorjon az ajánlóba és az előbeállításokhoz, hogy alkalmazza a fenti tanácsokat a következő játékban.",
       "primary": "Találja meg a témájához legjobban illő műfajt",
       "secondary": "Szerezzen be előre csúszkákat"
-    }
+    },
+    "h1": "Game Dev Tycoon kezdő útmutató – A garázstól az AAA-ig",
+    "h2": "Tippek és trükkök a magas pontszámhoz",
+    "seoIntro": "Tanuld meg, hogyan építs milliárd dolláros stúdiót és éld túl a garázsfázist. Ez a lépésről lépésre követhető stratégiai útmutató megmutatja, hogyan érhetsz el következetesen 10-es értékelést, tippeket ad a játék közepére az iroda és a személyzet bővítéséhez, késői játékstratégiát kínál saját konzol és MMO fejlesztéséhez, valamint tippeket a mobil iOS és Android verziókhoz."
   },
   "bestCombos": {
     "title": "A legjobb téma-műfaj kombók",
@@ -1255,7 +1284,10 @@
       "description": "Használja az ajánlót minden téma rendezéséhez illeszkedés és feloldás év szerint.",
       "primary": "Használja a Műfaj-ajánlót",
       "secondary": "Ellenőrizze a csúszkák előbeállításait"
-    }
+    },
+    "h1": "A legjobb kombók a magas pontszámokhoz a Game Dev Tycoonban",
+    "h2": "Fantasy RPG kombó – Hogyan játssz",
+    "seoIntro": "Fedezd fel a legjobb sci-fi akció kombó beállításokat és a legjobb kombót felnőtt közönségnek PC-n. Fedezd fel a kaland időutazás kombó útmutatót, a posztapokaliptikus RPG kombinációt és a legjobb többműfajú kombót az akció-kalandhoz. Nézd meg a legjobb értékelésű kombókat minden műfajban 2025-ben, és értsd meg a különbséget a furcsa kombó és a nagyszerű kombó között."
   },
   "slidersExplained": {
     "title": "A Game Dev Tycoon csÃºszkÃ¡inak magyarÃ¡zata",
@@ -1312,7 +1344,10 @@
       "description": "Használja az előre beállított értékeket a legjobb csúszkaértékek azonnali másolásához.",
       "primary": "Nyissa meg a Slider Presets elemet",
       "secondary": "Találja meg a legjobb műfajt"
-    }
+    },
+    "h1": "Hogyan működnek a csúszkák a Game Dev Tycoonban?",
+    "h2": "Melyik csúszka mit csinál?",
+    "seoIntro": "Értse meg a motor (engine), a játékmenet (gameplay) és a történet (story) csúszkák hatását játékaira. Ismerje meg részletesen az 1., 2. és 3. fázis csúszkaprioritásait, a csúszkák hatását az értékelési pontszámokra, valamint a technológia-dizájn arány útmutatót. Kerülje el az alacsony értékeléseket okozó csúszkahibákat, szerezze be az akció-, RPG- és szimulációs műfajokhoz szóló csúszka-útmutatót, és sajátítsa el az időbeosztási csúszkákat minden fázishoz."
   },
   "researchOrder": {
     "title": "Game Dev Tycoon kutatÃ¡si sorrendje",
@@ -1369,7 +1404,10 @@
       "description": "A feloldásokat és az előfeltételeket rendszerezve tartsa a kutatási útmutatóban.",
       "primary": "Nyílt kutatási útmutató",
       "secondary": "Kövesse az Idővonalat"
-    }
+    },
+    "h1": "Mit érdemes először kutatni a garázsban?",
+    "h2": "Kutatási feloldási sorrend évek szerint",
+    "seoIntro": "Kövesse a legjobb kutatási prioritásokat a kezdőtől az AAA szintig. Ismerje meg a K+F labor kutatási feloldási sorrendjét, a 3D grafika kutatási sorrendjét v1-től v7-ig, és böngéssze át a teljes kutatási fa útmutatót. Tudja meg, hogyan oldhatja fel a többműfajú kutatást, ellenőrizze a kutatási költségeket és az időzítést, és ismerje meg a hardverlabor kutatási feloldási követelményeit."
   },
   "seo": {
     "suffix": {
@@ -1392,53 +1430,151 @@
       "appGuide": "Funkciók, munkafolyamatok és első lépések",
       "privacy": "Game Dev Tycoon Advisor",
       "sources": "Közösségi adatok és megbízhatósági szintek"
+    },
+    "brand": "Game Dev Tycoon Advisor",
+    "title": {
+      "dashboard": "Game Dev Tycoon Optimális Játékbeállítás Kalkulátor",
+      "topicRecommender": "Game Dev Tycoon legjobb témák minden műfajhoz",
+      "genreRecommender": "Game Dev Tycoon legjobb fejlesztendő műfaj",
+      "platformRecommender": "Game Dev Tycoon legjobb platformok minden műfajhoz",
+      "sliders": "Game Dev Tycoon csúszka beállítások minden műfajhoz",
+      "planner": "Game Dev Tycoon mentés-tervező eszköz",
+      "research": "Game Dev Tycoon kutatási sorrend a játék elején",
+      "staff": "Game Dev Tycoon legjobb személyzeti specializációs útmutató",
+      "timeline": "Game Dev Tycoon összes épület feloldási idővonala",
+      "checklist": "Game Dev Tycoon kiadás előtti ellenőrző lista",
+      "faq": "Game Dev Tycoon: Miért kapnak alacsony pontszámot a játékaim?",
+      "guide": "Teljes Game Dev Tycoon útmutató 2025",
+      "bestCombos": "Game Dev Tycoon legjobb műfaj-téma kombinációk listája",
+      "slidersExplained": "Game Dev Tycoon csúszkák magyarázata kezdőknek",
+      "researchOrder": "Game Dev Tycoon legjobb kutatási sorrend teljes lista",
+      "handbuch": "Game Dev Tycoon teljes kézikönyv",
+      "appGuide": "Game Dev Tycoon Advisor alkalmazás útmutató",
+      "privacy": "Adatvédelmi nyilatkozat",
+      "sources": "Game Dev Tycoon adatforrások és megbízhatósági szintek"
+    },
+    "description": {
+      "dashboard": "Találd meg a legjobb téma, műfaj és platform kombinációkat a Game Dev Tycoonban. Ingyenes interaktív kalkulátor és ajánló eszköz kezdőknek.",
+      "topicRecommender": "Találd meg a legjobb témát bármely műfajhoz a Game Dev Tycoonban. Téma-műfaj kompatibilitás ellenőrző fantasy, sci-fi és minden egyéb témához.",
+      "genreRecommender": "Fedezd fel, melyik műfaj hozza a legtöbb pénzt a Game Dev Tycoonban. Ingyenes műfajválasztó eszköz profit- és pontszám-elemzéssel.",
+      "platformRecommender": "Találd meg a legjobb célkonzolt a Game Dev Tycoonban. PC vs. konzol összehasonlítás és célközönség-platform párosítási útmutató.",
+      "sliders": "Optimális csúszka-beállítások minden műfajhoz a Game Dev Tycoonban. Beállítási segédlet 1., 2. és 3. fázisú időbeosztással minden műfajhoz.",
+      "planner": "Tervezd meg a következő játékodat a Game Dev Tycoonban. Személyre szabott ajánlások a mentésed és a korábbi megjelenéseid alapján.",
+      "research": "Mit kutass először a Game Dev Tycoonban. Teljes útmutató K+F labor feloldási követelményekkel és kutatási pont költségekkel.",
+      "staff": "Hogyan képezd gyorsan az alkalmazottakat a Game Dev Tycoonban. Design vs. tech specialista útmutató kiegyensúlyozott csapatfelépítéssel.",
+      "timeline": "Évről évre tartó haladási útmutató a Game Dev Tycoonhoz. Konzolmegjelenési ütemterv, irodanyitási időpontok és kulcsfontosságú mérföldkövek.",
+      "checklist": "Ellenőrizz mindent a játék kiadása előtt a Game Dev Tycoonban. Kerüld el az alacsony pontszámokat lépésről lépésre követhető kiadási ellenőrzőlistánkkal.",
+      "faq": "Válaszok a gyakori Game Dev Tycoon kérdésekre. Miért mész állandóan csődbe? Hogyan kaphatsz 10/10-et? Tippek kezdőknek.",
+      "guide": "Kezdő útmutató a garázstól az AAA játékokig a Game Dev Tycoonban. Tippek, trükkök és lépésről lépésre követhető stratégia a magas pontszámokért 2025-ben.",
+      "bestCombos": "A legjobb kombinációk a magas értékelésekért a Game Dev Tycoonban. Fantasy RPG, sci-fi akció és további népszerű kombinációk rangsorolva.",
+      "slidersExplained": "Hogyan működnek a csúszkák a Game Dev Tycoonban? Ismerd meg az egyes csúszkák funkcióját, a fázisok prioritásait és az értékelésekre gyakorolt hatásukat.",
+      "researchOrder": "A legjobb kutatási sorrend a garázstól az AAA-ig a Game Dev Tycoonban. Teljes kutatási lista évenként, prioritásokkal.",
+      "handbuch": "Teljes Game Dev Tycoon kézikönyv, amely lefedi az összes játékmechanikát, stratégiát, tippet és haladó technikát.",
+      "appGuide": "Ismerd meg a Game Dev Tycoon Advisor használatát. Funkciók, munkafolyamatok és az alkalmazás elkezdése.",
+      "privacy": "A Game Dev Tycoon Advisor adatvédelmi nyilatkozata. Ismerd meg adatkezelési gyakorlatunkat és adatvédelmi jogaidat.",
+      "sources": "Közösségi adatforrások és megbízhatósági szintek, melyeket a Game Dev Tycoon Advisor használ a pontos ajánlásokhoz."
     }
   },
-  "nextStep": {
-    "label": "Következő lépés",
-    "topicToGenre": {
-      "title": "Most válaszd ki a legjobb műfajt",
-      "body": "Használd a témádat, hogy megtaláld a legjobb pontszámú műfajkombinációkat."
-    },
-    "genreToPlatform": {
-      "title": "Találd meg a legjobb platformot",
-      "body": "Párosítsd a műfajodat a legjobb platformmal és közönséggel a maximális értékelésekért."
-    },
-    "platformToSliders": {
-      "title": "Szerezd meg a csúszka-beállítást",
-      "body": "Alkalmazd az optimális csúszkabeállításokat a műfajodhoz mindhárom fejlesztési fázisban."
-    },
-    "slidersToPlanner": {
-      "title": "Tervezd meg a következő kiadást",
-      "body": "Add meg a mentési állapotodat, és kapj személyre szabott kiadási ajánlásokat."
-    },
-    "plannerToChecklist": {
-      "title": "Ellenőrizd közzététel előtt",
-      "body": "Menj végig az ellenőrzőlistán, hogy elkerüld a gyakori hibákat a játék beküldése előtt."
-    },
-    "timelineToPlatform": {
-      "title": "Válaszd ki a megfelelő platformot",
-      "body": "Használd a platform-ajánlót, hogy megtaláld a legjobb platformot az aktuális korszakodhoz."
-    },
-    "timelineToResearch": {
-      "title": "Kutatási prioritások meghatározása",
-      "body": "Tervezd meg, melyik technológiát kell legközelebb feloldani az aktuális játékév alapján."
-    },
-    "timelineToChecklist": {
-      "title": "Kövesd nyomon a mérföldköveket",
-      "body": "Adj hozzá kulcsfontosságú mérföldköveket az ellenőrzőlistához, és kövesd a haladást."
-    },
-    "plannerToResearch": {
-      "title": "Kutatás prioritizálása",
-      "body": "Nézd meg, melyik technológiákat érdemes először feloldani a legjobb pontszámokért."
-    },
-    "staffToHandbook": {
-      "title": "Háttér és szabályok a kézikönyvben",
-      "body": "Ismerje meg a részletes csapatmechanikákat, felvételi szabályokat és képzési stratégiákat."
-    },
-    "handbookToStaff": {
-      "title": "Gyakorlati csapatfelépítések és tippek",
-      "body": "Konkrét személyzeti ajánlások a játék minden szakaszában."
-    }
+  "sliders.explainedBox": {
+    "title": "Hogyan is működnek a csúszkák valójában?",
+    "text": "Nem tudod, miért alacsonyak az értékeléseid? A csúszkák szabályozzák, hogyan oszlik meg a fejlesztési idő a dizájn és technológiai pontok között három fázison keresztül. Minden műfajnak más fázissúlyozása van, ami meghatározza, mely csúszkák számítanak leginkább. A csúszka-mechanizmus, a dizájn és tech közötti egyensúly, valamint a fázisprioritások végső pontszámra gyakorolt hatásának megértése a kulcs a 10/10-es értékelésekhez.",
+    "linkText": "Olvasd el a teljes Game Dev Tycoon csúszkákról szóló útmutatónkat →"
+  },
+  "planner.unlockedTopicsFilter": {
+    "title": "Szűrés feloldott témák alapján",
+    "description": "Csak olyan témák használata, amelyeket már feloldottál a mentésedben.",
+    "searchPlaceholder": "Témák keresése...",
+    "selectAll": "Összes kijelölése",
+    "clear": "Törlés",
+    "selectedCount": "{{selected}}/{{total}} kiválasztva",
+    "noTopics": "Nem található téma.",
+    "emptyFallbackWarning": "Jelenleg nincsenek elérhető kiválasztott témák. Tartalékként az összes témát használjuk."
+  },
+  "schema.research.steps": [
+    "Kutassa ki a 2D grafika v2–v4-et, majd a 3D grafika v1–v5-öt, hogy feloldja a vizuális minőség javításait a magasabb értékelési pontszámok érdekében.",
+    "Kutasson hangtechnológiákat az audio minőségének javítása érdekében. Prioritásként kezelje az alapvető grafika feloldása után.",
+    "Oldjon fel olyan játékmenetbeli funkciókat, mint a többjátékos mód (Multiplayer), az online mód (Online) és a pályaszerkesztő (Level Editor), hogy bővítse a játék hatókörét és közönségét.",
+    "Kutasson MI (AI) technológiákat az NPC-k viselkedésének és a játékvilág interakciós minőségének javítása érdekében.",
+    "Fejlesszen egyedi hardvereket és konzolokat a Hardverlaborban a maximális bevételi potenciál elérése érdekében."
+  ],
+  "schema.staff.steps": [
+    "Egyéni fejlesztési fázis (1–4. év). Fókuszáljon a készségek fejlesztésére és a pénzmegtakarításra a munkaerőfelvétel előtt. Képezze a dizájn és technológiai készségeket egyenlő arányban.",
+    "Végezze el az első alkalmazottak felvételét (5–10. év). Részesítse előnyben a magas technológiai vagy dizájn statisztikákkal rendelkező specialistákat. Kezdje el a személyzet készségeinek képzését.",
+    "Bővítse csapatát a nagyobb projektekhez. Egyensúlyozza a specialistákat a technológia, a dizájn és a sebesség mentén. Kezdje el használni a képzési rendszert.",
+    "Oldja fel a K+F labort az új technológiák kutatásához. Jelöljön ki dedikált, magas statisztikákkal rendelkező kutatókat a gyorsabb áttörések érdekében.",
+    "Építsen Hardverlabort egyedi konzolok fejlesztéséhez. Speciális személyzetet és jelentős befektetést igényel a maximális megtérülés érdekében."
+  ],
+  "schema.timeline.stepNames": [
+    "1–5. év: Garázs-fázis",
+    "6–10. év: Első iroda",
+    "11–15. év: Növekedési fázis",
+    "16–20. év: K+F korszak",
+    "21–35. év: Hardver és örökség"
+  ],
+  "schema.timeline.steps": [
+    "Kezdjen a garázsban. Fejlesszen kis játékokat, építsen készségeket és spóroljon pénzt. Célozza meg a szöveges és 2D-s játékokat a korai platformokon.",
+    "Költözzön az első irodába, vegyen fel személyzetet és vállaljon közepes méretű projekteket. Kutasson kulcsfontosságú technológiákat és terjeszkedjen az újabb platformokra.",
+    "Váltson a második irodára, építsen nagyobb csapatokat. Oldja fel az MMO és AAA játékméreteket. Fejlessze a sikeres címek folytatásait.",
+    "Építsen K+F labort a fejlett kutatásokhoz. Fejlesszen egyedi játékmotorokat. Célozza meg a csúcskategóriás platformokat a maximális értékelésekért.",
+    "Építs hardverlabort, fejlessz egyedi konzolokat. Készíts AAA kasszasikereket, és urald az összes platformot. Érd el a legendás státuszt."
+  ],
+  "schema.checklist.stepNames": [
+    "Idővonal mérföldkövek áttekintése",
+    "Egyedi célok hozzáadása",
+    "Teljesítés nyomon követése"
+  ],
+  "schema.checklist.steps": [
+    "Böngészd az idővonal mérföldköveit, és add hozzá a fontosakat a személyes ellenőrző listádhoz a nyomon követéshez.",
+    "Hozz létre saját egyedi célokat és feladatokat a konkrét eredmények vagy stratégiák nyomon követéséhez.",
+    "Pipáld ki a teljesített mérföldköveket a játék során, hogy figyelemmel kísérhesd az összelőrehaladásodat."
+  ],
+  "seo.title": {
+    "dashboard": "Game Dev Tycoon Optimális Játékbeállítás Kalkulátor",
+    "topicRecommender": "Game Dev Tycoon legjobb témák minden műfajhoz",
+    "genreRecommender": "Game Dev Tycoon legjobb fejlesztendő műfaj",
+    "platformRecommender": "Game Dev Tycoon legjobb platformok minden műfajhoz",
+    "sliders": "Game Dev Tycoon csúszka beállítások minden műfajhoz",
+    "planner": "Game Dev Tycoon mentés-tervező eszköz",
+    "research": "Game Dev Tycoon kutatási sorrend a játék elején",
+    "staff": "Game Dev Tycoon legjobb személyzeti specializációs útmutató",
+    "timeline": "Game Dev Tycoon összes épület feloldási idővonala",
+    "checklist": "Game Dev Tycoon kiadás előtti ellenőrző lista",
+    "faq": "Game Dev Tycoon: Miért kapnak alacsony pontszámot a játékaim?",
+    "guide": "Teljes Game Dev Tycoon útmutató 2025",
+    "bestCombos": "Game Dev Tycoon legjobb műfaj-téma kombinációk listája",
+    "slidersExplained": "Game Dev Tycoon csúszkák magyarázata kezdőknek",
+    "researchOrder": "Game Dev Tycoon legjobb kutatási sorrend teljes lista",
+    "handbuch": "Game Dev Tycoon teljes kézikönyv",
+    "appGuide": "Game Dev Tycoon Advisor alkalmazás útmutató",
+    "privacy": "Adatvédelmi nyilatkozat",
+    "sources": "Game Dev Tycoon adatforrások és megbízhatósági szintek"
+  },
+  "seo.description": {
+    "dashboard": "Találd meg a legjobb téma, műfaj és platform kombinációkat a Game Dev Tycoonban. Ingyenes interaktív kalkulátor és ajánló eszköz kezdőknek.",
+    "topicRecommender": "Találd meg a legjobb témát bármely műfajhoz a Game Dev Tycoonban. Téma-műfaj kompatibilitás ellenőrző fantasy, sci-fi és minden egyéb témához.",
+    "genreRecommender": "Fedezd fel, melyik műfaj hozza a legtöbb pénzt a Game Dev Tycoonban. Ingyenes műfajválasztó eszköz profit- és pontszám-elemzéssel.",
+    "platformRecommender": "Találd meg a legjobb célkonzolt a Game Dev Tycoonban. PC vs. konzol összehasonlítás és célközönség-platform párosítási útmutató.",
+    "sliders": "Optimális csúszka-beállítások minden műfajhoz a Game Dev Tycoonban. Beállítási segédlet 1., 2. és 3. fázisú időbeosztással minden műfajhoz.",
+    "planner": "Tervezd meg a következő játékodat a Game Dev Tycoonban. Személyre szabott ajánlások a mentésed és a korábbi megjelenéseid alapján.",
+    "research": "Mit kutass először a Game Dev Tycoonban. Teljes útmutató K+F labor feloldási követelményekkel és kutatási pont költségekkel.",
+    "staff": "Hogyan képezd gyorsan az alkalmazottakat a Game Dev Tycoonban. Design vs. tech specialista útmutató kiegyensúlyozott csapatfelépítéssel.",
+    "timeline": "Évről évre tartó haladási útmutató a Game Dev Tycoonhoz. Konzolmegjelenési ütemterv, irodanyitási időpontok és kulcsfontosságú mérföldkövek.",
+    "checklist": "Ellenőrizz mindent a játék kiadása előtt a Game Dev Tycoonban. Kerüld el az alacsony pontszámokat lépésről lépésre követhető kiadási ellenőrzőlistánkkal.",
+    "faq": "Válaszok a gyakori Game Dev Tycoon kérdésekre. Miért mész állandóan csődbe? Hogyan kaphatsz 10/10-et? Tippek kezdőknek.",
+    "guide": "Kezdő útmutató a garázstól az AAA játékokig a Game Dev Tycoonban. Tippek, trükkök és lépésről lépésre követhető stratégia a magas pontszámokért 2025-ben.",
+    "bestCombos": "A legjobb kombinációk a magas értékelésekért a Game Dev Tycoonban. Fantasy RPG, sci-fi akció és további népszerű kombinációk rangsorolva.",
+    "slidersExplained": "Hogyan működnek a csúszkák a Game Dev Tycoonban? Ismerd meg az egyes csúszkák funkcióját, a fázisok prioritásait és az értékelésekre gyakorolt hatásukat.",
+    "researchOrder": "A legjobb kutatási sorrend a garázstól az AAA-ig a Game Dev Tycoonban. Teljes kutatási lista évenként, prioritásokkal.",
+    "handbuch": "Teljes Game Dev Tycoon kézikönyv, amely lefedi az összes játékmechanikát, stratégiát, tippet és haladó technikát.",
+    "appGuide": "Ismerd meg a Game Dev Tycoon Advisor használatát. Funkciók, munkafolyamatok és az alkalmazás elkezdése.",
+    "privacy": "A Game Dev Tycoon Advisor adatvédelmi nyilatkozata. Ismerd meg adatkezelési gyakorlatunkat és adatvédelmi jogaidat.",
+    "sources": "Közösségi adatforrások és megbízhatósági szintek, melyeket a Game Dev Tycoon Advisor használ a pontos ajánlásokhoz."
+  },
+  "shareNudge": {
+    "text": "Hasznos volt ez az eszköz? Oszd meg más játékosokkal is!",
+    "shareButton": "Megosztás",
+    "copied": "Link másolva!",
+    "shared": "Köszönjük a megosztást!",
+    "shareText": "Ezt használtam a Game Dev Tycoon játékmenetem optimalizálásához:"
   }
 }

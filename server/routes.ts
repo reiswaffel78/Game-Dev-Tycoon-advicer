@@ -1,5 +1,6 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
+import { execSync } from "child_process";
 import { storage } from "./storage";
 import {
   getRecommendationsByTopic,
@@ -11,6 +12,25 @@ import {
   getTopCombinations,
 } from "./recommendation-engine";
 import { z } from "zod";
+
+function readLastCodeUpdate(): string {
+  try {
+    const iso = execSync("git log -1 --format=%ci", { timeout: 3000 }).toString().trim();
+    return new Date(iso).toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+  } catch {
+    return new Date().toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+  }
+}
+
+const CODE_LAST_UPDATE = readLastCodeUpdate();
 
 const plannerSchema = z.object({
   year: z.number().min(1).max(50),
@@ -41,7 +61,7 @@ export async function registerRoutes(
   app.get("/api/stats", async (req, res) => {
     try {
       const stats = await storage.getStats();
-      res.json(stats);
+      res.json({ ...stats, lastUpdate: CODE_LAST_UPDATE });
     } catch (error) {
       console.error("Error fetching stats:", error);
       res.status(500).json({ error: "Failed to fetch stats" });

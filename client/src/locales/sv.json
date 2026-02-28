@@ -540,7 +540,13 @@
     },
     "h1": "Vad man ska undersöka först i Game Dev Tycoon",
     "h2": "Hur man får forskningspoäng snabbt",
-    "seoIntro": "Lär dig kraven för att låsa upp FoU-labbet och använd vår guide för att farma forskningspoäng för att göra framsteg effektivt. Följ listan över bästa forskningsprioriteringar, vet när du ska låsa upp medelstora spel och ta reda på hur du låser upp AAA-spel genom forskning. Kontrollera forskningspoängkostnaden per ämne och använd denna kompletta forskningsguide från garage till AAA."
+    "seoIntro": "Lär dig kraven för att låsa upp FoU-labbet och använd vår guide för att farma forskningspoäng för att göra framsteg effektivt. Följ listan över bästa forskningsprioriteringar, vet när du ska låsa upp medelstora spel och ta reda på hur du låser upp AAA-spel genom forskning. Kontrollera forskningspoängkostnaden per ämne och använd denna kompletta forskningsguide från garage till AAA.",
+    "researchOrderBox": {
+      "title": "Rekommenderad forskningsordning",
+      "body": "Osäker på vad du ska låsa upp först? Följ vår steg-för-steg-guide.",
+      "linkText": "Visa forskningsguide",
+      "enBadge": "EN"
+    }
   },
   "staff": {
     "title": "Personalguide",
@@ -881,7 +887,21 @@
     },
     "h1": "Varför fortsätter jag att gå i konkurs i Game Dev Tycoon?",
     "h2": "Hur man får 10/10 i betyg i Game Dev Tycoon",
-    "seoIntro": "Förstå straffavgiften för samma kombination, lär dig om hur buggar påverkar recensionsbetyget och få koll på regler och timing för uppföljare. Ta reda på om Game Dev Tycoon har multiplayer, hur lång en genomspelning tar och skillnaden mellan poäng och recensionsbetyg. Få viktiga tips för nybörjare för att undvika att bli pank."
+    "seoIntro": "Förstå straffavgiften för samma kombination, lär dig om hur buggar påverkar recensionsbetyget och få koll på regler och timing för uppföljare. Ta reda på om Game Dev Tycoon har multiplayer, hur lång en genomspelning tar och skillnaden mellan poäng och recensionsbetyg. Få viktiga tips för nybörjare för att undvika att bli pank.",
+    "links": {
+      "moreTo": "Mer om detta:",
+      "topicRecommender": "Ämnesrekommendation",
+      "platformRecommender": "Plattformsrekommendation",
+      "sliders": "Reglagets förinställningar",
+      "slidersPage": "Reglarguide",
+      "staff": "Personalguide",
+      "handbuch": "Spelhandbok",
+      "research": "Forskningsguide",
+      "researchOrder": "Forskningsordning",
+      "timeline": "Tidslinje",
+      "planner": "Spelplanerare",
+      "checklist": "Checklista"
+    }
   },
   "manual": {
     "title": "Game Dev Tycoon-handbok",
@@ -1118,7 +1138,9 @@
         "Från grunder till avancerat",
         "Perfekt som uppslagsverk medan du spelar"
       ]
-    }
+    },
+    "openTool": "Öppna verktyg",
+    "startWorkflow": "Kom igång"
   },
   "guide": {
     "title": "Guide för Game Dev Tycoon",
@@ -1576,5 +1598,52 @@
     "copied": "Länk kopierad!",
     "shared": "Tack för att du delar!",
     "shareText": "Jag använde detta för att optimera mitt Game Dev Tycoon-spelande:"
+  },
+  "nextStep": {
+    "label": "Nästa steg",
+    "topicToGenre": {
+      "title": "Välj nu bästa genre",
+      "body": "Använd ditt ämne för att hitta genrekombinationerna med högst poäng."
+    },
+    "genreToPlatform": {
+      "title": "Hitta bästa plattform",
+      "body": "Matcha din genre med den bästa plattformen och målgruppen för högsta betyg."
+    },
+    "platformToSliders": {
+      "title": "Hämta din reglarförinställning",
+      "body": "Använd optimala reglarinställningar för din genre i alla tre utvecklingsfaser."
+    },
+    "slidersToPlanner": {
+      "title": "Planera nästa release",
+      "body": "Ange ditt speltillstånd och få personliga rekommendationer för release och forskning."
+    },
+    "plannerToChecklist": {
+      "title": "Kontrollera innan du publicerar",
+      "body": "Gå igenom checklistan för att undvika vanliga misstag innan du skickar in ditt spel."
+    },
+    "timelineToPlatform": {
+      "title": "Välj rätt plattform",
+      "body": "Använd plattformsrekommendationen för att hitta bästa plattform för din nuvarande era."
+    },
+    "timelineToResearch": {
+      "title": "Prioritera din forskning",
+      "body": "Planera vilka teknologier du låser upp härnäst baserat på ditt nuvarande spelår."
+    },
+    "timelineToChecklist": {
+      "title": "Håll koll på milstolpar",
+      "body": "Lägg till viktiga milstolpar i din checklista och följ dina framsteg i spelet."
+    },
+    "plannerToResearch": {
+      "title": "Prioritera din forskning",
+      "body": "Se vilka teknologier du bör låsa upp först för att maximera dina spelpoäng."
+    },
+    "staffToHandbook": {
+      "title": "Bakgrund & regler i handboken",
+      "body": "Lär dig mer om teammekanik, anställningsregler och träningsstrategier i spelhandboken."
+    },
+    "handbookToStaff": {
+      "title": "Praktiska teamupplägg & tips",
+      "body": "Se fasspecifika personalrekommendationer och konkreta tips för varje del av spelet."
+    }
   }
 }

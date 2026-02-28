@@ -540,7 +540,13 @@
     },
     "h1": "Co zkoumat jako první v Game Dev Tycoon",
     "h2": "Jak rychle získat body výzkumu",
-    "seoIntro": "Zjistěte požadavky na odemčení výzkumné laboratoře a využijte našeho průvodce farmením výzkumných bodů pro efektivní postup. Sledujte seznam nejlepších priorit výzkumu, zjistěte, kdy odemknout střední hry, a zjistěte, jak prostřednictvím výzkumu odemknout AAA hry. Zkontrolujte náklady na body výzkumu u jednotlivých témat a použijte tohoto kompletního průvodce výzkumem od garáže až po AAA."
+    "seoIntro": "Zjistěte požadavky na odemčení výzkumné laboratoře a využijte našeho průvodce farmením výzkumných bodů pro efektivní postup. Sledujte seznam nejlepších priorit výzkumu, zjistěte, kdy odemknout střední hry, a zjistěte, jak prostřednictvím výzkumu odemknout AAA hry. Zkontrolujte náklady na body výzkumu u jednotlivých témat a použijte tohoto kompletního průvodce výzkumem od garáže až po AAA.",
+    "researchOrderBox": {
+      "title": "Doporučené pořadí výzkumu",
+      "body": "Nevíš, co odemknout jako první? Postupuj podle našeho průvodce krok za krokem.",
+      "linkText": "Zobrazit průvodce výzkumem",
+      "enBadge": "EN"
+    }
   },
   "staff": {
     "title": "Průvodce týmem",
@@ -881,7 +887,21 @@
     },
     "h1": "Proč v Game Dev Tycoon neustále bankrotuji?",
     "h2": "Jak získat hodnocení 10/10 v Game Dev Tycoon",
-    "seoIntro": "Pochopte vysvětlení postihu za stejnou kombinaci, zjistěte vliv chyb na skóre recenze a naučte se správná pravidla a načasování pokračování. Zjistěte, zda má Game Dev Tycoon multiplayer, jak dlouho trvá průchod hrou a jaký je rozdíl mezi skóre a hodnocením recenze. Získejte základní tipy pro začátečníky, jak se vyhnout bankrotu."
+    "seoIntro": "Pochopte vysvětlení postihu za stejnou kombinaci, zjistěte vliv chyb na skóre recenze a naučte se správná pravidla a načasování pokračování. Zjistěte, zda má Game Dev Tycoon multiplayer, jak dlouho trvá průchod hrou a jaký je rozdíl mezi skóre a hodnocením recenze. Získejte základní tipy pro začátečníky, jak se vyhnout bankrotu.",
+    "links": {
+      "moreTo": "Více k tomuto tématu:",
+      "topicRecommender": "Doporučovač témat",
+      "platformRecommender": "Doporučovač platforem",
+      "sliders": "Předvolby posuvníků",
+      "slidersPage": "Průvodce posuvníky",
+      "staff": "Průvodce personálem",
+      "handbuch": "Herní příručka",
+      "research": "Průvodce výzkumem",
+      "researchOrder": "Pořadí výzkumu",
+      "timeline": "Časová osa",
+      "planner": "Herní plánovač",
+      "checklist": "Kontrolní seznam"
+    }
   },
   "manual": {
     "title": "Příručka Game Dev Tycoon",
@@ -1118,7 +1138,9 @@
         "Od základů po pokročilé",
         "Ideální jako reference během hraní"
       ]
-    }
+    },
+    "openTool": "Otevřít nástroj",
+    "startWorkflow": "Začít"
   },
   "sources": {
     "title": "Zdroje dat",
@@ -1576,5 +1598,52 @@
     "copied": "Odkaz zkopírován!",
     "shared": "Díky za sdílení!",
     "shareText": "Tohle jsem použil k optimalizaci svého hraní Game Dev Tycoon:"
+  },
+  "nextStep": {
+    "label": "Další krok",
+    "topicToGenre": {
+      "title": "Nyní vyber nejlepší žánr",
+      "body": "Využij své téma k nalezení kombinací žánrů s nejvyšším hodnocením."
+    },
+    "genreToPlatform": {
+      "title": "Najdi nejlepší platformu",
+      "body": "Spáruj svůj žánr s nejlepší platformou a publikem pro maximální hodnocení."
+    },
+    "platformToSliders": {
+      "title": "Získej předvolbu posuvníků",
+      "body": "Použij optimální nastavení posuvníků pro svůj žánr ve všech třech fázích vývoje."
+    },
+    "slidersToPlanner": {
+      "title": "Naplánuj příští vydání",
+      "body": "Zadej stav uložené hry a získej osobní doporučení k vydání a výzkumu."
+    },
+    "plannerToChecklist": {
+      "title": "Zkontroluj před vydáním",
+      "body": "Projdi kontrolní seznam a vyhni se běžným chybám před odesláním hry."
+    },
+    "timelineToPlatform": {
+      "title": "Vyber správnou platformu",
+      "body": "Použij doporučovač platforem k nalezení nejlepší volby pro svou aktuální éru."
+    },
+    "timelineToResearch": {
+      "title": "Upřednostni výzkum",
+      "body": "Naplánuj, které technologie odemknout jako další, podle aktuálního herního roku."
+    },
+    "timelineToChecklist": {
+      "title": "Sleduj milníky",
+      "body": "Přidej důležité milníky do svého seznamu a sleduj pokrok ve hře."
+    },
+    "plannerToResearch": {
+      "title": "Upřednostni výzkum",
+      "body": "Zjisti, které technologie odemknout jako první, abys maximalizoval skóre."
+    },
+    "staffToHandbook": {
+      "title": "Pozadí a pravidla v příručce",
+      "body": "Nauč se podrobně o mechanice týmu, pravidlech náboru a tréninkových strategiích."
+    },
+    "handbookToStaff": {
+      "title": "Praktická sestavení týmu a tipy",
+      "body": "Prohlédni si doporučení personálu podle fáze a konkrétní tipy pro každou část hry."
+    }
   }
 }

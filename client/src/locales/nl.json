@@ -540,7 +540,13 @@
     },
     "h1": "Wat je eerst moet onderzoeken in Game Dev Tycoon",
     "h2": "Hoe je snel onderzoekspunten krijgt",
-    "seoIntro": "Leer de ontgrendelingsvereisten voor het R&D-lab en gebruik onze onderzoekspunten-farminggids om efficiënt vooruitgang te boeken. Volg de lijst met de beste onderzoekprioriteiten, weet wanneer je medium games moet ontgrendelen en ontdek hoe je AAA-games ontgrendelt via onderzoek. Bekijk de onderzoekspuntenkosten per onderwerp en gebruik deze complete onderzoeksgids van garage tot AAA."
+    "seoIntro": "Leer de ontgrendelingsvereisten voor het R&D-lab en gebruik onze onderzoekspunten-farminggids om efficiënt vooruitgang te boeken. Volg de lijst met de beste onderzoekprioriteiten, weet wanneer je medium games moet ontgrendelen en ontdek hoe je AAA-games ontgrendelt via onderzoek. Bekijk de onderzoekspuntenkosten per onderwerp en gebruik deze complete onderzoeksgids van garage tot AAA.",
+    "researchOrderBox": {
+      "title": "Aanbevolen onderzoeksvolgorde",
+      "body": "Weet je niet wat je eerst moet ontgrendelen? Volg onze stapsgewijze gids.",
+      "linkText": "Bekijk onderzoeksgids",
+      "enBadge": "EN"
+    }
   },
   "staff": {
     "title": "Personeelsgids",
@@ -881,7 +887,21 @@
     },
     "h1": "Waarom ga ik steeds failliet in Game Dev Tycoon?",
     "h2": "Hoe je een 10/10 recensie krijgt in Game Dev Tycoon",
-    "seoIntro": "Begrijp de uitleg over de straf voor dezelfde combo, leer over het effect van bugs op de recensiescore en zorg voor de juiste regels en timing voor vervolgen. Ontdek of Game Dev Tycoon multiplayer heeft, hoe lang een playthrough duurt en het verschil tussen score en recensiescore. Ontvang essentiële tips voor beginners om te voorkomen dat je blut gaat."
+    "seoIntro": "Begrijp de uitleg over de straf voor dezelfde combo, leer over het effect van bugs op de recensiescore en zorg voor de juiste regels en timing voor vervolgen. Ontdek of Game Dev Tycoon multiplayer heeft, hoe lang een playthrough duurt en het verschil tussen score en recensiescore. Ontvang essentiële tips voor beginners om te voorkomen dat je blut gaat.",
+    "links": {
+      "moreTo": "Meer hierover:",
+      "topicRecommender": "Onderwerpenaanbeveler",
+      "platformRecommender": "Platformaanbeveler",
+      "sliders": "Schuifregelaars-presets",
+      "slidersPage": "Schuifregelaarsgids",
+      "staff": "Personeelsgids",
+      "handbuch": "Spelhandboek",
+      "research": "Onderzoeksgids",
+      "researchOrder": "Onderzoeksvolgorde",
+      "timeline": "Tijdlijn",
+      "planner": "Spelplanner",
+      "checklist": "Checklist"
+    }
   },
   "manual": {
     "title": "Game Dev Tycoon Handleiding",
@@ -1118,7 +1138,9 @@
         "Van basis tot geavanceerd",
         "Ideaal als referentie tijdens het spelen"
       ]
-    }
+    },
+    "openTool": "Tool openen",
+    "startWorkflow": "Aan de slag"
   },
   "sources": {
     "title": "Databronnen",
@@ -1576,5 +1598,52 @@
     "copied": "Link gekopieerd!",
     "shared": "Bedankt voor het delen!",
     "shareText": "Ik heb dit gebruikt om mijn Game Dev Tycoon-gameplay te optimaliseren:"
+  },
+  "nextStep": {
+    "label": "Volgende stap",
+    "topicToGenre": {
+      "title": "Kies nu het beste genre",
+      "body": "Gebruik je onderwerp om de genrecombinaties met de hoogste score te vinden."
+    },
+    "genreToPlatform": {
+      "title": "Vind het beste platform",
+      "body": "Combineer je genre met het ideale platform en publiek voor de hoogste beoordelingen."
+    },
+    "platformToSliders": {
+      "title": "Haal je schuifregelaar-preset",
+      "body": "Pas de optimale schuifregelaar-instellingen toe voor je genre in alle drie ontwikkelingsfasen."
+    },
+    "slidersToPlanner": {
+      "title": "Plan je volgende release",
+      "body": "Voer je spelstaat in en ontvang persoonlijke aanbevelingen voor release en onderzoek."
+    },
+    "plannerToChecklist": {
+      "title": "Controleer voor de release",
+      "body": "Loop de checklist door om veelgemaakte fouten te vermijden voordat je je spel indient."
+    },
+    "timelineToPlatform": {
+      "title": "Kies het juiste platform",
+      "body": "Gebruik de platformaanbeveler om het beste platform voor je huidige tijdperk te vinden."
+    },
+    "timelineToResearch": {
+      "title": "Prioriteer je onderzoek",
+      "body": "Plan welke technologieën je vervolgens ontgrendelt op basis van je huidige speljaar."
+    },
+    "timelineToChecklist": {
+      "title": "Houd mijlpalen bij",
+      "body": "Voeg belangrijke mijlpalen toe aan je checklist en volg je voortgang in het spel."
+    },
+    "plannerToResearch": {
+      "title": "Prioriteer je onderzoek",
+      "body": "Bekijk welke technologieën je het eerst moet ontgrendelen om je spelscores te maximaliseren."
+    },
+    "staffToHandbook": {
+      "title": "Achtergrond & regels in het handboek",
+      "body": "Leer meer over teammechanismen, aanwervingsregels en trainingsstrategieën in het spelhandboek."
+    },
+    "handbookToStaff": {
+      "title": "Praktische teamopstellingen & tips",
+      "body": "Bekijk fase-specifieke personeelsaanbevelingen en concrete tips voor elke fase van het spel."
+    }
   }
 }

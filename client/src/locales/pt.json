@@ -540,7 +540,13 @@
     },
     "h1": "O Que Pesquisar Primeiro no Game Dev Tycoon",
     "h2": "Como Obter Pontos de Pesquisa Rapidamente",
-    "seoIntro": "Aprenda os requisitos de desbloqueio do laboratório de P&D e use nosso guia de obtenção de pontos de pesquisa para progredir com eficiência. Siga a lista das melhores prioridades de pesquisa, saiba quando desbloquear jogos médios e descubra como desbloquear jogos AAA através da pesquisa. Verifique o custo de pontos de pesquisa por tópico e use este guia de pesquisa completo, da garagem ao AAA."
+    "seoIntro": "Aprenda os requisitos de desbloqueio do laboratório de P&D e use nosso guia de obtenção de pontos de pesquisa para progredir com eficiência. Siga a lista das melhores prioridades de pesquisa, saiba quando desbloquear jogos médios e descubra como desbloquear jogos AAA através da pesquisa. Verifique o custo de pontos de pesquisa por tópico e use este guia de pesquisa completo, da garagem ao AAA.",
+    "researchOrderBox": {
+      "title": "Ordem de pesquisa recomendada",
+      "body": "Não sabe o que desbloquear primeiro? Siga o nosso guia passo a passo.",
+      "linkText": "Ver guia de pesquisa",
+      "enBadge": "EN"
+    }
   },
   "staff": {
     "title": "Guia de Equipe",
@@ -881,7 +887,21 @@
     },
     "h1": "Por Que Eu Continuo Indo à Falência no Game Dev Tycoon?",
     "h2": "Como Obter uma Avaliação 10/10 no Game Dev Tycoon",
-    "seoIntro": "Entenda a explicação sobre a penalidade por repetir o mesmo combo, saiba o efeito dos bugs na nota da avaliação e acerte as regras e o tempo das sequências. Descubra se o Game Dev Tycoon tem multijogador, quanto tempo leva uma partida e a diferença entre pontuação e nota de avaliação. Receba dicas essenciais para iniciantes para evitar a falência."
+    "seoIntro": "Entenda a explicação sobre a penalidade por repetir o mesmo combo, saiba o efeito dos bugs na nota da avaliação e acerte as regras e o tempo das sequências. Descubra se o Game Dev Tycoon tem multijogador, quanto tempo leva uma partida e a diferença entre pontuação e nota de avaliação. Receba dicas essenciais para iniciantes para evitar a falência.",
+    "links": {
+      "moreTo": "Saiba mais:",
+      "topicRecommender": "Recomendador de temas",
+      "platformRecommender": "Recomendador de plataformas",
+      "sliders": "Predefinições de controles",
+      "slidersPage": "Guia de controles",
+      "staff": "Guia de equipe",
+      "handbuch": "Manual do jogo",
+      "research": "Guia de pesquisa",
+      "researchOrder": "Ordem de pesquisa",
+      "timeline": "Linha do tempo",
+      "planner": "Planejador",
+      "checklist": "Lista de verificação"
+    }
   },
   "manual": {
     "title": "Manual do Game Dev Tycoon",
@@ -1118,7 +1138,9 @@
         "Do básico ao avançado",
         "Ideal para consulta durante o gameplay"
       ]
-    }
+    },
+    "openTool": "Abrir ferramenta",
+    "startWorkflow": "Começar"
   },
   "sources": {
     "title": "Fontes de Dados",
@@ -1576,5 +1598,52 @@
     "copied": "Link copiado!",
     "shared": "Obrigado por compartilhar!",
     "shareText": "Usei isto para otimizar a minha jogabilidade no Game Dev Tycoon:"
+  },
+  "nextStep": {
+    "label": "Próximo passo",
+    "topicToGenre": {
+      "title": "Escolha agora o melhor gênero",
+      "body": "Use seu tema para encontrar as combinações de gêneros com a maior pontuação."
+    },
+    "genreToPlatform": {
+      "title": "Encontre a melhor plataforma",
+      "body": "Combine seu gênero com a plataforma e público ideal para obter as melhores avaliações."
+    },
+    "platformToSliders": {
+      "title": "Obtenha sua predefinição",
+      "body": "Aplique as configurações ideais de controles para o seu gênero nas três fases de desenvolvimento."
+    },
+    "slidersToPlanner": {
+      "title": "Planeje seu próximo lançamento",
+      "body": "Insira seu estado de jogo e receba recomendações personalizadas de lançamento e pesquisa."
+    },
+    "plannerToChecklist": {
+      "title": "Revise antes de publicar",
+      "body": "Percorra a lista de verificação para evitar erros comuns antes de enviar seu jogo."
+    },
+    "timelineToPlatform": {
+      "title": "Escolha a plataforma certa",
+      "body": "Use o recomendador de plataformas para encontrar a melhor opção para a sua era atual."
+    },
+    "timelineToResearch": {
+      "title": "Priorize sua pesquisa",
+      "body": "Planeje quais tecnologias desbloquear a seguir com base no ano atual do seu jogo."
+    },
+    "timelineToChecklist": {
+      "title": "Acompanhe seus marcos",
+      "body": "Adicione marcos importantes à sua lista e acompanhe o seu progresso no jogo."
+    },
+    "plannerToResearch": {
+      "title": "Priorize sua pesquisa",
+      "body": "Veja quais tecnologias desbloquear primeiro para maximizar suas pontuações."
+    },
+    "staffToHandbook": {
+      "title": "Contexto e regras no manual",
+      "body": "Aprenda em detalhes as mecânicas de equipe, regras de contratação e estratégias de treinamento."
+    },
+    "handbookToStaff": {
+      "title": "Configurações de equipe e dicas práticas",
+      "body": "Veja recomendações de equipe por fase e dicas concretas para cada etapa do jogo."
+    }
   }
 }

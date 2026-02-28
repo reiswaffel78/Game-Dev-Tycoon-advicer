@@ -540,7 +540,13 @@
     },
     "h1": "Game Dev Tycoon'da İlk Önce Ne Araştırmalı",
     "h2": "Araştırma Puanları Nasıl Hızlı Alınır",
-    "seoIntro": "Ar-Ge laboratuvarı açma gereksinimlerini öğrenin ve verimli ilerlemek için araştırma puanları toplama kılavuzumuzu kullanın. En iyi araştırma öncelikleri listesini takip edin, orta büyüklükteki oyunların kilidini ne zaman açacağınızı bilin ve araştırma yoluyla AAA oyunlarının kilidini nasıl açacağınızı öğrenin. Konu başına araştırma puanı maliyetini kontrol edin ve garajdan AAA'ya bu eksiksiz araştırma kılavuzunu kullanın."
+    "seoIntro": "Ar-Ge laboratuvarı açma gereksinimlerini öğrenin ve verimli ilerlemek için araştırma puanları toplama kılavuzumuzu kullanın. En iyi araştırma öncelikleri listesini takip edin, orta büyüklükteki oyunların kilidini ne zaman açacağınızı bilin ve araştırma yoluyla AAA oyunlarının kilidini nasıl açacağınızı öğrenin. Konu başına araştırma puanı maliyetini kontrol edin ve garajdan AAA'ya bu eksiksiz araştırma kılavuzunu kullanın.",
+    "researchOrderBox": {
+      "title": "Önerilen Araştırma Sırası",
+      "body": "Önce neyi açacağını bilmiyor musun? Adım adım rehberimizi takip et.",
+      "linkText": "Araştırma rehberini görüntüle",
+      "enBadge": "EN"
+    }
   },
   "staff": {
     "title": "Personel Rehberi",
@@ -881,7 +887,21 @@
     },
     "h1": "Neden Game Dev Tycoon'da Sürekli İflas Ediyorum?",
     "h2": "Game Dev Tycoon'da Nasıl 10/10 İnceleme Alınır?",
-    "seoIntro": "Aynı kombo cezasının açıklamasını anlayın, hataların inceleme puanı üzerindeki etkisini öğrenin ve devam oyunu kurallarını ve zamanlamasını doğru yapın. Game Dev Tycoon'da çok oyunculu mod olup olmadığını, bir oyunun ne kadar sürdüğünü ve puan ile inceleme puanı arasındaki farkı öğrenin. İflastan kaçınmak için yeni başlayanlara yönelik temel ipuçları alın."
+    "seoIntro": "Aynı kombo cezasının açıklamasını anlayın, hataların inceleme puanı üzerindeki etkisini öğrenin ve devam oyunu kurallarını ve zamanlamasını doğru yapın. Game Dev Tycoon'da çok oyunculu mod olup olmadığını, bir oyunun ne kadar sürdüğünü ve puan ile inceleme puanı arasındaki farkı öğrenin. İflastan kaçınmak için yeni başlayanlara yönelik temel ipuçları alın.",
+    "links": {
+      "moreTo": "Daha fazlası:",
+      "topicRecommender": "Konu Önerileri",
+      "platformRecommender": "Platform Önerileri",
+      "sliders": "Kaydırıcı Ön Ayarları",
+      "slidersPage": "Kaydırıcı Rehberi",
+      "staff": "Personel Rehberi",
+      "handbuch": "Oyun El Kitabı",
+      "research": "Araştırma Rehberi",
+      "researchOrder": "Araştırma Sırası",
+      "timeline": "Zaman Çizelgesi",
+      "planner": "Oyun Planlayıcısı",
+      "checklist": "Kontrol Listesi"
+    }
   },
   "manual": {
     "title": "Game Dev Tycoon El Kitabı",
@@ -1118,7 +1138,9 @@
         "Temel bilgilerden ileri düzeye",
         "Oyun sırasında başvuru için ideal"
       ]
-    }
+    },
+    "openTool": "Aracı Aç",
+    "startWorkflow": "Başla"
   },
   "sources": {
     "title": "Veri Kaynakları",
@@ -1576,5 +1598,52 @@
     "copied": "Bağlantı kopyalandı!",
     "shared": "Paylaştığın için teşekkürler!",
     "shareText": "Game Dev Tycoon oyunumu optimize etmek için bunu kullandım:"
+  },
+  "nextStep": {
+    "label": "Sonraki Adım",
+    "topicToGenre": {
+      "title": "Şimdi En İyi Türü Seç",
+      "body": "Konunu kullanarak en yüksek puanlı tür kombinasyonlarını bul."
+    },
+    "genreToPlatform": {
+      "title": "En İyi Platformu Bul",
+      "body": "Türünü en uygun platform ve hedef kitleyle eşleştirerek en yüksek puanları elde et."
+    },
+    "platformToSliders": {
+      "title": "Kaydırıcı Ön Ayarını Al",
+      "body": "Türünüz için tüm üç geliştirme aşamasında optimal kaydırıcı ayarlarını uygula."
+    },
+    "slidersToPlanner": {
+      "title": "Sonraki Yayını Planla",
+      "body": "Kayıt durumunu gir ve kişiselleştirilmiş yayın ve araştırma önerileri al."
+    },
+    "plannerToChecklist": {
+      "title": "Yayınlamadan Önce Kontrol Et",
+      "body": "Oyununu göndermeden önce yaygın hataları önlemek için kontrol listesini gözden geçir."
+    },
+    "timelineToPlatform": {
+      "title": "Doğru Platformu Seç",
+      "body": "Mevcut dönem için en iyi platformu bulmak üzere platform öneri aracını kullan."
+    },
+    "timelineToResearch": {
+      "title": "Araştırmalarını Önceliklendir",
+      "body": "Mevcut oyun yılına göre hangi teknolojileri sıradaki açacağını planla."
+    },
+    "timelineToChecklist": {
+      "title": "Kilometre Taşlarını Takip Et",
+      "body": "Önemli kilometre taşlarını listene ekle ve oyundaki ilerlemeyi izle."
+    },
+    "plannerToResearch": {
+      "title": "Araştırmalarını Önceliklendir",
+      "body": "Oyun puanlarını maksimize etmek için önce hangi teknolojileri açman gerektiğini gör."
+    },
+    "staffToHandbook": {
+      "title": "El Kitabındaki Arka Plan ve Kurallar",
+      "body": "El kitabında ekip mekaniği, işe alım kuralları ve eğitim stratejileri hakkında ayrıntılı bilgi edin."
+    },
+    "handbookToStaff": {
+      "title": "Pratik Ekip Kurulumları ve İpuçları",
+      "body": "Aşamaya özel personel önerileri ve oyunun her aşaması için somut ipuçlarına bak."
+    }
   }
 }

@@ -540,7 +540,13 @@
     },
     "h1": "Mit kutass először a Game Dev Tycoonban",
     "h2": "Hogyan szerezz gyorsan kutatási pontokat",
-    "seoIntro": "Ismerd meg a K+F labor feloldási követelményeit, és használd kutatásipont-gyűjtő útmutatónkat a hatékony fejlődéshez. Kövesd a legjobb kutatási prioritási listát, tudd meg, mikor érdemes feloldani a közepes méretű játékokat, és hogyan oldhatod fel az AAA játékokat kutatással. Ellenőrizd a témánkénti kutatásipont-költséget, és használd ezt a teljes kutatási útmutatót a garázstól az AAA szintig."
+    "seoIntro": "Ismerd meg a K+F labor feloldási követelményeit, és használd kutatásipont-gyűjtő útmutatónkat a hatékony fejlődéshez. Kövesd a legjobb kutatási prioritási listát, tudd meg, mikor érdemes feloldani a közepes méretű játékokat, és hogyan oldhatod fel az AAA játékokat kutatással. Ellenőrizd a témánkénti kutatásipont-költséget, és használd ezt a teljes kutatási útmutatót a garázstól az AAA szintig.",
+    "researchOrderBox": {
+      "title": "Javasolt kutatási sorrend",
+      "body": "Nem tudod, mit érdemes először feloldani? Kövesd lépésről lépésre szóló útmutatónkat.",
+      "linkText": "Kutatási útmutató megtekintése",
+      "enBadge": "EN"
+    }
   },
   "staff": {
     "title": "Személyzeti útmutató",
@@ -881,7 +887,21 @@
     },
     "h1": "Miért megyek folyton csődbe a Game Dev Tycoonban?",
     "h2": "Hogyan szerezz 10/10-es értékelést a Game Dev Tycoonban",
-    "seoIntro": "Értsd meg az azonos kombó miatti büntetést, tanuld meg a bugok hatását az értékelési pontszámra, és ismerd meg a folytatásokra vonatkozó szabályokat és a megfelelő időzítést. Tudd meg, van-e a Game Dev Tycoonban többjátékos mód, mennyi ideig tart egy végigjátszás, és mi a különbség a pontszám és az értékelési pontszám között. Szerezz alapvető tippeket kezdőknek a csőd elkerüléséhez."
+    "seoIntro": "Értsd meg az azonos kombó miatti büntetést, tanuld meg a bugok hatását az értékelési pontszámra, és ismerd meg a folytatásokra vonatkozó szabályokat és a megfelelő időzítést. Tudd meg, van-e a Game Dev Tycoonban többjátékos mód, mennyi ideig tart egy végigjátszás, és mi a különbség a pontszám és az értékelési pontszám között. Szerezz alapvető tippeket kezdőknek a csőd elkerüléséhez.",
+    "links": {
+      "moreTo": "Bővebben:",
+      "topicRecommender": "Témaajánló",
+      "platformRecommender": "Platformajánló",
+      "sliders": "Csúszka-előbeállítások",
+      "slidersPage": "Csúszka-útmutató",
+      "staff": "Személyzeti útmutató",
+      "handbuch": "Játékkézikönyv",
+      "research": "Kutatási útmutató",
+      "researchOrder": "Kutatási sorrend",
+      "timeline": "Idővonal",
+      "planner": "Játéktervező",
+      "checklist": "Ellenőrzőlista"
+    }
   },
   "manual": {
     "title": "Game Dev Tycoon Kézikönyv",
@@ -1118,7 +1138,9 @@
         "Az alapoktól a haladó technikákig",
         "Ideális referencia játék közben"
       ]
-    }
+    },
+    "openTool": "Eszköz megnyitása",
+    "startWorkflow": "Kezdés"
   },
   "sources": {
     "title": "Adatforrások",
@@ -1576,5 +1598,52 @@
     "copied": "Link másolva!",
     "shared": "Köszönjük a megosztást!",
     "shareText": "Ezt használtam a Game Dev Tycoon játékmenetem optimalizálásához:"
+  },
+  "nextStep": {
+    "label": "Következő lépés",
+    "topicToGenre": {
+      "title": "Válaszd ki a legjobb műfajt",
+      "body": "Használd a témádat, hogy megtaláld a legjobb pontszámú műfajkombinációkat."
+    },
+    "genreToPlatform": {
+      "title": "Találd meg a legjobb platformot",
+      "body": "Párosítsd a műfajod a legjobb platformmal és közönséggel a maximális értékelésekért."
+    },
+    "platformToSliders": {
+      "title": "Szerezd meg a csúszka-előbeállítást",
+      "body": "Alkalmazd az optimális csúszkabeállításokat a műfajodhoz mindhárom fejlesztési fázisban."
+    },
+    "slidersToPlanner": {
+      "title": "Tervezd meg a következő kiadást",
+      "body": "Add meg a mentési állapotodat, és kapj személyre szabott javaslatokat a kiadáshoz és kutatáshoz."
+    },
+    "plannerToChecklist": {
+      "title": "Ellenőrizz kiadás előtt",
+      "body": "Menj végig az ellenőrzőlistán, hogy elkerüld a gyakori hibákat a játék beküldése előtt."
+    },
+    "timelineToPlatform": {
+      "title": "Válaszd ki a megfelelő platformot",
+      "body": "Használd a platformajánlót a jelenlegi korszakodhoz legjobb platform megtalálásához."
+    },
+    "timelineToResearch": {
+      "title": "Fontossági sorrendbe állítsd a kutatásokat",
+      "body": "Tervezd meg, melyik technológiát oldod fel legközelebb az aktuális játékév alapján."
+    },
+    "timelineToChecklist": {
+      "title": "Kövesd az előrehaladást",
+      "body": "Adj hozzá fontos mérföldköveket a listádhoz, és kövesd a játékban elért haladásodat."
+    },
+    "plannerToResearch": {
+      "title": "Fontossági sorrendbe állítsd a kutatásokat",
+      "body": "Nézd meg, melyik technológiát érdemes először feloldani a pontszámok maximalizálásához."
+    },
+    "staffToHandbook": {
+      "title": "Háttér és szabályok a kézikönyvben",
+      "body": "Ismerd meg részletesen a csapat működését, a felvételi szabályokat és az edzési stratégiákat."
+    },
+    "handbookToStaff": {
+      "title": "Gyakorlati csapatfelállások és tippek",
+      "body": "Tekintsd meg a fázisonkénti személyzeti javaslatokat és konkrét tippeket a játék minden szakaszához."
+    }
   }
 }

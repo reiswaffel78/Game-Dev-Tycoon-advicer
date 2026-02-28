@@ -540,7 +540,13 @@
     },
     "h1": "Cosa ricercare per primo in Game Dev Tycoon",
     "h2": "Come ottenere punti ricerca velocemente",
-    "seoIntro": "Scopri i requisiti di sblocco del laboratorio R&S e usa la nostra guida al farming dei punti ricerca per progredire in modo efficiente. Segui la lista delle migliori priorità di ricerca, scopri quando sbloccare i giochi medi e come sbloccare i giochi AAA attraverso la ricerca. Controlla il costo in punti ricerca per argomento e usa questa guida completa alla ricerca, dal garage ai titoli AAA."
+    "seoIntro": "Scopri i requisiti di sblocco del laboratorio R&S e usa la nostra guida al farming dei punti ricerca per progredire in modo efficiente. Segui la lista delle migliori priorità di ricerca, scopri quando sbloccare i giochi medi e come sbloccare i giochi AAA attraverso la ricerca. Controlla il costo in punti ricerca per argomento e usa questa guida completa alla ricerca, dal garage ai titoli AAA.",
+    "researchOrderBox": {
+      "title": "Ordine di ricerca consigliato",
+      "body": "Non sai cosa sbloccare per primo? Segui la nostra guida passo dopo passo.",
+      "linkText": "Vedi guida alla ricerca",
+      "enBadge": "EN"
+    }
   },
   "staff": {
     "title": "Guida al Personale",
@@ -881,7 +887,21 @@
     },
     "h1": "Perché continuo a fallire in Game Dev Tycoon?",
     "h2": "Come ottenere una recensione da 10/10 in Game Dev Tycoon",
-    "seoIntro": "Scopri la spiegazione della penalità per la stessa combo, l'effetto dei bug sul punteggio delle recensioni e segui correttamente le regole e le tempistiche dei sequel. Scopri se Game Dev Tycoon ha il multiplayer, quanto dura una partita e la differenza tra punteggio e voto della recensione. Ottieni consigli essenziali per principianti per evitare la bancarotta."
+    "seoIntro": "Scopri la spiegazione della penalità per la stessa combo, l'effetto dei bug sul punteggio delle recensioni e segui correttamente le regole e le tempistiche dei sequel. Scopri se Game Dev Tycoon ha il multiplayer, quanto dura una partita e la differenza tra punteggio e voto della recensione. Ottieni consigli essenziali per principianti per evitare la bancarotta.",
+    "links": {
+      "moreTo": "Approfondisci:",
+      "topicRecommender": "Consigliatore di temi",
+      "platformRecommender": "Consigliatore di piattaforme",
+      "sliders": "Preimpostazioni cursori",
+      "slidersPage": "Guida ai cursori",
+      "staff": "Guida al personale",
+      "handbuch": "Manuale del gioco",
+      "research": "Guida alla ricerca",
+      "researchOrder": "Ordine di ricerca",
+      "timeline": "Linea del tempo",
+      "planner": "Pianificatore",
+      "checklist": "Lista di controllo"
+    }
   },
   "manual": {
     "title": "Manuale Game Dev Tycoon",
@@ -1118,7 +1138,9 @@
         "Dalle basi all'avanzato",
         "Ideale per riferimento durante il gameplay"
       ]
-    }
+    },
+    "openTool": "Apri strumento",
+    "startWorkflow": "Inizia"
   },
   "sources": {
     "title": "Fonti Dati",
@@ -1576,5 +1598,52 @@
     "copied": "Link copiato!",
     "shared": "Grazie per la condivisione!",
     "shareText": "Ho usato questo per ottimizzare il mio gameplay di Game Dev Tycoon:"
+  },
+  "nextStep": {
+    "label": "Passo successivo",
+    "topicToGenre": {
+      "title": "Scegli ora il genere migliore",
+      "body": "Usa il tuo tema per trovare le combinazioni di generi con il punteggio più alto."
+    },
+    "genreToPlatform": {
+      "title": "Trova la piattaforma migliore",
+      "body": "Abbina il tuo genere alla piattaforma e al pubblico ideale per ottenere i voti più alti."
+    },
+    "platformToSliders": {
+      "title": "Ottieni la tua preimpostazione",
+      "body": "Applica le impostazioni ottimali dei cursori per il tuo genere in tutte e tre le fasi di sviluppo."
+    },
+    "slidersToPlanner": {
+      "title": "Pianifica il prossimo lancio",
+      "body": "Inserisci il tuo stato di salvataggio e ricevi consigli personalizzati su lancio e ricerca."
+    },
+    "plannerToChecklist": {
+      "title": "Controlla prima del lancio",
+      "body": "Scorri la lista di controllo per evitare errori comuni prima di inviare il tuo gioco."
+    },
+    "timelineToPlatform": {
+      "title": "Scegli la piattaforma giusta",
+      "body": "Usa il consigliatore di piattaforme per trovare l'opzione migliore per la tua era attuale."
+    },
+    "timelineToResearch": {
+      "title": "Dai priorità alla ricerca",
+      "body": "Pianifica quali tecnologie sbloccare in base all'anno di gioco corrente."
+    },
+    "timelineToChecklist": {
+      "title": "Tieni traccia dei traguardi",
+      "body": "Aggiungi traguardi importanti alla lista e monitora i tuoi progressi nel gioco."
+    },
+    "plannerToResearch": {
+      "title": "Dai priorità alla ricerca",
+      "body": "Scopri quali tecnologie sbloccare per prime per massimizzare i tuoi punteggi."
+    },
+    "staffToHandbook": {
+      "title": "Contesto e regole nel manuale",
+      "body": "Scopri nel dettaglio le meccaniche del team, le regole di assunzione e le strategie di formazione."
+    },
+    "handbookToStaff": {
+      "title": "Configurazioni del team e consigli pratici",
+      "body": "Consulta i consigli sul personale per fase e suggerimenti concreti per ogni stadio del gioco."
+    }
   }
 }

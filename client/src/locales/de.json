@@ -540,7 +540,13 @@
     },
     "h1": "Was man in Game Dev Tycoon zuerst erforschen sollte",
     "h2": "Wie man schnell Forschungspunkte bekommt",
-    "seoIntro": "Erfahre mehr über die Freischaltbedingungen für das F&E-Labor und nutze unseren Leitfaden zum Farmen von Forschungspunkten, um effizient voranzukommen. Befolge die Liste der besten Forschungsprioritäten, erfahre, wann du mittelgroße Spiele freischalten solltest, und finde heraus, wie du AAA-Spiele durch Forschung freischaltest. Überprüfe die Forschungspunktkosten pro Thema und nutze diesen vollständigen Forschungsleitfaden von der Garage bis zu AAA."
+    "seoIntro": "Erfahre mehr über die Freischaltbedingungen für das F&E-Labor und nutze unseren Leitfaden zum Farmen von Forschungspunkten, um effizient voranzukommen. Befolge die Liste der besten Forschungsprioritäten, erfahre, wann du mittelgroße Spiele freischalten solltest, und finde heraus, wie du AAA-Spiele durch Forschung freischaltest. Überprüfe die Forschungspunktkosten pro Thema und nutze diesen vollständigen Forschungsleitfaden von der Garage bis zu AAA.",
+    "researchOrderBox": {
+      "title": "Empfohlene Forschungsreihenfolge",
+      "body": "Nicht sicher, was du zuerst freischalten solltest? Folge unserer schrittweisen Anleitung.",
+      "linkText": "Zur Forschungsreihenfolge",
+      "enBadge": "EN"
+    }
   },
   "staff": {
     "title": "Mitarbeiter-Guide",
@@ -881,7 +887,21 @@
     },
     "h1": "Warum gehe ich in Game Dev Tycoon immer wieder pleite?",
     "h2": "Wie man in Game Dev Tycoon eine 10/10-Bewertung bekommt",
-    "seoIntro": "Verstehe die Strafe für gleiche Kombinationen, erfahre mehr über die Auswirkungen von Bugs auf die Bewertung und lerne die Regeln und das Timing für Sequels kennen. Finde heraus, ob Game Dev Tycoon einen Multiplayer-Modus hat, wie lange ein Spieldurchgang dauert und was der Unterschied zwischen Score und Review-Score ist. Erhalte wichtige Tipps für Anfänger, um nicht pleitezugehen."
+    "seoIntro": "Verstehe die Strafe für gleiche Kombinationen, erfahre mehr über die Auswirkungen von Bugs auf die Bewertung und lerne die Regeln und das Timing für Sequels kennen. Finde heraus, ob Game Dev Tycoon einen Multiplayer-Modus hat, wie lange ein Spieldurchgang dauert und was der Unterschied zwischen Score und Review-Score ist. Erhalte wichtige Tipps für Anfänger, um nicht pleitezugehen.",
+    "links": {
+      "moreTo": "Mehr dazu:",
+      "topicRecommender": "Themen-Empfehler",
+      "platformRecommender": "Plattform-Empfehler",
+      "sliders": "Regler-Voreinstellungen",
+      "slidersPage": "Regler-Leitfaden",
+      "staff": "Personal-Leitfaden",
+      "handbuch": "Spielhandbuch",
+      "research": "Forschungs-Leitfaden",
+      "researchOrder": "Forschungsreihenfolge",
+      "timeline": "Zeitstrahl",
+      "planner": "Spielplaner",
+      "checklist": "Checkliste"
+    }
   },
   "manual": {
     "title": "Game Dev Tycoon Handbuch",
@@ -1118,7 +1138,9 @@
         "Von Grundlagen bis Fortgeschritten",
         "Ideal zum Nachschlagen während des Spiels"
       ]
-    }
+    },
+    "openTool": "Tool öffnen",
+    "startWorkflow": "Loslegen"
   },
   "guide": {
     "title": "Game Dev Tycoon Leitfaden",
@@ -1586,5 +1608,52 @@
     "copied": "Link kopiert!",
     "shared": "Danke fürs Teilen!",
     "shareText": "Ich habe das hier genutzt, um mein Gameplay in Game Dev Tycoon zu optimieren:"
+  },
+  "nextStep": {
+    "label": "Nächster Schritt",
+    "topicToGenre": {
+      "title": "Jetzt das beste Genre wählen",
+      "body": "Nutze dein Thema, um die Genre-Kombination mit der höchsten Bewertung zu finden."
+    },
+    "genreToPlatform": {
+      "title": "Die passende Plattform finden",
+      "body": "Kombiniere dein Genre mit der idealen Plattform und Zielgruppe für maximale Spielerbewertungen."
+    },
+    "platformToSliders": {
+      "title": "Regler-Voreinstellung holen",
+      "body": "Wende optimale Regler-Einstellungen für dein Genre in allen drei Entwicklungsphasen an."
+    },
+    "slidersToPlanner": {
+      "title": "Nächste Veröffentlichung planen",
+      "body": "Gib deinen Spielstand ein und erhalte persönliche Empfehlungen zu Release und Forschung."
+    },
+    "plannerToChecklist": {
+      "title": "Vor dem Release prüfen",
+      "body": "Gehe die Checkliste durch, um typische Fehler vor dem Einreichen deines Spiels zu vermeiden."
+    },
+    "timelineToPlatform": {
+      "title": "Die richtige Plattform wählen",
+      "body": "Nutze den Plattform-Empfehler, um die beste Plattform für deine aktuelle Spielepoche zu finden."
+    },
+    "timelineToResearch": {
+      "title": "Forschung priorisieren",
+      "body": "Plane, welche Technologien du als Nächstes freischalten möchtest – abgestimmt auf dein aktuelles Spieljahr."
+    },
+    "timelineToChecklist": {
+      "title": "Meilensteine im Blick behalten",
+      "body": "Trage wichtige Meilensteine in deine Checkliste ein und verfolge deinen Spielfortschritt."
+    },
+    "plannerToResearch": {
+      "title": "Forschung gezielt planen",
+      "body": "Sieh, welche Technologien du zuerst freischalten solltest, um deine Spielbewertungen zu verbessern."
+    },
+    "staffToHandbook": {
+      "title": "Hintergründe & Regeln im Handbuch",
+      "body": "Erfahre im Spielhandbuch alles über Teammechaniken, Einstellungsregeln und Trainingsstrategien."
+    },
+    "handbookToStaff": {
+      "title": "Praktische Team-Setups & Tipps",
+      "body": "Entdecke phasenspezifische Personalempfehlungen und konkrete Tipps für jede Spielphase."
+    }
   }
 }

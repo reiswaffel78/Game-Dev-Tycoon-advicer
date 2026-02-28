@@ -540,7 +540,13 @@
     },
     "h1": "Co badać jako pierwsze w Game Dev Tycoon",
     "h2": "Jak szybko zdobywać punkty badań",
-    "seoIntro": "Poznaj wymagania dotyczące odblokowania laboratorium badawczo-rozwojowego i skorzystaj z naszego poradnika farmienia punktów badań, aby efektywnie robić postępy. Śledź listę najlepszych priorytetów badawczych, dowiedz się, kiedy odblokować gry średniej wielkości i jak odblokować gry AAA poprzez badania. Sprawdź koszt punktów badań na temat i skorzystaj z tego kompletnego przewodnika badawczego od garażu do poziomu AAA."
+    "seoIntro": "Poznaj wymagania dotyczące odblokowania laboratorium badawczo-rozwojowego i skorzystaj z naszego poradnika farmienia punktów badań, aby efektywnie robić postępy. Śledź listę najlepszych priorytetów badawczych, dowiedz się, kiedy odblokować gry średniej wielkości i jak odblokować gry AAA poprzez badania. Sprawdź koszt punktów badań na temat i skorzystaj z tego kompletnego przewodnika badawczego od garażu do poziomu AAA.",
+    "researchOrderBox": {
+      "title": "Zalecana kolejność badań",
+      "body": "Nie wiesz, co odblokować najpierw? Skorzystaj z naszego przewodnika krok po kroku.",
+      "linkText": "Zobacz przewodnik badań",
+      "enBadge": "EN"
+    }
   },
   "staff": {
     "title": "Poradnik kadrowy",
@@ -881,7 +887,21 @@
     },
     "h1": "Dlaczego ciągle bankrutuję w Game Dev Tycoon?",
     "h2": "Jak uzyskać ocenę 10/10 w Game Dev Tycoon",
-    "seoIntro": "Zrozum wyjaśnienie kary za tę samą kombinację, dowiedz się o wpływie błędów na ocenę recenzji oraz poznaj zasady i terminy tworzenia sequeli. Dowiedz się, czy Game Dev Tycoon ma tryb wieloosobowy, jak długo trwa rozgrywka i jaka jest różnica między wynikiem a oceną recenzji. Uzyskaj niezbędne wskazówki dla początkujących, aby uniknąć bankructwa."
+    "seoIntro": "Zrozum wyjaśnienie kary za tę samą kombinację, dowiedz się o wpływie błędów na ocenę recenzji oraz poznaj zasady i terminy tworzenia sequeli. Dowiedz się, czy Game Dev Tycoon ma tryb wieloosobowy, jak długo trwa rozgrywka i jaka jest różnica między wynikiem a oceną recenzji. Uzyskaj niezbędne wskazówki dla początkujących, aby uniknąć bankructwa.",
+    "links": {
+      "moreTo": "Więcej na ten temat:",
+      "topicRecommender": "Rekomendator tematów",
+      "platformRecommender": "Rekomendator platform",
+      "sliders": "Presety suwaków",
+      "slidersPage": "Przewodnik suwaków",
+      "staff": "Przewodnik personelu",
+      "handbuch": "Podręcznik gry",
+      "research": "Przewodnik badań",
+      "researchOrder": "Kolejność badań",
+      "timeline": "Oś czasu",
+      "planner": "Planer gry",
+      "checklist": "Lista kontrolna"
+    }
   },
   "manual": {
     "title": "Podręcznik Game Dev Tycoon",
@@ -1118,7 +1138,9 @@
         "Od podstaw po zaawansowane",
         "Idealne jako referencja podczas gry"
       ]
-    }
+    },
+    "openTool": "Otwórz narzędzie",
+    "startWorkflow": "Rozpocznij"
   },
   "sources": {
     "title": "Źródła danych",
@@ -1576,5 +1598,52 @@
     "copied": "Link skopiowany!",
     "shared": "Dziękujemy za udostępnienie!",
     "shareText": "Użyłem tego, aby zoptymalizować moją rozgrywkę w Game Dev Tycoon:"
+  },
+  "nextStep": {
+    "label": "Następny krok",
+    "topicToGenre": {
+      "title": "Teraz wybierz najlepszy gatunek",
+      "body": "Użyj swojego tematu, aby znaleźć kombinacje gatunków z najwyższą punktacją."
+    },
+    "genreToPlatform": {
+      "title": "Znajdź najlepszą platformę",
+      "body": "Dopasuj swój gatunek do najlepszej platformy i grupy odbiorców dla maksymalnych ocen."
+    },
+    "platformToSliders": {
+      "title": "Pobierz preset suwaków",
+      "body": "Zastosuj optymalne ustawienia suwaków dla swojego gatunku we wszystkich trzech fazach rozwoju."
+    },
+    "slidersToPlanner": {
+      "title": "Zaplanuj kolejne wydanie",
+      "body": "Wprowadź stan zapisu i otrzymaj spersonalizowane rekomendacje dotyczące wydania i badań."
+    },
+    "plannerToChecklist": {
+      "title": "Sprawdź przed wydaniem",
+      "body": "Przejrzyj listę kontrolną, aby uniknąć typowych błędów przed przesłaniem gry."
+    },
+    "timelineToPlatform": {
+      "title": "Wybierz właściwą platformę",
+      "body": "Skorzystaj z rekomendatora platform, aby znaleźć najlepszą opcję dla swojej epoki."
+    },
+    "timelineToResearch": {
+      "title": "Nadaj priorytety badaniom",
+      "body": "Zaplanuj, które technologie odblokować jako następne, na podstawie bieżącego roku gry."
+    },
+    "timelineToChecklist": {
+      "title": "Śledź kamienie milowe",
+      "body": "Dodaj ważne kamienie milowe do listy i śledź swój postęp w grze."
+    },
+    "plannerToResearch": {
+      "title": "Nadaj priorytety badaniom",
+      "body": "Zobacz, które technologie odblokować najpierw, aby zmaksymalizować wyniki gry."
+    },
+    "staffToHandbook": {
+      "title": "Tło i zasady w podręczniku",
+      "body": "Poznaj szczegóły mechaniki drużyny, zasady zatrudniania i strategie szkolenia w podręczniku."
+    },
+    "handbookToStaff": {
+      "title": "Praktyczne składy drużyn i wskazówki",
+      "body": "Sprawdź rekomendacje personelu według fazy i konkretne wskazówki na każdy etap gry."
+    }
   }
 }

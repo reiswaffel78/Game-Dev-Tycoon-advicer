@@ -320,55 +320,69 @@
 
 /* ==========================================================================
    BUTTON LIFT + WIPE EFFECT
-   Applied via .btn-hc-wipe class on the shadcn Button base.
-   Uses ::before for the wipe (::after is taken by the elevate system).
+   Targets: shadcn Button (.btn-hc-wipe) + Sidebar nav buttons ([data-sidebar="menu-button"])
+   No overflow:hidden — avoids breaking the hover-elevate ::after inset system.
+   Wipe uses opacity fade (::before) instead of translateX to stay within bounds.
    ========================================================================== */
 
-/* 1. Wipe overlay — white shimmer slides left→right on hover */
-.btn-hc-wipe {
-  overflow: hidden; /* clip the ::before to button bounds */
+/* --- Sidebar button needs position:relative for ::before to anchor correctly --- */
+[data-sidebar="menu-button"] {
+  position: relative;
 }
 
-.btn-hc-wipe::before {
+/* --- Shared selector list --- */
+.btn-hc-wipe,
+[data-sidebar="menu-button"] {
+  /* Preserve sidebar's own width/height/padding transition + add our transform/shadow */
+  transition:
+    transform  var(--hc-btn-duration) var(--hc-btn-easing),
+    box-shadow var(--hc-btn-duration) var(--hc-btn-easing),
+    width      200ms linear,
+    height     200ms linear,
+    padding    200ms linear;
+  will-change: transform;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 1. Lift + scale on hover */
+.btn-hc-wipe:hover,
+[data-sidebar="menu-button"]:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* 2. Snap back on active/click */
+.btn-hc-wipe:active,
+[data-sidebar="menu-button"]:active {
+  transform: translateY(0) scale(0.99);
+  transition-duration: 80ms;
+}
+
+/* 3. Wipe shimmer via ::before opacity — no overflow:hidden needed */
+.btn-hc-wipe::before,
+[data-sidebar="menu-button"]::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateX(-105%);
-  transition: transform 400ms ease;
+  background: rgba(255, 255, 255, 0.07);
+  opacity: 0;
+  transition: opacity 300ms ease;
   pointer-events: none;
   border-radius: inherit;
   z-index: 1;
 }
 
-.btn-hc-wipe:hover::before {
-  transform: translateX(0);
+.btn-hc-wipe:hover::before,
+[data-sidebar="menu-button"]:hover::before {
+  opacity: 1;
 }
 
-.btn-hc-wipe:active::before {
-  transform: translateX(-105%);
+.btn-hc-wipe:active::before,
+[data-sidebar="menu-button"]:active::before {
+  opacity: 0;
   transition-duration: 80ms;
 }
 
-/* 2. Lift + scale on hover / snap back on active */
-.btn-hc-wipe {
-  transition:
-    transform  var(--hc-btn-duration) var(--hc-btn-easing),
-    box-shadow var(--hc-btn-duration) var(--hc-btn-easing);
-  will-change: transform;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.btn-hc-wipe:hover {
-  transform: translateY(-2px) scale(1.02);
-}
-
-.btn-hc-wipe:active {
-  transform: translateY(0) scale(0.99);
-  transition-duration: 80ms;
-}
-
-/* 3. Enhanced glow for default (primary/green) buttons */
+/* 4. Enhanced glow for primary (green) buttons */
 .btn-hc-wipe.bg-primary {
   box-shadow: var(--hc-btn-shadow);
 }
@@ -379,8 +393,8 @@
 
 /* ==========================================================================
    CARD BORDER HOVER EFFECT
-   Targets .shadcn-card which is applied to every Card component.
-   Border shifts to accent tint + subtle glow on hover.
+   Targets .shadcn-card — applied to every Card component.
+   Border shifts to accent tint + subtle glow. No scale/lift.
    ========================================================================== */
 
 .shadcn-card {
@@ -400,13 +414,17 @@
 @media (prefers-reduced-motion: reduce) {
   .btn-hc-wipe,
   .btn-hc-wipe::before,
+  [data-sidebar="menu-button"],
+  [data-sidebar="menu-button"]::before,
   .shadcn-card {
     transition: none;
     animation:  none;
   }
 
   .btn-hc-wipe:hover,
-  .btn-hc-wipe:active {
+  .btn-hc-wipe:active,
+  [data-sidebar="menu-button"]:hover,
+  [data-sidebar="menu-button"]:active {
     transform: none;
   }
 }

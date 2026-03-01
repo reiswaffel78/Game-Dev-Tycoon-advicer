@@ -85,6 +85,16 @@
   /* Fallback for older browsers */
   --destructive-border: hsl(var(--destructive));
   --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* === Hardcore effects: button lift vars === */
+  --hc-btn-easing:       cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --hc-btn-duration:     250ms;
+  /* Box border hover: base = project border, hover = accent tint */
+  --hc-card-border-h:    hsla(38, 92%, 50%, 0.35);
+  --hc-card-glow:        0 4px 24px hsla(38, 92%, 50%, 0.06);
+  /* Primary button glow using --primary (green) */
+  --hc-btn-shadow:       0 4px 16px hsl(160 100% 35% / 0.18);
+  --hc-btn-shadow-h:     0 6px 22px hsl(160 100% 35% / 0.32);
 }
 
 .dark {
@@ -163,6 +173,12 @@
   /* Fallback for older browsers */
   --destructive-border: hsl(var(--destructive));
   --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+
+  /* === Hardcore effects: dark overrides === */
+  --hc-card-border-h:    hsla(38, 92%, 55%, 0.35);
+  --hc-card-glow:        0 4px 24px hsla(38, 92%, 55%, 0.06);
+  --hc-btn-shadow:       0 4px 16px hsl(160 100% 45% / 0.18);
+  --hc-btn-shadow-h:     0 6px 22px hsl(160 100% 45% / 0.32);
 }
 
 @layer base {
@@ -303,149 +319,94 @@
 }
 
 /* ==========================================================================
-   HARDCORE EFFECTS — Button Animation + Box Border Hover
-   Ported from hardcore-is-hardcore.de, adapted to project color tokens.
-
-   HTML Demo:
-   <button class="btn-hardcore">Ghost Button</button>
-   <button class="btn-hardcore btn-hc-primary">Primary Button</button>
-   <div class="box-hardcore" style="padding:1rem">Box with hover border</div>
+   BUTTON LIFT + WIPE EFFECT
+   Applied via .btn-hc-wipe class on the shadcn Button base.
+   Uses ::before for the wipe (::after is taken by the elevate system).
    ========================================================================== */
 
-/* ----------------------------------------------------------
-   CSS Variables (light mode defaults)
-   ---------------------------------------------------------- */
-:root {
-  --btn-hc-radius:       12px;
-  --btn-hc-padding:      0.85rem 1.75rem;
-  --btn-hc-hover-scale:  1.02;
-  --btn-hc-hover-lift:   -2px;
-  --btn-hc-active-scale: 0.99;
-  --btn-hc-duration:     250ms;
-  --btn-hc-easing:       cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
-  /* Primary button: maps to project --accent (38 92% 50% = golden amber in light) */
-  --btn-hc-primary-bg:       hsl(38, 92%, 50%);
-  --btn-hc-primary-fg:       hsl(38, 90%, 10%);
-  --btn-hc-primary-shadow:   0 4px 16px hsla(38, 92%, 50%, 0.22);
-  --btn-hc-primary-shadow-h: 0 6px 24px hsla(38, 92%, 50%, 0.38);
-
-  /* Box border: base from project --border, hover from --accent tint */
-  --hc-border:   hsl(200, 15%, 88%);
-  --hc-border-h: hsla(38, 92%, 50%, 0.35);
-  --hc-glow:     0 4px 24px hsla(38, 92%, 50%, 0.06);
+/* 1. Wipe overlay — white shimmer slides left→right on hover */
+.btn-hc-wipe {
+  overflow: hidden; /* clip the ::before to button bounds */
 }
 
-.dark {
-  /* Primary: maps to project --accent in dark mode (38 92% 55%) */
-  --btn-hc-primary-bg:       hsl(38, 92%, 55%);
-  --btn-hc-primary-fg:       hsl(38, 90%, 8%);
-  --btn-hc-primary-shadow:   0 4px 16px hsla(38, 92%, 55%, 0.22);
-  --btn-hc-primary-shadow-h: 0 6px 24px hsla(38, 92%, 55%, 0.38);
-
-  /* Box border: base from project --border in dark, hover from dark --accent tint */
-  --hc-border:   hsl(200, 25%, 18%);
-  --hc-border-h: hsla(38, 92%, 55%, 0.35);
-  --hc-glow:     0 4px 24px hsla(38, 92%, 55%, 0.06);
+.btn-hc-wipe::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(-105%);
+  transition: transform 400ms ease;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 1;
 }
 
-/* ----------------------------------------------------------
-   1. BUTTON ANIMATION — .btn-hardcore
-   ---------------------------------------------------------- */
-.btn-hardcore {
-  position:      relative;
-  display:       inline-flex;
-  align-items:   center;
-  justify-content: center;
-  padding:       var(--btn-hc-padding);
-  border-radius: var(--btn-hc-radius);
-  font-weight:   600;
-  overflow:      hidden;
-  cursor:        pointer;
-  /* Smooth lift + shadow on hover */
+.btn-hc-wipe:hover::before {
+  transform: translateX(0);
+}
+
+.btn-hc-wipe:active::before {
+  transform: translateX(-105%);
+  transition-duration: 80ms;
+}
+
+/* 2. Lift + scale on hover / snap back on active */
+.btn-hc-wipe {
   transition:
-    transform  var(--btn-hc-duration) var(--btn-hc-easing),
-    box-shadow var(--btn-hc-duration) var(--btn-hc-easing);
-  /* Stacking context so ::after stays inside */
+    transform  var(--hc-btn-duration) var(--hc-btn-easing),
+    box-shadow var(--hc-btn-duration) var(--hc-btn-easing);
   will-change: transform;
   -webkit-tap-highlight-color: transparent;
 }
 
-/* White-wipe overlay — slides left→right on hover */
-.btn-hardcore::after {
-  content:    "";
-  position:   absolute;
-  inset:      0;
-  background: rgba(255, 255, 255, 0.06);
-  transform:  translateX(-105%);
-  transition: transform 400ms ease;
-  pointer-events: none;
-  border-radius: inherit;
+.btn-hc-wipe:hover {
+  transform: translateY(-2px) scale(1.02);
 }
 
-/* Hover: lift + scale */
-.btn-hardcore:hover {
-  transform: translateY(var(--btn-hc-hover-lift)) scale(var(--btn-hc-hover-scale));
-}
-
-/* Hover: trigger wipe */
-.btn-hardcore:hover::after {
-  transform: translateX(0);
-}
-
-/* Active: snap back */
-.btn-hardcore:active {
-  transform: translateY(0) scale(var(--btn-hc-active-scale));
+.btn-hc-wipe:active {
+  transform: translateY(0) scale(0.99);
   transition-duration: 80ms;
 }
 
-/* Focus ring for keyboard navigation */
-.btn-hardcore:focus-visible {
-  outline:        2px solid hsl(var(--ring));
-  outline-offset: 3px;
+/* 3. Enhanced glow for default (primary/green) buttons */
+.btn-hc-wipe.bg-primary {
+  box-shadow: var(--hc-btn-shadow);
 }
 
-/* Primary variant — golden (project --accent) background */
-.btn-hardcore.btn-hc-primary {
-  background:  var(--btn-hc-primary-bg);
-  color:       var(--btn-hc-primary-fg);
-  box-shadow:  var(--btn-hc-primary-shadow);
+.btn-hc-wipe.bg-primary:hover {
+  box-shadow: var(--hc-btn-shadow-h);
 }
 
-.btn-hardcore.btn-hc-primary:hover {
-  box-shadow: var(--btn-hc-primary-shadow-h);
-}
+/* ==========================================================================
+   CARD BORDER HOVER EFFECT
+   Targets .shadcn-card which is applied to every Card component.
+   Border shifts to accent tint + subtle glow on hover.
+   ========================================================================== */
 
-/* ----------------------------------------------------------
-   2. BOX BORDER HOVER — .box-hardcore
-   ---------------------------------------------------------- */
-.box-hardcore {
-  border:     1px solid var(--hc-border);
-  box-shadow: none;
-  /* Only border-color and box-shadow animate — no scale, no lift */
+.shadcn-card {
   transition:
-    border-color var(--btn-hc-duration) ease,
-    box-shadow   var(--btn-hc-duration) ease;
+    border-color 0.25s ease,
+    box-shadow   0.25s ease;
 }
 
-.box-hardcore:hover {
-  border-color: var(--hc-border-h);
-  box-shadow:   var(--hc-glow);
+.shadcn-card:hover {
+  border-color: var(--hc-card-border-h);
+  box-shadow:   var(--hc-card-glow);
 }
 
-/* ----------------------------------------------------------
-   Accessibility — respect prefers-reduced-motion
-   ---------------------------------------------------------- */
+/* ==========================================================================
+   Accessibility — prefers-reduced-motion
+   ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
-  .btn-hardcore,
-  .btn-hardcore::after,
-  .box-hardcore {
+  .btn-hc-wipe,
+  .btn-hc-wipe::before,
+  .shadcn-card {
     transition: none;
     animation:  none;
   }
 
-  .btn-hardcore:hover,
-  .btn-hardcore:active {
+  .btn-hc-wipe:hover,
+  .btn-hc-wipe:active {
     transform: none;
   }
 }

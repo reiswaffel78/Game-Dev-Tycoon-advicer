@@ -301,3 +301,151 @@
 .animate-page-fade-in {
   animation: page-fade-in 0.65s ease-out both;
 }
+
+/* ==========================================================================
+   HARDCORE EFFECTS — Button Animation + Box Border Hover
+   Ported from hardcore-is-hardcore.de, adapted to project color tokens.
+
+   HTML Demo:
+   <button class="btn-hardcore">Ghost Button</button>
+   <button class="btn-hardcore btn-hc-primary">Primary Button</button>
+   <div class="box-hardcore" style="padding:1rem">Box with hover border</div>
+   ========================================================================== */
+
+/* ----------------------------------------------------------
+   CSS Variables (light mode defaults)
+   ---------------------------------------------------------- */
+:root {
+  --btn-hc-radius:       12px;
+  --btn-hc-padding:      0.85rem 1.75rem;
+  --btn-hc-hover-scale:  1.02;
+  --btn-hc-hover-lift:   -2px;
+  --btn-hc-active-scale: 0.99;
+  --btn-hc-duration:     250ms;
+  --btn-hc-easing:       cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* Primary button: maps to project --accent (38 92% 50% = golden amber in light) */
+  --btn-hc-primary-bg:       hsl(38, 92%, 50%);
+  --btn-hc-primary-fg:       hsl(38, 90%, 10%);
+  --btn-hc-primary-shadow:   0 4px 16px hsla(38, 92%, 50%, 0.22);
+  --btn-hc-primary-shadow-h: 0 6px 24px hsla(38, 92%, 50%, 0.38);
+
+  /* Box border: base from project --border, hover from --accent tint */
+  --hc-border:   hsl(200, 15%, 88%);
+  --hc-border-h: hsla(38, 92%, 50%, 0.35);
+  --hc-glow:     0 4px 24px hsla(38, 92%, 50%, 0.06);
+}
+
+.dark {
+  /* Primary: maps to project --accent in dark mode (38 92% 55%) */
+  --btn-hc-primary-bg:       hsl(38, 92%, 55%);
+  --btn-hc-primary-fg:       hsl(38, 90%, 8%);
+  --btn-hc-primary-shadow:   0 4px 16px hsla(38, 92%, 55%, 0.22);
+  --btn-hc-primary-shadow-h: 0 6px 24px hsla(38, 92%, 55%, 0.38);
+
+  /* Box border: base from project --border in dark, hover from dark --accent tint */
+  --hc-border:   hsl(200, 25%, 18%);
+  --hc-border-h: hsla(38, 92%, 55%, 0.35);
+  --hc-glow:     0 4px 24px hsla(38, 92%, 55%, 0.06);
+}
+
+/* ----------------------------------------------------------
+   1. BUTTON ANIMATION — .btn-hardcore
+   ---------------------------------------------------------- */
+.btn-hardcore {
+  position:      relative;
+  display:       inline-flex;
+  align-items:   center;
+  justify-content: center;
+  padding:       var(--btn-hc-padding);
+  border-radius: var(--btn-hc-radius);
+  font-weight:   600;
+  overflow:      hidden;
+  cursor:        pointer;
+  /* Smooth lift + shadow on hover */
+  transition:
+    transform  var(--btn-hc-duration) var(--btn-hc-easing),
+    box-shadow var(--btn-hc-duration) var(--btn-hc-easing);
+  /* Stacking context so ::after stays inside */
+  will-change: transform;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* White-wipe overlay — slides left→right on hover */
+.btn-hardcore::after {
+  content:    "";
+  position:   absolute;
+  inset:      0;
+  background: rgba(255, 255, 255, 0.06);
+  transform:  translateX(-105%);
+  transition: transform 400ms ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Hover: lift + scale */
+.btn-hardcore:hover {
+  transform: translateY(var(--btn-hc-hover-lift)) scale(var(--btn-hc-hover-scale));
+}
+
+/* Hover: trigger wipe */
+.btn-hardcore:hover::after {
+  transform: translateX(0);
+}
+
+/* Active: snap back */
+.btn-hardcore:active {
+  transform: translateY(0) scale(var(--btn-hc-active-scale));
+  transition-duration: 80ms;
+}
+
+/* Focus ring for keyboard navigation */
+.btn-hardcore:focus-visible {
+  outline:        2px solid hsl(var(--ring));
+  outline-offset: 3px;
+}
+
+/* Primary variant — golden (project --accent) background */
+.btn-hardcore.btn-hc-primary {
+  background:  var(--btn-hc-primary-bg);
+  color:       var(--btn-hc-primary-fg);
+  box-shadow:  var(--btn-hc-primary-shadow);
+}
+
+.btn-hardcore.btn-hc-primary:hover {
+  box-shadow: var(--btn-hc-primary-shadow-h);
+}
+
+/* ----------------------------------------------------------
+   2. BOX BORDER HOVER — .box-hardcore
+   ---------------------------------------------------------- */
+.box-hardcore {
+  border:     1px solid var(--hc-border);
+  box-shadow: none;
+  /* Only border-color and box-shadow animate — no scale, no lift */
+  transition:
+    border-color var(--btn-hc-duration) ease,
+    box-shadow   var(--btn-hc-duration) ease;
+}
+
+.box-hardcore:hover {
+  border-color: var(--hc-border-h);
+  box-shadow:   var(--hc-glow);
+}
+
+/* ----------------------------------------------------------
+   Accessibility — respect prefers-reduced-motion
+   ---------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .btn-hardcore,
+  .btn-hardcore::after,
+  .box-hardcore {
+    transition: none;
+    animation:  none;
+  }
+
+  .btn-hardcore:hover,
+  .btn-hardcore:active {
+    transform: none;
+  }
+}

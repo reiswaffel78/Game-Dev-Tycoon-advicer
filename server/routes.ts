@@ -1,7 +1,6 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { execSync } from "child_process";
-import path from "path";
 import { storage } from "./storage";
 import {
   getRecommendationsByTopic,
@@ -58,12 +57,6 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  // Landing page — served as standalone HTML (no React app wrapper)
-  const landingPagePath = path.resolve(process.cwd(), "server/pages/game-dev-tycoon-guide.html");
-  app.get(["/game-dev-tycoon-guide", "/game-dev-tycoon-guide/"], (req, res) => {
-    res.sendFile(landingPagePath);
-  });
-
   // Stats endpoint
   app.get("/api/stats", async (req, res) => {
     try {

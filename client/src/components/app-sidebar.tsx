@@ -110,7 +110,7 @@ export function AppSidebar() {
   const articleItems = [
     {
       title: t("nav.guide"),
-      url: "/game-dev-tycoon-guide/",
+      url: "/game-dev-tycoon-guide",
       icon: BookOpen,
     },
     {

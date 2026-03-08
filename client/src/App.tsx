@@ -14,7 +14,6 @@ import TopicRecommender from "@/pages/topic-recommender";
 import GenreRecommender from "@/pages/genre-recommender";
 import PlatformRecommender from "@/pages/platform-recommender";
 import SliderPresets from "@/pages/slider-presets";
-import GameDevTycoonGuide from "@/pages/game-dev-tycoon-guide";
 import GameDevTycoonBestCombos from "@/pages/game-dev-tycoon-best-combos";
 import GameDevTycoonSliders from "@/pages/game-dev-tycoon-sliders";
 import GameDevTycoonResearchOrder from "@/pages/game-dev-tycoon-research-order";
@@ -41,7 +40,6 @@ function AppRoutes() {
       <Route path="/recommend/genre" component={GenreRecommender} />
       <Route path="/recommend/platform" component={PlatformRecommender} />
       <Route path="/sliders" component={SliderPresets} />
-      <Route path="/game-dev-tycoon-guide" component={GameDevTycoonGuide} />
       <Route path="/game-dev-tycoon-best-combos" component={GameDevTycoonBestCombos} />
       <Route path="/game-dev-tycoon-sliders" component={GameDevTycoonSliders} />
       <Route path="/game-dev-tycoon-research-order" component={GameDevTycoonResearchOrder} />

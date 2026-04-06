@@ -1,6 +1,5 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { execSync } from "child_process";
 import { storage } from "./storage";
 import {
   getRecommendationsByTopic,
@@ -14,20 +13,11 @@ import {
 import { z } from "zod";
 
 function readLastCodeUpdate(): string {
-  try {
-    const iso = execSync("git log -1 --format=%ci", { timeout: 3000 }).toString().trim();
-    return new Date(iso).toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-  } catch {
-    return new Date().toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-  }
+  return new Date().toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
 }
 
 const CODE_LAST_UPDATE = readLastCodeUpdate();

@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
+import { useLocalizedHref } from "@/lib/locale";
 import { SeoHead } from "@/seo/SeoHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -24,6 +25,7 @@ const phaseIcons: Record<PhaseKey, typeof Home> = {
 
 export default function GameDevTycoonGuidePage() {
   const { t } = useTranslation();
+  const localize = useLocalizedHref();
 
   const checklist = t("guide.quickChecklist", { returnObjects: true }) as string[];
   const pitfalls = t("guide.pitfalls.items", { returnObjects: true }) as string[];
@@ -131,10 +133,10 @@ export default function GameDevTycoonGuidePage() {
               </div>
               <div className="flex flex-wrap gap-3">
                 <Button asChild>
-                  <Link href="/recommend/genre">{t("guide.cta.primary")}</Link>
+                  <Link href={localize("/recommend/genre")}>{t("guide.cta.primary")}</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link href="/sliders">{t("guide.cta.secondary")}</Link>
+                  <Link href={localize("/sliders")}>{t("guide.cta.secondary")}</Link>
                 </Button>
               </div>
             </CardContent>

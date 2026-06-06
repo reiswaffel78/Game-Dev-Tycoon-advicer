@@ -21,11 +21,15 @@ export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
   const locale: Locale = isLocale(i18n.language)
     ? i18n.language
     : DEFAULT_LOCALE;
-  const { titleKey, descriptionKey, titleSuffixKey, schemaType } = getSeoConfig(pageKey);
+  const { titleKey, descriptionKey, titleSuffixKey, shortSuffixKey, schemaType } = getSeoConfig(pageKey);
   const title = t(titleKey);
   const description = t(descriptionKey);
   const titleSuffix = t(titleSuffixKey);
+  const shortSuffix = shortSuffixKey ? t(shortSuffixKey, { defaultValue: titleSuffix }) : titleSuffix;
+  const MAX_TITLE = 60;
   const fullTitle = `${title} | ${titleSuffix}`;
+  const fullTitleLen = fullTitle.length;
+  const resolvedTitle = fullTitleLen <= MAX_TITLE ? fullTitle : `${title} | ${shortSuffix}`;
   const canonicalUrl = getCanonicalUrl(pageKey, locale);
   const alternates = getHreflangLinks(pageKey);
   const resolvedSchemaType = schemaType ?? "WebApplication";
@@ -64,7 +68,7 @@ export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
   return (
     <Helmet>
       <html lang={locale} />
-      <title>{fullTitle}</title>
+      <title>{resolvedTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
 
@@ -78,7 +82,7 @@ export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
       ))}
       <link rel="alternate" hrefLang="x-default" href={getXDefaultHref(pageKey)} />
 
-      <meta property="og:title" content={fullTitle} />
+      <meta property="og:title" content={resolvedTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
@@ -87,7 +91,7 @@ export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
       <meta property="og:locale" content={OG_LOCALES[locale]} />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:title" content={resolvedTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={`${BASE_URL}/og-image.png`} />
       <meta name="twitter:url" content={canonicalUrl} />

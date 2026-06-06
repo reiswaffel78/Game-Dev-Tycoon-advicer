@@ -1470,6 +1470,7 @@
       "sources": "コミュニティデータ＆信頼レベル"
     },
     "brand": "Game Dev Tycoon アドバイザー",
+    "shortBrand": "GDT Advisor",
     "title": {
       "dashboard": "Game Dev Tycoon 最適なゲーム設定計算機",
       "topicRecommender": "Game Dev Tycoon ジャンル別おすすめトピック",

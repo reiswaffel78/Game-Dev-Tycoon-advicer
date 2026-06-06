@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
+import { useLocalizedHref } from "@/lib/locale";
 import { SeoHead } from "@/seo/SeoHead";
 import { BASE_URL } from "@/seo/seo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,6 +11,7 @@ import { ArrowRight, Sparkles, Star, Target } from "lucide-react";
 
 export default function GameDevTycoonBestCombosPage() {
   const { t } = useTranslation();
+  const localize = useLocalizedHref();
 
   const fitBullets = t("bestCombos.fit.bullets", { returnObjects: true }) as string[];
   const starterCombos = t("bestCombos.starterCombos.items", { returnObjects: true }) as string[];
@@ -110,10 +112,10 @@ export default function GameDevTycoonBestCombosPage() {
               </div>
               <div className="flex flex-wrap gap-3">
                 <Button asChild>
-                  <Link href="/recommend/genre">{t("bestCombos.cta.primary")}</Link>
+                  <Link href={localize("/recommend/genre")}>{t("bestCombos.cta.primary")}</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link href="/sliders">{t("bestCombos.cta.secondary")}</Link>
+                  <Link href={localize("/sliders")}>{t("bestCombos.cta.secondary")}</Link>
                 </Button>
               </div>
             </CardContent>

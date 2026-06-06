@@ -1518,6 +1518,7 @@
       "sources": "Community-Daten & Vertrauensstufen"
     },
     "brand": "Game Dev Tycoon Advisor",
+    "shortBrand": "GDT Advisor",
     "title": {
       "dashboard": "Game Dev Tycoon Rechner für das optimale Spiele-Setup",
       "topicRecommender": "Game Dev Tycoon Bestes Thema für jedes Genre",

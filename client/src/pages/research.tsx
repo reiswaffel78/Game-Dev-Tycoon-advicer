@@ -174,7 +174,7 @@ export default function Research() {
       </div>
 
       <Link
-        href="/game-dev-tycoon-research-order"
+        href={buildLocalizedPath("/game-dev-tycoon-research-order", locale)}
         data-cta-id="research_to_research_order"
       >
         <Card className="border-primary/30 bg-primary/5 hover:bg-primary/10 transition-colors cursor-pointer">

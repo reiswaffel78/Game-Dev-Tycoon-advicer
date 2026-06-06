@@ -1470,6 +1470,7 @@
       "sources": "Topluluk Verileri ve Güven Seviyeleri"
     },
     "brand": "Game Dev Tycoon Danışmanı",
+    "shortBrand": "GDT Advisor",
     "title": {
       "dashboard": "Game Dev Tycoon Optimal Oyun Kurulumu Hesaplayıcısı",
       "topicRecommender": "Game Dev Tycoon Her Tür İçin En İyi Konu",

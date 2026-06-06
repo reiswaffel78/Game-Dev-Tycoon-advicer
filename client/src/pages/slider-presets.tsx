@@ -9,6 +9,7 @@ import { useShareNudge } from "@/hooks/use-share-nudge";
 import { NextStepCTA } from "@/components/next-step-cta";
 import { SlidersHorizontal, Search, Info, Zap, Cpu, Sparkles, Layers, X, ArrowRightLeft, BookOpen } from "lucide-react";
 import { Link } from "wouter";
+import { useLocalizedHref } from "@/lib/locale";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -599,7 +600,7 @@ export default function SliderPresets() {
             <div className="space-y-1.5">
               <h3 className="text-sm font-semibold">{t("sliders.explainedBox.title")}</h3>
               <p className="text-sm text-muted-foreground">{t("sliders.explainedBox.text")}</p>
-              <Link href="/game-dev-tycoon-sliders" className="inline-flex items-center text-sm font-medium text-primary hover:underline" data-testid="link-sliders-explained">
+              <Link href={useLocalizedHref()("/game-dev-tycoon-sliders")} className="inline-flex items-center text-sm font-medium text-primary hover:underline" data-testid="link-sliders-explained">
                 {t("sliders.explainedBox.linkText")}
               </Link>
             </div>

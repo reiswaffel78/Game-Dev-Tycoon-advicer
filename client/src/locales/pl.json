@@ -1470,6 +1470,7 @@
       "sources": "Dane społeczności i poziomy zaufania"
     },
     "brand": "Game Dev Tycoon Advisor",
+    "shortBrand": "GDT Advisor",
     "title": {
       "dashboard": "Kalkulator optymalnej konfiguracji gry w Game Dev Tycoon",
       "topicRecommender": "Najlepsze tematy dla każdego gatunku w Game Dev Tycoon",

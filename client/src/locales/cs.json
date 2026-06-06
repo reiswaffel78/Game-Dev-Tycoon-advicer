@@ -1470,6 +1470,7 @@
       "sources": "Komunitní data a úrovně důvěry"
     },
     "brand": "Game Dev Tycoon Advisor",
+    "shortBrand": "GDT Advisor",
     "title": {
       "dashboard": "Kalkulačka optimálního nastavení hry pro Game Dev Tycoon",
       "topicRecommender": "Game Dev Tycoon: Nejlepší témata pro každý žánr",

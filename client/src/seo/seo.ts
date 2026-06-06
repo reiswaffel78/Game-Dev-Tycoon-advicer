@@ -55,8 +55,12 @@ export interface SeoPageConfig {
   titleKey: string;
   descriptionKey: string;
   titleSuffixKey: string;
+  shortSuffixKey?: string;
   schemaType?: "WebApplication" | "Article";
 }
+
+const MAX_TITLE_LENGTH = 60;
+const MAX_DESCRIPTION_LENGTH = 160;
 
 export const SEO_CONFIG: Record<PageKey, SeoPageConfig> = {
   dashboard: {
@@ -64,36 +68,42 @@ export const SEO_CONFIG: Record<PageKey, SeoPageConfig> = {
     titleKey: "seo.title.dashboard",
     descriptionKey: "seo.description.dashboard",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
   topicRecommender: {
     path: "/recommend/topic",
     titleKey: "seo.title.topicRecommender",
     descriptionKey: "seo.description.topicRecommender",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
   genreRecommender: {
     path: "/recommend/genre",
     titleKey: "seo.title.genreRecommender",
     descriptionKey: "seo.description.genreRecommender",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
   platformRecommender: {
     path: "/recommend/platform",
     titleKey: "seo.title.platformRecommender",
     descriptionKey: "seo.description.platformRecommender",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
   sliders: {
     path: "/sliders",
     titleKey: "seo.title.sliders",
     descriptionKey: "seo.description.sliders",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
   guide: {
     path: "/game-dev-tycoon-guide",
     titleKey: "seo.title.guide",
     descriptionKey: "seo.description.guide",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
     schemaType: "Article",
   },
   bestCombos: {
@@ -101,6 +111,7 @@ export const SEO_CONFIG: Record<PageKey, SeoPageConfig> = {
     titleKey: "seo.title.bestCombos",
     descriptionKey: "seo.description.bestCombos",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
     schemaType: "Article",
   },
   slidersExplained: {
@@ -108,6 +119,7 @@ export const SEO_CONFIG: Record<PageKey, SeoPageConfig> = {
     titleKey: "seo.title.slidersExplained",
     descriptionKey: "seo.description.slidersExplained",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
     schemaType: "Article",
   },
   researchOrder: {
@@ -115,6 +127,7 @@ export const SEO_CONFIG: Record<PageKey, SeoPageConfig> = {
     titleKey: "seo.title.researchOrder",
     descriptionKey: "seo.description.researchOrder",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
     schemaType: "Article",
   },
   planner: {
@@ -122,60 +135,70 @@ export const SEO_CONFIG: Record<PageKey, SeoPageConfig> = {
     titleKey: "seo.title.planner",
     descriptionKey: "seo.description.planner",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
   research: {
     path: "/research",
     titleKey: "seo.title.research",
     descriptionKey: "seo.description.research",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
   staff: {
     path: "/staff",
     titleKey: "seo.title.staff",
     descriptionKey: "seo.description.staff",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
   timeline: {
     path: "/timeline",
     titleKey: "seo.title.timeline",
     descriptionKey: "seo.description.timeline",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
   checklist: {
     path: "/checklist",
     titleKey: "seo.title.checklist",
     descriptionKey: "seo.description.checklist",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
   faq: {
     path: "/faq",
     titleKey: "seo.title.faq",
     descriptionKey: "seo.description.faq",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
   handbuch: {
     path: "/handbuch",
     titleKey: "seo.title.handbuch",
     descriptionKey: "seo.description.handbuch",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
   appGuide: {
     path: "/app-guide",
     titleKey: "seo.title.appGuide",
     descriptionKey: "seo.description.appGuide",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
   privacy: {
     path: "/privacy",
     titleKey: "seo.title.privacy",
     descriptionKey: "seo.description.privacy",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
   sources: {
     path: "/sources",
     titleKey: "seo.title.sources",
     descriptionKey: "seo.description.sources",
     titleSuffixKey: "seo.brand",
+    shortSuffixKey: "seo.shortBrand",
   },
 };
 

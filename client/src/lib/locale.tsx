@@ -88,3 +88,21 @@ export function useLocaleLocation(): [
 
   return [basePath, navigate];
 }
+
+export function useLocale(): Locale {
+  const pathname = useSyncExternalStore(
+    subscribe,
+    () => window.location.pathname,
+    () => "/",
+  );
+  const { locale } = extractLocaleFromPath(pathname);
+  return locale;
+}
+
+export function useLocalizedHref(): (href: string) => string {
+  const locale = useLocale();
+  return useCallback(
+    (href: string) => buildLocalizedPath(href, locale),
+    [locale],
+  );
+}

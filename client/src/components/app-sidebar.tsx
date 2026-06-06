@@ -1,5 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
+import { useLocalizedHref, extractLocaleFromPath } from "@/lib/locale";
 import {
   Gamepad2,
   LayoutDashboard,
@@ -35,6 +36,7 @@ import {
 export function AppSidebar() {
   const [location] = useLocation();
   const { t } = useTranslation();
+  const localize = useLocalizedHref();
 
   const navItems = [
     {
@@ -146,7 +148,7 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader className="p-4">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href={localize("/")} className="flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-md bg-primary">
             <Gamepad2 className="h-6 w-6 text-primary-foreground" />
           </div>
@@ -171,10 +173,10 @@ export function AppSidebar() {
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton
                     asChild
-                    isActive={location === item.url}
+                    isActive={location === item.url || location === localize(item.url)}
                     data-testid={`nav-${item.url.replace(/\//g, "-").slice(1) || "home"}`}
                   >
-                    <Link href={item.url}>
+                    <Link href={localize(item.url)}>
                       <item.icon className="h-4 w-4" />
                       <span>{item.title}</span>
                     </Link>
@@ -194,10 +196,10 @@ export function AppSidebar() {
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton
                     asChild
-                    isActive={location === item.url}
+                    isActive={location === item.url || location === localize(item.url)}
                     data-testid={`nav-${item.url.replace(/\//g, "-").slice(1)}`}
                   >
-                    <Link href={item.url}>
+                    <Link href={localize(item.url)}>
                       <item.icon className="h-4 w-4" />
                       <span>{item.title}</span>
                     </Link>
@@ -217,10 +219,10 @@ export function AppSidebar() {
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton
                     asChild
-                    isActive={location === item.url}
+                    isActive={location === item.url || location === localize(item.url)}
                     data-testid={`nav-${item.url.replace(/\//g, "-").slice(1)}`}
                   >
-                    <Link href={item.url}>
+                    <Link href={localize(item.url)}>
                       <item.icon className="h-4 w-4" />
                       <span>{item.title}</span>
                     </Link>
@@ -240,10 +242,10 @@ export function AppSidebar() {
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton
                     asChild
-                    isActive={location === item.url}
+                    isActive={location === item.url || location === localize(item.url)}
                     data-testid={`nav-${item.url.replace(/\//g, "-").slice(1)}`}
                   >
-                    <Link href={item.url}>
+                    <Link href={localize(item.url)}>
                       <item.icon className="h-4 w-4" />
                       <span>{item.title}</span>
                     </Link>

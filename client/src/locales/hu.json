@@ -1470,6 +1470,7 @@
       "sources": "Közösségi adatok és megbízhatósági szintek"
     },
     "brand": "Game Dev Tycoon Advisor",
+    "shortBrand": "GDT Advisor",
     "title": {
       "dashboard": "Game Dev Tycoon Optimális Játékbeállítás Kalkulátor",
       "topicRecommender": "Game Dev Tycoon legjobb témák minden műfajhoz",

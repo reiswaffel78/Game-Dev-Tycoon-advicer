@@ -1470,6 +1470,7 @@
       "sources": "Communitydata & betrouwbaarheidsniveaus"
     },
     "brand": "Game Dev Tycoon Advisor",
+    "shortBrand": "GDT Advisor",
     "title": {
       "dashboard": "Game Dev Tycoon Optimale Game Setup Calculator",
       "topicRecommender": "Game Dev Tycoon Beste Onderwerp voor Elk Genre",

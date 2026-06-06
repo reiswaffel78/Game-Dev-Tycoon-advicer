@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
+import { useLocalizedHref } from "@/lib/locale";
 import {
   Tag,
   Layers,
@@ -69,8 +70,9 @@ function QuickActionCard({
   href: string;
   gradient: string;
 }) {
+  const localize = useLocalizedHref();
   return (
-    <Link href={href}>
+    <Link href={localize(href)}>
       <Card className="group cursor-pointer transition-all hover-elevate">
         <CardContent className="p-6">
           <div className="flex items-start gap-4">

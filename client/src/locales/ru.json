@@ -1470,6 +1470,7 @@
       "sources": "Данные сообщества и уровни доверия"
     },
     "brand": "Game Dev Tycoon Advisor",
+    "shortBrand": "GDT Advisor",
     "title": {
       "dashboard": "Game Dev Tycoon Калькулятор оптимальных настроек игры",
       "topicRecommender": "Game Dev Tycoon Лучшая тема для каждого жанра",

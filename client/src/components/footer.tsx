@@ -1,11 +1,13 @@
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
+import { useLocalizedHref } from "@/lib/locale";
 import { Heart, Mail, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiPaypal } from "react-icons/si";
 
 export function Footer() {
   const { t } = useTranslation();
+  const localize = useLocalizedHref();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -51,7 +53,7 @@ export function Footer() {
               className="gap-2"
               data-testid="link-privacy-footer"
             >
-              <Link href="/privacy">
+              <Link href={localize("/privacy")}>
                 <Shield className="h-4 w-4" />
                 {t("footer.privacy")}
               </Link>

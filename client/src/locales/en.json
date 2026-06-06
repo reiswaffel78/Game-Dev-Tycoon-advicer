@@ -1497,6 +1497,7 @@
   },
   "seo": {
     "brand": "Game Dev Tycoon Advisor",
+    "shortBrand": "GDT Advisor",
     "title": {
       "dashboard": "Game Dev Tycoon Optimal Game Setup Calculator",
       "topicRecommender": "Game Dev Tycoon Best Topic for Each Genre",

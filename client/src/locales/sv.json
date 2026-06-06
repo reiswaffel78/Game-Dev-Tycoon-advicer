@@ -1470,6 +1470,7 @@
       "sources": "Communitydata & förtroendenivåer"
     },
     "brand": "Game Dev Tycoon Advisor",
+    "shortBrand": "GDT Advisor",
     "title": {
       "dashboard": "Kalkylator för optimal spelinställning i Game Dev Tycoon",
       "topicRecommender": "Bästa ämnen för varje genre i Game Dev Tycoon",

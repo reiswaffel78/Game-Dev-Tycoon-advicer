@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
+import { useLocalizedHref } from "@/lib/locale";
 import { SeoHead } from "@/seo/SeoHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,7 @@ type PhaseKey = "phase1" | "phase2" | "phase3";
 
 export default function GameDevTycoonSlidersPage() {
   const { t } = useTranslation();
+  const localize = useLocalizedHref();
 
   const whyBullets = t("slidersExplained.why.items", { returnObjects: true }) as string[];
   const workflowSteps = t("slidersExplained.workflow.steps", { returnObjects: true }) as string[];
@@ -107,10 +109,10 @@ export default function GameDevTycoonSlidersPage() {
               </div>
               <div className="flex flex-wrap gap-3">
                 <Button asChild>
-                  <Link href="/sliders">{t("slidersExplained.cta.primary")}</Link>
+                  <Link href={localize("/sliders")}>{t("slidersExplained.cta.primary")}</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link href="/recommend/genre">{t("slidersExplained.cta.secondary")}</Link>
+                  <Link href={localize("/recommend/genre")}>{t("slidersExplained.cta.secondary")}</Link>
                 </Button>
               </div>
             </CardContent>

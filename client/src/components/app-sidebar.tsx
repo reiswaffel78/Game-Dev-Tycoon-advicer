@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
-import { useLocalizedHref, extractLocaleFromPath } from "@/lib/locale";
+import { useLocalizedHref } from "@/lib/locale";
 import {
   Gamepad2,
   LayoutDashboard,

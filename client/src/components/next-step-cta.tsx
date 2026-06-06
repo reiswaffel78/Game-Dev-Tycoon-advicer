@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
-import { buildLocalizedPath } from "@/lib/locale";
-import { extractLocaleFromPath } from "@/lib/locale";
+import { useLocalizedHref } from "@/lib/locale";
 
 interface NextStepCTAProps {
   href: string;
@@ -13,10 +12,8 @@ interface NextStepCTAProps {
 
 export function NextStepCTA({ href, titleKey, bodyKey, dataCdaId }: NextStepCTAProps) {
   const { t } = useTranslation();
-  const locale = extractLocaleFromPath(
-    typeof window !== "undefined" ? window.location.pathname : "/"
-  ).locale;
-  const localizedHref = buildLocalizedPath(href, locale);
+  const localize = useLocalizedHref();
+  const localizedHref = localize(href);
 
   return (
     <Link href={localizedHref}>

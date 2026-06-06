@@ -1,0 +1,119 @@
+# Game Dev Tycoon Advisor
+
+> Your optimal setup companion for Game Dev Tycoon (including Netflix edition)
+
+Game Dev Tycoon Advisor is a free, community-driven web application that helps players of the game "Game Dev Tycoon" find the best topic-genre combinations, platform recommendations, slider presets, and complete game plans. All data is sourced from community research with trust-weighted conflict resolution.
+
+## Website
+
+- URL: https://gamedevtycoonadvisor.com
+- Languages: English (default), German, French, Italian, Spanish, Korean, Japanese, Chinese, Hindi, Turkish, Portuguese, Russian, Czech, Dutch, Arabic, Greek, Hungarian, Polish, Swedish
+
+## Tools
+
+### Dashboard
+- Path: /
+- Description: Overview with quick stats, game tips, and navigation to all tools and guides.
+
+### Topic Recommender
+- Path: /recommend/topic
+- Description: Find the best topic for a chosen genre. Shows scored topic-genre fit combinations ranked by compatibility.
+
+### Genre Recommender
+- Path: /recommend/genre
+- Description: Find the best genre for a chosen topic. Shows scored genre-topic fit combinations ranked by compatibility.
+
+### Platform Recommender
+- Path: /recommend/platform
+- Description: Find the best platform for a chosen genre and target audience. Shows platform-genre and platform-audience fit scores.
+
+### Slider Presets
+- Path: /sliders
+- Description: Optimal development slider settings (Engine, Gameplay, Story/Quests, Dialogues, Level Design, AI, World Design, Graphics, Sound) for every genre, broken down by development stage.
+
+### Game Planner
+- Path: /planner
+- Description: Full game planning tool. Input your current game state (year, cash, fans) and get a prioritized list of recommended game releases with optimal topic+genre+platform+audience combinations and research priorities. Supports filtering by unlocked topics.
+
+## Guides
+
+### Beginner's Guide
+- Path: /game-dev-tycoon-guide
+- Description: Comprehensive strategy guide for Game Dev Tycoon covering early game through late game progression.
+
+### Best Combos
+- Path: /game-dev-tycoon-best-combos
+- Description: Curated list of the strongest topic-genre combinations with explanations of why they work well together.
+
+### Sliders Explained
+- Path: /game-dev-tycoon-sliders
+- Description: In-depth explanation of the slider system, how design vs technology points work, and how to optimize your development focus for each genre.
+
+### Research Order
+- Path: /game-dev-tycoon-research-order
+- Description: Recommended order for researching topics, features, and technologies throughout the game with timing advice.
+
+### Research Guide
+- Path: /research
+- Description: Complete technology reference with unlock years, costs, research points, prerequisites, and strategy tips for each research item.
+
+### Staff Guide
+- Path: /staff
+- Description: Phase-based staff management tips covering garage, first office, second office, R&D lab, and hardware lab stages.
+
+### Timeline
+- Path: /timeline
+- Description: Year-by-year walkthrough with milestones, platform releases, office unlocks, and recommended actions for each phase of the game.
+
+### Checklist
+- Path: /checklist
+- Description: Interactive progress tracker to mark off game milestones and add custom tasks as you play through the game.
+
+### FAQ
+- Path: /faq
+- Description: Frequently asked questions covering basics, sliders, staff, research, platforms, strategy, and advanced topics.
+
+### Manual
+- Path: /handbuch
+- Description: Complete game manual with 6 tabbed sections covering all game mechanics in detail.
+
+### App Guide
+- Path: /app-guide
+- Description: Tutorial explaining how to use this advisor application, its workflows, and all available features.
+
+## Other Pages
+
+### Privacy Policy
+- Path: /privacy
+
+### Data Sources
+- Path: /sources
+- Description: Information about the community data sources used in this application and their trust levels.
+
+## API
+
+All data endpoints are available under `/api/*`:
+
+- GET /api/topics - List all game topics
+- GET /api/genres - List all game genres
+- GET /api/platforms - List all platforms with unlock years and costs
+- GET /api/audiences - List all target audiences
+- GET /api/topic-genre-fits - Topic-genre compatibility scores
+- GET /api/platform-genre-fits - Platform-genre compatibility scores
+- GET /api/platform-audience-fits - Platform-audience compatibility scores
+- GET /api/development-weights - Slider weights per genre and stage
+- POST /api/recommend/by-topic - Get genre recommendations for a topic
+- POST /api/recommend/by-genre - Get topic recommendations for a genre
+- POST /api/recommend/by-platform - Get platform recommendations
+- POST /api/planner - Generate a full game plan based on current state
+
+## i18n URL Structure
+
+- English (default): base paths (e.g., `/sliders`, `/planner`)
+- Other languages: path with language suffix and trailing slash (e.g., `/sliders/de/`, `/planner/ja/`, `/faq/fr/`)
+- All pages support 19 languages with hreflang alternate links
+- Sitemap: https://gamedevtycoonadvisor.com/sitemap.xml
+
+## Contact
+
+This is a fan-made, non-commercial project. Not affiliated with Greenheart Games.

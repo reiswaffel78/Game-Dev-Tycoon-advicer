@@ -4,7 +4,7 @@ import path from "path";
 import { pathToFileURL } from "url";
 
 type SSRModule = {
-  render: (url: string) => Promise<{ html: string; helmet: any; i18nLanguage: string }>;
+  render: (url: string) => Promise<{ html: string; helmet: any; i18nLanguage: string; statusCode: number }>;
 };
 
 const SUPPORTED_LOCALES = [
@@ -106,7 +106,7 @@ export async function serveStatic(app: Express) {
       console.log("[SSR] Rendering route:", url);
       
       // Render the app
-      const { html: appHtml, helmet, i18nLanguage } = await ssrModule.render(url);
+      const { html: appHtml, helmet, i18nLanguage, statusCode } = await ssrModule.render(url);
       
       console.log("[SSR] Render complete. HTML length:", appHtml?.length || 0);
       
@@ -149,8 +149,8 @@ export async function serveStatic(app: Express) {
         `<div id="root">${appHtml}</div>`
       );
       
-      console.log("[SSR] Sending response for:", url, "- Total HTML length:", finalHtml.length);
-      res.status(200).set({ "Content-Type": "text/html" }).send(finalHtml);
+      console.log("[SSR] Sending response for:", url, "- Status:", statusCode, "- Total HTML length:", finalHtml.length);
+      res.status(statusCode).set({ "Content-Type": "text/html" }).send(finalHtml);
     } catch (error) {
       console.error("[SSR] Rendering error for URL:", url);
       console.error("[SSR] Error details:", error);

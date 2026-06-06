@@ -1,24 +1,5 @@
 import i18next, { type i18n as I18nInstance } from "i18next";
 import { initReactI18next } from "react-i18next";
-import en from "../locales/en.json";
-import de from "../locales/de.json";
-import fr from "../locales/fr.json";
-import it from "../locales/it.json";
-import es from "../locales/es.json";
-import ko from "../locales/ko.json";
-import ja from "../locales/ja.json";
-import zh from "../locales/zh.json";
-import hi from "../locales/hi.json";
-import tr from "../locales/tr.json";
-import pt from "../locales/pt.json";
-import ru from "../locales/ru.json";
-import cs from "../locales/cs.json";
-import nl from "../locales/nl.json";
-import ar from "../locales/ar.json";
-import el from "../locales/el.json";
-import hu from "../locales/hu.json";
-import pl from "../locales/pl.json";
-import sv from "../locales/sv.json";
 import {
   DEFAULT_LOCALE,
   extractLocaleFromPath,
@@ -26,27 +7,30 @@ import {
   type Locale,
 } from "./locale";
 
-export const I18N_RESOURCES = {
-  en: { translation: en },
-  de: { translation: de },
-  fr: { translation: fr },
-  it: { translation: it },
-  es: { translation: es },
-  ko: { translation: ko },
-  ja: { translation: ja },
-  zh: { translation: zh },
-  hi: { translation: hi },
-  tr: { translation: tr },
-  pt: { translation: pt },
-  ru: { translation: ru },
-  cs: { translation: cs },
-  nl: { translation: nl },
-  ar: { translation: ar },
-  el: { translation: el },
-  hu: { translation: hu },
-  pl: { translation: pl },
-  sv: { translation: sv },
-} as const;
+async function loadLocaleData(locale: string): Promise<Record<string, unknown>> {
+  switch (locale) {
+    case "en": return (await import("../locales/en.json")).default as Record<string, unknown>;
+    case "de": return (await import("../locales/de.json")).default as Record<string, unknown>;
+    case "fr": return (await import("../locales/fr.json")).default as Record<string, unknown>;
+    case "it": return (await import("../locales/it.json")).default as Record<string, unknown>;
+    case "es": return (await import("../locales/es.json")).default as Record<string, unknown>;
+    case "ko": return (await import("../locales/ko.json")).default as Record<string, unknown>;
+    case "ja": return (await import("../locales/ja.json")).default as Record<string, unknown>;
+    case "zh": return (await import("../locales/zh.json")).default as Record<string, unknown>;
+    case "hi": return (await import("../locales/hi.json")).default as Record<string, unknown>;
+    case "tr": return (await import("../locales/tr.json")).default as Record<string, unknown>;
+    case "pt": return (await import("../locales/pt.json")).default as Record<string, unknown>;
+    case "ru": return (await import("../locales/ru.json")).default as Record<string, unknown>;
+    case "cs": return (await import("../locales/cs.json")).default as Record<string, unknown>;
+    case "nl": return (await import("../locales/nl.json")).default as Record<string, unknown>;
+    case "ar": return (await import("../locales/ar.json")).default as Record<string, unknown>;
+    case "el": return (await import("../locales/el.json")).default as Record<string, unknown>;
+    case "hu": return (await import("../locales/hu.json")).default as Record<string, unknown>;
+    case "pl": return (await import("../locales/pl.json")).default as Record<string, unknown>;
+    case "sv": return (await import("../locales/sv.json")).default as Record<string, unknown>;
+    default:   return (await import("../locales/en.json")).default as Record<string, unknown>;
+  }
+}
 
 export function createI18nInstance(): I18nInstance {
   return i18next.createInstance();
@@ -56,8 +40,18 @@ export async function initI18n(
   instance: I18nInstance,
   language: Locale,
 ): Promise<I18nInstance> {
+  const resources: Record<string, { translation: Record<string, unknown> }> = {};
+
+  const localeData = await loadLocaleData(language);
+  resources[language] = { translation: localeData };
+
+  if (language !== DEFAULT_LOCALE) {
+    const fallbackData = await loadLocaleData(DEFAULT_LOCALE);
+    resources[DEFAULT_LOCALE] = { translation: fallbackData };
+  }
+
   await instance.use(initReactI18next).init({
-    resources: I18N_RESOURCES,
+    resources,
     lng: language,
     fallbackLng: DEFAULT_LOCALE,
     interpolation: {
@@ -66,6 +60,17 @@ export async function initI18n(
   });
 
   return instance;
+}
+
+export async function ensureLocaleLoaded(
+  instance: I18nInstance,
+  locale: Locale,
+): Promise<void> {
+  if (instance.hasResourceBundle(locale, "translation")) {
+    return;
+  }
+  const data = await loadLocaleData(locale);
+  instance.addResourceBundle(locale, "translation", data, true, true);
 }
 
 export function getInitialLanguage(): Locale {

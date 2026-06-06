@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SeoHead } from "@/seo/SeoHead";
-import { BASE_URL } from "@/seo/seo";
-import { buildLocalizedPath, extractLocaleFromPath } from "@/lib/locale";
+import { BASE_URL, getCanonicalUrl } from "@/seo/seo";
+import { useLocale, buildLocalizedPath } from "@/lib/locale";
 import {
   Accordion,
   AccordionContent,
@@ -100,7 +100,7 @@ const allItemKeys = categories.flatMap((c) => c.itemKeys);
 export default function FAQPage() {
   const { t } = useTranslation();
   const [pathname] = useLocation();
-  const { locale } = extractLocaleFromPath(pathname);
+  const locale = useLocale();
   const isEnglish = locale === "en";
 
   const faqJsonLd = useMemo(() => ({
@@ -114,9 +114,9 @@ export default function FAQPage() {
         text: t(`faq.items.${key}.answer`),
       },
     })),
-    url: `${BASE_URL}/faq`,
-    inLanguage: t("lang", { defaultValue: "en" }),
-  }), [t]);
+    url: getCanonicalUrl("faq", locale),
+    inLanguage: locale,
+  }), [t, locale]);
 
   return (
     <div className="container mx-auto p-6 max-w-4xl">

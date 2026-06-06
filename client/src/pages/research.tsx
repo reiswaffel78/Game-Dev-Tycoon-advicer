@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "wouter";
 import { SeoHead } from "@/seo/SeoHead";
-import { BASE_URL } from "@/seo/seo";
+import { BASE_URL, getCanonicalUrl } from "@/seo/seo";
 import { buildLocalizedPath, extractLocaleFromPath } from "@/lib/locale";
 import { FlaskConical, Search, Lightbulb, Calendar, Coins, Target, Link2, Palette, Volume2, Gamepad2, Bot, Cpu, ArrowRight, ListChecks } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -148,8 +148,8 @@ export default function Research() {
         "@type": "HowTo",
         name: t("research.title"),
         description: t("research.subtitle"),
-        url: `${BASE_URL}/research`,
-        inLanguage: t("lang", { defaultValue: "en" }),
+        url: getCanonicalUrl("research", locale),
+        inLanguage: locale,
         totalTime: "PT30M",
         step: (t("schema.research.steps", { returnObjects: true }) as string[]).map((text, i) => ({
           "@type": "HowToStep",
@@ -157,7 +157,7 @@ export default function Research() {
           name: [t("research.graphics", { defaultValue: "Graphics" }), t("research.sound", { defaultValue: "Sound" }), t("research.gameFeatures", { defaultValue: "Game Features" }), t("research.ai", { defaultValue: "AI" }), t("research.hardware", { defaultValue: "Hardware" })][i],
           text,
         })),
-      }), [t])} />
+      }), [t, locale])} />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <FlaskConical className="h-6 w-6 text-primary" />

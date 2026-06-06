@@ -92,10 +92,15 @@ export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
       <meta property="og:title" content={resolvedTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={resolvedSchemaType === "Article" ? "article" : "website"} />
       <meta property="og:site_name" content="Game Dev Tycoon Advisor" />
       <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
       <meta property="og:locale" content={OG_LOCALES[locale]} />
+      {resolvedSchemaType === "Article" && (
+        <>
+          <meta property="article:section" content="Game Guide" />
+        </>
+      )}
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={resolvedTitle} />

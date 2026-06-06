@@ -10,7 +10,8 @@ import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { SeoHead } from "@/seo/SeoHead";
-import { BASE_URL } from "@/seo/seo";
+import { BASE_URL, getCanonicalUrl } from "@/seo/seo";
+import { useLocale } from "@/lib/locale";
 import type { TimelineMilestone } from "@shared/schema";
 
 const getEventTypeConfig = (t: TFunction): Record<string, { label: string; color: string; bgColor: string }> => ({
@@ -153,6 +154,8 @@ export default function Timeline() {
 
   const eventTypeConfig = getEventTypeConfig(t);
 
+  const locale = useLocale();
+
   return (
     <div className="p-6 space-y-6 max-w-4xl mx-auto">
       <SeoHead pageKey="timeline" jsonLdExtra={useMemo(() => ({
@@ -160,8 +163,8 @@ export default function Timeline() {
         "@type": "HowTo",
         name: t("timeline.title"),
         description: t("timeline.subtitle"),
-        url: `${BASE_URL}/timeline`,
-        inLanguage: t("lang", { defaultValue: "en" }),
+        url: getCanonicalUrl("timeline", locale),
+        inLanguage: locale,
         totalTime: "PT45M",
         step: (t("schema.timeline.steps", { returnObjects: true }) as string[]).map((text, i) => ({
           "@type": "HowToStep",
@@ -169,7 +172,7 @@ export default function Timeline() {
           name: (t("schema.timeline.stepNames", { returnObjects: true }) as string[])[i],
           text,
         })),
-      }), [t])} />
+      }), [t, locale])} />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Clock className="h-6 w-6 text-primary" />

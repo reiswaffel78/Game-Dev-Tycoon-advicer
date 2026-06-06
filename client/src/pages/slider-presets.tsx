@@ -2,14 +2,14 @@ import { useState, useMemo, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
-import { BASE_URL } from "@/seo/seo";
+import { BASE_URL, getCanonicalUrl } from "@/seo/seo";
 import { translateGenre } from "@/lib/translate-data";
 import type { TFunction } from "i18next";
 import { useShareNudge } from "@/hooks/use-share-nudge";
 import { NextStepCTA } from "@/components/next-step-cta";
 import { SlidersHorizontal, Search, Info, Zap, Cpu, Sparkles, Layers, X, ArrowRightLeft, BookOpen } from "lucide-react";
 import { Link } from "wouter";
-import { useLocalizedHref } from "@/lib/locale";
+import { useLocalizedHref, useLocale } from "@/lib/locale";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -274,6 +274,8 @@ export default function SliderPresets() {
     ? `${selectedGenre.id}-${secondaryGenre.id}`
     : selectedGenre?.id || "";
 
+  const locale = useLocale();
+
   return (
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
       <SeoHead pageKey="sliders" jsonLdExtra={useMemo(() => ({
@@ -281,8 +283,8 @@ export default function SliderPresets() {
         "@type": "Dataset",
         name: t("sliders.title"),
         description: t("sliders.subtitle"),
-        url: `${BASE_URL}/sliders`,
-        inLanguage: t("lang", { defaultValue: "en" }),
+        url: getCanonicalUrl("sliders", locale),
+        inLanguage: locale,
         keywords: ["Game Dev Tycoon", "slider presets", "development focus", "genre settings", "game development sliders"],
         creator: {
           "@type": "Organization",
@@ -294,7 +296,7 @@ export default function SliderPresets() {
           "AI", "World Design", "Graphics", "Sound",
         ],
         license: "https://creativecommons.org/licenses/by-sa/4.0/",
-      }), [t])} />
+      }), [t, locale])} />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <SlidersHorizontal className="h-6 w-6 text-primary" />

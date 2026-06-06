@@ -1,9 +1,9 @@
 import { useMemo } from "react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
-import { useLocalizedHref } from "@/lib/locale";
+import { useLocalizedHref, useLocale } from "@/lib/locale";
 import { SeoHead } from "@/seo/SeoHead";
-import { BASE_URL } from "@/seo/seo";
+import { BASE_URL, getCanonicalUrl } from "@/seo/seo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +12,7 @@ import { ArrowRight, Sparkles, Star, Target } from "lucide-react";
 export default function GameDevTycoonBestCombosPage() {
   const { t } = useTranslation();
   const localize = useLocalizedHref();
+  const locale = useLocale();
 
   const fitBullets = t("bestCombos.fit.bullets", { returnObjects: true }) as string[];
   const starterCombos = t("bestCombos.starterCombos.items", { returnObjects: true }) as string[];
@@ -24,8 +25,8 @@ export default function GameDevTycoonBestCombosPage() {
         "@type": "Dataset",
         name: t("bestCombos.title"),
         description: t("bestCombos.subtitle"),
-        url: `${BASE_URL}/game-dev-tycoon-best-combos`,
-        inLanguage: t("lang", { defaultValue: "en" }),
+        url: getCanonicalUrl("bestCombos", locale),
+        inLanguage: locale,
         keywords: ["Game Dev Tycoon", "best combinations", "topic genre fit", "game development", "combo guide"],
         creator: {
           "@type": "Organization",
@@ -33,7 +34,7 @@ export default function GameDevTycoonBestCombosPage() {
           url: BASE_URL,
         },
         license: "https://creativecommons.org/licenses/by-sa/4.0/",
-      }), [t])} />
+      }), [t, locale])} />
 
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">

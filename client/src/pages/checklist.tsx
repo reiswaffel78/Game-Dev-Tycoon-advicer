@@ -3,7 +3,8 @@ import { useQuery, useMutation } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
 import { useShareNudge } from "@/hooks/use-share-nudge";
-import { BASE_URL } from "@/seo/seo";
+import { BASE_URL, getCanonicalUrl } from "@/seo/seo";
+import { useLocale } from "@/lib/locale";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -164,6 +165,8 @@ export default function ChecklistPage() {
 
   const visibleItems = showCompleted ? sortedItems : sortedItems?.filter(item => !item.isCompleted);
 
+  const locale = useLocale();
+
   return (
     <div className="container mx-auto p-6 max-w-4xl">
       <SeoHead pageKey="checklist" jsonLdExtra={useMemo(() => ({
@@ -171,15 +174,15 @@ export default function ChecklistPage() {
         "@type": "HowTo",
         name: t("checklist.title"),
         description: t("checklist.subtitle"),
-        url: `${BASE_URL}/checklist`,
-        inLanguage: t("lang", { defaultValue: "en" }),
+        url: getCanonicalUrl("checklist", locale),
+        inLanguage: locale,
         step: (t("schema.checklist.steps", { returnObjects: true }) as string[]).map((text, i) => ({
           "@type": "HowToStep",
           position: i + 1,
           name: (t("schema.checklist.stepNames", { returnObjects: true }) as string[])[i],
           text,
         })),
-      }), [t])} />
+      }), [t, locale])} />
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center gap-3 mb-2">
           <ClipboardList className="h-8 w-8 text-primary" />

@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "wouter";
 import { SeoHead } from "@/seo/SeoHead";
-import { BASE_URL } from "@/seo/seo";
+import { BASE_URL, getCanonicalUrl } from "@/seo/seo";
 import { buildLocalizedPath, extractLocaleFromPath } from "@/lib/locale";
 import { Users, Search, Calendar, Briefcase, GraduationCap, Zap, Target, ClipboardList, ArrowRight, BookOpen } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -149,8 +149,8 @@ export default function Staff() {
         "@type": "HowTo",
         name: t("staff.title"),
         description: t("staff.subtitle"),
-        url: `${BASE_URL}/staff`,
-        inLanguage: t("lang", { defaultValue: "en" }),
+        url: getCanonicalUrl("staff", locale),
+        inLanguage: locale,
         totalTime: "PT20M",
         step: (t("schema.staff.steps", { returnObjects: true }) as string[]).map((text, i) => ({
           "@type": "HowToStep",
@@ -158,7 +158,7 @@ export default function Staff() {
           name: [t("staff.garage"), t("staff.firstOffice"), t("staff.secondOffice"), t("staff.rdLab"), t("staff.hardwareLab")][i],
           text,
         })),
-      }), [t])} />
+      }), [t, locale])} />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Users className="h-6 w-6 text-primary" />

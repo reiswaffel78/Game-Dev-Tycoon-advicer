@@ -16,12 +16,46 @@ interface SeoHeadProps {
   jsonLdExtra?: Record<string, unknown> | Record<string, unknown>[];
 }
 
+const ORGANIZATION_ID = `${BASE_URL}/#organization`;
+const WEBSITE_ID = `${BASE_URL}/#website`;
+
+const identityGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": ORGANIZATION_ID,
+      name: "Game Dev Tycoon Advisor",
+      url: BASE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/og-image.png`,
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": WEBSITE_ID,
+      name: "Game Dev Tycoon Advisor",
+      url: BASE_URL,
+      publisher: { "@id": ORGANIZATION_ID },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${BASE_URL}/recommend/topic?q={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ],
+};
+
 export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
   const { t, i18n } = useTranslation();
   const locale: Locale = isLocale(i18n.language)
     ? i18n.language
     : DEFAULT_LOCALE;
-  const { titleKey, descriptionKey, titleSuffixKey, shortSuffixKey, schemaType } = getSeoConfig(pageKey);
+  const { titleKey, descriptionKey, titleSuffixKey, shortSuffixKey, schemaType, datePublished, dateModified, author } = getSeoConfig(pageKey);
   const title = t(titleKey);
   const description = t(descriptionKey);
   const titleSuffix = t(titleSuffixKey);
@@ -46,12 +80,26 @@ export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
       ? {
           "@context": "https://schema.org",
           "@type": "Article",
+          "@id": `${canonicalUrl}#article`,
           headline: title,
           description,
           url: canonicalUrl,
           inLanguage: locale,
+          isPartOf: { "@id": WEBSITE_ID },
+          ...(datePublished ? { datePublished } : {}),
+          ...(dateModified ? { dateModified } : {}),
+          ...(author
+            ? {
+                author: {
+                  "@type": "Organization",
+                  "@id": ORGANIZATION_ID,
+                  name: author,
+                },
+              }
+            : {}),
           publisher: {
             "@type": "Organization",
+            "@id": ORGANIZATION_ID,
             name: "Game Dev Tycoon Advisor",
             url: BASE_URL,
           },
@@ -59,12 +107,14 @@ export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
       : {
           "@context": "https://schema.org",
           "@type": "WebApplication",
+          "@id": `${canonicalUrl}#app`,
           name: "Game Dev Tycoon Advisor",
           description,
           url: canonicalUrl,
           applicationCategory: "GameApplication",
           operatingSystem: "Web Browser",
           inLanguage: locale,
+          isPartOf: { "@id": WEBSITE_ID },
           offers: {
             "@type": "Offer",
             price: "0",
@@ -99,6 +149,9 @@ export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
       {resolvedSchemaType === "Article" && (
         <>
           <meta property="article:section" content="Game Guide" />
+          {datePublished && <meta property="article:published_time" content={datePublished} />}
+          {dateModified && <meta property="article:modified_time" content={dateModified} />}
+          {author && <meta property="article:author" content={author} />}
         </>
       )}
 
@@ -108,6 +161,7 @@ export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
       <meta name="twitter:image" content={`${BASE_URL}/og-image.png`} />
       <meta name="twitter:url" content={canonicalUrl} />
 
+      <script type="application/ld+json">{JSON.stringify(identityGraph)}</script>
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       {jsonLdExtra && (
         Array.isArray(jsonLdExtra)

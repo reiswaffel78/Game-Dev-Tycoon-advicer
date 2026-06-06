@@ -178,7 +178,7 @@ export default function FAQPage() {
                         <AccordionTrigger className="text-left" data-testid={`faq-trigger-${category.key}-${index}`}>
                           {t(`faq.items.${itemKey}.question`)}
                         </AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground">
+                        <AccordionContent forceMount className="text-muted-foreground">
                           {t(`faq.items.${itemKey}.answer`)}
                           {links.length > 0 && (
                             <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-3 pt-3 border-t border-border/50">

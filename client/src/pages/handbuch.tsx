@@ -72,7 +72,7 @@ export default function HandbuchPage() {
           </TabsTrigger>
         </TabsList>
 
-        <TabsContent value="basics" className="space-y-6">
+        <TabsContent forceMount value="basics" className="space-y-6">
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -129,7 +129,7 @@ export default function HandbuchPage() {
           </Card>
         </TabsContent>
 
-        <TabsContent value="development" className="space-y-6">
+        <TabsContent forceMount value="development" className="space-y-6">
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -207,7 +207,7 @@ export default function HandbuchPage() {
           </Card>
         </TabsContent>
 
-        <TabsContent value="scoring" className="space-y-6">
+        <TabsContent forceMount value="scoring" className="space-y-6">
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -275,7 +275,7 @@ export default function HandbuchPage() {
           </Card>
         </TabsContent>
 
-        <TabsContent value="team" id="team" className="space-y-6">
+        <TabsContent forceMount value="team" id="team" className="space-y-6">
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -330,7 +330,7 @@ export default function HandbuchPage() {
           />
         </TabsContent>
 
-        <TabsContent value="research" className="space-y-6">
+        <TabsContent forceMount value="research" className="space-y-6">
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -379,7 +379,7 @@ export default function HandbuchPage() {
           </Card>
         </TabsContent>
 
-        <TabsContent value="advanced" className="space-y-6">
+        <TabsContent forceMount value="advanced" className="space-y-6">
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">

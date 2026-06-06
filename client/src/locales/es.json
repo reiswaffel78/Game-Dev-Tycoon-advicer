@@ -1472,10 +1472,10 @@
     "brand": "Asesor de Game Dev Tycoon",
     "shortBrand": "GDT Advisor",
     "title": {
-      "dashboard": "Calculadora de configuración óptima para Game Dev Tycoon",
-      "topicRecommender": "Mejores temas para cada género en Game Dev Tycoon",
-      "genreRecommender": "Mejores géneros para desarrollar en Game Dev Tycoon",
-      "platformRecommender": "Mejores plataformas para cada género en Game Dev Tycoon",
+      "dashboard": "Calculadora GDT Configuración Óptima",
+      "topicRecommender": "Mejores temas por género GDT",
+      "genreRecommender": "Mejor género a desarrollar GDT",
+      "platformRecommender": "Mejores plataformas GDT",
       "sliders": "Ajustes de sliders para cada género en GDT",
       "planner": "Herramienta de planificación para GDT",
       "research": "Orden de investigación al inicio en GDT",
@@ -1486,11 +1486,11 @@
       "guide": "Guía completa de Game Dev Tycoon 2025",
       "bestCombos": "Mejores combinaciones género-tema en GDT",
       "slidersExplained": "Sliders de GDT explicados para principiantes",
-      "researchOrder": "Lista completa del mejor orden de investigación en GDT",
+      "researchOrder": "Mejor orden de investigación GDT",
       "handbuch": "Manual completo de Game Dev Tycoon",
-      "appGuide": "Guía de la aplicación Asesor de Game Dev Tycoon",
+      "appGuide": "Guía de la app GDT Advisor",
       "privacy": "Política de privacidad",
-      "sources": "Fuentes de datos y niveles de confianza de Game Dev Tycoon"
+      "sources": "Fuentes de datos GDT"
     },
     "description": {
       "dashboard": "Encuentra las mejores combinaciones de tema, género y plataforma en GDT. Calculadora interactiva gratuita para principiantes.",

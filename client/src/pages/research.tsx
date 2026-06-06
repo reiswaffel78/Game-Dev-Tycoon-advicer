@@ -1,10 +1,10 @@
 import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { SeoHead } from "@/seo/SeoHead";
 import { BASE_URL, getCanonicalUrl } from "@/seo/seo";
-import { buildLocalizedPath, extractLocaleFromPath } from "@/lib/locale";
+import { buildLocalizedPath, useLocale } from "@/lib/locale";
 import { FlaskConical, Search, Lightbulb, Calendar, Coins, Target, Link2, Palette, Volume2, Gamepad2, Bot, Cpu, ArrowRight, ListChecks } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -115,8 +115,7 @@ function ResearchCard({ item, t }: { item: ResearchItem; t: (key: string) => str
 
 export default function Research() {
   const { t } = useTranslation();
-  const [pathname] = useLocation();
-  const { locale } = extractLocaleFromPath(pathname);
+  const locale = useLocale();
   const isEnglish = locale === "en";
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");

@@ -29,7 +29,14 @@ export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
   const MAX_TITLE = 60;
   const fullTitle = `${title} | ${titleSuffix}`;
   const fullTitleLen = fullTitle.length;
-  const resolvedTitle = fullTitleLen <= MAX_TITLE ? fullTitle : `${title} | ${shortSuffix}`;
+  const shortTitle = `${title} | ${shortSuffix}`;
+  const shortTitleLen = shortTitle.length;
+  const resolvedTitle =
+    fullTitleLen <= MAX_TITLE
+      ? fullTitle
+      : shortTitleLen <= MAX_TITLE
+        ? shortTitle
+        : title;
   const canonicalUrl = getCanonicalUrl(pageKey, locale);
   const alternates = getHreflangLinks(pageKey);
   const resolvedSchemaType = schemaType ?? "WebApplication";

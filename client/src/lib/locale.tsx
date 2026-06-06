@@ -90,12 +90,10 @@ export function useLocaleLocation(): [
 }
 
 export function useLocale(): Locale {
-  const pathname = useSyncExternalStore(
-    subscribe,
-    () => window.location.pathname,
-    () => "/",
-  );
-  const { locale } = extractLocaleFromPath(pathname);
+  const { i18n } = useTranslation();
+  // i18n.language is SSR-safe (set from request URL or init config), unlike
+  // window.location.pathname which always resolves to "/" on the server.
+  const locale = isLocale(i18n.language) ? i18n.language : DEFAULT_LOCALE;
   return locale;
 }
 

@@ -1479,7 +1479,7 @@
       "sliders": "Game Dev Tycoon: Nastavení posuvníků pro každý žánr",
       "planner": "Plánovač uložených her pro Game Dev Tycoon",
       "research": "Game Dev Tycoon: Pořadí výzkumu v začátcích hry",
-      "staff": "Průvodce nejlepšími specializacemi zaměstnanců v Game Dev Tycoon",
+      "staff": "Průvodce specializacemi zaměstnanců v GDT",
       "timeline": "Game Dev Tycoon: Časová osa odemykání všech budov",
       "checklist": "Předprodejní kontrolní seznam pro Game Dev Tycoon",
       "faq": "Game Dev Tycoon: Proč moje hry dostávají nízká hodnocení?",
@@ -1493,7 +1493,7 @@
       "sources": "Zdroje dat a úrovně důvěryhodnosti Game Dev Tycoon"
     },
     "description": {
-      "dashboard": "Najděte nejlepší kombinace témat, žánrů a platforem ve hře Game Dev Tycoon. Bezplatná interaktivní kalkulačka nastavení a doporučovací nástroj pro začátečníky.",
+      "dashboard": "Najděte nejlepší kombinace témat, žánrů a platforem ve hře GDT. Bezplatný interaktivní kalkulačka a doporučovací nástroj.",
       "topicRecommender": "Najděte nejlepší téma pro jakýkoli žánr v Game Dev Tycoon. Kontrola kompatibility témat a žánrů pro fantasy, sci-fi a všechna ostatní témata.",
       "genreRecommender": "Zjistěte, který žánr v Game Dev Tycoon vydělává nejvíce peněz. Bezplatný nástroj pro výběr žánru s analýzou zisku a nejvyššího skóre.",
       "platformRecommender": "Najděte nejlepší konzoli, na kterou se v Game Dev Tycoon zaměřit. Srovnání PC vs. konzole a průvodce shodou publika a platformy.",

@@ -13,7 +13,6 @@ import {
   SUPPORTED_LOCALES,
   type Locale,
 } from "@/lib/locale";
-import { ensureLocaleLoaded } from "@/lib/i18n";
 
 export function LanguageSwitcher() {
   const { i18n } = useTranslation();
@@ -40,10 +39,8 @@ export function LanguageSwitcher() {
     sv: { name: "Svenska", flag: "SV" },
   };
 
-  const switchLocale = async (newLocale: Locale) => {
+  const switchLocale = (newLocale: Locale) => {
     if (typeof window === "undefined") return;
-
-    await ensureLocaleLoaded(i18n, newLocale);
 
     const { basePath } = extractLocaleFromPath(window.location.pathname);
     const newPath = buildLocalizedPath(basePath, newLocale);
@@ -76,7 +73,7 @@ export function LanguageSwitcher() {
           return (
           <DropdownMenuItem
             key={code}
-            onClick={() => { void switchLocale(code); }}
+            onClick={() => switchLocale(code)}
             className={i18n.language === code ? "bg-accent/20" : ""}
             data-testid={`menu-item-lang-${code}`}
           >

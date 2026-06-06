@@ -30,6 +30,45 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (
+              id.includes("react-dom") ||
+              id.includes("react/") ||
+              id.includes("react-is") ||
+              id.includes("scheduler")
+            ) {
+              return "vendor-react";
+            }
+            if (
+              id.includes("@radix-ui") ||
+              id.includes("@floating-ui") ||
+              id.includes("cmdk") ||
+              id.includes("vaul")
+            ) {
+              return "vendor-ui";
+            }
+            if (
+              id.includes("@tanstack") ||
+              id.includes("react-hook-form") ||
+              id.includes("@hookform") ||
+              id.includes("zod")
+            ) {
+              return "vendor-data";
+            }
+            if (id.includes("i18next") || id.includes("react-i18next")) {
+              return "vendor-i18n";
+            }
+            if (id.includes("lucide-react") || id.includes("react-icons")) {
+              return "vendor-icons";
+            }
+            return "vendor-misc";
+          }
+        },
+      },
+    },
   },
   server: {
     fs: {

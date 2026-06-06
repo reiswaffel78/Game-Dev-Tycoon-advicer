@@ -1,3 +1,4 @@
+import React, { Suspense } from "react";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -8,55 +9,62 @@ import { AppSidebar } from "@/components/app-sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageSwitcher } from "@/components/language-switcher";
-import NotFound from "@/pages/not-found";
-import Dashboard from "@/pages/dashboard";
-import TopicRecommender from "@/pages/topic-recommender";
-import GenreRecommender from "@/pages/genre-recommender";
-import PlatformRecommender from "@/pages/platform-recommender";
-import SliderPresets from "@/pages/slider-presets";
-import GameDevTycoonGuide from "@/pages/game-dev-tycoon-guide";
-import GameDevTycoonBestCombos from "@/pages/game-dev-tycoon-best-combos";
-import GameDevTycoonSliders from "@/pages/game-dev-tycoon-sliders";
-import GameDevTycoonResearchOrder from "@/pages/game-dev-tycoon-research-order";
-import Planner from "@/pages/planner";
-import Sources from "@/pages/sources";
-import Research from "@/pages/research";
-import Staff from "@/pages/staff";
-import Timeline from "@/pages/timeline";
-import Checklist from "@/pages/checklist";
-import FAQ from "@/pages/faq";
-import Handbuch from "@/pages/handbuch";
-import AppGuide from "@/pages/app-guide";
-import Privacy from "@/pages/privacy";
 import { Footer } from "@/components/footer";
 import { ShareNudge } from "@/components/share-nudge";
 import { ShareNudgeProvider } from "@/hooks/use-share-nudge";
 import { useFirstVisitToday } from "@/hooks/use-first-visit-today";
 
+const NotFound = React.lazy(() => import("@/pages/not-found"));
+const Dashboard = React.lazy(() => import("@/pages/dashboard"));
+const TopicRecommender = React.lazy(() => import("@/pages/topic-recommender"));
+const GenreRecommender = React.lazy(() => import("@/pages/genre-recommender"));
+const PlatformRecommender = React.lazy(() => import("@/pages/platform-recommender"));
+const SliderPresets = React.lazy(() => import("@/pages/slider-presets"));
+const GameDevTycoonGuide = React.lazy(() => import("@/pages/game-dev-tycoon-guide"));
+const GameDevTycoonBestCombos = React.lazy(() => import("@/pages/game-dev-tycoon-best-combos"));
+const GameDevTycoonSliders = React.lazy(() => import("@/pages/game-dev-tycoon-sliders"));
+const GameDevTycoonResearchOrder = React.lazy(() => import("@/pages/game-dev-tycoon-research-order"));
+const Planner = React.lazy(() => import("@/pages/planner"));
+const Sources = React.lazy(() => import("@/pages/sources"));
+const Research = React.lazy(() => import("@/pages/research"));
+const Staff = React.lazy(() => import("@/pages/staff"));
+const Timeline = React.lazy(() => import("@/pages/timeline"));
+const Checklist = React.lazy(() => import("@/pages/checklist"));
+const FAQ = React.lazy(() => import("@/pages/faq"));
+const Handbuch = React.lazy(() => import("@/pages/handbuch"));
+const AppGuide = React.lazy(() => import("@/pages/app-guide"));
+const Privacy = React.lazy(() => import("@/pages/privacy"));
+
+function PageFallback() {
+  return <div className="flex-1 min-h-[200px]" aria-hidden="true" />;
+}
+
 function AppRoutes() {
   return (
-    <Switch>
-      <Route path="/" component={Dashboard} />
-      <Route path="/recommend/topic" component={TopicRecommender} />
-      <Route path="/recommend/genre" component={GenreRecommender} />
-      <Route path="/recommend/platform" component={PlatformRecommender} />
-      <Route path="/sliders" component={SliderPresets} />
-      <Route path="/game-dev-tycoon-guide" component={GameDevTycoonGuide} />
-      <Route path="/game-dev-tycoon-best-combos" component={GameDevTycoonBestCombos} />
-      <Route path="/game-dev-tycoon-sliders" component={GameDevTycoonSliders} />
-      <Route path="/game-dev-tycoon-research-order" component={GameDevTycoonResearchOrder} />
-      <Route path="/planner" component={Planner} />
-      <Route path="/research" component={Research} />
-      <Route path="/staff" component={Staff} />
-      <Route path="/timeline" component={Timeline} />
-      <Route path="/checklist" component={Checklist} />
-      <Route path="/faq" component={FAQ} />
-      <Route path="/handbuch" component={Handbuch} />
-      <Route path="/app-guide" component={AppGuide} />
-      <Route path="/sources" component={Sources} />
-      <Route path="/privacy" component={Privacy} />
-      <Route component={NotFound} />
-    </Switch>
+    <Suspense fallback={<PageFallback />}>
+      <Switch>
+        <Route path="/" component={Dashboard} />
+        <Route path="/recommend/topic" component={TopicRecommender} />
+        <Route path="/recommend/genre" component={GenreRecommender} />
+        <Route path="/recommend/platform" component={PlatformRecommender} />
+        <Route path="/sliders" component={SliderPresets} />
+        <Route path="/game-dev-tycoon-guide" component={GameDevTycoonGuide} />
+        <Route path="/game-dev-tycoon-best-combos" component={GameDevTycoonBestCombos} />
+        <Route path="/game-dev-tycoon-sliders" component={GameDevTycoonSliders} />
+        <Route path="/game-dev-tycoon-research-order" component={GameDevTycoonResearchOrder} />
+        <Route path="/planner" component={Planner} />
+        <Route path="/research" component={Research} />
+        <Route path="/staff" component={Staff} />
+        <Route path="/timeline" component={Timeline} />
+        <Route path="/checklist" component={Checklist} />
+        <Route path="/faq" component={FAQ} />
+        <Route path="/handbuch" component={Handbuch} />
+        <Route path="/app-guide" component={AppGuide} />
+        <Route path="/sources" component={Sources} />
+        <Route path="/privacy" component={Privacy} />
+        <Route component={NotFound} />
+      </Switch>
+    </Suspense>
   );
 }
 

@@ -8,10 +8,33 @@ import App from "./App";
 import { extractLocaleFromPath } from "@/lib/locale";
 import { createI18nInstance, initI18n } from "@/lib/i18n";
 
+const KNOWN_ROUTES = new Set([
+  "/",
+  "/recommend/topic",
+  "/recommend/genre",
+  "/recommend/platform",
+  "/sliders",
+  "/game-dev-tycoon-guide",
+  "/game-dev-tycoon-best-combos",
+  "/game-dev-tycoon-sliders",
+  "/game-dev-tycoon-research-order",
+  "/planner",
+  "/research",
+  "/staff",
+  "/timeline",
+  "/checklist",
+  "/faq",
+  "/handbuch",
+  "/app-guide",
+  "/sources",
+  "/privacy",
+]);
+
 interface RenderResult {
   html: string;
   helmet: HelmetServerState;
   i18nLanguage: string;
+  statusCode: number;
 }
 
 export async function render(url: string): Promise<RenderResult> {
@@ -35,9 +58,12 @@ export async function render(url: string): Promise<RenderResult> {
     </HelmetProvider>
   );
 
+  const statusCode = KNOWN_ROUTES.has(basePath) ? 200 : 404;
+
   return {
     html,
     helmet: helmetContext.helmet!,
     i18nLanguage: i18n.language,
+    statusCode,
   };
 }

@@ -4,6 +4,7 @@ import { Router } from "wouter";
 import { HelmetProvider } from "react-helmet-async";
 import type { HelmetServerState } from "react-helmet-async";
 import { I18nextProvider } from "react-i18next";
+import { QueryClient, QueryClientProvider, dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import App from "./App";
 import { extractLocaleFromPath } from "@/lib/locale";
 import { createI18nInstance, initI18n } from "@/lib/i18n";
@@ -35,9 +36,13 @@ interface RenderResult {
   helmet: HelmetServerState;
   i18nLanguage: string;
   statusCode: number;
+  dehydratedState: unknown;
 }
 
-export async function render(url: string): Promise<RenderResult> {
+export async function render(
+  url: string,
+  prefetchedQueries?: Record<string, unknown>
+): Promise<RenderResult> {
   const { locale, basePath } = extractLocaleFromPath(url);
 
   const i18n = await initI18n(createI18nInstance(), locale);
@@ -46,17 +51,39 @@ export async function render(url: string): Promise<RenderResult> {
     return [basePath, () => {}];
   };
 
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: Infinity,
+        retry: false,
+      },
+    },
+  });
+
+  if (prefetchedQueries) {
+    for (const [key, data] of Object.entries(prefetchedQueries)) {
+      queryClient.setQueryData([key], data);
+    }
+  }
+
   const helmetContext: { helmet?: HelmetServerState } = {};
 
   const html = renderToString(
     <HelmetProvider context={helmetContext}>
       <I18nextProvider i18n={i18n}>
         <Router hook={staticHook}>
-          <App />
+          <QueryClientProvider client={queryClient}>
+            <HydrationBoundary state={dehydrate(queryClient)}>
+              <App />
+            </HydrationBoundary>
+          </QueryClientProvider>
         </Router>
       </I18nextProvider>
     </HelmetProvider>
   );
+
+  const dehydratedState = dehydrate(queryClient);
+  queryClient.clear();
 
   const statusCode = KNOWN_ROUTES.has(basePath) ? 200 : 404;
 
@@ -65,5 +92,6 @@ export async function render(url: string): Promise<RenderResult> {
     helmet: helmetContext.helmet!,
     i18nLanguage: i18n.language,
     statusCode,
+    dehydratedState,
   };
 }

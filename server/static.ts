@@ -2,9 +2,19 @@ import express, { type Express } from "express";
 import fs from "fs";
 import path from "path";
 import { pathToFileURL } from "url";
+import { storage } from "./storage";
 
 type SSRModule = {
-  render: (url: string) => Promise<{ html: string; helmet: any; i18nLanguage: string; statusCode: number }>;
+  render: (
+    url: string,
+    prefetchedQueries?: Record<string, unknown>
+  ) => Promise<{
+    html: string;
+    helmet: any;
+    i18nLanguage: string;
+    statusCode: number;
+    dehydratedState: unknown;
+  }>;
 };
 
 const SUPPORTED_LOCALES = [
@@ -35,6 +45,22 @@ function normalizeLocalizedUrl(originalUrl: string): string {
 
   const normalizedBase = basePath === "/" ? "/" : basePath;
   return `${normalizedBase}${url.search}${url.hash}`;
+}
+
+async function prefetchForRoute(basePath: string): Promise<Record<string, unknown>> {
+  const queries: Record<string, unknown> = {};
+  try {
+    if (basePath === "/research") {
+      queries["/api/research"] = await storage.getAllResearchItems();
+    } else if (basePath === "/staff") {
+      queries["/api/staff-tips"] = await storage.getAllStaffTips();
+    } else if (basePath === "/timeline") {
+      queries["/api/timeline"] = await storage.getAllTimelineMilestones();
+    }
+  } catch (err) {
+    console.error("[SSR] Prefetch error for route", basePath, err);
+  }
+  return queries;
 }
 
 let ssrModule: SSRModule | null = null;
@@ -104,9 +130,22 @@ export async function serveStatic(app: Express) {
       const template = fs.readFileSync(path.resolve(distPath, "index.html"), "utf-8");
       
       console.log("[SSR] Rendering route:", url);
+
+      // Determine basePath for prefetch (strip locale suffix)
+      const { pathname } = new URL(url, "http://localhost");
+      const segments = pathname.replace(/\/$/, "").split("/").filter(Boolean);
+      const last = segments[segments.length - 1];
+      const isLocale = SUPPORTED_LOCALES.includes(last as (typeof SUPPORTED_LOCALES)[number]);
+      const basePath = isLocale
+        ? (segments.slice(0, -1).length ? `/${segments.slice(0, -1).join("/")}` : "/")
+        : (segments.length ? `/${segments.join("/")}` : "/");
+
+      // Prefetch route-specific data from storage
+      const prefetchedQueries = await prefetchForRoute(basePath);
       
-      // Render the app
-      const { html: appHtml, helmet, i18nLanguage, statusCode } = await ssrModule.render(url);
+      // Render the app with prefetched data
+      const { html: appHtml, helmet, i18nLanguage, statusCode, dehydratedState } =
+        await ssrModule.render(url, prefetchedQueries);
       
       console.log("[SSR] Render complete. HTML length:", appHtml?.length || 0);
       
@@ -141,7 +180,12 @@ export async function serveStatic(app: Express) {
       const i18nScript = `<script>window.__I18N_INITIAL_LANGUAGE__ = ${JSON.stringify(
         i18nLanguage
       )};</script>`;
-      finalHtml = finalHtml.replace("</body>", `${i18nScript}\n</body>`);
+
+      const dehydratedScript = `<script>window.__REACT_QUERY_STATE__ = ${JSON.stringify(
+        dehydratedState
+      )};</script>`;
+
+      finalHtml = finalHtml.replace("</body>", `${i18nScript}\n${dehydratedScript}\n</body>`);
       
       // Inject the rendered app HTML into the template
       finalHtml = finalHtml.replace(

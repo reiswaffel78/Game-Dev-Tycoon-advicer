@@ -1,6 +1,4 @@
 import { Switch, Route } from "wouter";
-import { queryClient } from "./lib/queryClient";
-import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
@@ -69,34 +67,32 @@ function App() {
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="gdt-advisor-theme">
-      <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
-          <ShareNudgeProvider>
-            <SidebarProvider style={sidebarStyle}>
-              <div className="flex h-screen w-full">
-                <AppSidebar />
-                <div className="flex flex-col flex-1 overflow-hidden">
-                  <header className="flex items-center justify-between gap-2 px-4 py-2 border-b bg-background/80 backdrop-blur-sm sticky top-0 z-10">
-                    <SidebarTrigger data-testid="button-sidebar-toggle" />
-                    <div className="flex items-center gap-1">
-                      <LanguageSwitcher />
-                      <ThemeToggle />
-                    </div>
-                  </header>
-                  <main className="flex-1 overflow-auto flex flex-col">
-                    <div className={`flex-1${isFirstVisitToday ? " animate-page-fade-in" : ""}`}>
-                      <AppRoutes />
-                    </div>
-                    <Footer />
-                  </main>
-                </div>
+      <TooltipProvider>
+        <ShareNudgeProvider>
+          <SidebarProvider style={sidebarStyle}>
+            <div className="flex h-screen w-full">
+              <AppSidebar />
+              <div className="flex flex-col flex-1 overflow-hidden">
+                <header className="flex items-center justify-between gap-2 px-4 py-2 border-b bg-background/80 backdrop-blur-sm sticky top-0 z-10">
+                  <SidebarTrigger data-testid="button-sidebar-toggle" />
+                  <div className="flex items-center gap-1">
+                    <LanguageSwitcher />
+                    <ThemeToggle />
+                  </div>
+                </header>
+                <main className="flex-1 overflow-auto flex flex-col">
+                  <div className={`flex-1${isFirstVisitToday ? " animate-page-fade-in" : ""}`}>
+                    <AppRoutes />
+                  </div>
+                  <Footer />
+                </main>
               </div>
-            </SidebarProvider>
-            <ShareNudge />
-            <Toaster />
-          </ShareNudgeProvider>
-        </TooltipProvider>
-      </QueryClientProvider>
+            </div>
+          </SidebarProvider>
+          <ShareNudge />
+          <Toaster />
+        </ShareNudgeProvider>
+      </TooltipProvider>
     </ThemeProvider>
   );
 }

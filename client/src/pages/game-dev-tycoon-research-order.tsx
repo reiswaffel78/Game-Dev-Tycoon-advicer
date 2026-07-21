@@ -1,6 +1,6 @@
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
-import { buildLocalizedPath, extractLocaleFromPath } from "@/lib/locale";
+import { useLocale, buildLocalizedPath } from "@/lib/locale";
 import { SeoHead } from "@/seo/SeoHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -11,8 +11,7 @@ type EraKey = "early" | "mid" | "late";
 
 export default function GameDevTycoonResearchOrderPage() {
   const { t } = useTranslation();
-  const [pathname] = useLocation();
-  const { locale } = extractLocaleFromPath(pathname);
+  const locale = useLocale();
   const researchPath = buildLocalizedPath("/research", locale);
   const timelinePath = buildLocalizedPath("/timeline", locale);
 

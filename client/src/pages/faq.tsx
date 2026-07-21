@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SeoHead } from "@/seo/SeoHead";
 import { BASE_URL, getCanonicalUrl } from "@/seo/seo";
@@ -80,11 +80,11 @@ const relatedLinks: Record<string, RelatedLink[]> = {
   sliders1: [{ labelKey: "faq.links.sliders", href: "/sliders", ctaId: "faq_sliders1_sliders" }],
   sliders2: [
     { labelKey: "faq.links.sliders", href: "/sliders", ctaId: "faq_sliders2_sliders" },
-    { labelKey: "faq.links.slidersPage", href: "/game-dev-tycoon-sliders", ctaId: "faq_sliders2_page", enOnly: true },
+    { labelKey: "faq.links.slidersPage", href: "/game-dev-tycoon-sliders", ctaId: "faq_sliders2_page" },
   ],
   staff1: [{ labelKey: "faq.links.staff", href: "/staff", ctaId: "faq_staff1_staff" }],
   staff2: [{ labelKey: "faq.links.handbuch", href: "/handbuch", ctaId: "faq_staff2_handbuch" }],
-  research1: [{ labelKey: "faq.links.researchOrder", href: "/game-dev-tycoon-research-order", ctaId: "faq_research1_order", enOnly: true }],
+  research1: [{ labelKey: "faq.links.researchOrder", href: "/game-dev-tycoon-research-order", ctaId: "faq_research1_order" }],
   research2: [{ labelKey: "faq.links.research", href: "/research", ctaId: "faq_research2_research" }],
   platforms1: [{ labelKey: "faq.links.platformRecommender", href: "/recommend/platform", ctaId: "faq_platforms1_platform" }],
   platforms2: [{ labelKey: "faq.links.timeline", href: "/timeline", ctaId: "faq_platforms2_timeline" }],
@@ -99,7 +99,6 @@ const allItemKeys = categories.flatMap((c) => c.itemKeys);
 
 export default function FAQPage() {
   const { t } = useTranslation();
-  const [pathname] = useLocation();
   const locale = useLocale();
   const isEnglish = locale === "en";
 

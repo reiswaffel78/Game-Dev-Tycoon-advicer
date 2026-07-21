@@ -1,10 +1,10 @@
 import { useState, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { SeoHead } from "@/seo/SeoHead";
 import { BASE_URL, getCanonicalUrl } from "@/seo/seo";
-import { buildLocalizedPath, extractLocaleFromPath } from "@/lib/locale";
+import { useLocale, buildLocalizedPath } from "@/lib/locale";
 import { Users, Search, Calendar, Briefcase, GraduationCap, Zap, Target, ClipboardList, ArrowRight, BookOpen } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -115,8 +115,7 @@ function TipCard({ tip, t }: { tip: StaffTip; t: (key: string) => string }) {
 
 export default function Staff() {
   const { t } = useTranslation();
-  const [pathname] = useLocation();
-  const { locale } = extractLocaleFromPath(pathname);
+  const locale = useLocale();
   const handbuchTeamHref = buildLocalizedPath("/handbuch", locale) + "#team";
   const [search, setSearch] = useState("");
   const [activePhase, setActivePhase] = useState("all");

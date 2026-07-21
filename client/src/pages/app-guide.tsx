@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SeoHead } from "@/seo/SeoHead";
 import { Badge } from "@/components/ui/badge";
-import { buildLocalizedPath, extractLocaleFromPath } from "@/lib/locale";
+import { useLocalizedHref } from "@/lib/locale";
 import {
   Compass,
   LayoutDashboard,
@@ -50,8 +50,7 @@ const workflowCtas: { key: string; path: string; ctaId: string }[] = [
 
 export default function AppGuidePage() {
   const { t } = useTranslation();
-  const [pathname] = useLocation();
-  const { locale } = extractLocaleFromPath(pathname);
+  const localize = useLocalizedHref();
 
   const workflows = workflowCtas.map((wf) => ({
     title: t(`appGuide.workflow.${wf.key}`),
@@ -106,7 +105,7 @@ export default function AppGuidePage() {
                     ))}
                   </ol>
                   <Button asChild size="sm" className="w-full" data-cta-id={workflow.ctaId}>
-                    <Link href={buildLocalizedPath(workflow.ctaPath, locale)}>
+                    <Link href={localize(workflow.ctaPath)}>
                       {t("appGuide.startWorkflow")}
                       <ArrowRight className="h-4 w-4 ml-1.5" />
                     </Link>
@@ -129,7 +128,7 @@ export default function AppGuidePage() {
           <div className="grid gap-4 md:grid-cols-2">
             {featureConfig.map((feature) => {
               const tips = t(`appGuide.featureTips.${feature.key}`, { returnObjects: true }) as string[];
-              const localizedHref = buildLocalizedPath(feature.path, locale);
+              const localizedHref = localize(feature.path);
               return (
                 <Card key={feature.path} data-testid={`feature-card-${feature.key}`} className="flex flex-col">
                   <CardHeader className="pb-3">

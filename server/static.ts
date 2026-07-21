@@ -3,6 +3,12 @@ import fs from "fs";
 import path from "path";
 import { pathToFileURL } from "url";
 import { storage } from "./storage";
+import {
+  getRecommendationsByTopic,
+  getRecommendationsByGenre,
+  getRecommendationsByPlatform,
+  getSliderPresets,
+} from "./recommendation-engine";
 
 type SSRModule = {
   render: (
@@ -56,6 +62,50 @@ async function prefetchForRoute(basePath: string): Promise<Record<string, unknow
       queries["/api/staff-tips"] = await storage.getAllStaffTips();
     } else if (basePath === "/timeline") {
       queries["/api/timeline"] = await storage.getAllTimelineMilestones();
+    }
+
+    const topicMatch = basePath.match(/^\/recommend\/topic\/([^/]+)$/);
+    if (topicMatch) {
+      const topicId = topicMatch[1];
+      const [recs, topics] = await Promise.all([
+        getRecommendationsByTopic(topicId),
+        storage.getAllTopics(),
+      ]);
+      queries[JSON.stringify(["/api/recommend/topic", topicId])] = recs;
+      queries[JSON.stringify(["/api/topics"])] = topics;
+    }
+
+    const genreMatch = basePath.match(/^\/recommend\/genre\/([^/]+)$/);
+    if (genreMatch) {
+      const genreId = genreMatch[1];
+      const [recs, genres] = await Promise.all([
+        getRecommendationsByGenre(genreId),
+        storage.getAllGenres(),
+      ]);
+      queries[JSON.stringify(["/api/recommend/genre", genreId])] = recs;
+      queries[JSON.stringify(["/api/genres"])] = genres;
+    }
+
+    const platformMatch = basePath.match(/^\/recommend\/platform\/([^/]+)$/);
+    if (platformMatch) {
+      const platformId = platformMatch[1];
+      const [recs, platforms] = await Promise.all([
+        getRecommendationsByPlatform(platformId),
+        storage.getAllPlatforms(),
+      ]);
+      queries[JSON.stringify(["/api/recommend/platform", platformId])] = recs;
+      queries[JSON.stringify(["/api/platforms"])] = platforms;
+    }
+
+    const sliderMatch = basePath.match(/^\/sliders\/([^/]+)$/);
+    if (sliderMatch) {
+      const genreId = sliderMatch[1];
+      const [presets, genres] = await Promise.all([
+        getSliderPresets(genreId),
+        storage.getAllGenres(),
+      ]);
+      queries[JSON.stringify(["/api/sliders", genreId])] = presets;
+      queries[JSON.stringify(["/api/genres"])] = genres;
     }
   } catch (err) {
     console.error("[SSR] Prefetch error for route", basePath, err);

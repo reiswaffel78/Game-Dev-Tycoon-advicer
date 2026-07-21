@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
@@ -246,6 +247,7 @@ function PlatformCard({
 }
 
 export default function PlatformRecommender() {
+  const { platformId: urlPlatformId } = useParams<{ platformId?: string }>();
   const { t } = useTranslation();
   const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(
     null
@@ -258,13 +260,24 @@ export default function PlatformRecommender() {
     }
   );
 
+  const urlPlatform = urlPlatformId && platforms
+    ? (platforms.find((p) => p.id === urlPlatformId) ?? null)
+    : null;
+
+  useEffect(() => {
+    if (urlPlatform && !selectedPlatform) setSelectedPlatform(urlPlatform);
+  }, [urlPlatform]);
+
+  const effectivePlatform = selectedPlatform ?? urlPlatform;
+  const effectivePlatformId = effectivePlatform?.id ?? urlPlatformId;
+
   const { registerInteraction } = useShareNudge();
 
   const { data: recommendations, isLoading: recsLoading } = useQuery<
     RecommendationResult[]
   >({
-    queryKey: ["/api/recommend/platform", selectedPlatform?.id],
-    enabled: !!selectedPlatform,
+    queryKey: ["/api/recommend/platform", effectivePlatformId],
+    enabled: !!effectivePlatformId,
   });
 
   useEffect(() => {
@@ -322,7 +335,7 @@ export default function PlatformRecommender() {
                     <PlatformCard
                       key={platform.id}
                       platform={platform}
-                      isSelected={selectedPlatform?.id === platform.id}
+                      isSelected={effectivePlatform?.id === platform.id}
                       onClick={() => setSelectedPlatform(platform)}
                     />
                   ))}
@@ -333,7 +346,7 @@ export default function PlatformRecommender() {
         </Card>
 
         <div className="space-y-4">
-          {!selectedPlatform ? (
+          {!effectivePlatformId ? (
             <Card>
               <CardContent className="py-16 text-center">
                 <Trophy className="h-16 w-16 mx-auto text-muted-foreground/30 mb-4" />
@@ -363,7 +376,7 @@ export default function PlatformRecommender() {
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <h2 className="text-lg font-semibold">
-                  {t("recommender.topRecommendationsFor", { name: translatePlatform(t, selectedPlatform.id, selectedPlatform.name) })}
+                  {t("recommender.topRecommendationsFor", { name: translatePlatform(t, effectivePlatform?.id ?? "", effectivePlatform?.name ?? urlPlatformId ?? "") })}
                 </h2>
                 <Badge>{t("recommender.resultsCount", { count: recommendations.length })}</Badge>
               </div>

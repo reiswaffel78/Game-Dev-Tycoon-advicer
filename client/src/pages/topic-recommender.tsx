@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
@@ -199,6 +200,7 @@ function RecommendationCard({
 }
 
 export default function TopicRecommender() {
+  const { topicId: urlTopicId } = useParams<{ topicId?: string }>();
   const { t } = useTranslation();
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [search, setSearch] = useState("");
@@ -207,13 +209,24 @@ export default function TopicRecommender() {
     queryKey: ["/api/topics"],
   });
 
+  const urlTopic = urlTopicId && topics
+    ? (topics.find((topic) => topic.id === urlTopicId) ?? null)
+    : null;
+
+  useEffect(() => {
+    if (urlTopic && !selectedTopic) setSelectedTopic(urlTopic);
+  }, [urlTopic]);
+
+  const effectiveTopic = selectedTopic ?? urlTopic;
+  const effectiveTopicId = effectiveTopic?.id ?? urlTopicId;
+
   const { registerInteraction } = useShareNudge();
 
   const { data: recommendations, isLoading: recsLoading } = useQuery<
     RecommendationResult[]
   >({
-    queryKey: ["/api/recommend/topic", selectedTopic?.id],
-    enabled: !!selectedTopic,
+    queryKey: ["/api/recommend/topic", effectiveTopicId],
+    enabled: !!effectiveTopicId,
   });
 
   useEffect(() => {
@@ -272,7 +285,7 @@ export default function TopicRecommender() {
                       key={topic.id}
                       onClick={() => setSelectedTopic(topic)}
                       className={`w-full text-left px-3 py-2.5 rounded-md transition-colors flex items-center justify-between gap-2 ${
-                        selectedTopic?.id === topic.id
+                        effectiveTopic?.id === topic.id
                           ? "bg-primary text-primary-foreground"
                           : "hover-elevate"
                       }`}
@@ -282,7 +295,7 @@ export default function TopicRecommender() {
                       {topic.category && (
                         <Badge
                           variant={
-                            selectedTopic?.id === topic.id
+                            effectiveTopic?.id === topic.id
                               ? "secondary"
                               : "outline"
                           }
@@ -300,7 +313,7 @@ export default function TopicRecommender() {
         </Card>
 
         <div className="space-y-4">
-          {!selectedTopic ? (
+          {!effectiveTopicId ? (
             <Card>
               <CardContent className="py-16 text-center">
                 <Trophy className="h-16 w-16 mx-auto text-muted-foreground/30 mb-4" />
@@ -330,7 +343,7 @@ export default function TopicRecommender() {
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <h2 className="text-lg font-semibold">
-                  {t("recommender.topRecommendationsFor", { name: translateTopic(t, selectedTopic.id, selectedTopic.name) })}
+                  {t("recommender.topRecommendationsFor", { name: translateTopic(t, effectiveTopic?.id ?? "", effectiveTopic?.name ?? urlTopicId ?? "") })}
                 </h2>
                 <Badge>{t("recommender.resultsCount", { count: recommendations.length })}</Badge>
               </div>

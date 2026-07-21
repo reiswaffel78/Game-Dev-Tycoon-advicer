@@ -35,9 +35,13 @@ function AppRoutes() {
   return (
     <Switch>
       <Route path="/" component={Dashboard} />
+      <Route path="/recommend/topic/:topicId" component={TopicRecommender} />
       <Route path="/recommend/topic" component={TopicRecommender} />
+      <Route path="/recommend/genre/:genreId" component={GenreRecommender} />
       <Route path="/recommend/genre" component={GenreRecommender} />
+      <Route path="/recommend/platform/:platformId" component={PlatformRecommender} />
       <Route path="/recommend/platform" component={PlatformRecommender} />
+      <Route path="/sliders/:genreId" component={SliderPresets} />
       <Route path="/sliders" component={SliderPresets} />
       <Route path="/game-dev-tycoon-guide" component={GameDevTycoonGuide} />
       <Route path="/game-dev-tycoon-best-combos" component={GameDevTycoonBestCombos} />

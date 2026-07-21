@@ -8,7 +8,7 @@ import type { TFunction } from "i18next";
 import { useShareNudge } from "@/hooks/use-share-nudge";
 import { NextStepCTA } from "@/components/next-step-cta";
 import { SlidersHorizontal, Search, Info, Zap, Cpu, Sparkles, Layers, X, ArrowRightLeft, BookOpen } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useParams } from "wouter";
 import { useLocalizedHref, useLocale } from "@/lib/locale";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -212,6 +212,7 @@ function GenreSelector({
 }
 
 export default function SliderPresets() {
+  const { genreId: urlGenreId } = useParams<{ genreId?: string }>();
   const { t } = useTranslation();
   const [multiGenreMode, setMultiGenreMode] = useState(false);
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
@@ -223,9 +224,20 @@ export default function SliderPresets() {
     queryKey: ["/api/genres"],
   });
 
+  const urlGenre = urlGenreId && genres
+    ? (genres.find((g) => g.id === urlGenreId) ?? null)
+    : null;
+
+  useEffect(() => {
+    if (urlGenre && !selectedGenre && !multiGenreMode) setSelectedGenre(urlGenre);
+  }, [urlGenre]);
+
+  const effectiveGenre = selectedGenre ?? urlGenre;
+  const effectiveGenreId = effectiveGenre?.id ?? urlGenreId;
+
   const { data: singlePresets, isLoading: singlePresetsLoading } = useQuery<SliderPreset[]>({
-    queryKey: ["/api/sliders", selectedGenre?.id],
-    enabled: !!selectedGenre && !multiGenreMode,
+    queryKey: ["/api/sliders", effectiveGenreId],
+    enabled: !!effectiveGenreId && !multiGenreMode,
   });
 
   const { data: multiPresets, isLoading: multiPresetsLoading } = useQuery<SliderPreset[]>({
@@ -243,7 +255,7 @@ export default function SliderPresets() {
   }, [presets]);
   const hasSelection = multiGenreMode
     ? !!selectedGenre && !!secondaryGenre
-    : !!selectedGenre;
+    : !!effectiveGenreId;
 
   const handleToggleMultiGenre = () => {
     if (multiGenreMode) {
@@ -266,13 +278,13 @@ export default function SliderPresets() {
         primary: translateGenre(t, selectedGenre.id, selectedGenre.name),
         secondary: translateGenre(t, secondaryGenre.id, secondaryGenre.name),
       })
-    : selectedGenre
-      ? t("recommender.sliderPresetsFor", { name: translateGenre(t, selectedGenre.id, selectedGenre.name) })
+    : effectiveGenre
+      ? t("recommender.sliderPresetsFor", { name: translateGenre(t, effectiveGenre.id, effectiveGenre.name) })
       : "";
 
   const displayGenreId = multiGenreMode && selectedGenre && secondaryGenre
     ? `${selectedGenre.id}-${secondaryGenre.id}`
-    : selectedGenre?.id || "";
+    : effectiveGenreId || "";
 
   const locale = useLocale();
 
@@ -488,7 +500,7 @@ export default function SliderPresets() {
           ) : genres ? (
             <GenreSelector
               genres={genres}
-              selectedGenre={selectedGenre}
+              selectedGenre={effectiveGenre}
               onSelect={setSelectedGenre}
               search={search}
               onSearchChange={setSearch}

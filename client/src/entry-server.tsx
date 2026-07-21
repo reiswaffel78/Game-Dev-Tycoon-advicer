@@ -31,6 +31,15 @@ const KNOWN_ROUTES = new Set([
   "/privacy",
 ]);
 
+function isKnownRoute(basePath: string): boolean {
+  if (KNOWN_ROUTES.has(basePath)) return true;
+  if (/^\/recommend\/topic\/[^/]+$/.test(basePath)) return true;
+  if (/^\/recommend\/genre\/[^/]+$/.test(basePath)) return true;
+  if (/^\/recommend\/platform\/[^/]+$/.test(basePath)) return true;
+  if (/^\/sliders\/[^/]+$/.test(basePath)) return true;
+  return false;
+}
+
 interface RenderResult {
   html: string;
   helmet: HelmetServerState;
@@ -62,7 +71,14 @@ export async function render(
 
   if (prefetchedQueries) {
     for (const [key, data] of Object.entries(prefetchedQueries)) {
-      queryClient.setQueryData([key], data);
+      let queryKey: unknown[];
+      try {
+        const parsed = JSON.parse(key);
+        queryKey = Array.isArray(parsed) ? parsed : [key];
+      } catch {
+        queryKey = [key];
+      }
+      queryClient.setQueryData(queryKey, data);
     }
   }
 
@@ -85,7 +101,7 @@ export async function render(
   const dehydratedState = dehydrate(queryClient);
   queryClient.clear();
 
-  const statusCode = KNOWN_ROUTES.has(basePath) ? 200 : 404;
+  const statusCode = isKnownRoute(basePath) ? 200 : 404;
 
   return {
     html,

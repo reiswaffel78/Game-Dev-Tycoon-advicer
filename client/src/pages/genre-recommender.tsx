@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
@@ -198,6 +199,7 @@ function RecommendationCard({
 }
 
 export default function GenreRecommender() {
+  const { genreId: urlGenreId } = useParams<{ genreId?: string }>();
   const { t } = useTranslation();
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
   const [search, setSearch] = useState("");
@@ -206,13 +208,24 @@ export default function GenreRecommender() {
     queryKey: ["/api/genres"],
   });
 
+  const urlGenre = urlGenreId && genres
+    ? (genres.find((g) => g.id === urlGenreId) ?? null)
+    : null;
+
+  useEffect(() => {
+    if (urlGenre && !selectedGenre) setSelectedGenre(urlGenre);
+  }, [urlGenre]);
+
+  const effectiveGenre = selectedGenre ?? urlGenre;
+  const effectiveGenreId = effectiveGenre?.id ?? urlGenreId;
+
   const { registerInteraction } = useShareNudge();
 
   const { data: recommendations, isLoading: recsLoading } = useQuery<
     RecommendationResult[]
   >({
-    queryKey: ["/api/recommend/genre", selectedGenre?.id],
-    enabled: !!selectedGenre,
+    queryKey: ["/api/recommend/genre", effectiveGenreId],
+    enabled: !!effectiveGenreId,
   });
 
   useEffect(() => {
@@ -271,7 +284,7 @@ export default function GenreRecommender() {
                       key={genre.id}
                       onClick={() => setSelectedGenre(genre)}
                       className={`w-full text-left px-3 py-2.5 rounded-md transition-colors ${
-                        selectedGenre?.id === genre.id
+                        effectiveGenre?.id === genre.id
                           ? "bg-primary text-primary-foreground"
                           : "hover-elevate"
                       }`}
@@ -287,7 +300,7 @@ export default function GenreRecommender() {
         </Card>
 
         <div className="space-y-4">
-          {!selectedGenre ? (
+          {!effectiveGenreId ? (
             <Card>
               <CardContent className="py-16 text-center">
                 <Trophy className="h-16 w-16 mx-auto text-muted-foreground/30 mb-4" />
@@ -317,7 +330,7 @@ export default function GenreRecommender() {
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <h2 className="text-lg font-semibold">
-                  {t("recommender.topRecommendationsFor", { name: translateGenre(t, selectedGenre.id, selectedGenre.name) })}
+                  {t("recommender.topRecommendationsFor", { name: translateGenre(t, effectiveGenre?.id ?? "", effectiveGenre?.name ?? urlGenreId ?? "") })}
                 </h2>
                 <Badge>{t("recommender.resultsCount", { count: recommendations.length })}</Badge>
               </div>

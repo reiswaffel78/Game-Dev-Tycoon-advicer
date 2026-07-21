@@ -57,6 +57,9 @@ export interface SeoPageConfig {
   titleSuffixKey: string;
   shortSuffixKey?: string;
   schemaType?: "WebApplication" | "Article";
+  datePublished?: string;
+  dateModified?: string;
+  author?: string;
 }
 
 const MAX_TITLE_LENGTH = 60;
@@ -105,6 +108,8 @@ export const SEO_CONFIG: Record<PageKey, SeoPageConfig> = {
     titleSuffixKey: "seo.brand",
     shortSuffixKey: "seo.shortBrand",
     schemaType: "Article",
+    datePublished: "2024-06-01",
+    dateModified: "2025-07-01",
   },
   bestCombos: {
     path: "/game-dev-tycoon-best-combos",
@@ -113,6 +118,8 @@ export const SEO_CONFIG: Record<PageKey, SeoPageConfig> = {
     titleSuffixKey: "seo.brand",
     shortSuffixKey: "seo.shortBrand",
     schemaType: "Article",
+    datePublished: "2024-06-01",
+    dateModified: "2025-07-01",
   },
   slidersExplained: {
     path: "/game-dev-tycoon-sliders",
@@ -121,6 +128,8 @@ export const SEO_CONFIG: Record<PageKey, SeoPageConfig> = {
     titleSuffixKey: "seo.brand",
     shortSuffixKey: "seo.shortBrand",
     schemaType: "Article",
+    datePublished: "2024-06-01",
+    dateModified: "2025-07-01",
   },
   researchOrder: {
     path: "/game-dev-tycoon-research-order",
@@ -129,6 +138,8 @@ export const SEO_CONFIG: Record<PageKey, SeoPageConfig> = {
     titleSuffixKey: "seo.brand",
     shortSuffixKey: "seo.shortBrand",
     schemaType: "Article",
+    datePublished: "2024-08-01",
+    dateModified: "2025-07-01",
   },
   planner: {
     path: "/planner",

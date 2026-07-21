@@ -75,7 +75,8 @@ export function useLocaleLocation(): [
 
   const navigate = useCallback(
     (to: string, options?: { replace?: boolean }) => {
-      const target = buildLocalizedPath(to, locale);
+      const { basePath: toBase } = extractLocaleFromPath(to);
+      const target = buildLocalizedPath(toBase, locale);
       if (options?.replace) {
         window.history.replaceState(null, "", target);
       } else {

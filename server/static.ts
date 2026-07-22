@@ -156,9 +156,17 @@ export async function serveStatic(app: Express) {
   app.use("/{*path}", async (req, res) => {
     const url = req.originalUrl;
     
-    // Skip SSR for API routes and static assets
-    if (url.startsWith("/api/") || url.includes(".")) {
-      return res.sendFile(path.resolve(distPath, "index.html"));
+    // API routes are handled by their own Express handlers before this middleware
+    if (url.startsWith("/api/")) {
+      return res.sendStatus(404);
+    }
+
+    // Requests with a file extension that weren't served by express.static
+    // (i.e. the file doesn't exist) should return a real 404, not the app shell.
+    // This prevents soft-404 crawl noise for probes like /ads.txt, /security.txt,
+    // broken asset URLs, etc.
+    if (url.includes(".")) {
+      return res.sendStatus(404);
     }
 
     const normalizedUrl = normalizeLocalizedUrl(url);

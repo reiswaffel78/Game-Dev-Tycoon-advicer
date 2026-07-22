@@ -72,6 +72,16 @@ async function prefetchForRoute(basePath: string): Promise<Record<string, unknow
       ]);
       queries["/api/stats"] = { ...stats, lastUpdate: getLastUpdate() };
       queries["/api/top-combos"] = combos;
+    } else if (basePath === "/recommend/topic") {
+      queries["/api/topics"] = await storage.getAllTopics();
+    } else if (basePath === "/recommend/genre") {
+      queries["/api/genres"] = await storage.getAllGenres();
+    } else if (basePath === "/recommend/platform") {
+      queries["/api/platforms"] = await storage.getAllPlatforms();
+    } else if (basePath === "/sliders") {
+      queries["/api/genres"] = await storage.getAllGenres();
+    } else if (basePath === "/sources") {
+      queries["/api/sources"] = await storage.getAllSources();
     } else if (basePath === "/research") {
       queries["/api/research"] = await storage.getAllResearchItems();
     } else if (basePath === "/staff") {

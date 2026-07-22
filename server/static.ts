@@ -8,6 +8,7 @@ import {
   getRecommendationsByGenre,
   getRecommendationsByPlatform,
   getSliderPresets,
+  getTopCombinations,
 } from "./recommendation-engine";
 
 type SSRModule = {
@@ -53,10 +54,25 @@ function normalizeLocalizedUrl(originalUrl: string): string {
   return `${normalizedBase}${url.search}${url.hash}`;
 }
 
+function getLastUpdate(): string {
+  return new Date().toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
 async function prefetchForRoute(basePath: string): Promise<Record<string, unknown>> {
   const queries: Record<string, unknown> = {};
   try {
-    if (basePath === "/research") {
+    if (basePath === "/") {
+      const [stats, combos] = await Promise.all([
+        storage.getStats(),
+        getTopCombinations(),
+      ]);
+      queries["/api/stats"] = { ...stats, lastUpdate: getLastUpdate() };
+      queries["/api/top-combos"] = combos;
+    } else if (basePath === "/research") {
       queries["/api/research"] = await storage.getAllResearchItems();
     } else if (basePath === "/staff") {
       queries["/api/staff-tips"] = await storage.getAllStaffTips();

@@ -1,1 +1,2 @@
 - [SEO JSON-LD locale pattern](jsonld-locale.md) — use `useLocale()` for SSR-safe locale; reuse existing `locale` from `extractLocaleFromPath` if already available to avoid duplicate declaration errors.
+- [No manualChunks or React.lazy in production](no-chunk-splitting.md) — Replit autoscale deployment silently fails to load split JS chunks; always use a single eager bundle.

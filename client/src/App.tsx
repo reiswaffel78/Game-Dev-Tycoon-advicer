@@ -1,4 +1,3 @@
-import { lazy, Suspense } from "react";
 import { Switch, Route } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,65 +11,54 @@ import { Footer } from "@/components/footer";
 import { ShareNudge } from "@/components/share-nudge";
 import { ShareNudgeProvider } from "@/hooks/use-share-nudge";
 import { useFirstVisitToday } from "@/hooks/use-first-visit-today";
-
-const Dashboard = lazy(() => import("@/pages/dashboard"));
-const TopicRecommender = lazy(() => import("@/pages/topic-recommender"));
-const GenreRecommender = lazy(() => import("@/pages/genre-recommender"));
-const PlatformRecommender = lazy(() => import("@/pages/platform-recommender"));
-const SliderPresets = lazy(() => import("@/pages/slider-presets"));
-const GameDevTycoonGuide = lazy(() => import("@/pages/game-dev-tycoon-guide"));
-const GameDevTycoonBestCombos = lazy(() => import("@/pages/game-dev-tycoon-best-combos"));
-const GameDevTycoonSliders = lazy(() => import("@/pages/game-dev-tycoon-sliders"));
-const GameDevTycoonResearchOrder = lazy(() => import("@/pages/game-dev-tycoon-research-order"));
-const Planner = lazy(() => import("@/pages/planner"));
-const Sources = lazy(() => import("@/pages/sources"));
-const Research = lazy(() => import("@/pages/research"));
-const Staff = lazy(() => import("@/pages/staff"));
-const Timeline = lazy(() => import("@/pages/timeline"));
-const Checklist = lazy(() => import("@/pages/checklist"));
-const FAQ = lazy(() => import("@/pages/faq"));
-const Handbuch = lazy(() => import("@/pages/handbuch"));
-const AppGuide = lazy(() => import("@/pages/app-guide"));
-const Privacy = lazy(() => import("@/pages/privacy"));
-
-function RouteLoadingFallback() {
-  return (
-    <div className="flex flex-1 items-center justify-center py-24">
-      <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
-    </div>
-  );
-}
+import Dashboard from "@/pages/dashboard";
+import TopicRecommender from "@/pages/topic-recommender";
+import GenreRecommender from "@/pages/genre-recommender";
+import PlatformRecommender from "@/pages/platform-recommender";
+import SliderPresets from "@/pages/slider-presets";
+import GameDevTycoonGuide from "@/pages/game-dev-tycoon-guide";
+import GameDevTycoonBestCombos from "@/pages/game-dev-tycoon-best-combos";
+import GameDevTycoonSliders from "@/pages/game-dev-tycoon-sliders";
+import GameDevTycoonResearchOrder from "@/pages/game-dev-tycoon-research-order";
+import Planner from "@/pages/planner";
+import Sources from "@/pages/sources";
+import Research from "@/pages/research";
+import Staff from "@/pages/staff";
+import Timeline from "@/pages/timeline";
+import Checklist from "@/pages/checklist";
+import FAQ from "@/pages/faq";
+import Handbuch from "@/pages/handbuch";
+import AppGuide from "@/pages/app-guide";
+import Privacy from "@/pages/privacy";
 
 function AppRoutes() {
   return (
-    <Suspense fallback={<RouteLoadingFallback />}>
-      <Switch>
-        <Route path="/" component={Dashboard} />
-        <Route path="/recommend/topic/:topicId" component={TopicRecommender} />
-        <Route path="/recommend/topic" component={TopicRecommender} />
-        <Route path="/recommend/genre/:genreId" component={GenreRecommender} />
-        <Route path="/recommend/genre" component={GenreRecommender} />
-        <Route path="/recommend/platform/:platformId" component={PlatformRecommender} />
-        <Route path="/recommend/platform" component={PlatformRecommender} />
-        <Route path="/sliders/:genreId" component={SliderPresets} />
-        <Route path="/sliders" component={SliderPresets} />
-        <Route path="/game-dev-tycoon-guide" component={GameDevTycoonGuide} />
-        <Route path="/game-dev-tycoon-best-combos" component={GameDevTycoonBestCombos} />
-        <Route path="/game-dev-tycoon-sliders" component={GameDevTycoonSliders} />
-        <Route path="/game-dev-tycoon-research-order" component={GameDevTycoonResearchOrder} />
-        <Route path="/planner" component={Planner} />
-        <Route path="/research" component={Research} />
-        <Route path="/staff" component={Staff} />
-        <Route path="/timeline" component={Timeline} />
-        <Route path="/checklist" component={Checklist} />
-        <Route path="/faq" component={FAQ} />
-        <Route path="/handbuch" component={Handbuch} />
-        <Route path="/app-guide" component={AppGuide} />
-        <Route path="/sources" component={Sources} />
-        <Route path="/privacy" component={Privacy} />
-        <Route component={NotFound} />
-      </Switch>
-    </Suspense>
+    <Switch>
+      <Route path="/" component={Dashboard} />
+      <Route path="/recommend/topic/:topicId" component={TopicRecommender} />
+      <Route path="/recommend/topic" component={TopicRecommender} />
+      <Route path="/recommend/genre/:genreId" component={GenreRecommender} />
+      <Route path="/recommend/genre" component={GenreRecommender} />
+      <Route path="/recommend/platform/:platformId" component={PlatformRecommender} />
+      <Route path="/recommend/platform" component={PlatformRecommender} />
+      <Route path="/sliders/:genreId" component={SliderPresets} />
+      <Route path="/sliders" component={SliderPresets} />
+      <Route path="/game-dev-tycoon-guide" component={GameDevTycoonGuide} />
+      <Route path="/game-dev-tycoon-best-combos" component={GameDevTycoonBestCombos} />
+      <Route path="/game-dev-tycoon-sliders" component={GameDevTycoonSliders} />
+      <Route path="/game-dev-tycoon-research-order" component={GameDevTycoonResearchOrder} />
+      <Route path="/planner" component={Planner} />
+      <Route path="/research" component={Research} />
+      <Route path="/staff" component={Staff} />
+      <Route path="/timeline" component={Timeline} />
+      <Route path="/checklist" component={Checklist} />
+      <Route path="/faq" component={FAQ} />
+      <Route path="/handbuch" component={Handbuch} />
+      <Route path="/app-guide" component={AppGuide} />
+      <Route path="/sources" component={Sources} />
+      <Route path="/privacy" component={Privacy} />
+      <Route component={NotFound} />
+    </Switch>
   );
 }
 

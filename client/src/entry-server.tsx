@@ -5,7 +5,7 @@ import { HelmetProvider } from "react-helmet-async";
 import type { HelmetServerState } from "react-helmet-async";
 import { I18nextProvider } from "react-i18next";
 import { QueryClient, QueryClientProvider, dehydrate, HydrationBoundary } from "@tanstack/react-query";
-import App from "./App";
+import AppSSR from "./AppSSR";
 import { extractLocaleFromPath } from "@/lib/locale";
 import { createI18nInstance, initI18n } from "@/lib/i18n";
 
@@ -90,7 +90,7 @@ export async function render(
         <Router hook={staticHook}>
           <QueryClientProvider client={queryClient}>
             <HydrationBoundary state={dehydrate(queryClient)}>
-              <App />
+              <AppSSR />
             </HydrationBoundary>
           </QueryClientProvider>
         </Router>

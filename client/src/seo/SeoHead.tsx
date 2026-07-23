@@ -71,12 +71,16 @@ export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
           headline: title,
           description,
           url: canonicalUrl,
+          mainEntityOfPage: canonicalUrl,
+          image: `${BASE_URL}/og-image.png`,
           inLanguage: locale,
           isPartOf: { "@id": WEBSITE_ID },
           publisher: { "@id": ORG_ID },
+          author: author
+            ? { "@type": "Person", name: author }
+            : { "@type": "Organization", name: "Game Dev Tycoon Advisor" },
           ...(datePublished ? { datePublished } : {}),
           ...(dateModified ? { dateModified } : {}),
-          ...(author ? { author: { "@type": "Person", name: author } } : {}),
         }
       : {
           "@context": "https://schema.org",

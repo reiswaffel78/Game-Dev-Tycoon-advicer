@@ -35,10 +35,11 @@ const identityGraph = {
 
 interface SeoHeadProps {
   pageKey: PageKey;
+  dynamicSlug?: string;
   jsonLdExtra?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
+export function SeoHead({ pageKey, dynamicSlug, jsonLdExtra }: SeoHeadProps) {
   const { t, i18n } = useTranslation();
   const locale: Locale = isLocale(i18n.language)
     ? i18n.language
@@ -59,8 +60,8 @@ export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
       : shortTitleLen <= MAX_TITLE
         ? shortTitle
         : title;
-  const canonicalUrl = getCanonicalUrl(pageKey, locale);
-  const alternates = getHreflangLinks(pageKey);
+  const canonicalUrl = getCanonicalUrl(pageKey, locale, dynamicSlug);
+  const alternates = getHreflangLinks(pageKey, dynamicSlug);
   const resolvedSchemaType = schemaType ?? "WebApplication";
 
   const jsonLd =
@@ -114,7 +115,7 @@ export function SeoHead({ pageKey, jsonLdExtra }: SeoHeadProps) {
           href={alternate.href}
         />
       ))}
-      <link rel="alternate" hrefLang="x-default" href={getXDefaultHref(pageKey)} />
+      <link rel="alternate" hrefLang="x-default" href={getXDefaultHref(pageKey, dynamicSlug)} />
 
       <meta property="og:title" content={resolvedTitle} />
       <meta property="og:description" content={description} />

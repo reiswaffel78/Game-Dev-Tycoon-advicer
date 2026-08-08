@@ -290,7 +290,7 @@ export default function PlatformRecommender() {
 
   return (
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
-      <SeoHead pageKey="platformRecommender" />
+      <SeoHead pageKey="platformRecommender" dynamicSlug={urlPlatformId} />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Monitor className="h-6 w-6 text-primary" />

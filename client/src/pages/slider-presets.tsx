@@ -290,12 +290,12 @@ export default function SliderPresets() {
 
   return (
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
-      <SeoHead pageKey="sliders" jsonLdExtra={useMemo(() => ({
+      <SeoHead pageKey="sliders" dynamicSlug={urlGenreId} jsonLdExtra={useMemo(() => ({
         "@context": "https://schema.org",
         "@type": "Dataset",
         name: t("sliders.title"),
         description: t("sliders.subtitle"),
-        url: getCanonicalUrl("sliders", locale),
+        url: getCanonicalUrl("sliders", locale, urlGenreId),
         inLanguage: locale,
         keywords: ["Game Dev Tycoon", "slider presets", "development focus", "genre settings", "game development sliders"],
         creator: {

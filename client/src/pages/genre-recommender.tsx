@@ -238,7 +238,7 @@ export default function GenreRecommender() {
 
   return (
     <div className="p-6 space-y-6 max-w-7xl mx-auto">
-      <SeoHead pageKey="genreRecommender" />
+      <SeoHead pageKey="genreRecommender" dynamicSlug={urlGenreId} />
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
           <Layers className="h-6 w-6 text-primary" />

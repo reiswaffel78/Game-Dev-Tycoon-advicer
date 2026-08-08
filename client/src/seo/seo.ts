@@ -217,28 +217,33 @@ export function getSeoConfig(pageKey: PageKey): SeoPageConfig {
   return SEO_CONFIG[pageKey];
 }
 
-export function getCanonicalPath(pageKey: PageKey, locale: Locale): string {
-  return buildLocalizedPath(SEO_CONFIG[pageKey].path, locale);
+export function getCanonicalPath(pageKey: PageKey, locale: Locale, dynamicSlug?: string): string {
+  const basePath = dynamicSlug
+    ? `${SEO_CONFIG[pageKey].path}/${dynamicSlug}`
+    : SEO_CONFIG[pageKey].path;
+  return buildLocalizedPath(basePath, locale);
 }
 
-export function getCanonicalUrl(pageKey: PageKey, locale: Locale): string {
-  return `${BASE_URL}${getCanonicalPath(pageKey, locale)}`;
+export function getCanonicalUrl(pageKey: PageKey, locale: Locale, dynamicSlug?: string): string {
+  return `${BASE_URL}${getCanonicalPath(pageKey, locale, dynamicSlug)}`;
 }
 
-export function getHreflangLinks(pageKey: PageKey): Array<{
+export function getHreflangLinks(pageKey: PageKey, dynamicSlug?: string): Array<{
   locale: Locale;
   href: string;
 }> {
-  const { path } = SEO_CONFIG[pageKey];
+  const basePath = dynamicSlug
+    ? `${SEO_CONFIG[pageKey].path}/${dynamicSlug}`
+    : SEO_CONFIG[pageKey].path;
   return SUPPORTED_LOCALES.map((locale) => ({
     locale,
-    href: `${BASE_URL}${buildLocalizedPath(path, locale)}`,
+    href: `${BASE_URL}${buildLocalizedPath(basePath, locale)}`,
   }));
 }
 
-export function getXDefaultHref(pageKey: PageKey): string {
-  return `${BASE_URL}${buildLocalizedPath(
-    SEO_CONFIG[pageKey].path,
-    DEFAULT_LOCALE,
-  )}`;
+export function getXDefaultHref(pageKey: PageKey, dynamicSlug?: string): string {
+  const basePath = dynamicSlug
+    ? `${SEO_CONFIG[pageKey].path}/${dynamicSlug}`
+    : SEO_CONFIG[pageKey].path;
+  return `${BASE_URL}${buildLocalizedPath(basePath, DEFAULT_LOCALE)}`;
 }

@@ -1,0 +1,70 @@
+Fix a critical SEO canonical/hreflang bug in my hosted project `gamedevtycoonadvisor.com`.
+
+Context: Google Search Console discovered about 1,250 URLs from the sitemap, but only about 200 are indexed. I verified that dynamic detail pages incorrectly canonicalize to their parent overview page.
+
+Examples of the current broken behavior:
+
+* `https://gamedevtycoonadvisor.com/recommend/topic/aliens`
+  currently canonicalizes to `https://gamedevtycoonadvisor.com/recommend/topic`
+* `https://gamedevtycoonadvisor.com/recommend/topic/aliens/de/`
+  currently canonicalizes to `https://gamedevtycoonadvisor.com/recommend/topic/de/`
+* `https://gamedevtycoonadvisor.com/recommend/platform/pc/ja/`
+  currently canonicalizes to `https://gamedevtycoonadvisor.com/recommend/platform/ja/`
+* `https://gamedevtycoonadvisor.com/sliders/action/fr/`
+  currently canonicalizes to `https://gamedevtycoonadvisor.com/sliders/fr/`
+
+This makes Google treat every detail page as a duplicate of its category page.
+
+Your task:
+
+1. Inspect the existing routing, SEO metadata, sitemap generation, canonical-tag generation, and hreflang logic. Do not rewrite unrelated parts of the application.
+2. Fix canonical tags so every indexable detail page has a self-referencing canonical URL.
+3. Fix hreflang tags so every language version links to the equivalent detail page, not to the parent overview page.
+4. Ensure the sitemap contains only indexable canonical URLs and uses the same URL format as the canonical tags. Preserve the existing trailing-slash convention consistently.
+5. Keep the English URL as `x-default` where appropriate.
+6. Do not use the Google Indexing API. This is a normal content site, and the correct discovery method is the XML sitemap plus internal links.
+7. Confirm that all pages return HTTP 200, have no `noindex`, and are server-rendered or otherwise visible in the initial HTML to Googlebot.
+
+Expected examples after the fix:
+
+```html
+<!-- English topic detail -->
+<link rel="canonical" href="https://gamedevtycoonadvisor.com/recommend/topic/aliens">
+<link rel="alternate" hreflang="en" href="https://gamedevtycoonadvisor.com/recommend/topic/aliens">
+<link rel="alternate" hreflang="de" href="https://gamedevtycoonadvisor.com/recommend/topic/aliens/de/">
+<link rel="alternate" hreflang="fr" href="https://gamedevtycoonadvisor.com/recommend/topic/aliens/fr/">
+<link rel="alternate" hreflang="x-default" href="https://gamedevtycoonadvisor.com/recommend/topic/aliens">
+```
+
+```html
+<!-- German topic detail -->
+<link rel="canonical" href="https://gamedevtycoonadvisor.com/recommend/topic/aliens/de/">
+<link rel="alternate" hreflang="en" href="https://gamedevtycoonadvisor.com/recommend/topic/aliens">
+<link rel="alternate" hreflang="de" href="https://gamedevtycoonadvisor.com/recommend/topic/aliens/de/">
+<link rel="alternate" hreflang="fr" href="https://gamedevtycoonadvisor.com/recommend/topic/aliens/fr/">
+<link rel="alternate" hreflang="x-default" href="https://gamedevtycoonadvisor.com/recommend/topic/aliens">
+```
+
+Apply this consistently to these route families:
+
+* `/recommend/topic/[topic]`
+* `/recommend/platform/[platform]`
+* `/recommend/genre/[genre]`
+* `/sliders/[genre]`
+* their respective translated routes
+* any other dynamic SEO landing-page route found in the project
+
+Validation required before finishing:
+
+* Inspect the rendered HTML for these URLs:
+
+  * `/recommend/topic/aliens`
+  * `/recommend/topic/aliens/de/`
+  * `/recommend/platform/pc/ja/`
+  * `/sliders/action/fr/`
+* Confirm that canonical equals the current URL for each example.
+* Confirm that hreflang links point to equivalent detail URLs in every language.
+* Confirm that every sitemap URL has a self-referencing canonical.
+* Provide a concise final report: changed files, root cause, tests performed, and the live URLs tested.
+
+After deployment, I will submit the sitemap once in Google Search Console and manually request indexing only for a few representative test URLs—not all 1,000 pages.

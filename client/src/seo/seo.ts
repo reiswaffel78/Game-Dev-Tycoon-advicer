@@ -219,7 +219,7 @@ export function getSeoConfig(pageKey: PageKey): SeoPageConfig {
 
 export function getCanonicalPath(pageKey: PageKey, locale: Locale, dynamicSlug?: string): string {
   const basePath = dynamicSlug
-    ? `${SEO_CONFIG[pageKey].path}/${dynamicSlug}`
+    ? `${SEO_CONFIG[pageKey].path}/${encodeURIComponent(dynamicSlug)}`
     : SEO_CONFIG[pageKey].path;
   return buildLocalizedPath(basePath, locale);
 }
@@ -233,7 +233,7 @@ export function getHreflangLinks(pageKey: PageKey, dynamicSlug?: string): Array<
   href: string;
 }> {
   const basePath = dynamicSlug
-    ? `${SEO_CONFIG[pageKey].path}/${dynamicSlug}`
+    ? `${SEO_CONFIG[pageKey].path}/${encodeURIComponent(dynamicSlug)}`
     : SEO_CONFIG[pageKey].path;
   return SUPPORTED_LOCALES.map((locale) => ({
     locale,
@@ -243,7 +243,7 @@ export function getHreflangLinks(pageKey: PageKey, dynamicSlug?: string): Array<
 
 export function getXDefaultHref(pageKey: PageKey, dynamicSlug?: string): string {
   const basePath = dynamicSlug
-    ? `${SEO_CONFIG[pageKey].path}/${dynamicSlug}`
+    ? `${SEO_CONFIG[pageKey].path}/${encodeURIComponent(dynamicSlug)}`
     : SEO_CONFIG[pageKey].path;
   return `${BASE_URL}${buildLocalizedPath(basePath, DEFAULT_LOCALE)}`;
 }

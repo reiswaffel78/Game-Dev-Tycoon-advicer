@@ -294,4 +294,40 @@ await Promise.all(
   }),
 );
 
+// ── Slug encoding unit tests (pure-function, no render required) ──────────────
+// Slug with hyphens: must pass through unchanged.
+assert.equal(
+  getCanonicalUrl("topicRecommender", "en", "sci-fi"),
+  `${BASE_URL}/recommend/topic/sci-fi`,
+  "slug with hyphens: canonical must be unchanged",
+);
+
+// Slug with numbers: must pass through unchanged.
+assert.equal(
+  getCanonicalUrl("topicRecommender", "en", "topic-42"),
+  `${BASE_URL}/recommend/topic/topic-42`,
+  "slug with numbers: canonical must be unchanged",
+);
+
+// Slug with a space: must be percent-encoded.
+assert.equal(
+  getCanonicalUrl("topicRecommender", "en", "sci fi"),
+  `${BASE_URL}/recommend/topic/sci%20fi`,
+  "slug with space: canonical must be percent-encoded",
+);
+
+// Slug with a slash: must be percent-encoded so the path stays well-formed.
+assert.equal(
+  getCanonicalUrl("topicRecommender", "en", "action/rpg"),
+  `${BASE_URL}/recommend/topic/action%2Frpg`,
+  "slug with slash: canonical must be percent-encoded",
+);
+
+// getXDefaultHref must also encode special chars.
+assert.equal(
+  getXDefaultHref("topicRecommender", "sci fi"),
+  `${BASE_URL}/recommend/topic/sci%20fi`,
+  "getXDefaultHref: slug with space must be percent-encoded",
+);
+
 console.log("SEO head checks passed.");

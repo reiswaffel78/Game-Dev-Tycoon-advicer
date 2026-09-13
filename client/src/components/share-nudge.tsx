@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useShareNudge } from "@/hooks/use-share-nudge";
 import { Share2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { trackEvent } from "@/lib/analytics";
 
 export function ShareNudge() {
   const { visible, dismiss, handleShare } = useShareNudge();
@@ -27,7 +28,12 @@ export function ShareNudge() {
             </p>
             <Button
               size="sm"
-              onClick={handleShare}
+              onClick={() => {
+                trackEvent("share_clicked", {
+                  location: "share_nudge",
+                });
+                handleShare();
+              }}
               className="gap-2"
               data-testid="button-share-nudge"
             >
@@ -36,7 +42,10 @@ export function ShareNudge() {
             </Button>
           </div>
           <button
-            onClick={dismiss}
+            onClick={() => {
+              trackEvent("share_nudge_dismissed");
+              dismiss();
+            }}
             className="shrink-0 rounded-md p-1 text-muted-foreground hover:text-foreground transition-colors"
             aria-label="Close"
             data-testid="button-share-nudge-close"

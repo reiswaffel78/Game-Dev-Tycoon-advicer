@@ -6,6 +6,7 @@ import { SeoHead } from "@/seo/SeoHead";
 import { useShareNudge } from "@/hooks/use-share-nudge";
 import { NextStepCTA } from "@/components/next-step-cta";
 import { translateGenre, translateTopic, translateAudience, translatePlatform } from "@/lib/translate-data";
+import { trackEvent } from "@/lib/analytics";
 import {
   Monitor,
   Search,
@@ -336,7 +337,13 @@ export default function PlatformRecommender() {
                       key={platform.id}
                       platform={platform}
                       isSelected={effectivePlatform?.id === platform.id}
-                      onClick={() => setSelectedPlatform(platform)}
+                      onClick={() => {
+                        setSelectedPlatform(platform);
+                        trackEvent("recommendation_requested", {
+                          type: "platform",
+                          selection_id: platform.id,
+                        });
+                      }}
                     />
                   ))}
                 </div>

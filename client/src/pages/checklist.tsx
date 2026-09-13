@@ -23,6 +23,7 @@ import {
   RotateCcw,
 } from "lucide-react";
 import { apiRequest, queryClient } from "@/lib/queryClient";
+import { trackEvent } from "@/lib/analytics";
 import type { TimelineMilestone, UserChecklistItem } from "@shared/schema";
 
 function getOrCreateSessionId(): string {
@@ -94,8 +95,11 @@ export default function ChecklistPage() {
     mutationFn: async (data: { sessionId: string; milestoneId?: string; customText?: string }) => {
       return apiRequest("POST", "/api/checklist", data);
     },
-    onSuccess: () => {
+    onSuccess: (_data, variables) => {
       queryClient.invalidateQueries({ queryKey: ["/api/checklist", sessionId] });
+      trackEvent("checklist_item_added", {
+        item_type: variables.milestoneId ? "milestone" : "custom",
+      });
     },
   });
 
@@ -105,9 +109,12 @@ export default function ChecklistPage() {
     mutationFn: async ({ id, isCompleted }: { id: string; isCompleted: boolean }) => {
       return apiRequest("PATCH", `/api/checklist/${id}`, { isCompleted });
     },
-    onSuccess: () => {
+    onSuccess: (_data, variables) => {
       queryClient.invalidateQueries({ queryKey: ["/api/checklist", sessionId] });
       registerInteraction();
+      trackEvent("checklist_item_toggled", {
+        completed: variables.isCompleted,
+      });
     },
   });
 

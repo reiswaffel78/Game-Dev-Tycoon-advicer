@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { SeoHead } from "@/seo/SeoHead";
 import { BASE_URL, getCanonicalUrl } from "@/seo/seo";
 import { translateGenre } from "@/lib/translate-data";
+import { trackEvent } from "@/lib/analytics";
 import type { TFunction } from "i18next";
 import { useShareNudge } from "@/hooks/use-share-nudge";
 import { NextStepCTA } from "@/components/next-step-cta";
@@ -258,6 +259,9 @@ export default function SliderPresets() {
     : !!effectiveGenreId;
 
   const handleToggleMultiGenre = () => {
+    trackEvent("slider_mode_changed", {
+      mode: multiGenreMode ? "single" : "multi",
+    });
     if (multiGenreMode) {
       setSecondaryGenre(null);
       setSecondarySearch("");
@@ -267,6 +271,10 @@ export default function SliderPresets() {
 
   const handleSwapGenres = () => {
     if (selectedGenre && secondaryGenre) {
+      trackEvent("slider_genres_swapped", {
+        primary_genre_id: selectedGenre.id,
+        secondary_genre_id: secondaryGenre.id,
+      });
       const temp = selectedGenre;
       setSelectedGenre(secondaryGenre);
       setSecondaryGenre(temp);

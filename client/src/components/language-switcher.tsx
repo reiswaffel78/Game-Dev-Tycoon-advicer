@@ -7,6 +7,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Languages } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 import {
   extractLocaleFromPath,
   buildLocalizedPath,
@@ -42,8 +43,12 @@ export function LanguageSwitcher() {
   const switchLocale = (newLocale: Locale) => {
     if (typeof window === "undefined") return;
 
-    const { basePath } = extractLocaleFromPath(window.location.pathname);
+    const { locale: previousLocale, basePath } = extractLocaleFromPath(window.location.pathname);
     const newPath = buildLocalizedPath(basePath, newLocale);
+    trackEvent("language_changed", {
+      from: previousLocale,
+      to: newLocale,
+    });
 
     try {
       localStorage.setItem("i18nextLng", newLocale);

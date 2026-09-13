@@ -48,6 +48,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
+import { trackEvent } from "@/lib/analytics";
 import { SeoHead } from "@/seo/SeoHead";
 import type { Platform, PlannerRecommendation, Topic } from "@shared/schema";
 
@@ -347,6 +348,10 @@ export default function Planner() {
     onSuccess: (data) => {
       setRecommendations(data);
       registerInteraction();
+      trackEvent("plan_generated", {
+        release_count: data.releases.length,
+        research_count: data.researchItems.length,
+      });
     },
     onError: (error) => {
       toast({

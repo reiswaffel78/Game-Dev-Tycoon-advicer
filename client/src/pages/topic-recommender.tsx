@@ -6,6 +6,7 @@ import { SeoHead } from "@/seo/SeoHead";
 import { useShareNudge } from "@/hooks/use-share-nudge";
 import { NextStepCTA } from "@/components/next-step-cta";
 import { translateGenre, translatePlatform, translateAudience, translateTopic } from "@/lib/translate-data";
+import { trackEvent } from "@/lib/analytics";
 import {
   Tag,
   Search,
@@ -283,7 +284,13 @@ export default function TopicRecommender() {
                   {filteredTopics?.map((topic) => (
                     <button
                       key={topic.id}
-                      onClick={() => setSelectedTopic(topic)}
+                      onClick={() => {
+                        setSelectedTopic(topic);
+                        trackEvent("recommendation_requested", {
+                          type: "topic",
+                          selection_id: topic.id,
+                        });
+                      }}
                       className={`w-full text-left px-3 py-2.5 rounded-md transition-colors flex items-center justify-between gap-2 ${
                         effectiveTopic?.id === topic.id
                           ? "bg-primary text-primary-foreground"

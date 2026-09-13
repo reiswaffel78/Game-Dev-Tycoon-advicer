@@ -6,6 +6,7 @@ import { SeoHead } from "@/seo/SeoHead";
 import { useShareNudge } from "@/hooks/use-share-nudge";
 import { NextStepCTA } from "@/components/next-step-cta";
 import { translateTopic, translatePlatform, translateAudience, translateGenre } from "@/lib/translate-data";
+import { trackEvent } from "@/lib/analytics";
 import {
   Layers,
   Search,
@@ -282,7 +283,13 @@ export default function GenreRecommender() {
                   {filteredGenres?.map((genre) => (
                     <button
                       key={genre.id}
-                      onClick={() => setSelectedGenre(genre)}
+                      onClick={() => {
+                        setSelectedGenre(genre);
+                        trackEvent("recommendation_requested", {
+                          type: "genre",
+                          selection_id: genre.id,
+                        });
+                      }}
                       className={`w-full text-left px-3 py-2.5 rounded-md transition-colors ${
                         effectiveGenre?.id === genre.id
                           ? "bg-primary text-primary-foreground"

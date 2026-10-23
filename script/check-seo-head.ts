@@ -2,7 +2,13 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { render } from "../client/src/entry-server";
+// Import from the pre-built SSR bundle rather than from TypeScript source,
+// because react-helmet-async is a CommonJS module whose named exports are not
+// accessible when tsx runs the source files in raw ESM mode.
+// Run `npm run build` before executing this script, or use `npm run check:seo`
+// which runs both steps in sequence.
+// @ts-ignore – importing from the pre-built JS bundle
+import { render } from "../dist/entry-server.js";
 import {
   BASE_URL,
   OG_LOCALES,
